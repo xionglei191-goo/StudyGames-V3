@@ -2293,28 +2293,16 @@ class TownScene extends Phaser.Scene {
     this.townEventUnsubs.forEach((unsubscribe) => unsubscribe());
     this.townEventUnsubs = [];
     this.cameras.main.setBackgroundColor(0xf7e4bc);
-    this.add.image(512, 320, "scene-town").setDisplaySize(1024, 640);
-    this.add.rectangle(512, 320, 1024, 640, 0xfffbf3, 0.22);
-    const ground = this.add.zone(512, 352, 1024, 516).setOrigin(0.5).setInteractive({ useHandCursor: true }).setDepth(0);
+    this.drawTownGroundMap();
+    const ground = this.add.zone(512, 352, 1024, 516).setOrigin(0.5).setInteractive({ useHandCursor: true }).setDepth(0.2);
     ground.on("pointerdown", (pointer) => this.handleTownGroundClick(pointer));
-    this.add.rectangle(272, 74, 440, 82, 0xffffff, 0.72).setStrokeStyle(1, 0xffffff, 0.86).setDepth(6);
-    this.add.text(58, 44, "星光小镇", {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "40px",
-      color: "#3f3430",
-      fontStyle: "bold"
-    }).setDepth(7);
-    this.add.text(60, 94, "接委托、去房间、完成生活小任务。", {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "18px",
-      color: "#5d4b45"
-    }).setDepth(7);
     const progress = loadProgress();
     const activeTask = taskRuntime.getCurrentTask(progress);
     const activeRoute = getTownRoute(activeTask);
     window.__studyGameTownState = {
       activeTaskId: activeTask?.id || null,
       targetPointId: activeTask ? activeRoute.startPointId : null,
+      mapMode: "topdown-town-map",
       cards: {},
       allDone: !activeTask
     };
@@ -2323,48 +2311,66 @@ class TownScene extends Phaser.Scene {
     this.drawCharacter(842, 512, activeTask);
     this.bindTownInput(activeTask);
     this.bindTownRuntimeFeedback();
-
-    const reviewCount = Object.values(window.__studyGameTownState.cards || {}).filter((card) => card.reviewDue).length;
-    const sliceDone = isVerticalSliceComplete(progress);
-    const taskTitle = activeTask ? `当前目标：${activeTask.title}` : sliceDone ? verticalSliceGoal.completionTitle : "今日委托都完成了";
-    const taskCopy = activeTask
-      ? reviewCount
-        ? "回到亮起房间复看线索。"
-        : `下一站：${activeRoute.destination}`
-      : sliceDone ? verticalSliceGoal.completionCopy : "房间变化已经保存，可以回访小镇或看看家长摘要。";
-    const taskPanel = this.add.rectangle(342, 572, 560, 98, activeTask ? 0xfffbf5 : 0xe9f7ed, 0.88).setStrokeStyle(1, 0xffffff, 0.88);
-    taskPanel.setDepth(6);
-    this.add.text(94, 470, taskTitle, {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "20px",
-      color: "#473836",
-      fontStyle: "bold"
-    }).setPosition(94, 536).setDepth(7).setWordWrapWidth(430);
-    this.add.text(94, 506, taskCopy, {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "15px",
-      color: "#5a4744",
-      lineSpacing: 2,
-      wordWrap: { width: 408 }
-    }).setPosition(94, 566).setDepth(7);
-    if (activeTask) {
-      const accent = sceneAccent[activeTask.sceneId] || 0xc75f78;
-      taskPanel.setInteractive({ useHandCursor: true });
-      taskPanel.on("pointerdown", () => this.handleTownInteraction(activeRoute.startPointId, activeTask));
-      const start = this.add.text(474, 558, activeRoute.panelAction, {
-        fontFamily: "Arial, sans-serif",
-        fontSize: "18px",
-        color: "#ffffff",
-        fontStyle: "bold",
-        backgroundColor: "rgba(199,95,120,0.94)"
-      }).setPadding(22, 11, 22, 11).setDepth(4).setInteractive({ useHandCursor: true });
-      start.setDepth(7);
-      start.on("pointerdown", () => this.handleTownInteraction(activeRoute.startPointId, activeTask));
-      taskPanel.setStrokeStyle(2, accent, 0.32);
-    }
     eventBus.emit("scene:changed", { sceneId: "scene_town" });
     logTelemetry({ type: "scene_entered", sceneId: "scene_town" });
     this.events.once(Phaser.Scenes.Events.SHUTDOWN, () => this.shutdown());
+  }
+
+  drawTownGroundMap() {
+    this.add.rectangle(512, 320, 1024, 640, 0xdcefc7, 1).setDepth(-3);
+    this.add.rectangle(512, 74, 1024, 148, 0xcfe7bc, 0.72).setDepth(-2);
+    this.add.rectangle(512, 590, 1024, 100, 0xb8dcb6, 0.62).setDepth(-2);
+    this.add.ellipse(138, 92, 170, 54, 0xffffff, 0.22).setDepth(-1);
+    this.add.ellipse(876, 108, 214, 68, 0xffffff, 0.18).setDepth(-1);
+
+    const roadColor = 0xeeddb9;
+    const roadEdge = 0xc8ad79;
+    const road = this.add.graphics().setDepth(-1);
+    road.lineStyle(50, roadColor, 1);
+    road.beginPath();
+    road.moveTo(904, 514);
+    road.lineTo(752, 500);
+    road.lineTo(646, 524);
+    road.lineTo(504, 496);
+    road.lineTo(348, 464);
+    road.lineTo(246, 452);
+    road.strokePath();
+    road.lineStyle(22, 0xf7edd0, 0.82);
+    road.beginPath();
+    road.moveTo(904, 514);
+    road.lineTo(752, 500);
+    road.lineTo(646, 524);
+    road.lineTo(504, 496);
+    road.lineTo(348, 464);
+    road.lineTo(246, 452);
+    road.strokePath();
+
+    const roadTrim = this.add.graphics().setDepth(-0.8);
+    roadTrim.lineStyle(4, roadEdge, 0.38);
+    [[904, 514, 752, 500], [752, 500, 646, 524], [646, 524, 504, 496], [504, 496, 348, 464], [348, 464, 246, 452]].forEach(([x1, y1, x2, y2]) => {
+      roadTrim.strokeLineShape(new Phaser.Geom.Line(x1, y1 - 28, x2, y2 - 28));
+      roadTrim.strokeLineShape(new Phaser.Geom.Line(x1, y1 + 28, x2, y2 + 28));
+    });
+
+    const plaza = this.add.graphics().setDepth(-0.6);
+    plaza.fillStyle(0xf2e3bd, 0.92);
+    plaza.fillEllipse(246, 452, 188, 82);
+    plaza.fillEllipse(504, 496, 184, 76);
+    plaza.fillEllipse(752, 500, 190, 84);
+    plaza.fillStyle(0xc8ad79, 0.28);
+    plaza.lineStyle(3, 0xc8ad79, 0.42);
+    plaza.strokeEllipse(246, 452, 188, 82);
+    plaza.strokeEllipse(504, 496, 184, 76);
+    plaza.strokeEllipse(752, 500, 190, 84);
+
+    this.add.rectangle(656, 426, 244, 142, 0xc7e8c2, 0.72).setStrokeStyle(3, 0x7db570, 0.34).setDepth(-0.7);
+    this.add.rectangle(880, 452, 166, 114, 0xc9e5f2, 0.36).setStrokeStyle(3, 0x8ab0d5, 0.3).setDepth(-0.9);
+    for (let i = 0; i < 12; i += 1) {
+      const x = 590 + (i % 4) * 44;
+      const y = 382 + Math.floor(i / 4) * 34;
+      this.add.circle(x, y, 7, i % 2 ? 0xf3b4c8 : 0xffcf5a, 0.74).setDepth(-0.5);
+    }
+    this.add.text(892, 516, "镇口", decorTextStyle()).setPadding(8, 4, 8, 4).setDepth(1);
   }
 
   shutdown() {
@@ -2490,7 +2496,7 @@ class TownScene extends Phaser.Scene {
     const route = getTownRoute(activeTask);
     const isNext = Boolean(activeTask && point.id === route.startPointId);
     const group = this.add.container(point.x, point.y).setDepth(5);
-    const ring = this.add.ellipse(0, point.height * 0.42, point.width * 0.82, 34, 0xffffff, isNext ? 0.18 : 0.09)
+    const ring = this.add.ellipse(0, point.height * 0.42, point.width * 0.82, 34, 0xffffff, isNext ? 0.16 : 0.03)
       .setStrokeStyle(4, point.color, isNext ? 0.8 : 0.42);
     const hotspot = this.add.rectangle(0, 0, point.width, point.height, 0xffffff, 0.001)
       .setInteractive({ useHandCursor: true });
@@ -2509,6 +2515,9 @@ class TownScene extends Phaser.Scene {
       fontStyle: "bold",
       backgroundColor: `rgba(${point.color >> 16},${(point.color >> 8) & 255},${point.color & 255},0.82)`
     }).setPadding(8, 4, 8, 4);
+    labelPanel.setAlpha(isNext ? 0.9 : 0);
+    label.setAlpha(isNext ? 1 : 0);
+    action.setAlpha(isNext ? 1 : 0);
     group.add([ring, hotspot, labelPanel, label, action]);
     if (point.id === "clock_tower" && isDone) {
       const star = this.add.image(60, -84, "icon-star").setDisplaySize(26, 26).setTint(0xffcf5a);
@@ -2528,15 +2537,17 @@ class TownScene extends Phaser.Scene {
     const completedCount = getVerticalSliceCompletedCount(progress);
     const accent = activeTask ? sceneAccent[activeTask.sceneId] || 0xc75f78 : 0x4f9d7a;
     const tower = this.add.container(144, 268).setDepth(3);
-    const panel = this.add.rectangle(0, 0, 164, 214, 0xfffbf5, 0.76).setStrokeStyle(2, accent, 0.34);
-    const roof = this.add.triangle(0, -112, -48, 0, 48, 0, 0, -58, 0xc75f78, 0.72);
-    const body = this.add.rectangle(0, -10, 88, 136, 0xffffff, 0.7).setStrokeStyle(2, 0x6c91a0, 0.32);
+    const groundGlow = this.add.ellipse(0, 126, 132, 34, 0xfff4dc, 0.28).setStrokeStyle(3, accent, 0.22);
+    const roof = this.add.triangle(0, -118, -42, -8, 42, -8, 0, -62, 0xc75f78, 0.82);
+    const body = this.add.rectangle(0, -10, 86, 142, 0xf5f9ff, 0.94).setStrokeStyle(3, 0x6c91a0, 0.42);
     const clock = this.add.circle(0, -58, 26, 0xfff4dc, 0.94).setStrokeStyle(3, 0x426c7b, 0.72);
     const handA = this.add.rectangle(0, -62, 3, 17, 0x426c7b, 0.9).setOrigin(0.5, 1);
     const handB = this.add.rectangle(0, -58, 15, 3, 0x426c7b, 0.9).setOrigin(0, 0.5);
-    const base = this.add.rectangle(0, 72, 116, 22, 0x426c7b, 0.58);
+    const windowA = this.add.rectangle(0, -8, 20, 38, 0xdfeefc, 0.88).setStrokeStyle(2, 0xffffff, 0.72);
+    const windowB = this.add.rectangle(0, 38, 24, 48, 0xdfeefc, 0.88).setStrokeStyle(2, 0xffffff, 0.72);
+    const base = this.add.rectangle(0, 82, 112, 24, 0x426c7b, 0.62);
     const ringRail = this.add.arc(0, 34, 54, 205, 335, false, 0xffffff, 0).setStrokeStyle(5, 0xffffff, 0.42);
-    tower.add([panel, roof, body, clock, handA, handB, base, ringRail]);
+    tower.add([groundGlow, roof, body, clock, handA, handB, windowA, windowB, base, ringRail]);
     const labels = ["问候", "铃声", "天气"];
     labels.forEach((label, index) => {
       const angle = Phaser.Math.DegToRad(215 + index * 55);
@@ -2553,13 +2564,14 @@ class TownScene extends Phaser.Scene {
       tower.add([star, text]);
       if (lit) this.tweens.add({ targets: star, alpha: 0.72, duration: 760, yoyo: true, repeat: -1, ease: "Sine.easeInOut" });
     });
-    const title = this.add.text(-60, 88, `${completedCount}/${verticalSliceTaskIds.length} 第一圈`, {
+    const titleChip = this.add.rectangle(0, 130, 128, 30, 0xfffbf5, 0.86).setStrokeStyle(2, accent, 0.26);
+    const title = this.add.text(-44, 120, `${completedCount}/${verticalSliceTaskIds.length} 第一圈`, {
       fontFamily: "Arial, sans-serif",
       fontSize: "14px",
       color: "#3e332f",
       fontStyle: "bold"
     });
-    tower.add(title);
+    tower.add([titleChip, title]);
   }
 
   drawTownPath(progress, activeTask) {
@@ -2598,18 +2610,38 @@ class TownScene extends Phaser.Scene {
   }
 
   drawCharacter(x, y, activeTask) {
-    this.townCharacterShadow = this.add.ellipse(x + 6, y + 28, 148, 36, 0x6d4f49, 0.16).setDepth(3);
+    this.townCharacterShadow = this.add.ellipse(x + 2, y + 10, 48, 18, 0x4d4038, 0.18).setDepth(39);
     const progress = loadProgress();
-    const key = outfitCharacterImages[progress.selectedOutfitId] || "character-wave";
-    const character = this.add.image(x, y - 86, key).setDisplaySize(132, 198).setInteractive({ useHandCursor: true }).setDepth(4);
+    const character = this.add.container(x, y - 38).setDepth(41);
+    const backLeg = this.add.rectangle(-8, 30, 9, 23, 0x4c78a8, 0.92).setOrigin(0.5, 0);
+    const frontLeg = this.add.rectangle(8, 30, 9, 23, 0x4c78a8, 0.92).setOrigin(0.5, 0);
+    const boots = [
+      this.add.ellipse(-8, 54, 15, 7, 0x3f3430, 0.9),
+      this.add.ellipse(8, 54, 15, 7, 0x3f3430, 0.9)
+    ];
+    const bodyColor = progress.selectedOutfitId === "outfit_apron" ? 0x74a882 : progress.selectedOutfitId === "outfit_garden_bow" ? 0xc75f78 : 0x5f83c4;
+    const body = this.add.ellipse(0, 14, 36, 44, bodyColor, 0.96).setStrokeStyle(2, 0xffffff, 0.52);
+    const scarf = this.add.rectangle(0, -4, 32, 8, 0xffcf5a, 0.82);
+    const head = this.add.circle(0, -22, 20, 0xffdfc4, 0.98).setStrokeStyle(2, 0x7c5c51, 0.2);
+    const hair = this.add.arc(0, -28, 20, 198, 342, false, 0x6d4a3f, 0.9);
+    const eyeLeft = this.add.circle(-7, -24, 2, 0x3f3430, 0.92);
+    const eyeRight = this.add.circle(7, -24, 2, 0x3f3430, 0.92);
+    const smile = this.add.arc(0, -18, 7, 20, 160, false, 0xffffff, 0).setStrokeStyle(2, 0x9b5f58, 0.8);
+    const bow = progress.selectedOutfitId === "outfit_garden_bow"
+      ? this.add.image(10, -42, "item-bow").setDisplaySize(24, 18).setAngle(-8)
+      : null;
+    character.add([backLeg, frontLeg, ...boots, body, scarf, head, hair, eyeLeft, eyeRight, smile, ...(bow ? [bow] : [])]);
+    character.setSize(54, 96);
+    character.setInteractive({ useHandCursor: true });
+    character.walkParts = { backLeg, frontLeg, body, scarf, head, hair, eyeLeft, eyeRight, smile, bow };
+    [body, scarf, head, hair, eyeLeft, eyeRight, smile, bow].filter(Boolean).forEach((part) => {
+      part.__walkBaseY = part.y;
+    });
     this.townCharacter = character;
-    const outfitGroup = this.add.container(x, y - 86).setDepth(5);
-    this.townCharacterOutfitGroup = outfitGroup;
-    drawOutfitLayers(this, outfitGroup, progress.selectedOutfitId, true);
-    outfitGroup.setScale(0.62);
-    this.tweens.add({ targets: [character, outfitGroup], y: "-=5", duration: 1500, yoyo: true, repeat: -1, ease: "Sine.easeInOut" });
+    this.townCharacterOutfitGroup = null;
+    this.tweens.add({ targets: character, y: character.y - 2, duration: 920, yoyo: true, repeat: -1, ease: "Sine.easeInOut" });
     character.on("pointerdown", () => {
-      this.tweens.add({ targets: [character, outfitGroup], scaleX: 1.06, scaleY: 1.06, duration: 120, yoyo: true, ease: "Sine.easeOut" });
+      this.tweens.add({ targets: character, scaleX: Math.sign(character.scaleX || 1) * 1.08, scaleY: 1.08, duration: 120, yoyo: true, ease: "Sine.easeOut" });
       const route = getTownRoute(activeTask);
       this.showTownSpeech(activeTask ? route.goal : "小镇亮起来了", activeTask ? 0x426c7b : 0x4f9d7a);
     });
@@ -2662,6 +2694,8 @@ class TownScene extends Phaser.Scene {
     const nextX = Phaser.Math.Clamp(this.townCharacter.x + dx, 96, 928);
     const nextGroundY = Phaser.Math.Clamp(this.getTownCharacterGroundY() + dy, 390, 560);
     this.townCharacterMoveTween?.stop();
+    if (dx !== 0) this.faceTownCharacter(dx);
+    this.playTownWalkStep();
     this.setTownCharacterPosition(nextX, nextGroundY);
     this.updateTownInteractionProximity(activeTask);
   }
@@ -2673,6 +2707,7 @@ class TownScene extends Phaser.Scene {
     const startX = this.townCharacter.x;
     const startY = this.getTownCharacterGroundY();
     const distance = Phaser.Math.Distance.Between(startX, startY, x, groundY);
+    this.faceTownCharacter(x - startX);
     this.townCharacterMoveTween = this.tweens.addCounter({
       from: 0,
       to: 1,
@@ -2680,6 +2715,7 @@ class TownScene extends Phaser.Scene {
       ease: "Sine.easeInOut",
       onUpdate: (tween) => {
         const value = tween.getValue();
+        this.playTownWalkStep(value);
         this.setTownCharacterPosition(
           Phaser.Math.Linear(startX, x, value),
           Phaser.Math.Linear(startY, groundY, value)
@@ -2694,18 +2730,36 @@ class TownScene extends Phaser.Scene {
 
   setTownCharacterPosition(x, groundY) {
     if (!this.townCharacter) return;
-    const spriteY = groundY - 86;
+    const spriteY = groundY - 38;
     this.townCharacter.setPosition(x, spriteY);
-    this.townCharacterOutfitGroup?.setPosition(x, spriteY);
-    this.townCharacterShadow?.setPosition(x + 6, groundY + 28);
+    this.townCharacterShadow?.setPosition(x + 2, groundY + 10);
     const depth = Phaser.Math.Clamp(Math.round(groundY / 10), 39, 57);
     this.townCharacter.setDepth(depth + 1);
-    this.townCharacterOutfitGroup?.setDepth(depth + 2);
     this.townCharacterShadow?.setDepth(depth);
   }
 
   getTownCharacterGroundY() {
-    return (this.townCharacter?.y || 426) + 86;
+    return (this.townCharacter?.y || 474) + 38;
+  }
+
+  faceTownCharacter(dx) {
+    if (!this.townCharacter || dx === 0) return;
+    const facing = dx < 0 ? -1 : 1;
+    this.townCharacter.setScale(facing, 1);
+  }
+
+  playTownWalkStep(phase = null) {
+    if (!this.townCharacter?.walkParts) return;
+    const value = phase == null ? this.time.now / 180 : phase * Math.PI * 4;
+    const swing = Math.sin(value) * 7;
+    const bob = Math.abs(Math.sin(value)) * 2;
+    const { backLeg, frontLeg, body, scarf, head, hair, eyeLeft, eyeRight, smile, bow } = this.townCharacter.walkParts;
+    backLeg.setAngle(swing);
+    frontLeg.setAngle(-swing);
+    [body, scarf, head, hair, eyeLeft, eyeRight, smile, bow].filter(Boolean).forEach((part) => {
+      if (part.__walkBaseY == null) part.__walkBaseY = part.y;
+      part.setY(part.__walkBaseY - bob);
+    });
   }
 
   showTownDestinationMarker(x, y, label) {
@@ -2766,7 +2820,10 @@ class TownScene extends Phaser.Scene {
     const item = this.townInteractions.get(pointId);
     if (!item) return;
     item.ring.setStrokeStyle(4, item.point.color, enabled ? 0.9 : 0.42);
-    item.ring.setAlpha(enabled ? 0.22 : 0.09);
+    item.ring.setAlpha(enabled ? 0.22 : 0.03);
+    item.labelPanel.setAlpha(enabled ? 0.9 : 0);
+    item.label.setAlpha(enabled ? 1 : 0);
+    item.action.setAlpha(enabled ? 1 : 0);
     this.tweens.add({ targets: item.group, scale: enabled ? 1.035 : 1, duration: 120, ease: "Sine.easeOut" });
   }
 
