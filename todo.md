@@ -141,9 +141,9 @@
 - [x] 地图目标文案要像冒险提示，例如“去邮局找见面礼线索”，不写“开始练习”。
 - [ ] 小镇整体视觉升级到“轻松探索骨架 + 女孩向梦幻时尚风”：
   说明：操作体验参考斜俯视小镇探索类生活游戏，视觉不走朴素乡村路线，改为甜美、闪亮、时尚、童话橱窗感。
-- [ ] 产出 3 张新的视觉基准图：
+- [x] 产出 3 张新的视觉基准图：
   说明：1. 小镇总览平面图；2. 主角角色设定；3. HUD / UI 风格基准图。
-- [ ] 用统一美术关键词驱动后续资产生成、UI 落版和 QA 验收：
+- [x] 用统一美术关键词驱动后续资产生成、UI 落版和 QA 验收：
   说明：`cozy top-down town`, `storybook town`, `pastel pink`, `mint`, `cream`, `sky blue`, `gold accents`, `cute fashion adventure`, `girl-friendly`, `dream boutique`, `toy-like architecture`, `soft glow`, `sparkle details`, `clean readable game UI`, `no clutter`, `not rustic`, `not realistic gritty`.
 
 ### 美术关键词与 ImageGen 提示词基线
