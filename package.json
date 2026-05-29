@@ -1,0 +1,30 @@
+{
+  "name": "studygame-rpg-lite",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "PATH=/opt/homebrew/bin:$PATH vite --host 127.0.0.1",
+    "build": "PATH=/opt/homebrew/bin:$PATH vite build",
+    "preview": "PATH=/opt/homebrew/bin:$PATH vite preview --host 127.0.0.1",
+    "serve": "PATH=/opt/homebrew/bin:$PATH node scripts/serve.mjs",
+    "verify": "PATH=/opt/homebrew/bin:$PATH node scripts/verify-content.mjs && PATH=/opt/homebrew/bin:$PATH node scripts/verify-p0-runtime.mjs",
+    "verify:content": "PATH=/opt/homebrew/bin:$PATH node scripts/verify-content.mjs",
+    "verify:p0": "PATH=/opt/homebrew/bin:$PATH node scripts/verify-p0-runtime.mjs",
+    "verify:rpg-map": "PATH=/opt/homebrew/bin:$PATH node scripts/verify-rpg-map.mjs",
+    "verify:rpg-layout": "PATH=/opt/homebrew/bin:$PATH node scripts/verify-rpg-layout.mjs",
+    "test": "PATH=/opt/homebrew/bin:$PATH vitest run"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^5.0.0",
+    "vite": "^7.0.0",
+    "typescript": "^5.8.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "vitest": "^3.0.0",
+    "playwright": "^1.60.0"
+  }
+}
