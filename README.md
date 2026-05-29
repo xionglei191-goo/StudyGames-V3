@@ -1,0 +1,3 @@
+# StudyGame
+
+Initial repository bootstrap.
