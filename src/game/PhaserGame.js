@@ -2317,14 +2317,18 @@ class TownScene extends Phaser.Scene {
   }
 
   drawTownGroundMap() {
-    this.add.rectangle(512, 320, 1024, 640, 0xdcefc7, 1).setDepth(-3);
-    this.add.rectangle(512, 74, 1024, 148, 0xcfe7bc, 0.72).setDepth(-2);
-    this.add.rectangle(512, 590, 1024, 100, 0xb8dcb6, 0.62).setDepth(-2);
-    this.add.ellipse(138, 92, 170, 54, 0xffffff, 0.22).setDepth(-1);
-    this.add.ellipse(876, 108, 214, 68, 0xffffff, 0.18).setDepth(-1);
+    if (this.textures.exists("scene-town")) {
+      this.add.image(512, 320, "scene-town").setDisplaySize(1024, 640).setDepth(-5);
+      this.add.rectangle(512, 320, 1024, 640, 0xfff7fb, 0.08).setDepth(-4.8);
+      this.add.rectangle(512, 320, 1024, 640, 0xffffff, 0.06).setDepth(-4.7);
+      return;
+    }
 
-    const roadColor = 0xeeddb9;
-    const roadEdge = 0xc8ad79;
+    this.add.rectangle(512, 320, 1024, 640, 0xfbe6f0, 1).setDepth(-5);
+    this.add.rectangle(512, 94, 1024, 188, 0xcfeefe, 0.34).setDepth(-4);
+    this.add.rectangle(512, 598, 1024, 108, 0xbfe7d5, 0.26).setDepth(-4);
+    const roadColor = 0xffe6c9;
+    const roadEdge = 0xe2b98d;
     const road = this.add.graphics().setDepth(-1);
     road.lineStyle(50, roadColor, 1);
     road.beginPath();
@@ -2335,7 +2339,7 @@ class TownScene extends Phaser.Scene {
     road.lineTo(348, 464);
     road.lineTo(246, 452);
     road.strokePath();
-    road.lineStyle(22, 0xf7edd0, 0.82);
+    road.lineStyle(24, 0xfff6e2, 0.9);
     road.beginPath();
     road.moveTo(904, 514);
     road.lineTo(752, 500);
@@ -2353,24 +2357,17 @@ class TownScene extends Phaser.Scene {
     });
 
     const plaza = this.add.graphics().setDepth(-0.6);
-    plaza.fillStyle(0xf2e3bd, 0.92);
+    plaza.fillStyle(0xfff0d6, 0.96);
     plaza.fillEllipse(246, 452, 188, 82);
     plaza.fillEllipse(504, 496, 184, 76);
     plaza.fillEllipse(752, 500, 190, 84);
-    plaza.fillStyle(0xc8ad79, 0.28);
-    plaza.lineStyle(3, 0xc8ad79, 0.42);
+    plaza.fillStyle(0xf3cfa5, 0.22);
+    plaza.lineStyle(3, roadEdge, 0.4);
     plaza.strokeEllipse(246, 452, 188, 82);
     plaza.strokeEllipse(504, 496, 184, 76);
     plaza.strokeEllipse(752, 500, 190, 84);
 
-    this.add.rectangle(656, 426, 244, 142, 0xc7e8c2, 0.72).setStrokeStyle(3, 0x7db570, 0.34).setDepth(-0.7);
-    this.add.rectangle(880, 452, 166, 114, 0xc9e5f2, 0.36).setStrokeStyle(3, 0x8ab0d5, 0.3).setDepth(-0.9);
-    for (let i = 0; i < 12; i += 1) {
-      const x = 590 + (i % 4) * 44;
-      const y = 382 + Math.floor(i / 4) * 34;
-      this.add.circle(x, y, 7, i % 2 ? 0xf3b4c8 : 0xffcf5a, 0.74).setDepth(-0.5);
-    }
-    this.add.text(892, 516, "镇口", decorTextStyle()).setPadding(8, 4, 8, 4).setDepth(1);
+    this.add.text(892, 516, "镇口", decorTextStyle()).setPadding(10, 5, 10, 5).setDepth(1);
   }
 
   shutdown() {
@@ -2379,111 +2376,34 @@ class TownScene extends Phaser.Scene {
   }
 
   drawTownProgressDecorations(progress, activeTask) {
-    this.drawSliceTower(progress, activeTask);
+    this.drawTownProgressBadge(progress, activeTask);
   }
 
   drawTownLandmarks(progress, activeTask) {
     const completedCount = getVerticalSliceCompletedCount(progress);
-    const postOffice = this.add.container(784, 310).setDepth(2);
-    const officeBase = this.add.rectangle(0, 24, 182, 116, 0xf4f8ff, 0.86).setStrokeStyle(3, 0x5f83c4, 0.42);
-    const officeRoof = this.add.triangle(0, -54, -100, 0, 100, 0, 0, -72, 0x5f83c4, 0.72);
-    const officeDoor = this.add.rectangle(-28, 48, 42, 68, 0x426c7b, 0.72);
-    const officeWindow = this.add.rectangle(42, 12, 46, 34, 0xd5e5f7, 0.9).setStrokeStyle(2, 0xffffff, 0.7);
-    const officeMail = this.add.image(44, 48, "anchor-mailbox").setDisplaySize(42, 42).setAlpha(0.92);
-    const officeSign = this.add.text(-54, -22, "邮局", {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "20px",
-      color: "#ffffff",
-      fontStyle: "bold"
-    });
-    postOffice.add([officeBase, officeRoof, officeDoor, officeWindow, officeMail, officeSign]);
-
-    const rayBoard = this.add.container(510, 344).setDepth(2);
-    const legs = [
-      this.add.rectangle(-58, 68, 10, 78, 0x6f584d, 0.7),
-      this.add.rectangle(58, 68, 10, 78, 0x6f584d, 0.7)
-    ];
-    const board = this.add.rectangle(0, 0, 190, 92, 0xfffbf5, 0.88).setStrokeStyle(3, 0x426c7b, 0.48);
-    const boardHeader = this.add.rectangle(0, -34, 166, 28, 0x426c7b, 0.78);
-    const ray = this.add.circle(-62, 0, 24, 0xfff4dc, 0.96).setStrokeStyle(3, 0xc75f78, 0.42);
-    const rayLabel = this.add.text(-72, -8, "Ray", {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "12px",
-      color: "#614844",
-      fontStyle: "bold"
-    });
-    const notice = this.add.text(-32, -48, "公告牌", {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "18px",
-      color: "#ffffff",
-      fontStyle: "bold"
-    });
-    const questLine = this.add.text(-26, -12, activeTask ? getTownRoute(activeTask).goal : "今日委托完成", {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "14px",
-      color: "#3e332f",
-      fontStyle: "bold"
-    }).setWordWrapWidth(86);
-    rayBoard.add([...legs, board, boardHeader, ray, rayLabel, notice, questLine]);
-
-    const minaBell = this.add.container(324, 292).setDepth(2);
-    const bellPost = this.add.rectangle(-34, 44, 12, 98, 0x8a6a44, 0.68);
-    const bellRoof = this.add.arc(-34, -18, 34, 205, 335, false, 0xffffff, 0).setStrokeStyle(8, 0xb48935, 0.72);
-    const bellBody = this.add.circle(-34, -3, 22, 0xffcf5a, 0.84).setStrokeStyle(2, 0xffffff, 0.62);
-    const bellClapper = this.add.circle(-34, 17, 5, 0x725334, 0.78);
-    const minaHead = this.add.circle(42, -8, 20, 0xffe0c6, 0.96).setStrokeStyle(2, 0xc75f78, 0.32);
-    const minaBody = this.add.rectangle(42, 34, 36, 62, 0xc75f78, 0.68);
-    const minaName = this.add.text(20, -48, "Mina", {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "15px",
-      color: "#725334",
-      fontStyle: "bold",
-      backgroundColor: "rgba(255,250,244,0.78)"
-    }).setPadding(8, 4, 8, 4);
-    minaBell.add([bellPost, bellRoof, bellBody, bellClapper, minaHead, minaBody, minaName]);
-
-    const weatherStation = this.add.container(654, 426).setDepth(2);
-    const weatherBase = this.add.rectangle(0, 34, 152, 78, 0xe9f7ed, 0.86).setStrokeStyle(3, 0x4f9d7a, 0.42);
-    const weatherPole = this.add.rectangle(0, -28, 10, 88, 0x426c7b, 0.46);
-    const weatherVane = this.add.triangle(28, -72, -34, -12, 42, 0, -34, 12, 0x4f9d7a, 0.74);
-    const weatherSun = this.add.circle(-46, 18, 20, 0xffcf5a, 0.72).setStrokeStyle(2, 0xffffff, 0.62);
-    const weatherCloud = this.add.ellipse(32, 22, 58, 28, 0xffffff, 0.82).setStrokeStyle(2, 0x8ab0d5, 0.44);
-    const weatherLabel = this.add.text(-44, 52, "天气台", decorTextStyle()).setPadding(8, 4, 8, 4);
-    weatherStation.add([weatherPole, weatherVane, weatherBase, weatherSun, weatherCloud, weatherLabel]);
-
-    const townGate = this.add.container(900, 438).setDepth(1);
-    townGate.add([
-      this.add.rectangle(-36, 0, 18, 96, 0x8ab0d5, 0.42),
-      this.add.rectangle(36, 0, 18, 96, 0x8ab0d5, 0.42),
-      this.add.arc(0, -20, 64, 205, 335, false, 0xffffff, 0).setStrokeStyle(10, 0x8ab0d5, 0.36),
-      this.add.text(-42, 48, "镇口", decorTextStyle()).setPadding(8, 4, 8, 4)
-    ]);
-
     if (completedCount > 0) {
-      const welcomeLight = this.add.container(344, 424).setDepth(2);
+      const welcomeLight = this.add.container(320, 486).setDepth(2);
       welcomeLight.add([
-        this.add.circle(0, 0, 30, 0xffcf5a, 0.36).setStrokeStyle(2, 0xffffff, 0.6),
-        this.add.image(0, 0, "icon-star").setDisplaySize(34, 34).setTint(0xffcf5a),
-        this.add.text(-68, 34, "欢迎光亮起", decorTextStyle()).setPadding(8, 4, 8, 4)
+        this.add.circle(0, 0, 28, 0xffcf5a, 0.26).setStrokeStyle(2, 0xffffff, 0.54),
+        this.add.image(0, 0, "icon-star").setDisplaySize(30, 30).setTint(0xffcf5a)
       ]);
       this.tweens.add({ targets: welcomeLight.list[0], alpha: 0.62, scaleX: 1.12, scaleY: 1.12, duration: 900, yoyo: true, repeat: -1, ease: "Sine.easeInOut" });
     }
 
     if (completedCount > 1) {
-      const bellGlow = this.add.container(318, 408).setDepth(2);
+      const bellGlow = this.add.container(318, 330).setDepth(2);
       bellGlow.add([
-        this.add.ellipse(0, 0, 92, 30, 0xffcf5a, 0.2).setStrokeStyle(2, 0xb48935, 0.42),
-        this.add.text(-48, 24, "铃声准时响起", decorTextStyle()).setPadding(8, 4, 8, 4)
+        this.add.ellipse(0, 0, 92, 30, 0xffcf5a, 0.16).setStrokeStyle(2, 0xd9ae5f, 0.42),
+        this.add.image(0, -8, "icon-star").setDisplaySize(24, 24).setTint(0xffcf5a)
       ]);
       this.tweens.add({ targets: bellGlow.list[0], alpha: 0.42, scaleX: 1.1, duration: 840, yoyo: true, repeat: -1, ease: "Sine.easeInOut" });
     }
 
     if (completedCount > 2) {
-      const skyGlow = this.add.container(676, 360).setDepth(2);
+      const skyGlow = this.add.container(782, 250).setDepth(2);
       skyGlow.add([
-        this.add.circle(0, 0, 34, 0x4f9d7a, 0.2).setStrokeStyle(2, 0xffffff, 0.64),
-        this.add.image(0, 0, "icon-star").setDisplaySize(30, 30).setTint(0x4f9d7a),
-        this.add.text(-76, 34, "第一圈星路已点亮", decorTextStyle()).setPadding(8, 4, 8, 4)
+        this.add.circle(0, 0, 34, 0x7abfad, 0.18).setStrokeStyle(2, 0xffffff, 0.64),
+        this.add.image(0, 0, "icon-star").setDisplaySize(30, 30).setTint(0x7abfad)
       ]);
       this.tweens.add({ targets: skyGlow.list[0], alpha: 0.5, scaleX: 1.18, scaleY: 1.18, duration: 900, yoyo: true, repeat: -1, ease: "Sine.easeInOut" });
     }
@@ -2492,24 +2412,26 @@ class TownScene extends Phaser.Scene {
   }
 
   drawTownInteractionPoint(point, activeTask, progress) {
-    const isDone = getVerticalSliceCompletedCount(progress) > 0;
+    const completedCount = getVerticalSliceCompletedCount(progress);
     const route = getTownRoute(activeTask);
     const isNext = Boolean(activeTask && point.id === route.startPointId);
     const group = this.add.container(point.x, point.y).setDepth(5);
-    const ring = this.add.ellipse(0, point.height * 0.42, point.width * 0.82, 34, 0xffffff, isNext ? 0.16 : 0.03)
-      .setStrokeStyle(4, point.color, isNext ? 0.8 : 0.42);
+    const ring = this.add.ellipse(0, point.height * 0.42, point.width * 0.58, 26, 0xffffff, isNext ? 0.14 : 0.015)
+      .setStrokeStyle(3, point.color, isNext ? 0.76 : 0.2);
+    const sparkleRing = this.add.ellipse(0, point.height * 0.42, point.width * 0.44, 14, 0xffffff, isNext ? 0.16 : 0)
+      .setStrokeStyle(2, 0xffffff, isNext ? 0.68 : 0);
     const hotspot = this.add.rectangle(0, 0, point.width, point.height, 0xffffff, 0.001)
       .setInteractive({ useHandCursor: true });
-    const labelPanel = this.add.rectangle(0, -point.height / 2 - 24, Math.max(150, point.label.length * 14), 38, 0xfffbf5, 0.88)
-      .setStrokeStyle(2, point.color, 0.34);
-    const label = this.add.text(-Math.max(58, point.label.length * 5.6), -point.height / 2 - 35, point.label, {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "15px",
-      color: "#3e332f",
+    const labelPanel = this.add.rectangle(0, -point.height / 2 - 20, Math.max(140, point.label.length * 12), 34, 0xfffbff, 0.9)
+      .setStrokeStyle(2, point.color, 0.38);
+    const label = this.add.text(-Math.max(54, point.label.length * 5.1), -point.height / 2 - 29, point.label, {
+      fontFamily: "Avenir Next, sans-serif",
+      fontSize: "13px",
+      color: "#583f55",
       fontStyle: "bold"
     });
     const action = this.add.text(-Math.max(48, point.action.length * 5.2), point.height / 2 + 10, point.action, {
-      fontFamily: "Arial, sans-serif",
+      fontFamily: "Avenir Next, sans-serif",
       fontSize: "14px",
       color: "#ffffff",
       fontStyle: "bold",
@@ -2518,8 +2440,8 @@ class TownScene extends Phaser.Scene {
     labelPanel.setAlpha(isNext ? 0.9 : 0);
     label.setAlpha(isNext ? 1 : 0);
     action.setAlpha(isNext ? 1 : 0);
-    group.add([ring, hotspot, labelPanel, label, action]);
-    if (point.id === "clock_tower" && isDone) {
+    group.add([ring, sparkleRing, hotspot, labelPanel, label, action]);
+    if (point.id === "clock_tower" && completedCount > 0) {
       const star = this.add.image(60, -84, "icon-star").setDisplaySize(26, 26).setTint(0xffcf5a);
       group.add(star);
       this.tweens.add({ targets: star, angle: 10, y: star.y - 5, duration: 820, yoyo: true, repeat: -1, ease: "Sine.easeInOut" });
@@ -2529,49 +2451,37 @@ class TownScene extends Phaser.Scene {
     hotspot.on("pointerout", () => this.highlightTownInteraction(point.id, false));
     hotspot.on("pointerdown", () => this.handleTownInteraction(point.id, activeTask));
     if (isNext) {
-      this.tweens.add({ targets: ring, alpha: 0.34, scaleX: 1.06, scaleY: 1.14, duration: 820, yoyo: true, repeat: -1, ease: "Sine.easeInOut" });
+      this.tweens.add({ targets: [ring, sparkleRing], alpha: 0.34, scaleX: 1.06, scaleY: 1.14, duration: 820, yoyo: true, repeat: -1, ease: "Sine.easeInOut" });
     }
   }
 
-  drawSliceTower(progress, activeTask) {
+  drawTownProgressBadge(progress, activeTask) {
     const completedCount = getVerticalSliceCompletedCount(progress);
     const accent = activeTask ? sceneAccent[activeTask.sceneId] || 0xc75f78 : 0x4f9d7a;
-    const tower = this.add.container(144, 268).setDepth(3);
-    const groundGlow = this.add.ellipse(0, 126, 132, 34, 0xfff4dc, 0.28).setStrokeStyle(3, accent, 0.22);
-    const roof = this.add.triangle(0, -118, -42, -8, 42, -8, 0, -62, 0xc75f78, 0.82);
-    const body = this.add.rectangle(0, -10, 86, 142, 0xf5f9ff, 0.94).setStrokeStyle(3, 0x6c91a0, 0.42);
-    const clock = this.add.circle(0, -58, 26, 0xfff4dc, 0.94).setStrokeStyle(3, 0x426c7b, 0.72);
-    const handA = this.add.rectangle(0, -62, 3, 17, 0x426c7b, 0.9).setOrigin(0.5, 1);
-    const handB = this.add.rectangle(0, -58, 15, 3, 0x426c7b, 0.9).setOrigin(0, 0.5);
-    const windowA = this.add.rectangle(0, -8, 20, 38, 0xdfeefc, 0.88).setStrokeStyle(2, 0xffffff, 0.72);
-    const windowB = this.add.rectangle(0, 38, 24, 48, 0xdfeefc, 0.88).setStrokeStyle(2, 0xffffff, 0.72);
-    const base = this.add.rectangle(0, 82, 112, 24, 0x426c7b, 0.62);
-    const ringRail = this.add.arc(0, 34, 54, 205, 335, false, 0xffffff, 0).setStrokeStyle(5, 0xffffff, 0.42);
-    tower.add([groundGlow, roof, body, clock, handA, handB, windowA, windowB, base, ringRail]);
+    const badge = this.add.container(146, 420).setDepth(6);
+    const panel = this.add.rectangle(0, 0, 128, 42, 0xfffbff, 0.82).setStrokeStyle(2, accent, 0.28);
+    badge.add(panel);
     const labels = ["问候", "铃声", "天气"];
     labels.forEach((label, index) => {
-      const angle = Phaser.Math.DegToRad(215 + index * 55);
-      const x = Math.cos(angle) * 54;
-      const y = 34 + Math.sin(angle) * 54;
+      const x = -36 + index * 36;
       const lit = index < completedCount;
-      const star = this.add.star(x, y, 5, 8, 16, lit ? 0xffcf5a : 0xd8c9b7, lit ? 0.95 : 0.48).setStrokeStyle(1, 0xffffff, 0.72);
-      const text = this.add.text(x - 18, y + 20, label, {
-        fontFamily: "Arial, sans-serif",
-        fontSize: "12px",
-        color: lit ? "#725334" : "#7b665a",
+      const star = this.add.star(x, -4, 5, 6, 13, lit ? 0xffcf5a : 0xd8c9b7, lit ? 0.95 : 0.52).setStrokeStyle(1, 0xffffff, 0.72);
+      const text = this.add.text(x - 16, 12, label, {
+        fontFamily: "Avenir Next, sans-serif",
+        fontSize: "10px",
+        color: lit ? "#8b5e79" : "#8d6f82",
         fontStyle: "bold"
       });
-      tower.add([star, text]);
+      badge.add([star, text]);
       if (lit) this.tweens.add({ targets: star, alpha: 0.72, duration: 760, yoyo: true, repeat: -1, ease: "Sine.easeInOut" });
     });
-    const titleChip = this.add.rectangle(0, 130, 128, 30, 0xfffbf5, 0.86).setStrokeStyle(2, accent, 0.26);
-    const title = this.add.text(-44, 120, `${completedCount}/${verticalSliceTaskIds.length} 第一圈`, {
-      fontFamily: "Arial, sans-serif",
-      fontSize: "14px",
-      color: "#3e332f",
+    const title = this.add.text(-52, -38, `${completedCount}/${verticalSliceTaskIds.length} 第一圈`, {
+      fontFamily: "Avenir Next, sans-serif",
+      fontSize: "13px",
+      color: "#583f55",
       fontStyle: "bold"
-    });
-    tower.add([titleChip, title]);
+    }).setBackgroundColor("rgba(255,251,255,0.72)").setPadding(8, 4, 8, 4);
+    badge.add(title);
   }
 
   drawTownPath(progress, activeTask) {
@@ -2610,32 +2520,23 @@ class TownScene extends Phaser.Scene {
   }
 
   drawCharacter(x, y, activeTask) {
-    this.townCharacterShadow = this.add.ellipse(x + 2, y + 10, 48, 18, 0x4d4038, 0.18).setDepth(39);
+    this.townCharacterShadow = this.add.ellipse(x + 2, y + 10, 42, 14, 0x4d4038, 0.16).setDepth(39);
     const progress = loadProgress();
-    const character = this.add.container(x, y - 38).setDepth(41);
-    const backLeg = this.add.rectangle(-8, 30, 9, 23, 0x4c78a8, 0.92).setOrigin(0.5, 0);
-    const frontLeg = this.add.rectangle(8, 30, 9, 23, 0x4c78a8, 0.92).setOrigin(0.5, 0);
-    const boots = [
-      this.add.ellipse(-8, 54, 15, 7, 0x3f3430, 0.9),
-      this.add.ellipse(8, 54, 15, 7, 0x3f3430, 0.9)
-    ];
-    const bodyColor = progress.selectedOutfitId === "outfit_apron" ? 0x74a882 : progress.selectedOutfitId === "outfit_garden_bow" ? 0xc75f78 : 0x5f83c4;
-    const body = this.add.ellipse(0, 14, 36, 44, bodyColor, 0.96).setStrokeStyle(2, 0xffffff, 0.52);
-    const scarf = this.add.rectangle(0, -4, 32, 8, 0xffcf5a, 0.82);
-    const head = this.add.circle(0, -22, 20, 0xffdfc4, 0.98).setStrokeStyle(2, 0x7c5c51, 0.2);
-    const hair = this.add.arc(0, -28, 20, 198, 342, false, 0x6d4a3f, 0.9);
-    const eyeLeft = this.add.circle(-7, -24, 2, 0x3f3430, 0.92);
-    const eyeRight = this.add.circle(7, -24, 2, 0x3f3430, 0.92);
-    const smile = this.add.arc(0, -18, 7, 20, 160, false, 0xffffff, 0).setStrokeStyle(2, 0x9b5f58, 0.8);
+    const character = this.add.container(x, y - 82).setDepth(41);
+    const imageKey = outfitCharacterImages[progress.selectedOutfitId] || "character-default";
+    const sprite = this.add.image(0, 0, imageKey)
+      .setDisplaySize(82, 123)
+      .setOrigin(0.5, 0.98);
     const bow = progress.selectedOutfitId === "outfit_garden_bow"
-      ? this.add.image(10, -42, "item-bow").setDisplaySize(24, 18).setAngle(-8)
+      ? this.add.image(15, -92, "item-bow").setDisplaySize(22, 16).setAngle(-8)
       : null;
-    character.add([backLeg, frontLeg, ...boots, body, scarf, head, hair, eyeLeft, eyeRight, smile, ...(bow ? [bow] : [])]);
-    character.setSize(54, 96);
+    character.add([sprite, ...(bow ? [bow] : [])]);
+    character.setSize(54, 104);
     character.setInteractive({ useHandCursor: true });
-    character.walkParts = { backLeg, frontLeg, body, scarf, head, hair, eyeLeft, eyeRight, smile, bow };
-    [body, scarf, head, hair, eyeLeft, eyeRight, smile, bow].filter(Boolean).forEach((part) => {
+    character.walkParts = { sprite, bow };
+    [sprite, bow].filter(Boolean).forEach((part) => {
       part.__walkBaseY = part.y;
+      part.__walkBaseAngle = part.angle || 0;
     });
     this.townCharacter = character;
     this.townCharacterOutfitGroup = null;
@@ -2730,7 +2631,7 @@ class TownScene extends Phaser.Scene {
 
   setTownCharacterPosition(x, groundY) {
     if (!this.townCharacter) return;
-    const spriteY = groundY - 38;
+    const spriteY = groundY - 82;
     this.townCharacter.setPosition(x, spriteY);
     this.townCharacterShadow?.setPosition(x + 2, groundY + 10);
     const depth = Phaser.Math.Clamp(Math.round(groundY / 10), 39, 57);
@@ -2739,7 +2640,7 @@ class TownScene extends Phaser.Scene {
   }
 
   getTownCharacterGroundY() {
-    return (this.townCharacter?.y || 474) + 38;
+    return (this.townCharacter?.y || 430) + 82;
   }
 
   faceTownCharacter(dx) {
@@ -2751,14 +2652,14 @@ class TownScene extends Phaser.Scene {
   playTownWalkStep(phase = null) {
     if (!this.townCharacter?.walkParts) return;
     const value = phase == null ? this.time.now / 180 : phase * Math.PI * 4;
-    const swing = Math.sin(value) * 7;
+    const swing = Math.sin(value) * 2.2;
     const bob = Math.abs(Math.sin(value)) * 2;
-    const { backLeg, frontLeg, body, scarf, head, hair, eyeLeft, eyeRight, smile, bow } = this.townCharacter.walkParts;
-    backLeg.setAngle(swing);
-    frontLeg.setAngle(-swing);
-    [body, scarf, head, hair, eyeLeft, eyeRight, smile, bow].filter(Boolean).forEach((part) => {
+    const { sprite, bow } = this.townCharacter.walkParts;
+    [sprite, bow].filter(Boolean).forEach((part) => {
       if (part.__walkBaseY == null) part.__walkBaseY = part.y;
+      if (part.__walkBaseAngle == null) part.__walkBaseAngle = part.angle || 0;
       part.setY(part.__walkBaseY - bob);
+      part.setAngle(part.__walkBaseAngle + swing);
     });
   }
 
@@ -3095,10 +2996,10 @@ function buttonStyle() {
 
 function decorTextStyle() {
   return {
-    fontFamily: "Arial, sans-serif",
+    fontFamily: "Avenir Next, sans-serif",
     fontSize: "14px",
-    color: "#4e3d3b",
-    backgroundColor: "rgba(255,250,244,0.78)"
+    color: "#5d4660",
+    backgroundColor: "rgba(255,247,251,0.82)"
   };
 }
 

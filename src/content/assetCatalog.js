@@ -53,6 +53,8 @@ export const assetCatalog = [
   transparentAsset("character-wave", "character-wave.png", "character"),
   transparentAsset("icon-star", "icon-star.png", "ui"),
   transparentAsset("icon-heart", "icon-heart.png", "ui"),
+  transparentAsset("ui-hud-panel", "ui-hud-panel.png", "ui"),
+  transparentAsset("ui-hud-banner", "ui-hud-banner.png", "ui"),
   transparentAsset("item-bow", "item-bow.png", "item"),
   transparentAsset("item-bag", "item-bag.png", "item"),
   transparentAsset("item-headband", "item-headband.png", "item"),

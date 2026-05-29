@@ -1086,7 +1086,11 @@ function OutfitPanel({ progress, onChange }) {
           key: outfitId,
           className: progress.selectedOutfitId === outfitId ? "outfit selected" : "outfit",
           onClick: () => onChange(outfitId)
-        }, h("img", { className: "outfit-thumb", src: outfitImage(outfitId), alt: "" }), h("span", null, getOutfitLabel(outfitId))))
+        }, h("img", {
+          className: "outfit-thumb",
+          src: outfitImage(outfitId),
+          alt: ""
+        }), h("span", null, getOutfitLabel(outfitId))))
       )
     ),
     h("section", { className: "task-card reward-collection-panel" },
