@@ -13,6 +13,7 @@
 - [x] 新阶段不推翻底层任务系统，不重写 75 个任务，不重做所有内容。
 - [x] 新阶段优先重构首屏体验：小镇地图、角色移动、NPC/地点交互、主画面目标提示。
 - [x] 主线故事、目标、奖励必须成为游戏世界的一部分，而不是只在侧边面板里解释。
+- [x] 2026-05-29 视觉方向补充：操作骨架参考“轻松小镇探索型生活游戏”，强调斜俯视小镇、低压力点击移动、走近即互动、地点本身讲故事；美术气质切换为女孩向梦幻时尚风，面向喜欢甜美、精致、换装感和童话感的小玩家。
 
 ## 二、RPG 主体验定义
 
@@ -138,6 +139,76 @@
 - [x] Keeper Ray 可先用现有角色或公告牌表达，不阻塞代码组。
 - [x] 所有儿童端文案避免“答题、正确答案、分数、考试”等强学习词。
 - [x] 地图目标文案要像冒险提示，例如“去邮局找见面礼线索”，不写“开始练习”。
+- [ ] 小镇整体视觉升级到“轻松探索骨架 + 女孩向梦幻时尚风”：
+  说明：操作体验参考斜俯视小镇探索类生活游戏，视觉不走朴素乡村路线，改为甜美、闪亮、时尚、童话橱窗感。
+- [ ] 产出 3 张新的视觉基准图：
+  说明：1. 小镇总览平面图；2. 主角角色设定；3. HUD / UI 风格基准图。
+- [ ] 用统一美术关键词驱动后续资产生成、UI 落版和 QA 验收：
+  说明：`cozy top-down town`, `storybook town`, `pastel pink`, `mint`, `cream`, `sky blue`, `gold accents`, `cute fashion adventure`, `girl-friendly`, `dream boutique`, `toy-like architecture`, `soft glow`, `sparkle details`, `clean readable game UI`, `no clutter`, `not rustic`, `not realistic gritty`.
+
+### 美术关键词与 ImageGen 提示词基线
+
+#### 美术关键词
+
+- 操作体验关键词：`top-down town exploration`, `cozy life-sim feel`, `low-pressure interaction`, `walk-up interaction`, `clean readable paths`, `discoverable landmarks`
+- 视觉气质关键词：`girl-friendly fantasy`, `dreamy fashion adventure`, `storybook charm`, `boutique dollhouse town`, `playful elegance`, `soft magical sparkle`
+- 配色关键词：`pastel pink`, `blush peach`, `cream white`, `mint green`, `sky blue`, `lavender accents`, `soft gold accents`
+- 建筑关键词：`toy-like architecture`, `storybook post office`, `fairytale clock tower`, `garden weather station`, `cute signboard`, `polished surfaces`
+- 角色关键词：`chibi heroine`, `fashionable little adventurer`, `large expressive eyes`, `cute silhouette`, `small walking sprite proportions`, `dress-up friendly`
+- UI 关键词：`rounded cards`, `sticker-like badges`, `soft highlight glow`, `clean quest tracker`, `gentle shadows`, `readable without clutter`
+- 负面关键词：`rustic farm look`, `muddy colors`, `realistic gritty textures`, `busy mobile UI`, `dark survival mood`, `flat learning app panels`, `exam app feeling`
+
+#### ImageGen 提示词 1：小镇总览平面图
+
+```text
+Use case: illustration-story
+Asset type: game concept art benchmark for town map
+Primary request: create a top-down or slightly angled top-down town overview for a children's learning adventure game
+Scene/backdrop: a compact magical town plaza with a central path, side paths, clock tower, post office, garden weather station, bulletin board, entry gate, flower beds, shallow river edge
+Subject: the town should feel explorable like a cozy life-sim town, but visually styled for girls who love dreamy fashion and dollhouse-like worlds
+Style/medium: polished storybook game concept art, cute toy-like architecture, soft magical glow
+Composition/framing: wide map overview, clearly readable roads and walkable zones, landmarks separated cleanly, suitable as a game map reference
+Lighting/mood: bright daytime, cheerful, warm, safe, inviting
+Color palette: pastel pink, cream, mint green, sky blue, soft gold accents
+Materials/textures: smooth painted surfaces, charming signs, soft sparkles, flower details, boutique window feeling
+Constraints: must look like a playable town map, not a poster illustration; roads, entrances, and standing areas must be readable; no combat tone; no clutter
+Avoid: rustic farm feeling, muddy brown palette, gritty realism, flat app-like panels, hidden hotspots
+```
+
+#### ImageGen 提示词 2：主角角色设定
+
+```text
+Use case: illustration-story
+Asset type: character concept benchmark for player avatar
+Primary request: create a chibi girl adventurer for a cozy top-down town exploration game
+Scene/backdrop: neutral presentation background with soft fashion concept styling
+Subject: a cute little heroine who feels collectible, dress-up friendly, brave but sweet, suitable for a girl's dream adventure town
+Style/medium: polished character concept art for a stylized game, toy-like proportions, expressive face, clean silhouette
+Composition/framing: full body front-facing character sheet style, include one or two small side pose hints if natural
+Lighting/mood: soft studio glow, cheerful, magical, premium toy-box appeal
+Color palette: pastel pink, cream, blush, mint, small gold sparkle accents
+Materials/textures: soft fabric, ribbon details, glossy shoes, simple accessory charm
+Constraints: should translate into a small walking sprite later; proportions should feel chibi and readable at small size; not too detailed to animate
+Avoid: realistic teen fashion model, edgy attitude, gritty shading, oversized head-only doll, plain school uniform
+```
+
+#### ImageGen 提示词 3：HUD / UI 风格基准图
+
+```text
+Use case: ui-mockup
+Asset type: game HUD style benchmark
+Primary request: create a UI style mockup for a top-down cozy adventure game for girls
+Scene/backdrop: overlay HUD on a soft blurred town-map backdrop
+Subject: top HUD with current goal, next destination, reward preview, rounded action button, badge-like counters, adventure log card
+Style/medium: polished game UI concept art, readable, soft premium casual game interface
+Composition/framing: clean layout with map still visible as the main focus, minimal obstruction, desktop-friendly and mobile-friendly hierarchy
+Lighting/mood: bright, airy, soft glow, delightful and gentle
+Color palette: cream white, pastel pink, mint green, sky blue, rose accents, soft gold accents
+Materials/textures: rounded glossy badges, sticker-like panels, soft shadows, subtle sparkle highlights
+Text (verbatim): "当前目标", "下一步地点", "奖励预览"
+Constraints: must feel like a real game HUD, not an educational app dashboard; map remains the hero; hierarchy must be clean and uncluttered
+Avoid: heavy admin dashboard feel, giant white walls, overly dense text, dark fantasy UI, cluttered icons
+```
 
 ## 六、P1 延后任务
 
