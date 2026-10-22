@@ -1,0 +1,853 @@
+{
+  "version": 1,
+  "graph_connected": true,
+  "gameplay_navmesh_baked": false,
+  "routes": [
+    {
+      "name": "Route_A_B",
+      "type": "path",
+      "from": "A",
+      "to": "B",
+      "width": 3.1,
+      "control_points": [
+        [
+          -50,
+          -27.5
+        ],
+        [
+          -46,
+          -29
+        ],
+        [
+          -45,
+          -32
+        ]
+      ]
+    },
+    {
+      "name": "Route_B_C",
+      "type": "path",
+      "from": "B",
+      "to": "C",
+      "width": 3.1,
+      "control_points": [
+        [
+          -45,
+          -32
+        ],
+        [
+          -40,
+          -34
+        ],
+        [
+          -33,
+          -39.0
+        ]
+      ]
+    },
+    {
+      "name": "Route_C_D",
+      "type": "path",
+      "from": "C",
+      "to": "D",
+      "width": 3.1,
+      "control_points": [
+        [
+          -33,
+          -39.0
+        ],
+        [
+          -27,
+          -31
+        ],
+        [
+          -21,
+          -27
+        ],
+        [
+          -24,
+          -21.75
+        ]
+      ]
+    },
+    {
+      "name": "Route_D_E",
+      "type": "path",
+      "from": "D",
+      "to": "E",
+      "width": 3.1,
+      "control_points": [
+        [
+          -24,
+          -21.75
+        ],
+        [
+          -30,
+          -16
+        ],
+        [
+          -39,
+          -10.5
+        ]
+      ]
+    },
+    {
+      "name": "Route_E_F",
+      "type": "path",
+      "from": "E",
+      "to": "F",
+      "width": 3.1,
+      "control_points": [
+        [
+          -39,
+          -10.5
+        ],
+        [
+          -47,
+          -13
+        ],
+        [
+          -55,
+          -9.5
+        ]
+      ]
+    },
+    {
+      "name": "Route_F_G",
+      "type": "path",
+      "from": "F",
+      "to": "G",
+      "width": 3.1,
+      "control_points": [
+        [
+          -55,
+          -9.5
+        ],
+        [
+          -62,
+          2
+        ],
+        [
+          -58,
+          10
+        ],
+        [
+          -52,
+          14.0
+        ]
+      ]
+    },
+    {
+      "name": "Route_G_H",
+      "type": "path",
+      "from": "G",
+      "to": "H",
+      "width": 3.1,
+      "control_points": [
+        [
+          -52,
+          14.0
+        ],
+        [
+          -60,
+          25
+        ],
+        [
+          -54,
+          33.75
+        ]
+      ]
+    },
+    {
+      "name": "Route_H_I",
+      "type": "path",
+      "from": "H",
+      "to": "I",
+      "width": 3.1,
+      "control_points": [
+        [
+          -54,
+          33.75
+        ],
+        [
+          -45,
+          34
+        ],
+        [
+          -36,
+          39.6
+        ]
+      ]
+    },
+    {
+      "name": "Route_I_J",
+      "type": "path",
+      "from": "I",
+      "to": "J",
+      "width": 3.1,
+      "control_points": [
+        [
+          -36,
+          39.6
+        ],
+        [
+          -29,
+          34
+        ],
+        [
+          -20,
+          34.15
+        ]
+      ]
+    },
+    {
+      "name": "Route_J_K",
+      "type": "path",
+      "from": "J",
+      "to": "K",
+      "width": 3.1,
+      "control_points": [
+        [
+          -20,
+          34.15
+        ],
+        [
+          -24,
+          27
+        ],
+        [
+          -31,
+          14.5
+        ]
+      ]
+    },
+    {
+      "name": "Route_K_L",
+      "type": "path",
+      "from": "K",
+      "to": "L",
+      "width": 3.1,
+      "control_points": [
+        [
+          -31,
+          14.5
+        ],
+        [
+          -24,
+          25
+        ],
+        [
+          -16,
+          31
+        ],
+        [
+          -8,
+          37.0
+        ]
+      ]
+    },
+    {
+      "name": "Route_L_M",
+      "type": "path",
+      "from": "L",
+      "to": "M",
+      "width": 3.1,
+      "control_points": [
+        [
+          -8,
+          37.0
+        ],
+        [
+          -2,
+          35
+        ],
+        [
+          6,
+          35
+        ],
+        [
+          13,
+          38.5
+        ]
+      ]
+    },
+    {
+      "name": "Route_M_N",
+      "type": "path",
+      "from": "M",
+      "to": "N",
+      "width": 3.1,
+      "control_points": [
+        [
+          13,
+          38.5
+        ],
+        [
+          23,
+          33
+        ],
+        [
+          33,
+          33.0
+        ]
+      ]
+    },
+    {
+      "name": "Route_N_O",
+      "type": "path",
+      "from": "N",
+      "to": "O",
+      "width": 3.1,
+      "control_points": [
+        [
+          33,
+          33.0
+        ],
+        [
+          40,
+          26
+        ],
+        [
+          52,
+          23.5
+        ]
+      ]
+    },
+    {
+      "name": "Route_O_P",
+      "type": "path",
+      "from": "O",
+      "to": "P",
+      "width": 3.1,
+      "control_points": [
+        [
+          52,
+          23.5
+        ],
+        [
+          42,
+          18
+        ],
+        [
+          28,
+          16.0
+        ]
+      ]
+    },
+    {
+      "name": "Route_P_Q",
+      "type": "path",
+      "from": "P",
+      "to": "Q",
+      "width": 3.1,
+      "control_points": [
+        [
+          28,
+          16.0
+        ],
+        [
+          38,
+          10
+        ],
+        [
+          49,
+          3.0
+        ]
+      ]
+    },
+    {
+      "name": "Route_Q_R",
+      "type": "path",
+      "from": "Q",
+      "to": "R",
+      "width": 3.1,
+      "control_points": [
+        [
+          49,
+          3.0
+        ],
+        [
+          57,
+          -2
+        ],
+        [
+          58,
+          -13.25
+        ]
+      ]
+    },
+    {
+      "name": "Route_R_S",
+      "type": "path",
+      "from": "R",
+      "to": "S",
+      "width": 3.1,
+      "control_points": [
+        [
+          58,
+          -13.25
+        ],
+        [
+          49,
+          -18
+        ],
+        [
+          39,
+          -20.0
+        ]
+      ]
+    },
+    {
+      "name": "Route_S_T",
+      "type": "path",
+      "from": "S",
+      "to": "T",
+      "width": 3.1,
+      "control_points": [
+        [
+          39,
+          -20.0
+        ],
+        [
+          43,
+          -27
+        ],
+        [
+          50,
+          -33.5
+        ]
+      ]
+    },
+    {
+      "name": "Route_T_U",
+      "type": "path",
+      "from": "T",
+      "to": "U",
+      "width": 3.1,
+      "control_points": [
+        [
+          50,
+          -33.5
+        ],
+        [
+          47,
+          -40
+        ],
+        [
+          35,
+          -41.5
+        ]
+      ]
+    },
+    {
+      "name": "Route_U_V",
+      "type": "path",
+      "from": "U",
+      "to": "V",
+      "width": 3.1,
+      "control_points": [
+        [
+          35,
+          -41.5
+        ],
+        [
+          34,
+          -41
+        ],
+        [
+          28,
+          -41
+        ],
+        [
+          22,
+          -41
+        ],
+        [
+          16,
+          -44.0
+        ]
+      ]
+    },
+    {
+      "name": "Route_V_W",
+      "type": "path",
+      "from": "V",
+      "to": "W",
+      "width": 3.1,
+      "control_points": [
+        [
+          16,
+          -44.0
+        ],
+        [
+          20,
+          -50
+        ],
+        [
+          12,
+          -60.5
+        ]
+      ]
+    },
+    {
+      "name": "Route_W_X",
+      "type": "path",
+      "from": "W",
+      "to": "X",
+      "width": 3.1,
+      "control_points": [
+        [
+          12,
+          -60.5
+        ],
+        [
+          3,
+          -60
+        ],
+        [
+          -7,
+          -59.0
+        ]
+      ]
+    },
+    {
+      "name": "Route_X_Y",
+      "type": "path",
+      "from": "X",
+      "to": "Y",
+      "width": 3.1,
+      "control_points": [
+        [
+          -7,
+          -59.0
+        ],
+        [
+          -17,
+          -54
+        ],
+        [
+          -20,
+          -46.0
+        ]
+      ]
+    },
+    {
+      "name": "Route_Y_Z",
+      "type": "path",
+      "from": "Y",
+      "to": "Z",
+      "width": 3.1,
+      "control_points": [
+        [
+          -20,
+          -46.0
+        ],
+        [
+          -26,
+          -48
+        ],
+        [
+          -33,
+          -55.5
+        ]
+      ]
+    },
+    {
+      "name": "Route_Z_A",
+      "type": "path",
+      "from": "Z",
+      "to": "A",
+      "width": 3.1,
+      "control_points": [
+        [
+          -33,
+          -55.5
+        ],
+        [
+          -43,
+          -53
+        ],
+        [
+          -45,
+          -39
+        ],
+        [
+          -42,
+          -30
+        ],
+        [
+          -50,
+          -27.5
+        ]
+      ]
+    },
+    {
+      "name": "Home_West",
+      "type": "path",
+      "from": "HOME",
+      "to": "D",
+      "width": 3.8,
+      "control_points": [
+        [
+          -3,
+          -23
+        ],
+        [
+          -12,
+          -25
+        ],
+        [
+          -24,
+          -21.75
+        ]
+      ]
+    },
+    {
+      "name": "Home_Northwest",
+      "type": "path",
+      "from": "HOME",
+      "to": "K",
+      "width": 3.5,
+      "control_points": [
+        [
+          -3,
+          -23
+        ],
+        [
+          -15,
+          -15
+        ],
+        [
+          -23,
+          -5
+        ],
+        [
+          -24,
+          7
+        ],
+        [
+          -31,
+          14.5
+        ]
+      ]
+    },
+    {
+      "name": "Home_East",
+      "type": "path",
+      "from": "HOME",
+      "to": "S",
+      "width": 3.8,
+      "control_points": [
+        [
+          -3,
+          -23
+        ],
+        [
+          8,
+          -24
+        ],
+        [
+          18,
+          -23
+        ],
+        [
+          25,
+          -23
+        ],
+        [
+          32,
+          -23
+        ],
+        [
+          39,
+          -20.0
+        ]
+      ]
+    },
+    {
+      "name": "Home_Northeast",
+      "type": "path",
+      "from": "HOME",
+      "to": "P",
+      "width": 3.4,
+      "control_points": [
+        [
+          -3,
+          -23
+        ],
+        [
+          8,
+          -16
+        ],
+        [
+          17,
+          -7
+        ],
+        [
+          24,
+          -7
+        ],
+        [
+          31,
+          -7
+        ],
+        [
+          33,
+          4
+        ],
+        [
+          28,
+          16.0
+        ]
+      ]
+    },
+    {
+      "name": "Home_South",
+      "type": "path",
+      "from": "HOME",
+      "to": "V",
+      "width": 3.4,
+      "control_points": [
+        [
+          -3,
+          -23
+        ],
+        [
+          5,
+          -30
+        ],
+        [
+          11,
+          -34
+        ],
+        [
+          16,
+          -44.0
+        ]
+      ]
+    },
+    {
+      "name": "Home_Porch",
+      "type": "path",
+      "from": "HOME",
+      "to": "HOME_PORCH",
+      "width": 3.0,
+      "control_points": [
+        [
+          -3,
+          -23
+        ],
+        [
+          -3,
+          -19
+        ],
+        [
+          -3,
+          -16
+        ]
+      ]
+    },
+    {
+      "name": "North_Bridge",
+      "type": "bridge",
+      "endpoints": [
+        [
+          18.200000762939453,
+          -7.0
+        ],
+        [
+          30.200000762939453,
+          -7.0
+        ]
+      ],
+      "width": 3.5
+    },
+    {
+      "name": "Village_Bridge",
+      "type": "bridge",
+      "endpoints": [
+        [
+          19.0,
+          -23.0
+        ],
+        [
+          31.0,
+          -23.0
+        ]
+      ],
+      "width": 3.5
+    },
+    {
+      "name": "South_Bridge",
+      "type": "bridge",
+      "endpoints": [
+        [
+          22.0,
+          -41.0
+        ],
+        [
+          34.0,
+          -41.0
+        ]
+      ],
+      "width": 3.5
+    },
+    {
+      "name": "W_Seaside_Jetty",
+      "type": "pier",
+      "endpoints": [
+        [
+          12.0,
+          -59.0
+        ],
+        [
+          12.0,
+          -64.0
+        ]
+      ],
+      "width": 2.8,
+      "z": [
+        3.279127147811798,
+        0.9
+      ]
+    },
+    {
+      "name": "B_Pier_Ramp",
+      "type": "pier",
+      "endpoints": [
+        [
+          -45.0,
+          -32.0
+        ],
+        [
+          -45.0,
+          -49.0
+        ]
+      ],
+      "width": 3.1,
+      "z": [
+        5.244382019042969,
+        1.85
+      ]
+    },
+    {
+      "name": "B_Pier_Landing",
+      "type": "pier",
+      "endpoints": [
+        [
+          -45.0,
+          -49.0
+        ],
+        [
+          -55.0,
+          -49.0
+        ]
+      ],
+      "width": 3.5,
+      "z": [
+        1.85,
+        1.85
+      ]
+    }
+  ]
+}

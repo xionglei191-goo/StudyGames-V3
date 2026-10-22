@@ -1,0 +1,59 @@
+{
+  "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/A_apple_house_tripo_raw_v01.glb",
+  "source_sha256": "c24d97767900bcc0af5070b91aac22c96c8dca5314277931a9f391d585de4e9e",
+  "source_preserved": true,
+  "raw_vertices": 1022211,
+  "raw_triangles": 1990605,
+  "working_vertices": 61459,
+  "working_triangles": 79999,
+  "triangle_reduction_percent": 95.98,
+  "world_bounds_min": [
+    -3.0000059604644775,
+    0.5015583038330078,
+    0.7699999809265137
+  ],
+  "world_bounds_max": [
+    3.0000009536743164,
+    6.198441505432129,
+    6.430184364318848
+  ],
+  "world_size": [
+    6.000006914138794,
+    5.696883201599121,
+    5.660184383392334
+  ],
+  "texture_resolution": [
+    8192,
+    8192
+  ],
+  "texture_packed": true,
+  "front_axis": "-Y",
+  "ground_z": 0.7699999809265137,
+  "blend_file": "/Users/xionglei/Documents/StudyGame/assets/blender/A_orchard/A_orchard_with_apple_house_v02.blend",
+  "game_engine_tested": false,
+  "door_interactive": false,
+  "export_checks": [
+    {
+      "file": "assets/blender/A_orchard/A_orchard_with_apple_house_v02.glb",
+      "bytes": 14149544,
+      "nodes": 576,
+      "triangles": 155985,
+      "images_embedded": 1
+    },
+    {
+      "file": "assets/tripo/A_apple_house/A_apple_house_optimized_v02.glb",
+      "bytes": 11318852,
+      "nodes": 2,
+      "triangles": 79999,
+      "images_embedded": 1
+    }
+  ],
+  "visual_checks": [
+    "front",
+    "right",
+    "three_quarter",
+    "final_scene_render"
+  ],
+  "foundation_fitted_to_actual_house": true,
+  "entrance_lamp_moved_to_remove_occlusion": true
+}

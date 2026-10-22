@@ -1,0 +1,182 @@
+{
+  "origin": [
+    0.0,
+    54.20000076293945,
+    10.350000381469727
+  ],
+  "front_axis": "-Y",
+  "purpose": "World-map asset; no story or gameplay implementation",
+  "cleared_objects": [
+    "ALPHA_Forest_003_Trunk",
+    "ALPHA_Forest_003_Needles_0",
+    "ALPHA_Forest_003_Needles_1",
+    "ALPHA_Forest_003_Needles_2",
+    "ALPHA_Forest_007_Trunk",
+    "ALPHA_Forest_007_Needles_0",
+    "ALPHA_Forest_007_Needles_1",
+    "ALPHA_Forest_007_Needles_2",
+    "ALPHA_Forest_008_Trunk",
+    "ALPHA_Forest_008_Needles_0",
+    "ALPHA_Forest_008_Needles_1",
+    "ALPHA_Forest_008_Needles_2",
+    "ALPHA_Forest_012_Trunk",
+    "ALPHA_Forest_012_Needles_0",
+    "ALPHA_Forest_012_Needles_1",
+    "ALPHA_Forest_012_Needles_2",
+    "ALPHA_Forest_016_Trunk",
+    "ALPHA_Forest_016_Needles_0",
+    "ALPHA_Forest_016_Needles_1",
+    "ALPHA_Forest_016_Needles_2",
+    "ALPHA_Forest_021_Trunk",
+    "ALPHA_Forest_021_Needles_0",
+    "ALPHA_Forest_021_Needles_1",
+    "ALPHA_Forest_021_Needles_2",
+    "ALPHA_Forest_069_Trunk",
+    "ALPHA_Forest_069_Crown_0",
+    "ALPHA_Forest_069_Crown_1",
+    "ALPHA_Forest_069_Crown_2",
+    "ALPHA_Forest_072_Trunk",
+    "ALPHA_Forest_072_Needles_0",
+    "ALPHA_Forest_072_Needles_1",
+    "ALPHA_Forest_072_Needles_2",
+    "ALPHA_Forest_080_Trunk",
+    "ALPHA_Forest_080_Needles_0",
+    "ALPHA_Forest_080_Needles_1",
+    "ALPHA_Forest_080_Needles_2",
+    "ALPHA_Forest_101_Trunk",
+    "ALPHA_Forest_101_Needles_0",
+    "ALPHA_Forest_101_Needles_1",
+    "ALPHA_Forest_101_Needles_2",
+    "ALPHA_Forest_130_Trunk",
+    "ALPHA_Forest_130_Needles_0",
+    "ALPHA_Forest_130_Needles_1",
+    "ALPHA_Forest_130_Needles_2",
+    "ALPHA_Forest_143_Trunk",
+    "ALPHA_Forest_143_Crown_0",
+    "ALPHA_Forest_143_Crown_1",
+    "ALPHA_Forest_143_Crown_2",
+    "ALPHA_Forest_151_Trunk",
+    "ALPHA_Forest_151_Needles_0",
+    "ALPHA_Forest_151_Needles_1",
+    "ALPHA_Forest_151_Needles_2",
+    "ALPHA_V3_Tree_Canopy_2",
+    "ALPHA_V3_Tree_Canopy_6",
+    "ALPHA_V3_Tree_Canopy_7",
+    "ALPHA_V3_Tree_Canopy_11",
+    "ALPHA_V3_Tree_Canopy_15",
+    "ALPHA_V3_Tree_Canopy_20",
+    "ALPHA_V3_Tree_Canopy_68",
+    "ALPHA_V3_Tree_Canopy_71",
+    "ALPHA_V3_Tree_Canopy_79",
+    "ALPHA_V3_Tree_Canopy_100",
+    "ALPHA_V3_Tree_Canopy_129",
+    "ALPHA_V3_Tree_Canopy_142",
+    "ALPHA_V3_Tree_Canopy_150",
+    "ALPHA_Coastal_Boulder.015",
+    "ALPHA_Coastal_Boulder.016",
+    "ALPHA_Coastal_Boulder.017",
+    "ALPHA_Coastal_Boulder.018",
+    "ALPHA_Coastal_Boulder.019",
+    "ALPHA_Forest_034_Trunk",
+    "ALPHA_Forest_034_Needles_0",
+    "ALPHA_Forest_034_Needles_1",
+    "ALPHA_Forest_034_Needles_2",
+    "ALPHA_V3_Tree_Canopy_33"
+  ],
+  "removed_tree_positions": [
+    "ALPHA_Forest_003",
+    "ALPHA_Forest_007",
+    "ALPHA_Forest_008",
+    "ALPHA_Forest_012",
+    "ALPHA_Forest_016",
+    "ALPHA_Forest_021",
+    "ALPHA_Forest_069",
+    "ALPHA_Forest_072",
+    "ALPHA_Forest_080",
+    "ALPHA_Forest_101",
+    "ALPHA_Forest_130",
+    "ALPHA_Forest_143",
+    "ALPHA_Forest_151"
+  ],
+  "routes": [
+    {
+      "name": "North_School_From_L",
+      "type": "path",
+      "from": "L",
+      "to": "SCHOOL",
+      "width": 2.7,
+      "control_points": [
+        [
+          -8,
+          37
+        ],
+        [
+          -3.2,
+          37
+        ],
+        [
+          -1.1,
+          40
+        ],
+        [
+          -1.6,
+          44
+        ],
+        [
+          0,
+          48.1
+        ]
+      ]
+    },
+    {
+      "name": "North_School_From_M",
+      "type": "path",
+      "from": "M",
+      "to": "SCHOOL",
+      "width": 2.7,
+      "control_points": [
+        [
+          13,
+          38.5
+        ],
+        [
+          7.4,
+          38.3
+        ],
+        [
+          5.5,
+          41.4
+        ],
+        [
+          4.9,
+          45.5
+        ],
+        [
+          0,
+          48.1
+        ]
+      ]
+    }
+  ],
+  "building_root": "ALPHA_SCHOOL_ROOT",
+  "campus_root": "ALPHA_SCHOOL_CAMPUS_ROOT",
+  "home_location": [
+    -3,
+    -14
+  ],
+  "straight_distance_home_to_school_m": 68.27,
+  "building_meshes": 171,
+  "campus_meshes": 167,
+  "version": 1,
+  "map_version": "v04",
+  "planned_walk_from_home_plaza_m": 99.6,
+  "shortest_route_nodes": [
+    "HOME",
+    "K",
+    "L",
+    "SCHOOL"
+  ],
+  "route_clearance_trees": [
+    "ALPHA_Forest_034"
+  ]
+}

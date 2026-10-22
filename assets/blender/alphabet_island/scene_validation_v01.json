@@ -1,0 +1,54 @@
+{
+  "scene": "Alphabet_Island_Layout_v01",
+  "sockets": 26,
+  "memory_anchors": 130,
+  "alphabet_route_and_home_connected": true,
+  "bridge_count": 3,
+  "path_count": 32,
+  "objects": 3217,
+  "exported_selection": 3187,
+  "finite_coordinates": true,
+  "source_checks": [
+    {
+      "letter": "A",
+      "sha256_unchanged": true,
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/A_apple_house/A_apple_house_optimized_v02.glb",
+      "triangles": 79999
+    },
+    {
+      "letter": "B",
+      "sha256_unchanged": true,
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/B_boat_house.glb",
+      "triangles": 18051
+    },
+    {
+      "letter": "C",
+      "sha256_unchanged": true,
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/C_cake_bakery.glb",
+      "triangles": 196044
+    }
+  ],
+  "export_files": {
+    "blend": "/Users/xionglei/Documents/StudyGame/assets/blender/alphabet_island/alphabet_island_layout_v01.blend",
+    "glb": "/Users/xionglei/Documents/StudyGame/assets/blender/alphabet_island/alphabet_island_layout_v01.glb"
+  },
+  "checks_not_performed": [
+    "game engine import",
+    "collision generation",
+    "navmesh baking",
+    "interactive doors",
+    "runtime performance"
+  ],
+  "visual_checks": [
+    "world overview",
+    "A/B/C village",
+    "home and lake",
+    "terrain road projection",
+    "boat pier alignment"
+  ],
+  "retaining_edges": [
+    "ALPHA_H_Terrace_Retaining_Edge",
+    "ALPHA_U_Terrace_Retaining_Edge",
+    "ALPHA_V_Terrace_Retaining_Edge"
+  ]
+}

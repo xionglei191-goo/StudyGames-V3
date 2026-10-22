@@ -1,0 +1,50 @@
+{
+  "source": "B_boat_house.glb",
+  "source_sha256": "02911a8ee477645d8d7400900349778f11c89403b7ce0d2308f31aa4d8502b45",
+  "assessment": "usable_as_static_landmark_prototype",
+  "triangles": 18051,
+  "vertices": 12691,
+  "mesh_count": 1,
+  "material_count": 1,
+  "textures": [
+    {
+      "type": "base_color",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "type": "roughness_metallic",
+      "width": 2048,
+      "height": 2048
+    },
+    {
+      "type": "normal",
+      "width": 2048,
+      "height": 2048
+    }
+  ],
+  "file_bytes": 3322544,
+  "checked_views": [
+    "front",
+    "back",
+    "right",
+    "three_quarter",
+    "top",
+    "bottom"
+  ],
+  "integrated_B_readable": true,
+  "topology_check_after_temporary_weld_only": {
+    "boundary_edges": 6,
+    "edges_with_three_faces": 3,
+    "loose_vertices": 0,
+    "degenerate_faces": 0,
+    "connected_components": 1
+  },
+  "followups": [
+    "Clean localized mesh joins during Blender preparation.",
+    "Scale and place at the dock.",
+    "Separate door or other parts if animation is needed; create collision separately."
+  ],
+  "source_unchanged": true,
+  "game_engine_tested": false
+}

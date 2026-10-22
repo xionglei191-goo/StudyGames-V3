@@ -1,0 +1,43 @@
+{
+  "asset_id": "A_apple_house",
+  "version": "01",
+  "status": "input_references_ready_3d_not_generated",
+  "image_method": "built_in_imagegen",
+  "canonical_input": "images/01_primary_three_quarter.png",
+  "supplementary_views": [
+    "images/02_front.png",
+    "images/03_right.png",
+    "images/04_back.png"
+  ],
+  "view_consistency": "AI-generated design references, visually reviewed; not exact projections of one 3D mesh. Primary image and written specifications take precedence.",
+  "images": [
+    {
+      "file": "images/01_primary_three_quarter.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1832545,
+      "sha256": "bd19a99a0ec2b15bcb41502fe3f7815b94833b999c3b88aa658f4b395b3786a1"
+    },
+    {
+      "file": "images/02_front.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1953842,
+      "sha256": "7ead0c645bd0546251b1f3708d5df9376f9a45f03ce1764d5c7c4dc38b265a9c"
+    },
+    {
+      "file": "images/03_right.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1839142,
+      "sha256": "d643239ca746a100c768cf63295ec106de396d13c4f4d94e542c12b49850379f"
+    },
+    {
+      "file": "images/04_back.png",
+      "width": 1254,
+      "height": 1254,
+      "bytes": 1781993,
+      "sha256": "6f909211f88269671f4a29803081540e15c5ded569607237c521f191413d9147"
+    }
+  ]
+}

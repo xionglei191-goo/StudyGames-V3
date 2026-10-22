@@ -1,0 +1,2535 @@
+{
+  "version": 4,
+  "scene": "Alphabet_Island_Layout_v01",
+  "units": "meters",
+  "blender_axes": "Z up; fronts -Y",
+  "landmarks": [
+    {
+      "letter": "A",
+      "word": "Apple",
+      "name": "苹果果园屋",
+      "district": "晨光村",
+      "x": -50,
+      "y": -23,
+      "target_width": 6,
+      "yaw_degrees": 0,
+      "ground_z": 5.124382439206689,
+      "flat_radius": 14.0,
+      "plot_radius": 4.38,
+      "entrance": [
+        -50,
+        -27.5
+      ],
+      "socket_name": "ALPHA_LANDMARK_A_SOCKET",
+      "socket_location": [
+        -50.0,
+        -23.0,
+        5.234382629394531
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/A_apple_house/A_apple_house_optimized_v02.glb",
+      "source_sha256": "0b1249f07fd78bfb07ff3aef8adf5e80c6229f55bc4c2cd2abb7f2a7e17027b5",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_ORCHARD_A_LOCUS_01_Entrance_Basket",
+          "sequence": 1,
+          "location": [
+            -52.5,
+            -27.149999618530273,
+            5.124382495880127
+          ]
+        },
+        {
+          "name": "ALPHA_ORCHARD_A_LOCUS_02_Left_Apple_Tree",
+          "sequence": 2,
+          "location": [
+            -58.0,
+            -25.850000381469727,
+            5.124382495880127
+          ]
+        },
+        {
+          "name": "ALPHA_ORCHARD_A_LOCUS_03_Sorting_Table",
+          "sequence": 3,
+          "location": [
+            -52.79999923706055,
+            -31.049999237060547,
+            5.124382495880127
+          ]
+        },
+        {
+          "name": "ALPHA_ORCHARD_A_LOCUS_04_Wash_Basin",
+          "sequence": 4,
+          "location": [
+            -45.849998474121094,
+            -27.649999618530273,
+            5.124382495880127
+          ]
+        },
+        {
+          "name": "ALPHA_ORCHARD_A_LOCUS_05_Gift_Shelf",
+          "sequence": 5,
+          "location": [
+            -46.400001525878906,
+            -32.54999923706055,
+            5.124382495880127
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -53.00017547607422,
+          -25.848072052001953,
+          5.234385013580322
+        ],
+        "max": [
+          -47.00136947631836,
+          -20.151561737060547,
+          10.894975662231445
+        ]
+      },
+      "dimensions": [
+        5.998805999755859,
+        5.696510314941406,
+        5.660590648651123
+      ],
+      "triangles": 49999,
+      "source_triangles": 79999,
+      "map_texture_max_px": 1024,
+      "entry_front_y": null
+    },
+    {
+      "letter": "B",
+      "word": "Boat",
+      "name": "船屋码头",
+      "district": "晨光村",
+      "x": -55,
+      "y": -43,
+      "target_width": 7,
+      "yaw_degrees": 0,
+      "ground_z": 1.85,
+      "flat_radius": 6.0,
+      "plot_radius": 4.96,
+      "entrance": [
+        -55,
+        -49.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_B_SOCKET",
+      "socket_location": [
+        -55.0,
+        -43.0,
+        -0.47999998927116394
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/B_boat_house.glb",
+      "source_sha256": "02911a8ee477645d8d7400900349778f11c89403b7ce0d2308f31aa4d8502b45",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_B_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -55.0,
+            -49.0,
+            2.009999990463257
+          ]
+        },
+        {
+          "name": "ALPHA_B_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -52.0,
+            -49.0,
+            2.009999990463257
+          ]
+        },
+        {
+          "name": "ALPHA_B_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -49.0,
+            -49.0,
+            2.009999990463257
+          ]
+        },
+        {
+          "name": "ALPHA_B_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -45.0,
+            -45.0,
+            2.808678150177002
+          ]
+        },
+        {
+          "name": "ALPHA_B_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -45.0,
+            -37.0,
+            4.406034469604492
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -58.5,
+          -47.099483489990234,
+          -0.47999998927116394
+        ],
+        "max": [
+          -51.5,
+          -38.900516510009766,
+          6.7295942306518555
+        ]
+      },
+      "dimensions": [
+        7.0,
+        8.198966979980469,
+        7.209594219923019
+      ],
+      "triangles": 18051,
+      "source_triangles": 18051,
+      "map_texture_max_px": 1024,
+      "entry_front_y": null
+    },
+    {
+      "letter": "C",
+      "word": "Cake",
+      "name": "蛋糕烘焙坊",
+      "district": "晨光村",
+      "x": -33,
+      "y": -34,
+      "target_width": 7,
+      "yaw_degrees": 0,
+      "ground_z": 4.372648641297297,
+      "flat_radius": 6.0,
+      "plot_radius": 4.96,
+      "entrance": [
+        -33,
+        -39.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_C_SOCKET",
+      "socket_location": [
+        -33.0,
+        -34.0,
+        4.482648849487305
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/C_cake_bakery.glb",
+      "source_sha256": "e39d8940694f13d83dc2644f241e8ab8e8bd419012e467bb148039cc87c2118a",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_C_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -33.0,
+            -38.19728088378906,
+            4.542657852172852
+          ]
+        },
+        {
+          "name": "ALPHA_C_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -38.5,
+            -34.5,
+            4.4428486824035645
+          ]
+        },
+        {
+          "name": "ALPHA_C_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -34.92499923706055,
+            -40.5,
+            4.11724328994751
+          ]
+        },
+        {
+          "name": "ALPHA_C_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -27.5,
+            -34.5,
+            4.456195831298828
+          ]
+        },
+        {
+          "name": "ALPHA_C_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -30.899999618530273,
+            -42.0,
+            3.4877638816833496
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -36.50006866455078,
+          -37.49728012084961,
+          4.481579780578613
+        ],
+        "max": [
+          -29.498428344726562,
+          -30.5046329498291,
+          10.407459259033203
+        ]
+      },
+      "dimensions": [
+        7.001640319824219,
+        6.992647171020508,
+        5.92587947845459
+      ],
+      "triangles": 50000,
+      "source_triangles": 196044,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -37.49728012084961
+    },
+    {
+      "letter": "D",
+      "word": "Drum",
+      "name": "鼓屋音乐厅",
+      "district": "晨光村",
+      "x": -24,
+      "y": -17,
+      "target_width": 6.5,
+      "yaw_degrees": 0,
+      "ground_z": 5.434278138102302,
+      "flat_radius": 5.7,
+      "plot_radius": 4.67,
+      "entrance": [
+        -24,
+        -21.75
+      ],
+      "socket_name": "ALPHA_LANDMARK_D_SOCKET",
+      "socket_location": [
+        -24.0,
+        -17.0,
+        5.544278144836426
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/D.glb",
+      "source_sha256": "141534a0636e2d39add2809a1f6b8b310d23fade6381193312dd72f3592b7fba",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_D_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -24.0,
+            -20.961612701416016,
+            5.604265213012695
+          ]
+        },
+        {
+          "name": "ALPHA_D_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -29.25,
+            -17.5,
+            5.513916492462158
+          ]
+        },
+        {
+          "name": "ALPHA_D_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -25.787500381469727,
+            -23.25,
+            5.534543514251709
+          ]
+        },
+        {
+          "name": "ALPHA_D_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -18.75,
+            -17.5,
+            5.514176368713379
+          ]
+        },
+        {
+          "name": "ALPHA_D_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -22.049999237060547,
+            -24.75,
+            5.545966625213623
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -27.248504638671875,
+          -20.261611938476562,
+          5.544357776641846
+        ],
+        "max": [
+          -20.751523971557617,
+          -13.73883056640625,
+          10.693305015563965
+        ]
+      },
+      "dimensions": [
+        6.496980667114258,
+        6.5227813720703125,
+        5.148947238922119
+      ],
+      "triangles": 49999,
+      "source_triangles": 191182,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -20.261611938476562
+    },
+    {
+      "letter": "E",
+      "word": "Egg",
+      "name": "蛋壳孵化屋",
+      "district": "晨光村",
+      "x": -39,
+      "y": -6,
+      "target_width": 6,
+      "yaw_degrees": 0,
+      "ground_z": 5.495113023070458,
+      "flat_radius": 5.3999999999999995,
+      "plot_radius": 4.38,
+      "entrance": [
+        -39,
+        -10.5
+      ],
+      "socket_name": "ALPHA_LANDMARK_E_SOCKET",
+      "socket_location": [
+        -39.0,
+        -6.0,
+        5.6051130294799805
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/E.glb",
+      "source_sha256": "36142cf43dca87eafd5594d553203f9eb3ef99d8fed9a1ac1c5ed5c9fa124022",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_E_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -39.0,
+            -9.684436798095703,
+            5.665109634399414
+          ]
+        },
+        {
+          "name": "ALPHA_E_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -44.0,
+            -6.5,
+            5.581073760986328
+          ]
+        },
+        {
+          "name": "ALPHA_E_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -40.650001525878906,
+            -12.0,
+            5.558715343475342
+          ]
+        },
+        {
+          "name": "ALPHA_E_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -34.0,
+            -6.5,
+            5.567511558532715
+          ]
+        },
+        {
+          "name": "ALPHA_E_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -37.20000076293945,
+            -13.5,
+            5.500690937042236
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -42.00017547607422,
+          -8.984436988830566,
+          5.605178356170654
+        ],
+        "max": [
+          -35.99911117553711,
+          -3.0152204036712646,
+          12.175127029418945
+        ]
+      },
+      "dimensions": [
+        6.001064300537109,
+        5.969216585159302,
+        6.569948673248291
+      ],
+      "triangles": 49999,
+      "source_triangles": 191270,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -8.984436988830566
+    },
+    {
+      "letter": "F",
+      "word": "Flower",
+      "name": "巨花温室",
+      "district": "晨光村",
+      "x": -55,
+      "y": -4,
+      "target_width": 8,
+      "yaw_degrees": 0,
+      "ground_z": 5.6864582422968635,
+      "flat_radius": 6.6,
+      "plot_radius": 5.54,
+      "entrance": [
+        -55,
+        -9.5
+      ],
+      "socket_name": "ALPHA_LANDMARK_F_SOCKET",
+      "socket_location": [
+        -55.0,
+        -4.0,
+        5.7964582443237305
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/F.glb",
+      "source_sha256": "585ce5c703d03dc1b112e154f0358f9ae53cd0040929fd69e95d6fed745a56ce",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_F_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -55.0,
+            -8.137758255004883,
+            5.856454849243164
+          ]
+        },
+        {
+          "name": "ALPHA_F_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -61.0,
+            -4.5,
+            5.763953685760498
+          ]
+        },
+        {
+          "name": "ALPHA_F_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -57.20000076293945,
+            -11.0,
+            5.704179286956787
+          ]
+        },
+        {
+          "name": "ALPHA_F_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -49.0,
+            -4.5,
+            5.766106605529785
+          ]
+        },
+        {
+          "name": "ALPHA_F_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -52.599998474121094,
+            -12.5,
+            5.313350200653076
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -58.99774932861328,
+          -7.437758445739746,
+          5.793470859527588
+        ],
+        "max": [
+          -51.00336837768555,
+          -0.5651099681854248,
+          13.054693222045898
+        ]
+      },
+      "dimensions": [
+        7.994380950927734,
+        6.872648477554321,
+        7.2612223625183105
+      ],
+      "triangles": 49999,
+      "source_triangles": 193396,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -7.437758445739746
+    },
+    {
+      "letter": "G",
+      "word": "Globe",
+      "name": "地球仪旅行馆",
+      "district": "巧手街",
+      "x": -52,
+      "y": 19,
+      "target_width": 7,
+      "yaw_degrees": 0,
+      "ground_z": 8.043901117152297,
+      "flat_radius": 6.0,
+      "plot_radius": 4.96,
+      "entrance": [
+        -52,
+        14.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_G_SOCKET",
+      "socket_location": [
+        -52.0,
+        19.0,
+        8.153901100158691
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/G.glb",
+      "source_sha256": "90a17e23bc91e9e46b8582dc97417dba939acbef4bf032b21c0f59f9d594b2dd",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_G_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -52.0,
+            15.311644554138184,
+            8.213899612426758
+          ]
+        },
+        {
+          "name": "ALPHA_G_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -57.5,
+            18.5,
+            8.119650840759277
+          ]
+        },
+        {
+          "name": "ALPHA_G_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -53.92499923706055,
+            12.5,
+            7.595781326293945
+          ]
+        },
+        {
+          "name": "ALPHA_G_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -46.5,
+            18.5,
+            8.11977767944336
+          ]
+        },
+        {
+          "name": "ALPHA_G_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -49.900001525878906,
+            11.0,
+            6.73377799987793
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -55.50017166137695,
+          16.01164436340332,
+          8.153654098510742
+        ],
+        "max": [
+          -48.5006217956543,
+          21.987110137939453,
+          16.161991119384766
+        ]
+      },
+      "dimensions": [
+        6.999549865722656,
+        5.975465774536133,
+        8.008337020874023
+      ],
+      "triangles": 49998,
+      "source_triangles": 196838,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 16.01164436340332
+    },
+    {
+      "letter": "H",
+      "word": "Hat",
+      "name": "帽子裁缝店",
+      "district": "巧手街",
+      "x": -54,
+      "y": 39,
+      "target_width": 7.5,
+      "yaw_degrees": 0,
+      "ground_z": 9.970227846492472,
+      "flat_radius": 6.3,
+      "plot_radius": 5.25,
+      "entrance": [
+        -54,
+        33.75
+      ],
+      "socket_name": "ALPHA_LANDMARK_H_SOCKET",
+      "socket_location": [
+        -54.0,
+        39.0,
+        10.080227851867676
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/H.glb",
+      "source_sha256": "5dd6f677a8b86e8398aff3ce728b8ffbac6950020fbb34dd76284d04c47829f4",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_H_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -54.0,
+            34.53935241699219,
+            10.140230178833008
+          ]
+        },
+        {
+          "name": "ALPHA_H_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -59.75,
+            38.5,
+            9.064329147338867
+          ]
+        },
+        {
+          "name": "ALPHA_H_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -56.0625,
+            32.25,
+            10.017505645751953
+          ]
+        },
+        {
+          "name": "ALPHA_H_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -48.25,
+            38.5,
+            10.0503511428833
+          ]
+        },
+        {
+          "name": "ALPHA_H_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -51.75,
+            30.75,
+            9.90383243560791
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -57.750118255615234,
+          35.23935317993164,
+          10.080341339111328
+        ],
+        "max": [
+          -50.249813079833984,
+          42.76005172729492,
+          15.905221939086914
+        ]
+      },
+      "dimensions": [
+        7.50030517578125,
+        7.520698547363281,
+        5.824880599975586
+      ],
+      "triangles": 49999,
+      "source_triangles": 198064,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 35.23935317993164
+    },
+    {
+      "letter": "I",
+      "word": "Ice cream",
+      "name": "冰淇淋驿亭",
+      "district": "巧手街",
+      "x": -36,
+      "y": 44,
+      "target_width": 5.8,
+      "yaw_degrees": 0,
+      "ground_z": 10.19033759286815,
+      "flat_radius": 5.28,
+      "plot_radius": 4.264,
+      "entrance": [
+        -36,
+        39.6
+      ],
+      "socket_name": "ALPHA_LANDMARK_I_SOCKET",
+      "socket_location": [
+        -36.0,
+        44.0,
+        10.300337791442871
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/I.glb",
+      "source_sha256": "0c5e331dee30a250ebfd8ad8667608282b19d09bfb3e0545c57320b9178a3c90",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_I_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -36.0,
+            40.40237045288086,
+            10.360330581665039
+          ]
+        },
+        {
+          "name": "ALPHA_I_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -40.900001525878906,
+            43.5,
+            10.266949653625488
+          ]
+        },
+        {
+          "name": "ALPHA_I_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -37.595001220703125,
+            38.099998474121094,
+            10.248260498046875
+          ]
+        },
+        {
+          "name": "ALPHA_I_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -31.100000381469727,
+            43.5,
+            10.273667335510254
+          ]
+        },
+        {
+          "name": "ALPHA_I_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -34.2599983215332,
+            36.599998474121094,
+            10.294190406799316
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -38.8997802734375,
+          41.10237121582031,
+          10.30058765411377
+        ],
+        "max": [
+          -33.098758697509766,
+          46.89814758300781,
+          16.810348510742188
+        ]
+      },
+      "dimensions": [
+        5.801021575927734,
+        5.7957763671875,
+        6.509760856628418
+      ],
+      "triangles": 49999,
+      "source_triangles": 187988,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 41.10237121582031
+    },
+    {
+      "letter": "J",
+      "word": "Jar",
+      "name": "玻璃罐收藏馆",
+      "district": "巧手街",
+      "x": -20,
+      "y": 39,
+      "target_width": 6.7,
+      "yaw_degrees": 0,
+      "ground_z": 10.426223185479442,
+      "flat_radius": 5.819999999999999,
+      "plot_radius": 4.786,
+      "entrance": [
+        -20,
+        34.15
+      ],
+      "socket_name": "ALPHA_LANDMARK_J_SOCKET",
+      "socket_location": [
+        -20.0,
+        39.0,
+        10.536223411560059
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/J.glb",
+      "source_sha256": "cadbf02dde78fe8178b55905fcd94e3821fae0df45a7a9aec17a340ab9b1b6b0",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_J_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -20.0,
+            34.950748443603516,
+            10.596216201782227
+          ]
+        },
+        {
+          "name": "ALPHA_J_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -25.350000381469727,
+            38.5,
+            10.504032135009766
+          ]
+        },
+        {
+          "name": "ALPHA_J_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -21.842500686645508,
+            32.650001525878906,
+            10.533696174621582
+          ]
+        },
+        {
+          "name": "ALPHA_J_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -14.649999618530273,
+            38.5,
+            10.468340873718262
+          ]
+        },
+        {
+          "name": "ALPHA_J_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -17.989999771118164,
+            31.149999618530273,
+            10.546533584594727
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -23.350170135498047,
+          35.65074920654297,
+          10.535990715026855
+        ],
+        "max": [
+          -16.649490356445312,
+          42.34910202026367,
+          17.033559799194336
+        ]
+      },
+      "dimensions": [
+        6.700679779052734,
+        6.698352813720703,
+        6.4975690841674805
+      ],
+      "triangles": 50000,
+      "source_triangles": 196026,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 35.65074920654297
+    },
+    {
+      "letter": "K",
+      "word": "Kite",
+      "name": "风筝工坊",
+      "district": "巧手街",
+      "x": -31,
+      "y": 20,
+      "target_width": 8,
+      "yaw_degrees": 0,
+      "ground_z": 8.421471924198958,
+      "flat_radius": 6.6,
+      "plot_radius": 5.54,
+      "entrance": [
+        -31,
+        14.5
+      ],
+      "socket_name": "ALPHA_LANDMARK_K_SOCKET",
+      "socket_location": [
+        -31.0,
+        20.0,
+        8.531472206115723
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/K.glb",
+      "source_sha256": "48941df735e24feea26ddd89ab51b99d7863c5fabf87acd0aba220d0d1774f0b",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_K_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -31.0,
+            16.393949508666992,
+            8.591470718383789
+          ]
+        },
+        {
+          "name": "ALPHA_K_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -37.0,
+            19.5,
+            8.495862007141113
+          ]
+        },
+        {
+          "name": "ALPHA_K_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -33.20000076293945,
+            13.0,
+            7.837769031524658
+          ]
+        },
+        {
+          "name": "ALPHA_K_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -25.0,
+            19.5,
+            8.49939250946045
+          ]
+        },
+        {
+          "name": "ALPHA_K_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -28.600000381469727,
+            11.5,
+            6.6800150871276855
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -35.0,
+          17.093950271606445,
+          8.529494285583496
+        ],
+        "max": [
+          -26.999454498291016,
+          22.90533447265625,
+          16.5363712310791
+        ]
+      },
+      "dimensions": [
+        8.000545501708984,
+        5.811384201049805,
+        8.006876945495605
+      ],
+      "triangles": 49999,
+      "source_triangles": 193542,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 17.093950271606445
+    },
+    {
+      "letter": "L",
+      "word": "Lantern",
+      "name": "灯笼驿站",
+      "district": "林间村",
+      "x": -8,
+      "y": 42,
+      "target_width": 7,
+      "yaw_degrees": 0,
+      "ground_z": 10.303446550675265,
+      "flat_radius": 6.0,
+      "plot_radius": 4.96,
+      "entrance": [
+        -8,
+        37.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_L_SOCKET",
+      "socket_location": [
+        -8.0,
+        42.0,
+        10.413446426391602
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/L.glb",
+      "source_sha256": "999b082f3105894eb9c165bed70a59707a4561427090a73f698fbb4a0b2c55cb",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_L_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -8.0,
+            37.617210388183594,
+            10.473443984985352
+          ]
+        },
+        {
+          "name": "ALPHA_L_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -13.5,
+            41.5,
+            10.387471199035645
+          ]
+        },
+        {
+          "name": "ALPHA_L_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -9.925000190734863,
+            35.5,
+            10.435784339904785
+          ]
+        },
+        {
+          "name": "ALPHA_L_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -2.5,
+            41.5,
+            10.380389213562012
+          ]
+        },
+        {
+          "name": "ALPHA_L_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -5.900000095367432,
+            34.0,
+            10.432007789611816
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -11.500330924987793,
+          38.31721115112305,
+          10.414482116699219
+        ],
+        "max": [
+          -4.49885892868042,
+          45.682960510253906,
+          18.395341873168945
+        ]
+      },
+      "dimensions": [
+        7.001471996307373,
+        7.365749359130859,
+        7.980859756469727
+      ],
+      "triangles": 50000,
+      "source_triangles": 194764,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 38.31721115112305
+    },
+    {
+      "letter": "M",
+      "word": "Mushroom",
+      "name": "蘑菇邻居屋",
+      "district": "林间村",
+      "x": 13,
+      "y": 44,
+      "target_width": 8,
+      "yaw_degrees": 0,
+      "ground_z": 10.10944738440429,
+      "flat_radius": 6.6,
+      "plot_radius": 5.54,
+      "entrance": [
+        13,
+        38.5
+      ],
+      "socket_name": "ALPHA_LANDMARK_M_SOCKET",
+      "socket_location": [
+        13.0,
+        44.0,
+        10.219447135925293
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/M.glb",
+      "source_sha256": "08f588e531f23f4c50ada24e38e0d75dc053a9bf6f99b29fc219d94dcac35e62",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_M_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            13.0,
+            39.37776565551758,
+            10.279443740844727
+          ]
+        },
+        {
+          "name": "ALPHA_M_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            7.0,
+            43.5,
+            10.190179824829102
+          ]
+        },
+        {
+          "name": "ALPHA_M_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            10.800000190734863,
+            37.0,
+            10.135710716247559
+          ]
+        },
+        {
+          "name": "ALPHA_M_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            19.0,
+            43.5,
+            10.190401077270508
+          ]
+        },
+        {
+          "name": "ALPHA_M_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            15.399999618530273,
+            35.5,
+            10.010924339294434
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          9.000487327575684,
+          40.07776641845703,
+          10.218961715698242
+        ],
+        "max": [
+          17.000652313232422,
+          47.92215347290039,
+          17.139789581298828
+        ]
+      },
+      "dimensions": [
+        8.000164985656738,
+        7.844387054443359,
+        6.920827865600586
+      ],
+      "triangles": 49999,
+      "source_triangles": 197426,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 40.07776641845703
+    },
+    {
+      "letter": "N",
+      "word": "Nest",
+      "name": "鸟巢观察屋",
+      "district": "林间村",
+      "x": 33,
+      "y": 38,
+      "target_width": 7,
+      "yaw_degrees": 0,
+      "ground_z": 10.895173247621848,
+      "flat_radius": 6.0,
+      "plot_radius": 4.96,
+      "entrance": [
+        33,
+        33.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_N_SOCKET",
+      "socket_location": [
+        33.0,
+        38.0,
+        11.005173683166504
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/N.glb",
+      "source_sha256": "b5235f385cba3462f718d9e6b2ee98055cdc3714ca4e722df3088583f6e1b696",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_N_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            33.0,
+            33.97988510131836,
+            11.06517219543457
+          ]
+        },
+        {
+          "name": "ALPHA_N_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            27.5,
+            37.5,
+            10.954632759094238
+          ]
+        },
+        {
+          "name": "ALPHA_N_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            31.075000762939453,
+            31.5,
+            10.88705062866211
+          ]
+        },
+        {
+          "name": "ALPHA_N_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            38.5,
+            37.5,
+            10.995144844055176
+          ]
+        },
+        {
+          "name": "ALPHA_N_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            35.099998474121094,
+            30.0,
+            11.014896392822266
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          29.500940322875977,
+          34.67988586425781,
+          11.005646705627441
+        ],
+        "max": [
+          36.49980926513672,
+          41.32069396972656,
+          17.094009399414062
+        ]
+      },
+      "dimensions": [
+        6.998868942260742,
+        6.64080810546875,
+        6.088362693786621
+      ],
+      "triangles": 50000,
+      "source_triangles": 197110,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 34.67988586425781
+    },
+    {
+      "letter": "O",
+      "word": "Owl",
+      "name": "猫头鹰图书馆",
+      "district": "林间村",
+      "x": 52,
+      "y": 29,
+      "target_width": 8,
+      "yaw_degrees": 0,
+      "ground_z": 11.591417072468438,
+      "flat_radius": 6.6,
+      "plot_radius": 5.54,
+      "entrance": [
+        52,
+        23.5
+      ],
+      "socket_name": "ALPHA_LANDMARK_O_SOCKET",
+      "socket_location": [
+        52.0,
+        29.0,
+        11.701416969299316
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/O.glb",
+      "source_sha256": "423c59cd03ae9582648cd97964639b78d27a26a9be018042e45d9cd30880bb92",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_O_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            52.0,
+            24.966096878051758,
+            11.761415481567383
+          ]
+        },
+        {
+          "name": "ALPHA_O_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            46.0,
+            28.5,
+            11.66766357421875
+          ]
+        },
+        {
+          "name": "ALPHA_O_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            49.79999923706055,
+            22.0,
+            11.151721954345703
+          ]
+        },
+        {
+          "name": "ALPHA_O_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            58.0,
+            28.5,
+            11.668402671813965
+          ]
+        },
+        {
+          "name": "ALPHA_O_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            54.400001525878906,
+            20.5,
+            10.172928810119629
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          48.00111770629883,
+          25.66609764099121,
+          11.701650619506836
+        ],
+        "max": [
+          55.999820709228516,
+          32.332862854003906,
+          18.747604370117188
+        ]
+      },
+      "dimensions": [
+        7.9987030029296875,
+        6.666765213012695,
+        7.045953750610352
+      ],
+      "triangles": 50000,
+      "source_triangles": 193782,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 25.66609764099121
+    },
+    {
+      "letter": "P",
+      "word": "Pumpkin",
+      "name": "南瓜农场屋",
+      "district": "林间村",
+      "x": 28,
+      "y": 21,
+      "target_width": 7,
+      "yaw_degrees": 0,
+      "ground_z": 8.95129479175813,
+      "flat_radius": 6.0,
+      "plot_radius": 4.96,
+      "entrance": [
+        28,
+        16.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_P_SOCKET",
+      "socket_location": [
+        28.0,
+        21.0,
+        9.061294555664062
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/P.glb",
+      "source_sha256": "ffd804944c260c7d3bed480e6e0664df2885066c64be8251637b7c6ecf0ad987",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_P_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            28.0,
+            16.781768798828125,
+            9.121286392211914
+          ]
+        },
+        {
+          "name": "ALPHA_P_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            22.5,
+            20.5,
+            9.01142692565918
+          ]
+        },
+        {
+          "name": "ALPHA_P_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            26.075000762939453,
+            14.5,
+            8.41723346710205
+          ]
+        },
+        {
+          "name": "ALPHA_P_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            33.5,
+            20.5,
+            9.044656753540039
+          ]
+        },
+        {
+          "name": "ALPHA_P_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            30.100000381469727,
+            13.0,
+            7.604434967041016
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          24.499454498291016,
+          17.481769561767578,
+          9.060430526733398
+        ],
+        "max": [
+          31.50020408630371,
+          24.51936912536621,
+          15.511184692382812
+        ]
+      },
+      "dimensions": [
+        7.000749588012695,
+        7.037599563598633,
+        6.450754165649414
+      ],
+      "triangles": 49998,
+      "source_triangles": 195195,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 17.481769561767578
+    },
+    {
+      "letter": "Q",
+      "word": "Quilt",
+      "name": "拼布故事馆",
+      "district": "山丘学园",
+      "x": 49,
+      "y": 8,
+      "target_width": 7,
+      "yaw_degrees": 0,
+      "ground_z": 6.957002587589602,
+      "flat_radius": 6.0,
+      "plot_radius": 4.96,
+      "entrance": [
+        49,
+        3.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_Q_SOCKET",
+      "socket_location": [
+        49.0,
+        8.0,
+        7.067002773284912
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/Q.glb",
+      "source_sha256": "c3e6d860264928e7aae7c3ac0604a3b22d63d9f4242a86682f74616b5eab5004",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_Q_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            49.0,
+            4.114418029785156,
+            7.126993179321289
+          ]
+        },
+        {
+          "name": "ALPHA_Q_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            43.5,
+            7.5,
+            7.032942295074463
+          ]
+        },
+        {
+          "name": "ALPHA_Q_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            47.07500076293945,
+            1.5,
+            6.811020851135254
+          ]
+        },
+        {
+          "name": "ALPHA_Q_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            54.5,
+            7.5,
+            7.032927513122559
+          ]
+        },
+        {
+          "name": "ALPHA_Q_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            51.099998474121094,
+            0.0,
+            6.512380599975586
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          45.502811431884766,
+          4.814417839050293,
+          7.067409038543701
+        ],
+        "max": [
+          52.50169372558594,
+          11.188481330871582,
+          13.636157989501953
+        ]
+      },
+      "dimensions": [
+        6.998882293701172,
+        6.374063491821289,
+        6.568748950958252
+      ],
+      "triangles": 49999,
+      "source_triangles": 190570,
+      "map_texture_max_px": 1024,
+      "entry_front_y": 4.814417839050293
+    },
+    {
+      "letter": "R",
+      "word": "Robot",
+      "name": "机器人工坊",
+      "district": "山丘学园",
+      "x": 58,
+      "y": -8,
+      "target_width": 7.5,
+      "yaw_degrees": 0,
+      "ground_z": 6.505165520179242,
+      "flat_radius": 6.3,
+      "plot_radius": 5.25,
+      "entrance": [
+        58,
+        -13.25
+      ],
+      "socket_name": "ALPHA_LANDMARK_R_SOCKET",
+      "socket_location": [
+        58.0,
+        -8.0,
+        6.615165710449219
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/R.glb",
+      "source_sha256": "31817d2d042a238da4bef0d8c18895548c6f994257b0aa6fa61444781cae7c8e",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_R_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            58.0,
+            -10.229914665222168,
+            6.675165176391602
+          ]
+        },
+        {
+          "name": "ALPHA_R_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            52.25,
+            -8.5,
+            6.584537029266357
+          ]
+        },
+        {
+          "name": "ALPHA_R_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            55.9375,
+            -14.75,
+            6.653097152709961
+          ]
+        },
+        {
+          "name": "ALPHA_R_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            63.75,
+            -8.5,
+            6.588441371917725
+          ]
+        },
+        {
+          "name": "ALPHA_R_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            60.25,
+            -16.25,
+            6.774014949798584
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          54.24887466430664,
+          -9.529914855957031,
+          6.613916397094727
+        ],
+        "max": [
+          61.749874114990234,
+          -6.470335483551025,
+          13.396842002868652
+        ]
+      },
+      "dimensions": [
+        7.500999450683594,
+        3.059579372406006,
+        6.782925605773926
+      ],
+      "triangles": 50000,
+      "source_triangles": 189205,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -9.529914855957031
+    },
+    {
+      "letter": "S",
+      "word": "Star",
+      "name": "星形天文台",
+      "district": "山丘学园",
+      "x": 39,
+      "y": -14,
+      "target_width": 9,
+      "yaw_degrees": 0,
+      "ground_z": 6.44307236348971,
+      "flat_radius": 7.199999999999999,
+      "plot_radius": 6.12,
+      "entrance": [
+        39,
+        -20.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_S_SOCKET",
+      "socket_location": [
+        39.0,
+        -14.0,
+        6.553072452545166
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/S.glb",
+      "source_sha256": "c80c6e27693fe1edd4c433d12fb7ccde0d7d8ca6880900f46670f247f179ea75",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_S_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            39.0,
+            -20.00737762451172,
+            6.613092422485352
+          ]
+        },
+        {
+          "name": "ALPHA_S_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            32.5,
+            -14.5,
+            6.5171799659729
+          ]
+        },
+        {
+          "name": "ALPHA_S_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            36.525001525878906,
+            -21.5,
+            6.48536491394043
+          ]
+        },
+        {
+          "name": "ALPHA_S_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            45.5,
+            -14.5,
+            6.526766300201416
+          ]
+        },
+        {
+          "name": "ALPHA_S_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            41.70000076293945,
+            -23.0,
+            6.691409111022949
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          34.49885559082031,
+          -19.307376861572266,
+          6.553300380706787
+        ],
+        "max": [
+          43.49991226196289,
+          -8.692734718322754,
+          11.841405868530273
+        ]
+      },
+      "dimensions": [
+        9.001056671142578,
+        10.614642143249512,
+        5.288105487823486
+      ],
+      "triangles": 49998,
+      "source_triangles": 192491,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -19.307376861572266
+    },
+    {
+      "letter": "T",
+      "word": "Train",
+      "name": "火车车站",
+      "district": "山丘学园",
+      "x": 50,
+      "y": -27,
+      "target_width": 10,
+      "yaw_degrees": 0,
+      "ground_z": 6.651780256934154,
+      "flat_radius": 7.8,
+      "plot_radius": 6.7,
+      "entrance": [
+        50,
+        -33.5
+      ],
+      "socket_name": "ALPHA_LANDMARK_T_SOCKET",
+      "socket_location": [
+        50.0,
+        -27.0,
+        6.761780261993408
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/T.glb",
+      "source_sha256": "dea678413def481085c09152dbbe547e20edb01db83799a10ca2ab3dcd625ea6",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_T_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            50.0,
+            -30.02189826965332,
+            6.821786880493164
+          ]
+        },
+        {
+          "name": "ALPHA_T_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            43.0,
+            -27.5,
+            6.731390476226807
+          ]
+        },
+        {
+          "name": "ALPHA_T_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            47.25,
+            -35.0,
+            3.8848443031311035
+          ]
+        },
+        {
+          "name": "ALPHA_T_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            57.0,
+            -27.5,
+            0.6759989261627197
+          ]
+        },
+        {
+          "name": "ALPHA_T_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            53.0,
+            -36.5,
+            0.6759989261627197
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          44.99989318847656,
+          -29.321897506713867,
+          6.761080265045166
+        ],
+        "max": [
+          54.9993782043457,
+          -24.677539825439453,
+          12.593478202819824
+        ]
+      },
+      "dimensions": [
+        9.99948501586914,
+        4.644357681274414,
+        5.832397937774658
+      ],
+      "triangles": 50000,
+      "source_triangles": 173899,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -29.321897506713867
+    },
+    {
+      "letter": "U",
+      "word": "Umbrella",
+      "name": "雨伞气象屋",
+      "district": "山丘学园",
+      "x": 35,
+      "y": -36,
+      "target_width": 8,
+      "yaw_degrees": 0,
+      "ground_z": 4.936306569741933,
+      "flat_radius": 6.6,
+      "plot_radius": 5.54,
+      "entrance": [
+        35,
+        -41.5
+      ],
+      "socket_name": "ALPHA_LANDMARK_U_SOCKET",
+      "socket_location": [
+        35.0,
+        -36.0,
+        5.046306610107422
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/U.glb",
+      "source_sha256": "83eaa9e88f56fbac02e8581644d107b6c385bbb8500c7c36bd0d00386dc7380b",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_U_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            35.0,
+            -40.29618453979492,
+            5.10630989074707
+          ]
+        },
+        {
+          "name": "ALPHA_U_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            29.0,
+            -36.5,
+            0.689300000667572
+          ]
+        },
+        {
+          "name": "ALPHA_U_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            32.79999923706055,
+            -43.0,
+            1.230718970298767
+          ]
+        },
+        {
+          "name": "ALPHA_U_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            41.0,
+            -36.5,
+            5.028017997741699
+          ]
+        },
+        {
+          "name": "ALPHA_U_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            37.400001525878906,
+            -44.5,
+            4.3642072677612305
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          31.00090789794922,
+          -39.59618377685547,
+          5.046306610107422
+        ],
+        "max": [
+          39.0,
+          -32.4037971496582,
+          12.08780288696289
+        ]
+      },
+      "dimensions": [
+        7.999092102050781,
+        7.192386627197266,
+        7.041496276855469
+      ],
+      "triangles": 49999,
+      "source_triangles": 190742,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -39.59618377685547
+    },
+    {
+      "letter": "V",
+      "word": "Volcano",
+      "name": "休眠火山观察站",
+      "district": "海湾远行区",
+      "x": 16,
+      "y": -38,
+      "target_width": 9,
+      "yaw_degrees": 0,
+      "ground_z": 3.597361225224112,
+      "flat_radius": 7.199999999999999,
+      "plot_radius": 6.12,
+      "entrance": [
+        16,
+        -44.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_V_SOCKET",
+      "socket_location": [
+        16.0,
+        -38.0,
+        3.7073612213134766
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/V.glb",
+      "source_sha256": "9e2c23aaa0166f61d994c39b4b9531cb59a179474bac11827ac93bb4a831d0c4",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_V_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            16.0,
+            -43.18635177612305,
+            3.7673587799072266
+          ]
+        },
+        {
+          "name": "ALPHA_V_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            9.5,
+            -38.5,
+            3.677485942840576
+          ]
+        },
+        {
+          "name": "ALPHA_V_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            13.524999618530273,
+            -45.5,
+            3.3575439453125
+          ]
+        },
+        {
+          "name": "ALPHA_V_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            22.5,
+            -38.5,
+            3.5985536575317383
+          ]
+        },
+        {
+          "name": "ALPHA_V_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            18.700000762939453,
+            -47.0,
+            3.243513584136963
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          11.50039291381836,
+          -42.486351013183594,
+          3.706587553024292
+        ],
+        "max": [
+          20.501256942749023,
+          -33.512290954589844,
+          9.33617877960205
+        ]
+      },
+      "dimensions": [
+        9.000864028930664,
+        8.97406005859375,
+        5.629591226577759
+      ],
+      "triangles": 50000,
+      "source_triangles": 192896,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -42.486351013183594
+    },
+    {
+      "letter": "W",
+      "word": "Whale",
+      "name": "鲸鱼海洋馆",
+      "district": "海湾远行区",
+      "x": 12,
+      "y": -54,
+      "target_width": 10,
+      "yaw_degrees": 0,
+      "ground_z": 3.1791271478117977,
+      "flat_radius": 7.8,
+      "plot_radius": 6.7,
+      "entrance": [
+        12,
+        -60.5
+      ],
+      "socket_name": "ALPHA_LANDMARK_W_SOCKET",
+      "socket_location": [
+        12.0,
+        -54.0,
+        3.2891271114349365
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/W.glb",
+      "source_sha256": "f3f32926e756cde7c9c324fc8c45510da542ba957614f20f7b38304155e2ed16",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_W_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            12.0,
+            -58.659732818603516,
+            3.3491382598876953
+          ]
+        },
+        {
+          "name": "ALPHA_W_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            5.0,
+            -54.5,
+            3.2583940029144287
+          ]
+        },
+        {
+          "name": "ALPHA_W_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            9.25,
+            -62.0,
+            3.054482936859131
+          ]
+        },
+        {
+          "name": "ALPHA_W_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            19.0,
+            -54.5,
+            3.2598702907562256
+          ]
+        },
+        {
+          "name": "ALPHA_W_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            15.0,
+            -63.5,
+            1.650833249092102
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          6.998195171356201,
+          -57.95973205566406,
+          3.2886831760406494
+        ],
+        "max": [
+          16.999610900878906,
+          -50.0403938293457,
+          10.346709251403809
+        ]
+      },
+      "dimensions": [
+        10.001415729522705,
+        7.919338226318359,
+        7.058026075363159
+      ],
+      "triangles": 49998,
+      "source_triangles": 192705,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -57.95973205566406
+    },
+    {
+      "letter": "X",
+      "word": "Xylophone",
+      "name": "木琴海边舞台",
+      "district": "海湾远行区",
+      "x": -7,
+      "y": -53,
+      "target_width": 9,
+      "yaw_degrees": 0,
+      "ground_z": 2.8954858450887433,
+      "flat_radius": 7.199999999999999,
+      "plot_radius": 6.12,
+      "entrance": [
+        -7,
+        -59.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_X_SOCKET",
+      "socket_location": [
+        -7.0,
+        -53.0,
+        3.005485773086548
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/X.glb",
+      "source_sha256": "d68cdec66ea47e0023bca7eab785bf8a52d2ca51bfcf444de3fcb1677cf6e890",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_X_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -7.0,
+            -57.837730407714844,
+            3.0654773712158203
+          ]
+        },
+        {
+          "name": "ALPHA_X_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -13.5,
+            -53.5,
+            2.974146604537964
+          ]
+        },
+        {
+          "name": "ALPHA_X_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -9.475000381469727,
+            -60.5,
+            1.905920386314392
+          ]
+        },
+        {
+          "name": "ALPHA_X_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -0.5,
+            -53.5,
+            2.9772212505340576
+          ]
+        },
+        {
+          "name": "ALPHA_X_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -4.300000190734863,
+            -62.0,
+            1.635391354560852
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -11.499296188354492,
+          -57.13772964477539,
+          3.005661964416504
+        ],
+        "max": [
+          -2.49896240234375,
+          -48.8610725402832,
+          11.122099876403809
+        ]
+      },
+      "dimensions": [
+        9.000333786010742,
+        8.276657104492188,
+        8.116437911987305
+      ],
+      "triangles": 49999,
+      "source_triangles": 194042,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -57.13772964477539
+    },
+    {
+      "letter": "Y",
+      "word": "Yarn",
+      "name": "毛线手作屋",
+      "district": "海湾远行区",
+      "x": -20,
+      "y": -41,
+      "target_width": 7,
+      "yaw_degrees": 0,
+      "ground_z": 3.6975331003211136,
+      "flat_radius": 6.0,
+      "plot_radius": 4.96,
+      "entrance": [
+        -20,
+        -46.0
+      ],
+      "socket_name": "ALPHA_LANDMARK_Y_SOCKET",
+      "socket_location": [
+        -20.0,
+        -41.0,
+        3.807533025741577
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/Y.glb",
+      "source_sha256": "d95989486aa7bf063695d77e1b90d3c4ef6cde361c8bea84294a5017dd68c27d",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_Y_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -20.0,
+            -45.10853576660156,
+            3.867532730102539
+          ]
+        },
+        {
+          "name": "ALPHA_Y_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -25.5,
+            -41.5,
+            3.7728145122528076
+          ]
+        },
+        {
+          "name": "ALPHA_Y_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -21.924999237060547,
+            -47.5,
+            3.5014166831970215
+          ]
+        },
+        {
+          "name": "ALPHA_Y_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -14.5,
+            -41.5,
+            3.7745368480682373
+          ]
+        },
+        {
+          "name": "ALPHA_Y_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -17.899999618530273,
+            -49.0,
+            3.0937774181365967
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -23.49997329711914,
+          -44.40853500366211,
+          3.8071999549865723
+        ],
+        "max": [
+          -16.499420166015625,
+          -37.591312408447266,
+          9.91506576538086
+        ]
+      },
+      "dimensions": [
+        7.000553131103516,
+        6.817222595214844,
+        6.107865810394287
+      ],
+      "triangles": 49999,
+      "source_triangles": 186450,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -44.40853500366211
+    },
+    {
+      "letter": "Z",
+      "word": "Zebra",
+      "name": "斑马邮局",
+      "district": "海湾远行区",
+      "x": -33,
+      "y": -50,
+      "target_width": 8,
+      "yaw_degrees": 0,
+      "ground_z": 2.9845005321689206,
+      "flat_radius": 6.6,
+      "plot_radius": 5.54,
+      "entrance": [
+        -33,
+        -55.5
+      ],
+      "socket_name": "ALPHA_LANDMARK_Z_SOCKET",
+      "socket_location": [
+        -33.0,
+        -50.0,
+        3.0945005416870117
+      ],
+      "status": "imported",
+      "source_file": "/Users/xionglei/Documents/StudyGame/assets/tripo/Z.glb",
+      "source_sha256": "8180a345aa733b9ede6c480da66c06c9ddb1d42ba33351b7c2d9c391d6b2cf6f",
+      "memory_anchors": [
+        {
+          "name": "ALPHA_Z_LOCUS_01",
+          "sequence": 1,
+          "location": [
+            -33.0,
+            -52.98854446411133,
+            3.1544971466064453
+          ]
+        },
+        {
+          "name": "ALPHA_Z_LOCUS_02",
+          "sequence": 2,
+          "location": [
+            -39.0,
+            -50.5,
+            3.066157579421997
+          ]
+        },
+        {
+          "name": "ALPHA_Z_LOCUS_03",
+          "sequence": 3,
+          "location": [
+            -35.20000076293945,
+            -57.0,
+            0.8393375873565674
+          ]
+        },
+        {
+          "name": "ALPHA_Z_LOCUS_04",
+          "sequence": 4,
+          "location": [
+            -27.0,
+            -50.5,
+            3.0628421306610107
+          ]
+        },
+        {
+          "name": "ALPHA_Z_LOCUS_05",
+          "sequence": 5,
+          "location": [
+            -30.600000381469727,
+            -58.5,
+            0.7096648812294006
+          ]
+        }
+      ],
+      "bounds_world": {
+        "min": [
+          -36.99894714355469,
+          -52.288543701171875,
+          3.09466290473938
+        ],
+        "max": [
+          -28.999202728271484,
+          -47.7114372253418,
+          9.625411987304688
+        ]
+      },
+      "dimensions": [
+        7.999744415283203,
+        4.577106475830078,
+        6.530749082565308
+      ],
+      "triangles": 50000,
+      "source_triangles": 191347,
+      "map_texture_max_px": 1024,
+      "entry_front_y": -52.288543701171875
+    }
+  ],
+  "imported": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z"
+  ],
+  "pending": [],
+  "shared_hubs": [
+    {
+      "id": "SCHOOL",
+      "root": "ALPHA_SCHOOL_ROOT",
+      "position": [
+        0.0,
+        54.20000076293945,
+        10.350000381469727
+      ],
+      "alphabet_index": null,
+      "anchors": [
+        {
+          "name": "ALPHA_SCHOOL_ANCHOR_Gate",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "ALPHA_SCHOOL_ANCHOR_Classroom",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "ALPHA_SCHOOL_ANCHOR_Library",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "ALPHA_SCHOOL_ANCHOR_Playground",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "name": "ALPHA_SCHOOL_ANCHOR_Canteen",
+          "position": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    }
+  ]
+}

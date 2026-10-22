@@ -1,0 +1,55 @@
+{
+  "source": "C_cake_bakery.glb",
+  "source_sha256": "e39d8940694f13d83dc2644f241e8ab8e8bd419012e467bb148039cc87c2118a",
+  "assessment": "retain_as_source_asset_with_local_cleanup",
+  "triangles": 196044,
+  "vertices": 104873,
+  "mesh_count": 1,
+  "material_count": 1,
+  "textures": [
+    {
+      "type": "base_color",
+      "width": 4096,
+      "height": 4096
+    },
+    {
+      "type": "roughness_metallic",
+      "width": 4096,
+      "height": 4096
+    },
+    {
+      "type": "normal",
+      "width": 4096,
+      "height": 4096
+    }
+  ],
+  "file_bytes": 13670928,
+  "checked_views": [
+    "front",
+    "back",
+    "right",
+    "three_quarter",
+    "bottom"
+  ],
+  "integrated_C_readable": true,
+  "topology_check_after_temporary_weld_only": {
+    "vertices": 98020,
+    "boundary_edges": 0,
+    "edges_with_more_than_two_faces": 0,
+    "loose_vertices": 0,
+    "degenerate_faces": 0,
+    "connected_components": 1
+  },
+  "visual_findings": [
+    "Clear C entrance frame and recognizable two-tier cake silhouette.",
+    "Cream piping, strawberries and bakery display preserved.",
+    "Unwanted faint door/window-like raised outlines on back and sides, visible in solid shading as geometry."
+  ],
+  "followups": [
+    "Smooth unintended relief on the rear wall and matching normal map as needed.",
+    "Create optimized runtime mesh after visual cleanup.",
+    "Separate door and add collision only when preparing gameplay."
+  ],
+  "source_unchanged": true,
+  "game_engine_tested": false
+}
