@@ -1,0 +1,115 @@
+{
+  "render_size": [
+    1600,
+    1000
+  ],
+  "eye_height_m": 1.35,
+  "cameras": [
+    {
+      "name": "ALPHA_Camera_Player_Home",
+      "position": [
+        5,
+        -32,
+        12.1
+      ],
+      "target": [
+        -3,
+        -16,
+        7.8
+      ],
+      "lens_mm": 36,
+      "type": "third-person neighborhood view"
+    },
+    {
+      "name": "ALPHA_Camera_Player_Bakery",
+      "position": [
+        -25.5,
+        -47,
+        11.1
+      ],
+      "target": [
+        -33,
+        -34.7,
+        7.5
+      ],
+      "lens_mm": 36,
+      "type": "third-person neighborhood view"
+    },
+    {
+      "name": "ALPHA_Camera_Player_Library",
+      "position": [
+        60,
+        12.5,
+        17.6
+      ],
+      "target": [
+        51.2,
+        28,
+        15.0
+      ],
+      "lens_mm": 36,
+      "type": "third-person neighborhood view"
+    },
+    {
+      "name": "ALPHA_Camera_Player_School",
+      "position": [
+        6,
+        34,
+        18.5
+      ],
+      "target": [
+        -2.0,
+        52.3,
+        13.8
+      ],
+      "lens_mm": 32,
+      "type": "third-person neighborhood view"
+    },
+    {
+      "name": "ALPHA_Camera_Eye_Home",
+      "position": [
+        1,
+        -22,
+        6.750001525878906
+      ],
+      "target": [
+        -3,
+        -14,
+        8.1
+      ],
+      "lens_mm": 24,
+      "type": "1.35m child eye height"
+    },
+    {
+      "name": "ALPHA_Camera_Eye_School",
+      "position": [
+        0.5,
+        43,
+        11.553712463378906
+      ],
+      "target": [
+        -1,
+        53,
+        13.5
+      ],
+      "lens_mm": 26,
+      "type": "1.35m child eye height"
+    },
+    {
+      "name": "ALPHA_Camera_Eye_Bakery",
+      "position": [
+        -37,
+        -40,
+        5.275331115722656
+      ],
+      "target": [
+        -33,
+        -34,
+        7.0
+      ],
+      "lens_mm": 22,
+      "type": "1.35m child eye height"
+    }
+  ],
+  "gameplay_camera_implemented": false
+}

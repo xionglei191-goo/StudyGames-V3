@@ -30,3 +30,7 @@
 [build_school_v01.py](build_school_v01.py) 记录校园建模、北侧地形适配、植被清理与支路；[plan_school_roads.py](plan_school_roads.py) 合并道路；[finish_school_v01.py](finish_school_v01.py) 记录道路贴地和独立导出。脚本依赖现有地图模块，属于分阶段制作记录，不能当作独立模型文件的一键重建入口。继续修改优先使用交付的 `.blend`。
 
 本轮仅制作世界地图素材。教材与故事编排留待后续。
+
+## 地图后续精修
+
+[整岛 v05](../alphabet_island/README.md)已进一步统一校园材质，并细化校门铺装、灯框、公告栏和围栏柱脚。本目录的独立工程与素材包仍保留 v01；当前精修结果包含在整岛 v05 中。

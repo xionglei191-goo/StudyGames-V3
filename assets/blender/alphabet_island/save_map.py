@@ -75,7 +75,7 @@ bpy.ops.wm.save_as_mainfile(filepath=str(blend),compress=True)
 bpy.ops.object.select_all(action='DESELECT')
 selected=[]
 for o in scene.objects:
-    if o.get('editor_only') or o.get('presentation_only') or o.get('site_clearance_hidden') or o.get('superseded_by_v03') or o.get('superseded_by_v04') or o.get('school_site_clearance') or o.type in ['LIGHT','CAMERA']:continue
+    if o.get('editor_only') or o.get('presentation_only') or o.get('site_clearance_hidden') or o.get('superseded_by_v03') or o.get('superseded_by_v04') or o.get('superseded_by_v05') or o.get('school_site_clearance') or o.type in ['LIGHT','CAMERA']:continue
     o.select_set(True);selected.append(o)
 params=bpy.ops.export_scene.gltf.get_rna_type().properties
 formats=[i.identifier for i in params['export_format'].enum_items]
@@ -94,6 +94,8 @@ if scene.get('visual_checks_v03'):
     validation['visual_checks']=json.loads(scene['visual_checks_v03'])
 if scene.get('visual_checks_v04'):
     validation['visual_checks']=json.loads(scene['visual_checks_v04'])
+if scene.get('visual_checks_v05'):
+    validation['visual_checks']=json.loads(scene['visual_checks_v05'])
 if school_root:
     validation['school']={'connected_to_home':True,'position':list(school_root.matrix_world.translation),'reserved_asset_anchors':len(school_anchors)}
 if version_number>=3:
