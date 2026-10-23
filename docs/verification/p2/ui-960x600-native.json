@@ -1,0 +1,109 @@
+{
+  "checks": [
+    {
+      "id": "scene_ready",
+      "passed": true
+    },
+    {
+      "id": "component/B",
+      "passed": true
+    },
+    {
+      "id": "operations/B",
+      "passed": true
+    },
+    {
+      "id": "operation_button/B/0",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看船头",
+      "passed": true
+    },
+    {
+      "id": "operation_button/B/1",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看船头",
+      "passed": true
+    },
+    {
+      "id": "operation_button/B/2",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看船头",
+      "passed": true
+    },
+    {
+      "id": "operation_button/B/3",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看船头",
+      "passed": true
+    },
+    {
+      "id": "operation_button/B/4",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看船头",
+      "passed": true
+    },
+    {
+      "id": "actions_complete/B",
+      "passed": false
+    },
+    {
+      "id": "durable_operations/B",
+      "passed": false
+    },
+    {
+      "id": "supported_experience/B",
+      "passed": false
+    },
+    {
+      "id": "clickable/看看建筑里的 B",
+      "passed": true
+    },
+    {
+      "id": "glyph_saved/B",
+      "passed": false
+    },
+    {
+      "id": "source_model_image/B",
+      "passed": true
+    },
+    {
+      "id": "missing_button/收下这张发现页",
+      "passed": false
+    },
+    {
+      "id": "result_screen/B",
+      "passed": false
+    },
+    {
+      "id": "disk_resume/B",
+      "passed": false
+    },
+    {
+      "id": "official_save_unchanged",
+      "passed": true
+    }
+  ],
+  "failures": [
+    "actions_complete/B",
+    "durable_operations/B",
+    "supported_experience/B",
+    "glyph_saved/B",
+    "missing_button/收下这张发现页",
+    "result_screen/B",
+    "disk_resume/B"
+  ],
+  "letters": "B",
+  "renderer": "Windows",
+  "result": "FAIL",
+  "size": "960x600"
+}

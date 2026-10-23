@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "gate_count": 9,
+  "unmet_p1_sample_gates": [],
+  "matrix_sha256": "9875c48e325a21d2539e5311196c3c5326223fe34a0dac9834bebe61dfe74d1f",
+  "accepted_utc": "2026-10-22T12:05:24.068350+00:00",
+  "scope": "The nine GDD P1 interaction/asset sample gates only. Not P2/P3, all-character production, device-tier budgets, full weather/time/resolution matrix, or child-learning validation.",
+  "broader_gates": [
+    {
+      "id": "full_weather_phase_room_resolution_matrix",
+      "status": "not_yet_recorded",
+      "requirement": "Four weather modes x four day phases, village/school/orchard/interior, 1440x900 and 960x640; do not infer from one P1 wind/water sample."
+    },
+    {
+      "id": "low_standard_high_presets",
+      "status": "not_implemented_or_measured",
+      "requirement": "Distinct actual quality presets and target device measurements; current runtime profile alone is not three-tier acceptance."
+    },
+    {
+      "id": "all_textbook_characters",
+      "status": "outside_P1_sample_scope",
+      "requirement": "All source-scoped identities remain the P3 production responsibility; four samples do not imply full coverage."
+    },
+    {
+      "id": "child_usability_and_learning",
+      "status": "not_measured",
+      "requirement": "Real child observations; no inference from automated checks or asset counts."
+    }
+  ],
+  "performance_valid": true,
+  "performance_stages": 12,
+  "performance_pairs": 6,
+  "narrow_native_checks": 839
+}

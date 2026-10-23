@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "revision": "friend-corner-v1",
+  "title": "我的朋友角",
+  "boundary": "Original Chinese life-story responses. No additional English assessment or currency award.",
+  "replies": {
+    "textbook_lingling": {
+      "name": "Lingling",
+      "lines": ["谢谢你送来的邀请。", "很高兴认识你！", "下次见面再聊聊小岛吧。"],
+      "memory": "我收到了你送来的{cover}。谢谢你想到我！下次见面，再告诉我你在小岛上的新发现吧。",
+      "display_reply": "原来你给我们的回信留了位置！这些一起做过的小事，都可以好好收起来。"
+    },
+    "textbook_tim": {
+      "name": "Tim",
+      "lines": ["你的邀请我收好了。", "下次见面，", "一起准备欢迎桌吧！"],
+      "memory": "你送来的{cover}我收好了！见到你真高兴。准备欢迎桌的时候，也可以叫上我。",
+      "display_reply": "我的回信也挂好了呀！我们一起做过的事，又多了一件可以回看的小回忆。"
+    }
+  },
+  "covers": {"plain":"邀请", "flowers":"花朵邀请", "star":"星星邀请"}
+}

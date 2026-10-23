@@ -1,0 +1,327 @@
+{
+  "room_id": "landmark_O",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口借阅台",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Borrow_Cabinet",
+      "memory_id": "memory_O_01",
+      "activity": "选择阅读卡"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧主题书架",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Wing_Books_Back",
+      "memory_id": "memory_O_02",
+      "activity": "找想看的主题"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央提问圆桌",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Question_Table_Foot",
+      "memory_id": "memory_O_03",
+      "activity": "围绕图片提问"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧眼窗阅读湾",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Story_Rug",
+      "memory_id": "memory_O_04",
+      "activity": "安静读短故事"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口还书车",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Return_Cart_Back",
+      "memory_id": "memory_O_05",
+      "activity": "把书归还到正确位置"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Library_Rear_Books",
+      "aabb_blender": [
+        -6.820000171661377,
+        5.474999904632568,
+        0.0,
+        -4.179999828338623,
+        6.325000286102295,
+        3.1500000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Library_Rear_Books.001",
+      "aabb_blender": [
+        -4.119999885559082,
+        5.474999904632568,
+        0.0,
+        -1.4799998998641968,
+        6.325000286102295,
+        3.1500000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Library_Rear_Books.002",
+      "aabb_blender": [
+        -1.3200000524520874,
+        5.474999904632568,
+        0.0,
+        1.3200000524520874,
+        6.325000286102295,
+        3.1500000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Library_Rear_Books.003",
+      "aabb_blender": [
+        1.4799998998641968,
+        5.474999904632568,
+        0.0,
+        4.119999885559082,
+        6.325000286102295,
+        3.1500000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Library_Rear_Books.004",
+      "aabb_blender": [
+        4.179999828338623,
+        5.474999904632568,
+        0.0,
+        6.820000171661377,
+        6.325000286102295,
+        3.1500000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_01_Borrow",
+      "aabb_blender": [
+        -5.600000381469727,
+        -5.300000190734863,
+        -0.06000000238418579,
+        -3.000000238418579,
+        -4.300000190734863,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Wing_Books",
+      "aabb_blender": [
+        -6.569999694824219,
+        0.675000011920929,
+        0.0,
+        -3.629999876022339,
+        1.5250000953674316,
+        2.5
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_05_Return_Cart",
+      "aabb_blender": [
+        4.079999923706055,
+        -5.775000095367432,
+        0.0,
+        6.319999694824219,
+        -4.924999713897705,
+        1.399999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_03_Question_Table",
+      "aabb_blender": [
+        -1.399999976158142,
+        0.30000007152557373,
+        -0.07499998807907104,
+        1.399999976158142,
+        3.0999999046325684,
+        0.925000011920929
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 466,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 4341960,
+  "glb_node_count": 475,
+  "triangles_instanced": 102820,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "826649fa138289ab48bffa39dafa593e84db8874963b120191772fdaa9b7992e",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/landmark_O/landmark_O_v01.blend",
+  "source_blend_preserved": true
+}

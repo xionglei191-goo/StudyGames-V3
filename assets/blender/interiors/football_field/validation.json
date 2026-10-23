@@ -1,0 +1,498 @@
+{
+  "room_id": "football_field",
+  "anchors": [
+    {
+      "name": "SG_SPAWN",
+      "label": "进入足球场",
+      "position_blender": [
+        0.0,
+        -11.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        11.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回完整校园",
+      "position_blender": [
+        0.0,
+        -12.9,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        12.9
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "足球教练",
+      "position_blender": [
+        -3.7,
+        -10.8,
+        0.0
+      ],
+      "position_godot": [
+        -3.7,
+        0.0,
+        10.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_01",
+      "label": "装备区",
+      "position_blender": [
+        -10.6,
+        -12.6,
+        0.0
+      ],
+      "position_godot": [
+        -10.6,
+        0.0,
+        12.6
+      ],
+      "associated_prop": "Football_EquipmentRack_Back",
+      "memory_id": "memory_FOOTBALL_FIELD_01",
+      "activity": "观察足球、训练背心和装备收纳位置"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "开球中圈",
+      "position_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "associated_prop": "Football_CenterCircle",
+      "memory_id": "memory_FOOTBALL_FIELD_02",
+      "activity": "走到中圈认识开球位置与球场边线"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "射门球门",
+      "position_blender": [
+        10.6,
+        0.0,
+        0.0
+      ],
+      "position_godot": [
+        10.6,
+        0.0,
+        -0.0
+      ],
+      "associated_prop": "Football_EastGoal_GoalFrame",
+      "memory_id": "memory_FOOTBALL_FIELD_03",
+      "activity": "在球门前观察球门结构与射门方向"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "传球练习区",
+      "position_blender": [
+        -6.0,
+        4.5,
+        0.0
+      ],
+      "position_godot": [
+        -6.0,
+        0.0,
+        -4.5
+      ],
+      "associated_prop": "Football_PracticeMarker",
+      "memory_id": "memory_FOOTBALL_FIELD_04",
+      "activity": "看看锥桶标记和传球路线示意"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "看台计分牌",
+      "position_blender": [
+        10.2,
+        10.2,
+        0.0
+      ],
+      "position_godot": [
+        10.2,
+        0.0,
+        -10.2
+      ],
+      "associated_prop": "Football_Scoreboard_Face",
+      "memory_id": "memory_FOOTBALL_FIELD_05",
+      "activity": "在看台前观察计分牌与比赛信息示例"
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Football_Fence_Back",
+      "aabb_blender": [
+        -16.799999237060547,
+        13.630000114440918,
+        0.0,
+        16.799999237060547,
+        13.8100004196167,
+        1.2000000476837158
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Fence_Left",
+      "aabb_blender": [
+        -16.84000015258789,
+        -13.75,
+        0.0,
+        -16.65999984741211,
+        13.770000457763672,
+        1.2000000476837158
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Fence_Right",
+      "aabb_blender": [
+        16.65999984741211,
+        -13.75,
+        0.0,
+        16.84000015258789,
+        13.770000457763672,
+        1.2000000476837158
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Fence_FrontLeft",
+      "aabb_blender": [
+        -16.799999237060547,
+        -13.789999961853027,
+        0.0,
+        -1.8000001907348633,
+        -13.609999656677246,
+        1.2000000476837158
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Fence_FrontRight",
+      "aabb_blender": [
+        1.8000001907348633,
+        -13.789999961853027,
+        0.0,
+        16.799999237060547,
+        -13.609999656677246,
+        1.2000000476837158
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_EquipmentRack",
+      "aabb_blender": [
+        -12.725000381469727,
+        -11.27500057220459,
+        0.0,
+        -8.475000381469727,
+        -10.324999809265137,
+        2.5
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_TeamBench",
+      "aabb_blender": [
+        3.999999761581421,
+        -11.97499942779541,
+        -0.06000000238418579,
+        8.399999618530273,
+        -11.324999809265137,
+        0.6399999856948853
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_WestGoal_NetBack",
+      "aabb_blender": [
+        -14.710000038146973,
+        -2.1500000953674316,
+        0.0,
+        -14.589999198913574,
+        2.1500000953674316,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_WestGoal_NetSide",
+      "aabb_blender": [
+        -14.699999809265137,
+        -2.1599998474121094,
+        0.0,
+        -12.949999809265137,
+        -2.0399999618530273,
+        2.200000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_WestGoal_Post",
+      "aabb_blender": [
+        -13.09000015258789,
+        -2.18999981880188,
+        0.0,
+        -12.90999984741211,
+        -2.009999990463257,
+        2.4000000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_WestGoal_NetSide.001",
+      "aabb_blender": [
+        -14.699999809265137,
+        2.0399999618530273,
+        0.0,
+        -12.949999809265137,
+        2.1599998474121094,
+        2.200000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_WestGoal_Post.001",
+      "aabb_blender": [
+        -13.09000015258789,
+        2.009999990463257,
+        0.0,
+        -12.90999984741211,
+        2.18999981880188,
+        2.4000000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_EastGoal_NetBack",
+      "aabb_blender": [
+        14.589999198913574,
+        -2.1500000953674316,
+        0.0,
+        14.710000038146973,
+        2.1500000953674316,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_EastGoal_NetSide",
+      "aabb_blender": [
+        12.949999809265137,
+        -2.1599998474121094,
+        0.0,
+        14.699999809265137,
+        -2.0399999618530273,
+        2.200000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_EastGoal_Post",
+      "aabb_blender": [
+        12.90999984741211,
+        -2.18999981880188,
+        0.0,
+        13.09000015258789,
+        -2.009999990463257,
+        2.4000000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_EastGoal_NetSide.001",
+      "aabb_blender": [
+        12.949999809265137,
+        2.0399999618530273,
+        0.0,
+        14.699999809265137,
+        2.1599998474121094,
+        2.200000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_EastGoal_Post.001",
+      "aabb_blender": [
+        12.90999984741211,
+        2.009999990463257,
+        0.0,
+        13.09000015258789,
+        2.18999981880188,
+        2.4000000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_CornerFlag_00",
+      "aabb_blender": [
+        -13.375,
+        -9.375,
+        0.0,
+        -13.225000381469727,
+        -9.225000381469727,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_CornerFlag_01",
+      "aabb_blender": [
+        13.225000381469727,
+        -9.375,
+        0.0,
+        13.375,
+        -9.225000381469727,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_CornerFlag_02",
+      "aabb_blender": [
+        -13.375,
+        9.225000381469727,
+        0.0,
+        -13.225000381469727,
+        9.375,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_CornerFlag_03",
+      "aabb_blender": [
+        13.225000381469727,
+        9.225000381469727,
+        0.0,
+        13.375,
+        9.375,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_PracticeCone_00",
+      "aabb_blender": [
+        -9.20300006866455,
+        2.496999979019165,
+        0.0,
+        -8.79699993133545,
+        2.9030001163482666,
+        0.3919999897480011
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_PracticeCone_01",
+      "aabb_blender": [
+        -3.203000068664551,
+        2.496999979019165,
+        0.0,
+        -2.796999931335449,
+        2.9030001163482666,
+        0.3919999897480011
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_PracticeCone_02",
+      "aabb_blender": [
+        -9.20300006866455,
+        6.0970001220703125,
+        0.0,
+        -8.79699993133545,
+        6.503000259399414,
+        0.3919999897480011
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_PracticeCone_03",
+      "aabb_blender": [
+        -3.203000068664551,
+        6.0970001220703125,
+        0.0,
+        -2.796999931335449,
+        6.503000259399414,
+        0.3919999897480011
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Stand",
+      "aabb_blender": [
+        3.1999998092651367,
+        10.90000057220459,
+        0.0,
+        9.0,
+        13.199999809265137,
+        1.100000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Scoreboard",
+      "aabb_blender": [
+        10.449999809265137,
+        12.47499942779541,
+        0.0,
+        14.15000057220459,
+        12.824999809265137,
+        3.5
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_FieldSign",
+      "aabb_blender": [
+        -9.600000381469727,
+        12.375,
+        0.0,
+        -3.4000000953674316,
+        12.625,
+        1.600000023841858
+      ]
+    }
+  ],
+  "bounds": [
+    -17.0,
+    -14.0,
+    34.0,
+    28.0
+  ],
+  "mesh_objects": 399,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 4580896,
+  "glb_node_count": 418,
+  "triangles_instanced": 179668,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "1b3f0faf59c8f319212ad605df8b670a4aa885a34be2bfb727e71cc30afff21d",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/football_field/football_field_v01.blend",
+  "source_blend_preserved": true,
+  "visual_review": {
+    "reviewed_at_utc": "2026-10-22T06:27:31+00:00",
+    "preview": "assets/blender/interiors/football_field/preview.png",
+    "preview_sha256": "0aa2702b5aee0ac684b5e83688e02999a2ddef3b468e41b870a5b1a17357dcf8",
+    "image_size_px": [
+      1700,
+      1343
+    ],
+    "result": "pass",
+    "observations": [
+      "Complete scene is in frame: both goals and nets, perimeter fence with entrance opening, pitch lines and four corner flags.",
+      "Five locus contexts read distinctly: equipment rack, centre circle, east goal, cone passing practice, and stand with example scoreboard.",
+      "Warm matte sage turf, ivory markings, teal signs and seating, oak framing match adjacent campus scenes.",
+      "No visible clipped geometry, missing materials, floating principal furniture, or blocked goal mouths in reviewed render."
+    ],
+    "scope": "Authoring render review only; no Godot runtime or target-device performance claim."
+  }
+}

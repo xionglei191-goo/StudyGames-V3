@@ -1,0 +1,255 @@
+{
+  "room_id": "school",
+  "name": "山丘学园",
+  "blend": "assets/blender/interiors/school/school_v02.blend",
+  "glb": "assets/blender/interiors/school/school_v02.glb",
+  "preview": "assets/blender/interiors/school/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "校门导览",
+      "position_blender": [
+        -6.5,
+        -16.6,
+        0.0
+      ],
+      "position_godot": [
+        -6.5,
+        0.0,
+        16.6
+      ],
+      "associated_prop": "ASSET_School_Noticeboard_Face",
+      "memory_id": "memory_SCHOOL_01",
+      "activity": "从校门导览认识校园与六处可进入场所"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "教学楼前",
+      "position_blender": [
+        -5.8,
+        6.2,
+        0.0
+      ],
+      "position_godot": [
+        -5.8,
+        0.0,
+        -6.2
+      ],
+      "associated_prop": "Teaching_Rollcall_Board_Face",
+      "memory_id": "memory_SCHOOL_02",
+      "activity": "在教学楼前辨认普通、音乐、美术和科学教室入口"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中心花园",
+      "position_blender": [
+        4.8,
+        0.0,
+        0.0
+      ],
+      "position_godot": [
+        4.8,
+        0.0,
+        -0.0
+      ],
+      "associated_prop": "Campus_Garden_Reading_Tree_Trunk",
+      "memory_id": "memory_SCHOOL_03",
+      "activity": "观察校园花草并熟悉庭院环路"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "运动器材旁",
+      "position_blender": [
+        20.7,
+        -12.6,
+        0.0
+      ],
+      "position_godot": [
+        20.7,
+        0.0,
+        12.6
+      ],
+      "associated_prop": "ASSET_School_Ball_Rack",
+      "memory_id": "memory_SCHOOL_04",
+      "activity": "认识操场入口与运动器材"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "餐厅菜单",
+      "position_blender": [
+        21.0,
+        -6.9,
+        0.0
+      ],
+      "position_godot": [
+        21.0,
+        0.0,
+        6.9
+      ],
+      "associated_prop": "Canteen_Menu_Board_Face",
+      "memory_id": "memory_SCHOOL_05",
+      "activity": "看餐厅菜单并辨认食堂入口"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "从主岛进入校园",
+      "position_blender": [
+        0.0,
+        -16.8,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        16.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回字母岛",
+      "position_blender": [
+        0.0,
+        -19.0,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        19.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "和校园老师聊一聊",
+      "position_blender": [
+        4.6,
+        -14.3,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        14.3
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_CLASSROOM",
+      "label": "普通教室",
+      "position_blender": [
+        0.0,
+        6.7,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -6.7
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_MUSIC_ROOM",
+      "label": "音乐教室",
+      "position_blender": [
+        -16.0,
+        3.8,
+        0.0
+      ],
+      "position_godot": [
+        -16.0,
+        0.0,
+        -3.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_ART_ROOM",
+      "label": "美术教室",
+      "position_blender": [
+        -16.0,
+        -8.7,
+        0.0
+      ],
+      "position_godot": [
+        -16.0,
+        0.0,
+        8.7
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_SCIENCE_ROOM",
+      "label": "科学教室",
+      "position_blender": [
+        16.0,
+        5.2,
+        0.0
+      ],
+      "position_godot": [
+        16.0,
+        0.0,
+        -5.2
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_CANTEEN",
+      "label": "校园餐厅",
+      "position_blender": [
+        16.0,
+        -7.4,
+        0.0
+      ],
+      "position_godot": [
+        16.0,
+        0.0,
+        7.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_PLAYGROUND",
+      "label": "青草操场",
+      "position_blender": [
+        10.5,
+        -17.7,
+        0.0
+      ],
+      "position_godot": [
+        10.5,
+        0.0,
+        17.7
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -24.0,
+    -20.0,
+    48.0,
+    40.0
+  ],
+  "triangles": 190848,
+  "glb_sha256": "f69ced5e6e1791f1325dcf6b663b7d17ad8f6bf2377978dea3af34da6a517f36"
+}

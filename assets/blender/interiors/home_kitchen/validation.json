@@ -1,0 +1,283 @@
+{
+  "room_id": "home_kitchen",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "食材储物柜",
+      "position_blender": [
+        -5.0,
+        2.5,
+        0.0
+      ],
+      "position_godot": [
+        -5.0,
+        0.0,
+        -2.5
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_kitchen_01",
+      "activity": "认识米饭、鱼和蔬菜，挑选今天的食材。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "洗菜池",
+      "position_blender": [
+        -1.4,
+        3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.4,
+        0.0,
+        -3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_kitchen_02",
+      "activity": "将蔬菜放入水槽，洗净后放回篮子。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "灶台与汤锅",
+      "position_blender": [
+        4.5,
+        2.6,
+        0.0
+      ],
+      "position_godot": [
+        4.5,
+        0.0,
+        -2.6
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_kitchen_03",
+      "activity": "看一看做饭的工具，和家人一起准备一餐。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "备餐操作台",
+      "position_blender": [
+        2.0,
+        -0.5,
+        0.0
+      ],
+      "position_godot": [
+        2.0,
+        0.0,
+        0.5
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_kitchen_04",
+      "activity": "介绍厨房，观察台面上准备好的物品。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "餐具收纳架",
+      "position_blender": [
+        -3.2,
+        -3.8,
+        0.0
+      ],
+      "position_godot": [
+        -3.2,
+        0.0,
+        3.8
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_kitchen_05",
+      "activity": "用过的餐具归位，保持厨房干净。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Fridge",
+      "aabb_blender": [
+        -6.550000190734863,
+        4.5,
+        0.0,
+        -4.25,
+        5.699999809265137,
+        3.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Vegetable_Sink",
+      "aabb_blender": [
+        -2.5250000953674316,
+        4.5,
+        -0.06000000238418579,
+        -0.2749999761581421,
+        5.699999809265137,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Stove_Cabinet",
+      "aabb_blender": [
+        3.1500000953674316,
+        4.424999713897705,
+        -0.06000000238418579,
+        5.849999904632568,
+        5.775000095367432,
+        1.1099998950958252
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Preparation_Island",
+      "aabb_blender": [
+        0.20000004768371582,
+        -3.5,
+        -0.06000000238418579,
+        3.799999952316284,
+        -1.9000000953674316,
+        1.1099998950958252
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Dish_Rack",
+      "aabb_blender": [
+        -6.369999885559082,
+        -4.925000190734863,
+        0.0,
+        -3.630000114440918,
+        -4.074999809265137,
+        2.5
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 417,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 4125124,
+  "glb_node_count": 430,
+  "triangles_instanced": 106664,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "f73e988fc03ce5eecbf3bf8b80a8c00ec1134c9248a503e638f0566b480275d4",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/home_kitchen/home_kitchen_v01.blend",
+  "source_blend_preserved": false
+}

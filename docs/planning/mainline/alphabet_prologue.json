@@ -1,0 +1,2342 @@
+{
+  "schema_version": 1,
+  "id": "alphabet_exploration_prologue",
+  "title": "字母探索序章",
+  "date": "2026-10-22",
+  "status": "planning_only",
+  "implementation_state": "not_implemented",
+  "authority_note": "本文件规划新增26字母序章，不能据此声称功能已实现或学习效果已验证。现有场景与部分基础活动继续存在；本文件不改变运行内容。",
+  "source_snapshot": {
+    "project_version_observed": "0.4.0",
+    "sources": [
+      "game/project.godot",
+      "game/data/landmark_interiors.json",
+      "game/data/interiors_manifest.json",
+      "game/assets/world/manifest.json",
+      "docs/字母地标与记忆宫殿世界设计.md"
+    ],
+    "scope": "只采用现有scene/room ids、SG节点、五街区与固定锚词；旧世界文档中的历史实现状态不作为当前状态。"
+  },
+  "ownership": {
+    "owned_files": [
+      "docs/planning/mainline/字母探索序章.md",
+      "docs/planning/mainline/alphabet_prologue.json"
+    ],
+    "vocabulary_directory_owner": "separate_conversation",
+    "vocabulary_directory": "docs/planning/vocabulary/",
+    "vocabulary_edits_performed": false,
+    "word_scope": "仅使用26固定地标名及用户指定的后续 nose 示例；教材词条、义项、音轨与知识点ID由独立词汇策划提供。"
+  },
+  "design_intent": [
+    "用分次旅行建立26地标、代表形象、大小写与字母名的初步联系。",
+    "让孩子学会需要时找地点和图像线索，为后续词记忆编码提供熟悉的索引。",
+    "序章记录完整体验覆盖，不宣称已独立掌握26字母或26锚词。"
+  ],
+  "non_goals": [
+    "不新增或重做26座建筑，不修改公共几何和SG坐标。",
+    "不要求完成26套完整新小游戏；六种通用轻互动足以承载首版序章。",
+    "不要求走完每地标五个记忆点，不把130个点都变成序章清单。",
+    "不将26锚词当作教材词表，不按首字母强行分配全部教材词。",
+    "不以英语考试、拼写、口语识别、音高、节奏、操作速度或每日登录锁门。"
+  ],
+  "navigation": {
+    "status": "planning_only",
+    "hub_room_id": "home",
+    "world_room_id": "village",
+    "guided_trip_order": [
+      "morning_village",
+      "craft_street",
+      "woodland_village",
+      "hill_academy_district",
+      "bay_travel_district"
+    ],
+    "free_exploration_available": true,
+    "rule": "五段是推荐旅行顺序。玩家可以先逛别处；有效的到访与体验按字母去重记录，回来后不重做。",
+    "route_options": [
+      {
+        "id": "walk",
+        "description": "从home经现有SG_EXIT回village，沿当前可走道路到SG_DOOR_<LETTER>，进入对应landmark场景。"
+      },
+      {
+        "id": "guided_arrival",
+        "description": "在家园选定本次2—3站后可选向导陪同到第一站，以现有目标场景SG_SPAWN落点呈现抵达；这是待实现的地图捷径，不新增交通建筑或传送坐标。"
+      },
+      {
+        "id": "visited_shortcut",
+        "description": "已访问的街区/场所可从地图快速回访，落点只引用已有SG_SPAWN；地图同时保留慢慢走选项。"
+      },
+      {
+        "id": "return_home",
+        "description": "任意一站结束或中止后可选择回家集合，使用home的SG_SPAWN；本次已提交体验保留。"
+      }
+    ],
+    "movement_and_loading_time_included_in_playtest": true,
+    "no_new_geometry_or_coordinate_literals": true,
+    "shortcut_access_basis": "依已到访记录与本次向导行程提供，与英语正确率无关。"
+  },
+  "pacing": {
+    "status": "untested_suggestions",
+    "no_countdown": true,
+    "trip_minutes_are_not_promises": true,
+    "intro_minutes_suggested": [
+      2,
+      4
+    ],
+    "home_recap_minutes_suggested": [
+      1,
+      3
+    ],
+    "micro_experience_seconds_suggested": [
+      30,
+      75
+    ],
+    "split_rule": "每段可再拆成2—3个字母的小批次，随时暂停，不要求当天完成整个街区或26字母。",
+    "measured_in_future": [
+      "每站操作时间与行走/加载时间分开记录",
+      "孩子主动请求提示或暂停的位置",
+      "连续曝光后是否混淆大小写或代表形象",
+      "是否愿意回家回顾"
+    ],
+    "resume_rule": "完成一站即提交；中途退出仅恢复当前站的未完成步骤，不撤销已完成字母，也不扣奖。"
+  },
+  "opening": {
+    "room_id": "home",
+    "status": "planning_only",
+    "story": "旅行册留着二十六张空页。向导说：我们分几次认识岛上的邻居，想不起来就一起看；今天走几站由你决定。",
+    "choices": [
+      "慢慢走一走",
+      "请向导陪我去",
+      "先看操作示范"
+    ],
+    "supports": [
+      "中文短句与图标",
+      "静音可看反馈",
+      "拖放可改为点选物件再点目标"
+    ],
+    "no_required_english_answer": true,
+    "output": "创建序章进度和本次站点清单；不替代现有存档内容。",
+    "guide_npc_id": "npc_bear_uncle",
+    "supporting_npc_ids": [
+      "npc_rabbit_gardener",
+      "npc_textbook_lingling"
+    ],
+    "cast_status": "proposed_game_roles_not_source_dialogue_or_implemented"
+  },
+  "common_experience": {
+    "status": "planning_only",
+    "steps": [
+      {
+        "id": "arrival",
+        "description": "进入正确地标场景并看到环境，记录visited；地图缩略图或直接勾选不能代替到访。"
+      },
+      {
+        "id": "notice_image",
+        "description": "在一个已有SG_MEMORY点打开短观察或轻互动，显示整件代表形象；不要求五个点全做。"
+      },
+      {
+        "id": "one_action",
+        "description": "孩子操作、提示后操作、陪同操作或看完整示范均可；反馈与该地标图像相连。"
+      },
+      {
+        "id": "case_and_name",
+        "description": "用现有建筑取景指出大写字形，再把对应小写放在同一字卡上；提供独立字母名播放和地标词播放。"
+      },
+      {
+        "id": "save_page",
+        "description": "回忆册记录图片、大小写和完成方式，提交experienced；听力关闭时只记声音未播放，不假装已经听懂。"
+      },
+      {
+        "id": "optional_recall",
+        "description": "当站末或回家后可试一次无高亮的轻回想，再逐级提供提示；可跳过，不影响体验完成。"
+      }
+    ],
+    "glyph_policy": "大写字形取自village主岛现有地标；短动作在landmark_A—landmark_Z内的一个已有SG_MEMORY点发生。室内未呈现建筑字形时，使用同一主岛模型的取景图或屏幕高亮回看；不假设每个室内都另有字母构件。小写由计划字卡建立联系，不新增独立字母建筑、路牌或改几何。",
+    "typography_policy": "选用易辨印刷字体；I/l/i、b/d/p/q及a/g的字形在实现前按选定教材审校，序章中保持一致，不混用字形变体考孩子。",
+    "audio_policy": "字母名与锚词整词为两条独立音轨、两个清楚按钮；不自动重叠，不把词首音当成字母名，不借26锚词完成自然拼读教学。",
+    "audio_muted_policy": "声音可关闭；字母名支持可用文字标签、向导示范入口呈现。完成只要求支持已提供，不把未播放或未复述当作失败。",
+    "assistance_ladder": [
+      "重复看或重播",
+      "指出观察部位/操作目标",
+      "陪同分步完成",
+      "显示完整示范并一起收下发现页"
+    ],
+    "motor_accessibility": "拖放、描路径与点选均有等价按钮或两次点击替代；动作速度、精度与语言证据分开。",
+    "image_policy": "代表形象可用现有主岛地标外观与室内对应物件的对照取景；观察卡、示意图层、声音与反馈均为待制作内容，不宣称当前资产已含完整教学展示。",
+    "support_level_contract_ref": "integration_contract.json#/assistance",
+    "assistance_ladder_scope": "此处是操作辅助类别，不是另一个 H 等级表；语言或记忆任务的帮助统一采用 H0-H5，并记录具体揭示内容。"
+  },
+  "reusable_primitives": [
+    {
+      "id": "observe_detail",
+      "description": "同一现有地标的取景卡切换、遮片或观察小窗；不移动公共建筑。"
+    },
+    {
+      "id": "choose_option",
+      "description": "二选一自由偏好或带示范的图像选择；语言答对不是通行条件。"
+    },
+    {
+      "id": "drag_place",
+      "description": "一个图块到一个目标框，支持吸附与点选替代；不创建完整生产链。"
+    },
+    {
+      "id": "tap_feedback",
+      "description": "轻点产生一次短声音、波纹、亮暗或两态反馈；无节奏/反应速度判定。"
+    },
+    {
+      "id": "trace_path",
+      "description": "沿已给短路径跟随，支持分步按钮；不评价手写或控制精度。"
+    },
+    {
+      "id": "stamp_card",
+      "description": "把已见代表图像放进回忆册/明信片；仅作体验记录。"
+    }
+  ],
+  "districts": [
+    {
+      "id": "morning_village",
+      "order": 1,
+      "name": "晨光村",
+      "letters": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ],
+      "title": "把欢迎会的路认熟",
+      "status": "planning_only",
+      "suggested_trip_minutes": [
+        8,
+        12
+      ],
+      "timing_status": "untested_suggestion_including_navigation_and_home_recap",
+      "recommended_batch_size": [
+        2,
+        3
+      ],
+      "start_room_id": "home",
+      "return_room_id": "home",
+      "landmark_room_ids": [
+        "landmark_A",
+        "landmark_B",
+        "landmark_C",
+        "landmark_D",
+        "landmark_E",
+        "landmark_F"
+      ],
+      "story_cn": "从家园收到一张空白旅行册，先拜访果园、码头和烘焙坊，再听一声鼓、看蛋壳和花。孩子知道每处都有自己的字母伙伴。",
+      "optional_home_recall_cn": "回家任选苹果、小船或蛋糕的一张图，说、指或看示范找到它的字母伙伴；再从鼓、蛋、花里自由选一张放入旅行册。",
+      "stage_outcome_cn": "六处到访与体验记录；形成第一组 Aa—Ff 发现页。",
+      "chapter_complete_when": "all_letters_in_this_district_visited_and_experienced",
+      "reward_policy": "旅行册页与街区图章为计划中的记录反馈，提示或示范完成可同样获得；不按独立正确率扣发。"
+    },
+    {
+      "id": "craft_street",
+      "order": 2,
+      "name": "巧手街",
+      "letters": [
+        "G",
+        "H",
+        "I",
+        "J",
+        "K"
+      ],
+      "title": "给旅行册做几件小东西",
+      "status": "planning_only",
+      "suggested_trip_minutes": [
+        7,
+        11
+      ],
+      "timing_status": "untested_suggestion_including_navigation_and_home_recap",
+      "recommended_batch_size": [
+        2,
+        3
+      ],
+      "start_room_id": "home",
+      "return_room_id": "home",
+      "landmark_room_ids": [
+        "landmark_G",
+        "landmark_H",
+        "landmark_I",
+        "landmark_J",
+        "landmark_K"
+      ],
+      "story_cn": "借地球仪看世界，试帽子、装一份冰淇淋、开罐盖，再接好风筝尾带；同一种短操作在不同场所产生不同发现。",
+      "optional_home_recall_cn": "任选两张发现图回想地点；可把 C 蛋糕与 I 冰淇淋并排看轮廓，不要求无提示作答。",
+      "stage_outcome_cn": "新增五处记录，累计十一处；Gg—Kk 与已见图像进入同一旅行册。",
+      "chapter_complete_when": "all_letters_in_this_district_visited_and_experienced",
+      "reward_policy": "旅行册页与街区图章为计划中的记录反馈，提示或示范完成可同样获得；不按独立正确率扣发。"
+    },
+    {
+      "id": "woodland_village",
+      "order": 3,
+      "name": "林间村",
+      "letters": [
+        "L",
+        "M",
+        "N",
+        "O",
+        "P"
+      ],
+      "title": "认识林间邻居与观察伙伴",
+      "status": "planning_only",
+      "suggested_trip_minutes": [
+        7,
+        11
+      ],
+      "timing_status": "untested_suggestion_including_navigation_and_home_recap",
+      "recommended_batch_size": [
+        2,
+        3
+      ],
+      "start_room_id": "home",
+      "return_room_id": "home",
+      "landmark_room_ids": [
+        "landmark_L",
+        "landmark_M",
+        "landmark_N",
+        "landmark_O",
+        "landmark_P"
+      ],
+      "story_cn": "看灯笼亮起、拜访蘑菇屋，再安静观察鸟巢、认识猫头鹰和南瓜。把公共地标与它的代表形象联系起来。",
+      "optional_home_recall_cn": "从鸟巢、猫头鹰、南瓜中任选一张，请向导遮去字母后一起想，再按需要逐级揭示。",
+      "stage_outcome_cn": "新增五处记录，累计十六处；Nest 与 Owl 的代表图像可供后续记忆编码调用。",
+      "chapter_complete_when": "all_letters_in_this_district_visited_and_experienced",
+      "reward_policy": "旅行册页与街区图章为计划中的记录反馈，提示或示范完成可同样获得；不按独立正确率扣发。"
+    },
+    {
+      "id": "hill_academy_district",
+      "order": 4,
+      "name": "山丘学园",
+      "letters": [
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U"
+      ],
+      "title": "把观察与小计划带到学园街区",
+      "status": "planning_only",
+      "suggested_trip_minutes": [
+        7,
+        11
+      ],
+      "timing_status": "untested_suggestion_including_navigation_and_home_recap",
+      "recommended_batch_size": [
+        2,
+        3
+      ],
+      "start_room_id": "home",
+      "return_room_id": "home",
+      "landmark_room_ids": [
+        "landmark_Q",
+        "landmark_R",
+        "landmark_S",
+        "landmark_T",
+        "landmark_U"
+      ],
+      "story_cn": "拼一块布、选机器人动作、放一颗星、接一节车厢、撑一把雨伞；此处是 Q—U 街区，不把独立校园 school 当作第27个字母。",
+      "optional_home_recall_cn": "任选星星或火车回想大小写伙伴；Q 的 Quilt 可一直带中文和图片支持，不要求独立读词。",
+      "stage_outcome_cn": "新增五处记录，累计二十一处；保留 Star 代表图像，区分街区名称与 school 场景。",
+      "chapter_complete_when": "all_letters_in_this_district_visited_and_experienced",
+      "reward_policy": "旅行册页与街区图章为计划中的记录反馈，提示或示范完成可同样获得；不按独立正确率扣发。"
+    },
+    {
+      "id": "bay_travel_district",
+      "order": 5,
+      "name": "海湾远行区",
+      "letters": [
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z"
+      ],
+      "title": "沿海湾把旅行册带回家",
+      "status": "planning_only",
+      "suggested_trip_minutes": [
+        7,
+        11
+      ],
+      "timing_status": "untested_suggestion_including_navigation_and_home_recap",
+      "recommended_batch_size": [
+        2,
+        3
+      ],
+      "start_room_id": "home",
+      "return_room_id": "home",
+      "landmark_room_ids": [
+        "landmark_V",
+        "landmark_W",
+        "landmark_X",
+        "landmark_Y",
+        "landmark_Z"
+      ],
+      "story_cn": "看火山口、找鲸鱼、敲两根木琴音条、顺着毛线找线团，最后在斑马邮局盖一张明信片。",
+      "optional_home_recall_cn": "用一张自己最喜欢的发现图讲述或指认今天的一站；V、X 的难词只保留图像命名支持。",
+      "stage_outcome_cn": "新增五处记录，累计二十六处；满足全部到访与体验条件后，序章完成并提供教材主线邀请。",
+      "chapter_complete_when": "all_letters_in_this_district_visited_and_experienced",
+      "reward_policy": "旅行册页与街区图章为计划中的记录反馈，提示或示范完成可同样获得；不按独立正确率扣发。"
+    }
+  ],
+  "letters": [
+    {
+      "id": "prologue_A",
+      "order": 1,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "morning_village",
+      "letter": {
+        "uppercase": "A",
+        "lowercase": "a",
+        "pair": "Aa"
+      },
+      "anchor": {
+        "canonical_word": "Apple",
+        "chinese_image_name": "苹果",
+        "landmark_name": "苹果果园屋",
+        "representative_image_ref": "planned:landmark_A_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "苹果",
+        "representative_label_zh": "苹果"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_A",
+        "room_id": "landmark_A",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_02",
+        "learning_point_label": "左侧果树",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "drag_place",
+        "instruction_cn": "把果树观察图上的一颗苹果拖进篮子图框；可点选苹果后再点篮子完成。",
+        "feedback_cn": "篮中保留一颗苹果，回忆册收到苹果图像。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "先看红色圆果与绿叶，再把视线引回现有苹果屋的整体轮廓；篮子只是操作道具。",
+      "case_and_name": {
+        "pair": "Aa",
+        "existing_glyph_cue_cn": "沿苹果屋现有入口木架找 A：两条斜梁和中间横梁。",
+        "lowercase_presentation_cn": "把小写 a 单独放大，与 A 并排；字体保持统一，不要求照形描写。",
+        "letter_name_audio_button": "听字母名 A",
+        "anchor_word_audio_button": "听地标名 Apple",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_A",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪一处住着一颗带绿叶的大红苹果？它的字母伙伴是哪一对？",
+        "support_cn": "先给晨光村图，再给苹果轮廓，最后展示 Aa。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增苹果发现页：记录 A 的到访、苹果图像、Aa 呈现和完成方式。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_B",
+      "order": 2,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "morning_village",
+      "letter": {
+        "uppercase": "B",
+        "lowercase": "b",
+        "pair": "Bb"
+      },
+      "anchor": {
+        "canonical_word": "Boat",
+        "chinese_image_name": "小船",
+        "landmark_name": "船屋码头",
+        "representative_image_ref": "planned:landmark_B_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "小船",
+        "representative_label_zh": "小船"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_B",
+        "room_id": "landmark_B",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央系船柱",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "observe_detail",
+        "instruction_cn": "在码头观察卡上切换一次船头与船尾取景，找出与栈桥相连的整条船。",
+        "feedback_cn": "两幅取景合成一张完整小船图；不启动驾驶或航行玩法。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "用船头、船身、船尾连续外轮廓突出 Boat，坐垫和码头只作背景。",
+      "case_and_name": {
+        "pair": "Bb",
+        "existing_glyph_cue_cn": "在现有船舱侧窗找 B：一条立框连着上下两个圆弧窗格。",
+        "lowercase_presentation_cn": "显示 Bb，指出小 b 的竖笔与右侧圆肚；无需读出 boat 才能继续。",
+        "letter_name_audio_button": "听字母名 B",
+        "anchor_word_audio_button": "听地标名 Boat",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_B",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪处地标连着栈桥，能看见船头和船尾？",
+        "support_cn": "显示小船轮廓后，可直接查看 Bb 和字母名示范。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增小船发现页，保留整船图与 Bb 的同屏联系。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_C",
+      "order": 3,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "morning_village",
+      "letter": {
+        "uppercase": "C",
+        "lowercase": "c",
+        "pair": "Cc"
+      },
+      "anchor": {
+        "canonical_word": "Cake",
+        "chinese_image_name": "蛋糕",
+        "landmark_name": "蛋糕烘焙坊",
+        "representative_image_ref": "planned:landmark_C_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "蛋糕",
+        "representative_label_zh": "蛋糕"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_C",
+        "room_id": "landmark_C",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央料理台",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "drag_place",
+        "instruction_cn": "把一颗装饰莓果图卡放到现成蛋糕图上，位置可自由选择。",
+        "feedback_cn": "显示带装饰的整块蛋糕；不要求配方、烘烤计时或经营流程。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "近看层叠蛋糕与奶油边，再回看宽矮蛋糕建筑；不把莓果当作 C 的代表。",
+      "case_and_name": {
+        "pair": "Cc",
+        "existing_glyph_cue_cn": "沿现有奶油门廊找向右开口的 C。",
+        "lowercase_presentation_cn": "显示 Cc，让小 c 在大 C 旁缩放对照，保持开口朝向清楚。",
+        "letter_name_audio_button": "听字母名 C",
+        "anchor_word_audio_button": "听地标名 Cake",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_C",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "想起奶油层和宽矮蛋糕，你会去哪个地方？",
+        "support_cn": "先露出蛋糕分层图，再显示 Cc；回想可跳过。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增蛋糕发现页，记录蛋糕形象与 Cc，不据装饰选择判英语水平。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_D",
+      "order": 4,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "morning_village",
+      "letter": {
+        "uppercase": "D",
+        "lowercase": "d",
+        "pair": "Dd"
+      },
+      "anchor": {
+        "canonical_word": "Drum",
+        "chinese_image_name": "鼓",
+        "landmark_name": "鼓屋音乐厅",
+        "representative_image_ref": "planned:landmark_D_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "鼓",
+        "representative_label_zh": "鼓"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_D",
+        "room_id": "landmark_D",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央鼓台",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "tap_feedback",
+        "instruction_cn": "轻敲中央鼓的互动图一次，听或看一次鼓面反馈。",
+        "feedback_cn": "出现短波纹；静音时保留波纹，不要求节拍、速度或跟奏正确。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "鼓面、圆柱鼓身与鼓绳一起显露，强调单个圆鼓。",
+      "case_and_name": {
+        "pair": "Dd",
+        "existing_glyph_cue_cn": "查看现有鼓身 D 形门框：左直、右弧。",
+        "lowercase_presentation_cn": "显示 Dd；把小 d 的圆肚和向上竖笔分色提示，随后还原正常字卡。",
+        "letter_name_audio_button": "听字母名 D",
+        "anchor_word_audio_button": "听地标名 Drum",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_D",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪处会发出一下咚声，代表形象是一个圆鼓？",
+        "support_cn": "可播放动作示范或显示圆鼓图，最后给 Dd。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增圆鼓发现页；记录视觉或声音反馈路径与 Dd 呈现。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_E",
+      "order": 5,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "morning_village",
+      "letter": {
+        "uppercase": "E",
+        "lowercase": "e",
+        "pair": "Ee"
+      },
+      "anchor": {
+        "canonical_word": "Egg",
+        "chinese_image_name": "蛋壳（完整蛋形）",
+        "landmark_name": "蛋壳孵化屋",
+        "representative_image_ref": "planned:landmark_E_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "鸡蛋",
+        "representative_label_zh": "蛋壳（完整蛋形）",
+        "label_policy": "Egg 是地标英文锚词，词义为鸡蛋；蛋壳指完整蛋形的代表形象，不把 egg 教成碎壳，不改已有地标 ID、模型或字母映射。"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_E",
+        "room_id": "landmark_E",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央孵化台",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "observe_detail",
+        "instruction_cn": "点开观察卡的遮片，看清一颗完整蛋壳；可立即翻开，不需等待孵化。",
+        "feedback_cn": "完整蛋形与蛋壳细节并列出现。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "以光滑椭圆蛋形为主图，并与现有蛋壳屋外形对应；小鸡只是环境线索。",
+      "case_and_name": {
+        "pair": "Ee",
+        "existing_glyph_cue_cn": "在现有蛋壳正面找 E 形通风窗：一竖连三横。",
+        "lowercase_presentation_cn": "显示 Ee，用短横与弯曲轮廓提示小 e，不由 Egg 的词音推断字母名。",
+        "letter_name_audio_button": "听字母名 E",
+        "anchor_word_audio_button": "听地标名 Egg",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_E",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "光滑、圆圆长长的蛋壳让你想起哪座屋？",
+        "support_cn": "先给完整蛋形图，再显示 Ee；不必说出英文词。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增蛋壳发现页，记录 Egg 图像与 Ee 的初次联系。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_F",
+      "order": 6,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "morning_village",
+      "letter": {
+        "uppercase": "F",
+        "lowercase": "f",
+        "pair": "Ff"
+      },
+      "anchor": {
+        "canonical_word": "Flower",
+        "chinese_image_name": "花朵",
+        "landmark_name": "巨花温室",
+        "representative_image_ref": "planned:landmark_F_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "花朵",
+        "representative_label_zh": "花朵"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_F",
+        "room_id": "landmark_F",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央花床",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "choose_option",
+        "instruction_cn": "从两张花色图中任选喜欢的一张，为发现卡选花瓣颜色。",
+        "feedback_cn": "发现卡保留所选颜色；两种选择都完成。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "突出花心、花瓣、茎叶的整朵花，再回看巨花温室轮廓；颜色不改变锚词。",
+      "case_and_name": {
+        "pair": "Ff",
+        "existing_glyph_cue_cn": "沿现有绿色玻璃支架找 F：一竖、上横和中横。",
+        "lowercase_presentation_cn": "显示 Ff，突出小 f 的弯头与横笔；字母名按钮与 Flower 读音分开。",
+        "letter_name_audio_button": "听字母名 F",
+        "anchor_word_audio_button": "听地标名 Flower",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_F",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪座温室像一朵张开的花？",
+        "support_cn": "回看自己选的花卡，再给 Ff；不以记住颜色作为字母掌握。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增花朵发现页；晨光村六页齐全时形成第一段旅行记录。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_G",
+      "order": 7,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "craft_street",
+      "letter": {
+        "uppercase": "G",
+        "lowercase": "g",
+        "pair": "Gg"
+      },
+      "anchor": {
+        "canonical_word": "Globe",
+        "chinese_image_name": "地球仪",
+        "landmark_name": "地球仪旅行馆",
+        "representative_image_ref": "planned:landmark_G_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "地球仪",
+        "representative_label_zh": "地球仪"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_G",
+        "room_id": "landmark_G",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央地球仪台",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "observe_detail",
+        "instruction_cn": "拖动观察卡的滑条，在同一地球仪的两张取景图之间切换一次。",
+        "feedback_cn": "蓝绿球体、经纬线和支架逐步显露；公共地标保持原位。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "用球体加支架的组合突出 Globe，与只有线圈的毛线团保持区别。",
+      "case_and_name": {
+        "pair": "Gg",
+        "existing_glyph_cue_cn": "查看现有黄铜 G 形支架，指出右侧开口和向内短横。",
+        "lowercase_presentation_cn": "显示 Gg，小 g 单独放大；印刷字形选定后整段序章保持一致。",
+        "letter_name_audio_button": "听字母名 G",
+        "anchor_word_audio_button": "听地标名 Globe",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_G",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪颗蓝绿球体立在支架上，里面画着世界？",
+        "support_cn": "先出现支架轮廓，再出现球体与 Gg。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增地球仪发现页，保存 Gg、蓝绿球体和支架的联系。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_H",
+      "order": 8,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "craft_street",
+      "letter": {
+        "uppercase": "H",
+        "lowercase": "h",
+        "pair": "Hh"
+      },
+      "anchor": {
+        "canonical_word": "Hat",
+        "chinese_image_name": "帽子",
+        "landmark_name": "帽子裁缝店",
+        "representative_image_ref": "planned:landmark_H_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "帽子",
+        "representative_label_zh": "帽子"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_H",
+        "room_id": "landmark_H",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央试戴镜",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "choose_option",
+        "instruction_cn": "从两顶帽子图中任选一顶放到试戴镜里的角色头像上。",
+        "feedback_cn": "试戴卡显示所选帽子，两种选择均可；不依赖新增角色换装系统。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "先显示完整帽顶与帽檐，再对应现有帽子店的巨大帽形轮廓。",
+      "case_and_name": {
+        "pair": "Hh",
+        "existing_glyph_cue_cn": "在现有帽檐下找 H：双立柱和中间横梁。",
+        "lowercase_presentation_cn": "显示 Hh，突出小 h 向上竖笔和右侧拱形。",
+        "letter_name_audio_button": "听字母名 H",
+        "anchor_word_audio_button": "听地标名 Hat",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_H",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪座小店像一顶有宽帽檐的帽子？",
+        "support_cn": "可以看试戴卡或帽子轮廓，再听 H 的字母名。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增帽子发现页，记录 Hat 图像、Hh 与偏好选择。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_I",
+      "order": 9,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "craft_street",
+      "letter": {
+        "uppercase": "I",
+        "lowercase": "i",
+        "pair": "Ii"
+      },
+      "anchor": {
+        "canonical_word": "Ice cream",
+        "chinese_image_name": "冰淇淋",
+        "landmark_name": "冰淇淋驿亭",
+        "representative_image_ref": "planned:landmark_I_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "冰淇淋",
+        "representative_label_zh": "冰淇淋"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_I",
+        "room_id": "landmark_I",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央冰淇淋台",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "drag_place",
+        "instruction_cn": "把一球冰淇淋图像放到蛋筒图上，组成一份冰淇淋。",
+        "feedback_cn": "显示高窄蛋筒加冰淇淋球的完整图像。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "突出蛋筒与顶部旋纹或冰淇淋球，区别于 C 的宽矮分层蛋糕。",
+      "case_and_name": {
+        "pair": "Ii",
+        "existing_glyph_cue_cn": "看现有蛋筒正面带上下横边的大写 I。",
+        "lowercase_presentation_cn": "显示 Ii，小 i 的点清楚分离；与大 I 的横边对照，不用小写 l 替代。",
+        "letter_name_audio_button": "听字母名 I",
+        "anchor_word_audio_button": "听地标名 Ice cream",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_I",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "高高窄窄的蛋筒上有一团冰淇淋，是哪一处？",
+        "support_cn": "先给蛋筒图，再给顶部冰淇淋与 Ii。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增冰淇淋发现页；固定锚词仍为 Ice cream，不另换为其他 I 词。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_J",
+      "order": 10,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "craft_street",
+      "letter": {
+        "uppercase": "J",
+        "lowercase": "j",
+        "pair": "Jj"
+      },
+      "anchor": {
+        "canonical_word": "Jar",
+        "chinese_image_name": "罐子",
+        "landmark_name": "玻璃罐收藏馆",
+        "representative_image_ref": "planned:landmark_J_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "罐子",
+        "representative_label_zh": "罐子"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_J",
+        "room_id": "landmark_J",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_05",
+        "learning_point_label": "出口收藏展柜",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "observe_detail",
+        "instruction_cn": "揭开收藏卡上的罐盖图层，看一眼透明罐里的一颗石头，再合上图层。",
+        "feedback_cn": "罐盖与罐身完整呈现，收藏物仍留在罐内。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "强调透明罐身和明显罐盖；石头只是内容物，代表图像始终是罐子。",
+      "case_and_name": {
+        "pair": "Jj",
+        "existing_glyph_cue_cn": "查看现有黄铜 J 形框，下端向左回钩。",
+        "lowercase_presentation_cn": "显示 Jj，把小 j 的点和下伸弯笔分开提示。",
+        "letter_name_audio_button": "听字母名 J",
+        "anchor_word_audio_button": "听地标名 Jar",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_J",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "能装一件小收藏、还带盖子的透明地标是哪座？",
+        "support_cn": "显示罐身加盖轮廓，随后显示 Jj。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增罐子发现页，记录开合观察与 Jj，不测试收藏分类词汇。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_K",
+      "order": 11,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "craft_street",
+      "letter": {
+        "uppercase": "K",
+        "lowercase": "k",
+        "pair": "Kk"
+      },
+      "anchor": {
+        "canonical_word": "Kite",
+        "chinese_image_name": "风筝",
+        "landmark_name": "风筝工坊",
+        "representative_image_ref": "planned:landmark_K_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "风筝",
+        "representative_label_zh": "风筝"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_K",
+        "room_id": "landmark_K",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_04",
+        "learning_point_label": "右侧风带测试口",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "drag_place",
+        "instruction_cn": "给风筝图接上一条尾带，再看一小段飘带示意。",
+        "feedback_cn": "完整风筝图和短飘带反馈出现；不要求操纵飞行。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "菱形风筝面、细绳与尾带一起显露，连接到现有风筝工坊轮廓。",
+      "case_and_name": {
+        "pair": "Kk",
+        "existing_glyph_cue_cn": "沿现有风筝面竖杆和两条斜撑找 K。",
+        "lowercase_presentation_cn": "显示 Kk，观察小 k 的短斜笔与长竖笔。",
+        "letter_name_audio_button": "听字母名 K",
+        "anchor_word_audio_button": "听地标名 Kite",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_K",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪块菱形上连着一条会飘的尾带？",
+        "support_cn": "先给尾带和菱形轮廓，再看 Kk。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增风筝发现页；巧手街五页齐全时记录第二段旅行。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_L",
+      "order": 12,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "woodland_village",
+      "letter": {
+        "uppercase": "L",
+        "lowercase": "l",
+        "pair": "Ll"
+      },
+      "anchor": {
+        "canonical_word": "Lantern",
+        "chinese_image_name": "灯笼",
+        "landmark_name": "灯笼驿站",
+        "representative_image_ref": "planned:landmark_L_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "灯笼",
+        "representative_label_zh": "灯笼"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_L",
+        "room_id": "landmark_L",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_05",
+        "learning_point_label": "出口亮灯长廊",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "tap_feedback",
+        "instruction_cn": "按一次灯笼卡开关，看灯纸由暗到暖亮的两态示意。",
+        "feedback_cn": "灯笼提梁、灯纸与穗子可辨；不切换世界昼夜。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "完整灯笼轮廓在短暂亮度变化中显露，保持柔和光照。",
+      "case_and_name": {
+        "pair": "Ll",
+        "existing_glyph_cue_cn": "找现有灯笼正面 L 形铜框：左竖和下横。",
+        "lowercase_presentation_cn": "显示 Ll，用可辨字体展示小 l，并与已见的大写 I 小图并排观察一次。",
+        "letter_name_audio_button": "听字母名 L",
+        "anchor_word_audio_button": "听地标名 Lantern",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_L",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "提梁下面挂着灯纸和穗子的地方在哪里？",
+        "support_cn": "给灯笼轮廓或亮灯示范，再呈现 Ll。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增灯笼发现页，记录 Ll 与暖亮灯笼的联系。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_M",
+      "order": 13,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "woodland_village",
+      "letter": {
+        "uppercase": "M",
+        "lowercase": "m",
+        "pair": "Mm"
+      },
+      "anchor": {
+        "canonical_word": "Mushroom",
+        "chinese_image_name": "蘑菇",
+        "landmark_name": "蘑菇邻居屋",
+        "representative_image_ref": "planned:landmark_M_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "蘑菇",
+        "representative_label_zh": "蘑菇"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_M",
+        "room_id": "landmark_M",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央茶桌",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "observe_detail",
+        "instruction_cn": "在窗边观察卡上依次点看菌盖和菌柄两个部位，合成一张完整蘑菇图。",
+        "feedback_cn": "两个观察部位合并为一个蘑菇轮廓。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "突出低矮菌盖与短粗菌柄，不依靠家中茶杯来识别地标。",
+      "case_and_name": {
+        "pair": "Mm",
+        "existing_glyph_cue_cn": "找现有菌柄正面的 M 形木框，中央下凹清楚。",
+        "lowercase_presentation_cn": "显示 Mm，观察小 m 的两个连续拱形；以后与 Nn 并排回顾。",
+        "letter_name_audio_button": "听字母名 M",
+        "anchor_word_audio_button": "听地标名 Mushroom",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_M",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "低低的菌盖下面托着短菌柄，是谁的邻居屋？",
+        "support_cn": "先给菌盖，再给菌柄和 Mm。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增蘑菇发现页，保留两个部位合成的代表形象。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_N",
+      "order": 14,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "woodland_village",
+      "letter": {
+        "uppercase": "N",
+        "lowercase": "n",
+        "pair": "Nn"
+      },
+      "anchor": {
+        "canonical_word": "Nest",
+        "chinese_image_name": "鸟巢",
+        "landmark_name": "鸟巢观察屋",
+        "representative_image_ref": "planned:landmark_N_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "鸟巢",
+        "representative_label_zh": "鸟巢"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_N",
+        "room_id": "landmark_N",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_02",
+        "learning_point_label": "左侧望远镜",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "observe_detail",
+        "instruction_cn": "移动观察卡里的小取景窗，让枝条围成的鸟巢完整进入框内。",
+        "feedback_cn": "保留一张浅碗形鸟巢照片；可由向导自动对准。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "先看交错枝条，再看浅碗形整体；小鸟可作比例提示，不能替换 Nest 主图。",
+      "case_and_name": {
+        "pair": "Nn",
+        "existing_glyph_cue_cn": "找现有巢前护栏的 N：两根立枝与中间斜枝。",
+        "lowercase_presentation_cn": "显示 Nn，用单个拱形的小 n 与已见 Mm 作一次轻观察。",
+        "letter_name_audio_button": "听字母名 N",
+        "anchor_word_audio_button": "听地标名 Nest",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_N",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "枝条绕成浅浅的小碗，代表哪一处？",
+        "support_cn": "先给树枝纹理，再给完整鸟巢与 Nn。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增鸟巢发现页，保存未来可调用的 Nest 代表图像引用。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_O",
+      "order": 15,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "woodland_village",
+      "letter": {
+        "uppercase": "O",
+        "lowercase": "o",
+        "pair": "Oo"
+      },
+      "anchor": {
+        "canonical_word": "Owl",
+        "chinese_image_name": "猫头鹰",
+        "landmark_name": "猫头鹰图书馆",
+        "representative_image_ref": "planned:landmark_O_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "猫头鹰",
+        "representative_label_zh": "猫头鹰"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_O",
+        "room_id": "landmark_O",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_01",
+        "learning_point_label": "入口借阅台",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "choose_option",
+        "instruction_cn": "在借阅卡上选中猫头鹰头像，让它成为这次来访的小印记。",
+        "feedback_cn": "借阅卡显示完整猫头鹰图像；向导可直接示范选择。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "大圆眼、短喙和双翼共同显露，再回看现有图书馆外形；主图是猫头鹰而非书本。",
+      "case_and_name": {
+        "pair": "Oo",
+        "existing_glyph_cue_cn": "看现有图书馆身前 O 形入口，保留中孔与眼窗的区别。",
+        "lowercase_presentation_cn": "显示 Oo，用同一圆形的大小对照，明确它是字母而非数字零。",
+        "letter_name_audio_button": "听字母名 O",
+        "anchor_word_audio_button": "听地标名 Owl",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_O",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "有两只大圆眼、短喙和翅膀的图书馆伙伴是谁？",
+        "support_cn": "可逐步显示眼睛、喙、完整猫头鹰和 Oo。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增猫头鹰发现页，保存 Owl 代表图像与 Oo。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_P",
+      "order": 16,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "woodland_village",
+      "letter": {
+        "uppercase": "P",
+        "lowercase": "p",
+        "pair": "Pp"
+      },
+      "anchor": {
+        "canonical_word": "Pumpkin",
+        "chinese_image_name": "南瓜",
+        "landmark_name": "南瓜农场屋",
+        "representative_image_ref": "planned:landmark_P_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "南瓜",
+        "representative_label_zh": "南瓜"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_P",
+        "room_id": "landmark_P",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_04",
+        "learning_point_label": "右侧收成秤台",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "choose_option",
+        "instruction_cn": "把两只南瓜图放在比较卡上，任选喜欢的一只装入收成框。",
+        "feedback_cn": "显示被选南瓜的分瓣外形与短果柄；大小偏好都可完成。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "突出分瓣外墙对应的南瓜纹路与果柄，保持橙色主图。",
+      "case_and_name": {
+        "pair": "Pp",
+        "existing_glyph_cue_cn": "找现有南瓜屋 P 形窗框：长竖与上半部圆窗。",
+        "lowercase_presentation_cn": "显示 Pp，小 p 的竖笔向下伸；与字母名音轨独立呈现。",
+        "letter_name_audio_button": "听字母名 P",
+        "anchor_word_audio_button": "听地标名 Pumpkin",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_P",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "橙色外形分成一瓣一瓣，顶上还有短柄，是哪处农场？",
+        "support_cn": "先给分瓣纹路，再给完整南瓜与 Pp。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增南瓜发现页；林间村五页齐全时记录第三段旅行。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_Q",
+      "order": 17,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "hill_academy_district",
+      "letter": {
+        "uppercase": "Q",
+        "lowercase": "q",
+        "pair": "Qq"
+      },
+      "anchor": {
+        "canonical_word": "Quilt",
+        "chinese_image_name": "拼布被",
+        "landmark_name": "拼布故事馆",
+        "representative_image_ref": "planned:landmark_Q_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "image_naming_support_only",
+        "canonical_word_zh": "拼布被",
+        "representative_label_zh": "拼布被"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_Q",
+        "room_id": "landmark_Q",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央拼布故事桌",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "drag_place",
+        "instruction_cn": "把一块花纹布片放进故事被图上的空格，向导可直接指出位置。",
+        "feedback_cn": "完整拼布被图出现，布片不必由孩子独立匹配。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "以多块布片拼成的一整床被子作主图，与现有拼布拱顶对应。",
+      "case_and_name": {
+        "pair": "Qq",
+        "existing_glyph_cue_cn": "找现有拼布圆窗加右下斜尾形成的 Q。",
+        "lowercase_presentation_cn": "显示 Qq，清楚展示小 q 的下伸竖笔；Quilt 只作图像命名支持。",
+        "letter_name_audio_button": "听字母名 Q",
+        "anchor_word_audio_button": "听地标名 Quilt",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_Q",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "许多布片拼成一床软被，在哪座故事馆见过？",
+        "support_cn": "直接提供拼布被图片、中文名和 Qq；可分别播放字母名与 Quilt 读音。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增拼布被发现页；不要求会拼写、独立读出或解释 Quilt。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_R",
+      "order": 18,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "hill_academy_district",
+      "letter": {
+        "uppercase": "R",
+        "lowercase": "r",
+        "pair": "Rr"
+      },
+      "anchor": {
+        "canonical_word": "Robot",
+        "chinese_image_name": "机器人",
+        "landmark_name": "机器人工坊",
+        "representative_image_ref": "planned:landmark_R_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "机器人",
+        "representative_label_zh": "机器人"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_R",
+        "room_id": "landmark_R",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_01",
+        "learning_point_label": "入口指令卡槽",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "choose_option",
+        "instruction_cn": "从挥手和转身两张动作图中任选一张，看机器人反馈卡展示该动作。",
+        "feedback_cn": "用两态图示即可表现动作；不要求三步编程、机器人行走或新骨骼动画。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "方头、方身和机械手一起出现，代表完整机器人。",
+      "case_and_name": {
+        "pair": "Rr",
+        "existing_glyph_cue_cn": "在现有机器人胸前找 R，上部圆窗与右下斜撑同时可见。",
+        "lowercase_presentation_cn": "显示 Rr，放大小 r 的竖笔和短肩部；与 Pp 的比较为可选回顾。",
+        "letter_name_audio_button": "听字母名 R",
+        "anchor_word_audio_button": "听地标名 Robot",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_R",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪位方头方身的伙伴会按动作图挥手？",
+        "support_cn": "先给机械手与方身轮廓，再给机器人全图和 Rr。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增机器人发现页，记录动作偏好与 Rr 呈现。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_S",
+      "order": 19,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "hill_academy_district",
+      "letter": {
+        "uppercase": "S",
+        "lowercase": "s",
+        "pair": "Ss"
+      },
+      "anchor": {
+        "canonical_word": "Star",
+        "chinese_image_name": "星星",
+        "landmark_name": "星形天文台",
+        "representative_image_ref": "planned:landmark_S_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "星星",
+        "representative_label_zh": "星星"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_S",
+        "room_id": "landmark_S",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_02",
+        "learning_point_label": "左侧星图台",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "drag_place",
+        "instruction_cn": "把一枚星星图放到星图的同形轮廓上，必要时自动吸附。",
+        "feedback_cn": "一颗清楚的五角星留在发现卡上。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "星形地坪和单颗星星图互相对应；天球仪只是所在场所的观察道具。",
+      "case_and_name": {
+        "pair": "Ss",
+        "existing_glyph_cue_cn": "在现有星形建筑前侧找 S 形玻璃采光线；当前视角不清时用同模型取景卡。",
+        "lowercase_presentation_cn": "显示 Ss，对照大小两条弯曲形，不从 Star 词音推导字母名。",
+        "letter_name_audio_button": "听字母名 S",
+        "anchor_word_audio_button": "听地标名 Star",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_S",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "五个尖角的形象，来自哪一座观测台？",
+        "support_cn": "先给单颗五角星，再显示 Ss 和原地标取景。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增星星发现页，保存未来可调用的 Star 代表图像引用。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_T",
+      "order": 20,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "hill_academy_district",
+      "letter": {
+        "uppercase": "T",
+        "lowercase": "t",
+        "pair": "Tt"
+      },
+      "anchor": {
+        "canonical_word": "Train",
+        "chinese_image_name": "火车",
+        "landmark_name": "火车车站",
+        "representative_image_ref": "planned:landmark_T_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "火车",
+        "representative_label_zh": "火车"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_T",
+        "room_id": "landmark_T",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央候车站台",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "drag_place",
+        "instruction_cn": "把一节车厢图接在车头图后方，组成一列短火车。",
+        "feedback_cn": "显示车头加车厢的连续形象；不启动驾驶、发车计时或时刻表考试。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "通过车头、轮子和相接车厢突出 Train，与现有车站造型对应。",
+      "case_and_name": {
+        "pair": "Tt",
+        "existing_glyph_cue_cn": "在现有车厢正面找 T：上横梁与中央立柱。",
+        "lowercase_presentation_cn": "显示 Tt，指出小 t 的竖笔与横笔；不把车厢数量作为字母记忆评分。",
+        "letter_name_audio_button": "听字母名 T",
+        "anchor_word_audio_button": "听地标名 Train",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_T",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "车头后面连着车厢，会在哪处站台等你？",
+        "support_cn": "先给车头和车轮，再给完整火车与 Tt。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增火车发现页，保留连接后的整列图与 Tt。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_U",
+      "order": 21,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "hill_academy_district",
+      "letter": {
+        "uppercase": "U",
+        "lowercase": "u",
+        "pair": "Uu"
+      },
+      "anchor": {
+        "canonical_word": "Umbrella",
+        "chinese_image_name": "雨伞",
+        "landmark_name": "雨伞气象屋",
+        "representative_image_ref": "planned:landmark_U_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "雨伞",
+        "representative_label_zh": "雨伞"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_U",
+        "room_id": "landmark_U",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_01",
+        "learning_point_label": "入口天气轮盘",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "choose_option",
+        "instruction_cn": "选择雨天图标，看观察卡中的雨伞由收起切到撑开；可直接看示范。",
+        "feedback_cn": "雨伞撑开后的伞面、伞骨与弯柄保持可见；不改变全岛天气。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "强调撑开的伞面与弯柄，区别于 M 的菌盖与菌柄。",
+      "case_and_name": {
+        "pair": "Uu",
+        "existing_glyph_cue_cn": "查看现有伞下 U 形入口构件，双竖边与底部圆弧相连。",
+        "lowercase_presentation_cn": "显示 Uu，对照小 u 的弧底与收笔，字母名与 Umbrella 读音各有入口。",
+        "letter_name_audio_button": "听字母名 U",
+        "anchor_word_audio_button": "听地标名 Umbrella",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_U",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "撑开的伞面下面带着弯柄，是哪座气象屋？",
+        "support_cn": "可先看撑伞示意，再给 Uu 和完整图像。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增雨伞发现页；山丘学园街区五页齐全时记录第四段旅行。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_V",
+      "order": 22,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "bay_travel_district",
+      "letter": {
+        "uppercase": "V",
+        "lowercase": "v",
+        "pair": "Vv"
+      },
+      "anchor": {
+        "canonical_word": "Volcano",
+        "chinese_image_name": "火山",
+        "landmark_name": "休眠火山观察站",
+        "representative_image_ref": "planned:landmark_V_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "image_naming_support_only",
+        "canonical_word_zh": "火山",
+        "representative_label_zh": "火山"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_V",
+        "room_id": "landmark_V",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央火山地形沙盘",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "observe_detail",
+        "instruction_cn": "移动地形观察图上的放大窗，找到山顶圆形火山口；向导可自动定位。",
+        "feedback_cn": "山体与火山口并列显示，保留休眠、无熔岩的原场景。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "以完整矮锥形山体加山顶火山口作代表，普通岩石只是辅助。",
+      "case_and_name": {
+        "pair": "Vv",
+        "existing_glyph_cue_cn": "在现有前侧石砌入口找 V 形凹槽。",
+        "lowercase_presentation_cn": "显示 Vv，比较大小尖底；Volcano 只作图像命名支持。",
+        "letter_name_audio_button": "听字母名 V",
+        "anchor_word_audio_button": "听地标名 Volcano",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_V",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪座矮山顶上有一个圆圆的口？",
+        "support_cn": "提供山体轮廓、火山口放大图、中文名与 Vv，词音可选播放。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增火山发现页；不要求拼写、独立朗读 Volcano 或掌握火山知识。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_W",
+      "order": 23,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "bay_travel_district",
+      "letter": {
+        "uppercase": "W",
+        "lowercase": "w",
+        "pair": "Ww"
+      },
+      "anchor": {
+        "canonical_word": "Whale",
+        "chinese_image_name": "鲸鱼",
+        "landmark_name": "鲸鱼海洋馆",
+        "representative_image_ref": "planned:landmark_W_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "鲸鱼",
+        "representative_label_zh": "鲸鱼"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_W",
+        "room_id": "landmark_W",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央鲸鱼比例地毯",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "choose_option",
+        "instruction_cn": "在已配好的鲸鱼与小鱼观察图中，点出完整鲸鱼轮廓，向导可高亮帮助。",
+        "feedback_cn": "鲸身、侧鳍与尾鳍作为一张完整图保留；不测试真实尺寸数值。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "由长弧鲸身看到侧鳍和明显尾鳍，再对应现有海洋馆轮廓。",
+      "case_and_name": {
+        "pair": "Ww",
+        "existing_glyph_cue_cn": "查看现有鲸鱼侧入口雨棚的 W 形支架。",
+        "lowercase_presentation_cn": "显示 Ww，对照两个连续折角；可以听字母名，不要求孩子一次复述完整。",
+        "letter_name_audio_button": "听字母名 W",
+        "anchor_word_audio_button": "听地标名 Whale",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_W",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪位海洋伙伴有长长的身体、侧鳍和大尾鳍？",
+        "support_cn": "先看尾鳍，再给鲸鱼全图和 Ww。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增鲸鱼发现页，保存完整鲸鱼形象与 Ww。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_X",
+      "order": 24,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "bay_travel_district",
+      "letter": {
+        "uppercase": "X",
+        "lowercase": "x",
+        "pair": "Xx"
+      },
+      "anchor": {
+        "canonical_word": "Xylophone",
+        "chinese_image_name": "木琴",
+        "landmark_name": "木琴海边舞台",
+        "representative_image_ref": "planned:landmark_X_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "image_naming_support_only",
+        "canonical_word_zh": "木琴",
+        "representative_label_zh": "木琴"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_X",
+        "room_id": "landmark_X",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央木琴",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "tap_feedback",
+        "instruction_cn": "任选一长一短两根音条各轻敲一次，听或看两次反馈。",
+        "feedback_cn": "对应音条分别亮起；静音时可完成，不做旋律、音高或节奏测试。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "成排长短木质音条和两支琴槌共同显露，区别于 D 的单个圆鼓。",
+      "case_and_name": {
+        "pair": "Xx",
+        "existing_glyph_cue_cn": "找现有舞台前侧两支交叉琴槌形成的 X。",
+        "lowercase_presentation_cn": "显示 Xx；字母名 X 的音轨与 Xylophone 整词音轨分开，后者不充当 X 的字母音示例。",
+        "letter_name_audio_button": "听字母名 X",
+        "anchor_word_audio_button": "听地标名 Xylophone",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_X",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "成排长短木音条配两支琴槌，是哪一处海边舞台？",
+        "support_cn": "直接提供木琴图、中文名、Xx 与独立字母名示范，Xylophone 只作命名支持。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增木琴发现页；不要求会拼写或独立说出 Xylophone。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_Y",
+      "order": 25,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "bay_travel_district",
+      "letter": {
+        "uppercase": "Y",
+        "lowercase": "y",
+        "pair": "Yy"
+      },
+      "anchor": {
+        "canonical_word": "Yarn",
+        "chinese_image_name": "毛线",
+        "landmark_name": "毛线手作屋",
+        "representative_image_ref": "planned:landmark_Y_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "毛线",
+        "representative_label_zh": "毛线"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_Y",
+        "room_id": "landmark_Y",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央绕线器",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "trace_path",
+        "instruction_cn": "沿观察卡上已给出的短线头拖到毛线团，或用按钮分步跟随。",
+        "feedback_cn": "线头连接到清楚的线圈团；不实现真实编织或绳索物理。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "突出柔软线圈和伸出的线头，区别于 G 的经纬线与硬支架。",
+      "case_and_name": {
+        "pair": "Yy",
+        "existing_glyph_cue_cn": "找现有毛线团正面的 Y 形粗线：上面两枝汇成下面一竖。",
+        "lowercase_presentation_cn": "显示 Yy，指出小 y 向下延伸的一笔；路径操作不评价书写能力。",
+        "letter_name_audio_button": "听字母名 Y",
+        "anchor_word_audio_button": "听地标名 Yarn",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_Y",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "哪颗球上绕着柔软的线，还有一截线头？",
+        "support_cn": "先给线头和线圈局部，再给毛线团全图与 Yy。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增毛线发现页；固定锚词为 Yarn，操作方式单独记录。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    },
+    {
+      "id": "prologue_Z",
+      "order": 26,
+      "status": "planning_only",
+      "implementation_state": "not_implemented",
+      "district_id": "bay_travel_district",
+      "letter": {
+        "uppercase": "Z",
+        "lowercase": "z",
+        "pair": "Zz"
+      },
+      "anchor": {
+        "canonical_word": "Zebra",
+        "chinese_image_name": "斑马",
+        "landmark_name": "斑马邮局",
+        "representative_image_ref": "planned:landmark_Z_representative",
+        "image_state": "planned_reference_from_existing_landmark",
+        "word_learning_requirement": "introductory_image_label_no_mastery_gate",
+        "canonical_word_zh": "斑马",
+        "representative_label_zh": "斑马"
+      },
+      "scene_ref": {
+        "world_room_id": "village",
+        "world_gate_node": "SG_DOOR_Z",
+        "room_id": "landmark_Z",
+        "entry_node": "SG_SPAWN",
+        "learning_node": "SG_MEMORY_03",
+        "learning_point_label": "中央写信桌",
+        "return_node": "SG_EXIT",
+        "geometry_change_required": false
+      },
+      "micro_action": {
+        "primitive": "stamp_card",
+        "instruction_cn": "把一枚斑马图邮票盖到空白明信片上，位置可自由选择。",
+        "feedback_cn": "明信片上保留斑马完整头像或全身轮廓，等待带回家。",
+        "assisted_or_demonstrated_completion_allowed": true,
+        "separate_full_minigame_required": false
+      },
+      "representative_reveal_cn": "黑白条纹、马头和短鬃毛一起显露；邮票载体不替代 Zebra 主图。",
+      "case_and_name": {
+        "pair": "Zz",
+        "existing_glyph_cue_cn": "沿现有邮局侧的两条水平平台与斜梯看 Z。",
+        "lowercase_presentation_cn": "显示 Zz，比较同向的两横一斜；字母名录音按项目审校后的统一英语口音提供。",
+        "letter_name_audio_button": "听字母名 Z",
+        "anchor_word_audio_button": "听地标名 Zebra",
+        "audio_assets_status": "planned_separate_tracks_pending_review",
+        "letter_name_and_word_sound_are_separate": true,
+        "phonics_mastery_target": false,
+        "glyph_source_room_id": "village",
+        "glyph_source_gate_node": "SG_DOOR_Z",
+        "glyph_view_status": "planned_view_of_existing_world_landmark"
+      },
+      "recall": {
+        "prompt_cn": "穿着黑白条纹、帮大家寄信的伙伴来自哪座邮局？",
+        "support_cn": "先给条纹与马头轮廓，再给斑马全图、Zz 和字母名示范。",
+        "required_for_completion": false,
+        "response_modes": [
+          "point",
+          "choose",
+          "speak_optional",
+          "show_demo",
+          "skip"
+        ],
+        "evidence_separate_from_visit": true
+      },
+      "stage_outcome_cn": "新增斑马发现页；海湾五页与全岛二十六页完成时形成序章旅行册。",
+      "completion_rule_ref": "visited_and_supported_experience"
+    }
+  ],
+  "completion_contract": {
+    "rule_id": "visited_and_supported_experience",
+    "per_letter_requirements": [
+      "visited == true",
+      "representative_image_presented == true",
+      "micro_action_feedback_seen == true",
+      "case_pair_presented == true",
+      "letter_name_support_offered == true"
+    ],
+    "accepted_completion_modes": [
+      "independent_action",
+      "hinted_action",
+      "companion_action",
+      "demonstration_viewed"
+    ],
+    "experienced_formula": "representative_image_presented && micro_action_feedback_seen && case_pair_presented && letter_name_support_offered",
+    "prologue_complete_formula": "for every letter A..Z: visited[letter] && experienced[letter]",
+    "hard_required_letter_count": 26,
+    "not_required": [
+      "独立配对正确",
+      "独立说出字母名",
+      "独立说出或拼写地标锚词",
+      "全部语音播放",
+      "全部回想问题作答",
+      "操作速度达标",
+      "集齐装饰或货币",
+      "130记忆点全访问",
+      "按A-Z顺序一次走完"
+    ],
+    "demonstration_rule": "示范必须在该字母对应场景中实际呈现图像、动作反馈与字卡，不以菜单一键勾满26项代替体验。",
+    "world_doors_remain_accessible": true,
+    "school_and_classroom_access_rule": "school、classroom及已有活动不因序章英语表现锁门；26完整覆盖决定本策划的主线阶段切换，不删除现有自由探索入口。",
+    "completion_is_not_mastery": true
+  },
+  "progress_model": {
+    "status": "planning_schema_not_runtime_contract",
+    "namespace": "alphabet_prologue",
+    "per_letter_fields": [
+      "visited",
+      "representative_image_presented",
+      "micro_action_feedback_seen",
+      "case_pair_presented",
+      "letter_name_support_offered",
+      "letter_name_audio_played",
+      "anchor_word_audio_played",
+      "experienced",
+      "completion_mode",
+      "last_completed_step"
+    ],
+    "evidence_channels": [
+      "uppercase_lowercase_association",
+      "letter_name_recall",
+      "landmark_image_recall"
+    ],
+    "optional_evidence_states": [
+      "not_tried",
+      "independent_response",
+      "supported_response",
+      "demonstration_viewed",
+      "no_response"
+    ],
+    "note": "independent_action只指本次操作无需帮助，不自动写入任何英语掌握标记；回想证据与路径提示、演示方式分别记录。",
+    "save_policy": "一站完成即保存；退出恢复last_completed_step，已提交字母去重保留。提示、示范、静音或跳过回想不清空进度。",
+    "retry_policy": "未理解或误操作时回到同一步，提供提示或示范；没有失败倒计时、扣币或连续登录惩罚。",
+    "example": {
+      "letter": "Q",
+      "visited": true,
+      "representative_image_presented": true,
+      "micro_action_feedback_seen": true,
+      "case_pair_presented": true,
+      "letter_name_support_offered": true,
+      "letter_name_audio_played": true,
+      "anchor_word_audio_played": false,
+      "experienced": true,
+      "completion_mode": "demonstration_viewed",
+      "last_completed_step": "save_page",
+      "uppercase_lowercase_association": "not_tried",
+      "letter_name_recall": "not_tried",
+      "landmark_image_recall": "supported_response",
+      "mastery_asserted": false
+    }
+  },
+  "later_encoding_bridge": {
+    "status": "illustrative_future_design_not_implemented",
+    "not_required_for_prologue_completion": true,
+    "term": "nose",
+    "term_authority": "义项、故事正文、分镜与引导仅引用已生成词库条目；主线不保留第二份 nose 故事。此例不是 Unit 1 必学内容。",
+    "room_id": "home",
+    "presentation": "回忆册或桌面四格故事带的图像叠层，不新建场景、不占用四座建筑原来的位置。",
+    "sequence": [
+      {
+        "letter": "N",
+        "representative": "Nest",
+        "source_room_id": "landmark_N",
+        "image_ref": "planned:landmark_N_representative"
+      },
+      {
+        "letter": "O",
+        "representative": "Owl",
+        "source_room_id": "landmark_O",
+        "image_ref": "planned:landmark_O_representative"
+      },
+      {
+        "letter": "S",
+        "representative": "Star",
+        "source_room_id": "landmark_S",
+        "image_ref": "planned:landmark_S_representative"
+      },
+      {
+        "letter": "E",
+        "representative": "Egg",
+        "source_room_id": "landmark_E",
+        "image_ref": "planned:landmark_E_representative"
+      }
+    ],
+    "teaching_order": [
+      "先用鼻子的实义图像说明nose，并独立播放整词读音。",
+      "看n-o-s-e的字母顺序，按需要调出对应大小写与四处已熟悉地标的代表图。",
+      "在四格中摆Nest→Owl→Star→Egg，可看示范，也可选择自己的简单故事。",
+      "把四图缩回鼻子图旁，之后可选遮去图片回想；独立词义/拼写证据另行记录。"
+    ],
+    "public_buildings_move": false,
+    "phonics_boundary": "四图只帮助保持字母顺序，不把Nest/Owl/Star/Egg的词音拼接成nose，也不据图片顺序推断整词发音。",
+    "evaluation_boundary": "仅展示设计意图，不承诺记忆提升；支持是否有效需后续延迟回想与新情境检验。",
+    "content_ref": {
+      "entry_id": "occ-89a38b8a39c8",
+      "lexeme_id": "lex-d77e22123e64",
+      "sense_id": "story-d7e8439b06b1",
+      "source_unit": {
+        "book_id": "xiangshao-g3-1",
+        "unit_id": "unit-6"
+      },
+      "adapter_ref": "../vocabulary/data/mainline_entries.json"
+    },
+    "story_body_policy": "从对应词汇内容版本读取，不在本文件复制或即兴生成。"
+  },
+  "handoff": {
+    "status": "planning_only",
+    "trigger": "prologue_complete_formula == true",
+    "completion_room_id": "home",
+    "curriculum_entry_ref": {
+      "file": "curriculum_arcs.json",
+      "event_id_rule": "event/{curriculum_route.selected_start_book_id}/unit-1",
+      "default_event_id": "event/xiangshao-g3-1/unit-1",
+      "start_book_options": [
+        "xiangshao-g3-1",
+        "xiangshao-g3-2",
+        "xiangshao-g4-1",
+        "xiangshao-g4-2",
+        "english-grade5-volume1-smartedu-2022",
+        "xiangshao-g5-2",
+        "xiangshao-g6-1",
+        "xiangshao-g6-2"
+      ]
+    },
+    "scene_route_rule": "读取所选首单元的 room_ids 与章节步骤；不把所有起点册硬接到 classroom。默认三上从 home 经 village 到 school 欢迎角。",
+    "default_scene_route": [
+      "home",
+      "village",
+      "school"
+    ],
+    "scene_nodes": [
+      {
+        "room_id": "village",
+        "node": "SG_DOOR_SCHOOL"
+      },
+      {
+        "room_id": "school",
+        "node": "SG_SPAWN"
+      }
+    ],
+    "invitation_cn": "我们已经拜访过二十六位字母伙伴。带上旅行册，去见所选教材故事里的新朋友；想不起来，仍然可以回来看看。",
+    "policy": "新档完整26序章后进入所选起点册首单元；必要先修允许示范，不把前册补记完成。已有进度旧档按兼容规则继续。",
+    "optional_follow_up": "按已审校任务调取少量固定图像；不要求每个词都编码，不按首字母强行分课。"
+  },
+  "acceptance_checks": [
+    "26个字母恰好覆盖A-Z一次，主锚词与现有配置逐项一致；I=Ice cream、Y=Yarn、Q=Quilt、V=Volcano、X=Xylophone。",
+    "五街区精确为A-F/G-K/L-P/Q-U/V-Z；独立school与home不占字母编号。",
+    "所有room_id、world_gate_node及learning_node存在于当前资产清单；不得写新坐标或改公共几何。",
+    "每字母有一个具体轻动作、代表形象显露、大小写与独立字母名支持、可跳过回想及可记录阶段成果。",
+    "动作由通用模块配置，不强制26完整小游戏，不强制五点全跑。",
+    "提示、陪同和完整示范可使相应场景体验完成；完成公式仍要求26个实际场景到访与体验。",
+    "静音、无麦克风、拖放替代、退出恢复和跨街区先逛均可执行；未独立掌握不锁实体门。",
+    "N-O-S-E只调用四地标代表图，公共建筑与固定地点不搬动；整词发音与图像记忆线索分开。",
+    "所有时长是待测建议；正式儿童试玩后再调节，不能当作学习效率或效果证明。",
+    "本文件只做策划静态检查，不代表Godot机制、素材、语音或学习验收已完成。"
+  ],
+  "integration_contract_ref": "integration_contract.json"
+}

@@ -1,0 +1,789 @@
+{
+  "capture_script_sha256": "15b6a183b8b4c7fb41df4f52848fd1fa34c552be9fd51018733be38fb9e65539",
+  "engine": "4.7.2-stable (official)",
+  "purpose": "Same original landmark model, isolated camera views; guidance overlays are separate UI.",
+  "records": [
+    {
+      "bounds": "AABB(-53.000183, 5.234385, 20.151558, 5.9988136, 5.6605983, 5.696518)",
+      "camera_position": "Vector3(-50.00078, 12.743296, 42.494034)",
+      "camera_size": 7.81162548065186,
+      "image": "res://assets/learning/landmark_views/A-front.png",
+      "letter": "A",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "e1ad747cf7ac3a83a6ec07e762d385fa9e869bfddd4df2bd5a2a7f5c234ca149",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_A_SOCKET/ALPHA_A_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-53.000183, 5.234385, 20.151558, 5.9988136, 5.6605983, 5.696518)",
+      "camera_position": "Vector3(-39.536667, 17.075447, 37.533306)",
+      "camera_size": 7.81162548065186,
+      "image": "res://assets/learning/landmark_views/A-angle.png",
+      "letter": "A",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "3a7072eb27ccc1fa38f46ffcf2dfbcac1a66a54379ce88a194962738f839e3ad",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_A_SOCKET/ALPHA_A_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-58.5, -0.48, 38.900517, 7, 7.2095942, 8.198967)",
+      "camera_position": "Vector3(-55, 9.178139, 68.22226)",
+      "camera_size": 9.94923973083496,
+      "image": "res://assets/learning/landmark_views/B-front.png",
+      "letter": "B",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "b838bc7986aef906ec35bd460dfff660f58263d53cbdbcb277620508acdcbc20",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_B_SOCKET/ALPHA_B_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-58.5, -0.48, 38.900517, 7, 7.2095942, 8.198967)",
+      "camera_position": "Vector3(-41.461185, 14.78322, 61.80391)",
+      "camera_size": 9.94923973083496,
+      "image": "res://assets/learning/landmark_views/B-angle.png",
+      "letter": "B",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "010f3a49f646c08880367222ad83bd5713d21c5eb5dd7387b1de4607a39079ad",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_B_SOCKET/ALPHA_B_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-36.50007, 4.48158, 30.504633, 7.0016403, 5.9258795, 6.992647)",
+      "camera_position": "Vector3(-32.99925, 12.828027, 56.432236)",
+      "camera_size": 8.30954647064209,
+      "image": "res://assets/learning/landmark_views/C-front.png",
+      "letter": "C",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "f53ea9ad99a95d52612031f9557ba83fe920ac1d08ee3cf22b2ba670cbd17e74",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_C_SOCKET/ALPHA_C_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-36.50007, 4.48158, 30.504633, 7.0016403, 5.9258795, 6.992647)",
+      "camera_position": "Vector3(-20.958576, 17.812876, 50.724113)",
+      "camera_size": 8.30954647064209,
+      "image": "res://assets/learning/landmark_views/C-angle.png",
+      "letter": "C",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "b1850ad1bcc0f5c7f90d5f6029ac5ac98b64453182649689c293e5108aa16935",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_C_SOCKET/ALPHA_C_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-27.248505, 5.544358, 13.738831, 6.4969807, 5.1489472, 6.5227814)",
+      "camera_position": "Vector3(-24.000015, 13.042261, 37.51451)",
+      "camera_size": 7.7412371635437,
+      "image": "res://assets/learning/landmark_views/D-front.png",
+      "letter": "D",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "e198c4433ca3c329ff496fced0f62a3cf8db699a7fdcab87ca517e1e10325bfa",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_D_SOCKET/ALPHA_D_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-27.248505, 5.544358, 13.738831, 6.4969807, 5.1489472, 6.5227814)",
+      "camera_position": "Vector3(-12.988345, 17.601103, 32.294205)",
+      "camera_size": 7.7412371635437,
+      "image": "res://assets/learning/landmark_views/D-angle.png",
+      "letter": "D",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "67302da08537f290c0f0cce8f324b18988432d4a2f281a3fbeab3ff845cf1f73",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_D_SOCKET/ALPHA_D_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-42.000175, 5.6051784, 3.0152204, 6.0010643, 6.5699487, 5.9692163)",
+      "camera_position": "Vector3(-38.99964, 13.891277, 26.837845)",
+      "camera_size": 9.06652927398682,
+      "image": "res://assets/learning/landmark_views/E-front.png",
+      "letter": "E",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "a288f0ed690045ece81ba98fcd3eaf2025970c5e85e1a7082045cd9a1ed8aed9",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_E_SOCKET/ALPHA_E_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-42.000175, 5.6051784, 3.0152204, 6.0010643, 6.5699487, 5.9692163)",
+      "camera_position": "Vector3(-27.814201, 18.52206, 21.53516)",
+      "camera_size": 9.06652927398682,
+      "image": "res://assets/learning/landmark_views/E-angle.png",
+      "letter": "E",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "6e0a6ea9e36dd8f7fabe19844075b32ffc651a2c2d3901eed1314122bae37f5a",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_E_SOCKET/ALPHA_E_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-58.99775, 5.793471, 0.56510997, 7.994381, 7.2612224, 6.8726482)",
+      "camera_position": "Vector3(-55.000557, 15.398953, 28.896732)",
+      "camera_size": 10.020486831665,
+      "image": "res://assets/learning/landmark_views/F-front.png",
+      "letter": "F",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "617b89deeec8b8922d14b84ede7e1b27e3daeb0cf25618141ed9d2f75fd8db79",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_F_SOCKET/ALPHA_F_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-58.99775, 5.793471, 0.56510997, 7.994381, 7.2612224, 6.8726482)",
+      "camera_position": "Vector3(-41.637245, 20.931377, 22.561586)",
+      "camera_size": 10.020486831665,
+      "image": "res://assets/learning/landmark_views/F-angle.png",
+      "letter": "F",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "d99fa144fe3aba83e5c646365c29bf60fa277ff9873c446d82061b963502ef10",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_F_SOCKET/ALPHA_F_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-55.50017, 8.153654, -21.98711, 6.99955, 8.008337, 5.975466)",
+      "camera_position": "Vector3(-52.000397, 17.851995, 4.7263393)",
+      "camera_size": 11.0515050888062,
+      "image": "res://assets/learning/landmark_views/G-front.png",
+      "letter": "G",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "20e526dacd9e87e77527909a996fa5b5d79841ce48710a7d55c810b0583d5251",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_G_SOCKET/ALPHA_G_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-55.50017, 8.153654, -21.98711, 6.99955, 8.008337, 5.975466)",
+      "camera_position": "Vector3(-39.264896, 23.124504, -1.311182)",
+      "camera_size": 11.0515050888062,
+      "image": "res://assets/learning/landmark_views/G-angle.png",
+      "letter": "G",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "2d5e3434fb6c7514bcc781d34f9b74123cc9d84841444f371babbec56520ecfe",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_G_SOCKET/ALPHA_G_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-57.75012, 10.080341, -42.76005, 7.500305, 5.8248806, 7.5206985)",
+      "camera_position": "Vector3(-53.999966, 18.646858, -15.441046)",
+      "camera_size": 8.92556476593018,
+      "image": "res://assets/learning/landmark_views/H-front.png",
+      "letter": "H",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "0c36445547eeae3cc83ba3a3a35eda19cc5870450c946fbaaff2b298efa4510e",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_H_SOCKET/ALPHA_H_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-57.75012, 10.080341, -42.76005, 7.500305, 5.8248806, 7.5206985)",
+      "camera_position": "Vector3(-41.35414, 23.882244, -21.436056)",
+      "camera_size": 8.92556476593018,
+      "image": "res://assets/learning/landmark_views/H-angle.png",
+      "letter": "H",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "7c27f62f3721c64146feeffbe670db1a2e39b9f95f6b393b8bbc04fa5c975340",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_H_SOCKET/ALPHA_H_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-38.89978, 10.300588, -46.898148, 5.8010216, 6.509761, 5.7957764)",
+      "camera_position": "Vector3(-35.999268, 18.442274, -23.638567)",
+      "camera_size": 8.98346996307373,
+      "image": "res://assets/learning/landmark_views/I-front.png",
+      "letter": "I",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "88986078a2827d4ed02fb9ff31e962926b677079c58b8c45de4c57ab62091dee",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_I_SOCKET/ALPHA_I_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-38.89978, 10.300588, -46.898148, 5.8010216, 6.509761, 5.7957764)",
+      "camera_position": "Vector3(-25.069508, 22.967205, -28.82004)",
+      "camera_size": 8.98346996307373,
+      "image": "res://assets/learning/landmark_views/I-angle.png",
+      "letter": "I",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "e759e62c52fe028cbb645c8e850fc7cf694d4318fad3fc06e70e6d65e9215522",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_I_SOCKET/ALPHA_I_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-23.35017, 10.535991, -42.349102, 6.70068, 6.497569, 6.698353)",
+      "camera_position": "Vector3(-19.99983, 19.14698, -16.657398)",
+      "camera_size": 8.96664524078369,
+      "image": "res://assets/learning/landmark_views/J-front.png",
+      "letter": "J",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "83658ebb21e7435061a40d0fd8d39a4f621efff19e6ab405ccb37e19cbeea83b",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_J_SOCKET/ALPHA_J_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-23.35017, 10.535991, -42.349102, 6.70068, 6.497569, 6.698353)",
+      "camera_position": "Vector3(-8.006799, 24.112106, -22.342937)",
+      "camera_size": 8.96664524078369,
+      "image": "res://assets/learning/landmark_views/J-angle.png",
+      "letter": "J",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "647966822ac82af27ea78723a2390fbaccd676bdb6b12292c579544a361b9579",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_J_SOCKET/ALPHA_J_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-35, 8.529494, -22.905334, 8.0005455, 8.006877, 5.811384)",
+      "camera_position": "Vector3(-30.999727, 18.471638, 4.7449684)",
+      "camera_size": 11.0494899749756,
+      "image": "res://assets/learning/landmark_views/K-front.png",
+      "letter": "K",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "8b8f063e2f24ce001d5609cc1d2ef7f98b5f6e3199f304071572f7dca06195fa",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_K_SOCKET/ALPHA_K_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-35, 8.529494, -22.905334, 8.0005455, 8.006877, 5.811384)",
+      "camera_position": "Vector3(-17.717304, 23.970573, -1.5518341)",
+      "camera_size": 11.0494899749756,
+      "image": "res://assets/learning/landmark_views/K-angle.png",
+      "letter": "K",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "2d5e554557f28391148397de35cc22830e32e9c5d894bf169fb49a340363bd58",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_K_SOCKET/ALPHA_K_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-11.500331, 10.414482, -45.68296, 7.001472, 7.9808598, 7.3657494)",
+      "camera_position": "Vector3(-7.9995947, 20.436039, -16.870392)",
+      "camera_size": 11.0135860443115,
+      "image": "res://assets/learning/landmark_views/L-front.png",
+      "letter": "L",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "b38a1520d6858dcfe700f9024d3cceeceb591f1189a6b6b8628076b5e5d5a198",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_L_SOCKET/ALPHA_L_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-11.500331, 10.414482, -45.68296, 7.001472, 7.9808598, 7.3657494)",
+      "camera_position": "Vector3(5.4895325, 26.02055, -23.265186)",
+      "camera_size": 11.0135860443115,
+      "image": "res://assets/learning/landmark_views/L-angle.png",
+      "letter": "L",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "392e66b0472b2a694a084271f9553d3ee49f1ddc19c0ae8a18e9adcbce8112b7",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_L_SOCKET/ALPHA_L_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(9.000487, 10.218962, -47.922153, 8.000165, 6.920828, 7.844387)",
+      "camera_position": "Vector3(13.00057, 19.826172, -18.388315)",
+      "camera_size": 9.55074214935303,
+      "image": "res://assets/learning/landmark_views/M-front.png",
+      "letter": "M",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "19e3ae06ba94b8c6a5c12eede1ee76fbb81f571cd9e536726c94a819aa384df8",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_M_SOCKET/ALPHA_M_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(9.000487, 10.218962, -47.922153, 8.000165, 6.920828, 7.844387)",
+      "camera_position": "Vector3(26.748402, 25.517786, -24.905752)",
+      "camera_size": 9.55074214935303,
+      "image": "res://assets/learning/landmark_views/M-angle.png",
+      "letter": "M",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "695f014eab8f639581f8f9e03ec79df9b0c1e5b6afa3d4a4ce392a4ac45a185c",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_M_SOCKET/ALPHA_M_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(29.50094, 11.005647, -41.320694, 6.998869, 6.0883627, 6.640808)",
+      "camera_position": "Vector3(33.000374, 19.374672, -15.813435)",
+      "camera_size": 8.40194034576416,
+      "image": "res://assets/learning/landmark_views/N-front.png",
+      "letter": "N",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "34d4111dfefa95dadfab2e86dba5fef0f66f8cfbb3a49dedebb40613541953d2",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_N_SOCKET/ALPHA_N_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(29.50094, 11.005647, -41.320694, 6.998869, 6.0883627, 6.640808)",
+      "camera_position": "Vector3(44.909843, 24.305204, -21.45936)",
+      "camera_size": 8.40194034576416,
+      "image": "res://assets/learning/landmark_views/N-angle.png",
+      "letter": "N",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "47c20b7dec9ae8f548e1ddbbedaec0ba8681bf70ef165bc9188a064046f5c92b",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_N_SOCKET/ALPHA_N_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(48.001118, 11.701651, -32.332863, 7.998703, 7.0459538, 6.666765)",
+      "camera_position": "Vector3(52.00047, 21.09284, -4.5485935)",
+      "camera_size": 9.72341632843018,
+      "image": "res://assets/learning/landmark_views/O-front.png",
+      "letter": "O",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "e07d6530f151a32650d34bacee86ce9bd64bf13e6e3f81028a86ede98eb922ab",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_O_SOCKET/ALPHA_O_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(48.001118, 11.701651, -32.332863, 7.998703, 7.0459538, 6.666765)",
+      "camera_position": "Vector3(65.12523, 26.526503, -10.770651)",
+      "camera_size": 9.72341632843018,
+      "image": "res://assets/learning/landmark_views/O-angle.png",
+      "letter": "O",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "76873bdf9b5d7a9cb97fec448b5babbb1a5ff0bdd7ec6709112932ed17cef012",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_O_SOCKET/ALPHA_O_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(24.499454, 9.060431, -24.51937, 7.0007496, 6.450754, 7.0375996)",
+      "camera_position": "Vector3(27.999828, 17.811388, 2.0226822)",
+      "camera_size": 8.90204048156738,
+      "image": "res://assets/learning/landmark_views/P-front.png",
+      "letter": "P",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "5f9dadf5703059bb685666f84d3f733a57d110e3e922c24d13fe6fafe95d53cf",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_P_SOCKET/ALPHA_P_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(24.499454, 9.060431, -24.51937, 7.0007496, 6.450754, 7.0375996)",
+      "camera_position": "Vector3(40.35826, 22.92779, -3.8360825)",
+      "camera_size": 8.90204048156738,
+      "image": "res://assets/learning/landmark_views/P-angle.png",
+      "letter": "P",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "b7ef2d5cc4069610218686ae8c1267619d643169d897ac6dbc2aeb95356052a7",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_P_SOCKET/ALPHA_P_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(45.50281, 7.067409, -11.188481, 6.9988823, 6.568749, 6.3740635)",
+      "camera_position": "Vector3(49.00225, 15.729732, 14.406666)",
+      "camera_size": 9.06487369537354,
+      "image": "res://assets/learning/landmark_views/Q-front.png",
+      "letter": "Q",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "850e196ef289c7309b6a2237813a4c25b96070e1735a92d57e6d7e098b089c2f",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_Q_SOCKET/ALPHA_Q_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(45.50281, 7.067409, -11.188481, 6.9988823, 6.568749, 6.3740635)",
+      "camera_position": "Vector3(61.030487, 20.709435, 8.704435)",
+      "camera_size": 9.06487369537354,
+      "image": "res://assets/learning/landmark_views/Q-angle.png",
+      "letter": "Q",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "2c4cdef0ee236eefbb4cba13a171b6b5b4afd47969569fc2e4d8d1a1999dcc57",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_Q_SOCKET/ALPHA_Q_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(54.248875, 6.6139164, 6.4703355, 7.5009956, 6.7829256, 3.0595794)",
+      "camera_position": "Vector3(57.999374, 14.936876, 28.54803)",
+      "camera_size": 9.36043739318848,
+      "image": "res://assets/learning/landmark_views/R-front.png",
+      "letter": "R",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "85cf2c5e64f5b5acfcef5c31e82da7da6132c136d6555fef14db81b9ff29b3a9",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_R_SOCKET/ALPHA_R_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(54.248875, 6.6139164, 6.4703355, 7.5009956, 6.7829256, 3.0595794)",
+      "camera_position": "Vector3(69.02909, 19.50319, 23.319172)",
+      "camera_size": 9.36043739318848,
+      "image": "res://assets/learning/landmark_views/R-angle.png",
+      "letter": "R",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "fa501daa500041e1da87614581956a648e6f28d0ff5de78acfab2d80e43167f8",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_R_SOCKET/ALPHA_R_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(34.498856, 6.5533004, 8.692735, 9.001057, 5.2881055, 10.614642)",
+      "camera_position": "Vector3(38.999382, 16.146284, 42.953934)",
+      "camera_size": 12.5974569320679,
+      "image": "res://assets/learning/landmark_views/S-front.png",
+      "letter": "S",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "86e1eb1d384bd0e1595e25686553ca6d2220ba0797ab8635e484bfa0eb08a39d",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_S_SOCKET/ALPHA_S_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(34.498856, 6.5533004, 8.692735, 9.001057, 5.2881055, 10.614642)",
+      "camera_position": "Vector3(54.54126, 22.580635, 35.58599)",
+      "camera_size": 12.5974569320679,
+      "image": "res://assets/learning/landmark_views/S-angle.png",
+      "letter": "S",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "747b4f33903b2a773daf33544a77d6ff7e2d85a5b51577fc3c36b5ad9fd6096e",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_S_SOCKET/ALPHA_S_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(44.999893, 6.7610803, 24.67754, 9.999485, 5.832398, 4.6443577)",
+      "camera_position": "Vector3(49.999634, 15.499018, 51.256958)",
+      "camera_size": 11.8673887252808,
+      "image": "res://assets/learning/landmark_views/T-front.png",
+      "letter": "T",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "93e992bf46d252c8f72bd8923e388b3e8bf35985f3257d6789089ed3c0220e71",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_T_SOCKET/ALPHA_T_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(44.999893, 6.7610803, 24.67754, 9.999485, 5.832398, 4.6443577)",
+      "camera_position": "Vector3(63.020447, 20.889647, 45.08418)",
+      "camera_size": 11.8673887252808,
+      "image": "res://assets/learning/landmark_views/T-angle.png",
+      "letter": "T",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "4bfa5965dd5c54c5e18a2cf0784b96ee9d698ed340f8c56dde014169d9f21ab2",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_T_SOCKET/ALPHA_T_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(31.000908, 5.0463066, 32.403797, 7.999092, 7.0414963, 7.1923866)",
+      "camera_position": "Vector3(35.000454, 14.567936, 61.003662)",
+      "camera_size": 9.71726512908936,
+      "image": "res://assets/learning/landmark_views/U-front.png",
+      "letter": "U",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "5d02bcc89381896e04c4a7d59b5ea9a9005fe0f6bd181289ef829856a4542761",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_U_SOCKET/ALPHA_U_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(31.000908, 5.0463066, 32.403797, 7.999092, 7.0414963, 7.1923866)",
+      "camera_position": "Vector3(48.421936, 20.124443, 54.640938)",
+      "camera_size": 9.71726512908936,
+      "image": "res://assets/learning/landmark_views/U-angle.png",
+      "letter": "U",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "22e0014a8fdffd12c3215e903152f77a1456022fecfa6e261f312884bdc752cb",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_U_SOCKET/ALPHA_U_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(11.500393, 3.7065876, 33.51229, 9.000864, 5.629591, 8.97406)",
+      "camera_position": "Vector3(16.000824, 13.009682, 65.0339)",
+      "camera_size": 10.682225227356,
+      "image": "res://assets/learning/landmark_views/V-front.png",
+      "letter": "V",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "9eac5ba891958c9ba96b93e2ed19a061e669f06fa2ccefb50773bbcd47dbaac1",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_V_SOCKET/ALPHA_V_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(11.500393, 3.7065876, 33.51229, 9.000864, 5.629591, 8.97406)",
+      "camera_position": "Vector3(30.512457, 19.017511, 58.154366)",
+      "camera_size": 10.682225227356,
+      "image": "res://assets/learning/landmark_views/V-angle.png",
+      "letter": "V",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "ce2ae7798aff18d1030923598c8037cf536a661ae43eb8893ab21679264b4a79",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_V_SOCKET/ALPHA_V_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(6.998195, 3.2886832, 50.040394, 10.001415, 7.0580263, 7.919338)",
+      "camera_position": "Vector3(11.998903, 13.622589, 82.353775)",
+      "camera_size": 11.8696794509888,
+      "image": "res://assets/learning/landmark_views/W-front.png",
+      "letter": "W",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "16e0229221e4ce1d31eb709561af2f84760fbeab963c6cabe11f16fbc02b56c4",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_W_SOCKET/ALPHA_W_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(6.998195, 3.2886832, 50.040394, 10.001415, 7.0580263, 7.919338)",
+      "camera_position": "Vector3(27.218624, 19.923567, 75.13856)",
+      "camera_size": 11.8696794509888,
+      "image": "res://assets/learning/landmark_views/W-angle.png",
+      "letter": "W",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "93f0571532aadb108e5249e0c8e0bc9c7db5dd2daca96266dbcd0ab75c2acb57",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_W_SOCKET/ALPHA_W_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-11.499296, 3.005662, 48.861073, 9.000334, 8.116438, 8.276657)",
+      "camera_position": "Vector3(-6.9991293, 13.913854, 81.540955)",
+      "camera_size": 11.2006845474243,
+      "image": "res://assets/learning/landmark_views/X-front.png",
+      "letter": "X",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "64e393f6ef1be635850adab153014bcab9bce172eea34f5a158b3b4fc48315bd",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_X_SOCKET/ALPHA_X_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-11.499296, 3.005662, 48.861073, 9.000334, 8.116438, 8.276657)",
+      "camera_position": "Vector3(8.321418, 20.256575, 74.27794)",
+      "camera_size": 11.2006845474243,
+      "image": "res://assets/learning/landmark_views/X-angle.png",
+      "letter": "X",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "87d316dbd391c93bbe83fec5638d6122a22f51dfaa0438d78328c186763cab16",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_X_SOCKET/ALPHA_X_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-23.499973, 3.8072, 37.591312, 7.000553, 6.107866, 6.8172226)",
+      "camera_position": "Vector3(-19.999697, 12.239623, 63.4103)",
+      "camera_size": 8.42885494232178,
+      "image": "res://assets/learning/landmark_views/Y-front.png",
+      "letter": "Y",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "a98ee734e65b7427d6279f4eaf186ad09aa740045eb3cdf2fb6d1b39f7822919",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_Y_SOCKET/ALPHA_Y_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-23.499973, 3.8072, 37.591312, 7.000553, 6.107866, 6.8172226)",
+      "camera_position": "Vector3(-7.9702444, 17.219826, 57.707497)",
+      "camera_size": 8.42885494232178,
+      "image": "res://assets/learning/landmark_views/Y-angle.png",
+      "letter": "Y",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "ed98617fd9e3317e4d9c2b112df3df5dacebeca3139fd7921304aaa769f0d183",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_Y_SOCKET/ALPHA_Y_MODEL_ROOT",
+      "view": "angle"
+    },
+    {
+      "bounds": "AABB(-36.998947, 3.094663, 47.711437, 7.9997444, 6.5307493, 4.5771065)",
+      "camera_position": "Vector3(-32.999077, 11.632336, 71.967896)",
+      "camera_size": 9.49409675598145,
+      "image": "res://assets/learning/landmark_views/Z-front.png",
+      "letter": "Z",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "a9da4df019c58b566d79ca43f1dc41cd2e804c739eb39782119d11805ca232e4",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_Z_SOCKET/ALPHA_Z_MODEL_ROOT",
+      "view": "front"
+    },
+    {
+      "bounds": "AABB(-36.998947, 3.094663, 47.711437, 7.9997444, 6.5307493, 4.5771065)",
+      "camera_position": "Vector3(-21.207134, 16.51421, 66.377686)",
+      "camera_size": 9.49409675598145,
+      "image": "res://assets/learning/landmark_views/Z-angle.png",
+      "letter": "Z",
+      "pixels": [
+        720,
+        450
+      ],
+      "sha256": "b2ae772945715529fe950a19f2a6203adf87ee00e5556fba412fda0310e73659",
+      "source_mesh_count": 1,
+      "source_node": "/root/@Node3D@2/Alphabet_Island_Layout_v01/ALPHA_LANDMARK_Z_SOCKET/ALPHA_Z_MODEL_ROOT",
+      "view": "angle"
+    }
+  ],
+  "source": "res://assets/world/island.glb",
+  "source_sha256": "e734f01afb2474aaab15ec9cf98c1c61fc09bfec7e268134c2357d743de4d89d"
+}

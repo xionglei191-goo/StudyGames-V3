@@ -1,0 +1,123 @@
+{
+  "status": "passed",
+  "books": 8,
+  "formal_pages": 52,
+  "book_occurrences": 1314,
+  "unique_spellings": 1073,
+  "story_sense_pages": 1096,
+  "letter_steps": 6115,
+  "additional_sense_scenes": 46,
+  "additional_sense_scene_book_references": 50,
+  "cross_book_spellings": 217,
+  "image_only_sources": 8,
+  "unreferenced_content_regions": 0,
+  "source_manifests_unchanged": true,
+  "human_editor_review": "pending",
+  "child_trial": "not_conducted",
+  "memory_effect": "not_validated",
+  "full_game_test": "not_run_no_runtime_changes",
+  "checks": [
+    "eight-book formal page inventory",
+    "visual-check page declarations",
+    "valid source pages and region IDs",
+    "source hashes",
+    "all spellings reversible tokenization",
+    "letter/landmark fixed mapping",
+    "one action per letter including repeats",
+    "stable cross-book story references",
+    "supplemental meaning scenes reuse first actions across books",
+    "audio file existence candidates only",
+    "reference integrity"
+  ],
+  "integration_contract": {
+    "status": "passed",
+    "schema_version": "vocabulary-mainline-adapter-v1",
+    "entry_count": 1314,
+    "lexeme_count": 1073,
+    "sense_story_count": 1096,
+    "unit_count": 81,
+    "unit_entry_relations": 1359,
+    "multi_unit_entries": 45,
+    "unassigned_entries": 0,
+    "requirement_counts": {
+      "listen_speak_read_write": 708,
+      "recognition": 358,
+      "listen_speak": 102,
+      "listen_speak_read": 146
+    },
+    "formal_spelling_eligible_occurrences": 708,
+    "codebook_count": 26,
+    "source_sg_nodes_verified": 26,
+    "h_levels": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "maximum_letters": 25,
+    "maximum_frames": 7,
+    "maximum_active_letters_per_frame": 4,
+    "source_ids_preserved": true,
+    "all_character_sequences_reconstruct": true,
+    "all_encoding_positions_covered_once": true,
+    "existing_map_scene_binding_count": 0,
+    "content_revision": "vocabulary-30fd870dcb72ae38",
+    "codebook_revision": "codebook-7976c505db8c0ea5",
+    "runtime_test": "not_run_no_runtime_changes",
+    "editorial_review": "pending",
+    "child_trial": "not_conducted"
+  },
+  "narrative_revision": {
+    "status": "passed",
+    "date": "2026-10-24",
+    "revision": "narrative-v2-2026-10-23",
+    "core_stories": 1096,
+    "supplemental_stories": 46,
+    "all_authored_stories": 1142,
+    "rewritten_records": 1142,
+    "shared_same_meaning_records": 9,
+    "distinct_narrative_texts": 1133,
+    "narrative_letter_beats": 6310,
+    "book_occurrences": 1314,
+    "assignments": {
+      "root": {
+        "stories": 120,
+        "beats": 484
+      },
+      "g4": {
+        "stories": 341,
+        "beats": 1943
+      },
+      "g5": {
+        "stories": 340,
+        "beats": 1941
+      },
+      "g6": {
+        "stories": 341,
+        "beats": 1942
+      }
+    },
+    "shortest_story_characters": 69,
+    "longest_story_characters": 917,
+    "stable_ids_preserved": true,
+    "stable_storage_preserved": true,
+    "original_archive": "authoring/narrative_v2/before_narrative_v2.zip",
+    "automatic_checks": [
+      "all core and supplemental IDs covered",
+      "one complete sentence beat per letter",
+      "fixed anchor name appears in its assigned beat",
+      "punctuation and spelling preserved",
+      "all letter positions and repeated instances unchanged",
+      "no missing author fields",
+      "all original actions revised",
+      "story text equals joined authored beats",
+      "explicit same-meaning aliases share the canonical complete story"
+    ],
+    "automatic_check_limit": "固定形象出现、句数和字符一致只证明结构；不能证明文笔流畅、因果合理或儿童理解。",
+    "human_editor_review": "pending",
+    "child_trial": "not_conducted",
+    "learning_effect": "not_validated"
+  }
+}

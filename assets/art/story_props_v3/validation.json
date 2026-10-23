@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "art_revision": "story-props-v3",
+  "status": "validated",
+  "date": "2026-10-22",
+  "asset_counts": {
+    "new_generated_pngs": 182,
+    "new_story_props": 181,
+    "new_ui_only": [
+      "science_flask"
+    ],
+    "reused_letters": 26,
+    "reused_specialized_props": 10,
+    "registered_total": 218,
+    "ui_shared_references": 16,
+    "additional_ui_generated_images": 0
+  },
+  "frozen_files": {
+    "registry": {
+      "path": "game/data/learning/story_prop_art.json",
+      "sha256": "bdba52111f506e0dfcbdf3029f9a4a8ed5386dd3671dc2bd264de4083c80c394"
+    },
+    "stage": {
+      "path": "game/ui/memory_story_stage.gd",
+      "sha256": "a091f187633c8a84887f4832ada3e89701b4e56cb7515c258cc40258bc04d2b5"
+    },
+    "ui_theme": {
+      "path": "game/ui/island_theme.gd",
+      "sha256": "718a2a4210b5845d70bf694626cc1b2aa6555229a78b59b9b66c29efc67a5ca7"
+    },
+    "asset_manifest": {
+      "path": "assets/art/story_props_v3/manifest.json",
+      "sha256": "b2694692187438c3e2fb068e8f87542e3031f0fa0b8a8a4b4cbc9aebe292f8f2"
+    },
+    "ui_manifest": {
+      "path": "game/assets/ui/illustrations/manifest.json",
+      "sha256": "863198a8e20c7d63c375e0fdcf4c54b86a9eb82ad0fc10bf637b88babe347af5"
+    },
+    "catalog": {
+      "path": "game/data/learning/catalog.json",
+      "sha256": "c69c1dde30e9a73502a2e28418b257b753118d681f8ca1f080ab40e21be02af3"
+    }
+  },
+  "evidence": [
+    {
+      "report": "docs/verification/art-finish-v3/story-prop-assets-v3.json",
+      "sha256": "0c1818bf24017d228baa84c1ad69d5550ef7fc0230467736e4d3daf087af4367",
+      "status": "PASS",
+      "checks": 2642,
+      "scope": "218 resource entries, 181 real story draw witnesses, 1 UI-only asset, 16 UI resolvers, bounded caches and H3 hiding"
+    },
+    {
+      "report": "docs/verification/art-finish-v3/story-semantics-1440x900.json",
+      "sha256": "34aaf1de6f72cfbc872203fb4c4d47ddf343e2a5dc9e0f5256936a16bf66d32e",
+      "status": "PASS",
+      "checks": 324,
+      "scope": "25 independent source-action fixtures and 6 actual reader scenes at 1440x900"
+    },
+    {
+      "report": "docs/verification/art-finish-v3/story-semantics-960x640.json",
+      "sha256": "4004e926a39bd98afdd5487bc0e309d22b4e7e0fb52b6f8b213ecc6ce1e1f6a3",
+      "status": "PASS",
+      "checks": 324,
+      "scope": "25 independent source-action fixtures and 6 actual reader scenes at 960x640 physical window"
+    },
+    {
+      "report": "docs/verification/art-finish-v3/learning-art-regression/headless-1440x900-report.json",
+      "sha256": "ac3e24f351077b35eb2749030d0c1094e71336b00db6017c59a1f9ecc4d3c939",
+      "status": "PASS",
+      "checks": 1170,
+      "scope": "Existing 26 letters, 10 specialized story props and learning behavior regression"
+    },
+    {
+      "report": "docs/verification/art-finish-v3/art-provenance-review.json",
+      "sha256": "5eb9686afd2c380b798a8ce66b6f95a293971a3019cbe8c9dee0a8675e712247",
+      "status": "PASS",
+      "checks": null,
+      "scope": "182 original generated/source/runtime/manifest identity and curriculum semantics"
+    },
+    {
+      "report": "docs/verification/art-finish-v3/story-prop-gallery-review.json",
+      "sha256": "f9a8dd988a1d316140b2366155d3fb0b6baeea4c96d6f35e8936f3f32ef07b04",
+      "status": "PASS",
+      "checks": null,
+      "scope": "Six native gallery pages visually reviewed"
+    }
+  ],
+  "limitations": [
+    "Only concrete entities are illustrated; abstract and geographic labels remain runtime text.",
+    "Gallery inspection covers asset identity and silhouettes; native semantic fixtures cover selected source-action quantities and layouts, not every curriculum frame.",
+    "A 960x640 physical window renders the unchanged 16:10 content at 960x600.",
+    "This art verification does not claim full curriculum acceptance, child usability testing, audio review or performance certification."
+  ],
+  "generation_manifest_note": "The frozen manifest records the generation-stage awaiting_runtime_validation state. This separate SHA-bound report records completed native validation without changing the tested manifest or registry."
+}

@@ -1,0 +1,49 @@
+{
+  "version": "0.6.1",
+  "built_at": "2026-10-22T20:37:08.889769+08:00",
+  "engine": "Godot 4.7.2",
+  "milestone": "First generated story art batch B/O/K",
+  "files": {
+    "AlphabetIsland.exe": {
+      "bytes": 109268480,
+      "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562"
+    },
+    "AlphabetIsland.pck": {
+      "bytes": 316304840,
+      "sha256": "c41cc42f8ae18c356667ba21eb3581843e64accc3844648e98a62ebb9d63b77c"
+    }
+  },
+  "art": {
+    "revision": "storybook-v1",
+    "letters": [
+      "B",
+      "O",
+      "K"
+    ],
+    "generated_source_pixels_unchanged": true,
+    "manifest": "assets/art/storybook_v1/manifest.json"
+  },
+  "validation": {
+    "result": "PASS",
+    "actual_exported_package": true,
+    "reports": {
+      "headless-1440x900-report.json": 161,
+      "native-1440x900-report.json": 180,
+      "native-960x640-report.json": 180,
+      "four-story-1440x900": 3222,
+      "four-story-960x640": 3222,
+      "exported-smoke": 123,
+      "memory-story": 4989
+    },
+    "original_maps_and_blend_files_unchanged": 94,
+    "full_suite_rerun": false,
+    "new_performance_run": false,
+    "historical_baseline": "v0.6.0 P1 acceptance"
+  },
+  "limitations": [
+    "Only B/O/K 2D learning illustrations replaced; other letters and 3D models retain prior assets",
+    "P2 U2/U3 continuation, 81 complete narrative chapters and final skinning unfinished",
+    "Human content/audio review and child trials pending",
+    "Focused asset and shared-UI checks only; no new performance or learning-effect claim"
+  ]
+}

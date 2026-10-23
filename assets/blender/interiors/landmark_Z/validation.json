@@ -1,0 +1,316 @@
+{
+  "room_id": "landmark_Z",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口收件箱",
+      "position_blender": [
+        -3.92,
+        -3.23,
+        0.0
+      ],
+      "position_godot": [
+        -3.92,
+        0.0,
+        3.23
+      ],
+      "associated_prop": "Locus_01_Incoming_Box",
+      "memory_id": "memory_Z_01",
+      "activity": "查看待寄信"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧地址分拣格",
+      "position_blender": [
+        -5.376,
+        -0.665,
+        0.0
+      ],
+      "position_godot": [
+        -5.376,
+        0.0,
+        0.665
+      ],
+      "associated_prop": "Locus_02_Letters_Back",
+      "memory_id": "memory_Z_02",
+      "activity": "按地点分类"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央写信桌",
+      "position_blender": [
+        0.0,
+        -0.285,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.285
+      ],
+      "associated_prop": "Locus_03_Writing_Leg",
+      "memory_id": "memory_Z_03",
+      "activity": "拼出图片明信片"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧邮袋架",
+      "position_blender": [
+        5.264,
+        -0.665,
+        0.0
+      ],
+      "position_godot": [
+        5.264,
+        0.0,
+        0.665
+      ],
+      "associated_prop": "Locus_04_Mailbags_Leg",
+      "memory_id": "memory_Z_04",
+      "activity": "找正确路线邮袋"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口旅程邮戳墙",
+      "position_blender": [
+        5.152,
+        -3.705,
+        0.0
+      ],
+      "position_godot": [
+        5.152,
+        0.0,
+        3.705
+      ],
+      "associated_prop": "Locus_05_Postmark_Wall_Face",
+      "memory_id": "memory_Z_05",
+      "activity": "说信件去过的地方"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.3675,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.3675
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.1275,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.1275
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.464,
+        -1.33,
+        0.0
+      ],
+      "position_godot": [
+        -2.464,
+        0.0,
+        1.33
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -9.184000015258789,
+        6.650000095367432,
+        0.0,
+        9.184000015258789,
+        6.934999942779541,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -9.295999526977539,
+        -6.650000095367432,
+        0.0,
+        -8.959999084472656,
+        6.650000095367432,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        8.959999084472656,
+        -6.650000095367432,
+        0.0,
+        9.295999526977539,
+        6.650000095367432,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.960000038146973,
+        -6.934999942779541,
+        0.0,
+        -1.568000078201294,
+        -6.650000095367432,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.568000078201294,
+        -6.934999942779541,
+        0.0,
+        8.960000038146973,
+        -6.650000095367432,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Mail_Sorting_Wall",
+      "aabb_blender": [
+        -7.526400089263916,
+        5.248749732971191,
+        0.0,
+        -3.6735997200012207,
+        6.056249618530273,
+        2.5
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Mail_Sorting_Wall.001",
+      "aabb_blender": [
+        -1.926400065422058,
+        5.248749732971191,
+        0.0,
+        1.926400065422058,
+        6.056249618530273,
+        2.5
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Mail_Sorting_Wall.002",
+      "aabb_blender": [
+        3.6735997200012207,
+        5.248749732971191,
+        0.0,
+        7.526400089263916,
+        6.056249618530273,
+        2.5
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Letters",
+      "aabb_blender": [
+        -7.358399868011475,
+        0.6412500739097595,
+        0.0,
+        -4.0655999183654785,
+        1.4487500190734863,
+        2.299999952316284
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Incoming_Box",
+      "aabb_blender": [
+        -5.711999893188477,
+        -5.130000591278076,
+        0.0,
+        -3.9200000762939453,
+        -3.9900004863739014,
+        1.7999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_03_Writing",
+      "aabb_blender": [
+        -1.7920000553131104,
+        0.8550000190734863,
+        -0.06000003218650818,
+        1.7920000553131104,
+        2.375,
+        1.0099999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_04_Mailbags",
+      "aabb_blender": [
+        4.0879998207092285,
+        0.6175000071525574,
+        -0.06000000238418579,
+        7.111999988555908,
+        1.7574999332427979,
+        0.7599999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_05_Postmark_Wall",
+      "aabb_blender": [
+        4.479999542236328,
+        -5.011250019073486,
+        0.0,
+        7.168000221252441,
+        -4.773749828338623,
+        1.600000023841858
+      ]
+    }
+  ],
+  "bounds": [
+    -8.960000038146973,
+    -6.650000095367432,
+    17.920000076293945,
+    13.300000190734863
+  ],
+  "mesh_objects": 379,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 5060000,
+  "glb_node_count": 391,
+  "triangles_instanced": 150160,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "e17988dcb33d3e29577df96cad832fa9a7b714a02f9a87319fdfebc980083048",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/landmark_Z/landmark_Z_v01.blend",
+  "source_blend_preserved": true
+}

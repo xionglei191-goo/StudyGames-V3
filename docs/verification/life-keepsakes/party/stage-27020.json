@@ -1,0 +1,141 @@
+{
+  "checks": [
+    {
+      "id": "four_existing_authored_characters_seated",
+      "passed": true
+    },
+    {
+      "id": "thigh_horizontal_textbook_mingming",
+      "passed": true
+    },
+    {
+      "id": "shin_vertical_textbook_mingming",
+      "passed": true
+    },
+    {
+      "id": "pelvis_above_chair_textbook_mingming",
+      "passed": true
+    },
+    {
+      "id": "active_character_resource_reused_textbook_mingming",
+      "passed": true
+    },
+    {
+      "id": "thigh_horizontal_textbook_dongdong",
+      "passed": true
+    },
+    {
+      "id": "shin_vertical_textbook_dongdong",
+      "passed": true
+    },
+    {
+      "id": "pelvis_above_chair_textbook_dongdong",
+      "passed": true
+    },
+    {
+      "id": "active_character_resource_reused_textbook_dongdong",
+      "passed": true
+    },
+    {
+      "id": "thigh_horizontal_textbook_tim",
+      "passed": true
+    },
+    {
+      "id": "shin_vertical_textbook_tim",
+      "passed": true
+    },
+    {
+      "id": "pelvis_above_chair_textbook_tim",
+      "passed": true
+    },
+    {
+      "id": "active_character_resource_reused_textbook_tim",
+      "passed": true
+    },
+    {
+      "id": "thigh_horizontal_textbook_anne",
+      "passed": true
+    },
+    {
+      "id": "shin_vertical_textbook_anne",
+      "passed": true
+    },
+    {
+      "id": "pelvis_above_chair_textbook_anne",
+      "passed": true
+    },
+    {
+      "id": "active_character_resource_reused_textbook_anne",
+      "passed": true
+    },
+    {
+      "id": "wave_does_not_reset_seated_legs",
+      "passed": true
+    },
+    {
+      "id": "reduced_motion_keeps_seated_legs",
+      "passed": true
+    },
+    {
+      "id": "paused_stage_stays_still",
+      "passed": true
+    },
+    {
+      "id": "swapped_actor_moves_to_selected_real_chair",
+      "passed": true
+    },
+    {
+      "id": "controller_compiles_with_project_autoload",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "result": "PASS",
+  "scope": "Headless skeleton geometry only; visible chair contact and framing require the separate native screenshot review.",
+  "seated_evidence": [
+    {
+      "guest": "textbook_mingming",
+      "pelvis_height": 0.660765860509727,
+      "seat": "seat_1",
+      "seat_height": 0.515765860509727,
+      "shin_down": 0.291220486164093,
+      "shin_horizontal": 0.00242596864700317,
+      "source": "tripo-character-v1",
+      "thigh_forward": 0.332317867665552,
+      "thigh_vertical": 0.0414323508739471
+    },
+    {
+      "guest": "textbook_dongdong",
+      "pelvis_height": 0.645046942596125,
+      "seat": "seat_2",
+      "seat_height": 0.500046942596124,
+      "shin_down": 0.315076619386673,
+      "shin_horizontal": 0.000442713499069214,
+      "source": "tripo-character-v1",
+      "thigh_forward": 0.36411760142073,
+      "thigh_vertical": 0.0293071866035461
+    },
+    {
+      "guest": "textbook_tim",
+      "pelvis_height": 0.669212382304721,
+      "seat": "seat_3",
+      "seat_height": 0.524212382304721,
+      "shin_down": 0.333449363708496,
+      "shin_horizontal": 0.0226360261440277,
+      "source": "tripo-character-v1",
+      "thigh_forward": 0.363772575743496,
+      "thigh_vertical": 0.0246772766113281
+    },
+    {
+      "guest": "textbook_anne",
+      "pelvis_height": 0.587625668166474,
+      "seat": "seat_4",
+      "seat_height": 0.442625668166474,
+      "shin_down": 0.254379153251648,
+      "shin_horizontal": 0.00566267967224121,
+      "source": "tripo-character-v1",
+      "thigh_forward": 0.335340746678412,
+      "thigh_vertical": 0.0479252636432648
+    }
+  ]
+}

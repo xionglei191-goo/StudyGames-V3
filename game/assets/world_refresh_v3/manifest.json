@@ -1,0 +1,149 @@
+{
+  "revision": "world-refresh-v3",
+  "assets": [
+    {
+      "id": "apple",
+      "source": "apple.glb",
+      "runtime": "game/assets/world_refresh_v3/apple.glb",
+      "sha256": "9f90ef1872d49cc7cb1ae63370dbdcdab6439e543e51d9f57db7d66c9abe9c7f",
+      "bytes": 69640,
+      "vertices": 976,
+      "triangles": 1924,
+      "materials": 4,
+      "aabb_godot_min": [
+        -0.2910984456539154,
+        -0.2490738481283188,
+        -0.29127219319343567
+      ],
+      "aabb_godot_size": [
+        0.5825440883636475,
+        0.6001853495836258,
+        0.582544207572937
+      ],
+      "origin": "apple body center",
+      "collision": "none; existing scene collision and interaction proxies retained",
+      "uv": "smart projected UV0",
+      "lod": "shared mesh; bounded near-field replacements only; no independent LOD mesh"
+    },
+    {
+      "id": "basket",
+      "source": "basket.glb",
+      "runtime": "game/assets/world_refresh_v3/basket.glb",
+      "sha256": "eccbde6de004a8c4907a47686a14e2dc81a032adac56ff27cf2783f94d3bec77",
+      "bytes": 923984,
+      "vertices": 11408,
+      "triangles": 22648,
+      "materials": 3,
+      "aabb_godot_min": [
+        -0.42800000309944153,
+        -0.003000006079673767,
+        -0.42800000309944153
+      ],
+      "aabb_godot_size": [
+        0.8560000061988831,
+        0.767999991774559,
+        0.8560000061988831
+      ],
+      "origin": "base center",
+      "collision": "none; existing scene collision and interaction proxies retained",
+      "uv": "smart projected UV0",
+      "lod": "shared mesh; bounded near-field replacements only; no independent LOD mesh"
+    },
+    {
+      "id": "cake",
+      "source": "cake.glb",
+      "runtime": "game/assets/world_refresh_v3/cake.glb",
+      "sha256": "ffee7fea9d0b121d3e645e87001247b953547b2b5467da15176f6a89737f8ffb",
+      "bytes": 418060,
+      "vertices": 6154,
+      "triangles": 11716,
+      "materials": 8,
+      "aabb_godot_min": [
+        -0.5699999928474426,
+        0.002499999478459358,
+        -0.5699999928474426
+      ],
+      "aabb_godot_size": [
+        1.1399999856948853,
+        0.6817604880779982,
+        1.1399999856948853
+      ],
+      "origin": "base center",
+      "collision": "none; existing scene collision and interaction proxies retained",
+      "uv": "smart projected UV0",
+      "lod": "shared mesh; bounded near-field replacements only; no independent LOD mesh"
+    },
+    {
+      "id": "book",
+      "source": "book.glb",
+      "runtime": "game/assets/world_refresh_v3/book.glb",
+      "sha256": "86507f1942d1fcf78d11643bfeb700b332b5c9baacb6e52423403a530390846d",
+      "bytes": 140224,
+      "vertices": 1198,
+      "triangles": 2304,
+      "materials": 5,
+      "aabb_godot_min": [
+        -0.35499998927116394,
+        0.000499999150633812,
+        -0.25999999046325684
+      ],
+      "aabb_godot_size": [
+        0.7049999833106995,
+        0.19724989868700504,
+        0.5899999737739563
+      ],
+      "origin": "base center",
+      "collision": "none; existing scene collision and interaction proxies retained",
+      "uv": "smart projected UV0",
+      "lod": "shared mesh; bounded near-field replacements only; no independent LOD mesh"
+    },
+    {
+      "id": "invitation",
+      "source": "invitation.glb",
+      "runtime": "game/assets/world_refresh_v3/invitation.glb",
+      "sha256": "a3f5cfadc89f286d614a06f243397876d78912201e8f99eff337de287656456e",
+      "bytes": 54760,
+      "vertices": 758,
+      "triangles": 1472,
+      "materials": 5,
+      "aabb_godot_min": [
+        -0.1599999964237213,
+        -0.11500000208616257,
+        -0.006000000052154064
+      ],
+      "aabb_godot_size": [
+        0.31999997794628143,
+        0.22999999672174454,
+        0.035187008790671825
+      ],
+      "origin": "card center; front +Z",
+      "collision": "none; existing scene collision and interaction proxies retained",
+      "uv": "smart projected UV0",
+      "lod": "shared mesh; bounded near-field replacements only; no independent LOD mesh"
+    },
+    {
+      "id": "nameplate",
+      "source": "nameplate.glb",
+      "runtime": "game/assets/world_refresh_v3/nameplate.glb",
+      "sha256": "3b86dbc70c1d2d75ad73171d1cef0530994cfabe1344f09306d1507ceb5454d0",
+      "bytes": 46284,
+      "vertices": 496,
+      "triangles": 940,
+      "materials": 4,
+      "aabb_godot_min": [
+        -0.16000001373716227,
+        -0.11500002367005217,
+        -0.0059999991208314896
+      ],
+      "aabb_godot_size": [
+        0.32000001451133886,
+        0.23000004085861148,
+        0.02619999833405018
+      ],
+      "origin": "card center; front +Z",
+      "collision": "none; existing scene collision and interaction proxies retained",
+      "uv": "smart projected UV0",
+      "lod": "shared mesh; bounded near-field replacements only; no independent LOD mesh"
+    }
+  ]
+}

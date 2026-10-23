@@ -1,0 +1,557 @@
+[
+  {
+    "room_id": "home",
+    "name": "家里的客厅",
+    "errors": [],
+    "nodes": 503,
+    "mesh_nodes": 484,
+    "collision_proxies": 117,
+    "floor_meshes": 1,
+    "textures": 0,
+    "preview_dimensions": [
+      1100,
+      968
+    ],
+    "glb_bytes": 2850352,
+    "triangles": 106520,
+    "sha256": "436856bb9e2d3810e30be5b41e9bed237699cf6491ad8ee2a573c749fb72b428",
+    "plan_labels_checked": 5,
+    "walkability": {
+      "player_radius_m": 0.32,
+      "grid_step_m": 0.2,
+      "reachable_cells": 3964,
+      "free_cells": 3964,
+      "anchors": {
+        "SG_SPAWN": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_EXIT": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_NPC_HOST": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_01": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_02": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_03": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_04": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_05": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_BED": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_WARDROBE": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_DECOR_FLOWER_BOX": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_DECOR_PICNIC": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_DECOR_LAMP": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        }
+      }
+    }
+  },
+  {
+    "room_id": "home_balcony",
+    "name": "家务阳台",
+    "errors": [],
+    "nodes": 335,
+    "mesh_nodes": 324,
+    "collision_proxies": 10,
+    "floor_meshes": 1,
+    "textures": 0,
+    "preview_dimensions": [
+      1200,
+      1056
+    ],
+    "glb_bytes": 1916464,
+    "triangles": 96532,
+    "sha256": "c55c81ebb4d40ef9ce050dd6cffc1bc597d80068488610ab7678d00a73f63379",
+    "plan_labels_checked": 5,
+    "walkability": {
+      "player_radius_m": 0.32,
+      "grid_step_m": 0.2,
+      "reachable_cells": 4503,
+      "free_cells": 4503,
+      "anchors": {
+        "SG_SPAWN": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_EXIT": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_NPC_HOST": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_01": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_02": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_03": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_04": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_05": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        }
+      }
+    }
+  },
+  {
+    "room_id": "home_bathroom",
+    "name": "清爽浴室",
+    "errors": [],
+    "nodes": 381,
+    "mesh_nodes": 370,
+    "collision_proxies": 10,
+    "floor_meshes": 1,
+    "textures": 0,
+    "preview_dimensions": [
+      1200,
+      1056
+    ],
+    "glb_bytes": 3996724,
+    "triangles": 88828,
+    "sha256": "58f7db6bffeffd9a119bc705de4d4eec05b3d77b5ccd7d31a9bd30a1c214122e",
+    "plan_labels_checked": 5,
+    "walkability": {
+      "player_radius_m": 0.32,
+      "grid_step_m": 0.2,
+      "reachable_cells": 4269,
+      "free_cells": 4269,
+      "anchors": {
+        "SG_SPAWN": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_EXIT": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_NPC_HOST": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_01": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_02": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_03": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_04": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_05": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        }
+      }
+    }
+  },
+  {
+    "room_id": "home_bedroom",
+    "name": "温暖卧室",
+    "errors": [],
+    "nodes": 183,
+    "mesh_nodes": 170,
+    "collision_proxies": 11,
+    "floor_meshes": 1,
+    "textures": 0,
+    "preview_dimensions": [
+      1200,
+      1056
+    ],
+    "glb_bytes": 2060448,
+    "triangles": 54164,
+    "sha256": "aa9b8e6d7610350e0fab3ffc7ef74be11a30e439025d7a473c719fba4d825b49",
+    "plan_labels_checked": 5,
+    "walkability": {
+      "player_radius_m": 0.32,
+      "grid_step_m": 0.2,
+      "reachable_cells": 4245,
+      "free_cells": 4245,
+      "anchors": {
+        "SG_SPAWN": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_EXIT": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_NPC_HOST": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_01": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_02": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_03": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_04": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_05": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        }
+      }
+    }
+  },
+  {
+    "room_id": "home_dining",
+    "name": "家庭餐厅",
+    "errors": [],
+    "nodes": 295,
+    "mesh_nodes": 284,
+    "collision_proxies": 10,
+    "floor_meshes": 1,
+    "textures": 0,
+    "preview_dimensions": [
+      1200,
+      1056
+    ],
+    "glb_bytes": 2790764,
+    "triangles": 80696,
+    "sha256": "d17b2bacc9fcd266b37b0909a74503128b012f6f23a5efc951090576e48a1110",
+    "plan_labels_checked": 5,
+    "walkability": {
+      "player_radius_m": 0.32,
+      "grid_step_m": 0.2,
+      "reachable_cells": 4292,
+      "free_cells": 4292,
+      "anchors": {
+        "SG_SPAWN": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_EXIT": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_NPC_HOST": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_01": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_02": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_03": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_04": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_05": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        }
+      }
+    }
+  },
+  {
+    "room_id": "home_estate",
+    "name": "我的家 · 小院与住宅",
+    "errors": [
+      "Blocked/unreachable SG_MEMORY_05"
+    ],
+    "nodes": 808,
+    "mesh_nodes": 790,
+    "collision_proxies": 30,
+    "floor_meshes": 1,
+    "textures": 0,
+    "preview_dimensions": [
+      1200,
+      1056
+    ],
+    "glb_bytes": 7648592,
+    "triangles": 324052,
+    "sha256": "3dba988f1e2943c4888ac87228ba8a3db0d8230e1f2747ac7855ea9d3a417e34",
+    "plan_labels_checked": 5,
+    "walkability": {
+      "player_radius_m": 0.32,
+      "grid_step_m": 0.2,
+      "reachable_cells": 14430,
+      "free_cells": 14744,
+      "anchors": {
+        "SG_SPAWN": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_EXIT": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_NPC_HOST": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_01": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_02": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_03": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_04": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_05": {
+          "inside_obstacle": true,
+          "reachable": true,
+          "ground_height": 0.0
+        }
+      }
+    }
+  },
+  {
+    "room_id": "home_kitchen",
+    "name": "明亮厨房",
+    "errors": [],
+    "nodes": 430,
+    "mesh_nodes": 419,
+    "collision_proxies": 10,
+    "floor_meshes": 1,
+    "textures": 0,
+    "preview_dimensions": [
+      1200,
+      1056
+    ],
+    "glb_bytes": 4125124,
+    "triangles": 106664,
+    "sha256": "f73e988fc03ce5eecbf3bf8b80a8c00ec1134c9248a503e638f0566b480275d4",
+    "plan_labels_checked": 5,
+    "walkability": {
+      "player_radius_m": 0.32,
+      "grid_step_m": 0.2,
+      "reachable_cells": 4311,
+      "free_cells": 4311,
+      "anchors": {
+        "SG_SPAWN": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_EXIT": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_NPC_HOST": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_01": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_02": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_03": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_04": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_05": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        }
+      }
+    }
+  },
+  {
+    "room_id": "home_study",
+    "name": "窗边书房",
+    "errors": [],
+    "nodes": 204,
+    "mesh_nodes": 193,
+    "collision_proxies": 10,
+    "floor_meshes": 1,
+    "textures": 0,
+    "preview_dimensions": [
+      1200,
+      1056
+    ],
+    "glb_bytes": 2180948,
+    "triangles": 54808,
+    "sha256": "e07354ad593632de71484be9639b78e506c7bd20da50b793a5f8fb8c103e8607",
+    "plan_labels_checked": 5,
+    "walkability": {
+      "player_radius_m": 0.32,
+      "grid_step_m": 0.2,
+      "reachable_cells": 4358,
+      "free_cells": 4358,
+      "anchors": {
+        "SG_SPAWN": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_EXIT": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_NPC_HOST": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_01": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_02": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_03": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_04": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        },
+        "SG_MEMORY_05": {
+          "inside_obstacle": false,
+          "reachable": true,
+          "ground_height": 0.0
+        }
+      }
+    }
+  }
+]

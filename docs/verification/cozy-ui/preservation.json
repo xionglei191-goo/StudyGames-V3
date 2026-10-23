@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "files": [
+    {
+      "file": "island-save-v1.json",
+      "baseline_sha256": "429dba324ebcc4dbcb32a7fa1c4eb6295e1c81af69cd1fa420f632e96237ee78",
+      "actual_sha256": "429dba324ebcc4dbcb32a7fa1c4eb6295e1c81af69cd1fa420f632e96237ee78",
+      "passed": true
+    },
+    {
+      "file": "island-save-v1.json.bak",
+      "baseline_sha256": "cf8d39020e6055a1f08c77991c7d8a11eabd6b7d627c01eb9aff542d6241019c",
+      "actual_sha256": "cf8d39020e6055a1f08c77991c7d8a11eabd6b7d627c01eb9aff542d6241019c",
+      "passed": true
+    },
+    {
+      "file": "welcome-photo-44948-21463.png",
+      "baseline_sha256": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+      "actual_sha256": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+      "passed": true
+    },
+    {
+      "file": "welcome-photo-7100-20320.png",
+      "baseline_sha256": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585",
+      "actual_sha256": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585",
+      "passed": true
+    }
+  ],
+  "original_progress_equal_excluding_preexisting_friend_corner_migration": true,
+  "baseline_note": "The old normal game process exited during the first capture. Save changed only by its friend_corner migration field. Later test baselines preserve that latest save instead of restoring older data.",
+  "test_save_pattern": "user://validation-<process_id>.json",
+  "scope": "Hash comparison immediately after isolated validation and before normal game relaunch.",
+  "verified_utc": "2026-10-23T07:42:43.237104+00:00"
+}

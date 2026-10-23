@@ -1,0 +1,161 @@
+{
+  "room_id": "art_room",
+  "name": "美术教室",
+  "blend": "assets/blender/interiors/art_room/art_room_v01.blend",
+  "glb": "assets/blender/interiors/art_room/art_room_v01.glb",
+  "preview": "assets/blender/interiors/art_room/preview.png",
+  "anchors": [
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -4.9,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        4.9
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回完整校园",
+      "position_blender": [
+        0.0,
+        -5.95,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.95
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "美术教室老师",
+      "position_blender": [
+        -2.0,
+        -3.1,
+        0.0
+      ],
+      "position_godot": [
+        -2.0,
+        0.0,
+        3.1
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_01",
+      "label": "围裙柜",
+      "position_blender": [
+        -5.8,
+        -4.4,
+        0.0
+      ],
+      "position_godot": [
+        -5.8,
+        0.0,
+        4.4
+      ],
+      "associated_prop": "Art_ApronCabinet_Back",
+      "memory_id": "memory_ART_ROOM_01",
+      "activity": "认识创作时使用的围裙和工具"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "颜料调色台",
+      "position_blender": [
+        -5.0,
+        0.15,
+        0.0
+      ],
+      "position_godot": [
+        -5.0,
+        0.0,
+        -0.15
+      ],
+      "associated_prop": "Art_PaintTable_Top",
+      "memory_id": "memory_ART_ROOM_02",
+      "activity": "观察颜料颜色与调色盘"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "画架",
+      "position_blender": [
+        0.9,
+        -0.9,
+        0.0
+      ],
+      "position_godot": [
+        0.9,
+        0.0,
+        0.9
+      ],
+      "associated_prop": "Art_Easel_00_CanvasShelf",
+      "memory_id": "memory_ART_ROOM_03",
+      "activity": "在画架前观察示例画作"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "陶泥桌",
+      "position_blender": [
+        5.0,
+        -4.95,
+        0.0
+      ],
+      "position_godot": [
+        5.0,
+        0.0,
+        4.95
+      ],
+      "associated_prop": "Art_ClayTable_Top",
+      "memory_id": "memory_ART_ROOM_04",
+      "activity": "比较陶泥作品的形状"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "作品墙",
+      "position_blender": [
+        0.0,
+        4.7,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -4.7
+      ],
+      "associated_prop": "Art_Gallery_02_Frame",
+      "memory_id": "memory_ART_ROOM_05",
+      "activity": "看看墙上不同的作品"
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 142324,
+  "glb_sha256": "de263fcb6e40135620f3ab43be79ef5bb4a8d61f12618408695475f1857bf60f",
+  "scene_level": 3,
+  "parent_room": "school",
+  "model_version": "v01",
+  "dimensions_m": [
+    16,
+    14
+  ],
+  "specialist_room": true
+}

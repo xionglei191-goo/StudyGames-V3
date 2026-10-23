@@ -1,0 +1,971 @@
+{
+  "schema_version": 1,
+  "revision": "p2-journey-v1",
+  "source_prologue_sha256": "a24f07a2491d01dc00c52b8daa28fa566244a524384fc9b72d47196a61ed3a8f",
+  "letters": {
+    "A": {
+      "room": "landmark_A",
+      "marker": "SG_MEMORY_02",
+      "primitive": "drag_place",
+      "instruction": "和兔兔一起摘苹果，再把苹果放进篮子。",
+      "feedback": "苹果已经放进篮子，兔兔和你一起收好啦。",
+      "operations": [
+        {
+          "id": "pick",
+          "label": "摘下一颗苹果"
+        },
+        {
+          "id": "place",
+          "label": "把苹果放进篮子"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "沿苹果屋现有入口木架找 A：两条斜梁和中间横梁。",
+      "source_entry_id": "prologue_A",
+      "world_view": "res://assets/learning/landmark_views/A-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/A-angle.png",
+      "world_model_node": "ALPHA_A_MODEL_ROOT",
+      "recall_prompt": "哪一处住着一颗带绿叶的大红苹果？它的字母伙伴是哪一对？"
+    },
+    "B": {
+      "room": "landmark_B",
+      "marker": "SG_MEMORY_03",
+      "primitive": "observe_detail",
+      "instruction": "先看看船头，再看看船尾，最后看看整条小船。",
+      "feedback": "船头和船尾连起来，是一整条小船。",
+      "operations": [
+        {
+          "id": "bow",
+          "label": "看看船头"
+        },
+        {
+          "id": "stern",
+          "label": "看看船尾"
+        },
+        {
+          "id": "whole",
+          "label": "把整条船放进取景框"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "在现有船舱侧窗找 B：一条立框连着上下两个圆弧窗格。",
+      "source_entry_id": "prologue_B",
+      "world_view": "res://assets/learning/landmark_views/B-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/B-angle.png",
+      "world_model_node": "ALPHA_B_MODEL_ROOT",
+      "recall_prompt": "哪处地标连着栈桥，能看见船头和船尾？"
+    },
+    "C": {
+      "room": "landmark_C",
+      "marker": "SG_MEMORY_03",
+      "primitive": "drag_place",
+      "instruction": "选一颗莓果，放到蛋糕上。",
+      "feedback": "莓果放好啦，这块蛋糕有了你的装饰。",
+      "operations": [
+        {
+          "id": "pick",
+          "label": "拿起一颗莓果"
+        },
+        {
+          "id": "place",
+          "label": "把莓果放到蛋糕上"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "沿现有奶油门廊找向右开口的 C。",
+      "source_entry_id": "prologue_C",
+      "world_view": "res://assets/learning/landmark_views/C-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/C-angle.png",
+      "world_model_node": "ALPHA_C_MODEL_ROOT",
+      "recall_prompt": "想起奶油层和宽矮蛋糕，你会去哪个地方？"
+    },
+    "D": {
+      "room": "landmark_D",
+      "marker": "SG_MEMORY_03",
+      "primitive": "tap_feedback",
+      "instruction": "轻轻敲一下鼓，看看声音的波纹。",
+      "feedback": "咚！看看鼓面荡开的波纹。",
+      "operations": [
+        {
+          "id": "tap",
+          "label": "轻敲鼓面"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "查看现有鼓身 D 形门框：左直、右弧。",
+      "source_entry_id": "prologue_D",
+      "world_view": "res://assets/learning/landmark_views/D-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/D-angle.png",
+      "world_model_node": "ALPHA_D_MODEL_ROOT",
+      "recall_prompt": "哪处会发出一下咚声，代表形象是一个圆鼓？"
+    },
+    "E": {
+      "room": "landmark_E",
+      "marker": "SG_MEMORY_03",
+      "primitive": "observe_detail",
+      "instruction": "揭开遮片，看看蛋壳的轮廓。",
+      "feedback": "遮片揭开了，看看光滑、完整的蛋壳。",
+      "operations": [
+        {
+          "id": "uncover",
+          "label": "揭开观察遮片"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "在现有蛋壳正面找 E 形通风窗：一竖连三横。",
+      "source_entry_id": "prologue_E",
+      "world_view": "res://assets/learning/landmark_views/E-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/E-angle.png",
+      "world_model_node": "ALPHA_E_MODEL_ROOT",
+      "recall_prompt": "光滑、圆圆长长的蛋壳让你想起哪座屋？"
+    },
+    "F": {
+      "room": "landmark_F",
+      "marker": "SG_MEMORY_03",
+      "primitive": "choose_option",
+      "instruction": "选一种喜欢的花色，留在发现卡上。",
+      "feedback": "发现卡留下了你喜欢的花色。",
+      "operations": [
+        {
+          "id": "choose",
+          "label": "选一种喜欢的花色"
+        }
+      ],
+      "choices": [
+        "珊瑚粉",
+        "暖黄色"
+      ],
+      "glyph_cue": "沿现有绿色玻璃支架找 F：一竖、上横和中横。",
+      "source_entry_id": "prologue_F",
+      "world_view": "res://assets/learning/landmark_views/F-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/F-angle.png",
+      "world_model_node": "ALPHA_F_MODEL_ROOT",
+      "recall_prompt": "哪座温室像一朵张开的花？"
+    },
+    "G": {
+      "room": "landmark_G",
+      "marker": "SG_MEMORY_03",
+      "primitive": "observe_detail",
+      "instruction": "转到另一侧，看看地球仪上的陆地。",
+      "feedback": "换个角度看，地球仪上有海洋和陆地。",
+      "operations": [
+        {
+          "id": "rotate",
+          "label": "转动观察滑条"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "查看现有黄铜 G 形支架，指出右侧开口和向内短横。",
+      "source_entry_id": "prologue_G",
+      "world_view": "res://assets/learning/landmark_views/G-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/G-angle.png",
+      "world_model_node": "ALPHA_G_MODEL_ROOT",
+      "recall_prompt": "哪颗蓝绿球体立在支架上，里面画着世界？"
+    },
+    "H": {
+      "room": "landmark_H",
+      "marker": "SG_MEMORY_03",
+      "primitive": "choose_option",
+      "instruction": "给小岛朋友选一顶喜欢的帽子。",
+      "feedback": "帽子戴好啦，看看今天的样子。",
+      "operations": [
+        {
+          "id": "choose",
+          "label": "选一顶帽子试戴"
+        }
+      ],
+      "choices": [
+        "宽檐帽",
+        "棒球帽"
+      ],
+      "glyph_cue": "在现有帽檐下找 H：双立柱和中间横梁。",
+      "source_entry_id": "prologue_H",
+      "world_view": "res://assets/learning/landmark_views/H-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/H-angle.png",
+      "world_model_node": "ALPHA_H_MODEL_ROOT",
+      "recall_prompt": "哪座小店像一顶有宽帽檐的帽子？"
+    },
+    "I": {
+      "room": "landmark_I",
+      "marker": "SG_MEMORY_03",
+      "primitive": "drag_place",
+      "instruction": "拿起一球冰淇淋，放到蛋筒上。",
+      "feedback": "冰淇淋球稳稳放在蛋筒上。",
+      "operations": [
+        {
+          "id": "pick",
+          "label": "拿起冰淇淋球"
+        },
+        {
+          "id": "place",
+          "label": "放到蛋筒上"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "看现有蛋筒正面带上下横边的大写 I。",
+      "source_entry_id": "prologue_I",
+      "world_view": "res://assets/learning/landmark_views/I-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/I-angle.png",
+      "world_model_node": "ALPHA_I_MODEL_ROOT",
+      "recall_prompt": "高高窄窄的蛋筒上有一团冰淇淋，是哪一处？"
+    },
+    "J": {
+      "room": "landmark_J",
+      "marker": "SG_MEMORY_05",
+      "primitive": "observe_detail",
+      "instruction": "打开罐盖，看看罐里的莓果，再把盖子合好。",
+      "feedback": "看过罐子里的小秘密，也把盖子合好啦。",
+      "operations": [
+        {
+          "id": "open",
+          "label": "揭开罐盖"
+        },
+        {
+          "id": "close",
+          "label": "把罐盖合好"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "查看现有黄铜 J 形框，下端向左回钩。",
+      "source_entry_id": "prologue_J",
+      "world_view": "res://assets/learning/landmark_views/J-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/J-angle.png",
+      "world_model_node": "ALPHA_J_MODEL_ROOT",
+      "recall_prompt": "能装一件小收藏、还带盖子的透明地标是哪座？"
+    },
+    "K": {
+      "room": "landmark_K",
+      "marker": "SG_MEMORY_04",
+      "primitive": "drag_place",
+      "instruction": "拿起尾带，接在风筝下面。",
+      "feedback": "尾带接好了，风筝有了一条长尾巴。",
+      "operations": [
+        {
+          "id": "pick",
+          "label": "拿起尾带"
+        },
+        {
+          "id": "place",
+          "label": "把尾带接到风筝下面"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "沿现有风筝面竖杆和两条斜撑找 K。",
+      "source_entry_id": "prologue_K",
+      "world_view": "res://assets/learning/landmark_views/K-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/K-angle.png",
+      "world_model_node": "ALPHA_K_MODEL_ROOT",
+      "recall_prompt": "哪块菱形上连着一条会飘的尾带？"
+    },
+    "L": {
+      "room": "landmark_L",
+      "marker": "SG_MEMORY_05",
+      "primitive": "tap_feedback",
+      "instruction": "点亮小灯笼，看看暖暖的光。",
+      "feedback": "灯笼亮起来了，暖暖的光照着你。",
+      "operations": [
+        {
+          "id": "switch",
+          "label": "点亮灯笼"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "找现有灯笼正面 L 形铜框：左竖和下横。",
+      "source_entry_id": "prologue_L",
+      "world_view": "res://assets/learning/landmark_views/L-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/L-angle.png",
+      "world_model_node": "ALPHA_L_MODEL_ROOT",
+      "recall_prompt": "提梁下面挂着灯纸和穗子的地方在哪里？"
+    },
+    "M": {
+      "room": "landmark_M",
+      "marker": "SG_MEMORY_03",
+      "primitive": "observe_detail",
+      "instruction": "先看看菌盖，再看看菌柄，最后看看整朵蘑菇。",
+      "feedback": "大菌盖和长菌柄连在一起，就是蘑菇。",
+      "operations": [
+        {
+          "id": "cap",
+          "label": "观察菌盖"
+        },
+        {
+          "id": "stem",
+          "label": "观察菌柄"
+        },
+        {
+          "id": "whole",
+          "label": "看看完整的蘑菇"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "找现有菌柄正面的 M 形木框，中央下凹清楚。",
+      "source_entry_id": "prologue_M",
+      "world_view": "res://assets/learning/landmark_views/M-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/M-angle.png",
+      "world_model_node": "ALPHA_M_MODEL_ROOT",
+      "recall_prompt": "低低的菌盖下面托着短菌柄，是谁的邻居屋？"
+    },
+    "N": {
+      "room": "landmark_N",
+      "marker": "SG_MEMORY_02",
+      "primitive": "observe_detail",
+      "instruction": "移动观察框，看看鸟巢；让它留在原处。",
+      "feedback": "鸟巢进了取景框，我们轻轻看一看。",
+      "operations": [
+        {
+          "id": "frame",
+          "label": "移动取景窗，对准鸟巢"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "找现有巢前护栏的 N：两根立枝与中间斜枝。",
+      "source_entry_id": "prologue_N",
+      "world_view": "res://assets/learning/landmark_views/N-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/N-angle.png",
+      "world_model_node": "ALPHA_N_MODEL_ROOT",
+      "recall_prompt": "枝条绕成浅浅的小碗，代表哪一处？"
+    },
+    "O": {
+      "room": "landmark_O",
+      "marker": "SG_MEMORY_01",
+      "primitive": "choose_option",
+      "instruction": "在两位伙伴中找到猫头鹰。",
+      "feedback": "猫头鹰印记留在了借阅卡上。",
+      "operations": [
+        {
+          "id": "choose",
+          "label": "在借阅卡上选猫头鹰印记"
+        }
+      ],
+      "choices": [
+        "猫头鹰",
+        "小鱼"
+      ],
+      "glyph_cue": "看现有图书馆身前 O 形入口，保留中孔与眼窗的区别。",
+      "source_entry_id": "prologue_O",
+      "world_view": "res://assets/learning/landmark_views/O-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/O-angle.png",
+      "world_model_node": "ALPHA_O_MODEL_ROOT",
+      "recall_prompt": "有两只大圆眼、短喙和翅膀的图书馆伙伴是谁？"
+    },
+    "P": {
+      "room": "landmark_P",
+      "marker": "SG_MEMORY_04",
+      "primitive": "choose_option",
+      "instruction": "选一个大南瓜或小南瓜，看看大小有什么不同。",
+      "feedback": "收成框留下了你选的南瓜。",
+      "operations": [
+        {
+          "id": "choose",
+          "label": "选一只南瓜放进收成框"
+        }
+      ],
+      "choices": [
+        "圆圆的大南瓜",
+        "小巧的南瓜"
+      ],
+      "glyph_cue": "找现有南瓜屋 P 形窗框：长竖与上半部圆窗。",
+      "source_entry_id": "prologue_P",
+      "world_view": "res://assets/learning/landmark_views/P-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/P-angle.png",
+      "world_model_node": "ALPHA_P_MODEL_ROOT",
+      "recall_prompt": "橙色外形分成一瓣一瓣，顶上还有短柄，是哪处农场？"
+    },
+    "Q": {
+      "room": "landmark_Q",
+      "marker": "SG_MEMORY_03",
+      "primitive": "drag_place",
+      "instruction": "拿起花纹布片，补进拼布被的空格。",
+      "feedback": "花纹布片补好了空格，拼布被更完整啦。",
+      "operations": [
+        {
+          "id": "pick",
+          "label": "拿起花纹布片"
+        },
+        {
+          "id": "place",
+          "label": "把布片放进拼布被的空格"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "找现有拼布圆窗加右下斜尾形成的 Q。",
+      "source_entry_id": "prologue_Q",
+      "world_view": "res://assets/learning/landmark_views/Q-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/Q-angle.png",
+      "world_model_node": "ALPHA_Q_MODEL_ROOT",
+      "recall_prompt": "许多布片拼成一床软被，在哪座故事馆见过？"
+    },
+    "R": {
+      "room": "landmark_R",
+      "marker": "SG_MEMORY_01",
+      "primitive": "choose_option",
+      "instruction": "选一个动作，看看机器人怎样回应。",
+      "feedback": "机器人收到了你的动作邀请。",
+      "operations": [
+        {
+          "id": "choose",
+          "label": "给机器人选一个动作"
+        }
+      ],
+      "choices": [
+        "挥挥手",
+        "转一转"
+      ],
+      "glyph_cue": "在现有机器人胸前找 R，上部圆窗与右下斜撑同时可见。",
+      "source_entry_id": "prologue_R",
+      "world_view": "res://assets/learning/landmark_views/R-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/R-angle.png",
+      "world_model_node": "ALPHA_R_MODEL_ROOT",
+      "recall_prompt": "哪位方头方身的伙伴会按动作图挥手？"
+    },
+    "S": {
+      "room": "landmark_S",
+      "marker": "SG_MEMORY_02",
+      "primitive": "drag_place",
+      "instruction": "把星星放进同样形状的轮廓里。",
+      "feedback": "星星回到五角轮廓里了。",
+      "operations": [
+        {
+          "id": "pick",
+          "label": "拿起星星"
+        },
+        {
+          "id": "place",
+          "label": "放到五角星轮廓上"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "在现有星形建筑前侧找 S 形玻璃采光线；当前视角不清时用同模型取景卡。",
+      "source_entry_id": "prologue_S",
+      "world_view": "res://assets/learning/landmark_views/S-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/S-angle.png",
+      "world_model_node": "ALPHA_S_MODEL_ROOT",
+      "recall_prompt": "五个尖角的形象，来自哪一座观测台？"
+    },
+    "T": {
+      "room": "landmark_T",
+      "marker": "SG_MEMORY_03",
+      "primitive": "drag_place",
+      "instruction": "拿起一节车厢，接在车头后面。",
+      "feedback": "车厢接好了，小火车完整啦。",
+      "operations": [
+        {
+          "id": "pick",
+          "label": "拿起一节车厢"
+        },
+        {
+          "id": "place",
+          "label": "把车厢接到车头后面"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "在现有车厢正面找 T：上横梁与中央立柱。",
+      "source_entry_id": "prologue_T",
+      "world_view": "res://assets/learning/landmark_views/T-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/T-angle.png",
+      "world_model_node": "ALPHA_T_MODEL_ROOT",
+      "recall_prompt": "车头后面连着车厢，会在哪处站台等你？"
+    },
+    "U": {
+      "room": "landmark_U",
+      "marker": "SG_MEMORY_01",
+      "primitive": "choose_option",
+      "instruction": "什么时候需要撑开伞？选一种天气看看。",
+      "feedback": "雨伞撑开了，雨点落在伞面上。",
+      "operations": [
+        {
+          "id": "rain",
+          "label": "选择雨天，撑开雨伞"
+        }
+      ],
+      "choices": [
+        "晴天",
+        "雨天"
+      ],
+      "glyph_cue": "查看现有伞下 U 形入口构件，双竖边与底部圆弧相连。",
+      "source_entry_id": "prologue_U",
+      "world_view": "res://assets/learning/landmark_views/U-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/U-angle.png",
+      "world_model_node": "ALPHA_U_MODEL_ROOT",
+      "recall_prompt": "撑开的伞面下面带着弯柄，是哪座气象屋？"
+    },
+    "V": {
+      "room": "landmark_V",
+      "marker": "SG_MEMORY_03",
+      "primitive": "observe_detail",
+      "instruction": "看看山顶的火山口，再看旁边的放大图。",
+      "feedback": "找到山顶的火山口了，它静静地休息着。",
+      "operations": [
+        {
+          "id": "crater",
+          "label": "移动放大窗，找到山顶火山口"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "在现有前侧石砌入口找 V 形凹槽。",
+      "source_entry_id": "prologue_V",
+      "world_view": "res://assets/learning/landmark_views/V-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/V-angle.png",
+      "world_model_node": "ALPHA_V_MODEL_ROOT",
+      "recall_prompt": "哪座矮山顶上有一个圆圆的口？"
+    },
+    "W": {
+      "room": "landmark_W",
+      "marker": "SG_MEMORY_03",
+      "primitive": "choose_option",
+      "instruction": "在两位伙伴中找到鲸鱼。",
+      "feedback": "找到鲸鱼啦，看看它的大尾巴。",
+      "operations": [
+        {
+          "id": "whale",
+          "label": "在观察图里找到鲸鱼"
+        }
+      ],
+      "choices": [
+        "鲸鱼",
+        "小鱼"
+      ],
+      "glyph_cue": "查看现有鲸鱼侧入口雨棚的 W 形支架。",
+      "source_entry_id": "prologue_W",
+      "world_view": "res://assets/learning/landmark_views/W-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/W-angle.png",
+      "world_model_node": "ALPHA_W_MODEL_ROOT",
+      "recall_prompt": "哪位海洋伙伴有长长的身体、侧鳍和大尾鳍？"
+    },
+    "X": {
+      "room": "landmark_X",
+      "marker": "SG_MEMORY_03",
+      "primitive": "tap_feedback",
+      "instruction": "先敲最长的音条，再敲最短的音条。",
+      "feedback": "长音条和短音条，都听过、看过啦。",
+      "operations": [
+        {
+          "id": "long",
+          "label": "敲一根长音条"
+        },
+        {
+          "id": "short",
+          "label": "敲一根短音条"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "找现有舞台前侧两支交叉琴槌形成的 X。",
+      "source_entry_id": "prologue_X",
+      "world_view": "res://assets/learning/landmark_views/X-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/X-angle.png",
+      "world_model_node": "ALPHA_X_MODEL_ROOT",
+      "recall_prompt": "成排长短木音条配两支琴槌，是哪一处海边舞台？"
+    },
+    "Y": {
+      "room": "landmark_Y",
+      "marker": "SG_MEMORY_03",
+      "primitive": "trace_path",
+      "instruction": "从线头出发，沿着线找到毛线团。",
+      "feedback": "沿着短线头，找到了毛线团。",
+      "operations": [
+        {
+          "id": "start",
+          "label": "找到短线头"
+        },
+        {
+          "id": "trace",
+          "label": "沿着线头连到毛线团"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "找现有毛线团正面的 Y 形粗线：上面两枝汇成下面一竖。",
+      "source_entry_id": "prologue_Y",
+      "world_view": "res://assets/learning/landmark_views/Y-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/Y-angle.png",
+      "world_model_node": "ALPHA_Y_MODEL_ROOT",
+      "recall_prompt": "哪颗球上绕着柔软的线，还有一截线头？"
+    },
+    "Z": {
+      "room": "landmark_Z",
+      "marker": "SG_MEMORY_03",
+      "primitive": "stamp_card",
+      "instruction": "拿起斑马邮票，把它盖在明信片上。",
+      "feedback": "斑马邮票留在了给朋友的明信片上。",
+      "operations": [
+        {
+          "id": "pick",
+          "label": "拿起斑马邮票"
+        },
+        {
+          "id": "stamp",
+          "label": "把邮票盖在明信片上"
+        }
+      ],
+      "choices": [],
+      "glyph_cue": "沿现有邮局侧的两条水平平台与斜梯看 Z。",
+      "source_entry_id": "prologue_Z",
+      "world_view": "res://assets/learning/landmark_views/Z-front.png",
+      "alternate_view": "res://assets/learning/landmark_views/Z-angle.png",
+      "world_model_node": "ALPHA_Z_MODEL_ROOT",
+      "recall_prompt": "穿着黑白条纹、帮大家寄信的伙伴来自哪座邮局？"
+    }
+  },
+  "chapters": {
+    "2": {
+      "title": "寄给新朋友的邀请",
+      "unit_title": "What's your name?",
+      "source": "xiangshao-g3-1/unit-2",
+      "source_pages": [
+        13,
+        17
+      ],
+      "objectives_region": "p13-r5",
+      "letters": "DEFG",
+      "steps": [
+        {
+          "id": "U2-01",
+          "room": "landmark_Z",
+          "actor": "npc_bear_uncle",
+          "title": "两张空白邀请",
+          "text": "欢迎会还可以邀请新朋友。先问清名字，再把邀请送到对应的信格。\nWhat's your name? 你叫什么名字？",
+          "kind": "continue",
+          "phrase": "what_name"
+        },
+        {
+          "id": "U2-02",
+          "room": "school",
+          "actor": "textbook_lingling",
+          "title": "先问问这位同学",
+          "text": "见到同学先打招呼，再问她叫什么名字。",
+          "kind": "question",
+          "recipient": "textbook_lingling",
+          "question": {
+            "prompt": "想知道对方的名字，你会选哪一句？",
+            "correct": "ask_name",
+            "options": [
+              {
+                "id": "goodbye",
+                "text": "Goodbye!"
+              },
+              {
+                "id": "ask_name",
+                "text": "What's your name?"
+              },
+              {
+                "id": "thanks",
+                "text": "Thank you."
+              }
+            ],
+            "hint": "名字写在邀请的收件人一栏；这一次要问名字。",
+            "demo": "What's your name?\n对方回答：I'm Lingling.",
+            "phrase": "what_name",
+            "dimension": "written_situation_choice"
+          },
+          "reply": "I'm Lingling. 我是 Lingling。"
+        },
+        {
+          "id": "U2-03",
+          "room": "landmark_M",
+          "actor": "textbook_tim",
+          "title": "在邻居屋又见到一位朋友",
+          "text": "邀请上还缺一个名字。可以再次询问，也可以请向导陪你说。",
+          "kind": "question",
+          "recipient": "textbook_tim",
+          "question": {
+            "prompt": "给另一位朋友写邀请，先怎么问？",
+            "correct": "ask_name",
+            "options": [
+              {
+                "id": "ask_name",
+                "text": "What's your name?"
+              },
+              {
+                "id": "thanks",
+                "text": "Thank you."
+              },
+              {
+                "id": "goodbye",
+                "text": "Goodbye!"
+              }
+            ],
+            "hint": "先问清对方的名字，再填写邀请。",
+            "demo": "What's your name?\n对方回答：I'm Tim.",
+            "phrase": "what_name",
+            "dimension": "written_situation_choice"
+          },
+          "reply": "I'm Tim. 我是 Tim。"
+        },
+        {
+          "id": "U2-04",
+          "room": "landmark_Z",
+          "actor": "npc_bear_uncle",
+          "title": "把邀请送进对应信格",
+          "text": "拖动邀请到同名信格；也可先点邀请，再点信格。两张都送好就完成。",
+          "kind": "mail"
+        },
+        {
+          "id": "U2-05",
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "离开前，向 Anne 道别",
+          "text": "邀请已经送出了，准备离开校园。Anne 向你挥手。",
+          "kind": "question",
+          "question": {
+            "prompt": "这时想和 Anne 道别，你会选哪一句？",
+            "correct": "goodbye",
+            "options": [
+              {
+                "id": "thanks",
+                "text": "Thank you."
+              },
+              {
+                "id": "goodbye",
+                "text": "Goodbye!"
+              },
+              {
+                "id": "ask_name",
+                "text": "What's your name?"
+              }
+            ],
+            "hint": "现在要离开了，选一句道别的话。",
+            "demo": "Goodbye! 再见！",
+            "phrase": "goodbye",
+            "dimension": "written_situation_choice"
+          }
+        },
+        {
+          "id": "U2-06",
+          "room": "landmark_Z",
+          "actor": "npc_bear_uncle",
+          "title": "把字母路标放回旅行册",
+          "text": "看看 Dd、Ee、Ff、Gg 和熟悉的鼓、鸡蛋、花、地球仪。可分别点读，也可直接收好。",
+          "kind": "letters"
+        },
+        {
+          "id": "U2-07",
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "两封邀请都有了回音",
+          "text": "Lingling 和 Tim 的回信已经放在邀请册里。下一次，我们为来客准备座位。",
+          "kind": "complete"
+        }
+      ]
+    },
+    "3": {
+      "title": "欢迎会座位数",
+      "unit_title": "How old are you?",
+      "source": "xiangshao-g3-1/unit-3",
+      "source_pages": [
+        18,
+        22
+      ],
+      "objectives_region": "p18-r5",
+      "letters": "HIJK",
+      "steps": [
+        {
+          "id": "U3-01",
+          "room": "school",
+          "actor": "textbook_miss_li",
+          "title": "欢迎桌需要几张座位卡？",
+          "text": "先认识本次角色卡上的年龄，再数来客人数。年龄和座位数是两件事。\nHow old are you? 你几岁？",
+          "kind": "continue",
+          "phrase": "how_old"
+        },
+        {
+          "id": "U3-02",
+          "room": "classroom",
+          "actor": "textbook_mingming",
+          "title": "给 Mingming 选年龄贴",
+          "text": "本次欢迎会角色卡：Mingming — I'm eight.\n看清角色的回答，再选择数字。",
+          "kind": "question",
+          "age_actor": "textbook_mingming",
+          "age": 8,
+          "question": {
+            "prompt": "Mingming 的角色卡说 “I'm eight.”，应贴哪个数字？",
+            "correct": "8",
+            "options": [
+              {
+                "id": "7",
+                "text": "7 · seven"
+              },
+              {
+                "id": "8",
+                "text": "8 · eight"
+              },
+              {
+                "id": "9",
+                "text": "9 · nine"
+              }
+            ],
+            "hint": "eight 对应 8；可以再看看角色卡。",
+            "demo": "给 Mingming 的卡贴 8。",
+            "phrase": "",
+            "dimension": "written_situation_choice"
+          }
+        },
+        {
+          "id": "U3-03",
+          "room": "classroom",
+          "actor": "textbook_dongdong",
+          "title": "再问 Dongdong",
+          "text": "本次欢迎会角色卡：Dongdong — I'm nine.\n这是另一位朋友，按他的回答选。",
+          "kind": "question",
+          "age_actor": "textbook_dongdong",
+          "age": 9,
+          "question": {
+            "prompt": "Dongdong 的角色卡说 “I'm nine.”，应贴哪个数字？",
+            "correct": "9",
+            "options": [
+              {
+                "id": "9",
+                "text": "9 · nine"
+              },
+              {
+                "id": "7",
+                "text": "7 · seven"
+              },
+              {
+                "id": "8",
+                "text": "8 · eight"
+              }
+            ],
+            "hint": "nine 对应 9；姓名与年龄分别看。",
+            "demo": "给 Dongdong 的卡贴 9。",
+            "phrase": "",
+            "dimension": "written_situation_choice"
+          }
+        },
+        {
+          "id": "U3-04",
+          "room": "classroom",
+          "actor": "textbook_tim",
+          "title": "还有 Tim 的角色卡",
+          "text": "本次欢迎会角色卡：Tim — I'm seven.\n每位来客的年龄贴保留在各自的卡上。",
+          "kind": "question",
+          "age_actor": "textbook_tim",
+          "age": 7,
+          "question": {
+            "prompt": "Tim 的角色卡说 “I'm seven.”，应贴哪个数字？",
+            "correct": "7",
+            "options": [
+              {
+                "id": "8",
+                "text": "8 · eight"
+              },
+              {
+                "id": "9",
+                "text": "9 · nine"
+              },
+              {
+                "id": "7",
+                "text": "7 · seven"
+              }
+            ],
+            "hint": "seven 对应 7。",
+            "demo": "给 Tim 的卡贴 7。",
+            "phrase": "",
+            "dimension": "written_situation_choice"
+          }
+        },
+        {
+          "id": "U3-05",
+          "room": "classroom",
+          "actor": "textbook_miss_li",
+          "title": "先给三位来客安排座位",
+          "text": "来客是 Mingming、Dongdong、Tim。每个人一张座位卡，逐个摆好。这里数的是人数。",
+          "kind": "seats",
+          "seat_count": 3
+        },
+        {
+          "id": "U3-06",
+          "room": "classroom",
+          "actor": "textbook_anne",
+          "title": "Anne 也来做客了",
+          "text": "先问 How old are you?\n本次角色卡的回答是：I'm ten.\n给她选一张年龄贴。",
+          "kind": "question",
+          "age_actor": "textbook_anne",
+          "age": 10,
+          "question": {
+            "prompt": "Anne 的角色卡说 “I'm ten.”，应贴哪个数字？",
+            "correct": "10",
+            "options": [
+              {
+                "id": "10",
+                "text": "10 · ten"
+              },
+              {
+                "id": "4",
+                "text": "4 · four"
+              },
+              {
+                "id": "9",
+                "text": "9 · nine"
+              }
+            ],
+            "hint": "ten 是年龄 10；四位来客需要四个座位。",
+            "demo": "给 Anne 的年龄卡贴 10，座位另外增加一张。",
+            "phrase": "",
+            "dimension": "written_situation_choice"
+          }
+        },
+        {
+          "id": "U3-07",
+          "room": "classroom",
+          "actor": "textbook_miss_li",
+          "title": "给新来客加一个座位",
+          "text": "原来三位，又来一位 Anne。现在请数出四张座位卡；可随时拿走多放的卡。",
+          "kind": "seats",
+          "seat_count": 4
+        },
+        {
+          "id": "U3-08",
+          "room": "classroom",
+          "actor": "textbook_miss_li",
+          "title": "把 Hh、Ii、Jj、Kk 带回家",
+          "text": "看看帽子、冰淇淋、罐子和风筝，再回顾一到十。点读、跟着看或跳过回想都可以。",
+          "kind": "letters"
+        },
+        {
+          "id": "U3-09",
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "欢迎桌准备好了",
+          "text": "四位朋友都有自己的座位。年龄卡、邀请回信和合照会留在旅行册，随时可以回来看看。",
+          "kind": "complete"
+        }
+      ]
+    }
+  },
+  "u1_transfer": {
+    "id": "U1-10",
+    "room": "landmark_F",
+    "actor": "npc_rabbit_gardener",
+    "title": "在花园再次相遇",
+    "text": "兔兔从花床边抬起头，看见你来了。换了一个地方，也换了一位朋友。",
+    "question": {
+      "prompt": "刚见到兔兔，先选一句合适的招呼吧。",
+      "correct": "hello",
+      "options": [
+        {
+          "id": "thanks",
+          "text": "Thank you."
+        },
+        {
+          "id": "goodbye",
+          "text": "Goodbye!"
+        },
+        {
+          "id": "hello",
+          "text": "Hello!"
+        }
+      ],
+      "hint": "刚见面可以先打招呼；不是收到帮助或离开的时候。",
+      "demo": "Hello! 你好！",
+      "phrase": "hello",
+      "dimension": "written_situation_choice"
+    }
+  },
+  "fictional_scene_ages": {
+    "textbook_mingming": 8,
+    "textbook_dongdong": 9,
+    "textbook_tim": 7,
+    "textbook_anne": 10
+  },
+  "age_provenance": "Original game scenario cards, not claims about textbook character biographies or the child.",
+  "source_boundary": "Unit 2/3 objectives and existing reviewed expressions support these original game events; this is not complete textbook-body coverage."
+}

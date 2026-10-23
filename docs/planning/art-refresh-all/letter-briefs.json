@@ -1,0 +1,1632 @@
+{
+  "schema_version": 1,
+  "created_date": "2026-10-22",
+  "status": "production_brief_not_asset_acceptance",
+  "scope": "23 remaining 2D letter pictures; preserve existing B/O/K; no engine run, image generation, export or ZIP by this task",
+  "content_revision": "vocabulary-75cc8eb5b90ed004",
+  "codebook_revision": "codebook-7976c505db8c0ea5",
+  "catalog_sha256": "c69c1dde30e9a73502a2e28418b257b753118d681f8ca1f080ab40e21be02af3",
+  "prologue_sha256": "a24f07a2491d01dc00c52b8daa28fa566244a524384fc9b72d47196a61ed3a8f",
+  "target_story_art_revision": "storybook-v2",
+  "preserved_letter_assets": {
+    "B": "res://assets/learning/storybook_v1/B.png",
+    "O": "res://assets/learning/storybook_v1/O.png",
+    "K": "res://assets/learning/storybook_v1/K.png"
+  },
+  "style_reference_paths": [
+    "assets/art/storybook_v1/source/style-board.png",
+    "game/assets/learning/storybook_v1/B.png",
+    "game/assets/learning/storybook_v1/O.png",
+    "game/assets/learning/storybook_v1/K.png"
+  ],
+  "shared_style": {
+    "rendering": "Rounded hand-painted toy-like bitmap objects; matte low-gloss materials; gentle upper-left light; simple readable silhouettes; warm cream, sage and tan base palette with semantic colors retained.",
+    "canvas": "Single isolated square RGBA image; target 1024x1024 master, record actual generated dimensions rather than assume them. Existing B/O/K masters are 1254x1254.",
+    "framing": "Optically centered; roughly 75-82% main silhouette extent with 9-12% clear margins; long appendages compact; all outlines inside the canvas. These are generation targets to verify, not claims about delivered pixels.",
+    "display_contract": "Current Content.icon returns 160*raster_scale; story actor draws 112x112, H4 choice max width 66, prologue loads 3x then keeps aspect. Center pivot.",
+    "exclude": [
+      "letters or labels",
+      "UI frames",
+      "ground or backdrop",
+      "baked ground shadow",
+      "another letter mascot",
+      "attached story props except defining parts",
+      "dramatic glow or spray effects",
+      "multiple unrelated objects"
+    ],
+    "semantic_color_exceptions": [
+      "A red apple and green leaf",
+      "P orange pumpkin",
+      "Z readable ivory/charcoal stripes",
+      "S warm yellow five-point star"
+    ],
+    "alpha_policy": "Request true transparency, inspect alpha and native background. Preserve original generated sources. Current accepted B/O/K imports use lossless mode and fix_alpha_border=false after strict source-pixel verification.",
+    "locks": "Codebook letter, asset_identity, anchor_en, representative labels, story position/occurrence, learning revisions and saved evidence stay unchanged; decorative candle count, cake tiers, contents and baked sticks are not automatically semantic invariants."
+  },
+  "runtime_evidence_boundary": "Only hello/nose/book/football currently use bespoke semantic events at H5. Other story actions use ordered keyword-derived categories and labelled meaning-card props; this brief does not claim every authored textual action has a literal animation.",
+  "independent_prop_dependencies": [
+    {
+      "letter": "C",
+      "word": "candle",
+      "story_id": "story-78ef9fe82195",
+      "source_action": "端来一根细长蜡烛模型",
+      "requirement": "Independent candle model; no permanent candle required on C base sprite."
+    },
+    {
+      "letter": "D",
+      "word": "dog",
+      "story_id": "story-c8c5983f962e",
+      "source_action": "把鼓槌轻轻抛给小狗",
+      "requirement": "Independent drumstick is explicitly referenced."
+    },
+    {
+      "letter": "D",
+      "word": "wood",
+      "story_id": "story-11ed2723879c",
+      "source_action": "轻敲鼓棒在木板上听声",
+      "requirement": "Independent drumstick is explicitly referenced."
+    }
+  ],
+  "letters": [
+    {
+      "letter": "A",
+      "asset_identity": "codebook_A",
+      "anchor_en": "Apple",
+      "canonical_word_zh": "苹果",
+      "representative_label_zh": "苹果",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/A.png",
+      "current_svg_path": "game/data/learning/icons/A.svg",
+      "current_svg_sha256": "86ed2abeeabbcb1d4bef518c65ddee55a02ea4c318df6e2edefae4e180588424",
+      "current_svg_subject_observed": "正面红苹果；右上弯短梗及一片右上绿叶。",
+      "production_view_recommended": "正面或极轻三分之四视角，梗叶在上，圆果主体居中。",
+      "semantic_invariants": "红苹果与绿叶必须清楚；不改成南瓜、草莓或带咬口的果片。",
+      "contact_and_motion_requirements": "下部圆果轮廓保留清楚的右下接球区域；football会整果倾转、右移踢球。",
+      "specialized_runtime_roles": [
+        "football: apple_kick / 将球踢向第一盏灯"
+      ],
+      "production_subject_prompt_en": "One complete red apple with a short curved brown stem and one sage-green leaf at the upper right. Rounded whole fruit, front view, no bite, no face, no arms, no extra fruit.",
+      "style_notes": "自然红色可柔和但不能只剩奶油色；梗叶不要挤占圆果主体。",
+      "story_steps_count": 475,
+      "derived_kind_counts": {
+        "catch": 15,
+        "fly": 2,
+        "greet": 8,
+        "lift": 9,
+        "light": 14,
+        "mark": 11,
+        "open": 9,
+        "place": 38,
+        "present": 101,
+        "roll": 212,
+        "tap": 5,
+        "transport": 42,
+        "travel": 9
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-d49590f8d57b",
+          "word_examples": [
+            "a"
+          ],
+          "action": "独自跳进空篮并举起一根小手指",
+          "derived_kind": "lift"
+        },
+        {
+          "story_id": "story-2e4bb159aa65",
+          "word_examples": [
+            "an"
+          ],
+          "action": "独自滚进一个空巢",
+          "derived_kind": "roll"
+        },
+        {
+          "story_id": "story-6a2c796a4de2",
+          "word_examples": [
+            "afternoon"
+          ],
+          "action": "把午饭盘推走",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-1ecd99471a27",
+          "word_examples": [
+            "all"
+          ],
+          "action": "叫齐整篮伙伴排成队",
+          "derived_kind": "present"
+        }
+      ],
+      "prologue_primitive": "drag_place",
+      "prologue_source_plan_reveal": "先看红色圆果与绿叶，再把视线引回现有苹果屋的整体轮廓；篮子只是操作道具。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "C",
+      "asset_identity": "codebook_C",
+      "anchor_en": "Cake",
+      "canonical_word_zh": "蛋糕",
+      "representative_label_zh": "蛋糕",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/C.png",
+      "current_svg_path": "game/data/learning/icons/C.svg",
+      "current_svg_sha256": "41172717488c976dde65f9565f45d681cf6aef0e0c95edc0bf4820ab68bfa827",
+      "current_svg_subject_observed": "正面单层蛋糕，波浪奶油边，顶部中央单根蜡烛。",
+      "production_view_recommended": "已确认可采用新图双层小奶油蛋糕与一颗莓果；保持宽矮稳定，正面轻俯视。",
+      "semantic_invariants": "Cake语义与奶油糕体不变；层数、莓果和固定蜡烛属装饰，可变化。",
+      "contact_and_motion_requirements": "顶面与底部托举边缘应清楚；candle词中的蜡烛模型是独立道具，不要求烘焙在蛋糕上。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One small two-tier cream cake with a single berry on top, a clear frosted rim and a stable broad base. Warm cream icing and restrained berry accent; no candle, no plate scene, no letters, no birthday text.",
+      "style_notes": "按root已生成版本保留双层莓果无烛；与I尖蛋筒区分。",
+      "story_steps_count": 211,
+      "derived_kind_counts": {
+        "catch": 58,
+        "lift": 4,
+        "light": 8,
+        "mark": 4,
+        "open": 7,
+        "place": 33,
+        "present": 80,
+        "roll": 1,
+        "tap": 1,
+        "transport": 11,
+        "travel": 4
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-9eb58b81c664",
+          "word_examples": [
+            "back"
+          ],
+          "action": "把球滑回风筝下",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-1209d6e07ac4",
+          "word_examples": [
+            "black"
+          ],
+          "action": "把黑墨涂满小旗",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-e408f52d0813",
+          "word_examples": [
+            "cake"
+          ],
+          "action": "切出一块奶油蛋糕",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-175779efc9e8",
+          "word_examples": [
+            "can"
+          ],
+          "action": "摆出一道低障碍",
+          "derived_kind": "place"
+        }
+      ],
+      "prologue_primitive": "drag_place",
+      "prologue_source_plan_reveal": "近看层叠蛋糕与奶油边，再回看宽矮蛋糕建筑；不把莓果当作 C 的代表。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "D",
+      "asset_identity": "codebook_D",
+      "anchor_en": "Drum",
+      "canonical_word_zh": "鼓",
+      "representative_label_zh": "鼓",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/D.png",
+      "current_svg_path": "game/data/learning/icons/D.svg",
+      "current_svg_sha256": "9d82399707eb03dd752ab3d686f6704635829cb78e29868bd0627d0499aaf150",
+      "current_svg_subject_observed": "略俯视圆鼓：椭圆鼓面、红桶身、交叉鼓绳，两侧鼓槌。",
+      "production_view_recommended": "新主体可仅保留单个圆鼓，正面轻俯视，鼓面可见。",
+      "semantic_invariants": "Drum语义依赖圆鼓面、桶身和绳/箍；鼓棒不必与主体合并。",
+      "contact_and_motion_requirements": "鼓面中央可作轻敲触点；dog抛鼓槌、wood鼓棒敲木板明确需要独立drumstick道具。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One compact barrel drum, front view with a slight view of its oval top skin. Muted terracotta-red shell, cream drumhead, simple tan lacing and rounded wooden rims. No drumsticks in the base sprite, no musical notes, no stage.",
+      "style_notes": "保持圆鼓与X成排音条明显不同；root已有无棒主体可用。",
+      "story_steps_count": 203,
+      "derived_kind_counts": {
+        "catch": 3,
+        "fly": 1,
+        "light": 4,
+        "mark": 1,
+        "open": 2,
+        "place": 1,
+        "present": 14,
+        "roll": 3,
+        "tap": 170,
+        "transport": 4
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-56f1d08c185b",
+          "word_examples": [
+            "and"
+          ],
+          "action": "把两位一起印进合照",
+          "derived_kind": "light"
+        },
+        {
+          "story_id": "story-22f1f3245898",
+          "word_examples": [
+            "birthday"
+          ],
+          "action": "敲响生日鼓点",
+          "derived_kind": "tap"
+        },
+        {
+          "story_id": "story-e28dc1d3449b",
+          "word_examples": [
+            "body"
+          ],
+          "action": "敲节拍让玩偶全身动起来",
+          "derived_kind": "tap"
+        },
+        {
+          "story_id": "story-7edf13905241",
+          "word_examples": [
+            "card"
+          ],
+          "action": "把卡片立在鼓沿展示",
+          "derived_kind": "present"
+        }
+      ],
+      "prologue_primitive": "tap_feedback",
+      "prologue_source_plan_reveal": "鼓面、圆柱鼓身与鼓绳一起显露，强调单个圆鼓。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "E",
+      "asset_identity": "codebook_E",
+      "anchor_en": "Egg",
+      "canonical_word_zh": "鸡蛋",
+      "representative_label_zh": "蛋壳（完整蛋形）",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/E.png",
+      "current_svg_path": "game/data/learning/icons/E.svg",
+      "current_svg_sha256": "0d72061ecb084507f4042552b7d3db526c42b68f68c05aa315cede2ed33f6a86",
+      "current_svg_subject_observed": "闭合完整蛋形，顶尖底圆；中下部有横向锯齿缝，外轮廓无缺口。",
+      "production_view_recommended": "正面直立完整蛋形；可保留很淡闭合锯齿缝。",
+      "semantic_invariants": "英文Egg、现中文标签蛋壳（完整蛋形）和完整外轮廓均保留；不可换成半壳、小鸡或荷包蛋。",
+      "contact_and_motion_requirements": "hello在窗口中整体升起；nose星星缩小落到蛋形中下部，必须留清爽中央区域，接触/印迹由运行时绘制。",
+      "specialized_runtime_roles": [
+        "hello: egg_greet / 探窗问候",
+        "nose: shell_catch / 接星星并叠加鼻印"
+      ],
+      "production_subject_prompt_en": "One intact upright cream egg-shaped eggshell, narrower at the top and rounded at the base. Subtle warm shell shading, optionally a fine closed zigzag seam across the lower middle. No open half shell, no chick, no face, no contents.",
+      "style_notes": "中央不画大眼或图案，避免遮住nose的星星与印迹。",
+      "story_steps_count": 748,
+      "derived_kind_counts": {
+        "catch": 212,
+        "greet": 11,
+        "lift": 12,
+        "light": 35,
+        "mark": 53,
+        "open": 76,
+        "place": 56,
+        "present": 247,
+        "roll": 5,
+        "tap": 2,
+        "transport": 39
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-6a2c796a4de2",
+          "word_examples": [
+            "afternoon"
+          ],
+          "action": "装好点心送给机器人",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-242ada5e3cb6",
+          "word_examples": [
+            "apple"
+          ],
+          "action": "托住切好的苹果片",
+          "derived_kind": "catch"
+        },
+        {
+          "story_id": "story-4fc337c73c7a",
+          "word_examples": [
+            "are"
+          ],
+          "action": "打开壳框把两人共同装进身份照",
+          "derived_kind": "light"
+        },
+        {
+          "story_id": "story-e31df362c5c9",
+          "word_examples": [
+            "beautiful"
+          ],
+          "action": "用蛋壳当花盆",
+          "derived_kind": "present"
+        }
+      ],
+      "prologue_primitive": "observe_detail",
+      "prologue_source_plan_reveal": "以光滑椭圆蛋形为主图，并与现有蛋壳屋外形对应；小鸡只是环境线索。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "F",
+      "asset_identity": "codebook_F",
+      "anchor_en": "Flower",
+      "canonical_word_zh": "花朵",
+      "representative_label_zh": "花朵",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/F.png",
+      "current_svg_path": "game/data/learning/icons/F.svg",
+      "current_svg_sha256": "bcc91ad7fe030c28a0028c4ea5b9a57a3913fbc03129977f987a3f2246593968",
+      "current_svg_subject_observed": "正面五瓣粉花、黄花心，竖茎与左右两叶。",
+      "production_view_recommended": "正面整朵花，五瓣/圆花心、茎叶保持独立。",
+      "semantic_invariants": "Flower主图是完整花朵，不能变成一束花、花盆或只有叶子。",
+      "contact_and_motion_requirements": "football整花右移倾转踢球；下方叶/茎轮廓清楚，底部不能过短导致球悬空。",
+      "specialized_runtime_roles": [
+        "football: ball_kick / 花朵踢球"
+      ],
+      "production_subject_prompt_en": "One complete five-petal flower, soft dusty-pink petals around a warm yellow center, a short sage-green stem and two rounded leaves. Front view, no pot, no bouquet, no face, no ball.",
+      "style_notes": "与B/O/K用同样柔和上左光；茎稍厚，66px下不丢失。",
+      "story_steps_count": 133,
+      "derived_kind_counts": {
+        "catch": 15,
+        "fly": 1,
+        "greet": 1,
+        "light": 6,
+        "mark": 5,
+        "open": 8,
+        "place": 14,
+        "present": 66,
+        "transport": 16,
+        "travel": 1
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-6a2c796a4de2",
+          "word_examples": [
+            "afternoon"
+          ],
+          "action": "送来下午开放的花束",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-e31df362c5c9",
+          "word_examples": [
+            "beautiful"
+          ],
+          "action": "开出一朵大花",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-6c039f9e48b0",
+          "word_examples": [
+            "different"
+          ],
+          "action": "给第一件加长花瓣",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-6c039f9e48b0",
+          "word_examples": [
+            "different"
+          ],
+          "action": "给第二件缩短花瓣",
+          "derived_kind": "present"
+        }
+      ],
+      "prologue_primitive": "choose_option",
+      "prologue_source_plan_reveal": "突出花心、花瓣、茎叶的整朵花，再回看巨花温室轮廓；颜色不改变锚词。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "G",
+      "asset_identity": "codebook_G",
+      "anchor_en": "Globe",
+      "canonical_word_zh": "地球仪",
+      "representative_label_zh": "地球仪",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/G.png",
+      "current_svg_path": "game/data/learning/icons/G.svg",
+      "current_svg_sha256": "1aac674d3d7411594e8d4ed00fe3fdf00d9b02d7af60a173181c8045242830a3",
+      "current_svg_subject_observed": "蓝绿球体，右外侧弧形球架、短竖杆与水平底座；无穿球轴。",
+      "production_view_recommended": "正面轻三分之四视角，硬支架在右，底座居中。",
+      "semantic_invariants": "Globe必须是地球球体加硬支架/底座，不能像普通球或毛线团。",
+      "contact_and_motion_requirements": "泛用roll会旋转整个图标；球体中心与底座中线稳定，右侧接物区留边。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One small desktop globe with a sage-blue sphere, simple land shapes, a clearly visible curved support on the right, a short upright stem and a solid tan base. No map labels, no detached planet, no orbiting objects.",
+      "style_notes": "大陆形只需清晰块面，不画文字经纬编号；与Y软线圈区分。",
+      "story_steps_count": 137,
+      "derived_kind_counts": {
+        "catch": 6,
+        "lift": 3,
+        "light": 4,
+        "mark": 1,
+        "open": 1,
+        "place": 2,
+        "present": 20,
+        "roll": 97,
+        "transport": 3
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-694939d11811",
+          "word_examples": [
+            "amazing"
+          ],
+          "action": "把整个奇妙表演转给观众看",
+          "derived_kind": "roll"
+        },
+        {
+          "story_id": "story-1b7299ad41e4",
+          "word_examples": [
+            "bag"
+          ],
+          "action": "提起包带展示完整的包",
+          "derived_kind": "lift"
+        },
+        {
+          "story_id": "story-c8c5983f962e",
+          "word_examples": [
+            "dog"
+          ],
+          "action": "在底座旁接住小狗",
+          "derived_kind": "catch"
+        },
+        {
+          "story_id": "story-c7619fcf7961",
+          "word_examples": [
+            "doggie"
+          ],
+          "action": "把小狗转到软垫",
+          "derived_kind": "roll"
+        }
+      ],
+      "prologue_primitive": "observe_detail",
+      "prologue_source_plan_reveal": "用球体加支架的组合突出 Globe，与只有线圈的毛线团保持区别。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "H",
+      "asset_identity": "codebook_H",
+      "anchor_en": "Hat",
+      "canonical_word_zh": "帽子",
+      "representative_label_zh": "帽子",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/H.png",
+      "current_svg_path": "game/data/learning/icons/H.svg",
+      "current_svg_sha256": "02b170d778d57c418e72f276dbff84dc314a686cce785fad2a55e95e5f6fbca7",
+      "current_svg_subject_observed": "高帽冠、宽椭圆帽檐、绿色帽带，正面直立。",
+      "production_view_recommended": "正面或轻三分之四帽形，完整宽帽檐露出。",
+      "semantic_invariants": "Hat必须帽冠+帽檐；不换为皇冠、头盔或角色戴帽头像。",
+      "contact_and_motion_requirements": "hello抬帽时整体上移约54舞台单位并倾转；帽檐边缘与中央枢轴稳定，不预画举手。",
+      "specialized_runtime_roles": [
+        "hello: hat_greet / 整帽抬起倾转"
+      ],
+      "production_subject_prompt_en": "One warm tan felt hat with a tall rounded crown, a broad oval brim and a muted sage ribbon band. Full isolated hat, front three-quarter view, no head, no hands, no logo.",
+      "style_notes": "保持宽帽檐，轻柔材质与小船木色区分。",
+      "story_steps_count": 257,
+      "derived_kind_counts": {
+        "catch": 15,
+        "greet": 8,
+        "lift": 71,
+        "light": 10,
+        "mark": 8,
+        "open": 4,
+        "place": 23,
+        "present": 111,
+        "tap": 1,
+        "transport": 5,
+        "travel": 1
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-22f1f3245898",
+          "word_examples": [
+            "birthday"
+          ],
+          "action": "送出生日帽",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-fd1560977472",
+          "word_examples": [
+            "brother"
+          ],
+          "action": "举起两人的家庭帽",
+          "derived_kind": "lift"
+        },
+        {
+          "story_id": "story-47d84614fc62",
+          "word_examples": [
+            "cheese"
+          ],
+          "action": "戴好帽子笑起来",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-1b9cff22a255",
+          "word_examples": [
+            "eight"
+          ],
+          "action": "用帽檐接住八珠",
+          "derived_kind": "catch"
+        }
+      ],
+      "prologue_primitive": "choose_option",
+      "prologue_source_plan_reveal": "先显示完整帽顶与帽檐，再对应现有帽子店的巨大帽形轮廓。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "I",
+      "asset_identity": "codebook_I",
+      "anchor_en": "Ice cream",
+      "canonical_word_zh": "冰淇淋",
+      "representative_label_zh": "冰淇淋",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/I.png",
+      "current_svg_path": "game/data/learning/icons/I.svg",
+      "current_svg_sha256": "d5cfb185265ee1b44c7ef2223202de7859b4bbd609646fe5dee054a6c5e7f12b",
+      "current_svg_subject_observed": "尖筒朝下、交叉格纹筒身；上方粉色冰淇淋为相连圆拱。",
+      "production_view_recommended": "直立完整蛋筒冰淇淋，奶油/粉色球顶清楚。",
+      "semantic_invariants": "Ice cream依赖冰淇淋顶部+尖蛋筒；不可变成宽矮蛋糕或杯装饮料。",
+      "contact_and_motion_requirements": "顶端能承托装饰，尖端不裁切；整体举、送、放时保持中心轴。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One upright ice-cream cone with two softly joined rounded scoops in cream and dusty pink, sitting on a tan waffle cone with simple diamond texture. No melting puddle, no hand, no wrapper text.",
+      "style_notes": "纹理只在筒身，66px能看清圆顶与尖筒。",
+      "story_steps_count": 363,
+      "derived_kind_counts": {
+        "catch": 10,
+        "fly": 4,
+        "greet": 8,
+        "lift": 15,
+        "light": 8,
+        "mark": 28,
+        "open": 2,
+        "place": 45,
+        "present": 211,
+        "roll": 6,
+        "tap": 1,
+        "transport": 22,
+        "travel": 3
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-694939d11811",
+          "word_examples": [
+            "amazing"
+          ],
+          "action": "把冰淇淋顶成飞翔的小塔",
+          "derived_kind": "fly"
+        },
+        {
+          "story_id": "story-e31df362c5c9",
+          "word_examples": [
+            "beautiful"
+          ],
+          "action": "点上冰淇淋色的装饰",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-22f1f3245898",
+          "word_examples": [
+            "birthday"
+          ],
+          "action": "插上一支蜡烛",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-0455e49c66fe",
+          "word_examples": [
+            "cousin"
+          ],
+          "action": "把两位孩子的照片放在一起",
+          "derived_kind": "light"
+        }
+      ],
+      "prologue_primitive": "drag_place",
+      "prologue_source_plan_reveal": "突出蛋筒与顶部旋纹或冰淇淋球，区别于 C 的宽矮分层蛋糕。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "J",
+      "asset_identity": "codebook_J",
+      "anchor_en": "Jar",
+      "canonical_word_zh": "罐子",
+      "representative_label_zh": "罐子",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/J.png",
+      "current_svg_path": "game/data/learning/icons/J.svg",
+      "current_svg_sha256": "7f2470f367a6c3bfc83f7084d11a9d7e31b5e516675b47d4f798f483353bec6d",
+      "current_svg_subject_observed": "宽肚窄颈罐子，棕盖闭合，中央浅色标签；无可见开口。",
+      "production_view_recommended": "正面闭盖透明/半透明宽肚罐，窄颈与盖分界可辨。",
+      "semantic_invariants": "Jar语义是罐身+明确罐盖；内容物和标签不是代表形象。",
+      "contact_and_motion_requirements": "泛用动作包含取出/收卡/弹盖；底图不烘焙卡片或人物，盖子接缝保持清楚以便后续独立道具交互。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One rounded clear glass jar with a short neck and a closed warm-tan lid. A small blank cream label is allowed. Gentle restrained highlights, visually solid rim and base, no writing, no food, no stones inside.",
+      "style_notes": "透明罐的外轮廓需在奶油/浅绿背景可见，不做强反射玻璃。",
+      "story_steps_count": 15,
+      "derived_kind_counts": {
+        "catch": 1,
+        "light": 1,
+        "mark": 1,
+        "open": 2,
+        "present": 9,
+        "roll": 1
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-35ac8a87fbfa",
+          "word_examples": [
+            "juice"
+          ],
+          "action": "拿来空杯罐",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-473c00765123",
+          "word_examples": [
+            "job"
+          ],
+          "action": "罐里抽出修椅子的工作卡",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-42d4a26a3414",
+          "word_examples": [
+            "join"
+          ],
+          "action": "罐中拿出空座位牌",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-d1bd236a9597",
+          "word_examples": [
+            "jump"
+          ],
+          "action": "罐盖弹起小玩偶",
+          "derived_kind": "mark"
+        }
+      ],
+      "prologue_primitive": "observe_detail",
+      "prologue_source_plan_reveal": "强调透明罐身和明显罐盖；石头只是内容物，代表图像始终是罐子。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "L",
+      "asset_identity": "codebook_L",
+      "anchor_en": "Lantern",
+      "canonical_word_zh": "灯笼",
+      "representative_label_zh": "灯笼",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/L.png",
+      "current_svg_path": "game/data/learning/icons/L.svg",
+      "current_svg_sha256": "1556e506b13dae77c4ecdedc378aa58af0406d8ecef707eafca9625e2f228908",
+      "current_svg_subject_observed": "正面橙色鼓腹灯笼；提环、横顶盖、纵弧纹，底座下垂直穗。",
+      "production_view_recommended": "正面直立，提环上、短穗下；主体光源可读。",
+      "semantic_invariants": "Lantern应有灯笼体和提手/穗；不能换成现代电灯泡、台灯或火焰。",
+      "contact_and_motion_requirements": "hello两盏灯分别照来客/向门传光；football近/远球门的灯光仍是两个独立L。下部右侧需留出运行时光束出口。",
+      "specialized_runtime_roles": [
+        "hello: lantern_welcome, lantern_pass / 两个独立L传光",
+        "football: goal_near, goal_far / 两个独立L照近远球门"
+      ],
+      "production_subject_prompt_en": "One upright traditional rounded paper lantern with a small top loop, tan top and bottom caps, warm muted apricot paper, simple vertical ribs and one short centered tassel. No writing, no external glow halo, no flame, no scene.",
+      "style_notes": "亮度/光束由引擎绘制，源图只烘焙温暖纸质感；短穗不抢主体尺寸。",
+      "story_steps_count": 309,
+      "derived_kind_counts": {
+        "catch": 2,
+        "greet": 1,
+        "lift": 3,
+        "light": 274,
+        "mark": 1,
+        "place": 2,
+        "present": 23,
+        "transport": 2,
+        "travel": 1
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-1ecd99471a27",
+          "word_examples": [
+            "all"
+          ],
+          "action": "逐一照到队头与中间",
+          "derived_kind": "light"
+        },
+        {
+          "story_id": "story-1ecd99471a27",
+          "word_examples": [
+            "all"
+          ],
+          "action": "照到最后一颗并确认篮子空了",
+          "derived_kind": "light"
+        },
+        {
+          "story_id": "story-242ada5e3cb6",
+          "word_examples": [
+            "apple"
+          ],
+          "action": "照出苹果表面的红光与里面的果核",
+          "derived_kind": "light"
+        },
+        {
+          "story_id": "story-cb173d30a640",
+          "word_examples": [
+            "ball"
+          ],
+          "action": "把球抛向第二盏灯",
+          "derived_kind": "present"
+        }
+      ],
+      "prologue_primitive": "tap_feedback",
+      "prologue_source_plan_reveal": "完整灯笼轮廓在短暂亮度变化中显露，保持柔和光照。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "M",
+      "asset_identity": "codebook_M",
+      "anchor_en": "Mushroom",
+      "canonical_word_zh": "蘑菇",
+      "representative_label_zh": "蘑菇",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/M.png",
+      "current_svg_path": "game/data/learning/icons/M.svg",
+      "current_svg_sha256": "f625508a6ae40163c9277215293306af842a24c304798593406a7195762642e2",
+      "current_svg_subject_observed": "红色宽圆拱菌盖、三浅色圆斑、浅色短粗菌柄。",
+      "production_view_recommended": "正面低矮宽菌盖，短粗柄，底部完整。",
+      "semantic_invariants": "Mushroom依赖菌盖+菌柄；与U拱伞的细杆钩柄区分。",
+      "contact_and_motion_requirements": "整图可能承托/盖住卡片；菌盖边缘保持连续，底部短柄可作为放置基准。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One friendly mushroom with a broad rounded muted-red cap, three simple cream spots and a short thick cream stalk. Front view, no face, no ground patch, no tiny mushrooms around it.",
+      "style_notes": "避免伞骨或长细杆；菌盖保持有机厚度。",
+      "story_steps_count": 165,
+      "derived_kind_counts": {
+        "catch": 25,
+        "greet": 3,
+        "lift": 2,
+        "light": 7,
+        "mark": 4,
+        "open": 7,
+        "place": 33,
+        "present": 75,
+        "tap": 3,
+        "transport": 5,
+        "travel": 1
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-d6a6aa0435be",
+          "word_examples": [
+            "am"
+          ],
+          "action": "把照片与“我”名牌扣在一起",
+          "derived_kind": "light"
+        },
+        {
+          "story_id": "story-694939d11811",
+          "word_examples": [
+            "amazing"
+          ],
+          "action": "把舞台缩成小点交回苹果",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-dbbdac549f9d",
+          "word_examples": [
+            "family"
+          ],
+          "action": "撑起家庭屋顶",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-bc84b743164c",
+          "word_examples": [
+            "grandmother"
+          ],
+          "action": "放好奶奶椅子",
+          "derived_kind": "place"
+        }
+      ],
+      "prologue_primitive": "observe_detail",
+      "prologue_source_plan_reveal": "突出低矮菌盖与短粗菌柄，不依靠家中茶杯来识别地标。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "N",
+      "asset_identity": "codebook_N",
+      "anchor_en": "Nest",
+      "canonical_word_zh": "鸟巢",
+      "representative_label_zh": "鸟巢",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/N.png",
+      "current_svg_path": "game/data/learning/icons/N.svg",
+      "current_svg_sha256": "571b7b4a371b28449833250086f965c951157fd2ae144941689de7d9298085a1",
+      "current_svg_subject_observed": "浅碗形枝条鸟巢、深色内腔；原图内有两枚完整蛋，前沿交叉枝条。",
+      "production_view_recommended": "略俯视浅碗鸟巢；中央腔口完整可辨。",
+      "semantic_invariants": "Nest必须以交错枝条和碗形巢体为主；鸟或蛋只能是可选内容物，不能替换主图。",
+      "contact_and_motion_requirements": "nose让O从N位置摇出；中央开口和前沿必须留出，若保留两小蛋应偏左右并压低，不能烘焙猫头鹰。",
+      "specialized_runtime_roles": [
+        "nose: nest_release / 摇出O"
+      ],
+      "production_subject_prompt_en": "One shallow bowl-shaped nest of softly woven tan twigs, seen slightly from above, with a clearly visible dark central hollow and a readable front rim. Optional two small cream eggs tucked low at the left and right; no bird, no owl, no branch scene.",
+      "style_notes": "枝条简化但要看出软窝，不画大树；两蛋是原SVG内容物而非编码不变量。",
+      "story_steps_count": 385,
+      "derived_kind_counts": {
+        "catch": 104,
+        "fly": 2,
+        "greet": 5,
+        "lift": 5,
+        "light": 19,
+        "mark": 1,
+        "open": 1,
+        "place": 72,
+        "present": 153,
+        "roll": 4,
+        "tap": 2,
+        "transport": 12,
+        "travel": 5
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-2e4bb159aa65",
+          "word_examples": [
+            "an"
+          ],
+          "action": "兜住这唯一的苹果，不再增加第二个",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-6a2c796a4de2",
+          "word_examples": [
+            "afternoon"
+          ],
+          "action": "把邀请送到第一只猫头鹰",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-6a2c796a4de2",
+          "word_examples": [
+            "afternoon"
+          ],
+          "action": "挂出午后茶旗等待朋友",
+          "derived_kind": "lift"
+        },
+        {
+          "story_id": "story-694939d11811",
+          "word_examples": [
+            "amazing"
+          ],
+          "action": "托住飞塔让地球仪转起来",
+          "derived_kind": "roll"
+        }
+      ],
+      "prologue_primitive": "observe_detail",
+      "prologue_source_plan_reveal": "先看交错枝条，再看浅碗形整体；小鸟可作比例提示，不能替换 Nest 主图。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "P",
+      "asset_identity": "codebook_P",
+      "anchor_en": "Pumpkin",
+      "canonical_word_zh": "南瓜",
+      "representative_label_zh": "南瓜",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/P.png",
+      "current_svg_path": "game/data/learning/icons/P.svg",
+      "current_svg_sha256": "a3efb2c77670d50757cbec6484c189d4771f70100bc4dcaa9cd1be498426656f",
+      "current_svg_subject_observed": "横向宽椭圆南瓜，纵向瓜瓣，顶端短梗向右上弯。",
+      "production_view_recommended": "正面完整橙南瓜，宽圆外形，短梗/可选小叶。",
+      "semantic_invariants": "Pumpkin保留橙色瓜瓣与果柄；不改为雕脸灯笼或苹果。",
+      "contact_and_motion_requirements": "泛用托/接/送动作需要下方完整承托轮廓；叶子若保留应短且不遮瓜瓣。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One squat whole orange pumpkin with soft vertical ribs and a short curved brown-green stem. Warm muted orange, rounded silhouette, no carved face, no candle, no leaves that hide the body.",
+      "style_notes": "橙色与A的红苹果区别明确；不要万圣节表情。",
+      "story_steps_count": 148,
+      "derived_kind_counts": {
+        "catch": 21,
+        "fly": 1,
+        "greet": 2,
+        "lift": 2,
+        "light": 3,
+        "mark": 3,
+        "open": 5,
+        "place": 22,
+        "present": 37,
+        "roll": 10,
+        "tap": 2,
+        "transport": 38,
+        "travel": 2
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-242ada5e3cb6",
+          "word_examples": [
+            "apple"
+          ],
+          "action": "用叶子接住红苹果",
+          "derived_kind": "catch"
+        },
+        {
+          "story_id": "story-242ada5e3cb6",
+          "word_examples": [
+            "apple"
+          ],
+          "action": "接过苹果擦得发亮",
+          "derived_kind": "light"
+        },
+        {
+          "story_id": "story-59d75a45a8a5",
+          "word_examples": [
+            "grandpa"
+          ],
+          "action": "送上南瓜礼物",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-1b944bd0aa4b",
+          "word_examples": [
+            "happy"
+          ],
+          "action": "笑着接礼物",
+          "derived_kind": "catch"
+        }
+      ],
+      "prologue_primitive": "choose_option",
+      "prologue_source_plan_reveal": "突出分瓣外墙对应的南瓜纹路与果柄，保持橙色主图。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "Q",
+      "asset_identity": "codebook_Q",
+      "anchor_en": "Quilt",
+      "canonical_word_zh": "拼布被",
+      "representative_label_zh": "拼布被",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/Q.png",
+      "current_svg_path": "game/data/learning/icons/Q.svg",
+      "current_svg_sha256": "0db73234e1fb2755b2a842e30ce57b093e89fadf3706d54d834664205df5d607",
+      "current_svg_subject_observed": "正面完全展开3×3拼布被，圆角长方形、绿粉交错块与浅缝线。",
+      "production_view_recommended": "正面展开一整床小拼布被，四边完整可见。",
+      "semantic_invariants": "Quilt是多布片缝成的被子；不能变成地毯卷、枕头、棋盘或只一块布。",
+      "contact_and_motion_requirements": "quiet轻盖铃，question展开卡，square铺成广场；可整图平移/旋转，保持展开轮廓，收起状态不作为唯一底图。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One fully unfolded small patchwork quilt seen straight on, a rounded rectangular shape with a simple three-by-three grid of cream, sage and dusty-rose fabric patches and visible soft stitching. No letters, no bed, no pillow, no rolled bundle.",
+      "style_notes": "布边略软，别做硬棋盘；无需把问号印到被子上。",
+      "story_steps_count": 3,
+      "derived_kind_counts": {
+        "mark": 1,
+        "open": 2
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-6f1178c938ac",
+          "word_examples": [
+            "quiet"
+          ],
+          "action": "拼布被轻盖响铃",
+          "derived_kind": "mark"
+        },
+        {
+          "story_id": "story-a9c644e6d8d8",
+          "word_examples": [
+            "question"
+          ],
+          "action": "展开一张带问号的卡",
+          "derived_kind": "open"
+        },
+        {
+          "story_id": "story-fa2ca4098025",
+          "word_examples": [
+            "Tian'anmen Square"
+          ],
+          "action": "展开拼布被作宽阔广场地面",
+          "derived_kind": "open"
+        }
+      ],
+      "prologue_primitive": "drag_place",
+      "prologue_source_plan_reveal": "以多块布片拼成的一整床被子作主图，与现有拼布拱顶对应。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "R",
+      "asset_identity": "codebook_R",
+      "anchor_en": "Robot",
+      "canonical_word_zh": "机器人",
+      "representative_label_zh": "机器人",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/R.png",
+      "current_svg_path": "game/data/learning/icons/R.svg",
+      "current_svg_sha256": "67827f504f31a144886471b1317c371b393d783edce387a782381fa254d17d50",
+      "current_svg_subject_observed": "正面方头方身机器人，天线、圆眼、线嘴、折臂、双腿和胸钮。",
+      "production_view_recommended": "正面完整小机器人，双手放低略分开。",
+      "semantic_invariants": "Robot依赖机械头身/手臂腿，不能变成宇航员、玩具熊或人类。",
+      "contact_and_motion_requirements": "大量通用递/夹/拿动作，但现阶段多为整图移动；双手轮廓露出供后续定位，不固定握任何道具。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One small friendly toy robot facing forward, rounded square head and torso, two simple round eyes, a small antenna, short articulated arms with open simple clamp hands and two feet. Matte cream and sage paint with warm tan joints; no weapon, no held object, no letters.",
+      "style_notes": "机械结构简洁、低反光；眼睛不做发光屏文字。",
+      "story_steps_count": 429,
+      "derived_kind_counts": {
+        "catch": 22,
+        "fly": 2,
+        "greet": 10,
+        "lift": 14,
+        "light": 12,
+        "mark": 15,
+        "open": 7,
+        "place": 57,
+        "present": 246,
+        "roll": 7,
+        "transport": 36,
+        "travel": 1
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-6a2c796a4de2",
+          "word_examples": [
+            "afternoon"
+          ],
+          "action": "递出午后邀请给鸟巢",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-4fc337c73c7a",
+          "word_examples": [
+            "are"
+          ],
+          "action": "把“你们”指向合照中的两人",
+          "derived_kind": "light"
+        },
+        {
+          "story_id": "story-22f1f3245898",
+          "word_examples": [
+            "birthday"
+          ],
+          "action": "把礼物递给火车",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-fd1560977472",
+          "word_examples": [
+            "brother"
+          ],
+          "action": "用夹手连起同一家庭两张照片",
+          "derived_kind": "light"
+        }
+      ],
+      "prologue_primitive": "choose_option",
+      "prologue_source_plan_reveal": "方头、方身和机械手一起出现，代表完整机器人。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "S",
+      "asset_identity": "codebook_S",
+      "anchor_en": "Star",
+      "canonical_word_zh": "星星",
+      "representative_label_zh": "星星",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/S.png",
+      "current_svg_path": "game/data/learning/icons/S.svg",
+      "current_svg_sha256": "2aba577b3b2adf6c5ef7000041e6f151a223c0604e5bfa54b04e07f0568cd1c4",
+      "current_svg_subject_observed": "一角朝上的对称五角星，暖黄，无脸。",
+      "production_view_recommended": "正面一角向上，五角完整。",
+      "semantic_invariants": "Star必须五角且无额外角色脸；不可变成太阳、六角星或闪光十字。",
+      "contact_and_motion_requirements": "nose被顶起、飞入E后缩到0.45倍；中心与下方两个角不要错位，小尺寸仍可辨五角。",
+      "specialized_runtime_roles": [
+        "nose: sneeze_star / 星星飞行，随后缩为0.45倍"
+      ],
+      "production_subject_prompt_en": "One symmetrical five-point star with one point upward, softly rounded tips and warm golden-yellow matte shading. No face, no eyes, no sparkle halo, no extra stars, no trail.",
+      "style_notes": "源图不画鼻子、喷嚏轨迹或星光射线，全部留给动作层。",
+      "story_steps_count": 357,
+      "derived_kind_counts": {
+        "catch": 10,
+        "fly": 1,
+        "greet": 5,
+        "lift": 12,
+        "light": 179,
+        "mark": 8,
+        "open": 6,
+        "place": 19,
+        "present": 101,
+        "transport": 13,
+        "travel": 3
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-47d84614fc62",
+          "word_examples": [
+            "cheese"
+          ],
+          "action": "闪一下提醒大家看镜头",
+          "derived_kind": "lift"
+        },
+        {
+          "story_id": "story-f740ead5fb02",
+          "word_examples": [
+            "class"
+          ],
+          "action": "招呼第一排同学站好",
+          "derived_kind": "place"
+        },
+        {
+          "story_id": "story-f740ead5fb02",
+          "word_examples": [
+            "class"
+          ],
+          "action": "招呼第二排同学合影",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-0455e49c66fe",
+          "word_examples": [
+            "cousin"
+          ],
+          "action": "标出两位孩子",
+          "derived_kind": "present"
+        }
+      ],
+      "prologue_primitive": "drag_place",
+      "prologue_source_plan_reveal": "星形地坪和单颗星星图互相对应；天球仪只是所在场所的观察道具。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "T",
+      "asset_identity": "codebook_T",
+      "anchor_en": "Train",
+      "canonical_word_zh": "火车",
+      "representative_label_zh": "火车",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/T.png",
+      "current_svg_path": "game/data/learning/icons/T.svg",
+      "current_svg_sha256": "cf99cfe9f2cf995fdfdbf61c781e55b7fe1b0538a662ba967d73732aeacdd19c",
+      "current_svg_subject_observed": "左侧烟囱与烟、右侧驾驶室，车头朝左；三轮与水平底盘。",
+      "production_view_recommended": "保留左向侧面短火车头，车轮与车厢连接端清楚。",
+      "semantic_invariants": "Train必须火车头/车轮组合；不要换成汽车或只画一节箱体。",
+      "contact_and_motion_requirements": "football的车体与球同步右移72舞台单位，原图仍左向；这是既有运动方向，不用生图擅自翻转。球靠近底盘，替换后核查接触。",
+      "specialized_runtime_roles": [
+        "football: train_ball / 车与球同步移动"
+      ],
+      "production_subject_prompt_en": "One short toy steam locomotive in side view facing left, with a small chimney at the left, cab and window at the right, a simple horizontal chassis and three visible rounded wheels. Matte sage, cream and warm wood colors; no tracks, no long train, no letters, no billowing smoke.",
+      "style_notes": "底部轮子齐平；烟最多极小装饰，不能挤占车体尺寸。",
+      "story_steps_count": 481,
+      "derived_kind_counts": {
+        "catch": 8,
+        "fly": 1,
+        "greet": 2,
+        "lift": 6,
+        "light": 14,
+        "open": 2,
+        "place": 36,
+        "present": 37,
+        "roll": 4,
+        "tap": 1,
+        "transport": 366,
+        "travel": 4
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-6a2c796a4de2",
+          "word_examples": [
+            "afternoon"
+          ],
+          "action": "把茶点推到窗边",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-0309cf6f5eef",
+          "word_examples": [
+            "ant"
+          ],
+          "action": "慢慢载着蚂蚁到放大镜下",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-88979a8a629e",
+          "word_examples": [
+            "aunt"
+          ],
+          "action": "把亲属相册送到家庭聚会",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-e31df362c5c9",
+          "word_examples": [
+            "beautiful"
+          ],
+          "action": "载来装饰小旗",
+          "derived_kind": "transport"
+        }
+      ],
+      "prologue_primitive": "drag_place",
+      "prologue_source_plan_reveal": "通过车头、轮子和相接车厢突出 Train，与现有车站造型对应。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "U",
+      "asset_identity": "codebook_U",
+      "anchor_en": "Umbrella",
+      "canonical_word_zh": "雨伞",
+      "representative_label_zh": "雨伞",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/U.png",
+      "current_svg_path": "game/data/learning/icons/U.svg",
+      "current_svg_sha256": "7f9b03461abe59012ca898508dc035bf6cc6e456bdffeba0f9f08943b23ed79a",
+      "current_svg_subject_observed": "完全撑开拱伞，三段波浪下沿、两根弧骨；中央直杆与向右钩柄。",
+      "production_view_recommended": "正面撑开伞面，细杆、右弯柄完整。",
+      "semantic_invariants": "Umbrella依赖撑开伞面+细杆钩柄；不改成蘑菇或封闭雨衣。",
+      "contact_and_motion_requirements": "泛用翻/接/盖动作会移动整伞；伞尖、伞面中心、钩柄都需独立可辨，不画雨滴或人。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One fully open umbrella seen from the front, a softly arched sage-and-cream canopy with a scalloped lower edge, a slim central shaft and a curved handle hooking to the right. No rain, no person, no stand, no letters.",
+      "style_notes": "伞杆略加粗以适配66px；与M的短粗菌柄不同。",
+      "story_steps_count": 200,
+      "derived_kind_counts": {
+        "catch": 19,
+        "greet": 1,
+        "lift": 1,
+        "light": 3,
+        "mark": 4,
+        "open": 6,
+        "place": 6,
+        "present": 148,
+        "roll": 4,
+        "transport": 6,
+        "travel": 2
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-88979a8a629e",
+          "word_examples": [
+            "aunt"
+          ],
+          "action": "打开伞面连接到阿姨照片",
+          "derived_kind": "light"
+        },
+        {
+          "story_id": "story-e31df362c5c9",
+          "word_examples": [
+            "beautiful"
+          ],
+          "action": "撑开花边雨伞",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-e31df362c5c9",
+          "word_examples": [
+            "beautiful"
+          ],
+          "action": "替观众遮阳",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-2e3c6d172e90",
+          "word_examples": [
+            "blue"
+          ],
+          "action": "用倒伞接住蓝水",
+          "derived_kind": "catch"
+        }
+      ],
+      "prologue_primitive": "choose_option",
+      "prologue_source_plan_reveal": "强调撑开的伞面与弯柄，区别于 M 的菌盖与菌柄。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "V",
+      "asset_identity": "codebook_V",
+      "anchor_en": "Volcano",
+      "canonical_word_zh": "火山",
+      "representative_label_zh": "火山",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/V.png",
+      "current_svg_path": "game/data/learning/icons/V.svg",
+      "current_svg_sha256": "8b7c78abe156569cf4a9f60a146125576c00ac894b16b18c2b7ef44f8e847174",
+      "current_svg_subject_observed": "宽底山体、顶部平口，暖色锯齿熔岩边，三缕烟；无明确椭圆内腔。",
+      "production_view_recommended": "正面轻俯视矮锥火山，可强化可见小火山口。",
+      "semantic_invariants": "Volcano必须完整山体+山顶火山口/少量暖熔岩；不能只是普通石块或篝火。",
+      "contact_and_motion_requirements": "多数动作是温暖照明/烘暖；上方留净空让引擎放效果，不烘焙巨大爆炸或烟柱。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One small broad volcanic mountain with a clearly visible shallow crater at its top and a restrained warm-orange rim of lava. Rounded matte tan-grey rock, quiet friendly toy-like form, no eruption, no huge smoke plume, no scenery, no face.",
+      "style_notes": "火山口可更清楚，属于语义强化而非映射改变；保持温和暖色。",
+      "story_steps_count": 64,
+      "derived_kind_counts": {
+        "catch": 6,
+        "light": 5,
+        "mark": 1,
+        "open": 3,
+        "place": 7,
+        "present": 34,
+        "roll": 1,
+        "transport": 5,
+        "travel": 2
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-1e67bcfeada3",
+          "word_examples": [
+            "five"
+          ],
+          "action": "用五个凹槽接贝壳",
+          "derived_kind": "catch"
+        },
+        {
+          "story_id": "story-c4d200f854e8",
+          "word_examples": [
+            "have"
+          ],
+          "action": "暖起餐桌氛围",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-bef89144a762",
+          "word_examples": [
+            "love"
+          ],
+          "action": "用温暖光围住照片",
+          "derived_kind": "light"
+        },
+        {
+          "story_id": "story-8aa79ead0a96",
+          "word_examples": [
+            "lovely"
+          ],
+          "action": "烘出暖色背景",
+          "derived_kind": "present"
+        }
+      ],
+      "prologue_primitive": "observe_detail",
+      "prologue_source_plan_reveal": "以完整矮锥形山体加山顶火山口作代表，普通岩石只是辅助。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "W",
+      "asset_identity": "codebook_W",
+      "anchor_en": "Whale",
+      "canonical_word_zh": "鲸鱼",
+      "representative_label_zh": "鲸鱼",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/W.png",
+      "current_svg_path": "game/data/learning/icons/W.svg",
+      "current_svg_sha256": "989aa2b12a27a510bcc33cc7fbf996e0691d802175253194e36897256cb00a4d",
+      "current_svg_subject_observed": "鲸鱼朝左，眼左尾右上扬，浅腹和分叉喷水；无独立胸鳍。",
+      "production_view_recommended": "左向侧面完整鲸身、尾鳍、侧鳍；喷水不烘焙或只作短分离道具。",
+      "semantic_invariants": "Whale依赖长弧鲸身、尾鳍和鳍；不可变成鲨鱼、普通小鱼或海豚。",
+      "contact_and_motion_requirements": "文本多有喷水/泡泡，但当前通用动作未实现所有水形；头顶喷口位置清楚，水柱应独立效果，身体不被裁切。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One complete small whale in side view facing left, a broad rounded sage-blue body, a cream belly, a small readable eye, a simple side flipper and a clear raised tail at the right. No water spout in the base sprite, no ocean, no bubbles, no rider.",
+      "style_notes": "头部不要细尖；保留宽背和鲸尾，蓝灰可融入sage色系。",
+      "story_steps_count": 131,
+      "derived_kind_counts": {
+        "catch": 12,
+        "fly": 6,
+        "greet": 10,
+        "lift": 4,
+        "light": 4,
+        "mark": 5,
+        "open": 5,
+        "place": 11,
+        "present": 61,
+        "roll": 2,
+        "transport": 11
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-85fdd2ab8790",
+          "word_examples": [
+            "brown"
+          ],
+          "action": "喷一小股水让棕色均匀",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-c4af1beda440",
+          "word_examples": [
+            "cow"
+          ],
+          "action": "用奶白水幕框出奶牛轮廓",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-5a1310b86f8f",
+          "word_examples": [
+            "follow"
+          ],
+          "action": "喷水画出跟随的路线",
+          "derived_kind": "mark"
+        },
+        {
+          "story_id": "story-fcacb71121cd",
+          "word_examples": [
+            "how"
+          ],
+          "action": "喷出数量问泡让伙伴数",
+          "derived_kind": "greet"
+        }
+      ],
+      "prologue_primitive": "choose_option",
+      "prologue_source_plan_reveal": "由长弧鲸身看到侧鳍和明显尾鳍，再对应现有海洋馆轮廓。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "X",
+      "asset_identity": "codebook_X",
+      "anchor_en": "Xylophone",
+      "canonical_word_zh": "木琴",
+      "representative_label_zh": "木琴",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/X.png",
+      "current_svg_path": "game/data/learning/icons/X.svg",
+      "current_svg_sha256": "402175475089b5e74dffb63f81e47344d02975f3e2748c3c53dce14a99b69577",
+      "current_svg_subject_observed": "四条音条沿左下到右上阶梯排列，有底杆；两槌圆头在左上/右下。",
+      "production_view_recommended": "轻俯视的木琴，长短木音条成排，两个小琴槌可放两侧。",
+      "semantic_invariants": "Xylophone依赖成排不同长度木条；不能变成钢琴键、鼓、十字形字母X。",
+      "contact_and_motion_requirements": "敲击中心在音条区域；琴槌若并入主图要与键分离，若后续分层保留独立槌。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One compact wooden xylophone seen from a gentle top three-quarter angle, four clearly separated wooden bars of descending lengths on a simple frame, with two small round-headed mallets beside it. Warm cream, sage and muted coral accents; no music notes, no letters, no hands.",
+      "style_notes": "长短关系在66px仍明显；木质音条而非黑白键盘。",
+      "story_steps_count": 17,
+      "derived_kind_counts": {
+        "catch": 1,
+        "mark": 1,
+        "tap": 15
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-43cb6fd6e9cc",
+          "word_examples": [
+            "box"
+          ],
+          "action": "把一截琴板放进箱内并关盖",
+          "derived_kind": "mark"
+        },
+        {
+          "story_id": "story-11dced71ff4c",
+          "word_examples": [
+            "six"
+          ],
+          "action": "每颗敲一下共六声",
+          "derived_kind": "tap"
+        },
+        {
+          "story_id": "story-7519be5deba6",
+          "word_examples": [
+            "excuse me"
+          ],
+          "action": "轻敲引起注意",
+          "derived_kind": "tap"
+        },
+        {
+          "story_id": "story-76e41c17c37f",
+          "word_examples": [
+            "sixteen"
+          ],
+          "action": "敲六下确认",
+          "derived_kind": "tap"
+        }
+      ],
+      "prologue_primitive": "tap_feedback",
+      "prologue_source_plan_reveal": "成排长短木质音条和两支琴槌共同显露，区别于 D 的单个圆鼓。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "Y",
+      "asset_identity": "codebook_Y",
+      "anchor_en": "Yarn",
+      "canonical_word_zh": "毛线",
+      "representative_label_zh": "毛线",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/Y.png",
+      "current_svg_path": "game/data/learning/icons/Y.svg",
+      "current_svg_sha256": "0175cb093bb883a839a279cf083b686147606429a88a379192e74006681ee8ce",
+      "current_svg_subject_observed": "圆形交叉绕线毛线球；线尾从右下伸出，向右下绕回左。",
+      "production_view_recommended": "正面略立体线团，可见一小段右下外伸柔软线尾。",
+      "semantic_invariants": "Yarn依赖柔软线圈与线尾；不可变成有硬支架的地球仪或光滑皮球。",
+      "contact_and_motion_requirements": "织/连/围动作多为通用卡片提示；线尾根部清楚，长度短，不把大型编织物烘焙进主体。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One round ball of softly wound yarn with clear overlapping strands and a single short loose tail emerging at the lower right and curving gently back left. Dusty-rose and warm cream fibers, no needles, no scarf, no lettering.",
+      "style_notes": "线条粗简，避免高频细丝；保持G/Y一硬一软的结构区分。",
+      "story_steps_count": 165,
+      "derived_kind_counts": {
+        "catch": 9,
+        "fly": 3,
+        "greet": 2,
+        "lift": 4,
+        "light": 5,
+        "mark": 5,
+        "open": 2,
+        "place": 4,
+        "present": 104,
+        "transport": 27
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-22f1f3245898",
+          "word_examples": [
+            "birthday"
+          ],
+          "action": "织出寿星名字丝带",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-e28dc1d3449b",
+          "word_examples": [
+            "body"
+          ],
+          "action": "用毛线勾出整个身体轮廓",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-7a503b2d2e7d",
+          "word_examples": [
+            "boy"
+          ],
+          "action": "围出名框让男孩介绍自己",
+          "derived_kind": "present"
+        },
+        {
+          "story_id": "story-515694420bc4",
+          "word_examples": [
+            "eye"
+          ],
+          "action": "围出看物窗口",
+          "derived_kind": "present"
+        }
+      ],
+      "prologue_primitive": "trace_path",
+      "prologue_source_plan_reveal": "突出柔软线圈和伸出的线头，区别于 G 的经纬线与硬支架。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    },
+    {
+      "letter": "Z",
+      "asset_identity": "codebook_Z",
+      "anchor_en": "Zebra",
+      "canonical_word_zh": "斑马",
+      "representative_label_zh": "斑马",
+      "runtime_path_proposed": "res://assets/learning/storybook_v2/Z.png",
+      "current_svg_path": "game/data/learning/icons/Z.svg",
+      "current_svg_sha256": "fb549de8b7e61526da1787aba0ae5f9b0a6e087ea439e43db38981055043ae40",
+      "current_svg_subject_observed": "右向斑马：头颈右上、眼右、尾左，短鬃、可见侧腿与深条纹。",
+      "production_view_recommended": "保留右向侧面完整斑马，脚、耳、尾全在画内。",
+      "semantic_invariants": "Zebra必须马形与黑白条纹；不换成普通马、长颈鹿或条纹衣服。",
+      "contact_and_motion_requirements": "amazing踏气球接冰淇淋，zip拉拉链，zoo迎客；底部蹄区清楚，静态图不带气球/拉链/邮票框。",
+      "specialized_runtime_roles": [],
+      "production_subject_prompt_en": "One complete small friendly zebra in side view facing right, with a short upright mane, two ears, a clear horse-like muzzle, compact legs and a small tail at the left. Warm ivory body and soft charcoal stripes, no saddle, no clothes, no frame, no props.",
+      "style_notes": "保持黑白条纹的识别强度；不把深纹统一改成绿色。",
+      "story_steps_count": 3,
+      "derived_kind_counts": {
+        "catch": 1,
+        "present": 1,
+        "transport": 1
+      },
+      "authored_action_examples": [
+        {
+          "story_id": "story-694939d11811",
+          "word_examples": [
+            "amazing"
+          ],
+          "action": "踩着气球接住冰淇淋",
+          "derived_kind": "catch"
+        },
+        {
+          "story_id": "story-bff05be35798",
+          "word_examples": [
+            "zip"
+          ],
+          "action": "斑马把两边拉链齿对齐",
+          "derived_kind": "transport"
+        },
+        {
+          "story_id": "story-56385342667c",
+          "word_examples": [
+            "zoo"
+          ],
+          "action": "在斑马入口招呼参观者",
+          "derived_kind": "present"
+        }
+      ],
+      "prologue_primitive": "stamp_card",
+      "prologue_source_plan_reveal": "黑白条纹、马头和短鬃毛一起显露；邮票载体不替代 Zebra 主图。",
+      "prologue_implementation_note": "当前PrologueActivity使用整张图片的放大/恢复或暖色选择；JSON中的拆件、开盖、喷水等规划描述并不表示已有独立图层动画。",
+      "contact_validation_status": "design_constraint_only; not validated with new artwork or engine in this task"
+    }
+  ]
+}

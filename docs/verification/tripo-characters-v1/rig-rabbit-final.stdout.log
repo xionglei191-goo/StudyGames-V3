@@ -1,0 +1,21 @@
+00:00.766  blend            | Read blend: "F:\LoveStudy\assets\characters\tripo_v1\npc_rabbit_gardener\prepared.blend"
+Warning: Bone Heat Weighting: failed to find solution for one or more bones
+TRIPO_HEAT_WEIGHTS {"character": "npc_rabbit_gardener", "solved": false, "coverage": 0.0, "error": ""}
+TRIPO_GEODESIC {"id": "npc_rabbit_gardener", "covered": 20002, "vertices": 20002}
+Info: Saved as "rigged.blend"
+INFO Draco is available, use library at F:\Tools\Blender\blender-5.2.2-windows-x64\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_draco_bridge.dll
+INFO MeshOptimizer is available, use library at F:\Tools\Blender\blender-5.2.2-windows-x64\5.2\scripts\addons_core\io_scene_gltf2\bf_intern_meshopt_bridge.dll
+18:41:22 | INFO: Starting glTF 2.0 export
+18:41:22 | INFO: Extracting primitive: meshes[0]
+18:41:22 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+18:41:23 | INFO: Primitives created: 1
+18:41:25 | INFO: Finished glTF 2.0 export in 2.5597479343414307 s
+00:08.844  render           | Saved: 'F:\LoveStudy\assets\characters\tripo_v1\npc_rabbit_gardener\idle_rigged.png'
+00:09.062  render           | Saved: 'F:\LoveStudy\assets\characters\tripo_v1\npc_rabbit_gardener\greet_wave_rigged.png'
+00:09.250  render           | Saved: 'F:\LoveStudy\assets\characters\tripo_v1\npc_rabbit_gardener\walk_rigged.png'
+00:09.437  render           | Saved: 'F:\LoveStudy\assets\characters\tripo_v1\npc_rabbit_gardener\give_item_rigged.png'
+
+TRIPO_RIGGED {"id": "npc_rabbit_gardener", "bones": 20, "triangles": 39999, "morphs": {"Blink": 460, "Smile": 552, "Talk": 257}, "seconds": 8.7}
+Blender 5.2.2 LTS (hash d13f752e3b9c built 2026-09-15 01:37:04)
+
+Blender quit

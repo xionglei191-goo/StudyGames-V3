@@ -1,0 +1,371 @@
+{
+  "checks": [
+    {
+      "id": "u1_complete_fixture_normalizes",
+      "passed": true
+    },
+    {
+      "id": "cannot_claim_before_chapter",
+      "passed": true
+    },
+    {
+      "id": "cover_requires_post_office",
+      "passed": true
+    },
+    {
+      "id": "lingling_star_cover",
+      "passed": true
+    },
+    {
+      "id": "tim_flower_cover",
+      "passed": true
+    },
+    {
+      "id": "cover_choice_roundtrip",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/true/U2-01",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/true/U2-01",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/true/U2-02",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/true/U2-02",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/true/U2-03",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/true/U2-03",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/true/U2-04",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/true/U2-04",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/true/U2-05",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/true/U2-05",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/true/U2-06",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/true/U2-06",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/true/U2-07",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/true/U2-07",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/false/U2-01",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/false/U2-01",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/false/U2-02",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/false/U2-02",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/false/U2-03",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/false/U2-03",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/false/U2-04",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/false/U2-04",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/false/U2-05",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/false/U2-05",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/false/U2-06",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/false/U2-06",
+      "passed": true
+    },
+    {
+      "id": "complete_u2/false/U2-07",
+      "passed": true
+    },
+    {
+      "id": "valid_each_step/false/U2-07",
+      "passed": true
+    },
+    {
+      "id": "u2_atomically_owns_replies_and_clips",
+      "passed": true
+    },
+    {
+      "id": "same_reward_for_help_and_independent",
+      "passed": true
+    },
+    {
+      "id": "reward_item_set_is_fixed_not_per_answer",
+      "passed": true
+    },
+    {
+      "id": "learning_evidence_remains_distinct",
+      "passed": true
+    },
+    {
+      "id": "existing_photo_and_chapter_receipts_stay_separate",
+      "passed": true
+    },
+    {
+      "id": "duplicate_finish_does_not_grant_twice",
+      "passed": true
+    },
+    {
+      "id": "mailed_cover_cannot_be_rewritten",
+      "passed": true
+    },
+    {
+      "id": "friend_remembers_actual_cover",
+      "passed": true
+    },
+    {
+      "id": "display_edits_require_home",
+      "passed": true
+    },
+    {
+      "id": "begin_layout",
+      "passed": true
+    },
+    {
+      "id": "draft_theme_choice",
+      "passed": true
+    },
+    {
+      "id": "place_first_reply",
+      "passed": true
+    },
+    {
+      "id": "preview_does_not_change_display",
+      "passed": true
+    },
+    {
+      "id": "unfinished_draft_survives_disk_shape",
+      "passed": true
+    },
+    {
+      "id": "occupied_slot_moves_previous_card_back_to_tray",
+      "passed": true
+    },
+    {
+      "id": "no_overlapping_letters",
+      "passed": true
+    },
+    {
+      "id": "place_second_reply",
+      "passed": true
+    },
+    {
+      "id": "confirm_two_replies",
+      "passed": true
+    },
+    {
+      "id": "confirmed_world_layout_and_first_display",
+      "passed": true
+    },
+    {
+      "id": "double_confirm_idempotent",
+      "passed": true
+    },
+    {
+      "id": "cancel_restores_last_confirmed_display",
+      "passed": true
+    },
+    {
+      "id": "storing_reply_keeps_ownership_and_first_memory",
+      "passed": true
+    },
+    {
+      "id": "friend_memory_requires_matching_place",
+      "passed": true
+    },
+    {
+      "id": "friend_memory_saved",
+      "passed": true
+    },
+    {
+      "id": "friend_revisit_has_no_repeated_reward",
+      "passed": true
+    },
+    {
+      "id": "final_layout_normalizes",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt/revision/-1",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt/revision/1.5",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt/displayed_at/nan",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt/schema_version/2",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt/reward_receipt/{  }",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt/draft/{ \"style\": \"gold\", \"positions\": {  } }",
+      "passed": true
+    },
+    {
+      "id": "forged_reward_timestamp_rejected",
+      "passed": true
+    },
+    {
+      "id": "overlapping_saved_layout_rejected",
+      "passed": true
+    },
+    {
+      "id": "unknown_friend_rejected",
+      "passed": true
+    },
+    {
+      "id": "reward_without_chapter_rejected",
+      "passed": true
+    },
+    {
+      "id": "invalid_action_does_not_mutate/{ \"kind\": \"corner_place\", \"recipient\": \"textbook_tim\", \"slot\": \"ceiling\" }",
+      "passed": true
+    },
+    {
+      "id": "invalid_action_does_not_mutate/{ \"kind\": \"corner_style\", \"style\": \"premium\" }",
+      "passed": true
+    },
+    {
+      "id": "invalid_action_does_not_mutate/{ \"kind\": \"corner_place\", \"recipient\": \"stranger\", \"slot\": \"left\" }",
+      "passed": true
+    },
+    {
+      "id": "pre_feature_completed_save_migrates",
+      "passed": true
+    },
+    {
+      "id": "migration_uses_original_chapter_receipt",
+      "passed": true
+    },
+    {
+      "id": "migration_does_not_infer_learning",
+      "passed": true
+    },
+    {
+      "id": "old_unknown_cover_is_neutral",
+      "passed": true
+    },
+    {
+      "id": "migration_does_not_invent_arrangement",
+      "passed": true
+    },
+    {
+      "id": "unfinished_old_save_gets_no_reward",
+      "passed": true
+    },
+    {
+      "id": "real_disk_save",
+      "passed": true
+    },
+    {
+      "id": "real_disk_layout_reload",
+      "passed": true
+    },
+    {
+      "id": "transaction_begin",
+      "passed": true
+    },
+    {
+      "id": "transaction_draft_saved",
+      "passed": true
+    },
+    {
+      "id": "actual_draft_recovery",
+      "passed": true
+    },
+    {
+      "id": "disk_failure_does_not_confirm_reward_display",
+      "passed": true
+    },
+    {
+      "id": "failure_rolls_back_layout_revision_and_receipt",
+      "passed": true
+    },
+    {
+      "id": "retry_confirm_succeeds",
+      "passed": true
+    },
+    {
+      "id": "no_old_currency_or_learning_mutation",
+      "passed": true
+    },
+    {
+      "id": "real_transaction_repeat_chapter_is_noop",
+      "passed": true
+    },
+    {
+      "id": "production_preserved/user://island-save-v1.json",
+      "passed": true
+    },
+    {
+      "id": "production_preserved/user://island-save-v1.json.bak",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "result": "PASS",
+  "scope": "Pure state transitions, both learning support paths, old-save migration, real disk recovery and rollback. No child learning-efficacy claims."
+}

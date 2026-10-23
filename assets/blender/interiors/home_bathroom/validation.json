@@ -1,0 +1,283 @@
+{
+  "room_id": "home_bathroom",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "牙刷杯与镜子",
+      "position_blender": [
+        -4.8,
+        2.1,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        -2.1
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bathroom_01",
+      "activity": "认识牙刷与牙齿，跟着句子做刷牙动作。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "洗手池",
+      "position_blender": [
+        0.0,
+        3.0,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bathroom_02",
+      "activity": "打开水龙头洗手，用完记得关好。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "浴缸与花洒",
+      "position_blender": [
+        3.3,
+        2.1,
+        0.0
+      ],
+      "position_godot": [
+        3.3,
+        0.0,
+        -2.1
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bathroom_03",
+      "activity": "认识浴室，想想每天怎样保持身体清洁。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "毛巾收纳架",
+      "position_blender": [
+        -3.4,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -3.4,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bathroom_04",
+      "activity": "洗过脸后，把毛巾挂回原位。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "节水提示与卫生间",
+      "position_blender": [
+        3.4,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        3.4,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bathroom_05",
+      "activity": "检查水龙头已经关闭，养成节约用水的习惯。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Vanity",
+      "aabb_blender": [
+        -6.050000190734863,
+        3.624999761581421,
+        -0.06000000238418579,
+        -3.5500001907348633,
+        4.774999618530273,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hand_Wash_Sink",
+      "aabb_blender": [
+        -1.125,
+        4.5,
+        -0.06000000238418579,
+        1.125,
+        5.699999809265137,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Bathtub",
+      "aabb_blender": [
+        3.4000000953674316,
+        2.799999713897705,
+        0.0,
+        6.200000286102295,
+        6.599999904632568,
+        1.100000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Towel_Cabinet",
+      "aabb_blender": [
+        -6.46999979019165,
+        -4.625,
+        0.0,
+        -3.929999828338623,
+        -3.7749998569488525,
+        2.299999952316284
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Toilet",
+      "aabb_blender": [
+        4.5,
+        -4.900000095367432,
+        0.0,
+        5.899999618530273,
+        -3.0999999046325684,
+        1.5
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 368,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 3996724,
+  "glb_node_count": 381,
+  "triangles_instanced": 88828,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "58f7db6bffeffd9a119bc705de4d4eec05b3d77b5ccd7d31a9bd30a1c214122e",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/home_bathroom/home_bathroom_v01.blend",
+  "source_blend_preserved": false
+}

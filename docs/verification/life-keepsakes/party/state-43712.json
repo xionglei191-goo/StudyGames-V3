@@ -1,0 +1,251 @@
+{
+  "checks": [
+    {
+      "id": "unfinished_u3_cannot_arrange",
+      "passed": true
+    },
+    {
+      "id": "missing_feature_returns_empty_no_invented_party",
+      "passed": true
+    },
+    {
+      "id": "arrangement_requires_home",
+      "passed": true
+    },
+    {
+      "id": "begin_draft",
+      "passed": true
+    },
+    {
+      "id": "first_auto_seating_is_only_unconfirmed_preview",
+      "passed": true
+    },
+    {
+      "id": "draft_theme_change",
+      "passed": true
+    },
+    {
+      "id": "swap_anne_and_mingming",
+      "passed": true
+    },
+    {
+      "id": "occupied_seat_swaps_without_overlap",
+      "passed": true
+    },
+    {
+      "id": "draft_roundtrip_recovers_theme_and_seats",
+      "passed": true
+    },
+    {
+      "id": "cancel_keeps_empty_committed_layout",
+      "passed": true
+    },
+    {
+      "id": "confirm_arrangement",
+      "passed": true
+    },
+    {
+      "id": "arranged_does_not_mean_watched",
+      "passed": true
+    },
+    {
+      "id": "confirm_is_idempotent",
+      "passed": true
+    },
+    {
+      "id": "finish_without_playback_is_rejected",
+      "passed": true
+    },
+    {
+      "id": "begin_finite_performance",
+      "passed": true
+    },
+    {
+      "id": "out_of_order_beat_rejected",
+      "passed": true
+    },
+    {
+      "id": "early_finish_does_not_invent_memory",
+      "passed": true
+    },
+    {
+      "id": "unfinished_performance_protects_resume_layout",
+      "passed": true
+    },
+    {
+      "id": "first_visible_beat_commits",
+      "passed": true
+    },
+    {
+      "id": "duplicate_beat_noop",
+      "passed": true
+    },
+    {
+      "id": "too_fast_beat_rejected",
+      "passed": true
+    },
+    {
+      "id": "close_mid_playback_preserves_resume_without_memory",
+      "passed": true
+    },
+    {
+      "id": "resume_does_not_start_extra_session",
+      "passed": true
+    },
+    {
+      "id": "complete_visible_beat_1",
+      "passed": true
+    },
+    {
+      "id": "complete_visible_beat_2",
+      "passed": true
+    },
+    {
+      "id": "complete_visible_beat_3",
+      "passed": true
+    },
+    {
+      "id": "all_beats_await_atomic_memory_commit",
+      "passed": true
+    },
+    {
+      "id": "finished_four_beats_records_memory",
+      "passed": true
+    },
+    {
+      "id": "first_party_saved",
+      "passed": true
+    },
+    {
+      "id": "double_finish_has_no_extra_reward_or_memory",
+      "passed": true
+    },
+    {
+      "id": "cancel_after_watching_keeps_theme",
+      "passed": true
+    },
+    {
+      "id": "stale_session_id_rejected",
+      "passed": true
+    },
+    {
+      "id": "abandoned_replay_keeps_original_memory",
+      "passed": true
+    },
+    {
+      "id": "replay_preserves_first_memory_and_updates_last_theme",
+      "passed": true
+    },
+    {
+      "id": "party_never_mutates_currency_learning_or_chapter_receipts",
+      "passed": true
+    },
+    {
+      "id": "final_state_normalizes",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt_schema_version2",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt_revision-1",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt_revision0.5",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt_sequence-1",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt_confirmed_atnan",
+      "passed": true
+    },
+    {
+      "id": "reject_corrupt_draft{ \"theme\": \"gold\", \"seats\": {  } }",
+      "passed": true
+    },
+    {
+      "id": "reject_overlapping_layout",
+      "passed": true
+    },
+    {
+      "id": "reject_impossible_view_count",
+      "passed": true
+    },
+    {
+      "id": "reject_finish_with_missing_beats",
+      "passed": true
+    },
+    {
+      "id": "reject_unelapsed_performance",
+      "passed": true
+    },
+    {
+      "id": "reject_party_before_u3_completion",
+      "passed": true
+    },
+    {
+      "id": "invalid_event_does_not_mutate_party_theme",
+      "passed": true
+    },
+    {
+      "id": "invalid_event_does_not_mutate_party_seat",
+      "passed": true
+    },
+    {
+      "id": "invalid_event_does_not_mutate_party_beat",
+      "passed": true
+    },
+    {
+      "id": "supported_full_u3_fixture_is_valid",
+      "passed": true
+    },
+    {
+      "id": "old_u3_save_unlocks_no_fake_party",
+      "passed": true
+    },
+    {
+      "id": "old_save_keeps_help_records_unchanged",
+      "passed": true
+    },
+    {
+      "id": "transaction_begin",
+      "passed": true
+    },
+    {
+      "id": "transaction_draft_theme",
+      "passed": true
+    },
+    {
+      "id": "real_disk_draft_resume_keeps_world_unconfirmed",
+      "passed": true
+    },
+    {
+      "id": "failed_save_rolls_back_confirmation",
+      "passed": true
+    },
+    {
+      "id": "transaction_confirm_retry",
+      "passed": true
+    },
+    {
+      "id": "transaction_leaves_learning_currency_help_unchanged",
+      "passed": true
+    },
+    {
+      "id": "production_preserved_user://island-save-v1.json",
+      "passed": true
+    },
+    {
+      "id": "production_preserved_user://island-save-v1.json.bak",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "result": "PASS",
+  "scope": "State order, draft/cancel/recovery, timing gates, replay idempotency, old U3 migration, isolated disk rollback and untouched learning/currency. No visual or child-efficacy claim."
+}

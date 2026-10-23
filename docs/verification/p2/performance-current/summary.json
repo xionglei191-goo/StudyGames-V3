@@ -1,0 +1,5447 @@
+{
+  "schema_version": 1,
+  "kind": "p1_current_hardware_performance_evidence",
+  "formal_record_valid": true,
+  "invalid_reasons": [],
+  "hardware": {
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "debug_build": true,
+    "display_server": "Windows",
+    "engine": {
+      "build": "official",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (official)",
+      "timestamp": 0
+    },
+    "focus_policy": "native_background_NO_FOCUS_fixture_keeps_world_running",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "gpu_vendor": "NVIDIA",
+    "graphics_api": "3.3.0 NVIDIA 610.88",
+    "logical_processor_count": 12,
+    "max_fps": 0,
+    "msaa_3d": 2,
+    "os": "Windows",
+    "os_version": "10.0.26200",
+    "physics_ticks_per_second": 60,
+    "process_id": 36352,
+    "project_version": "0.8.0-dev",
+    "quality_scope": "current_runtime_settings_only_no_low_high_preset_claim",
+    "renderer": "gl_compatibility",
+    "requested_window": [
+      1440,
+      900
+    ],
+    "system_memory": {
+      "available": 72920678400,
+      "free": 42794921984,
+      "physical": 68625711104,
+      "stack": 8388608
+    },
+    "vsync_mode": 0,
+    "window_no_focus_flag": true
+  },
+  "wrapper": {
+    "command": [
+      "F:\\Tools\\Godot\\4.7.2\\Godot_v4.7.2-stable_win64.exe",
+      "--path",
+      "F:\\LoveStudy\\game",
+      "--script",
+      "res://tests/test_p1_performance.gd",
+      "--",
+      "--test-harness",
+      "--p1-output=F:/LoveStudy/docs/verification/p2/performance-current",
+      "--p1-duration=60",
+      "--p1-warmup=10",
+      "--p1-repeats=2",
+      "--p1-rooms=landmark_A,village,school",
+      "--p1-width=1440",
+      "--p1-height=900",
+      "--p1-weather=clear",
+      "--p1-day-phase=day",
+      "--p1-motion-seconds=0",
+      "--p1-motion-fps=4",
+      "--p1-allow-background"
+    ],
+    "pilot": false,
+    "conflicting_processes": [],
+    "started_utc": "2026-10-22T17:10:10.664009+00:00",
+    "memory_sample_interval_s": 0.25,
+    "output": "F:\\LoveStudy\\docs\\verification\\p2\\performance-current",
+    "gpu_conditions_before": {
+      "available": true,
+      "fields": [
+        "name",
+        "driver_version",
+        "pstate",
+        "temperature.gpu",
+        "utilization.gpu",
+        "clocks.current.graphics",
+        "clocks.current.memory",
+        "power.draw"
+      ],
+      "raw_csv": "NVIDIA GeForce RTX 4070, 610.88, P8, 42, 0, 210, 405, 4.76",
+      "error": "",
+      "epoch": 1792689011.3285587,
+      "scope": "pre_or_post_snapshot_only_not_continuous_throttling_verification"
+    },
+    "memory_process_id": 36352,
+    "returncode": 0,
+    "timed_out": false,
+    "elapsed_s": 866.140999999996,
+    "ended_utc": "2026-10-22T17:24:37.513073+00:00",
+    "memory_errors": [],
+    "source_files_unchanged": true,
+    "gpu_conditions_after": {
+      "available": true,
+      "fields": [
+        "name",
+        "driver_version",
+        "pstate",
+        "temperature.gpu",
+        "utilization.gpu",
+        "clocks.current.graphics",
+        "clocks.current.memory",
+        "power.draw"
+      ],
+      "raw_csv": "NVIDIA GeForce RTX 4070, 610.88, P5, 50, 0, 615, 810, 13.28",
+      "error": "",
+      "epoch": 1792689877.5943148,
+      "scope": "pre_or_post_snapshot_only_not_continuous_throttling_verification"
+    },
+    "runtime_error_lines": []
+  },
+  "stages": [
+    {
+      "actor_layout_after": [],
+      "actor_layout_before": [],
+      "background_fixture": true,
+      "camera_size": 15.539999961853027,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 18.2456, 25.170998, 26.902437)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.000708,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 20,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.18287347619417,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "landmark_A",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 1,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.18287347619417
+      },
+      "environment_enabled": false,
+      "failures": [],
+      "frame_csv": "01-landmark_A-r1-off.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 305229,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 624
+      },
+      "id": "01-landmark_A-r1-off",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "5d7474cc5ad72934984446e8566ad26add18ff6a7c75e2bf6ab0472f865976e6",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 1,
+      "room": "landmark_A",
+      "sample_count": 25139,
+      "sample_ended_utc": 1792689089.754,
+      "sample_started_utc": 1792689029.75,
+      "screenshot": "01-landmark_A-r1-off.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 20,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 9.98722761904822,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "landmark_A",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 1,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 9.98722761904822
+      },
+      "static_structure_signature": "c935be4545f0786f36a4d014057506cd2149da22b3af5ac9fa4d77bff5f69cce",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 25139,
+          "p50": 2.339,
+          "p95": 2.7,
+          "p99": 3.054619999999999,
+          "mean": 2.386757945821234,
+          "min": 2.227,
+          "max": 5.037
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 25139,
+          "p50": 3.192,
+          "p95": 4.612,
+          "p99": 170.903,
+          "mean": 6.164425195910736,
+          "min": 2.824,
+          "max": 170.903
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 25139,
+          "p50": 0.031,
+          "p95": 0.072,
+          "p99": 0.106,
+          "mean": 0.035641632523171166,
+          "min": 0.021,
+          "max": 0.106
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 25139,
+          "p50": 1.786,
+          "p95": 1.959,
+          "p99": 2.178,
+          "mean": 1.8093068538923585,
+          "min": 1.717,
+          "max": 4.39
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 25139,
+          "p50": 0.833,
+          "p95": 0.851,
+          "p99": 0.861,
+          "mean": 0.8366030072795257,
+          "min": 0.816,
+          "max": 1.352
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 25139,
+          "p50": 0.008,
+          "p95": 0.014,
+          "p99": 0.021,
+          "mean": 0.009140976172481005,
+          "min": 0.006,
+          "max": 0.228
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 25139,
+          "p50": 1352.0,
+          "p95": 1352.0,
+          "p99": 1352.0,
+          "mean": 1352.0,
+          "min": 1352.0,
+          "max": 1352.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 25139,
+          "p50": 421936.0,
+          "p95": 421936.0,
+          "p99": 421936.0,
+          "mean": 421936.0,
+          "min": 421936.0,
+          "max": 421936.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 25139,
+          "p50": 1298.0,
+          "p95": 1298.0,
+          "p99": 1298.0,
+          "mean": 1298.0,
+          "min": 1298.0,
+          "max": 1298.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 25139,
+          "p50": 230848744.0,
+          "p95": 233239139.2,
+          "p99": 233432199.04,
+          "mean": 230782395.66315287,
+          "min": 227998520.0,
+          "max": 233480464.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 25139,
+          "p50": 378265052.0,
+          "p95": 378265052.0,
+          "p99": 378265052.0,
+          "mean": 378265052.0,
+          "min": 378265052.0,
+          "max": 378265052.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 696422400.0,
+          "p95": 696442880.0,
+          "p99": 696451072.0,
+          "mean": 696403359.5983263,
+          "min": 696201216.0,
+          "max": 696455168.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1180655616.0,
+          "p95": 1180737536.0,
+          "p99": 1180737536.0,
+          "mean": 1180625847.1631799,
+          "min": 1180504064.0,
+          "max": 1180737536.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 8.333333333333334,
+          "p99": 8.854166666666666,
+          "mean": 8.165692995712414,
+          "min": 6.770833333333333,
+          "max": 9.375
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 100.0,
+          "p99": 106.25,
+          "mean": 97.98831594854896,
+          "min": 81.25,
+          "max": 112.5
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [],
+      "actor_layout_before": [],
+      "background_fixture": true,
+      "camera_size": 15.539999961853027,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 18.245619, 25.170998, 26.902416)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.000177,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 20,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.11901880952713,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "landmark_A",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 1,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.11901880952713
+      },
+      "environment_enabled": true,
+      "failures": [],
+      "frame_csv": "02-landmark_A-r1-on.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 305229,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 624
+      },
+      "id": "02-landmark_A-r1-on",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "5d7474cc5ad72934984446e8566ad26add18ff6a7c75e2bf6ab0472f865976e6",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 1,
+      "room": "landmark_A",
+      "sample_count": 24470,
+      "sample_ended_utc": 1792689160.706,
+      "sample_started_utc": 1792689100.702,
+      "screenshot": "02-landmark_A-r1-on.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 20,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 10.010117190476562,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "landmark_A",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 1,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 10.010117190476562
+      },
+      "static_structure_signature": "cbe11449d700576a4854d2cf684bd623ed63e9ca40320b8dcd889545bfb5d550",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 24470,
+          "p50": 2.41,
+          "p95": 2.776,
+          "p99": 3.173,
+          "mean": 2.4519892521454842,
+          "min": 2.282,
+          "max": 6.074
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 24470,
+          "p50": 3.365,
+          "p95": 5.415,
+          "p99": 170.791,
+          "mean": 6.244801961585615,
+          "min": 2.845,
+          "max": 170.791
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 24470,
+          "p50": 0.029,
+          "p95": 0.068,
+          "p99": 0.216,
+          "mean": 0.036855496526358805,
+          "min": 0.022,
+          "max": 0.216
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 24470,
+          "p50": 1.805,
+          "p95": 1.979,
+          "p99": 2.2102400000000055,
+          "mean": 1.8219685737637923,
+          "min": 1.727,
+          "max": 4.413
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 24470,
+          "p50": 0.858,
+          "p95": 0.88,
+          "p99": 0.923,
+          "mean": 0.8609299550469962,
+          "min": 0.839,
+          "max": 1.164
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 24470,
+          "p50": 0.015,
+          "p95": 0.026,
+          "p99": 0.045,
+          "mean": 0.016870780547609317,
+          "min": 0.012,
+          "max": 0.198
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 24470,
+          "p50": 1353.0,
+          "p95": 1353.0,
+          "p99": 1353.0,
+          "mean": 1353.0,
+          "min": 1353.0,
+          "max": 1353.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 24470,
+          "p50": 422124.0,
+          "p95": 422124.0,
+          "p99": 422124.0,
+          "mean": 422124.0,
+          "min": 422124.0,
+          "max": 422124.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 24470,
+          "p50": 1299.0,
+          "p95": 1299.0,
+          "p99": 1299.0,
+          "mean": 1299.0,
+          "min": 1299.0,
+          "max": 1299.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 24470,
+          "p50": 230817580.0,
+          "p95": 233150173.6,
+          "p99": 233338095.52,
+          "mean": 230743444.78921127,
+          "min": 228031580.0,
+          "max": 233385076.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 24470,
+          "p50": 378265052.0,
+          "p95": 378265052.0,
+          "p99": 378265052.0,
+          "mean": 378265052.0,
+          "min": 378265052.0,
+          "max": 378265052.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 695730176.0,
+          "p95": 695734272.0,
+          "p99": 695734272.0,
+          "mean": 695075501.5230125,
+          "min": 694276096.0,
+          "max": 695734272.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1179684864.0,
+          "p95": 1179684864.0,
+          "p99": 1179684864.0,
+          "mean": 1177473778.0753138,
+          "min": 1175150592.0,
+          "max": 1179684864.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 8.854166666666666,
+          "p99": 8.854166666666666,
+          "mean": 8.247971264309601,
+          "min": 6.770833333333333,
+          "max": 9.375
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 106.25,
+          "p99": 106.25,
+          "mean": 98.9756551717152,
+          "min": 81.25,
+          "max": 112.5
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [],
+      "actor_layout_before": [],
+      "background_fixture": true,
+      "camera_size": 15.539999961853027,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 18.2456, 25.170998, 26.902435)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.00205,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 20,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.12085623809634,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "landmark_A",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 1,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.12085623809634
+      },
+      "environment_enabled": true,
+      "failures": [],
+      "frame_csv": "03-landmark_A-r2-on.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 305229,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 624
+      },
+      "id": "03-landmark_A-r2-on",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "5d7474cc5ad72934984446e8566ad26add18ff6a7c75e2bf6ab0472f865976e6",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 2,
+      "room": "landmark_A",
+      "sample_count": 24407,
+      "sample_ended_utc": 1792689231.608,
+      "sample_started_utc": 1792689171.603,
+      "screenshot": "03-landmark_A-r2-on.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 20,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 10.001811190476612,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "landmark_A",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 1,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 10.001811190476612
+      },
+      "static_structure_signature": "f42859ed654f95ed67322c5d9f526e2d80071651df4d90fb25f968435ffd74ed",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 24407,
+          "p50": 2.408,
+          "p95": 2.805,
+          "p99": 3.2659399999999987,
+          "mean": 2.4583951325439424,
+          "min": 2.278,
+          "max": 6.309
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 24407,
+          "p50": 3.297,
+          "p95": 5.553,
+          "p99": 171.463,
+          "mean": 6.403418691359036,
+          "min": 2.867,
+          "max": 171.463
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 24407,
+          "p50": 0.028,
+          "p95": 0.105,
+          "p99": 0.157,
+          "mean": 0.04231179579628795,
+          "min": 0.022,
+          "max": 0.157
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 24407,
+          "p50": 1.803,
+          "p95": 1.994,
+          "p99": 2.2619399999999987,
+          "mean": 1.825190150366698,
+          "min": 1.716,
+          "max": 4.441
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 24407,
+          "p50": 0.856,
+          "p95": 0.884,
+          "p99": 0.904,
+          "mean": 0.8588782726267055,
+          "min": 0.838,
+          "max": 1.207
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 24407,
+          "p50": 0.015,
+          "p95": 0.027,
+          "p99": 0.046,
+          "mean": 0.01698602859835293,
+          "min": 0.012,
+          "max": 0.145
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 24407,
+          "p50": 1353.0,
+          "p95": 1353.0,
+          "p99": 1353.0,
+          "mean": 1353.0,
+          "min": 1353.0,
+          "max": 1353.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 24407,
+          "p50": 422124.0,
+          "p95": 422124.0,
+          "p99": 422124.0,
+          "mean": 422124.0,
+          "min": 422124.0,
+          "max": 422124.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 24407,
+          "p50": 1299.0,
+          "p95": 1299.0,
+          "p99": 1299.0,
+          "mean": 1299.0,
+          "min": 1299.0,
+          "max": 1299.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 24407,
+          "p50": 230822068.0,
+          "p95": 233149218.4,
+          "p99": 233336656.48,
+          "mean": 230747177.50366697,
+          "min": 228042116.0,
+          "max": 233383516.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 24407,
+          "p50": 378265052.0,
+          "p95": 378265052.0,
+          "p99": 378265052.0,
+          "mean": 378265052.0,
+          "min": 378265052.0,
+          "max": 378265052.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 694005760.0,
+          "p95": 694005760.0,
+          "p99": 694005760.0,
+          "mean": 653279334.8284519,
+          "min": 565862400.0,
+          "max": 694005760.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1174491136.0,
+          "p95": 1174491136.0,
+          "p99": 1174491136.0,
+          "mean": 1132062163.0125523,
+          "min": 1040986112.0,
+          "max": 1174491136.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 8.854166666666666,
+          "p99": 9.375,
+          "mean": 8.276308839715796,
+          "min": 6.770833333333333,
+          "max": 9.375
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 106.25,
+          "p99": 112.5,
+          "mean": 99.31570607658952,
+          "min": 81.25,
+          "max": 112.5
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [],
+      "actor_layout_before": [],
+      "background_fixture": true,
+      "camera_size": 15.539999961853027,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 18.245607, 25.170998, 26.902428)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.002536,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 20,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.10811661905274,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "landmark_A",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 1,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.10811661905274
+      },
+      "environment_enabled": false,
+      "failures": [],
+      "frame_csv": "04-landmark_A-r2-off.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 305229,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 624
+      },
+      "id": "04-landmark_A-r2-off",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "5d7474cc5ad72934984446e8566ad26add18ff6a7c75e2bf6ab0472f865976e6",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 2,
+      "room": "landmark_A",
+      "sample_count": 24975,
+      "sample_ended_utc": 1792689302.518,
+      "sample_started_utc": 1792689242.513,
+      "screenshot": "04-landmark_A-r2-off.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 20,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 9.991506666667066,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "landmark_A",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 1,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 9.991506666667066
+      },
+      "static_structure_signature": "d9cc746f3762d256446727a4a10a41c7fe6eea86896051af0ed5f6d04216b7a9",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 24975,
+          "p50": 2.355,
+          "p95": 2.735,
+          "p99": 3.1620399999999935,
+          "mean": 2.4025039439439437,
+          "min": 2.234,
+          "max": 5.1
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 24975,
+          "p50": 3.155,
+          "p95": 4.362,
+          "p99": 171.817,
+          "mean": 5.4248703903903905,
+          "min": 2.762,
+          "max": 171.817
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 24975,
+          "p50": 0.028,
+          "p95": 0.091,
+          "p99": 0.14,
+          "mean": 0.04020580580580581,
+          "min": 0.021,
+          "max": 0.14
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 24975,
+          "p50": 1.801,
+          "p95": 1.993,
+          "p99": 2.222,
+          "mean": 1.8227183583583584,
+          "min": 1.721,
+          "max": 3.52
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 24975,
+          "p50": 0.838,
+          "p95": 0.86,
+          "p99": 0.982,
+          "mean": 0.8435728528528529,
+          "min": 0.828,
+          "max": 1.381
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 24975,
+          "p50": 0.009,
+          "p95": 0.016,
+          "p99": 0.023,
+          "mean": 0.009944184184184184,
+          "min": 0.006,
+          "max": 0.232
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 24975,
+          "p50": 1352.0,
+          "p95": 1352.0,
+          "p99": 1352.0,
+          "mean": 1352.0,
+          "min": 1352.0,
+          "max": 1352.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 24975,
+          "p50": 421936.0,
+          "p95": 421936.0,
+          "p99": 421936.0,
+          "mean": 421936.0,
+          "min": 421936.0,
+          "max": 421936.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 24975,
+          "p50": 1298.0,
+          "p95": 1298.0,
+          "p99": 1298.0,
+          "mean": 1298.0,
+          "min": 1298.0,
+          "max": 1298.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 24975,
+          "p50": 230886820.0,
+          "p95": 233263045.6,
+          "p99": 233454845.92,
+          "mean": 230818601.37145144,
+          "min": 228052340.0,
+          "max": 233502796.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 24975,
+          "p50": 378265052.0,
+          "p95": 378265052.0,
+          "p99": 378265052.0,
+          "mean": 378265052.0,
+          "min": 378265052.0,
+          "max": 378265052.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 564547584.0,
+          "p95": 564547584.0,
+          "p99": 564547584.0,
+          "mean": 564547584.0,
+          "min": 564547584.0,
+          "max": 564547584.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1040695296.0,
+          "p95": 1040695296.0,
+          "p99": 1040695296.0,
+          "mean": 1040695296.0,
+          "min": 1040695296.0,
+          "max": 1040695296.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 8.854166666666666,
+          "p99": 8.854166666666666,
+          "mean": 8.282576606116006,
+          "min": 6.25,
+          "max": 8.854166666666666
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 106.25,
+          "p99": 106.25,
+          "mean": 99.39091927339206,
+          "min": 75.0,
+          "max": 106.25
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [],
+      "actor_layout_before": [],
+      "background_fixture": true,
+      "camera_size": 20.15999984741211,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 12, 30.750006, 45.75)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.003029,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 162,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.19875145456479,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "village",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 3,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.19875145456479
+      },
+      "environment_enabled": false,
+      "failures": [],
+      "frame_csv": "05-village-r1-off.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 2101374,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 4038
+      },
+      "id": "05-village-r1-off",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "6589e1b783e145b92b7d6787a7d2e1113c2f93292a0a8289c651aa26cfd90399",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 1,
+      "room": "village",
+      "sample_count": 15956,
+      "sample_ended_utc": 1792689377.257,
+      "sample_started_utc": 1792689317.251,
+      "screenshot": "05-village-r1-off.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 162,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 9.992552121212103,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "village",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 3,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 9.992552121212103
+      },
+      "static_structure_signature": "30381ad7076c7bcff44a5ccfa6edf95d5dd1dd03f8794d08afc85678232db4c3",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 15956,
+          "p50": 3.677,
+          "p95": 4.3782499999999995,
+          "p99": 4.920450000000001,
+          "mean": 3.760530772123339,
+          "min": 3.414,
+          "max": 7.944
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 15956,
+          "p50": 4.948,
+          "p95": 6.28,
+          "p99": 7.885,
+          "mean": 7.711638631235899,
+          "min": 4.271,
+          "max": 994.916
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 15956,
+          "p50": 0.031,
+          "p95": 0.045,
+          "p99": 0.081,
+          "mean": 0.03319089997493106,
+          "min": 0.025,
+          "max": 0.081
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 15956,
+          "p50": 2.757,
+          "p95": 3.21425,
+          "p99": 3.5439000000000016,
+          "mean": 2.8127337678616198,
+          "min": 2.579,
+          "max": 6.005
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 15956,
+          "p50": 1.334,
+          "p95": 1.382,
+          "p99": 1.432,
+          "mean": 1.316472173477062,
+          "min": 0.66,
+          "max": 3.402
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 15956,
+          "p50": 0.017,
+          "p95": 0.023,
+          "p99": 0.042,
+          "mean": 0.017534031085485086,
+          "min": 0.009,
+          "max": 0.133
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 15956,
+          "p50": 2278.0,
+          "p95": 2278.0,
+          "p99": 2278.0,
+          "mean": 2278.0,
+          "min": 2278.0,
+          "max": 2278.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 15956,
+          "p50": 980581.0,
+          "p95": 980581.0,
+          "p99": 980581.0,
+          "mean": 980581.0,
+          "min": 980581.0,
+          "max": 980581.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 15956,
+          "p50": 2231.0,
+          "p95": 2231.0,
+          "p99": 2231.0,
+          "mean": 2231.0,
+          "min": 2231.0,
+          "max": 2231.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 15956,
+          "p50": 570617641.0,
+          "p95": 572238913.0,
+          "p99": 572361447.4,
+          "mean": 570660953.8488343,
+          "min": 568891745.0,
+          "max": 572392081.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 15956,
+          "p50": 474469562.0,
+          "p95": 474469562.0,
+          "p99": 474469562.0,
+          "mean": 474469562.0,
+          "min": 474469562.0,
+          "max": 474469562.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1022377984.0,
+          "p95": 1022504960.0,
+          "p99": 1022504960.0,
+          "mean": 1022387529.9079498,
+          "min": 1022353408.0,
+          "max": 1022509056.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1623236608.0,
+          "p95": 1623371776.0,
+          "p99": 1623371776.0,
+          "mean": 1623246222.460251,
+          "min": 1623236608.0,
+          "max": 1623371776.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 13.541666666666666,
+          "p99": 15.947916666666668,
+          "mean": 9.301857509487618,
+          "min": 6.770833333333333,
+          "max": 20.3125
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 162.5,
+          "p99": 191.37500000000003,
+          "mean": 111.62229011385142,
+          "min": 81.25,
+          "max": 243.75
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [],
+      "actor_layout_before": [],
+      "background_fixture": true,
+      "camera_size": 20.15999984741211,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 12, 30.750006, 45.75)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.001466,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 162,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.19254566667797,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "village",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 3,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.19254566667797
+      },
+      "environment_enabled": true,
+      "failures": [],
+      "frame_csv": "06-village-r1-on.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 2101374,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 4038
+      },
+      "id": "06-village-r1-on",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "6589e1b783e145b92b7d6787a7d2e1113c2f93292a0a8289c651aa26cfd90399",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 1,
+      "room": "village",
+      "sample_count": 14486,
+      "sample_ended_utc": 1792689448.817,
+      "sample_started_utc": 1792689388.813,
+      "screenshot": "06-village-r1-on.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 162,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 9.995974333333228,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "village",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 3,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 9.995974333333228
+      },
+      "static_structure_signature": "2f97239a97dbcb3a97e895bdd403ec5da552df3152876cabe60675d7548d7277",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 14486,
+          "p50": 4.054,
+          "p95": 4.80475,
+          "p99": 5.343,
+          "mean": 4.142031340604722,
+          "min": 3.717,
+          "max": 10.19
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 14486,
+          "p50": 5.465,
+          "p95": 7.617,
+          "p99": 10.188,
+          "mean": 9.794049772193842,
+          "min": 4.6,
+          "max": 455.697
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 14486,
+          "p50": 0.033,
+          "p95": 0.061,
+          "p99": 0.109,
+          "mean": 0.037422476874223384,
+          "min": 0.027,
+          "max": 0.109
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 14486,
+          "p50": 2.786,
+          "p95": 3.286,
+          "p99": 3.623449999999999,
+          "mean": 2.852747549358001,
+          "min": 2.585,
+          "max": 7.421
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 14486,
+          "p50": 1.473,
+          "p95": 1.518,
+          "p99": 1.8441499999999997,
+          "mean": 1.450865111141792,
+          "min": 0.648,
+          "max": 3.434
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 14486,
+          "p50": 0.068,
+          "p95": 0.124,
+          "p99": 0.143,
+          "mean": 0.07499074968935523,
+          "min": 0.053,
+          "max": 0.343
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 14486,
+          "p50": 2281.0,
+          "p95": 2281.0,
+          "p99": 2281.0,
+          "mean": 2281.0,
+          "min": 2281.0,
+          "max": 2281.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 14486,
+          "p50": 982281.0,
+          "p95": 982281.0,
+          "p99": 982281.0,
+          "mean": 982281.0,
+          "min": 982281.0,
+          "max": 982281.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 14486,
+          "p50": 2234.0,
+          "p95": 2234.0,
+          "p99": 2234.0,
+          "mean": 2234.0,
+          "min": 2234.0,
+          "max": 2234.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 14486,
+          "p50": 572879425.0,
+          "p95": 574374249.0,
+          "p99": 574485493.8,
+          "mean": 572902531.5453541,
+          "min": 571294649.0,
+          "max": 574513305.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 14486,
+          "p50": 474469562.0,
+          "p95": 474469562.0,
+          "p99": 474469562.0,
+          "mean": 474469562.0,
+          "min": 474469562.0,
+          "max": 474469562.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1060716544.0,
+          "p95": 1067933696.0,
+          "p99": 1067933696.0,
+          "mean": 1063604995.2133892,
+          "min": 1060585472.0,
+          "max": 1067933696.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1656922112.0,
+          "p95": 1668210688.0,
+          "p99": 1668210688.0,
+          "mean": 1660702977.0711298,
+          "min": 1656791040.0,
+          "max": 1668210688.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 13.593749999999996,
+          "p99": 17.510416666666668,
+          "mean": 9.330916956973779,
+          "min": 7.291666666666667,
+          "max": 17.708333333333332
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 163.12499999999997,
+          "p99": 210.12500000000003,
+          "mean": 111.97100348368534,
+          "min": 87.5,
+          "max": 212.5
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [],
+      "actor_layout_before": [],
+      "background_fixture": true,
+      "camera_size": 20.15999984741211,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 12, 30.750006, 45.75)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.001419,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 162,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.1910080000122,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "village",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 3,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.1910080000122
+      },
+      "environment_enabled": true,
+      "failures": [],
+      "frame_csv": "07-village-r2-on.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 2101374,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 4038
+      },
+      "id": "07-village-r2-on",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "6589e1b783e145b92b7d6787a7d2e1113c2f93292a0a8289c651aa26cfd90399",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 2,
+      "room": "village",
+      "sample_count": 14414,
+      "sample_ended_utc": 1792689520.29,
+      "sample_started_utc": 1792689460.286,
+      "screenshot": "07-village-r2-on.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 162,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 9.993755666666628,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "village",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 3,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 9.993755666666628
+      },
+      "static_structure_signature": "7b939bc4a5230b5d570f565669b5471eaa370e3c7e0036c80662b61bdea85124",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 14414,
+          "p50": 4.0625,
+          "p95": 4.868,
+          "p99": 5.462,
+          "mean": 4.162718121270987,
+          "min": 3.724,
+          "max": 8.552
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 14414,
+          "p50": 5.369,
+          "p95": 7.644,
+          "p99": 458.98,
+          "mean": 13.351468502844458,
+          "min": 4.727,
+          "max": 458.98
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 14414,
+          "p50": 0.033,
+          "p95": 0.054049999999995636,
+          "p99": 0.075,
+          "mean": 0.03568572221451367,
+          "min": 0.026,
+          "max": 0.075
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 14414,
+          "p50": 2.793,
+          "p95": 3.316,
+          "p99": 3.705609999999997,
+          "mean": 2.864347023726932,
+          "min": 2.594,
+          "max": 5.745
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 14414,
+          "p50": 1.479,
+          "p95": 1.525,
+          "p99": 1.59,
+          "mean": 1.4860919938948245,
+          "min": 1.436,
+          "max": 2.209
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 14414,
+          "p50": 0.07,
+          "p95": 0.124,
+          "p99": 0.145,
+          "mean": 0.07659338143471625,
+          "min": 0.055,
+          "max": 0.297
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 14414,
+          "p50": 2281.0,
+          "p95": 2281.0,
+          "p99": 2281.0,
+          "mean": 2281.0,
+          "min": 2281.0,
+          "max": 2281.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 14414,
+          "p50": 982281.0,
+          "p95": 982281.0,
+          "p99": 982281.0,
+          "mean": 982281.0,
+          "min": 982281.0,
+          "max": 982281.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 14414,
+          "p50": 2234.0,
+          "p95": 2234.0,
+          "p99": 2234.0,
+          "mean": 2234.0,
+          "min": 2234.0,
+          "max": 2234.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 14414,
+          "p50": 572883641.0,
+          "p95": 574371684.2,
+          "p99": 574482376.04,
+          "mean": 572905617.1270987,
+          "min": 571305777.0,
+          "max": 574510049.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 14414,
+          "p50": 474469562.0,
+          "p95": 474469562.0,
+          "p99": 474469562.0,
+          "mean": 474469562.0,
+          "min": 474469562.0,
+          "max": 474469562.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1060990976.0,
+          "p95": 1060990976.0,
+          "p99": 1065869312.0,
+          "mean": 1061047017.5062761,
+          "min": 1060880384.0,
+          "max": 1065869312.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1662631936.0,
+          "p95": 1663234048.0,
+          "p99": 1667887104.0,
+          "mean": 1661259758.8619246,
+          "min": 1659494400.0,
+          "max": 1667887104.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 13.593749999999996,
+          "p99": 17.312500000000004,
+          "mean": 9.357462991179563,
+          "min": 7.291666666666667,
+          "max": 18.229166666666668
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 163.12499999999997,
+          "p99": 207.75000000000006,
+          "mean": 112.28955589415473,
+          "min": 87.5,
+          "max": 218.75
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [],
+      "actor_layout_before": [],
+      "background_fixture": true,
+      "camera_size": 20.15999984741211,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 12, 30.750006, 45.75)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.001444,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 162,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.19948037039319,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "village",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 3,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.19948037039319
+      },
+      "environment_enabled": false,
+      "failures": [],
+      "frame_csv": "08-village-r2-off.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 2101374,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 4038
+      },
+      "id": "08-village-r2-off",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "6589e1b783e145b92b7d6787a7d2e1113c2f93292a0a8289c651aa26cfd90399",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 2,
+      "room": "village",
+      "sample_count": 15732,
+      "sample_ended_utc": 1792689591.836,
+      "sample_started_utc": 1792689531.832,
+      "screenshot": "08-village-r2-off.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 162,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 9.997692333333369,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "village",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 3,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 9.997692333333369
+      },
+      "static_structure_signature": "90117cdca9eab0a619557723ed5f1f34776d8a3346cbf53a73dc113972999605",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 15732,
+          "p50": 3.696,
+          "p95": 4.592449999999999,
+          "p99": 5.217380000000001,
+          "mean": 3.813974319857615,
+          "min": 3.409,
+          "max": 8.821
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 15732,
+          "p50": 5.049,
+          "p95": 7.006,
+          "p99": 8.634,
+          "mean": 9.531010996694635,
+          "min": 4.202,
+          "max": 453.918
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 15732,
+          "p50": 0.034,
+          "p95": 0.057,
+          "p99": 0.086,
+          "mean": 0.03835303839308416,
+          "min": 0.025,
+          "max": 0.086
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 15732,
+          "p50": 2.775,
+          "p95": 3.338,
+          "p99": 3.7420700000000013,
+          "mean": 2.849184719043987,
+          "min": 2.577,
+          "max": 6.398
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 15732,
+          "p50": 1.345,
+          "p95": 1.494449999999999,
+          "p99": 1.587,
+          "mean": 1.3620235825069922,
+          "min": 1.303,
+          "max": 1.93
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 15732,
+          "p50": 0.017,
+          "p95": 0.023,
+          "p99": 0.033,
+          "mean": 0.01755263157894737,
+          "min": 0.011,
+          "max": 0.109
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 15732,
+          "p50": 2278.0,
+          "p95": 2278.0,
+          "p99": 2278.0,
+          "mean": 2278.0,
+          "min": 2278.0,
+          "max": 2278.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 15732,
+          "p50": 980581.0,
+          "p95": 980581.0,
+          "p99": 980581.0,
+          "mean": 980581.0,
+          "min": 980581.0,
+          "max": 980581.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 15732,
+          "p50": 2231.0,
+          "p95": 2231.0,
+          "p99": 2231.0,
+          "mean": 2231.0,
+          "min": 2231.0,
+          "max": 2231.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 15732,
+          "p50": 573020213.0,
+          "p95": 574622131.4,
+          "p99": 574742945.48,
+          "mean": 573060686.021612,
+          "min": 571315821.0,
+          "max": 574773149.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 15732,
+          "p50": 474469562.0,
+          "p95": 474469562.0,
+          "p99": 474469562.0,
+          "mean": 474469562.0,
+          "min": 474469562.0,
+          "max": 474469562.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1075003392.0,
+          "p95": 1075003392.0,
+          "p99": 1075003392.0,
+          "mean": 1075003392.0,
+          "min": 1075003392.0,
+          "max": 1075003392.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1679024128.0,
+          "p95": 1679024128.0,
+          "p99": 1679024128.0,
+          "mean": 1678374149.3556485,
+          "min": 1675411456.0,
+          "max": 1679024128.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 14.0625,
+          "p99": 16.989583333333336,
+          "mean": 9.56331463032281,
+          "min": 7.291666666666667,
+          "max": 23.4375
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 168.75,
+          "p99": 203.87500000000003,
+          "mean": 114.75977556387372,
+          "min": 87.5,
+          "max": 281.25
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [
+        {
+          "action": "idle",
+          "id": "textbook_anne",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            4.083459854125977,
+            0.01999979093670845,
+            16.848173141479492
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_lingling",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            7.1481733322143555,
+            0.01999979093670845,
+            14.816540718078613
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_peter",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            6.036581039428711,
+            0.01999979093670845,
+            16.467079162597656
+          ],
+          "visible": true
+        }
+      ],
+      "actor_layout_before": [
+        {
+          "action": "idle",
+          "id": "textbook_anne",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            4.083459854125977,
+            0.01999979093670845,
+            16.848173141479492
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_lingling",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            7.1481733322143555,
+            0.01999979093670845,
+            14.816540718078613
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_peter",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            6.036581039428711,
+            0.01999979093670845,
+            16.467079162597656
+          ],
+          "visible": true
+        }
+      ],
+      "background_fixture": true,
+      "camera_size": 26.040000915527344,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 18, 25.149986, 40.5)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.000096,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.0003200370370564209,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0003200370370564209,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.3200370370564209,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_lingling",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.69932003703359,
+            "walking_allowed": true,
+            "weighted_vertices": 62712
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0003200370370564209,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0003200370370564209,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.3200370370564209,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_peter",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.69932003703359,
+            "walking_allowed": true,
+            "weighted_vertices": 64500
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0003200370370564209,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0003200370370564209,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.3200370370564209,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_anne",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.69932003703359,
+            "walking_allowed": true,
+            "weighted_vertices": 59940
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 54,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.19466270370043,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "school",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.19466270370043
+      },
+      "environment_enabled": false,
+      "failures": [],
+      "frame_csv": "09-school-r1-off.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 322260,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 1161
+      },
+      "id": "09-school-r1-off",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "febdba35c6982b16954aa3d6f180e1ebc2d1d7551473107c4cc3999308eafddc",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 1,
+      "room": "school",
+      "sample_count": 17052,
+      "sample_ended_utc": 1792689663.225,
+      "sample_started_utc": 1792689603.222,
+      "screenshot": "09-school-r1-off.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.00043537037039101736,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.00043537037039101736,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.43537037039101734,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_lingling",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.5024353703705,
+            "walking_allowed": true,
+            "weighted_vertices": 62712
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.00043537037039101736,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.00043537037039101736,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.43537037039101734,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_peter",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.5024353703705,
+            "walking_allowed": true,
+            "weighted_vertices": 64500
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.00043537037039101736,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.00043537037039101736,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.43537037039101734,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_anne",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.5024353703705,
+            "walking_allowed": true,
+            "weighted_vertices": 59940
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 54,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 9.997778037037104,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "school",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 9.997778037037104
+      },
+      "static_structure_signature": "3ed75f3f8c9e6737f49009e8d28f539ab90631aed937b6fdb037d309b14e1dae",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 17052,
+          "p50": 3.438,
+          "p95": 4.086,
+          "p99": 4.603490000000002,
+          "mean": 3.518654468684025,
+          "min": 3.191,
+          "max": 7.388
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 17052,
+          "p50": 4.686,
+          "p95": 6.012,
+          "p99": 137.337,
+          "mean": 7.035462350457424,
+          "min": 3.911,
+          "max": 137.337
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 17052,
+          "p50": 0.044,
+          "p95": 0.085,
+          "p99": 0.093,
+          "mean": 0.04828759089842834,
+          "min": 0.036,
+          "max": 0.093
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 17052,
+          "p50": 2.481,
+          "p95": 2.889,
+          "p99": 3.207,
+          "mean": 2.532600281491907,
+          "min": 2.332,
+          "max": 4.683
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 17052,
+          "p50": 1.272,
+          "p95": 1.302,
+          "p99": 1.318,
+          "mean": 1.275370631011025,
+          "min": 1.245,
+          "max": 1.81
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 17052,
+          "p50": 0.048,
+          "p95": 0.069,
+          "p99": 0.124,
+          "mean": 0.05188464696223317,
+          "min": 0.038,
+          "max": 0.246
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 17052,
+          "p50": 1638.0,
+          "p95": 1638.0,
+          "p99": 1638.0,
+          "mean": 1638.0,
+          "min": 1638.0,
+          "max": 1638.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 17052,
+          "p50": 455222.0,
+          "p95": 455222.0,
+          "p99": 455222.0,
+          "mean": 455222.0,
+          "min": 455222.0,
+          "max": 455222.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 17052,
+          "p50": 1587.0,
+          "p95": 1587.0,
+          "p99": 1587.0,
+          "mean": 1587.0,
+          "min": 1587.0,
+          "max": 1587.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 17052,
+          "p50": 253150575.0,
+          "p95": 254769437.4,
+          "p99": 254900389.08,
+          "mean": 253109603.1121276,
+          "min": 251222359.0,
+          "max": 254933127.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 17052,
+          "p50": 128266875.0,
+          "p95": 128266875.0,
+          "p99": 128266875.0,
+          "mean": 128266875.0,
+          "min": 128266875.0,
+          "max": 128266875.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 767475712.0,
+          "p95": 767885312.0,
+          "p99": 767885312.0,
+          "mean": 767574238.7949791,
+          "min": 767410176.0,
+          "max": 767885312.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 926904320.0,
+          "p95": 927334400.0,
+          "p99": 927334400.0,
+          "mean": 927023549.5899582,
+          "min": 926867456.0,
+          "max": 927334400.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 13.541666666666666,
+          "p99": 15.427083333333336,
+          "mean": 9.000035218700898,
+          "min": 6.853070175354617,
+          "max": 17.1875
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 162.5,
+          "p99": 185.12500000000003,
+          "mean": 108.00042262441079,
+          "min": 82.2368421042554,
+          "max": 206.25
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [
+        {
+          "action": "idle",
+          "id": "textbook_anne",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            4.083459854125977,
+            0.01999979093670845,
+            16.848173141479492
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_lingling",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            7.1481733322143555,
+            0.01999979093670845,
+            14.816540718078613
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_peter",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            6.036581039428711,
+            0.01999979093670845,
+            16.467079162597656
+          ],
+          "visible": true
+        }
+      ],
+      "actor_layout_before": [
+        {
+          "action": "idle",
+          "id": "textbook_anne",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            4.083459854125977,
+            0.01999979093670845,
+            16.848173141479492
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_lingling",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            7.1481733322143555,
+            0.01999979093670845,
+            14.816540718078613
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_peter",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            6.036581039428711,
+            0.01999979093670845,
+            16.467079162597656
+          ],
+          "visible": true
+        }
+      ],
+      "background_fixture": true,
+      "camera_size": 26.040000915527344,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 18, 25.149986, 40.5)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.001366,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.0003258888888882164,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0003258888888882164,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.3258888888882164,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_lingling",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.35232588889966,
+            "walking_allowed": true,
+            "weighted_vertices": 62712
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0003258888888882164,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0003258888888882164,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.3258888888882164,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_peter",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.35232588889966,
+            "walking_allowed": true,
+            "weighted_vertices": 64500
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0003258888888882164,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0003258888888882164,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.3258888888882164,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_anne",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.35232588889966,
+            "walking_allowed": true,
+            "weighted_vertices": 59940
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 54,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.15232588889971,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "school",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.15232588889971
+      },
+      "environment_enabled": true,
+      "failures": [],
+      "frame_csv": "10-school-r1-on.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 322260,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 1161
+      },
+      "id": "10-school-r1-on",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "febdba35c6982b16954aa3d6f180e1ebc2d1d7551473107c4cc3999308eafddc",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 1,
+      "room": "school",
+      "sample_count": 16504,
+      "sample_ended_utc": 1792689734.049,
+      "sample_started_utc": 1792689674.045,
+      "screenshot": "10-school-r1-on.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.0007844069264068363,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0007844069264068363,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.7844069264068363,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_lingling",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.195784406926366,
+            "walking_allowed": true,
+            "weighted_vertices": 62712
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0007844069264068363,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0007844069264068363,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.7844069264068363,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_peter",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.195784406926366,
+            "walking_allowed": true,
+            "weighted_vertices": 64500
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0007844069264068363,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0007844069264068363,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.7844069264068363,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_anne",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.195784406926366,
+            "walking_allowed": true,
+            "weighted_vertices": 59940
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 54,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 9.995784406926422,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "school",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 9.995784406926422
+      },
+      "static_structure_signature": "a89c5d0bf86fa9a211422a0ac0e219e7a24d723712db9a4cb87c524fb21c0e4d",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 16504,
+          "p50": 3.555,
+          "p95": 4.172,
+          "p99": 4.829939999999999,
+          "mean": 3.635565075133301,
+          "min": 3.289,
+          "max": 10.303
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 16504,
+          "p50": 4.8,
+          "p95": 7.658,
+          "p99": 112.795,
+          "mean": 6.801419595249636,
+          "min": 4.203,
+          "max": 112.795
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 16504,
+          "p50": 0.047,
+          "p95": 0.109,
+          "p99": 0.159,
+          "mean": 0.052309985458070765,
+          "min": 0.032,
+          "max": 0.159
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 16504,
+          "p50": 2.481,
+          "p95": 2.892,
+          "p99": 3.307969999999999,
+          "mean": 2.5377821134270477,
+          "min": 2.339,
+          "max": 6.096
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 16504,
+          "p50": 1.312,
+          "p95": 1.351,
+          "p99": 1.376,
+          "mean": 1.3177704192922928,
+          "min": 1.293,
+          "max": 1.7
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 16504,
+          "p50": 0.062,
+          "p95": 0.094,
+          "p99": 0.159,
+          "mean": 0.06774666747455162,
+          "min": 0.053,
+          "max": 0.309
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 16504,
+          "p50": 1638.0,
+          "p95": 1638.0,
+          "p99": 1638.0,
+          "mean": 1638.0,
+          "min": 1638.0,
+          "max": 1638.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 16504,
+          "p50": 455222.0,
+          "p95": 455222.0,
+          "p99": 455222.0,
+          "mean": 455222.0,
+          "min": 455222.0,
+          "max": 455222.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 16504,
+          "p50": 1587.0,
+          "p95": 1587.0,
+          "p99": 1587.0,
+          "mean": 1587.0,
+          "min": 1587.0,
+          "max": 1587.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 16504,
+          "p50": 253165415.0,
+          "p95": 254736930.2,
+          "p99": 254863673.24,
+          "mean": 253118246.30634996,
+          "min": 251289807.0,
+          "max": 254895359.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 16504,
+          "p50": 128266875.0,
+          "p95": 128266875.0,
+          "p99": 128266875.0,
+          "mean": 128266875.0,
+          "min": 128266875.0,
+          "max": 128266875.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 647151616.0,
+          "p95": 769880064.0,
+          "p99": 769880064.0,
+          "mean": 662559465.5062761,
+          "min": 647151616.0,
+          "max": 769880064.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 796127232.0,
+          "p95": 927043584.0,
+          "p99": 927043584.0,
+          "mean": 812581086.7949791,
+          "min": 796127232.0,
+          "max": 927043584.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 13.072916666666664,
+          "p99": 14.0625,
+          "mean": 8.908295015683326,
+          "min": 6.770833333333333,
+          "max": 14.583333333333334
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 156.87499999999997,
+          "p99": 168.75,
+          "mean": 106.89954018819991,
+          "min": 81.25,
+          "max": 175.0
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [
+        {
+          "action": "idle",
+          "id": "textbook_anne",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            4.083459854125977,
+            0.01999979093670845,
+            16.848173141479492
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_lingling",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            7.1481733322143555,
+            0.01999979093670845,
+            14.816540718078613
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_peter",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            6.036581039428711,
+            0.01999979093670845,
+            16.467079162597656
+          ],
+          "visible": true
+        }
+      ],
+      "actor_layout_before": [
+        {
+          "action": "idle",
+          "id": "textbook_anne",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            4.083459854125977,
+            0.01999979093670845,
+            16.848173141479492
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_lingling",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            7.1481733322143555,
+            0.01999979093670845,
+            14.816540718078613
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_peter",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            6.036581039428711,
+            0.01999979093670845,
+            16.467079162597656
+          ],
+          "visible": true
+        }
+      ],
+      "background_fixture": true,
+      "camera_size": 26.040000915527344,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 18, 25.149986, 40.5)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.002109,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.00021499999999929215,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.00021499999999929215,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.21499999999929215,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_lingling",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.35621500001292,
+            "walking_allowed": true,
+            "weighted_vertices": 62712
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.00021499999999929215,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.00021499999999929215,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.21499999999929215,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_peter",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.35621500001292,
+            "walking_allowed": true,
+            "weighted_vertices": 64500
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.00021499999999929215,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.00021499999999929215,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.21499999999929215,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_anne",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.35621500001292,
+            "walking_allowed": true,
+            "weighted_vertices": 59940
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 54,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.15621500001298,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "school",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.15621500001298
+      },
+      "environment_enabled": true,
+      "failures": [],
+      "frame_csv": "11-school-r2-on.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 322260,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 1161
+      },
+      "id": "11-school-r2-on",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "febdba35c6982b16954aa3d6f180e1ebc2d1d7551473107c4cc3999308eafddc",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 2,
+      "room": "school",
+      "sample_count": 16481,
+      "sample_ended_utc": 1792689804.84,
+      "sample_started_utc": 1792689744.834,
+      "screenshot": "11-school-r2-on.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.0003227037037036324,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0003227037037036324,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.3227037037036324,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_lingling",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.201322703703587,
+            "walking_allowed": true,
+            "weighted_vertices": 62712
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0003227037037036324,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0003227037037036324,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.3227037037036324,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_peter",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.201322703703587,
+            "walking_allowed": true,
+            "weighted_vertices": 64500
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0003227037037036324,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0003227037037036324,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.3227037037036324,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_anne",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.201322703703587,
+            "walking_allowed": true,
+            "weighted_vertices": 59940
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 54,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 10.00132270370361,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "school",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 10.00132270370361
+      },
+      "static_structure_signature": "8904abc39575622310a4f6e9b697ad86350c9522d382c0a2327d7caaf0441402",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 16481,
+          "p50": 3.559,
+          "p95": 4.205,
+          "p99": 4.8052,
+          "mean": 3.640683757053577,
+          "min": 3.3,
+          "max": 7.81
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 16481,
+          "p50": 4.903,
+          "p95": 5.932,
+          "p99": 102.24,
+          "mean": 6.596366239912626,
+          "min": 4.122,
+          "max": 102.24
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 16481,
+          "p50": 0.042,
+          "p95": 0.066,
+          "p99": 0.11,
+          "mean": 0.046993871731084276,
+          "min": 0.031,
+          "max": 0.11
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 16481,
+          "p50": 2.487,
+          "p95": 2.9,
+          "p99": 3.2712000000000008,
+          "mean": 2.5420496329106244,
+          "min": 2.346,
+          "max": 5.542
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 16481,
+          "p50": 1.317,
+          "p95": 1.358,
+          "p99": 1.374,
+          "mean": 1.3226048783447606,
+          "min": 1.296,
+          "max": 1.864
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 16481,
+          "p50": 0.062,
+          "p95": 0.094,
+          "p99": 0.158,
+          "mean": 0.06713142406407378,
+          "min": 0.052,
+          "max": 0.314
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 16481,
+          "p50": 1638.0,
+          "p95": 1638.0,
+          "p99": 1638.0,
+          "mean": 1638.0,
+          "min": 1638.0,
+          "max": 1638.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 16481,
+          "p50": 455222.0,
+          "p95": 455222.0,
+          "p99": 455222.0,
+          "mean": 455222.0,
+          "min": 455222.0,
+          "max": 455222.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 16481,
+          "p50": 1587.0,
+          "p95": 1587.0,
+          "p99": 1587.0,
+          "mean": 1587.0,
+          "min": 1587.0,
+          "max": 1587.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 16481,
+          "p50": 253203127.0,
+          "p95": 254772655.0,
+          "p99": 254899221.4,
+          "mean": 253155689.21054548,
+          "min": 251329727.0,
+          "max": 254930863.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 16481,
+          "p50": 128266875.0,
+          "p95": 128266875.0,
+          "p99": 128266875.0,
+          "mean": 128266875.0,
+          "min": 128266875.0,
+          "max": 128266875.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 646701056.0,
+          "p95": 646701056.0,
+          "p99": 646701056.0,
+          "mean": 646667962.376569,
+          "min": 646545408.0,
+          "max": 646701056.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 796770304.0,
+          "p95": 796770304.0,
+          "p99": 796770304.0,
+          "mean": 796722454.4937239,
+          "min": 796540928.0,
+          "max": 796770304.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 239,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 239,
+          "p50": 8.333333333333334,
+          "p95": 12.5,
+          "p99": 13.864583333333336,
+          "mean": 8.76133886365871,
+          "min": 7.291666666666667,
+          "max": 14.0625
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 239,
+          "p50": 100.0,
+          "p95": 150.0,
+          "p99": 166.37500000000003,
+          "mean": 105.13606636390449,
+          "min": 87.5,
+          "max": 168.75
+        }
+      },
+      "process_memory_samples": 239,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 239,
+        "foreground_samples": 0,
+        "background_samples": 239,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    },
+    {
+      "actor_layout_after": [
+        {
+          "action": "idle",
+          "id": "textbook_anne",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            4.083459854125977,
+            0.01999979093670845,
+            16.848173141479492
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_lingling",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            7.1481733322143555,
+            0.01999979093670845,
+            14.816540718078613
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_peter",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            6.036581039428711,
+            0.01999979093670845,
+            16.467079162597656
+          ],
+          "visible": true
+        }
+      ],
+      "actor_layout_before": [
+        {
+          "action": "idle",
+          "id": "textbook_anne",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            4.083459854125977,
+            0.01999979093670845,
+            16.848173141479492
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_lingling",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            7.1481733322143555,
+            0.01999979093670845,
+            14.816540718078613
+          ],
+          "visible": true
+        },
+        {
+          "action": "idle",
+          "id": "textbook_peter",
+          "kind": "human",
+          "transform": [
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            0.0,
+            0.0,
+            0.0,
+            1.0,
+            6.036581039428711,
+            0.01999979093670845,
+            16.467079162597656
+          ],
+          "visible": true
+        }
+      ],
+      "background_fixture": true,
+      "camera_size": 26.040000915527344,
+      "camera_transform": "Transform3D(0.8, -0.3795207, 0.46471927, 0, 0.7745322, 0.63253456, -0.59999996, -0.5060277, 0.61962575, 18, 25.149986, 40.5)",
+      "camera_unchanged": true,
+      "day_phase": "day",
+      "elapsed_seconds": 60.002356,
+      "end_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.00026233333336028036,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.00026233333336028036,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.26233333336028036,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_lingling",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.35626233333629,
+            "walking_allowed": true,
+            "weighted_vertices": 62712
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.00026233333336028036,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.00026233333336028036,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.26233333336028036,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_peter",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.35626233333629,
+            "walking_allowed": true,
+            "weighted_vertices": 64500
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.00026233333336028036,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.00026233333336028036,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.26233333336028036,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_anne",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 70.35626233333629,
+            "walking_allowed": true,
+            "weighted_vertices": 59940
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 54,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 70.15626233333643,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "school",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 70.15626233333643
+      },
+      "environment_enabled": false,
+      "failures": [],
+      "frame_csv": "12-school-r2-off.csv",
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 322260,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 1161
+      },
+      "id": "12-school-r2-off",
+      "logical_viewport_size": [
+        1440.0,
+        900.0
+      ],
+      "minimized_frames": 0,
+      "paired_structure_signature": "febdba35c6982b16954aa3d6f180e1ebc2d1d7551473107c4cc3999308eafddc",
+      "paused_frames": 0,
+      "render_texture_size": [
+        1440,
+        900
+      ],
+      "repetition": 2,
+      "room": "school",
+      "sample_count": 16814,
+      "sample_ended_utc": 1792689875.619,
+      "sample_started_utc": 1792689815.615,
+      "screenshot": "12-school-r2-off.png",
+      "start_world_status": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.0005230000000280362,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0005230000000280362,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.5230000000280361,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_lingling",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.197522999999999,
+            "walking_allowed": true,
+            "weighted_vertices": 62712
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0005230000000280362,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0005230000000280362,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.5230000000280361,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_peter",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.197522999999999,
+            "walking_allowed": true,
+            "weighted_vertices": 64500
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0005230000000280362,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0005230000000280362,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.5230000000280361,
+              "phase": "loop",
+              "reduced_motion": false
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "storybook-character-v3",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Smile",
+              "Talk",
+              "Blink"
+            ],
+            "bones": 11,
+            "carrying_pose": false,
+            "character_id": "textbook_anne",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 77,
+            "skinned_meshes": 7,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 10.197522999999999,
+            "walking_allowed": true,
+            "weighted_vertices": 59940
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": false,
+        "foliage_count": 54,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 9.997523000000017,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "school",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 9.997523000000017
+      },
+      "static_structure_signature": "05fcd11685f5c468f0f94cdca5af110e059e6105e3876a6b8e2b02c4bbf5a70f",
+      "static_structure_unchanged": true,
+      "unfocused_frames": 0,
+      "warmup_seconds": 10.0,
+      "weather": "clear",
+      "window_size": [
+        1440,
+        900
+      ],
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 16814,
+          "p50": 3.459,
+          "p95": 4.297,
+          "p99": 4.972609999999997,
+          "mean": 3.5685949803734984,
+          "min": 3.159,
+          "max": 9.748
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 16814,
+          "p50": 4.991,
+          "p95": 6.36,
+          "p99": 100.911,
+          "mean": 6.718411799690734,
+          "min": 4.046,
+          "max": 100.911
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 16814,
+          "p50": 0.047,
+          "p95": 0.072,
+          "p99": 0.124,
+          "mean": 0.051000237896990604,
+          "min": 0.034,
+          "max": 0.124
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 16814,
+          "p50": 2.502,
+          "p95": 2.99,
+          "p99": 3.5174399999999877,
+          "mean": 2.5705154038301417,
+          "min": 2.317,
+          "max": 6.965
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 16814,
+          "p50": 1.284,
+          "p95": 1.316,
+          "p99": 1.433,
+          "mean": 1.2877070298560724,
+          "min": 1.255,
+          "max": 1.511
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 16814,
+          "p50": 0.047,
+          "p95": 0.073,
+          "p99": 0.125,
+          "mean": 0.05162138693945521,
+          "min": 0.038,
+          "max": 0.33
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 16814,
+          "p50": 1638.0,
+          "p95": 1638.0,
+          "p99": 1638.0,
+          "mean": 1638.0,
+          "min": 1638.0,
+          "max": 1638.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 16814,
+          "p50": 455222.0,
+          "p95": 455222.0,
+          "p99": 455222.0,
+          "mean": 455222.0,
+          "min": 455222.0,
+          "max": 455222.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 16814,
+          "p50": 1587.0,
+          "p95": 1587.0,
+          "p99": 1587.0,
+          "mean": 1587.0,
+          "min": 1587.0,
+          "max": 1587.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 16814,
+          "p50": 253274743.0,
+          "p95": 254873042.2,
+          "p99": 255002166.04,
+          "mean": 253231129.41846082,
+          "min": 251369375.0,
+          "max": 255034447.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 16814,
+          "p50": 128266875.0,
+          "p95": 128266875.0,
+          "p99": 128266875.0,
+          "mean": 128266875.0,
+          "min": 128266875.0,
+          "max": 128266875.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 240,
+          "p50": 647163904.0,
+          "p95": 647163904.0,
+          "p99": 647163904.0,
+          "mean": 647163904.0,
+          "min": 647163904.0,
+          "max": 647163904.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 240,
+          "p50": 797032448.0,
+          "p95": 797032448.0,
+          "p99": 797032448.0,
+          "mean": 797032448.0,
+          "min": 797032448.0,
+          "max": 797032448.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 240,
+          "p50": 1523621888.0,
+          "p95": 1523621888.0,
+          "p99": 1523621888.0,
+          "mean": 1523621888.0,
+          "min": 1523621888.0,
+          "max": 1523621888.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 240,
+          "p50": 8.333333333333334,
+          "p95": 12.513757861636618,
+          "p99": 14.0625,
+          "mean": 8.775826469179508,
+          "min": 6.770833333333333,
+          "max": 14.583333333333334
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 240,
+          "p50": 100.0,
+          "p95": 150.1650943396394,
+          "p99": 168.75,
+          "mean": 105.30991763015408,
+          "min": 81.25,
+          "max": 175.0
+        }
+      },
+      "process_memory_samples": 240,
+      "windows_focus_observation": {
+        "available": true,
+        "samples": 240,
+        "foreground_samples": 0,
+        "background_samples": 240,
+        "method": "Windows GetForegroundWindow/GetWindowThreadProcessId, read-only at 0.25s interval"
+      }
+    }
+  ],
+  "pairs": [
+    {
+      "room": "landmark_A",
+      "repetition": 1,
+      "off": "01-landmark_A-r1-off",
+      "on": "02-landmark_A-r1-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.07100000000000017,
+          "p95": 0.07599999999999962,
+          "p99": 0.11838000000000104
+        },
+        "engine_process_ms": {
+          "p50": 0.17300000000000004,
+          "p95": 0.8029999999999999,
+          "p99": -0.11199999999999477
+        },
+        "engine_physics_ms": {
+          "p50": -0.0019999999999999983,
+          "p95": -0.00399999999999999,
+          "p99": 0.11
+        },
+        "viewport_render_cpu_ms": {
+          "p50": 0.018999999999999906,
+          "p95": 0.020000000000000018,
+          "p99": 0.0322400000000056
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.025000000000000022,
+          "p95": 0.029000000000000026,
+          "p99": 0.062000000000000055
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.006999999999999999,
+          "p95": 0.011999999999999999,
+          "p99": 0.023999999999999997
+        },
+        "rendered_objects": {
+          "p50": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 188.0,
+          "p95": 188.0,
+          "p99": 188.0
+        },
+        "draw_calls": {
+          "p50": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": -31164.0,
+          "p95": -88965.59999999404,
+          "p99": -94103.51999998093
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": -692224.0,
+          "p95": -708608.0,
+          "p99": -716800.0
+        },
+        "private_commit_bytes": {
+          "p50": -970752.0,
+          "p95": -1052672.0,
+          "p99": -1052672.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": 0.5208333333333321,
+          "p99": 0.0
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": 6.25,
+          "p99": 0.0
+        }
+      }
+    },
+    {
+      "room": "landmark_A",
+      "repetition": 2,
+      "off": "04-landmark_A-r2-off",
+      "on": "03-landmark_A-r2-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.052999999999999936,
+          "p95": 0.07000000000000028,
+          "p99": 0.10390000000000521
+        },
+        "engine_process_ms": {
+          "p50": 0.14200000000000035,
+          "p95": 1.1909999999999998,
+          "p99": -0.3540000000000134
+        },
+        "engine_physics_ms": {
+          "p50": 0.0,
+          "p95": 0.013999999999999999,
+          "p99": 0.016999999999999987
+        },
+        "viewport_render_cpu_ms": {
+          "p50": 0.0020000000000000018,
+          "p95": 0.0009999999999998899,
+          "p99": 0.039939999999998754
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.018000000000000016,
+          "p95": 0.02400000000000002,
+          "p99": -0.07799999999999996
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.006,
+          "p95": 0.011,
+          "p99": 0.023
+        },
+        "rendered_objects": {
+          "p50": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 188.0,
+          "p95": 188.0,
+          "p99": 188.0
+        },
+        "draw_calls": {
+          "p50": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": -64752.0,
+          "p95": -113827.19999998808,
+          "p99": -118189.43999999762
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": 129458176.0,
+          "p95": 129458176.0,
+          "p99": 129458176.0
+        },
+        "private_commit_bytes": {
+          "p50": 133795840.0,
+          "p95": 133795840.0,
+          "p99": 133795840.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.5208333333333339
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 6.25
+        }
+      }
+    },
+    {
+      "room": "school",
+      "repetition": 1,
+      "off": "09-school-r1-off",
+      "on": "10-school-r1-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.11699999999999999,
+          "p95": 0.08599999999999941,
+          "p99": 0.22644999999999715
+        },
+        "engine_process_ms": {
+          "p50": 0.11399999999999988,
+          "p95": 1.6460000000000008,
+          "p99": -24.541999999999987
+        },
+        "engine_physics_ms": {
+          "p50": 0.0030000000000000027,
+          "p95": 0.023999999999999994,
+          "p99": 0.066
+        },
+        "viewport_render_cpu_ms": {
+          "p50": 0.0,
+          "p95": 0.0030000000000001137,
+          "p99": 0.10096999999999934
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.040000000000000036,
+          "p95": 0.04899999999999993,
+          "p99": 0.05799999999999983
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.013999999999999999,
+          "p95": 0.024999999999999994,
+          "p99": 0.035
+        },
+        "rendered_objects": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "draw_calls": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": 14840.0,
+          "p95": -32507.20000001788,
+          "p99": -36715.840000003576
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": -120324096.0,
+          "p95": 1994752.0,
+          "p99": 1994752.0
+        },
+        "private_commit_bytes": {
+          "p50": -130777088.0,
+          "p95": -290816.0,
+          "p99": -290816.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": -0.4687500000000018,
+          "p99": -1.3645833333333357
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": -5.625000000000028,
+          "p99": -16.37500000000003
+        }
+      }
+    },
+    {
+      "room": "school",
+      "repetition": 2,
+      "off": "12-school-r2-off",
+      "on": "11-school-r2-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.10000000000000009,
+          "p95": -0.09199999999999964,
+          "p99": -0.16740999999999673
+        },
+        "engine_process_ms": {
+          "p50": -0.08800000000000008,
+          "p95": -0.42799999999999994,
+          "p99": 1.3289999999999935
+        },
+        "engine_physics_ms": {
+          "p50": -0.0049999999999999975,
+          "p95": -0.0059999999999999915,
+          "p99": -0.013999999999999999
+        },
+        "viewport_render_cpu_ms": {
+          "p50": -0.01499999999999968,
+          "p95": -0.0900000000000003,
+          "p99": -0.2462399999999869
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.03299999999999992,
+          "p95": 0.04200000000000004,
+          "p99": -0.05899999999999994
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.015,
+          "p95": 0.021000000000000005,
+          "p99": 0.033
+        },
+        "rendered_objects": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "draw_calls": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": -71616.0,
+          "p95": -100387.19999998808,
+          "p99": -102944.6399999857
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": -462848.0,
+          "p95": -462848.0,
+          "p99": -462848.0
+        },
+        "private_commit_bytes": {
+          "p50": -262144.0,
+          "p95": -262144.0,
+          "p99": -262144.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": -0.013757861636618074,
+          "p99": -0.1979166666666643
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": -0.16509433963940978,
+          "p99": -2.3749999999999716
+        }
+      }
+    },
+    {
+      "room": "village",
+      "repetition": 1,
+      "off": "05-village-r1-off",
+      "on": "06-village-r1-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.3770000000000002,
+          "p95": 0.42650000000000077,
+          "p99": 0.4225499999999993
+        },
+        "engine_process_ms": {
+          "p50": 0.5169999999999995,
+          "p95": 1.3369999999999997,
+          "p99": 2.303000000000001
+        },
+        "engine_physics_ms": {
+          "p50": 0.0020000000000000018,
+          "p95": 0.016,
+          "p99": 0.027999999999999997
+        },
+        "viewport_render_cpu_ms": {
+          "p50": 0.028999999999999915,
+          "p95": 0.0717500000000002,
+          "p99": 0.07954999999999757
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.139,
+          "p95": 0.13600000000000012,
+          "p99": 0.4121499999999998
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.051000000000000004,
+          "p95": 0.101,
+          "p99": 0.10099999999999998
+        },
+        "rendered_objects": {
+          "p50": 3.0,
+          "p95": 3.0,
+          "p99": 3.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 1700.0,
+          "p95": 1700.0,
+          "p99": 1700.0
+        },
+        "draw_calls": {
+          "p50": 3.0,
+          "p95": 3.0,
+          "p99": 3.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": 2261784.0,
+          "p95": 2135336.0,
+          "p99": 2124046.399999976
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": 38338560.0,
+          "p95": 45428736.0,
+          "p99": 45428736.0
+        },
+        "private_commit_bytes": {
+          "p50": 33685504.0,
+          "p95": 44838912.0,
+          "p99": 44838912.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": 0.05208333333333037,
+          "p99": 1.5625
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": 0.6249999999999716,
+          "p99": 18.75
+        }
+      }
+    },
+    {
+      "room": "village",
+      "repetition": 2,
+      "off": "08-village-r2-off",
+      "on": "07-village-r2-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.3664999999999998,
+          "p95": 0.27555000000000174,
+          "p99": 0.2446199999999985
+        },
+        "engine_process_ms": {
+          "p50": 0.3199999999999994,
+          "p95": 0.6379999999999999,
+          "p99": 450.346
+        },
+        "engine_physics_ms": {
+          "p50": -0.0010000000000000009,
+          "p95": -0.002950000000004366,
+          "p99": -0.010999999999999996
+        },
+        "viewport_render_cpu_ms": {
+          "p50": 0.018000000000000238,
+          "p95": -0.02200000000000024,
+          "p99": -0.03646000000000438
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.13400000000000012,
+          "p95": 0.030550000000000965,
+          "p99": 0.0030000000000001137
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.053000000000000005,
+          "p95": 0.101,
+          "p99": 0.11199999999999999
+        },
+        "rendered_objects": {
+          "p50": 3.0,
+          "p95": 3.0,
+          "p99": 3.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 1700.0,
+          "p95": 1700.0,
+          "p99": 1700.0
+        },
+        "draw_calls": {
+          "p50": 3.0,
+          "p95": 3.0,
+          "p99": 3.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": -136572.0,
+          "p95": -250447.19999992847,
+          "p99": -260569.44000005722
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": -14012416.0,
+          "p95": -14012416.0,
+          "p99": -9134080.0
+        },
+        "private_commit_bytes": {
+          "p50": -16392192.0,
+          "p95": -15790080.0,
+          "p99": -11137024.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": -0.46875000000000355,
+          "p99": 0.32291666666666785
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": -5.625000000000028,
+          "p99": 3.8750000000000284
+        }
+      }
+    }
+  ],
+  "metric_definitions": {
+    "engine_process_ms": "Diagnostic Performance.TIME_PROCESS monitor: this engine publishes the preceding one-second interval maximum, held between updates. Not per-frame CPU timing; prior screenshot/setup work can remain cached.",
+    "engine_physics_ms": "Diagnostic Performance.TIME_PHYSICS_PROCESS monitor: preceding one-second interval maximum, not per-frame physics timing.",
+    "viewport_render_cpu_ms": "Measured root-viewport render CPU time only, excluding other engine subsystems and other viewports.",
+    "process_cpu_percent_machine": "Windows cumulative process kernel+user CPU time delta divided by elapsed wall time and logical processor count.",
+    "engine_monitor_implementation_source": "https://github.com/godotengine/godot/blob/ed1daf0bf/main/main.cpp#L4723-L4761"
+  },
+  "limitations": [
+    "One actual machine and current GL Compatibility settings; no low/standard/high preset acceptance.",
+    "Static camera and stationary player. Does not measure gameplay travel or word-story animation.",
+    "Environment off disables foliage deformation, water overlay and rain display while retaining actors, weather lighting/fog and resident resources. The delta is not total weather cost or asset-unloading memory savings.",
+    "Viewport GPU/CPU timers cover the root viewport only; they are not whole-process GPU time.",
+    "Rendered primitives monitor counts vertices/indices across passes, not triangles.",
+    "scene_mesh_triangles counts visible-in-tree mesh geometry, including off-camera meshes; excludes MultiMesh and repeated render passes.",
+    "Godot monitor updates can lag. Recorder overhead is present in both modes.",
+    "TIME_PROCESS and TIME_PHYSICS_PROCESS are cached one-second maxima in this engine. Their sampled quantiles are diagnostics, not per-frame CPU distributions or CPU budget acceptance; screenshot/setup spikes may remain cached.",
+    "GPU timer all-zero values are reported unavailable; CPU timings are not substituted for GPU.",
+    "Working set is resident process memory; private commit and engine static memory are separate metrics.",
+    "If background fixture is enabled, it overrides focus-pause only inside the profiler; this is not foreground user experience or normal game background behavior.",
+    "Requested NO_FOCUS does not prove background operation. Per-stage Windows foreground PID observations report actual foreground/background samples separately from Godot's focus flag.",
+    "Windows compositor occlusion is not separately measured. Do not minimize the capture window or overlap competing render tests.",
+    "This records performance; device-class budgets require designated target hardware and acceptance thresholds."
+  ]
+}

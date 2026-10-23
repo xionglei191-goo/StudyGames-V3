@@ -1,0 +1,142 @@
+{
+  "date": "2026-10-23",
+  "scope": "planning-only static consistency; no runtime or child validation",
+  "status": "passed",
+  "task_card_ids": [
+    "TR-01",
+    "TR-02",
+    "TR-03",
+    "TR-04",
+    "TR-05",
+    "TR-06",
+    "TR-07",
+    "TR-08"
+  ],
+  "local_links": [
+    {
+      "source": "README.md",
+      "target": "首版任务卡.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "../../verification/p2/README.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "../../../game/scripts/game_state.gd",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "../../../game/scripts/journey_progress.gd",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "../../../game/scripts/p2_progress.gd",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "../../../game/data/learning/p2_journey.json",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "../../../GDD.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "../mainline/主线状态与成长规则.md",
+      "exists": true
+    },
+    {
+      "source": "README.md",
+      "target": "设计核查记录.md",
+      "exists": true
+    },
+    {
+      "source": "设计核查记录.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "source": "设计核查记录.md",
+      "target": "首版任务卡.md",
+      "exists": true
+    },
+    {
+      "source": "设计核查记录.md",
+      "target": "validation.json",
+      "exists": true
+    },
+    {
+      "source": "首版任务卡.md",
+      "target": "README.md",
+      "exists": true
+    }
+  ],
+  "u1_references": [
+    "U1-01",
+    "U1-08",
+    "U1-09",
+    "U1-10"
+  ],
+  "u1_references_exist": true,
+  "u2_u3_references": [
+    "U2-01",
+    "U2-04",
+    "U2-07",
+    "U3-01",
+    "U3-09"
+  ],
+  "u2_u3_references_exist": true,
+  "economy_recalculated": {
+    "existing_early_gross": 115,
+    "existing_first_activities": 32,
+    "existing_decorations": 105,
+    "proposed_new_coins": 0,
+    "proposed_mandatory_spending": 0
+  },
+  "source_checks": [
+    {
+      "path": "game/project.godot",
+      "sha256_before": "F30676F2BB719D89EDE8B03A29431D37974CBFFA9E72A1E5D997D1DA0D6593A9",
+      "sha256_after": "F30676F2BB719D89EDE8B03A29431D37974CBFFA9E72A1E5D997D1DA0D6593A9",
+      "unchanged": true
+    },
+    {
+      "path": "game/scripts/game_state.gd",
+      "sha256_before": "987B894959FC9BD4E53CB270C222AA857B5BDDF53861CFA7AF0F805A7B893BA8",
+      "sha256_after": "987B894959FC9BD4E53CB270C222AA857B5BDDF53861CFA7AF0F805A7B893BA8",
+      "unchanged": true
+    },
+    {
+      "path": "game/scripts/journey_progress.gd",
+      "sha256_before": "FFE9EDCE970242D2CBA907FDAA43A771EC56A9456030D4A77BB5E1D4003E7299",
+      "sha256_after": "FFE9EDCE970242D2CBA907FDAA43A771EC56A9456030D4A77BB5E1D4003E7299",
+      "unchanged": true
+    },
+    {
+      "path": "game/scripts/p2_progress.gd",
+      "sha256_before": "5603C79D9926D134E78BEFE8293BAC7E6C87D3181C6282F00858E9EF0AEDF102",
+      "sha256_after": "5603C79D9926D134E78BEFE8293BAC7E6C87D3181C6282F00858E9EF0AEDF102",
+      "unchanged": true
+    },
+    {
+      "path": "game/data/learning/p2_journey.json",
+      "sha256_before": "4C1777618BE97DEEC7C406E64E7F44BC3331D72BEAF118AA821C7587E207F7D3",
+      "sha256_after": "4C1777618BE97DEEC7C406E64E7F44BC3331D72BEAF118AA821C7587E207F7D3",
+      "unchanged": true
+    },
+    {
+      "path": "GDD.md",
+      "sha256_before": "98842A3ABFD2CF83D5EFFA4645A5E842E904DCB1E7608D1EB6DCD525200BC378",
+      "sha256_after": "98842A3ABFD2CF83D5EFFA4645A5E842E904DCB1E7608D1EB6DCD525200BC378",
+      "unchanged": true
+    }
+  ]
+}

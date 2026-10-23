@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-10-23T00:28:20.795561+08:00",
+  "result": "PASS",
+  "checks": 8793,
+  "source_scene_count": 36,
+  "counts": {
+    "environment assets": 24,
+    "npc characters": 144,
+    "clips": 40,
+    "behavior states": 11,
+    "textbook characters": 142,
+    "mnemonic miniatures": 26,
+    "orthography assets": 8,
+    "mnemonic components": 10,
+    "mnemonic samples": 20,
+    "special rig basic specs": 9,
+    "special pose specs": 18,
+    "special action work orders": 26
+  },
+  "textbook_character_ids_covered": 142,
+  "textbook_candidates_count": 44,
+  "textbook_named_objects_count": 2,
+  "pending_behavior_bindings": [],
+  "planned_pose_bindings": [
+    "npc_textbook_doggie/idle",
+    "npc_textbook_doggie/event_wait",
+    "npc_textbook_robbie/idle",
+    "npc_textbook_robbie/event_wait",
+    "npc_textbook_kitty/idle",
+    "npc_textbook_kitty/event_wait",
+    "npc_textbook_elephant_ella/idle",
+    "npc_textbook_elephant_ella/event_wait",
+    "npc_textbook_dahuang/idle",
+    "npc_textbook_dahuang/event_wait",
+    "npc_textbook_harry/idle",
+    "npc_textbook_harry/event_wait",
+    "npc_textbook_jeff/idle",
+    "npc_textbook_jeff/event_wait",
+    "npc_textbook_spot/idle",
+    "npc_textbook_spot/event_wait",
+    "npc_textbook_nick/idle",
+    "npc_textbook_nick/event_wait",
+    "npc_textbook_fendi/idle",
+    "npc_textbook_fendi/event_wait",
+    "npc_textbook_qinmou/idle",
+    "npc_textbook_qinmou/event_wait",
+    "npc_textbook_bunny/idle",
+    "npc_textbook_bunny/event_wait",
+    "npc_textbook_mimi/idle",
+    "npc_textbook_mimi/event_wait",
+    "npc_textbook_puppy/idle",
+    "npc_textbook_puppy/event_wait",
+    "npc_textbook_nian/idle",
+    "npc_textbook_nian/event_wait",
+    "npc_textbook_jake/idle",
+    "npc_textbook_jake/event_wait",
+    "npc_textbook_bob_bird/idle",
+    "npc_textbook_bob_bird/event_wait",
+    "npc_textbook_baker_bird/idle",
+    "npc_textbook_baker_bird/event_wait",
+    "npc_textbook_ben_bird/idle",
+    "npc_textbook_ben_bird/event_wait",
+    "npc_textbook_jane_bird/idle",
+    "npc_textbook_jane_bird/event_wait",
+    "npc_textbook_judy_bird/idle",
+    "npc_textbook_judy_bird/event_wait",
+    "npc_textbook_julia_bird/idle",
+    "npc_textbook_julia_bird/event_wait",
+    "npc_textbook_kelly/idle",
+    "npc_textbook_kelly/event_wait",
+    "npc_textbook_kent/idle",
+    "npc_textbook_kent/event_wait",
+    "npc_textbook_kathy/idle",
+    "npc_textbook_kathy/event_wait",
+    "npc_textbook_karen/idle",
+    "npc_textbook_karen/event_wait"
+  ],
+  "mnemonic_source_counts": {
+    "books": 8,
+    "lexemes": 1073,
+    "stories": 1096,
+    "occurrences": 1314
+  },
+  "failures": [],
+  "limitations": [
+    "Planning verification only: no character binding, weather implementation, in-engine animation review or performance test.",
+    "52 character/behavior bindings resolve to explicit planned static pose specs, not produced animations; 26 source-scene action work orders still require editorial breakdown and production before their chapter release."
+  ],
+  "planning_files": [
+    {
+      "path": "docs/planning/art/build_art_integration.py",
+      "bytes": 27026,
+      "sha256": "4552647248b7968528ae4a66eb97352992881e0f48f107aa98c097aa0ac4deb9"
+    },
+    {
+      "path": "docs/planning/art/environment_motion_assets.json",
+      "bytes": 80245,
+      "sha256": "315293523e7e584bb632377c61819be43048473a20b44526652b77bf94211686"
+    },
+    {
+      "path": "docs/planning/art/mnemonic_story_assets.json",
+      "bytes": 238330,
+      "sha256": "8446669e0eac8a2ce1e43d433a85f9c064eb131ed9c21ef66b5bb2029945e8e1"
+    },
+    {
+      "path": "docs/planning/art/npc_animation_assets.json",
+      "bytes": 1228537,
+      "sha256": "415361a1e5ddf35128976f2149943cc84925f60c6e4dba3786be9001a4c3aaf2"
+    },
+    {
+      "path": "docs/planning/art/NPC角色与动作策划.md",
+      "bytes": 30303,
+      "sha256": "65034307cee13dde4843f5460e9f6c5f88de507b1051c0146b040223b77308c5"
+    },
+    {
+      "path": "docs/planning/art/README.md",
+      "bytes": 3980,
+      "sha256": "cb57ba9cc1ea1019df0bcb7a62b186481f6f5a1ee520acf2a464208b331d0df9"
+    },
+    {
+      "path": "docs/planning/art/textbook_characters.json",
+      "bytes": 607463,
+      "sha256": "abf4e1bb757316c5a00cdf10c392996ff06c6ab3b042577b3220a36ec36b18d1"
+    },
+    {
+      "path": "docs/planning/art/validate_art_plan.py",
+      "bytes": 29489,
+      "sha256": "23aa72cf75d017ac65be58ef86db8b828cb0fd20e275d6ed6c07d00806fc3c8f"
+    },
+    {
+      "path": "docs/planning/art/动态美术总策划.md",
+      "bytes": 14412,
+      "sha256": "e7336744d25fc8ce88b41500bdba30eeccf8836b67fde63cb736ef1297b96ddc"
+    },
+    {
+      "path": "docs/planning/art/教材人物来源核对.md",
+      "bytes": 47654,
+      "sha256": "975f1e03c4337e6e2b1258b1c8ef7f6eece3887e5267cc597581f1f03df6d68c"
+    },
+    {
+      "path": "docs/planning/art/整合核查与修订.md",
+      "bytes": 10205,
+      "sha256": "2fccf0173166c1bc826e44a0992f1348d345798540b29e44830fbc424705696f"
+    },
+    {
+      "path": "docs/planning/art/环境动态与天气昼夜策划.md",
+      "bytes": 21760,
+      "sha256": "c9cd0963e44a7802fc8c05e986c2d458adf17a9e1cf69750f060645ab3295a57"
+    },
+    {
+      "path": "docs/planning/art/角色制作与替换管线.md",
+      "bytes": 12313,
+      "sha256": "20cda5f899bb872a9481a50083dcdd38fd38282dcce0b7c506ecf50ceaa9d49b"
+    }
+  ]
+}

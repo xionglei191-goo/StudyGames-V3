@@ -1,0 +1,4357 @@
+{
+	"actor_status": {
+		"action": "idle",
+		"action_elapsed": 0.000999999999999897,
+		"action_phase": {
+			"action": "idle",
+			"active_clip": "idle",
+			"complete": false,
+			"contact_sent": false,
+			"duration": 0.0,
+			"elapsed": 0.000999999999999897,
+			"event_key": "",
+			"invocation_id": 0,
+			"normalized": 0.999999999999897,
+			"phase": "loop",
+			"reduced_motion": false
+		},
+		"animation_count": 28,
+		"animation_library": "res://actors/p1/animal.tres",
+		"animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+		"art_revision": "storybook-character-v3",
+		"blend_shape_count": 3,
+		"blend_shape_names": [
+			"Smile",
+			"Talk",
+			"Blink"
+		],
+		"bones": 11,
+		"carrying_pose": false,
+		"character_id": "npc_rabbit_gardener",
+		"collision_layer": 16,
+		"held_prop": false,
+		"held_prop_id": "",
+		"kind": "rabbit",
+		"moving": false,
+		"rig_family": "animal",
+		"semantic_receipt_count": 0,
+		"skin_bind_count": 88,
+		"skinned_meshes": 8,
+		"visual_production_status": "authored_skinned_storybook_v3",
+		"visual_time": 1.5,
+		"walking_allowed": true,
+		"weighted_vertices": 65112
+	},
+	"audio_muted": true,
+	"camera_position": [
+		13.3578405380249,
+		24.5302753448486,
+		24.5669860839844
+	],
+	"camera_size": 13.0014057159424,
+	"character_manifest_sha256": "0d82d00cc8ba5bb8c4f295bb034de805f2bb8210243c83fa7002aa2ca50f4c8e",
+	"contact_events": [
+		{
+			"action": "pick_item",
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.1,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.5,
+				"phase": "contact",
+				"reduced_motion": false
+			},
+			"event_key": "orchard-1792679742.907-29482067:pick",
+			"invocation": 1,
+			"socket_to_target_m": 0.13951388001442,
+			"socket_world": [
+				-6.71490240097046,
+				1.11313927173615,
+				0.298538476228714
+			],
+			"target_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"time": 2.38333333333332
+		},
+		{
+			"action": "place_item",
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.1,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.5,
+				"phase": "contact",
+				"reduced_motion": false
+			},
+			"event_key": "orchard-1792679742.907-29482067:place",
+			"invocation": 3,
+			"socket_to_target_m": 0.136881172657013,
+			"socket_world": [
+				-2.60988402366638,
+				0.645819544792175,
+				0.867546498775482
+			],
+			"target_world": [
+				-2.5,
+				0.599999904632568,
+				0.800000071525574
+			],
+			"time": 7.13333333333334
+		}
+	],
+	"duration": 9.03333333333344,
+	"final_activity": {
+		"actor_position": "(-3.399547, 0.02, 1.197426)",
+		"apple_position": "(-2.5, 0.45, 0.8)",
+		"apple_target": "(-6.73091, 1.123141, 0.160307)",
+		"basket_target": "(-2.5, 0.6, 0.8)",
+		"contacts": [
+			{
+				"action": "pick",
+				"distance": 0.13951388001442,
+				"round_id": "orchard-1792679742.907-29482067"
+			},
+			{
+				"action": "place",
+				"distance": 0.136881172657013,
+				"round_id": "orchard-1792679742.907-29482067"
+			}
+		],
+		"mode": "demonstration_viewed",
+		"paused": false,
+		"phase": "deposited",
+		"pick_stand": "(-6.0, 0.030002, 0.0)",
+		"place_stand": "(-3.289663, 0.03, 1.129879)",
+		"round_id": "orchard-1792679742.907-29482067"
+	},
+	"frame_count": 91,
+	"frames": [
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "idle",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.0166666666666667,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.0148809523809524,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-4.5,
+				0.0510129034519196,
+				1.5
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.75060081481934,
+				0.625365614891052,
+				1.75806713104248
+			],
+			"index": 0,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0000.png",
+			"phase": "walking_pick",
+			"phase_time": 0.0166666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 0.0333333333333332
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.116666666666667,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.104166666666667,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-4.69000053405762,
+				0.0410000272095203,
+				1.5
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.10582113265991,
+				0.730988442897797,
+				1.78105974197388
+			],
+			"index": 1,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0001.png",
+			"phase": "walking_pick",
+			"phase_time": 0.116666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 0.133333333333333
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.216666666666667,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.193452380952381,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-4.88000106811523,
+				0.0410000272095203,
+				1.5
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.18041563034058,
+				0.684302866458893,
+				1.80845057964325
+			],
+			"index": 2,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0002.png",
+			"phase": "walking_pick",
+			"phase_time": 0.216666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 0.233333333333333
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.316666666666667,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.282738095238095,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.07000160217285,
+				0.0410000272095203,
+				1.5
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.25537872314453,
+				0.636074423789978,
+				1.81647145748138
+			],
+			"index": 3,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0003.png",
+			"phase": "walking_pick",
+			"phase_time": 0.316666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 0.333333333333332
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.416666666666667,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.372023809523809,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.19890308380127,
+				0.0410000272095203,
+				1.41882133483887
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.69847631454468,
+				0.750453591346741,
+				1.58147144317627
+			],
+			"index": 4,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0004.png",
+			"phase": "walking_pick",
+			"phase_time": 0.416666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 0.433333333333332
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.516666666666667,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.461309523809524,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.34475517272949,
+				0.0410000272095203,
+				1.2970529794693
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.78813886642456,
+				0.69782954454422,
+				1.39526796340942
+			],
+			"index": 5,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0005.png",
+			"phase": "walking_pick",
+			"phase_time": 0.516666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 0.533333333333331
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.616666666666667,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.550595238095238,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.49060726165771,
+				0.0410000272095203,
+				1.17528426647186
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.85654973983765,
+				0.653761148452759,
+				1.29915416240692
+			],
+			"index": 6,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0006.png",
+			"phase": "walking_pick",
+			"phase_time": 0.616666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 0.633333333333331
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.716666666666667,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.639880952380953,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.63645839691162,
+				0.0410000272095203,
+				1.05351555347443
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.91826343536377,
+				0.607637286186218,
+				1.23626685142517
+			],
+			"index": 7,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0007.png",
+			"phase": "walking_pick",
+			"phase_time": 0.716666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 0.733333333333331
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.816666666666668,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.729166666666667,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.78230905532837,
+				0.0199998803436756,
+				0.931746900081635
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.97647142410278,
+				0.561761736869812,
+				1.18499636650085
+			],
+			"index": 8,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0008.png",
+			"phase": "walking_pick",
+			"phase_time": 0.816666666666668,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 0.83333333333333
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "idle",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.916666666666668,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.818452380952382,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.90385150909424,
+				0.0199998803436756,
+				0.83027309179306
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.24145841598511,
+				0.59466564655304,
+				0.95549613237381
+			],
+			"index": 9,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0009.png",
+			"phase": "walking_pick",
+			"phase_time": 0.916666666666668,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 0.93333333333333
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 1.01666666666667,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.907738095238096,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.92570734024048,
+				0.0199998803436756,
+				0.641534328460693
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.37104654312134,
+				0.709988534450531,
+				0.410072684288025
+			],
+			"index": 10,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0010.png",
+			"phase": "walking_pick",
+			"phase_time": 1.01666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 1.03333333333333
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 1.11666666666667,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.99702380952381,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.94756412506104,
+				0.0199998803436756,
+				0.452795565128326
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.32272911071777,
+				0.663302898406982,
+				0.241507858037949
+			],
+			"index": 11,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0011.png",
+			"phase": "walking_pick",
+			"phase_time": 1.11666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 1.13333333333333
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.0966666666666674,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.0863095238095245,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.96942090988159,
+				0.0199998803436756,
+				0.264056921005249
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.31264162063599,
+				0.615074634552002,
+				0.134755402803421
+			],
+			"index": 12,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0012.png",
+			"phase": "walking_pick",
+			"phase_time": 1.21666666666667,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 1.23333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.0333333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.0151515151515152,
+				"phase": "anticipation",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.23552942276001,
+				0.594770312309265,
+				0.39605924487114
+			],
+			"index": 13,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0013.png",
+			"phase": "picking",
+			"phase_time": 0.0333333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 1.33333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.133333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.0606060606060606,
+				"phase": "anticipation",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.23552942276001,
+				0.594770312309265,
+				0.39605924487114
+			],
+			"index": 14,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0014.png",
+			"phase": "picking",
+			"phase_time": 0.133333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 1.43333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.233333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.106060606060606,
+				"phase": "anticipation",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.23552942276001,
+				0.594770312309265,
+				0.39605924487114
+			],
+			"index": 15,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0015.png",
+			"phase": "picking",
+			"phase_time": 0.233333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 1.53333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.333333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.151515151515151,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.28659105300903,
+				0.616549253463745,
+				0.380596399307251
+			],
+			"index": 16,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0016.png",
+			"phase": "picking",
+			"phase_time": 0.333333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 1.63333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.433333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.196969696969697,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.42402219772339,
+				0.707562983036041,
+				0.339097112417221
+			],
+			"index": 17,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0017.png",
+			"phase": "picking",
+			"phase_time": 0.433333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 1.73333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.533333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.242424242424242,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.53082180023193,
+				0.830084800720215,
+				0.307493358850479
+			],
+			"index": 18,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0018.png",
+			"phase": "picking",
+			"phase_time": 0.533333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 1.83333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.633333333333334,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.287878787878788,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.60049676895142,
+				0.973173797130585,
+				0.288257598876953
+			],
+			"index": 19,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0019.png",
+			"phase": "picking",
+			"phase_time": 0.633333333333334,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 1.93333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.733333333333334,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.333333333333334,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.63077259063721,
+				1.0165718793869,
+				0.287111401557922
+			],
+			"index": 20,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0020.png",
+			"phase": "picking",
+			"phase_time": 0.733333333333334,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 2.03333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.833333333333334,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.378787878787879,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.65630674362183,
+				1.04051637649536,
+				0.288932085037231
+			],
+			"index": 21,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0021.png",
+			"phase": "picking",
+			"phase_time": 0.833333333333334,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 2.13333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.933333333333335,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.424242424242425,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.6800012588501,
+				1.06634700298309,
+				0.291740894317627
+			],
+			"index": 22,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0022.png",
+			"phase": "picking",
+			"phase_time": 0.933333333333335,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 2.23333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 1.03333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.46969696969697,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-6.7309103012085,
+				1.12314093112946,
+				0.160307377576828
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.70166921615601,
+				1.0939005613327,
+				0.295509696006775
+			],
+			"index": 23,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0023.png",
+			"phase": "picking",
+			"phase_time": 1.03333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 2.33333333333333
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.13333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.515151515151515,
+				"phase": "contact",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.71490240097046,
+				1.11313939094543,
+				0.298538476228714
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.71490240097046,
+				1.11313939094543,
+				0.298538476228714
+			],
+			"index": 24,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0024.png",
+			"phase": "lifting",
+			"phase_time": 0.05,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 2.43333333333332
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.23333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.560606060606061,
+				"phase": "contact",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.71490240097046,
+				1.11313939094543,
+				0.298538476228714
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.71490240097046,
+				1.11313939094543,
+				0.298538476228714
+			],
+			"index": 25,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0025.png",
+			"phase": "lifting",
+			"phase_time": 0.15,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 2.53333333333332
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.33333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.606060606060606,
+				"phase": "contact",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.71490240097046,
+				1.11313939094543,
+				0.298538476228714
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.71490240097046,
+				1.11313939094543,
+				0.298538476228714
+			],
+			"index": 26,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0026.png",
+			"phase": "lifting",
+			"phase_time": 0.25,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 2.63333333333332
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.43333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.651515151515151,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.70174121856689,
+				1.13818180561066,
+				0.290303289890289
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.70174121856689,
+				1.13818180561066,
+				0.290303289890289
+			],
+			"index": 27,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0027.png",
+			"phase": "lifting",
+			"phase_time": 0.35,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 2.73333333333332
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.53333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.696969696969697,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.64932441711426,
+				1.20966649055481,
+				0.275005698204041
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.64932441711426,
+				1.20966649055481,
+				0.275005698204041
+			],
+			"index": 28,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0028.png",
+			"phase": "lifting",
+			"phase_time": 0.45,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 2.83333333333332
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.63333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.742424242424242,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.5803108215332,
+				1.27160012722015,
+				0.275099664926529
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.5803108215332,
+				1.27160012722015,
+				0.275099664926529
+			],
+			"index": 29,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0029.png",
+			"phase": "lifting",
+			"phase_time": 0.55,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 2.93333333333332
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.73333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.787878787878787,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.49903917312622,
+				1.31925773620605,
+				0.290913075208664
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.49903917312622,
+				1.31925773620605,
+				0.290913075208664
+			],
+			"index": 30,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0030.png",
+			"phase": "lifting",
+			"phase_time": 0.65,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 3.03333333333332
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.83333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.833333333333332,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.44042539596558,
+				1.34117794036865,
+				0.309616267681122
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.44042539596558,
+				1.34117794036865,
+				0.309616267681122
+			],
+			"index": 31,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0031.png",
+			"phase": "lifting",
+			"phase_time": 0.750000000000001,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 3.13333333333332
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.93333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.878787878787878,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.44042539596558,
+				1.34117805957794,
+				0.309616327285767
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.44042539596558,
+				1.34117805957794,
+				0.309616327285767
+			],
+			"index": 32,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0032.png",
+			"phase": "lifting",
+			"phase_time": 0.850000000000001,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 3.23333333333332
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.03333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.924242424242423,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.44042539596558,
+				1.34117794036865,
+				0.309616297483444
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.44042539596558,
+				1.34117794036865,
+				0.309616297483444
+			],
+			"index": 33,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0033.png",
+			"phase": "lifting",
+			"phase_time": 0.950000000000001,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 3.33333333333332
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.13333333333333,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.969696969696968,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.44042539596558,
+				1.34117794036865,
+				0.309616327285767
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.44042539596558,
+				1.34117794036865,
+				0.309616327285767
+			],
+			"index": 34,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0034.png",
+			"phase": "lifting",
+			"phase_time": 1.05,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 3.43333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.0333333333333333,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.0166666666666667,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.44079875946045,
+				1.34071230888367,
+				0.309521108865738
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.44079875946045,
+				1.34071230888367,
+				0.309521108865738
+			],
+			"index": 35,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0035.png",
+			"phase": "carrying",
+			"phase_time": 0.05,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 3.53333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.133333333333333,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.0666666666666667,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.4419150352478,
+				1.3393132686615,
+				0.309236377477646
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.4419150352478,
+				1.3393132686615,
+				0.309236377477646
+			],
+			"index": 36,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0036.png",
+			"phase": "carrying",
+			"phase_time": 0.15,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 3.63333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.233333333333333,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.116666666666667,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.44302654266357,
+				1.33790993690491,
+				0.308952808380127
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.44302654266357,
+				1.33790993690491,
+				0.308952808380127
+			],
+			"index": 37,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0037.png",
+			"phase": "carrying",
+			"phase_time": 0.25,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 3.73333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.333333333333333,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.166666666666667,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.44413280487061,
+				1.33650255203247,
+				0.308670520782471
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.44413280487061,
+				1.33650255203247,
+				0.308670520782471
+			],
+			"index": 38,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0038.png",
+			"phase": "carrying",
+			"phase_time": 0.35,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 3.83333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.433333333333333,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.216666666666667,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.44523525238037,
+				1.33509123325348,
+				0.308389365673065
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.44523525238037,
+				1.33509123325348,
+				0.308389365673065
+			],
+			"index": 39,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0039.png",
+			"phase": "carrying",
+			"phase_time": 0.45,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 3.93333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.533333333333333,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.266666666666667,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.44560146331787,
+				1.33461999893188,
+				0.30829593539238
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.44560146331787,
+				1.33461999893188,
+				0.30829593539238
+			],
+			"index": 40,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0040.png",
+			"phase": "carrying",
+			"phase_time": 0.55,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 4.03333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.0,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.0,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.98399209976196,
+				0.0199998803436756,
+				0.138231128454208
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-6.44450092315674,
+				1.33603262901306,
+				0.308576643466949
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-6.44450092315674,
+				1.33603262901306,
+				0.308576643466949
+			],
+			"index": 41,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0041.png",
+			"phase": "walking_place",
+			"phase_time": 0.0,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 4.13333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.1,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.05,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.86236524581909,
+				0.0199998803436756,
+				0.239604324102402
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-5.72366237640381,
+				1.31660795211792,
+				0.707007646560669
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.72366237640381,
+				1.31660795211792,
+				0.707007646560669
+			],
+			"index": 42,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0042.png",
+			"phase": "walking_place",
+			"phase_time": 0.1,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 4.23333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.2,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.1,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.71641302108765,
+				0.0199998803436756,
+				0.361252248287201
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-5.29751300811768,
+				1.33272433280945,
+				0.610705614089966
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.29751300811768,
+				1.33272433280945,
+				0.610705614089966
+			],
+			"index": 43,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0043.png",
+			"phase": "walking_place",
+			"phase_time": 0.2,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 4.33333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.3,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.15,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.5704607963562,
+				0.0410000272095203,
+				0.482900321483612
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-5.09880542755127,
+				1.35451579093933,
+				0.606373965740204
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-5.09880542755127,
+				1.35451579093933,
+				0.606373965740204
+			],
+			"index": 44,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0044.png",
+			"phase": "walking_place",
+			"phase_time": 0.3,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 4.43333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.4,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.2,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.42450904846191,
+				0.0410000272095203,
+				0.604548692703247
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-4.94243717193604,
+				1.33839964866638,
+				0.677427411079407
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.94243717193604,
+				1.33839964866638,
+				0.677427411079407
+			],
+			"index": 45,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0045.png",
+			"phase": "walking_place",
+			"phase_time": 0.4,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 4.53333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.5,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.25,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.34388494491577,
+				0.0410000272095203,
+				0.728242754936218
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-4.88101720809937,
+				1.32955026626587,
+				0.881402134895325
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.88101720809937,
+				1.32955026626587,
+				0.881402134895325
+			],
+			"index": 46,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0046.png",
+			"phase": "walking_place",
+			"phase_time": 0.5,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 4.63333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.6,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.3,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.32093954086304,
+				0.0410000868141651,
+				0.916852116584778
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-4.93110227584839,
+				1.34566640853882,
+				1.20965099334717
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.93110227584839,
+				1.34566640853882,
+				1.20965099334717
+			],
+			"index": 47,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0047.png",
+			"phase": "walking_place",
+			"phase_time": 0.6,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 4.73333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.700000000000001,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.35,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.29799461364746,
+				0.0410000868141651,
+				1.10546159744263
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-4.94683647155762,
+				1.36178231239319,
+				1.44368040561676
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.94683647155762,
+				1.36178231239319,
+				1.44368040561676
+			],
+			"index": 48,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0048.png",
+			"phase": "walking_place",
+			"phase_time": 0.700000000000001,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 4.83333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.800000000000001,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.4,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.2750506401062,
+				0.0410000272095203,
+				1.29407095909119
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-4.93987941741943,
+				1.34645795822144,
+				1.64813923835754
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.93987941741943,
+				1.34645795822144,
+				1.64813923835754
+			],
+			"index": 49,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0049.png",
+			"phase": "walking_place",
+			"phase_time": 0.800000000000001,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 4.93333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.900000000000001,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.450000000000001,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-5.17401170730591,
+				0.0410000272095203,
+				1.37435078620911
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-4.71468591690063,
+				1.33223605155945,
+				1.5378258228302
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.71468591690063,
+				1.33223605155945,
+				1.5378258228302
+			],
+			"index": 50,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0050.png",
+			"phase": "walking_place",
+			"phase_time": 0.900000000000001,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 5.03333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 1.0,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.500000000000001,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-4.98722982406616,
+				0.0410000272095203,
+				1.40917086601257
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-4.50415229797363,
+				1.34835207462311,
+				1.34328615665436
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.50415229797363,
+				1.34835207462311,
+				1.34328615665436
+			],
+			"index": 51,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0051.png",
+			"phase": "walking_place",
+			"phase_time": 1.0,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 5.13333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 1.1,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.55,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-4.80044794082642,
+				0.0410000272095203,
+				1.44399082660675
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-4.33698272705078,
+				1.35988807678223,
+				1.29264903068542
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.33698272705078,
+				1.35988807678223,
+				1.29264903068542
+			],
+			"index": 52,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0052.png",
+			"phase": "walking_place",
+			"phase_time": 1.1,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 5.23333333333331
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 1.2,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.6,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-4.64479637145996,
+				0.0410000272095203,
+				1.47300720214844
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-4.19248247146606,
+				1.36194539070129,
+				1.29060447216034
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.19248247146606,
+				1.36194539070129,
+				1.29060447216034
+			],
+			"index": 53,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0053.png",
+			"phase": "walking_place",
+			"phase_time": 1.2,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 5.33333333333331
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 1.3,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.65,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-4.45488166809082,
+				0.0409999676048756,
+				1.47873640060425
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-4.02823114395142,
+				1.3402943611145,
+				1.24278402328491
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-4.02823114395142,
+				1.3402943611145,
+				1.24278402328491
+			],
+			"index": 54,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0054.png",
+			"phase": "walking_place",
+			"phase_time": 1.3,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 5.43333333333331
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 1.4,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.7,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-4.26496696472168,
+				0.0410002656280994,
+				1.48446559906006
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-3.84958457946777,
+				1.35641062259674,
+				1.22919750213623
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.84958457946777,
+				1.35641062259674,
+				1.22919750213623
+			],
+			"index": 55,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0055.png",
+			"phase": "walking_place",
+			"phase_time": 1.4,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 5.53333333333331
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 1.5,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.75,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-4.07505226135254,
+				0.0410002656280994,
+				1.49019467830658
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-3.6641480922699,
+				1.35182976722717,
+				1.22777891159058
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.6641480922699,
+				1.35182976722717,
+				1.22777891159058
+			],
+			"index": 56,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0056.png",
+			"phase": "walking_place",
+			"phase_time": 1.5,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 5.63333333333331
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 1.6,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.8,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.88513851165771,
+				0.0199998803436756,
+				1.49592351913452
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-3.47595548629761,
+				1.31471347808838,
+				1.23083221912384
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.47595548629761,
+				1.31471347808838,
+				1.23083221912384
+			],
+			"index": 57,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0057.png",
+			"phase": "walking_place",
+			"phase_time": 1.6,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 5.73333333333331
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 1.7,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.849999999999999,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.75025200843811,
+				0.0199998803436756,
+				1.41300749778748
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-3.44745874404907,
+				1.31660795211792,
+				1.03088128566742
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.44745874404907,
+				1.31660795211792,
+				1.03088128566742
+			],
+			"index": 58,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0058.png",
+			"phase": "walking_place",
+			"phase_time": 1.7,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 5.83333333333331
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 1.8,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.899999999999999,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.58838820457459,
+				0.0199998803436756,
+				1.31350827217102
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-3.3510160446167,
+				1.33272397518158,
+				0.887645959854126
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.3510160446167,
+				1.33272397518158,
+				0.887645959854126
+			],
+			"index": 59,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0059.png",
+			"phase": "walking_place",
+			"phase_time": 1.8,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 5.93333333333331
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 1.9,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.949999999999999,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.42652440071106,
+				0.0199998803436756,
+				1.21400904655457
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-3.21552896499634,
+				1.33351576328278,
+				0.774480581283569
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.21552896499634,
+				1.33351576328278,
+				0.774480581283569
+			],
+			"index": 60,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0060.png",
+			"phase": "walking_place",
+			"phase_time": 1.9,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 6.03333333333331
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.0833333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.0378787878787879,
+				"phase": "anticipation",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.99964189529419,
+				1.34117794036865,
+				0.91853529214859
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.99964189529419,
+				1.34117794036865,
+				0.91853529214859
+			],
+			"index": 61,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0061.png",
+			"phase": "placing",
+			"phase_time": 0.0833333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 6.13333333333331
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.183333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.0833333333333333,
+				"phase": "anticipation",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.99964189529419,
+				1.34117794036865,
+				0.91853529214859
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.99964189529419,
+				1.34117794036865,
+				0.91853529214859
+			],
+			"index": 62,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0062.png",
+			"phase": "placing",
+			"phase_time": 0.183333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 6.23333333333331
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.283333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.128787878787879,
+				"phase": "anticipation",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.99964189529419,
+				1.34117794036865,
+				0.91853529214859
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.99964189529419,
+				1.34117794036865,
+				0.91853529214859
+			],
+			"index": 63,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0063.png",
+			"phase": "placing",
+			"phase_time": 0.283333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 6.33333333333331
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.383333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.174242424242424,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.93348789215088,
+				1.28057909011841,
+				0.922633111476898
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.93348789215088,
+				1.28057909011841,
+				0.922633111476898
+			],
+			"index": 64,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0064.png",
+			"phase": "placing",
+			"phase_time": 0.383333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 6.43333333333331
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.483333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.21969696969697,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.87246322631836,
+				1.18680572509766,
+				0.920002996921539
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.87246322631836,
+				1.18680572509766,
+				0.920002996921539
+			],
+			"index": 65,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0065.png",
+			"phase": "placing",
+			"phase_time": 0.483333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 6.53333333333331
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.583333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.265151515151515,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.83766484260559,
+				1.07661950588226,
+				0.909817099571228
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.83766484260559,
+				1.07661950588226,
+				0.909817099571228
+			],
+			"index": 66,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0066.png",
+			"phase": "placing",
+			"phase_time": 0.583333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 6.63333333333332
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.683333333333334,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.310606060606061,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.80406141281128,
+				0.978258371353149,
+				0.899017333984375
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.80406141281128,
+				0.978258371353149,
+				0.899017333984375
+			],
+			"index": 67,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0067.png",
+			"phase": "placing",
+			"phase_time": 0.683333333333334,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 6.73333333333332
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.783333333333334,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.356060606060606,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.73136281967163,
+				0.910512268543243,
+				0.895346164703369
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.73136281967163,
+				0.910512268543243,
+				0.895346164703369
+			],
+			"index": 68,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0068.png",
+			"phase": "placing",
+			"phase_time": 0.783333333333334,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 6.83333333333333
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.883333333333334,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.401515151515152,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.67396473884583,
+				0.832845509052277,
+				0.888930439949036
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.67396473884583,
+				0.832845509052277,
+				0.888930439949036
+			],
+			"index": 69,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0069.png",
+			"phase": "placing",
+			"phase_time": 0.883333333333334,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 6.93333333333333
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 0.983333333333335,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.446969696969698,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.63369703292847,
+				0.748367071151733,
+				0.880142629146576
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.63369703292847,
+				0.748367071151733,
+				0.880142629146576
+			],
+			"index": 70,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0070.png",
+			"phase": "placing",
+			"phase_time": 0.983333333333335,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 7.03333333333334
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.2,
+				"elapsed": 1.08333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.492424242424243,
+				"phase": "reach",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "RightHandPropSocket",
+			"apple_world": [
+				-2.61172533035278,
+				0.660530865192413,
+				0.869469404220581
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.61172533035278,
+				0.660530865192413,
+				0.869469404220581
+			],
+			"index": 71,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0071.png",
+			"phase": "placing",
+			"phase_time": 1.08333333333333,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 7.13333333333334
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.18333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.537878787878788,
+				"phase": "contact",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.60091400146484,
+				0.629834294319153,
+				0.862032532691956
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.60988402366638,
+				0.64581960439682,
+				0.867546498775482
+			],
+			"index": 72,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0072.png",
+			"phase": "deposited",
+			"phase_time": 0.1,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 7.23333333333335
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.28333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.583333333333333,
+				"phase": "contact",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.57400345802307,
+				0.581878423690796,
+				0.845490515232086
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.60988402366638,
+				0.645819485187531,
+				0.867546498775482
+			],
+			"index": 73,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0073.png",
+			"phase": "deposited",
+			"phase_time": 0.2,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 7.33333333333335
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.38333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.628787878787879,
+				"phase": "contact",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.52915287017822,
+				0.501952052116394,
+				0.817920565605164
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.60988402366638,
+				0.645819544792175,
+				0.867546498775482
+			],
+			"index": 74,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0074.png",
+			"phase": "deposited",
+			"phase_time": 0.3,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 7.43333333333336
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.48333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.674242424242424,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.71353816986084,
+				0.635029256343842,
+				0.871287047863007
+			],
+			"index": 75,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0075.png",
+			"phase": "deposited",
+			"phase_time": 0.4,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 7.53333333333336
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.58333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.719696969696969,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-2.85828280448914,
+				0.622715890407562,
+				0.876407146453857
+			],
+			"index": 76,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0076.png",
+			"phase": "deposited",
+			"phase_time": 0.5,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 7.63333333333337
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.68333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.765151515151515,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.01957392692566,
+				0.61025857925415,
+				0.881308913230896
+			],
+			"index": 77,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0077.png",
+			"phase": "deposited",
+			"phase_time": 0.6,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 7.73333333333337
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.78333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.81060606060606,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.19060444831848,
+				0.597062706947327,
+				0.88499116897583
+			],
+			"index": 78,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0078.png",
+			"phase": "deposited",
+			"phase_time": 0.700000000000001,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 7.83333333333338
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.88333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.856060606060605,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.21954703330994,
+				0.594770312309265,
+				0.885422229766846
+			],
+			"index": 79,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0079.png",
+			"phase": "deposited",
+			"phase_time": 0.800000000000001,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 7.93333333333338
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.98333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.90151515151515,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.21954703330994,
+				0.594770312309265,
+				0.885422229766846
+			],
+			"index": 80,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0080.png",
+			"phase": "deposited",
+			"phase_time": 0.900000000000001,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 8.03333333333339
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.08333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.946969696969696,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.21954703330994,
+				0.594770312309265,
+				0.885422229766846
+			],
+			"index": 81,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0081.png",
+			"phase": "deposited",
+			"phase_time": 1.0,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 8.13333333333339
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.18333333333333,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.992424242424241,
+				"phase": "recover",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": false,
+			"hand_world": [
+				-3.21954703330994,
+				0.594770312309265,
+				0.885422229766846
+			],
+			"index": 82,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0082.png",
+			"phase": "deposited",
+			"phase_time": 1.1,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 8.2333333333334
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "idle",
+				"complete": true,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.2,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 1.0,
+				"phase": "complete",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": true,
+			"hand_world": [
+				-3.2207555770874,
+				0.594248473644257,
+				0.885422229766846
+			],
+			"index": 83,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0083.png",
+			"phase": "deposited",
+			"phase_time": 1.2,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 8.3333333333334
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "idle",
+				"complete": true,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.2,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 1.0,
+				"phase": "complete",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": true,
+			"hand_world": [
+				-3.22220802307129,
+				0.593626916408539,
+				0.885422229766846
+			],
+			"index": 84,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0084.png",
+			"phase": "deposited",
+			"phase_time": 1.3,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 8.43333333333341
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "idle",
+				"complete": true,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.2,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 1.0,
+				"phase": "complete",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": true,
+			"hand_world": [
+				-3.22366261482239,
+				0.593010485172272,
+				0.885422229766846
+			],
+			"index": 85,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0085.png",
+			"phase": "deposited",
+			"phase_time": 1.4,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 8.53333333333341
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "idle",
+				"complete": true,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.2,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 1.0,
+				"phase": "complete",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": true,
+			"hand_world": [
+				-3.22511911392212,
+				0.592399001121521,
+				0.885422229766846
+			],
+			"index": 86,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0086.png",
+			"phase": "deposited",
+			"phase_time": 1.5,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 8.63333333333342
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "idle",
+				"complete": true,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.2,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 1.0,
+				"phase": "complete",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": true,
+			"hand_world": [
+				-3.22657799720764,
+				0.591792702674866,
+				0.885422229766846
+			],
+			"index": 87,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0087.png",
+			"phase": "deposited",
+			"phase_time": 1.6,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 8.73333333333342
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "idle",
+				"complete": true,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.2,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 1.0,
+				"phase": "complete",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": true,
+			"hand_world": [
+				-3.22803902626038,
+				0.591191411018372,
+				0.885422229766846
+			],
+			"index": 88,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0088.png",
+			"phase": "deposited",
+			"phase_time": 1.7,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 8.83333333333343
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "idle",
+				"complete": true,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.2,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 1.0,
+				"phase": "complete",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": true,
+			"hand_world": [
+				-3.22950172424316,
+				0.590595364570618,
+				0.885422229766846
+			],
+			"index": 89,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0089.png",
+			"phase": "deposited",
+			"phase_time": 1.8,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 8.93333333333343
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "idle",
+				"complete": true,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 2.2,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 1.0,
+				"phase": "complete",
+				"reduced_motion": false
+			},
+			"actor_world": [
+				-3.39954710006714,
+				0.0199998803436756,
+				1.19742584228516
+			],
+			"apple_parent": "@Node3D@1649",
+			"apple_world": [
+				-2.5,
+				0.449999898672104,
+				0.800000071525574
+			],
+			"discovery_visible": true,
+			"hand_world": [
+				-3.23096680641174,
+				0.590004324913025,
+				0.885422229766846
+			],
+			"index": 90,
+			"path": "F:/LoveStudy/docs/screenshots/art-finish-v3/orchard-motion/960x640/frames/frame_0090.png",
+			"phase": "deposited",
+			"phase_time": 1.9,
+			"resolution": [
+				960,
+				600
+			],
+			"save_error": 0,
+			"time": 9.03333333333344
+		}
+	],
+	"id": "960x640",
+	"manual_pose_or_prop_animation": false,
+	"native_window_size": [
+		960,
+		640
+	],
+	"phases": [
+		{
+			"actor_action": {
+				"action": "idle",
+				"active_clip": "idle",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 0.0,
+				"elapsed": 0.000999999999999897,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.999999999999897,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"phase": "ready",
+			"time": 0.0
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "idle",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.0,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.0,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"phase": "walking_pick",
+			"time": 0.0166666666666666
+		},
+		{
+			"actor_action": {
+				"action": "walk",
+				"active_clip": "walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 1.12,
+				"elapsed": 0.0,
+				"event_key": "",
+				"invocation_id": 0,
+				"normalized": 0.0,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"phase": "picking",
+			"time": 1.3
+		},
+		{
+			"actor_action": {
+				"action": "pick_item",
+				"active_clip": "pick_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.1,
+				"event_key": "orchard-1792679742.907-29482067:pick",
+				"invocation_id": 1,
+				"normalized": 0.5,
+				"phase": "contact",
+				"reduced_motion": false
+			},
+			"phase": "lifting",
+			"time": 2.38333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.0,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.0,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"phase": "carrying",
+			"time": 3.48333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_item",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.0,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.0,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"phase": "walking_place",
+			"time": 4.13333333333332
+		},
+		{
+			"actor_action": {
+				"action": "carry_item",
+				"active_clip": "carry_walk",
+				"complete": false,
+				"contact_sent": false,
+				"duration": 2.0,
+				"elapsed": 0.0,
+				"event_key": "",
+				"invocation_id": 2,
+				"normalized": 0.0,
+				"phase": "loop",
+				"reduced_motion": false
+			},
+			"phase": "placing",
+			"time": 6.04999999999998
+		},
+		{
+			"actor_action": {
+				"action": "place_item",
+				"active_clip": "place_item",
+				"complete": false,
+				"contact_sent": true,
+				"duration": 2.2,
+				"elapsed": 1.1,
+				"event_key": "orchard-1792679742.907-29482067:place",
+				"invocation_id": 3,
+				"normalized": 0.5,
+				"phase": "contact",
+				"reduced_motion": false
+			},
+			"phase": "deposited",
+			"time": 7.13333333333334
+		}
+	],
+	"requested_size": [
+		960,
+		640
+	],
+	"saved_orchard": {
+		"completed_once": true,
+		"completion_mode": "demonstration_viewed",
+		"round_id": "orchard-1792679742.907-29482067",
+		"stage": "deposited"
+	},
+	"scene": "res://main.tscn / landmark_A / real orchard_pick.gd",
+	"trigger": "start_demonstration()",
+	"ui": [
+		{
+			"buttons": [
+				{
+					"disabled": false,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						120.0,
+						58.0
+					],
+					"rect": [
+						294.0,
+						804.0,
+						204.0,
+						60.0
+					],
+					"text": "摘苹果"
+				},
+				{
+					"disabled": false,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						123.0,
+						58.0
+					],
+					"rect": [
+						510.0,
+						804.0,
+						204.0,
+						60.0
+					],
+					"text": "请兔兔示范"
+				},
+				{
+					"disabled": false,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						120.0,
+						58.0
+					],
+					"rect": [
+						726.0,
+						804.0,
+						204.0,
+						60.0
+					],
+					"text": "暂停"
+				},
+				{
+					"disabled": false,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						120.0,
+						58.0
+					],
+					"rect": [
+						942.0,
+						804.0,
+						204.0,
+						60.0
+					],
+					"text": "下次再来"
+				}
+			],
+			"overlap_pairs": [],
+			"stage": "initial",
+			"viewport": [
+				0.0,
+				0.0,
+				1440.0,
+				900.0
+			]
+		},
+		{
+			"buttons": [
+				{
+					"disabled": true,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						120.0,
+						58.0
+					],
+					"rect": [
+						294.0,
+						804.0,
+						204.0,
+						60.0
+					],
+					"text": "看看 Aa"
+				},
+				{
+					"disabled": true,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						123.0,
+						58.0
+					],
+					"rect": [
+						510.0,
+						804.0,
+						204.0,
+						60.0
+					],
+					"text": "请兔兔示范"
+				},
+				{
+					"disabled": false,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						120.0,
+						58.0
+					],
+					"rect": [
+						726.0,
+						804.0,
+						204.0,
+						60.0
+					],
+					"text": "暂停"
+				},
+				{
+					"disabled": false,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						120.0,
+						58.0
+					],
+					"rect": [
+						942.0,
+						804.0,
+						204.0,
+						60.0
+					],
+					"text": "下次再来"
+				},
+				{
+					"disabled": false,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						120.0,
+						58.0
+					],
+					"rect": [
+						1148.0,
+						453.0,
+						250.0,
+						58.0
+					],
+					"text": "听一听 A"
+				},
+				{
+					"disabled": false,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						141.0,
+						58.0
+					],
+					"rect": [
+						1148.0,
+						523.0,
+						250.0,
+						58.0
+					],
+					"text": "听一听 Apple"
+				},
+				{
+					"disabled": false,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						142.0,
+						58.0
+					],
+					"rect": [
+						1148.0,
+						593.0,
+						250.0,
+						58.0
+					],
+					"text": "收下这次发现"
+				},
+				{
+					"disabled": false,
+					"fits_minimum_text_size": true,
+					"inside_parent": true,
+					"inside_viewport": true,
+					"minimum_size": [
+						120.0,
+						58.0
+					],
+					"rect": [
+						1148.0,
+						663.0,
+						250.0,
+						58.0
+					],
+					"text": "再玩一次"
+				}
+			],
+			"overlap_pairs": [],
+			"stage": "final",
+			"viewport": [
+				0.0,
+				0.0,
+				1440.0,
+				900.0
+			]
+		}
+	],
+	"viewport_rect": [
+		0.0,
+		0.0,
+		1440.0,
+		900.0
+	]
+}

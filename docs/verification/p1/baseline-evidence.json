@@ -1,0 +1,406 @@
+{
+  "kind": "p1_evidence_inventory",
+  "files": [
+    {
+      "path": ".local/validation/blender-world-landmark_S-report.json",
+      "sha256": "3780c2aaeeb101d828470d07ec77cea0572b94ea1cd41e53037fc507bd46cb89",
+      "modified_utc": "2026-10-22T04:55:30.462934+00:00",
+      "report_summary": {
+        "production_save_unchanged": true,
+        "check_count": 65,
+        "failed_check_count": 11,
+        "failure_count": 11
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": ".local/validation/blender-world-report.json",
+      "sha256": "c2018e60738b39dd9b9e572ed4ce0b52a0212c80c86d16cd298770b6d1762db1",
+      "modified_utc": "2026-10-22T10:11:39.168626+00:00",
+      "report_summary": {
+        "production_save_unchanged": true,
+        "check_count": 2240,
+        "failed_check_count": 0,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": ".local/validation/import-cache-report.json",
+      "sha256": "ec7aee5d723ed31a5b875db75858d8f4fdca99f26354d2b80f40eb7f7b0f083c",
+      "modified_utc": "2026-10-22T04:53:31.162193+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": ".local/validation/integration-report.json",
+      "sha256": "029ebecafdeb55e926932df052d578e728c11eaad4b1d294cdab96c2d988a4a8",
+      "modified_utc": "2026-10-22T04:02:21.331636+00:00",
+      "report_summary": {
+        "result": "PASS",
+        "version": "0.1.0",
+        "check_count": 31,
+        "failed_check_count": 0,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": ".local/validation/memory-story-report.json",
+      "sha256": "59a094e147e3814456b5e9cd53208c6af18e4d8ba05e9c458eb9da0d96887d1c",
+      "modified_utc": "2026-10-22T11:06:05.982122+00:00",
+      "report_summary": {
+        "status": "passed",
+        "scope": "offline package, real component GUI clicks, support exposure, exact writing, restore, narrow layout; no learning-effect claim",
+        "production_save_unchanged": true,
+        "check_count": 4989,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": ".local/validation/movement-report.json",
+      "sha256": "bb473504dc3e911f3c50c51e468d07a05b8e25a31b8c08cd01e8afdc988247a1",
+      "modified_utc": "2026-10-22T10:03:24.252515+00:00",
+      "report_summary": {
+        "production_save_unchanged": true,
+        "check_count": 209,
+        "failed_check_count": 0,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": ".local/validation/school-hierarchy-report.json",
+      "sha256": "3bc18efc4d2740f46195c27315b5a86e960012925a5773e96160de88e6ccc466",
+      "modified_utc": "2026-10-22T10:03:39.271905+00:00",
+      "report_summary": {
+        "production_save_unchanged": true,
+        "check_count": 352,
+        "failed_check_count": 0,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/blender-world-tests.stdout.log",
+      "sha256": "8b5a526117fbaab8e3d9c86b0b0324a2c98ae5c19794a986b77b53eb898b833a",
+      "modified_utc": "2026-10-22T10:11:39.244825+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "PASS: 35 Blender rooms, 2240 checks, 35 rooms physically traversed; player save unchanged"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/import.stdout.log",
+      "sha256": "6b43ca36860ac10639f554a83293fc09bdf223cf167999a554e0b401a8631510",
+      "modified_utc": "2026-10-22T10:17:13.298363+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/integration-tests.stdout.log",
+      "sha256": "e49a8e8bc54c1647e51a4eb17aa8ce81cd5305b74737dd85c3a5de6f81358e10",
+      "modified_utc": "2026-10-22T10:17:44.678540+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/journey-game-tests.stdout.log",
+      "sha256": "ffd35a8b87a0ed562dff15bcd3141894a6fb81c255f673df61d3b6b2ee8ee08b",
+      "modified_utc": "2026-10-22T10:17:35.508122+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "JOURNEY_GAME_RESULT checks=148 failures=0"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/journey-state-tests.stdout.log",
+      "sha256": "0d6cd0e567fc9f115ca7caac3da5322160c16b3f7efa97d36ab3735fa88cb861",
+      "modified_utc": "2026-10-22T10:02:47.456839+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "Journey state: 544 checks, 0 failures"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/life-ui-tests.stdout.log",
+      "sha256": "9a40465b6269441fe674b6013b0851707fae296cfee71a2ca1acaf6111b07418",
+      "modified_utc": "2026-10-22T10:11:53.631136+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "LIFE_UI_RESULT checks=94 failures=0 actual_mouse_and_keyboard_dispatch=true"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/living-world-tests.stdout.log",
+      "sha256": "6e113426ab81c0f516c3af55048c8a76d5db90fcea3b1c8ea196d24bbceb3b07",
+      "modified_utc": "2026-10-22T10:02:50.618310+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "LIVING_WORLD_REPORT {\"checks\":91,\"failures\":[],\"receipts\":[{\"action\":\"give_item\",\"id\":\"textbook_lingling\",\"key\":\"invitation-once\"}],\"scope\":\"headless component and actual home/school/classroom spawn; no visual production acceptance\",\"status\":\"PASS\"}"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/memory-event-sink-tests.stdout.log",
+      "sha256": "dd68691bec686f3023965ab87fff01c469112415369ec2bc0077e73dcf5c5869",
+      "modified_utc": "2026-10-22T10:02:47.881974+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "Memory event sink: 38 checks, 0 failures"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/memory-story-tests.stdout.log",
+      "sha256": "3f9b2d4027af8c7ca37ee2ddae9900f45c205153170e842e5f3ed0c3701e04c9",
+      "modified_utc": "2026-10-22T10:02:49.648765+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/movement-tests.stdout.log",
+      "sha256": "383eb1c2200cd2ca03f1574f2e8b233c9fa6fd0804c736502c38d737d323f168",
+      "modified_utc": "2026-10-22T10:03:24.323633+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "PASS: 35 actual movement routes, 22 transitions, 1 physical collision probes; player save unchanged"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/release-smoke.stdout.log",
+      "sha256": "edb3b6310af7937aabe62c063a7108bf84e823513854c6e77edd95becc54d7a8",
+      "modified_utc": "2026-10-22T10:21:06.672153+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "RELEASE_SMOKE {\"checks\":97,\"exported\":true,\"failures\":[],\"result\":\"PASS\",\"version\":\"0.5.0\"}"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/school-hierarchy-tests.stdout.log",
+      "sha256": "20d5aead95eee3a7a079cd2b767a1de9c18034bd9ba2d8ebd2c74ff99186bd19",
+      "modified_utc": "2026-10-22T10:03:39.357038+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "PASS: 56 actual movement routes, 16 transitions, 0 physical collision probes; player save unchanged"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/state-tests.stdout.log",
+      "sha256": "1663a71a1dc2ad0b792db69137e9702805cb97d76d9afda5949095c10005c696",
+      "modified_utc": "2026-10-22T10:02:43.391281+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "PASS: state persistence, recovery, rewards, inventory, learning, legacy migration, life activities and atomic purchase guards"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/ui-tests.stdout.log",
+      "sha256": "d8b1a3620b5af0ec8d01a0dd1057ff7039eda9d7ef9ead908bd9248b83237653",
+      "modified_utc": "2026-10-22T10:11:43.985186+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [
+        "UI_TEST_RESULT checks=90 failures=0 actual_mouse_dispatch=true"
+      ],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "build/logs/windows-export.stdout.log",
+      "sha256": "426f455a70b8d61d8ce7908249591fc0917a021b2b5d72f66631e6992195bbca",
+      "modified_utc": "2026-10-22T10:20:58.419804+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "docs/verification/v0.5.0/blender-world-report.json",
+      "sha256": "c2018e60738b39dd9b9e572ed4ce0b52a0212c80c86d16cd298770b6d1762db1",
+      "modified_utc": "2026-10-22T10:11:39.168626+00:00",
+      "report_summary": {
+        "production_save_unchanged": true,
+        "check_count": 2240,
+        "failed_check_count": 0,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "docs/verification/v0.5.0/integration-report.json",
+      "sha256": "a6561762ce944e8776e189d845e49f4ce43fba6853f9832210add2580a280477",
+      "modified_utc": "2026-10-22T10:23:18.443084+00:00",
+      "report_summary": {
+        "result": "PASS",
+        "version": "0.5.0",
+        "check_count": 66,
+        "failed_check_count": 0,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "docs/verification/v0.5.0/journey-game-report.json",
+      "sha256": "e0004fd16bf1cbe5484d962c5a224752f6167caeabe09619227c8d3c8bc19fdb",
+      "modified_utc": "2026-10-22T10:17:35.514745+00:00",
+      "report_summary": {
+        "result": "PASS",
+        "check_count": 148,
+        "failed_check_count": 0,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "docs/verification/v0.5.0/learning-content-build-report.json",
+      "sha256": "899f6c41c2855b7c2b0976c9ad89b5a7edea664d1e15becb6448da210157bbec",
+      "modified_utc": "2026-10-22T10:02:35.771022+00:00",
+      "report_summary": {
+        "status": "passed"
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "docs/verification/v0.5.0/life-ui-report.json",
+      "sha256": "195114cb0c86cf16d379ae49d94ae25536fedeb4a753980671b4121240bc9cf6",
+      "modified_utc": "2026-10-22T10:11:53.636650+00:00",
+      "report_summary": {
+        "result": "PASS",
+        "version": "0.5.0",
+        "check_count": 94,
+        "failed_check_count": 0,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "docs/verification/v0.5.0/memory-story-report.json",
+      "sha256": "59a094e147e3814456b5e9cd53208c6af18e4d8ba05e9c458eb9da0d96887d1c",
+      "modified_utc": "2026-10-22T10:02:49.640231+00:00",
+      "report_summary": {
+        "status": "passed",
+        "scope": "offline package, real component GUI clicks, support exposure, exact writing, restore, narrow layout; no learning-effect claim",
+        "production_save_unchanged": true,
+        "check_count": 4989,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "docs/verification/v0.5.0/movement-report.json",
+      "sha256": "bb473504dc3e911f3c50c51e468d07a05b8e25a31b8c08cd01e8afdc988247a1",
+      "modified_utc": "2026-10-22T10:03:24.252515+00:00",
+      "report_summary": {
+        "production_save_unchanged": true,
+        "check_count": 209,
+        "failed_check_count": 0,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "docs/verification/v0.5.0/package-report.json",
+      "sha256": "c583036f193ad4bae79246374186e155831960d2e9a714d6a6ebee6dcfa24150",
+      "modified_utc": "2026-10-22T10:23:35.995861+00:00",
+      "report_summary": {},
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "docs/verification/v0.5.0/release-smoke-report.json",
+      "sha256": "2ac7bf2392e859d9a01a55c68df01d098da25fdeddc11621d8c8ec2cc1a9df6b",
+      "modified_utc": "2026-10-22T10:21:06.671156+00:00",
+      "report_summary": {
+        "result": "PASS",
+        "version": "0.5.0",
+        "check_count": 97,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "docs/verification/v0.5.0/school-hierarchy-report.json",
+      "sha256": "3bc18efc4d2740f46195c27315b5a86e960012925a5773e96160de88e6ccc466",
+      "modified_utc": "2026-10-22T10:03:39.271905+00:00",
+      "report_summary": {
+        "production_save_unchanged": true,
+        "check_count": 352,
+        "failed_check_count": 0,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    },
+    {
+      "path": "game/actors/p1/animation-test-report.json",
+      "sha256": "e0dc2f9c63d421b14e6ae1b26e16142fc57e35632ac5b07150e780bdd07add19",
+      "modified_utc": "2026-10-22T11:07:44.159822+00:00",
+      "report_summary": {
+        "status": "PASS",
+        "scope": "saved keyframe library timing/contact/grounding/pause/reduced motion/obstacle-water behavior; no final skinning or GPU performance acceptance",
+        "check_count": 618,
+        "failure_count": 0
+      },
+      "paired_stderr_runtime_errors": [],
+      "result_lines": [],
+      "boundary": "Historical evidence only; compare its source/profile and date before reusing for P1."
+    }
+  ]
+}

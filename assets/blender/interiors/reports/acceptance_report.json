@@ -1,0 +1,236 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-22",
+  "status": "asset_delivery_complete_frozen_for_godot",
+  "completed_rooms": 31,
+  "editable_blend_files": 31,
+  "glb_files": 31,
+  "individual_previews": 31,
+  "memory_anchors": 155,
+  "manifest": "assets/blender/interiors/interiors_manifest.json",
+  "plan_labels_match": true,
+  "original_assets_checked": 115,
+  "original_assets_changed": [],
+  "original_orchard_reused": true,
+  "orchard_source_report": "assets/blender/interiors/landmark_A/source_adaptation.json",
+  "export_existing_preserves_artist_source": true,
+  "roundtrip_room_count": 31,
+  "saved_source_renders": [
+    {
+      "room_id": "landmark_A",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_B",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_C",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_D",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_E",
+      "pixel_identical": false,
+      "mean_absolute_difference_255": 3e-07
+    },
+    {
+      "room_id": "landmark_F",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_G",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_H",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_I",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_J",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_K",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_L",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_M",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_N",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_O",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_P",
+      "pixel_identical": false,
+      "mean_absolute_difference_255": 3e-07
+    },
+    {
+      "room_id": "landmark_Q",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_R",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_S",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_T",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_U",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_V",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_W",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_X",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_Y",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "landmark_Z",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "school",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "classroom",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "canteen",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "playground",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    },
+    {
+      "room_id": "home",
+      "pixel_identical": true,
+      "mean_absolute_difference_255": 0.0
+    }
+  ],
+  "total_bytes": {
+    "blend": 20691602,
+    "glb": 128249128,
+    "preview": 31945893
+  },
+  "triangle_range": [
+    79224,
+    320816
+  ],
+  "visual_review": {
+    "method": "Reviewed all 31 individual Blender renders through four contact sheets; opened full images for composition corrections and verification.",
+    "full_image_inspections": [
+      "landmark_A",
+      "landmark_B",
+      "landmark_C",
+      "landmark_F",
+      "landmark_K",
+      "landmark_S",
+      "school",
+      "home"
+    ],
+    "corrections": [
+      "Replaced procedural A rectangle with original orchard v02 including real apple house, creek, bridge and legacy loci.",
+      "Matched all 155 point labels and their concrete props to the authored plan.",
+      "Clipped bakery tiles to the rounded floor and brought windows within the wall.",
+      "Raised school title above door signs.",
+      "Added support geometry to greenhouse petals, kite pavilion and observatory sign.",
+      "Moved boat cabin and its approach anchor onto the rear right pier.",
+      "Kept bridge access ramps inside the original orchard shoreline."
+    ],
+    "contact_sheets": [
+      "assets/blender/interiors/reports/contact_sheet_01.jpg",
+      "assets/blender/interiors/reports/contact_sheet_02.jpg",
+      "assets/blender/interiors/reports/contact_sheet_03.jpg",
+      "assets/blender/interiors/reports/contact_sheet_04.jpg"
+    ]
+  },
+  "final_changed_rooms": [
+    "landmark_B",
+    "landmark_C",
+    "landmark_S"
+  ],
+  "final_change_notes": {
+    "landmark_B": "SG_MEMORY_05 moved to Blender (6.8,4.75,0), Godot (6.8,0,-4.75); cabin collision moved to the rear right pier.",
+    "landmark_C": "Pickup window frame added. No anchor or collision changes in final pass.",
+    "landmark_S": "Observatory sign support posts added. Subsequently corrected existing SG_FLOOR_Main outward winding only; vertex coordinates and all SG anchors unchanged. Focused floor repair and GLB ray evidence are in reports/S_floor_fix/repair_report.json."
+  },
+  "scope_limits": [
+    "Godot character physics, slopes, navigation, interaction range and room returns are not accepted by this asset report.",
+    "No NPC animation, voice, lesson or production task logic is included in these model files.",
+    "Per-room mesh budgets have not been profiled on target hardware; no LOD or runtime batching acceptance is claimed.",
+    "v01 styling and decorative density remain available for user review; no additional optional polishing after delivery freeze."
+  ],
+  "git_commit_or_push_performed": false,
+  "focused_floor_repair": {
+    "room_id": "landmark_S",
+    "passed": true,
+    "report": "assets/blender/interiors/reports/S_floor_fix/repair_report.json",
+    "glb_sha256": "a830cb140e9de5c8a1bf00f0d2040780668a1c028c96e41bff6c849fd8179c39",
+    "godot_runtime_retest": "Primary chat"
+  }
+}

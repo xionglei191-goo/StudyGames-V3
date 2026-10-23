@@ -1,0 +1,503 @@
+{
+  "room_id": "home_estate",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "门前信箱",
+      "position_blender": [
+        -10.0,
+        -10.2,
+        0.0
+      ],
+      "position_godot": [
+        -10.0,
+        0.0,
+        10.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_estate_01",
+      "activity": "读一张邀请卡，想想怎样欢迎来访的朋友。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "小院花圃",
+      "position_blender": [
+        8.0,
+        -10.2,
+        0.0
+      ],
+      "position_godot": [
+        8.0,
+        0.0,
+        10.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_estate_02",
+      "activity": "拿起水壶，为花圃浇水，再把水壶放回去。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "玄关随身篮",
+      "position_blender": [
+        -3.5,
+        -5.2,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        5.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_estate_03",
+      "activity": "外出前整理随身物品，准备与家人一起散步。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "家庭日程板",
+      "position_blender": [
+        2.0,
+        -10.2,
+        0.0
+      ],
+      "position_godot": [
+        2.0,
+        0.0,
+        10.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_estate_04",
+      "activity": "看看日程板，选择今天先去哪个房间。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "门廊小树",
+      "position_blender": [
+        11.5,
+        -10.3,
+        0.0
+      ],
+      "position_godot": [
+        11.5,
+        0.0,
+        10.3
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_estate_05",
+      "activity": "观察小树怎样给门廊遮阴，照顾它慢慢长大。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -13.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        13.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -14.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        14.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -2.0,
+        -10.0,
+        0.0
+      ],
+      "position_godot": [
+        -2.0,
+        0.0,
+        10.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_home_study_Overview_Footprint",
+      "aabb_blender": [
+        -13.824999809265137,
+        4.125,
+        0.0,
+        -7.175000190734863,
+        10.074999809265137,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Desk",
+      "aabb_blender": [
+        -11.800000190734863,
+        7.300000190734863,
+        -0.06000000238418579,
+        -9.199999809265137,
+        8.300000190734863,
+        0.9100000262260437
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Books",
+      "aabb_blender": [
+        -9.569999694824219,
+        8.47499942779541,
+        0.0,
+        -8.229999542236328,
+        9.324999809265137,
+        1.7999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_home_bedroom_Overview_Footprint",
+      "aabb_blender": [
+        -6.824999809265137,
+        4.125,
+        0.0,
+        -0.17499995231628418,
+        10.074999809265137,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Bed",
+      "aabb_blender": [
+        -4.452000141143799,
+        6.139999866485596,
+        0.0,
+        -2.547999858856201,
+        8.859999656677246,
+        0.8840000033378601
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_home_bathroom_Overview_Footprint",
+      "aabb_blender": [
+        0.17499995231628418,
+        4.125,
+        0.0,
+        6.824999809265137,
+        10.074999809265137,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Basin",
+      "aabb_blender": [
+        1.2999999523162842,
+        7.5,
+        -0.06000000238418579,
+        2.5,
+        8.300000190734863,
+        0.8600000143051147
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_home_balcony_Overview_Footprint",
+      "aabb_blender": [
+        7.175000190734863,
+        4.125,
+        0.0,
+        13.824999809265137,
+        10.074999809265137,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Planter",
+      "aabb_blender": [
+        10.5,
+        7.299999713897705,
+        0.0,
+        12.5,
+        8.09999942779541,
+        0.800000011920929
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Laundry",
+      "aabb_blender": [
+        7.850000381469727,
+        7.450000286102295,
+        0.0,
+        10.75,
+        8.15000057220459,
+        2.4000000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_home_Overview_Footprint",
+      "aabb_blender": [
+        -13.475000381469727,
+        -7.074999809265137,
+        0.0,
+        -6.525000095367432,
+        -0.125,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Sofa",
+      "aabb_blender": [
+        -11.190000534057617,
+        -3.5899999141693115,
+        0.0,
+        -8.809999465942383,
+        -2.609999895095825,
+        0.9800000190734863
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Coffee_Table",
+      "aabb_blender": [
+        -10.850000381469727,
+        -5.049999713897705,
+        -0.06000000238418579,
+        -9.149999618530273,
+        -4.150000095367432,
+        0.6600000262260437
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_home_dining_Overview_Footprint",
+      "aabb_blender": [
+        -0.9749999046325684,
+        -7.074999809265137,
+        0.0,
+        4.974999904632568,
+        -0.125,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Dining_Table",
+      "aabb_blender": [
+        0.75,
+        -4.449999809265137,
+        -0.06000000238418579,
+        3.25,
+        -2.75,
+        0.9599999785423279
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_home_kitchen_Overview_Footprint",
+      "aabb_blender": [
+        6.025000095367432,
+        -7.074999809265137,
+        0.0,
+        12.975000381469727,
+        -0.125,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Kitchen_Sink",
+      "aabb_blender": [
+        6.975000381469727,
+        -3.3000001907348633,
+        -0.06000000238418579,
+        9.225000381469727,
+        -2.0999999046325684,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Overview_Stove",
+      "aabb_blender": [
+        9.800000190734863,
+        -3.200000047683716,
+        -0.06000003218650818,
+        11.800000190734863,
+        -2.200000047683716,
+        1.0099999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Boundary",
+      "aabb_blender": [
+        -16.149999618530273,
+        -16.0,
+        0.0,
+        -15.850000381469727,
+        16.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Boundary.001",
+      "aabb_blender": [
+        15.850000381469727,
+        -16.0,
+        0.0,
+        16.149999618530273,
+        16.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Rear_Boundary",
+      "aabb_blender": [
+        -16.0,
+        15.550000190734863,
+        0.0,
+        16.0,
+        15.84999942779541,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -15.949999809265137,
+        -15.649999618530273,
+        0.0,
+        -1.4499998092651367,
+        -15.350000381469727,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.4499998092651367,
+        -15.649999618530273,
+        0.0,
+        15.949999809265137,
+        -15.350000381469727,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Mail_Table",
+      "aabb_blender": [
+        -11.100000381469727,
+        -12.199999809265137,
+        -0.06000000238418579,
+        -8.899999618530273,
+        -11.199999809265137,
+        0.9599999785423279
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Flower_Bed",
+      "aabb_blender": [
+        5.849999904632568,
+        -12.34999942779541,
+        0.0,
+        10.149999618530273,
+        -11.050000190734863,
+        0.800000011920929
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Watering_Can_Stand",
+      "aabb_blender": [
+        6.074999809265137,
+        -12.175000190734863,
+        -0.06000000238418579,
+        6.925000190734863,
+        -11.425000190734863,
+        0.8600000143051147
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Family_Day_Board",
+      "aabb_blender": [
+        0.6000000238418579,
+        -11.824999809265137,
+        0.0,
+        3.4000000953674316,
+        -11.574999809265137,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Porch_Bench",
+      "aabb_blender": [
+        10.0,
+        -9.125,
+        -0.06000000238418579,
+        13.0,
+        -8.475000381469727,
+        0.6399999856948853
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Shade_Tree",
+      "aabb_blender": [
+        13.77500057220459,
+        -10.324999809265137,
+        0.0,
+        14.425000190734863,
+        -9.675000190734863,
+        2.5999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Apple_Tree",
+      "aabb_blender": [
+        -14.292499542236328,
+        -12.092499732971191,
+        0.0,
+        -13.707500457763672,
+        -11.507500648498535,
+        2.3399999141693115
+      ]
+    }
+  ],
+  "bounds": [
+    -17.0,
+    -16.0,
+    34.0,
+    32.0
+  ],
+  "mesh_objects": 773,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 7648596,
+  "glb_node_count": 808,
+  "triangles_instanced": 324052,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "77a965cb1c9a539bc94acabbde4340c8efcc88226b14060381bef46f9c624f1f",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/home_estate/home_estate_v01.blend",
+  "source_blend_preserved": false
+}

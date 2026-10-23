@@ -1,0 +1,1179 @@
+{
+  "room_id": "school",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "校门导览",
+      "position_blender": [
+        -6.5,
+        -16.6,
+        0.0
+      ],
+      "position_godot": [
+        -6.5,
+        0.0,
+        16.6
+      ],
+      "associated_prop": "ASSET_School_Noticeboard_Face",
+      "memory_id": "memory_SCHOOL_01",
+      "activity": "从校门导览认识校园与七处可进入场所"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "教学楼前",
+      "position_blender": [
+        -5.8,
+        6.2,
+        0.0
+      ],
+      "position_godot": [
+        -5.8,
+        0.0,
+        -6.2
+      ],
+      "associated_prop": "Teaching_Rollcall_Board_Face",
+      "memory_id": "memory_SCHOOL_02",
+      "activity": "在教学楼前辨认普通、音乐、美术和科学教室入口"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中心花园",
+      "position_blender": [
+        4.8,
+        0.0,
+        0.0
+      ],
+      "position_godot": [
+        4.8,
+        0.0,
+        -0.0
+      ],
+      "associated_prop": "Campus_Garden_Reading_Tree_Trunk",
+      "memory_id": "memory_SCHOOL_03",
+      "activity": "观察校园花草并熟悉庭院环路"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "运动器材旁",
+      "position_blender": [
+        20.7,
+        -12.6,
+        0.0
+      ],
+      "position_godot": [
+        20.7,
+        0.0,
+        12.6
+      ],
+      "associated_prop": "ASSET_School_Ball_Rack",
+      "memory_id": "memory_SCHOOL_04",
+      "activity": "认识操场入口与运动器材"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "餐厅菜单",
+      "position_blender": [
+        21.0,
+        -6.9,
+        0.0
+      ],
+      "position_godot": [
+        21.0,
+        0.0,
+        6.9
+      ],
+      "associated_prop": "Canteen_Menu_Board_Face",
+      "memory_id": "memory_SCHOOL_05",
+      "activity": "看餐厅菜单并辨认食堂入口"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "从主岛进入校园",
+      "position_blender": [
+        0.0,
+        -16.8,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        16.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回字母岛",
+      "position_blender": [
+        0.0,
+        -19.0,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        19.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "和校园老师聊一聊",
+      "position_blender": [
+        4.6,
+        -14.3,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        14.3
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_CLASSROOM",
+      "label": "普通教室",
+      "position_blender": [
+        0.0,
+        6.7,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -6.7
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_MUSIC_ROOM",
+      "label": "音乐教室",
+      "position_blender": [
+        -16.0,
+        3.8,
+        0.0
+      ],
+      "position_godot": [
+        -16.0,
+        0.0,
+        -3.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_ART_ROOM",
+      "label": "美术教室",
+      "position_blender": [
+        -16.0,
+        -8.7,
+        0.0
+      ],
+      "position_godot": [
+        -16.0,
+        0.0,
+        8.7
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_SCIENCE_ROOM",
+      "label": "科学教室",
+      "position_blender": [
+        16.0,
+        5.2,
+        0.0
+      ],
+      "position_godot": [
+        16.0,
+        0.0,
+        -5.2
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_CANTEEN",
+      "label": "校园餐厅",
+      "position_blender": [
+        16.0,
+        -7.4,
+        0.0
+      ],
+      "position_godot": [
+        16.0,
+        0.0,
+        7.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_PLAYGROUND",
+      "label": "青草操场",
+      "position_blender": [
+        10.5,
+        -17.7,
+        0.0
+      ],
+      "position_godot": [
+        10.5,
+        0.0,
+        17.7
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_FOOTBALL_FIELD",
+      "label": "校园足球场",
+      "position_blender": [
+        28.0,
+        -17.0,
+        0.0
+      ],
+      "position_godot": [
+        28.0,
+        0.0,
+        17.0
+      ],
+      "associated_prop": "Football_Entry_Sign",
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_-1",
+      "aabb_blender": [
+        -23.75,
+        -19.75,
+        0.0,
+        -23.349998474121094,
+        19.75,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_1",
+      "aabb_blender": [
+        51.349998474121094,
+        -19.75,
+        0.0,
+        51.75,
+        19.75,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -23.75,
+        19.39000129699707,
+        0.0,
+        23.75,
+        19.809999465942383,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Boundary_-23.5",
+      "aabb_blender": [
+        -23.5,
+        -19.850000381469727,
+        0.0,
+        -3.3999996185302734,
+        -19.44999885559082,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Boundary_3.4",
+      "aabb_blender": [
+        3.3999996185302734,
+        -19.850000381469727,
+        0.0,
+        23.5,
+        -19.44999885559082,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk",
+      "aabb_blender": [
+        -22.972198486328125,
+        -16.172199249267578,
+        0.0,
+        -22.62779998779297,
+        -15.827799797058105,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.001",
+      "aabb_blender": [
+        -22.972198486328125,
+        -10.172200202941895,
+        0.0,
+        -22.62779998779297,
+        -9.827799797058105,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.002",
+      "aabb_blender": [
+        -22.972198486328125,
+        -3.1721999645233154,
+        0.0,
+        -22.62779998779297,
+        -2.8278000354766846,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.003",
+      "aabb_blender": [
+        -22.972198486328125,
+        3.8278000354766846,
+        0.0,
+        -22.62779998779297,
+        4.1722002029418945,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.004",
+      "aabb_blender": [
+        -22.972198486328125,
+        10.827799797058105,
+        0.0,
+        -22.62779998779297,
+        11.172200202941895,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.005",
+      "aabb_blender": [
+        -22.972198486328125,
+        16.827800750732422,
+        0.0,
+        -22.62779998779297,
+        17.172199249267578,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.006",
+      "aabb_blender": [
+        22.62779998779297,
+        -16.172199249267578,
+        0.0,
+        22.972198486328125,
+        -15.827799797058105,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.007",
+      "aabb_blender": [
+        22.62779998779297,
+        -10.172200202941895,
+        0.0,
+        22.972198486328125,
+        -9.827799797058105,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.008",
+      "aabb_blender": [
+        22.62779998779297,
+        -3.1721999645233154,
+        0.0,
+        22.972198486328125,
+        -2.8278000354766846,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.009",
+      "aabb_blender": [
+        22.62779998779297,
+        3.8278000354766846,
+        0.0,
+        22.972198486328125,
+        4.1722002029418945,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.010",
+      "aabb_blender": [
+        22.62779998779297,
+        10.827799797058105,
+        0.0,
+        22.972198486328125,
+        11.172200202941895,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Tree_Trunk.011",
+      "aabb_blender": [
+        22.62779998779297,
+        16.827800750732422,
+        0.0,
+        22.972198486328125,
+        17.172199249267578,
+        1.8040000200271606
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Rear_Tree_Trunk",
+      "aabb_blender": [
+        -17.18899917602539,
+        17.81100082397461,
+        0.0,
+        -16.81100082397461,
+        18.18899917602539,
+        1.9800000190734863
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Rear_Tree_Trunk.001",
+      "aabb_blender": [
+        -10.189000129699707,
+        17.81100082397461,
+        0.0,
+        -9.810999870300293,
+        18.18899917602539,
+        1.9800000190734863
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Rear_Tree_Trunk.002",
+      "aabb_blender": [
+        9.810999870300293,
+        17.81100082397461,
+        0.0,
+        10.189000129699707,
+        18.18899917602539,
+        1.9800000190734863
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Rear_Tree_Trunk.003",
+      "aabb_blender": [
+        16.81100082397461,
+        17.81100082397461,
+        0.0,
+        17.18899917602539,
+        18.18899917602539,
+        1.9800000190734863
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Teaching_Main",
+      "aabb_blender": [
+        -8.399999618530273,
+        10.0,
+        0.0,
+        8.399999618530273,
+        16.5,
+        5.400000095367432
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Teaching_Tower",
+      "aabb_blender": [
+        -1.5750000476837158,
+        8.399999618530273,
+        0.0,
+        1.5750000476837158,
+        11.5,
+        8.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Guide_Original",
+      "aabb_blender": [
+        -7.5,
+        -15.425000190734863,
+        0.0,
+        -5.5,
+        -14.97499942779541,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Bench_West_Original",
+      "aabb_blender": [
+        -6.925000190734863,
+        -0.09999999403953552,
+        0.0,
+        -5.074999809265137,
+        0.8999999761581421,
+        1.5
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Bench_East_Original",
+      "aabb_blender": [
+        5.274999618530273,
+        3.200000047683716,
+        0.0,
+        7.125,
+        4.199999809265137,
+        1.5
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Sports_Rack_Original",
+      "aabb_blender": [
+        19.600000381469727,
+        -11.375,
+        0.0,
+        21.80000114440918,
+        -10.625,
+        1.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Sports_Hoop_Original",
+      "aabb_blender": [
+        9.4399995803833,
+        -13.210000038146973,
+        0.0,
+        9.859999656677246,
+        -12.789999961853027,
+        3.4000000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Gate_Pier_-3.0",
+      "aabb_blender": [
+        -3.3499999046325684,
+        -19.279998779296875,
+        0.0,
+        -2.6500000953674316,
+        -18.520000457763672,
+        1.559999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Gate_Pier_3.0",
+      "aabb_blender": [
+        2.6500000953674316,
+        -19.279998779296875,
+        0.0,
+        3.3499999046325684,
+        -18.520000457763672,
+        1.559999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Music_Window_Planter",
+      "aabb_blender": [
+        -19.156999588012695,
+        4.909999847412109,
+        0.0,
+        -17.706998825073242,
+        5.569999694824219,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Music_Window_Planter.001",
+      "aabb_blender": [
+        -14.293000221252441,
+        4.909999847412109,
+        0.0,
+        -12.842999458312988,
+        5.569999694824219,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Music_Building",
+      "aabb_blender": [
+        -19.875,
+        5.525000095367432,
+        0.0,
+        -12.125,
+        12.475000381469727,
+        5.099999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Music_Outdoor_Xylophone",
+      "aabb_blender": [
+        -21.049999237060547,
+        7.0,
+        0.0,
+        -19.25,
+        8.199999809265137,
+        1.2999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_Window_Planter",
+      "aabb_blender": [
+        -19.156999588012695,
+        -7.590000152587891,
+        0.0,
+        -17.706998825073242,
+        -6.930000305175781,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_Window_Planter.001",
+      "aabb_blender": [
+        -14.293000221252441,
+        -7.590000152587891,
+        0.0,
+        -12.842999458312988,
+        -6.930000305175781,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_Building",
+      "aabb_blender": [
+        -19.875,
+        -6.974999904632568,
+        0.0,
+        -12.125,
+        -0.02500009536743164,
+        5.099999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_Outdoor_Easel_-21.0",
+      "aabb_blender": [
+        -21.399999618530273,
+        -5.325000286102295,
+        0.0,
+        -20.600000381469727,
+        -4.775000095367432,
+        1.399999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_Outdoor_Easel_-20.0",
+      "aabb_blender": [
+        -20.399999618530273,
+        -5.325000286102295,
+        0.0,
+        -19.600000381469727,
+        -4.775000095367432,
+        1.399999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Science_Window_Planter",
+      "aabb_blender": [
+        12.714999198913574,
+        6.309999942779541,
+        0.0,
+        14.164999961853027,
+        6.96999979019165,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Science_Window_Planter.001",
+      "aabb_blender": [
+        17.834999084472656,
+        6.309999942779541,
+        0.0,
+        19.28499984741211,
+        6.96999979019165,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Science_Building",
+      "aabb_blender": [
+        11.925000190734863,
+        6.925000190734863,
+        0.0,
+        20.075000762939453,
+        14.074999809265137,
+        5.099999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Science_Weather_Stand",
+      "aabb_blender": [
+        21.07499885559082,
+        9.674999237060547,
+        0.0,
+        21.524999618530273,
+        10.125,
+        2.5
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Canteen_Window_Planter",
+      "aabb_blender": [
+        12.714999198913574,
+        -6.289999961853027,
+        0.0,
+        14.164999961853027,
+        -5.630000114440918,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Canteen_Window_Planter.001",
+      "aabb_blender": [
+        17.834999084472656,
+        -6.289999961853027,
+        0.0,
+        19.28499984741211,
+        -5.630000114440918,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Canteen_Building",
+      "aabb_blender": [
+        11.925000190734863,
+        -5.675000190734863,
+        0.0,
+        20.075000762939453,
+        1.4750001430511475,
+        5.099999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Canteen_Outdoor_Table",
+      "aabb_blender": [
+        9.850000381469727,
+        -2.25,
+        -0.0599999725818634,
+        12.149999618530273,
+        -0.9500000476837158,
+        0.9800000190734863
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Canteen_Outdoor_Bench",
+      "aabb_blender": [
+        9.850000381469727,
+        -2.9750001430511475,
+        -0.06000000238418579,
+        12.149999618530273,
+        -2.325000047683716,
+        0.6399999856948853
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Canteen_Outdoor_Bench.001",
+      "aabb_blender": [
+        9.850000381469727,
+        -0.875,
+        -0.06000000238418579,
+        12.149999618530273,
+        -0.2250000238418579,
+        0.6399999856948853
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Central_Garden",
+      "aabb_blender": [
+        -3.2799999713897705,
+        -3.2799999713897705,
+        0.0,
+        3.2799999713897705,
+        3.2799999713897705,
+        0.8999999761581421
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Campus_Garden_Reading_Tree_Trunk",
+      "aabb_blender": [
+        -0.25200000405311584,
+        -0.25200000405311584,
+        0.0,
+        0.25200000405311584,
+        0.25200000405311584,
+        2.640000104904175
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Teaching_Rollcall_Board",
+      "aabb_blender": [
+        -7.150000095367432,
+        7.509999752044678,
+        0.0,
+        -4.450000286102295,
+        7.889999866485596,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Canteen_Menu_Board",
+      "aabb_blender": [
+        19.725000381469727,
+        -5.490000247955322,
+        0.0,
+        22.274999618530273,
+        -5.110000133514404,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Reading_Garden_Bench",
+      "aabb_blender": [
+        -16.149999618530273,
+        -12.625,
+        -0.06000000238418579,
+        -13.449999809265137,
+        -11.975000381469727,
+        0.6399999856948853
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Reading_Garden_Tree_Trunk",
+      "aabb_blender": [
+        -15.378499984741211,
+        -15.178500175476074,
+        0.0,
+        -15.021499633789062,
+        -14.821499824523926,
+        1.8700000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Welcome_Flowers_Left",
+      "aabb_blender": [
+        -8.600000381469727,
+        -12.729999542236328,
+        0.0,
+        -5.400000095367432,
+        -12.069999694824219,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Welcome_Flowers_Right",
+      "aabb_blender": [
+        3.950000286102295,
+        -11.529999732971191,
+        0.0,
+        6.650000095367432,
+        -10.869999885559082,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Teaching_Flowers_Left",
+      "aabb_blender": [
+        -10.350000381469727,
+        6.670000076293945,
+        0.0,
+        -7.850000381469727,
+        7.329999923706055,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Teaching_Flowers_Right",
+      "aabb_blender": [
+        8.050000190734863,
+        6.869999885559082,
+        0.0,
+        10.15000057220459,
+        7.529999732971191,
+        0.7200000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Sports_Gate_Post_9.4",
+      "aabb_blender": [
+        9.299999237060547,
+        -17.149999618530273,
+        0.0,
+        9.5,
+        -16.94999885559082,
+        2.700000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Sports_Gate_Post_11.6",
+      "aabb_blender": [
+        11.5,
+        -17.149999618530273,
+        0.0,
+        11.700000762939453,
+        -16.94999885559082,
+        2.700000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Rear_Boundary",
+      "aabb_blender": [
+        23.5,
+        19.39000129699707,
+        0.0,
+        51.599998474121094,
+        19.809999465942383,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Front_Boundary",
+      "aabb_blender": [
+        23.5,
+        -19.850000381469727,
+        0.0,
+        51.5,
+        -19.44999885559082,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_South_Post_35.5",
+      "aabb_blender": [
+        35.415000915527344,
+        -14.085000038146973,
+        0.0,
+        35.584999084472656,
+        -13.914999961853027,
+        2.299999952316284
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_South_Side_Net_35.5",
+      "aabb_blender": [
+        35.47249984741211,
+        -15.149999618530273,
+        0.0,
+        35.52750015258789,
+        -14.0,
+        1.7999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_South_Post_40.5",
+      "aabb_blender": [
+        40.415000915527344,
+        -14.085000038146973,
+        0.0,
+        40.584999084472656,
+        -13.914999961853027,
+        2.299999952316284
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_South_Side_Net_40.5",
+      "aabb_blender": [
+        40.47249984741211,
+        -15.149999618530273,
+        0.0,
+        40.52750015258789,
+        -14.0,
+        1.7999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_South_Back_Net",
+      "aabb_blender": [
+        35.5,
+        -15.179999351501465,
+        0.0,
+        40.5,
+        -15.119999885559082,
+        1.7999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_South_Crossbar",
+      "aabb_blender": [
+        35.42499923706055,
+        -14.085000038146973,
+        2.1649999618530273,
+        40.57500076293945,
+        -13.914999961853027,
+        2.3350000381469727
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_North_Post_35.5",
+      "aabb_blender": [
+        35.415000915527344,
+        13.914999961853027,
+        0.0,
+        35.584999084472656,
+        14.085000038146973,
+        2.299999952316284
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_North_Side_Net_35.5",
+      "aabb_blender": [
+        35.47249984741211,
+        14.0,
+        0.0,
+        35.52750015258789,
+        15.149999618530273,
+        1.7999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_North_Post_40.5",
+      "aabb_blender": [
+        40.415000915527344,
+        13.914999961853027,
+        0.0,
+        40.584999084472656,
+        14.085000038146973,
+        2.299999952316284
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_North_Side_Net_40.5",
+      "aabb_blender": [
+        40.47249984741211,
+        14.0,
+        0.0,
+        40.52750015258789,
+        15.149999618530273,
+        1.7999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_North_Back_Net",
+      "aabb_blender": [
+        35.5,
+        15.119999885559082,
+        0.0,
+        40.5,
+        15.179999351501465,
+        1.7999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Goal_North_Crossbar",
+      "aabb_blender": [
+        35.42499923706055,
+        13.914999961853027,
+        2.1649999618530273,
+        40.57500076293945,
+        14.085000038146973,
+        2.3350000381469727
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Entry_Post_26.6",
+      "aabb_blender": [
+        26.4950008392334,
+        -15.904999732971191,
+        0.0,
+        26.704999923706055,
+        -15.695000648498535,
+        2.700000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Entry_Post_29.4",
+      "aabb_blender": [
+        29.295000076293945,
+        -15.904999732971191,
+        0.0,
+        29.5049991607666,
+        -15.695000648498535,
+        2.700000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Spectator_Bench_-6",
+      "aabb_blender": [
+        50.07500076293945,
+        -7.425000190734863,
+        0.0,
+        50.92499923706055,
+        -4.574999809265137,
+        1.399999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Spectator_Bench_5",
+      "aabb_blender": [
+        50.07500076293945,
+        3.575000047683716,
+        0.0,
+        50.92499923706055,
+        6.425000190734863,
+        1.399999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Football_Scoreboard",
+      "aabb_blender": [
+        44.20000076293945,
+        17.299999237060547,
+        0.0,
+        47.79999923706055,
+        17.700000762939453,
+        3.5999999046325684
+      ]
+    }
+  ],
+  "bounds": [
+    -24.0,
+    -20.0,
+    76.0,
+    40.0
+  ],
+  "mesh_objects": 1170,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05",
+    "SG_DOOR_CLASSROOM",
+    "SG_DOOR_MUSIC_ROOM",
+    "SG_DOOR_ART_ROOM",
+    "SG_DOOR_SCIENCE_ROOM",
+    "SG_DOOR_CANTEEN",
+    "SG_DOOR_PLAYGROUND",
+    "SG_DOOR_FOOTBALL_FIELD"
+  ],
+  "glb_bytes": 7316360,
+  "glb_node_count": 1220,
+  "triangles_instanced": 204908,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "c089ad70c6351757979ca3713192994a63a6c8bbe5adf9842af284751d057d0c",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/school/school_v03.blend",
+  "source_blend_preserved": true
+}

@@ -1,0 +1,6792 @@
+{
+  "schema_version": 2,
+  "rooms": [
+    {
+      "room_id": "landmark_A",
+      "name": "苹果果园屋",
+      "blend": "assets/blender/interiors/landmark_A/landmark_A_v01.blend",
+      "glb": "assets/blender/interiors/landmark_A/landmark_A_v01.glb",
+      "preview": "assets/blender/interiors/landmark_A/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "门前篮子",
+          "position_blender": [
+            -2.5,
+            -1.6,
+            0.0
+          ],
+          "position_godot": [
+            -2.5,
+            0.0,
+            1.6
+          ],
+          "associated_prop": "A_Entrance_Basket",
+          "memory_id": "memory_A_01",
+          "activity": ""
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧果树",
+          "position_blender": [
+            -6.95,
+            0.5,
+            0.0
+          ],
+          "position_godot": [
+            -6.95,
+            0.0,
+            -0.5
+          ],
+          "associated_prop": "A_Tree_3_Trunk",
+          "memory_id": "memory_A_02",
+          "activity": ""
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央分拣台",
+          "position_blender": [
+            -2.8,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            -2.8,
+            0.0,
+            5.65
+          ],
+          "associated_prop": "A_SortTable_Top",
+          "memory_id": "memory_A_03",
+          "activity": ""
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧洗果池",
+          "position_blender": [
+            4.15,
+            -2.35,
+            0.0
+          ],
+          "position_godot": [
+            4.15,
+            0.0,
+            2.35
+          ],
+          "associated_prop": "A_Wash_Pedestal",
+          "memory_id": "memory_A_04",
+          "activity": ""
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口礼物架",
+          "position_blender": [
+            3.6,
+            -7.05,
+            0.0
+          ],
+          "position_godot": [
+            3.6,
+            0.0,
+            7.05
+          ],
+          "associated_prop": "A_GiftShelf_Board",
+          "memory_id": "memory_A_05",
+          "activity": ""
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "果园主路进入点",
+          "position_blender": [
+            -0.3,
+            -8.65,
+            0.0
+          ],
+          "position_godot": [
+            -0.3,
+            0.0,
+            8.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "沿原主路返回字母岛",
+          "position_blender": [
+            -0.15,
+            -9.7,
+            0.0
+          ],
+          "position_godot": [
+            -0.15,
+            0.0,
+            9.7
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "果园主人",
+          "position_blender": [
+            -0.8,
+            -2.4,
+            0.0
+          ],
+          "position_godot": [
+            -0.8,
+            0.0,
+            2.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -11.2786,
+        -10.186,
+        23.2591,
+        20.9502
+      ],
+      "triangles": 157489,
+      "glb_sha256": "9917caa337ac8a1eba79053213e57ddbded09963237eedfa2a6d121bf00930a3"
+    },
+    {
+      "room_id": "landmark_B",
+      "name": "船屋码头",
+      "blend": "assets/blender/interiors/landmark_B/landmark_B_v01.blend",
+      "glb": "assets/blender/interiors/landmark_B/landmark_B_v01.glb",
+      "preview": "assets/blender/interiors/landmark_B/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "岸边路牌",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Directions_Face",
+          "memory_id": "memory_B_01",
+          "activity": "查看目的地"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧长凳",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Bench_Back",
+          "memory_id": "memory_B_02",
+          "activity": "找出长凳下的坐垫"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央系船柱",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Mooring_Bollard",
+          "memory_id": "memory_B_03",
+          "activity": "确认小船停靠位置"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧货架",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Cargo_Back",
+          "memory_id": "memory_B_04",
+          "activity": "按清单装好货箱"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "船舱门展示点",
+          "position_blender": [
+            6.8,
+            4.75,
+            0.0
+          ],
+          "position_godot": [
+            6.8,
+            0.0,
+            -4.75
+          ],
+          "associated_prop": "Locus_05_Cabin_Handle",
+          "memory_id": "memory_B_05",
+          "activity": "核对出行物件"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 79915,
+      "glb_sha256": "2ea13ca82b5608f87228d807ee2dc9aefa6d16c0b8c94047c54abdcd3672e666"
+    },
+    {
+      "room_id": "landmark_C",
+      "name": "蛋糕烘焙坊",
+      "blend": "assets/blender/interiors/landmark_C/landmark_C_v01.blend",
+      "glb": "assets/blender/interiors/landmark_C/landmark_C_v01.glb",
+      "preview": "assets/blender/interiors/landmark_C/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "门口订单板",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Orders_Face",
+          "memory_id": "memory_C_01",
+          "activity": "选择客人订单"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧材料架",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Ingredients_Back",
+          "memory_id": "memory_C_02",
+          "activity": "取出需要的原料"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央料理台",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Island_Cabinet",
+          "memory_id": "memory_C_03",
+          "activity": "混合与装饰"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧烤箱",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Oven",
+          "memory_id": "memory_C_04",
+          "activity": "观察烘焙计时"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口取餐窗",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Pickup_Cabinet",
+          "memory_id": "memory_C_05",
+          "activity": "把成品递给客人"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 177936,
+      "glb_sha256": "6032cf0348ace271b5fa97dbc5ba3e5a0ca6e242dbb2c7af8a0cf4315ac3ac00"
+    },
+    {
+      "room_id": "landmark_D",
+      "name": "鼓屋音乐厅",
+      "blend": "assets/blender/interiors/landmark_D/landmark_D_v01.blend",
+      "glb": "assets/blender/interiors/landmark_D/landmark_D_v01.glb",
+      "preview": "assets/blender/interiors/landmark_D/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "门口节目牌",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Programme_Face",
+          "memory_id": "memory_D_01",
+          "activity": "选择今天的合奏"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧乐器架",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Instrument_Shelf_Back",
+          "memory_id": "memory_D_02",
+          "activity": "领取鼓槌"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央鼓台",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Big_Drum_Hoop",
+          "memory_id": "memory_D_03",
+          "activity": "按提示开始和停止"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧排练席",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Rehearsal_Back",
+          "memory_id": "memory_D_04",
+          "activity": "与伙伴轮流演奏"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口纪念墙",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Memories_Face",
+          "memory_id": "memory_D_05",
+          "activity": "贴上演出照片"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 209024,
+      "glb_sha256": "f811cab2a24508911091a85e1de9be6e5cb389738693db3d18eb981aad5af353"
+    },
+    {
+      "room_id": "landmark_E",
+      "name": "蛋壳孵化屋",
+      "blend": "assets/blender/interiors/landmark_E/landmark_E_v01.blend",
+      "glb": "assets/blender/interiors/landmark_E/landmark_E_v01.glb",
+      "preview": "assets/blender/interiors/landmark_E/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "门口照料板",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Care_Face",
+          "memory_id": "memory_E_01",
+          "activity": "查看照料安排"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧软垫",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Soft_Nest",
+          "memory_id": "memory_E_02",
+          "activity": "整理柔软垫子"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央孵化台",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Incubator_Cabinet",
+          "memory_id": "memory_E_03",
+          "activity": "观察蛋壳和小鸡"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧食水架",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Feed_Water_Cabinet",
+          "memory_id": "memory_E_04",
+          "activity": "匹配水与食物"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口观察窗",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Observation_Window_Frame",
+          "memory_id": "memory_E_05",
+          "activity": "画下观察到的变化"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 119568,
+      "glb_sha256": "6faf98040959751f14a4fa938e23178d707218dc9ea8220cc9af8c1e873798e0"
+    },
+    {
+      "room_id": "landmark_F",
+      "name": "巨花温室",
+      "blend": "assets/blender/interiors/landmark_F/landmark_F_v01.blend",
+      "glb": "assets/blender/interiors/landmark_F/landmark_F_v01.glb",
+      "preview": "assets/blender/interiors/landmark_F/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "门口种子盒",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Seeds_Leg",
+          "memory_id": "memory_F_01",
+          "activity": "选择种子"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧花盆台",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Potting_Leg",
+          "memory_id": "memory_F_02",
+          "activity": "栽入花盆"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央花床",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Flower_Bed_Box",
+          "memory_id": "memory_F_03",
+          "activity": "观察花色"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧水池",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Garden_Sink_Basin",
+          "memory_id": "memory_F_04",
+          "activity": "给需要的花浇水"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口花束架",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Bouquets_Leg",
+          "memory_id": "memory_F_05",
+          "activity": "整理送人的花束"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 266432,
+      "glb_sha256": "a1630133d487bc7ca82d10855c5fc90d60cff89a867c3861e529e004ac1fad4e"
+    },
+    {
+      "room_id": "landmark_G",
+      "name": "地球仪旅行馆",
+      "blend": "assets/blender/interiors/landmark_G/landmark_G_v01.blend",
+      "glb": "assets/blender/interiors/landmark_G/landmark_G_v01.glb",
+      "preview": "assets/blender/interiors/landmark_G/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口旅行卡架",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Travel_Cards_Leg",
+          "memory_id": "memory_G_01",
+          "activity": "领取旅行卡"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧明信片湾",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Postcards_Back",
+          "memory_id": "memory_G_02",
+          "activity": "辨认图片里的地方"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央地球仪台",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Globe_Base",
+          "memory_id": "memory_G_03",
+          "activity": "在地图上找位置"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧打包桌",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Luggage_Leg",
+          "memory_id": "memory_G_04",
+          "activity": "按计划整理行李"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口路线墙",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Route_Wall_Face",
+          "memory_id": "memory_G_05",
+          "activity": "介绍下一站"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 111960,
+      "glb_sha256": "898150d41e855e524d0ab1228d42e5939ab00a03ee37382d79fc0c498701e53d"
+    },
+    {
+      "room_id": "landmark_H",
+      "name": "帽子裁缝店",
+      "blend": "assets/blender/interiors/landmark_H/landmark_H_v01.blend",
+      "glb": "assets/blender/interiors/landmark_H/landmark_H_v01.glb",
+      "preview": "assets/blender/interiors/landmark_H/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口试戴牌",
+          "position_blender": [
+            -3.78,
+            -3.196,
+            0.0
+          ],
+          "position_godot": [
+            -3.78,
+            0.0,
+            3.196
+          ],
+          "associated_prop": "Locus_01_Try_Hats_Face",
+          "memory_id": "memory_H_01",
+          "activity": "选择来访者需求"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧布料架",
+          "position_blender": [
+            -5.184,
+            -0.658,
+            0.0
+          ],
+          "position_godot": [
+            -5.184,
+            0.0,
+            0.658
+          ],
+          "associated_prop": "Locus_02_Fabrics_Back",
+          "memory_id": "memory_H_02",
+          "activity": "找颜色和材质"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央试戴镜",
+          "position_blender": [
+            0.0,
+            -0.282,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.282
+          ],
+          "associated_prop": "Locus_03_Mirror_Table_Leg",
+          "memory_id": "memory_H_03",
+          "activity": "比较穿戴大小"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧修整桌",
+          "position_blender": [
+            5.076,
+            -0.658,
+            0.0
+          ],
+          "position_godot": [
+            5.076,
+            0.0,
+            0.658
+          ],
+          "associated_prop": "Locus_04_Sewing_Leg",
+          "memory_id": "memory_H_04",
+          "activity": "为帽子加缎带"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口帽架",
+          "position_blender": [
+            4.968,
+            -3.666,
+            0.0
+          ],
+          "position_godot": [
+            4.968,
+            0.0,
+            3.666
+          ],
+          "associated_prop": "Locus_05_Pickup_Leg",
+          "memory_id": "memory_H_05",
+          "activity": "展示选好的帽子"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.311,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.311
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.063,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.063
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.376,
+            -1.316,
+            0.0
+          ],
+          "position_godot": [
+            -2.376,
+            0.0,
+            1.316
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -9.342,
+        -7.191,
+        18.684,
+        14.382
+      ],
+      "triangles": 86416,
+      "glb_sha256": "6f818ab8c96dde2d58056158d4542a1971a6578ce55c436eb3097e7403a6b33b"
+    },
+    {
+      "room_id": "landmark_I",
+      "name": "冰淇淋驿亭",
+      "blend": "assets/blender/interiors/landmark_I/landmark_I_v01.blend",
+      "glb": "assets/blender/interiors/landmark_I/landmark_I_v01.glb",
+      "preview": "assets/blender/interiors/landmark_I/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口点单图牌",
+          "position_blender": [
+            -3.01,
+            -3.808,
+            0.0
+          ],
+          "position_godot": [
+            -3.01,
+            0.0,
+            3.808
+          ],
+          "associated_prop": "Locus_01_Flavours_Face",
+          "memory_id": "memory_I_01",
+          "activity": "听清客人口味"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧口味柜",
+          "position_blender": [
+            -4.128,
+            -0.784,
+            0.0
+          ],
+          "position_godot": [
+            -4.128,
+            0.0,
+            0.784
+          ],
+          "associated_prop": "Locus_02_Flavour_Cabinet_Cabinet",
+          "memory_id": "memory_I_02",
+          "activity": "找相应口味"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央冰淇淋台",
+          "position_blender": [
+            0.0,
+            -0.336,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.336
+          ],
+          "associated_prop": "Locus_03_Gelato_Counter_Cabinet",
+          "memory_id": "memory_I_03",
+          "activity": "把冰淇淋装入蛋筒"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧配料槽",
+          "position_blender": [
+            4.042,
+            -0.784,
+            0.0
+          ],
+          "position_godot": [
+            4.042,
+            0.0,
+            0.784
+          ],
+          "associated_prop": "Locus_04_Toppings_Back",
+          "memory_id": "memory_I_04",
+          "activity": "添加选定配料"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口取餐台",
+          "position_blender": [
+            3.956,
+            -4.368,
+            0.0
+          ],
+          "position_godot": [
+            3.956,
+            0.0,
+            4.368
+          ],
+          "associated_prop": "Locus_05_Collect_Cabinet",
+          "memory_id": "memory_I_05",
+          "activity": "礼貌递出并道谢"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -6.328,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.328
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -7.224,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            7.224
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -1.892,
+            -1.568,
+            0.0
+          ],
+          "position_godot": [
+            -1.892,
+            0.0,
+            1.568
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -6.88,
+        -7.84,
+        13.76,
+        15.68
+      ],
+      "triangles": 85416,
+      "glb_sha256": "ca8849ace8633ef180c847efc7f217bf845ef27a225d8dbc1dcc14861ed2ee7a"
+    },
+    {
+      "room_id": "landmark_J",
+      "name": "玻璃罐收藏馆",
+      "blend": "assets/blender/interiors/landmark_J/landmark_J_v01.blend",
+      "glb": "assets/blender/interiors/landmark_J/landmark_J_v01.glb",
+      "preview": "assets/blender/interiors/landmark_J/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口寄存盘",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Deposit_Leg",
+          "memory_id": "memory_J_01",
+          "activity": "放下新收藏"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧分类格",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Jars_Back",
+          "memory_id": "memory_J_02",
+          "activity": "按材质分类"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央分拣转台",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Turntable_Foot",
+          "memory_id": "memory_J_03",
+          "activity": "比较并分组"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧清洁贴签台",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Clean_Label_Basin",
+          "memory_id": "memory_J_04",
+          "activity": "擦净物品并标主人"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口收藏展柜",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Display_Cabinet",
+          "memory_id": "memory_J_05",
+          "activity": "介绍一件收藏"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 116412,
+      "glb_sha256": "a8dc05b2a7433317cff8dda8c1f15a652f46c33709086788bc4e8f040cfb809e"
+    },
+    {
+      "room_id": "landmark_K",
+      "name": "风筝工坊",
+      "blend": "assets/blender/interiors/landmark_K/landmark_K_v01.blend",
+      "glb": "assets/blender/interiors/landmark_K/landmark_K_v01.glb",
+      "preview": "assets/blender/interiors/landmark_K/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口制作图",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Plan_Face",
+          "memory_id": "memory_K_01",
+          "activity": "选择造型图"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧材料格",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Materials_Back",
+          "memory_id": "memory_K_02",
+          "activity": "取纸与细绳"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央风筝骨架桌",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Making_Leg",
+          "memory_id": "memory_K_03",
+          "activity": "拼合骨架并贴纸"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧风带测试口",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Test_Frame",
+          "memory_id": "memory_K_04",
+          "activity": "观察风向和飘带"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口风筝廊",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Kite_Gallery",
+          "memory_id": "memory_K_05",
+          "activity": "展示成品"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.6,
+        -7.5,
+        17.2,
+        15.0
+      ],
+      "triangles": 123404,
+      "glb_sha256": "02641e90b5246b04b916256d86fe26e01f11745be77250d3aeeabbb5a11353ea"
+    },
+    {
+      "room_id": "landmark_L",
+      "name": "灯笼驿站",
+      "blend": "assets/blender/interiors/landmark_L/landmark_L_v01.blend",
+      "glb": "assets/blender/interiors/landmark_L/landmark_L_v01.glb",
+      "preview": "assets/blender/interiors/landmark_L/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口拜访时刻牌",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Welcome_Face",
+          "memory_id": "memory_L_01",
+          "activity": "查看约定时间"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧灯笼修整架",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Lantern_Shelf_Back",
+          "memory_id": "memory_L_02",
+          "activity": "修整灯纸和提手"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央暖光会客桌",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Tea_Leg",
+          "memory_id": "memory_L_03",
+          "activity": "招呼来访者"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧邀请卡桌",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Messages_Leg",
+          "memory_id": "memory_L_04",
+          "activity": "制作图片邀请卡"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口亮灯长廊",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Lantern_Gift_Leg",
+          "memory_id": "memory_L_05",
+          "activity": "带灯送客"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 152464,
+      "glb_sha256": "2f254502f34a2125215b95816d7e5bd55c1a3ea3359c18df0414bf737cdc0caf"
+    },
+    {
+      "room_id": "landmark_M",
+      "name": "蘑菇邻居屋",
+      "blend": "assets/blender/interiors/landmark_M/landmark_M_v01.blend",
+      "glb": "assets/blender/interiors/landmark_M/landmark_M_v01.glb",
+      "preview": "assets/blender/interiors/landmark_M/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口拖鞋篮",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Slippers_Handle",
+          "memory_id": "memory_M_01",
+          "activity": "放好来访物品"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧邻居相册墙",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Neighbours_Face",
+          "memory_id": "memory_M_02",
+          "activity": "认识邻居与朋友"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央茶桌",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Dining_Leg",
+          "memory_id": "memory_M_03",
+          "activity": "摆好点心"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧沙发窗台",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Window_Sofa_Arm",
+          "memory_id": "memory_M_04",
+          "activity": "描述房间和日常活动"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口分享柜",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Albums_Back",
+          "memory_id": "memory_M_05",
+          "activity": "挑可借用的公共物品"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 139188,
+      "glb_sha256": "52e15aa23518d277c9c140a340466e346d1d8cf82d8e3925ffda29806d15cf97"
+    },
+    {
+      "room_id": "landmark_N",
+      "name": "鸟巢观察屋",
+      "blend": "assets/blender/interiors/landmark_N/landmark_N_v01.blend",
+      "glb": "assets/blender/interiors/landmark_N/landmark_N_v01.glb",
+      "preview": "assets/blender/interiors/landmark_N/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口观察守则枝牌",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Field_Notes_Face",
+          "memory_id": "memory_N_01",
+          "activity": "看安静观察图标"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧望远镜",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Birdwatch_Eyepiece",
+          "memory_id": "memory_N_02",
+          "activity": "寻找枝头小鸟"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央观察记录台",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Recording_Leg",
+          "memory_id": "memory_N_03",
+          "activity": "记录数量与动作"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧食水托架",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Feed_Water_Leg",
+          "memory_id": "memory_N_04",
+          "activity": "查看需补充的水"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口观察日记栏",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Bird_Diary_Face",
+          "memory_id": "memory_N_05",
+          "activity": "贴观察图片"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 153632,
+      "glb_sha256": "a2d19c69956f83f1efa71a99a8191a3ad5b432fe686a6796533c2df1636cc41e"
+    },
+    {
+      "room_id": "landmark_O",
+      "name": "猫头鹰图书馆",
+      "blend": "assets/blender/interiors/landmark_O/landmark_O_v01.blend",
+      "glb": "assets/blender/interiors/landmark_O/landmark_O_v01.glb",
+      "preview": "assets/blender/interiors/landmark_O/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口借阅台",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Borrow_Cabinet",
+          "memory_id": "memory_O_01",
+          "activity": "选择阅读卡"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧主题书架",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Wing_Books_Back",
+          "memory_id": "memory_O_02",
+          "activity": "找想看的主题"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央提问圆桌",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Question_Table_Foot",
+          "memory_id": "memory_O_03",
+          "activity": "围绕图片提问"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧眼窗阅读湾",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Story_Rug",
+          "memory_id": "memory_O_04",
+          "activity": "安静读短故事"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口还书车",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Return_Cart_Back",
+          "memory_id": "memory_O_05",
+          "activity": "把书归还到正确位置"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 102820,
+      "glb_sha256": "826649fa138289ab48bffa39dafa593e84db8874963b120191772fdaa9b7992e"
+    },
+    {
+      "room_id": "landmark_P",
+      "name": "南瓜农场屋",
+      "blend": "assets/blender/interiors/landmark_P/landmark_P_v01.blend",
+      "glb": "assets/blender/interiors/landmark_P/landmark_P_v01.glb",
+      "preview": "assets/blender/interiors/landmark_P/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口季节牌",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Farm_Face",
+          "memory_id": "memory_P_01",
+          "activity": "查看种植时节"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧种子工具台",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Seeds_Back",
+          "memory_id": "memory_P_02",
+          "activity": "选种子和工具"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央瓜藤种植垄",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Growing_Bed",
+          "memory_id": "memory_P_03",
+          "activity": "照顾瓜藤"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧收成秤台",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Compare_Scale_Leg",
+          "memory_id": "memory_P_04",
+          "activity": "比较大小和数量"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口农产篮架",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Produce_Leg",
+          "memory_id": "memory_P_05",
+          "activity": "装篮送出收成"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 162844,
+      "glb_sha256": "89de8802b64e8d8d3e53973e51bfd71ec81454fc18619c4fc3b35be447f8ee8d"
+    },
+    {
+      "room_id": "landmark_Q",
+      "name": "拼布故事馆",
+      "blend": "assets/blender/interiors/landmark_Q/landmark_Q_v01.blend",
+      "glb": "assets/blender/interiors/landmark_Q/landmark_Q_v01.glb",
+      "preview": "assets/blender/interiors/landmark_Q/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口故事封面夹",
+          "position_blender": [
+            -3.22,
+            -3.808,
+            0.0
+          ],
+          "position_godot": [
+            -3.22,
+            0.0,
+            3.808
+          ],
+          "associated_prop": "Locus_01_Cover_Face",
+          "memory_id": "memory_Q_01",
+          "activity": "选故事主题"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧图片卡抽屉",
+          "position_blender": [
+            -4.416,
+            -0.784,
+            0.0
+          ],
+          "position_godot": [
+            -4.416,
+            0.0,
+            0.784
+          ],
+          "associated_prop": "Locus_02_Picture_Drawers_Back",
+          "memory_id": "memory_Q_02",
+          "activity": "找人物和场景图"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央拼布故事桌",
+          "position_blender": [
+            0.0,
+            -0.336,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.336
+          ],
+          "associated_prop": "Locus_03_Quilting_Leg",
+          "memory_id": "memory_Q_03",
+          "activity": "按顺序铺图片"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧讲述坐垫",
+          "position_blender": [
+            4.324,
+            -0.784,
+            0.0
+          ],
+          "position_godot": [
+            4.324,
+            0.0,
+            0.784
+          ],
+          "associated_prop": "Locus_04_Story_Circle",
+          "memory_id": "memory_Q_04",
+          "activity": "向朋友讲述"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口故事被展墙",
+          "position_blender": [
+            4.232,
+            -4.368,
+            0.0
+          ],
+          "position_godot": [
+            4.232,
+            0.0,
+            4.368
+          ],
+          "associated_prop": "Locus_05_Story_Quilt_Face",
+          "memory_id": "memory_Q_05",
+          "activity": "展示并回顾顺序"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -6.328,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.328
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -7.224,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            7.224
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.024,
+            -1.568,
+            0.0
+          ],
+          "position_godot": [
+            -2.024,
+            0.0,
+            1.568
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -7.958,
+        -8.568,
+        15.916,
+        17.136
+      ],
+      "triangles": 183090,
+      "glb_sha256": "2e9f362904ca49329e14cffbe1af56d4d5c323f7484bb68671f3d3fe4fb90a47"
+    },
+    {
+      "room_id": "landmark_R",
+      "name": "机器人工坊",
+      "blend": "assets/blender/interiors/landmark_R/landmark_R_v01.blend",
+      "glb": "assets/blender/interiors/landmark_R/landmark_R_v01.glb",
+      "preview": "assets/blender/interiors/landmark_R/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口指令卡槽",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Command_Cards_Cabinet",
+          "memory_id": "memory_R_01",
+          "activity": "选择要做的动作"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧零件格",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Parts_Back",
+          "memory_id": "memory_R_02",
+          "activity": "找所需零件"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央动作测试台",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Robot_Workbench_Cabinet",
+          "memory_id": "memory_R_03",
+          "activity": "让机器人依序移动"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧维修臂桌",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Repair_Arm_Cabinet",
+          "memory_id": "memory_R_04",
+          "activity": "替换缺失部件"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口完成状态屏",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Status_Face",
+          "memory_id": "memory_R_05",
+          "activity": "核对任务结果"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 129144,
+      "glb_sha256": "447d7c570b79854423954da0d7d343d15f1673d5cb8dd9174872d0f40dad6196"
+    },
+    {
+      "room_id": "landmark_S",
+      "name": "星形天文台",
+      "blend": "assets/blender/interiors/landmark_S/landmark_S_v01.blend",
+      "glb": "assets/blender/interiors/landmark_S/landmark_S_v01.glb",
+      "preview": "assets/blender/interiors/landmark_S/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口昼夜转盘",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Day_Night_Face",
+          "memory_id": "memory_S_01",
+          "activity": "比较昼夜"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧星图台",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Star_Charts_Leg",
+          "memory_id": "memory_S_02",
+          "activity": "找星图图形"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央天球仪",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Celestial_Base",
+          "memory_id": "memory_S_03",
+          "activity": "说物体方向"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧望远镜",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Telescope_Eyepiece",
+          "memory_id": "memory_S_04",
+          "activity": "观察指定天空"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口发现展示角",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Orbits_Leg",
+          "memory_id": "memory_S_05",
+          "activity": "展示发现"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -10.8129,
+        -9.2073,
+        21.6258,
+        20.5702
+      ],
+      "triangles": 79224,
+      "glb_sha256": "a830cb140e9de5c8a1bf00f0d2040780668a1c028c96e41bff6c849fd8179c39"
+    },
+    {
+      "room_id": "landmark_T",
+      "name": "火车车站",
+      "blend": "assets/blender/interiors/landmark_T/landmark_T_v01.blend",
+      "glb": "assets/blender/interiors/landmark_T/landmark_T_v01.glb",
+      "preview": "assets/blender/interiors/landmark_T/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口时刻牌",
+          "position_blender": [
+            -4.2,
+            -2.992,
+            0.0
+          ],
+          "position_godot": [
+            -4.2,
+            0.0,
+            2.992
+          ],
+          "associated_prop": "Locus_01_Timetable_Face",
+          "memory_id": "memory_T_01",
+          "activity": "看出发安排"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧售票窗",
+          "position_blender": [
+            -5.76,
+            -0.616,
+            0.0
+          ],
+          "position_godot": [
+            -5.76,
+            0.0,
+            0.616
+          ],
+          "associated_prop": "Locus_02_Ticket_Window_Cabinet",
+          "memory_id": "memory_T_02",
+          "activity": "说明目的地"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央候车站台",
+          "position_blender": [
+            0.0,
+            -0.264,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.264
+          ],
+          "associated_prop": "Locus_03_Waiting_Platform_Back",
+          "memory_id": "memory_T_03",
+          "activity": "找到候车位"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧行李架",
+          "position_blender": [
+            5.64,
+            -0.616,
+            0.0
+          ],
+          "position_godot": [
+            5.64,
+            0.0,
+            0.616
+          ],
+          "associated_prop": "Locus_04_Luggage_Back",
+          "memory_id": "memory_T_04",
+          "activity": "放好并辨认行李"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口到站屏",
+          "position_blender": [
+            5.52,
+            -3.432,
+            0.0
+          ],
+          "position_godot": [
+            5.52,
+            0.0,
+            3.432
+          ],
+          "associated_prop": "Locus_05_Arrivals_Face",
+          "memory_id": "memory_T_05",
+          "activity": "确认下一站"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -4.972,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            4.972
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -5.676,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.676
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.64,
+            -1.232,
+            0.0
+          ],
+          "position_godot": [
+            -2.64,
+            0.0,
+            1.232
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -9.6,
+        -6.16,
+        19.2,
+        12.32
+      ],
+      "triangles": 131672,
+      "glb_sha256": "6c83c828cd029591550c319e2576d67338c7863bb1174788710fa436b8ccbd90"
+    },
+    {
+      "room_id": "landmark_U",
+      "name": "雨伞气象屋",
+      "blend": "assets/blender/interiors/landmark_U/landmark_U_v01.blend",
+      "glb": "assets/blender/interiors/landmark_U/landmark_U_v01.glb",
+      "preview": "assets/blender/interiors/landmark_U/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口天气轮盘",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Weather_Wheel_Face",
+          "memory_id": "memory_U_01",
+          "activity": "说今日天气"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧衣帽架",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Rain_Gear_Back",
+          "memory_id": "memory_U_02",
+          "activity": "选合适衣物"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央雨量观察柱",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Weather_Lab_Leg",
+          "memory_id": "memory_U_03",
+          "activity": "看雨量和风带"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧活动计划桌",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Log_Leg",
+          "memory_id": "memory_U_04",
+          "activity": "选天气合适的活动"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口天气播报窗",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Weather_Window_Frame",
+          "memory_id": "memory_U_05",
+          "activity": "向邻居播报"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 164712,
+      "glb_sha256": "379ed597abb8b7b414667f886eaacb808956c20645d8a227d4703a6d1847cea7"
+    },
+    {
+      "room_id": "landmark_V",
+      "name": "休眠火山观察站",
+      "blend": "assets/blender/interiors/landmark_V/landmark_V_v01.blend",
+      "glb": "assets/blender/interiors/landmark_V/landmark_V_v01.glb",
+      "preview": "assets/blender/interiors/landmark_V/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口观察路线牌",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Trail_Face",
+          "memory_id": "memory_V_01",
+          "activity": "选择观察路线"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧岩石样本台",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Specimens_Back",
+          "memory_id": "memory_V_02",
+          "activity": "辨认岩石外形"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央火山地形沙盘",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Volcano_Model_Leg",
+          "memory_id": "memory_V_03",
+          "activity": "比较山顶山脚"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧岩层观察窗",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Rock_Section_Frame",
+          "memory_id": "memory_V_04",
+          "activity": "观察岩层纹理"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口探险记录架",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Field_Records_Back",
+          "memory_id": "memory_V_05",
+          "activity": "回顾走过的路线"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 114380,
+      "glb_sha256": "803970f384ad7f4a71de432b0a6c5765ccc1e9e969bab6a85814529c5dda76ae"
+    },
+    {
+      "room_id": "landmark_W",
+      "name": "鲸鱼海洋馆",
+      "blend": "assets/blender/interiors/landmark_W/landmark_W_v01.blend",
+      "glb": "assets/blender/interiors/landmark_W/landmark_W_v01.glb",
+      "preview": "assets/blender/interiors/landmark_W/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口海洋旅程图",
+          "position_blender": [
+            -4.06,
+            -3.094,
+            0.0
+          ],
+          "position_godot": [
+            -4.06,
+            0.0,
+            3.094
+          ],
+          "associated_prop": "Locus_01_Ocean_Guide_Face",
+          "memory_id": "memory_W_01",
+          "activity": "选参观路线"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧海岸样本池",
+          "position_blender": [
+            -5.568,
+            -0.637,
+            0.0
+          ],
+          "position_godot": [
+            -5.568,
+            0.0,
+            0.637
+          ],
+          "associated_prop": "Locus_02_Shore_Pool_Cabinet",
+          "memory_id": "memory_W_02",
+          "activity": "看贝壳样本"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央鲸鱼比例地毯",
+          "position_blender": [
+            0.0,
+            -0.273,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.273
+          ],
+          "associated_prop": "Locus_03_Whale_Size_Rug",
+          "memory_id": "memory_W_03",
+          "activity": "比较动物大小"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧蓝色观察窗",
+          "position_blender": [
+            5.452,
+            -0.637,
+            0.0
+          ],
+          "position_godot": [
+            5.452,
+            0.0,
+            0.637
+          ],
+          "associated_prop": "Locus_04_Aquarium",
+          "memory_id": "memory_W_04",
+          "activity": "描述动物动作"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口尾鳍分享湾",
+          "position_blender": [
+            5.336,
+            -3.549,
+            0.0
+          ],
+          "position_godot": [
+            5.336,
+            0.0,
+            3.549
+          ],
+          "associated_prop": "Locus_05_Tail_Sharing_Bay_Back",
+          "memory_id": "memory_W_05",
+          "activity": "分享见闻"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.1415,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.1415
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -5.8695,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.8695
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.552,
+            -1.274,
+            0.0
+          ],
+          "position_godot": [
+            -2.552,
+            0.0,
+            1.274
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -10.034,
+        -6.9615,
+        20.068,
+        13.923
+      ],
+      "triangles": 83954,
+      "glb_sha256": "c5fec92964e3dd2023ecf5463da1a73402535342ffb85e3173a86bc066002886"
+    },
+    {
+      "room_id": "landmark_X",
+      "name": "木琴海边舞台",
+      "blend": "assets/blender/interiors/landmark_X/landmark_X_v01.blend",
+      "glb": "assets/blender/interiors/landmark_X/landmark_X_v01.glb",
+      "preview": "assets/blender/interiors/landmark_X/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口排练日程牌",
+          "position_blender": [
+            -4.13,
+            -2.992,
+            0.0
+          ],
+          "position_godot": [
+            -4.13,
+            0.0,
+            2.992
+          ],
+          "associated_prop": "Locus_01_Programme_Face",
+          "memory_id": "memory_X_01",
+          "activity": "选排练时段"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧琴槌架",
+          "position_blender": [
+            -5.664,
+            -0.616,
+            0.0
+          ],
+          "position_godot": [
+            -5.664,
+            0.0,
+            0.616
+          ],
+          "associated_prop": "Locus_02_Mallets_Back",
+          "memory_id": "memory_X_02",
+          "activity": "给伙伴取琴槌"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央木琴",
+          "position_blender": [
+            0.0,
+            -0.264,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.264
+          ],
+          "associated_prop": "Locus_03_Xylophone_Leg",
+          "memory_id": "memory_X_03",
+          "activity": "听并敲不同音条"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧合奏脚印位",
+          "position_blender": [
+            5.546,
+            -0.616,
+            0.0
+          ],
+          "position_godot": [
+            5.546,
+            0.0,
+            0.616
+          ],
+          "associated_prop": "Locus_04_Ensemble_Footprints",
+          "memory_id": "memory_X_04",
+          "activity": "按轮流提示合奏"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口演出照片架",
+          "position_blender": [
+            5.428,
+            -3.432,
+            0.0
+          ],
+          "position_godot": [
+            5.428,
+            0.0,
+            3.432
+          ],
+          "associated_prop": "Locus_05_Performances_Face",
+          "memory_id": "memory_X_05",
+          "activity": "回顾合作"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -4.972,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            4.972
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -5.676,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.676
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.596,
+            -1.232,
+            0.0
+          ],
+          "position_godot": [
+            -2.596,
+            0.0,
+            1.232
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -9.44,
+        -6.16,
+        18.88,
+        12.32
+      ],
+      "triangles": 173400,
+      "glb_sha256": "c853ea821cfd5d39883a2badf52c30eaafa88c25953c42eff720de03c137c2dc"
+    },
+    {
+      "room_id": "landmark_Y",
+      "name": "毛线手作屋",
+      "blend": "assets/blender/interiors/landmark_Y/landmark_Y_v01.blend",
+      "glb": "assets/blender/interiors/landmark_Y/landmark_Y_v01.glb",
+      "preview": "assets/blender/interiors/landmark_Y/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口手作样卡",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Patterns_Face",
+          "memory_id": "memory_Y_01",
+          "activity": "选制作小物"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧毛线轴架",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Yarn_Back",
+          "memory_id": "memory_Y_02",
+          "activity": "找颜色材质"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央绕线器",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Winder_Leg",
+          "memory_id": "memory_Y_03",
+          "activity": "绕好需要的线"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧织作桌",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Loom_Leg",
+          "memory_id": "memory_Y_04",
+          "activity": "按图组合编织片"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口礼盒台",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Gift_Wrapping_Leg",
+          "memory_id": "memory_Y_05",
+          "activity": "送出完成的小礼物"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.65,
+        -7.65,
+        17.3,
+        15.3
+      ],
+      "triangles": 320816,
+      "glb_sha256": "3808a2c4614165fe4a4a2c0bec2773ab538abb0636ef2a0fec0b4a157c0715c5"
+    },
+    {
+      "room_id": "landmark_Z",
+      "name": "斑马邮局",
+      "blend": "assets/blender/interiors/landmark_Z/landmark_Z_v01.blend",
+      "glb": "assets/blender/interiors/landmark_Z/landmark_Z_v01.glb",
+      "preview": "assets/blender/interiors/landmark_Z/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口收件箱",
+          "position_blender": [
+            -3.92,
+            -3.23,
+            0.0
+          ],
+          "position_godot": [
+            -3.92,
+            0.0,
+            3.23
+          ],
+          "associated_prop": "Locus_01_Incoming_Box",
+          "memory_id": "memory_Z_01",
+          "activity": "查看待寄信"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧地址分拣格",
+          "position_blender": [
+            -5.376,
+            -0.665,
+            0.0
+          ],
+          "position_godot": [
+            -5.376,
+            0.0,
+            0.665
+          ],
+          "associated_prop": "Locus_02_Letters_Back",
+          "memory_id": "memory_Z_02",
+          "activity": "按地点分类"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央写信桌",
+          "position_blender": [
+            0.0,
+            -0.285,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.285
+          ],
+          "associated_prop": "Locus_03_Writing_Leg",
+          "memory_id": "memory_Z_03",
+          "activity": "拼出图片明信片"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧邮袋架",
+          "position_blender": [
+            5.264,
+            -0.665,
+            0.0
+          ],
+          "position_godot": [
+            5.264,
+            0.0,
+            0.665
+          ],
+          "associated_prop": "Locus_04_Mailbags_Leg",
+          "memory_id": "memory_Z_04",
+          "activity": "找正确路线邮袋"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口旅程邮戳墙",
+          "position_blender": [
+            5.152,
+            -3.705,
+            0.0
+          ],
+          "position_godot": [
+            5.152,
+            0.0,
+            3.705
+          ],
+          "associated_prop": "Locus_05_Postmark_Wall_Face",
+          "memory_id": "memory_Z_05",
+          "activity": "说信件去过的地方"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.3675,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.3675
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.1275,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.1275
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.464,
+            -1.33,
+            0.0
+          ],
+          "position_godot": [
+            -2.464,
+            0.0,
+            1.33
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.96,
+        -6.65,
+        17.92,
+        13.3
+      ],
+      "triangles": 150160,
+      "glb_sha256": "e17988dcb33d3e29577df96cad832fa9a7b714a02f9a87319fdfebc980083048"
+    },
+    {
+      "room_id": "school",
+      "name": "山丘学园",
+      "blend": "assets/blender/interiors/school/school_v03.blend",
+      "glb": "assets/blender/interiors/school/school_v03.glb",
+      "preview": "assets/blender/interiors/school/preview_v03.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "校门导览",
+          "position_blender": [
+            -6.5,
+            -16.6,
+            0.0
+          ],
+          "position_godot": [
+            -6.5,
+            0.0,
+            16.6
+          ],
+          "associated_prop": "ASSET_School_Noticeboard_Face",
+          "memory_id": "memory_SCHOOL_01",
+          "activity": "从校门导览认识校园与七处可进入场所"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "教学楼前",
+          "position_blender": [
+            -5.8,
+            6.2,
+            0.0
+          ],
+          "position_godot": [
+            -5.8,
+            0.0,
+            -6.2
+          ],
+          "associated_prop": "Teaching_Rollcall_Board_Face",
+          "memory_id": "memory_SCHOOL_02",
+          "activity": "在教学楼前辨认普通、音乐、美术和科学教室入口"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中心花园",
+          "position_blender": [
+            4.8,
+            0.0,
+            0.0
+          ],
+          "position_godot": [
+            4.8,
+            0.0,
+            -0.0
+          ],
+          "associated_prop": "Campus_Garden_Reading_Tree_Trunk",
+          "memory_id": "memory_SCHOOL_03",
+          "activity": "观察校园花草并熟悉庭院环路"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "运动器材旁",
+          "position_blender": [
+            20.7,
+            -12.6,
+            0.0
+          ],
+          "position_godot": [
+            20.7,
+            0.0,
+            12.6
+          ],
+          "associated_prop": "ASSET_School_Ball_Rack",
+          "memory_id": "memory_SCHOOL_04",
+          "activity": "认识操场入口与运动器材"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "餐厅菜单",
+          "position_blender": [
+            21.0,
+            -6.9,
+            0.0
+          ],
+          "position_godot": [
+            21.0,
+            0.0,
+            6.9
+          ],
+          "associated_prop": "Canteen_Menu_Board_Face",
+          "memory_id": "memory_SCHOOL_05",
+          "activity": "看餐厅菜单并辨认食堂入口"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "从主岛进入校园",
+          "position_blender": [
+            0.0,
+            -16.8,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            16.8
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回字母岛",
+          "position_blender": [
+            0.0,
+            -19.0,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            19.0
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "和校园老师聊一聊",
+          "position_blender": [
+            4.6,
+            -14.3,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            14.3
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_DOOR_CLASSROOM",
+          "label": "普通教室",
+          "position_blender": [
+            0.0,
+            6.7,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            -6.7
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_DOOR_MUSIC_ROOM",
+          "label": "音乐教室",
+          "position_blender": [
+            -16.0,
+            3.8,
+            0.0
+          ],
+          "position_godot": [
+            -16.0,
+            0.0,
+            -3.8
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_DOOR_ART_ROOM",
+          "label": "美术教室",
+          "position_blender": [
+            -16.0,
+            -8.7,
+            0.0
+          ],
+          "position_godot": [
+            -16.0,
+            0.0,
+            8.7
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_DOOR_SCIENCE_ROOM",
+          "label": "科学教室",
+          "position_blender": [
+            16.0,
+            5.2,
+            0.0
+          ],
+          "position_godot": [
+            16.0,
+            0.0,
+            -5.2
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_DOOR_CANTEEN",
+          "label": "校园餐厅",
+          "position_blender": [
+            16.0,
+            -7.4,
+            0.0
+          ],
+          "position_godot": [
+            16.0,
+            0.0,
+            7.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_DOOR_PLAYGROUND",
+          "label": "青草操场",
+          "position_blender": [
+            10.5,
+            -17.7,
+            0.0
+          ],
+          "position_godot": [
+            10.5,
+            0.0,
+            17.7
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_DOOR_FOOTBALL_FIELD",
+          "label": "校园足球场",
+          "position_blender": [
+            28.0,
+            -17.0,
+            0.0
+          ],
+          "position_godot": [
+            28.0,
+            0.0,
+            17.0
+          ],
+          "associated_prop": "Football_Entry_Sign",
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -24.0,
+        -20.0,
+        76.0,
+        40.0
+      ],
+      "triangles": 204908,
+      "glb_sha256": "c089ad70c6351757979ca3713192994a63a6c8bbe5adf9842af284751d057d0c",
+      "scene_level": 2,
+      "parent_room": "village"
+    },
+    {
+      "room_id": "classroom",
+      "name": "教室",
+      "blend": "assets/blender/interiors/classroom/classroom_v01.blend",
+      "glb": "assets/blender/interiors/classroom/classroom_v01.glb",
+      "preview": "assets/blender/interiors/classroom/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "门口姓名牌台",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Name_Plates_Leg",
+          "memory_id": "memory_CLASSROOM_01",
+          "activity": "认出示例人物的名牌"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左窗阅读角",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Book_Corner_Back",
+          "memory_id": "memory_CLASSROOM_02",
+          "activity": "看图并听一句示范"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央结伴桌",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Shared_Desk_Leg",
+          "memory_id": "memory_CLASSROOM_03",
+          "activity": "与伙伴问候和介绍名字"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧情境道具柜",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Props_Cabinet_Back",
+          "memory_id": "memory_CLASSROOM_04",
+          "activity": "取当前情境需要的道具"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口作品墙",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Art_Display_Face",
+          "memory_id": "memory_CLASSROOM_05",
+          "activity": "展示完成的图片或记录"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回学校",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 187000,
+      "glb_sha256": "c5e2b9d4017c871239ae59b33f619b2ef0528ff4c76ef7631587127fcb554379"
+    },
+    {
+      "room_id": "music_room",
+      "name": "音乐教室",
+      "blend": "assets/blender/interiors/music_room/music_room_v01.blend",
+      "glb": "assets/blender/interiors/music_room/music_room_v01.glb",
+      "preview": "assets/blender/interiors/music_room/preview.png",
+      "anchors": [
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.9,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.9
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回完整校园",
+          "position_blender": [
+            0.0,
+            -6.95,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.95
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "音乐教室老师",
+          "position_blender": [
+            -1.25,
+            -2.1,
+            0.0
+          ],
+          "position_godot": [
+            -1.25,
+            0.0,
+            2.1
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口乐谱柜",
+          "position_blender": [
+            -6.35,
+            -4.4,
+            0.0
+          ],
+          "position_godot": [
+            -6.35,
+            0.0,
+            4.4
+          ],
+          "associated_prop": "Music_ScoreCabinet_Back",
+          "memory_id": "memory_MUSIC_ROOM_01",
+          "activity": "翻看示例乐谱并认识乐器图标"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "钢琴",
+          "position_blender": [
+            -5.0,
+            -0.1,
+            0.0
+          ],
+          "position_godot": [
+            -5.0,
+            0.0,
+            0.1
+          ],
+          "associated_prop": "Music_Piano_CurvedCase",
+          "memory_id": "memory_MUSIC_ROOM_02",
+          "activity": "观察琴键与钢琴外形"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "节奏鼓",
+          "position_blender": [
+            2.0,
+            -1.25,
+            0.0
+          ],
+          "position_godot": [
+            2.0,
+            0.0,
+            1.25
+          ],
+          "associated_prop": "Music_Rhythm_Drum_01_Shell",
+          "memory_id": "memory_MUSIC_ROOM_03",
+          "activity": "看鼓面和节奏图案"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "弦乐器架",
+          "position_blender": [
+            6.0,
+            -5.0,
+            0.0
+          ],
+          "position_godot": [
+            6.0,
+            0.0,
+            5.0
+          ],
+          "associated_prop": "Music_StringRack_Platform",
+          "memory_id": "memory_MUSIC_ROOM_04",
+          "activity": "比较弦乐器的形状"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "小舞台",
+          "position_blender": [
+            0.0,
+            4.1,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            -4.1
+          ],
+          "associated_prop": "Music_Stage_Platform",
+          "memory_id": "memory_MUSIC_ROOM_05",
+          "activity": "在舞台前回顾见到的乐器"
+        }
+      ],
+      "bounds": [
+        -9.0,
+        -8.0,
+        18.0,
+        16.0
+      ],
+      "triangles": 167728,
+      "glb_sha256": "09d281d71bf2cd1a6af5692b23d9961c350ef70d21d11e7e6e0214687f120581",
+      "scene_level": 3,
+      "parent_room": "school",
+      "model_version": "v01",
+      "dimensions_m": [
+        18,
+        16
+      ],
+      "specialist_room": true
+    },
+    {
+      "room_id": "art_room",
+      "name": "美术教室",
+      "blend": "assets/blender/interiors/art_room/art_room_v01.blend",
+      "glb": "assets/blender/interiors/art_room/art_room_v01.glb",
+      "preview": "assets/blender/interiors/art_room/preview.png",
+      "anchors": [
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -4.9,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            4.9
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回完整校园",
+          "position_blender": [
+            0.0,
+            -5.95,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.95
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "美术教室老师",
+          "position_blender": [
+            -2.0,
+            -3.1,
+            0.0
+          ],
+          "position_godot": [
+            -2.0,
+            0.0,
+            3.1
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_MEMORY_01",
+          "label": "围裙柜",
+          "position_blender": [
+            -5.8,
+            -4.4,
+            0.0
+          ],
+          "position_godot": [
+            -5.8,
+            0.0,
+            4.4
+          ],
+          "associated_prop": "Art_ApronCabinet_Back",
+          "memory_id": "memory_ART_ROOM_01",
+          "activity": "认识创作时使用的围裙和工具"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "颜料调色台",
+          "position_blender": [
+            -5.0,
+            0.15,
+            0.0
+          ],
+          "position_godot": [
+            -5.0,
+            0.0,
+            -0.15
+          ],
+          "associated_prop": "Art_PaintTable_Top",
+          "memory_id": "memory_ART_ROOM_02",
+          "activity": "观察颜料颜色与调色盘"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "画架",
+          "position_blender": [
+            0.9,
+            -0.9,
+            0.0
+          ],
+          "position_godot": [
+            0.9,
+            0.0,
+            0.9
+          ],
+          "associated_prop": "Art_Easel_00_CanvasShelf",
+          "memory_id": "memory_ART_ROOM_03",
+          "activity": "在画架前观察示例画作"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "陶泥桌",
+          "position_blender": [
+            5.0,
+            -4.95,
+            0.0
+          ],
+          "position_godot": [
+            5.0,
+            0.0,
+            4.95
+          ],
+          "associated_prop": "Art_ClayTable_Top",
+          "memory_id": "memory_ART_ROOM_04",
+          "activity": "比较陶泥作品的形状"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "作品墙",
+          "position_blender": [
+            0.0,
+            4.7,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            -4.7
+          ],
+          "associated_prop": "Art_Gallery_02_Frame",
+          "memory_id": "memory_ART_ROOM_05",
+          "activity": "看看墙上不同的作品"
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 142324,
+      "glb_sha256": "de263fcb6e40135620f3ab43be79ef5bb4a8d61f12618408695475f1857bf60f",
+      "scene_level": 3,
+      "parent_room": "school",
+      "model_version": "v01",
+      "dimensions_m": [
+        16,
+        14
+      ],
+      "specialist_room": true
+    },
+    {
+      "room_id": "science_room",
+      "name": "科学教室",
+      "blend": "assets/blender/interiors/science_room/science_room_v01.blend",
+      "glb": "assets/blender/interiors/science_room/science_room_v01.glb",
+      "preview": "assets/blender/interiors/science_room/preview.png",
+      "anchors": [
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.9,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.9
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回完整校园",
+          "position_blender": [
+            0.0,
+            -6.95,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.95
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "科学教室老师",
+          "position_blender": [
+            -1.5,
+            -2.9,
+            0.0
+          ],
+          "position_godot": [
+            -1.5,
+            0.0,
+            2.9
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_MEMORY_01",
+          "label": "安全准备区",
+          "position_blender": [
+            -6.0,
+            -5.25,
+            0.0
+          ],
+          "position_godot": [
+            -6.0,
+            0.0,
+            5.25
+          ],
+          "associated_prop": "Science_Preparation_Top",
+          "memory_id": "memory_SCIENCE_ROOM_01",
+          "activity": "看准备物品和观察约定图示"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "显微镜台",
+          "position_blender": [
+            -5.4,
+            1.65,
+            0.0
+          ],
+          "position_godot": [
+            -5.4,
+            0.0,
+            -1.65
+          ],
+          "associated_prop": "Science_MicroscopeBench_Top",
+          "memory_id": "memory_SCIENCE_ROOM_02",
+          "activity": "认识显微镜及示例观察图"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "植物观察台",
+          "position_blender": [
+            1.05,
+            -0.9,
+            0.0
+          ],
+          "position_godot": [
+            1.05,
+            0.0,
+            0.9
+          ],
+          "associated_prop": "Science_PlantTable_Top",
+          "memory_id": "memory_SCIENCE_ROOM_03",
+          "activity": "观察植物的叶片与生长记录示例"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "磁铁实验台",
+          "position_blender": [
+            5.35,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            5.35,
+            0.0,
+            5.65
+          ],
+          "associated_prop": "Science_MagnetTable_Top",
+          "memory_id": "memory_SCIENCE_ROOM_04",
+          "activity": "比较磁铁与物件的图示关系"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "模型展示架",
+          "position_blender": [
+            0.0,
+            4.6,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            -4.6
+          ],
+          "associated_prop": "Science_ModelDisplay_Back",
+          "memory_id": "memory_SCIENCE_ROOM_05",
+          "activity": "回顾模型代表的物件"
+        }
+      ],
+      "bounds": [
+        -9.0,
+        -8.0,
+        18.0,
+        16.0
+      ],
+      "triangles": 202672,
+      "glb_sha256": "4c26d490fbf92047e4fbea1d912af90c65f6e43d3a62eaaeae5ca0a913d5a76b",
+      "scene_level": 3,
+      "parent_room": "school",
+      "model_version": "v01",
+      "dimensions_m": [
+        18,
+        16
+      ],
+      "specialist_room": true
+    },
+    {
+      "room_id": "canteen",
+      "name": "食堂",
+      "blend": "assets/blender/interiors/canteen/canteen_v01.blend",
+      "glb": "assets/blender/interiors/canteen/canteen_v01.glb",
+      "preview": "assets/blender/interiors/canteen/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口菜单板",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Menu_Face",
+          "memory_id": "memory_CANTEEN_01",
+          "activity": "看今日食物"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧餐具台",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Cutlery_Cabinet",
+          "memory_id": "memory_CANTEEN_02",
+          "activity": "选择所需餐具"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央取餐窗口",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Serving_Window_Cabinet",
+          "memory_id": "memory_CANTEEN_03",
+          "activity": "礼貌说明想要的食物"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧用餐分享桌",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Shared_Dining_Leg",
+          "memory_id": "memory_CANTEEN_04",
+          "activity": "与同学描述口味并道谢"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口餐盘回收台",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Return_Cabinet",
+          "memory_id": "memory_CANTEEN_05",
+          "activity": "整理餐盘归位"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回学校",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 157080,
+      "glb_sha256": "804ea0efe864c16b39c5843860990ed1dfb69caf6f3793b7a8b49afc2f19df75"
+    },
+    {
+      "room_id": "playground",
+      "name": "操场",
+      "blend": "assets/blender/interiors/playground/playground_v01.blend",
+      "glb": "assets/blender/interiors/playground/playground_v01.glb",
+      "preview": "assets/blender/interiors/playground/preview.png",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "入口活动约定牌",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Games_Face",
+          "memory_id": "memory_PLAYGROUND_01",
+          "activity": "选择活动并看轮流图标"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧器材架",
+          "position_blender": [
+            -4.4,
+            -0.4,
+            0.0
+          ],
+          "position_godot": [
+            -4.4,
+            0.0,
+            0.4
+          ],
+          "associated_prop": "Locus_02_Equipment_Back",
+          "memory_id": "memory_PLAYGROUND_02",
+          "activity": "找到要用的球或绳"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央合作游戏圈",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Court_Marker",
+          "memory_id": "memory_PLAYGROUND_03",
+          "activity": "邀请伙伴轮流参加"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "右侧跳格线",
+          "position_blender": [
+            4.1,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.1,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Hopscotch",
+          "memory_id": "memory_PLAYGROUND_04",
+          "activity": "按已教过的数字或动作提示移动"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口活动照片栏",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Activity_Photos_Face",
+          "memory_id": "memory_PLAYGROUND_05",
+          "activity": "回顾一起做了什么"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回学校",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 121780,
+      "glb_sha256": "20630ea503b5e47a07cb8c8483ee21eca8afe4534719044c483456f722d27381"
+    },
+    {
+      "room_id": "football_field",
+      "name": "校园足球场",
+      "blend": "assets/blender/interiors/football_field/football_field_v01.blend",
+      "glb": "assets/blender/interiors/football_field/football_field_v01.glb",
+      "preview": "assets/blender/interiors/football_field/preview.png",
+      "anchors": [
+        {
+          "name": "SG_SPAWN",
+          "label": "进入足球场",
+          "position_blender": [
+            0.0,
+            -11.5,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            11.5
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回完整校园",
+          "position_blender": [
+            0.0,
+            -12.9,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            12.9
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "足球教练",
+          "position_blender": [
+            -3.7,
+            -10.8,
+            0.0
+          ],
+          "position_godot": [
+            -3.7,
+            0.0,
+            10.8
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_MEMORY_01",
+          "label": "装备区",
+          "position_blender": [
+            -10.6,
+            -12.6,
+            0.0
+          ],
+          "position_godot": [
+            -10.6,
+            0.0,
+            12.6
+          ],
+          "associated_prop": "Football_EquipmentRack_Back",
+          "memory_id": "memory_FOOTBALL_FIELD_01",
+          "activity": "观察足球、训练背心和装备收纳位置"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "开球中圈",
+          "position_blender": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            -0.0
+          ],
+          "associated_prop": "Football_CenterCircle",
+          "memory_id": "memory_FOOTBALL_FIELD_02",
+          "activity": "走到中圈认识开球位置与球场边线"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "射门球门",
+          "position_blender": [
+            10.6,
+            0.0,
+            0.0
+          ],
+          "position_godot": [
+            10.6,
+            0.0,
+            -0.0
+          ],
+          "associated_prop": "Football_EastGoal_GoalFrame",
+          "memory_id": "memory_FOOTBALL_FIELD_03",
+          "activity": "在球门前观察球门结构与射门方向"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "传球练习区",
+          "position_blender": [
+            -6.0,
+            4.5,
+            0.0
+          ],
+          "position_godot": [
+            -6.0,
+            0.0,
+            -4.5
+          ],
+          "associated_prop": "Football_PracticeMarker",
+          "memory_id": "memory_FOOTBALL_FIELD_04",
+          "activity": "看看锥桶标记和传球路线示意"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "看台计分牌",
+          "position_blender": [
+            10.2,
+            10.2,
+            0.0
+          ],
+          "position_godot": [
+            10.2,
+            0.0,
+            -10.2
+          ],
+          "associated_prop": "Football_Scoreboard_Face",
+          "memory_id": "memory_FOOTBALL_FIELD_05",
+          "activity": "在看台前观察计分牌与比赛信息示例"
+        }
+      ],
+      "bounds": [
+        -17.0,
+        -14.0,
+        34.0,
+        28.0
+      ],
+      "triangles": 179668,
+      "glb_sha256": "1b3f0faf59c8f319212ad605df8b670a4aa885a34be2bfb727e71cc30afff21d",
+      "scene_level": 3,
+      "parent_room": "school",
+      "model_version": "v01",
+      "dimensions_m": [
+        34.0,
+        28.0
+      ],
+      "pitch_dimensions_m": [
+        26.0,
+        18.0
+      ],
+      "return_to": {
+        "room_id": "school",
+        "interaction_id": "football_field_gate",
+        "door_node": "SG_DOOR_FOOTBALL_FIELD"
+      },
+      "technical_frame": {
+        "engine": "Godot 4.7.2",
+        "renderer": "GL Compatibility",
+        "target": "Windows desktop with optional Web preview",
+        "world_units": "metres",
+        "source_up": "Blender Z",
+        "runtime_up": "glTF/Godot Y",
+        "front": "Blender -Y",
+        "pivot": "pitch centre at ground height 0",
+        "camera": "orthographic 2.5D following camera",
+        "runtime_camera_size_suggestion": 34,
+        "floor_physics": "SG_FLOOR_Main closed mesh, top at zero with upward normals",
+        "grass_and_line_max_height_m": 0.047,
+        "texture_count": 0,
+        "materials": "shared warm matte PBR palette",
+        "collision": "hidden simple proxy meshes; open goal mouths; goal nets block at sides/back",
+        "animation": "none; balls and example scoreboard are static props",
+        "lod": "single authored LOD for this separately loaded field; no performance claim"
+      },
+      "design": {
+        "shape_language": "soft low-poly campus park, simple readable goals and field markings, warm wooden equipment and benches",
+        "palette_roles": "sage/leaf green turf, ivory painted markings, teal furniture and signs, light oak frames, yellow/orange training accents",
+        "style_references": [
+          "assets/blender/interiors/school/preview_v02.png",
+          "assets/blender/interiors/playground/preview.png",
+          "assets/blender/interiors/science_room/preview.png"
+        ],
+        "gameplay_scope": "five fixed exploration sites on a complete miniature football field; no implemented football match or scorekeeping",
+        "visual_target_selection": "Use the existing warm toy-campus direction already accepted for neighbouring school scenes"
+      },
+      "provenance": {
+        "kind": "original procedural Blender mesh authoring",
+        "creator": "Codex for this project",
+        "tool": "Blender 5.2.2 LTS",
+        "source_script": "assets/blender/interiors/scripts/build_football_field.py",
+        "created_at_utc": "2026-10-22T06:26:28Z",
+        "external_downloads": [],
+        "external_textures": [],
+        "license_note": "New geometry and in-project primitive helpers; no third-party model or texture added. Existing project licensing remains applicable.",
+        "preservation": "All pre-existing room files and shared manifests remain untouched by this generator."
+      },
+      "verification": {
+        "technical_checks_passed": true,
+        "rendered_preview": true,
+        "native_scale_reviewed": true,
+        "in_engine_reviewed": true,
+        "approval_status": "runtime_integration_and_visual_review_passed",
+        "visual_review": {
+          "reviewed_at_utc": "2026-10-22T06:27:31+00:00",
+          "preview": "assets/blender/interiors/football_field/preview.png",
+          "preview_sha256": "0aa2702b5aee0ac684b5e83688e02999a2ddef3b468e41b870a5b1a17357dcf8",
+          "image_size_px": [
+            1700,
+            1343
+          ],
+          "result": "pass",
+          "observations": [
+            "Complete scene is in frame: both goals and nets, perimeter fence with entrance opening, pitch lines and four corner flags.",
+            "Five locus contexts read distinctly: equipment rack, centre circle, east goal, cone passing practice, and stand with example scoreboard.",
+            "Warm matte sage turf, ivory markings, teal signs and seating, oak framing match adjacent campus scenes.",
+            "No visible clipped geometry, missing materials, floating principal furniture, or blocked goal mouths in reviewed render."
+          ],
+          "scope": "Authoring render review only; no Godot runtime or target-device performance claim."
+        },
+        "runtime_review": {
+          "version": "0.3.1",
+          "reviewed_at": "2026-10-22T14:32:06.940579+08:00",
+          "image": "build/verification-v031-football/football_overview.png",
+          "image_sha256": "fb53135cce5d4bcfb33d5e6c4ee07f934aad75a7eec0f0b980e7723b187d5295",
+          "scope": "Actual Godot scene image reviewed; Windows export entered football field and returned to the corresponding campus door; all five field sites physically visited.",
+          "performance_scope": "No frame-rate or low-end-device claim"
+        }
+      }
+    },
+    {
+      "blend": "assets/blender/interiors/home/home_v02.blend",
+      "glb": "assets/blender/interiors/home/home_v02.glb",
+      "preview": "assets/blender/interiors/home/preview_v02.png",
+      "room_id": "home",
+      "name": "家里的客厅",
+      "anchors": [
+        {
+          "name": "SG_WARDROBE",
+          "label": "换装衣柜",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_BED",
+          "label": "休息床边",
+          "position_blender": [
+            3.15,
+            3.8,
+            0.0
+          ],
+          "position_godot": [
+            3.15,
+            0.0,
+            -3.8
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_DECOR_FLOWER_BOX",
+          "label": "FLOWER_BOX",
+          "position_blender": [
+            -6.4,
+            -2.2,
+            0.0
+          ],
+          "position_godot": [
+            -6.4,
+            0.0,
+            2.2
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_DECOR_PICNIC",
+          "label": "PICNIC",
+          "position_blender": [
+            1.0,
+            -3.25,
+            0.0
+          ],
+          "position_godot": [
+            1.0,
+            0.0,
+            3.25
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_DECOR_LAMP",
+          "label": "LAMP",
+          "position_blender": [
+            2.5,
+            5.4,
+            0.0
+          ],
+          "position_godot": [
+            2.5,
+            0.0,
+            -5.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_MEMORY_01",
+          "label": "门厅随身篮",
+          "position_blender": [
+            -3.5,
+            -3.4,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            3.4
+          ],
+          "associated_prop": "Locus_01_Everyday_Basket_Handle",
+          "memory_id": "memory_HOME_01",
+          "activity": "欢迎朋友进来，把带来的物品放在门厅。"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "左侧衣柜",
+          "position_blender": [
+            -4.8,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_02_Wardrobe",
+          "memory_id": "memory_HOME_02",
+          "activity": "在进门处挂好外套，也可以继续布置客厅。"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "中央茶几",
+          "position_blender": [
+            0.0,
+            -0.3,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            0.3
+          ],
+          "associated_prop": "Locus_03_Dining_Table_Leg",
+          "memory_id": "memory_HOME_03",
+          "activity": "摆好茶杯与点心，和朋友介绍自己的家。"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "窗边家人相册",
+          "position_blender": [
+            4.7,
+            -0.7,
+            0.0
+          ],
+          "position_godot": [
+            4.7,
+            0.0,
+            0.7
+          ],
+          "associated_prop": "Locus_04_Window_Desk_Top",
+          "memory_id": "memory_HOME_04",
+          "activity": "看看相册，用照片介绍家人；晚上去卧室休息。"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "出口回忆展示架",
+          "position_blender": [
+            4.6,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            4.6,
+            0.0,
+            3.9
+          ],
+          "associated_prop": "Locus_05_Keepsakes_Back",
+          "memory_id": "memory_HOME_05",
+          "activity": "把合照与礼物放回纪念架，回想家人和朋友相聚的日子。"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入点",
+          "position_blender": [
+            0.0,
+            -5.65,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.65
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回主地图",
+          "position_blender": [
+            0.0,
+            -6.45,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.45
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "主人交谈点",
+          "position_blender": [
+            -2.2,
+            -1.4,
+            0.0
+          ],
+          "position_godot": [
+            -2.2,
+            0.0,
+            1.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.1,
+        -7.1,
+        16.2,
+        14.2
+      ],
+      "triangles": 106520,
+      "glb_sha256": "436856bb9e2d3810e30be5b41e9bed237699cf6491ad8ee2a573c749fb72b428"
+    },
+    {
+      "blend": "assets/blender/interiors/home_balcony/home_balcony_v01.blend",
+      "glb": "assets/blender/interiors/home_balcony/home_balcony_v01.glb",
+      "preview": "assets/blender/interiors/home_balcony/preview_v01.png",
+      "room_id": "home_balcony",
+      "name": "家务阳台",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "洗衣篮与晾衣架",
+          "position_blender": [
+            -4.8,
+            2.3,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            -2.3
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_balcony_01",
+          "activity": "将洗好的袜子挂好，再整理衣篮。"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "盆栽照料台",
+          "position_blender": [
+            4.8,
+            2.8,
+            0.0
+          ],
+          "position_godot": [
+            4.8,
+            0.0,
+            -2.8
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_balcony_02",
+          "activity": "观察盆栽，学着给植物浇水。"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "窗户清洁台",
+          "position_blender": [
+            0.0,
+            4.5,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            -4.5
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_balcony_03",
+          "activity": "擦一擦窗户，看看家人在做什么。"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "扫帚与簸箕",
+          "position_blender": [
+            -3.3,
+            -4.2,
+            0.0
+          ],
+          "position_godot": [
+            -3.3,
+            0.0,
+            4.2
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_balcony_04",
+          "activity": "找到扫帚，把地面的小纸屑扫起来。"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "节水储物角",
+          "position_blender": [
+            3.2,
+            -3.8,
+            0.0
+          ],
+          "position_godot": [
+            3.2,
+            0.0,
+            3.8
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_balcony_05",
+          "activity": "洗衣后关好水，收起用品。"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入家园",
+          "position_blender": [
+            0.0,
+            -5.5,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.5
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回上一层",
+          "position_blender": [
+            0.0,
+            -6.4,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "家人或朋友停留位置",
+          "position_blender": [
+            -1.8,
+            -3.0,
+            0.0
+          ],
+          "position_godot": [
+            -1.8,
+            0.0,
+            3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 96532,
+      "glb_sha256": "c55c81ebb4d40ef9ce050dd6cffc1bc597d80068488610ab7678d00a73f63379"
+    },
+    {
+      "blend": "assets/blender/interiors/home_bathroom/home_bathroom_v01.blend",
+      "glb": "assets/blender/interiors/home_bathroom/home_bathroom_v01.glb",
+      "preview": "assets/blender/interiors/home_bathroom/preview_v01.png",
+      "room_id": "home_bathroom",
+      "name": "清爽浴室",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "牙刷杯与镜子",
+          "position_blender": [
+            -4.8,
+            2.1,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            -2.1
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_bathroom_01",
+          "activity": "认识牙刷与牙齿，跟着句子做刷牙动作。"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "洗手池",
+          "position_blender": [
+            0.0,
+            3.0,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            -3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_bathroom_02",
+          "activity": "打开水龙头洗手，用完记得关好。"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "浴缸与花洒",
+          "position_blender": [
+            3.3,
+            2.1,
+            0.0
+          ],
+          "position_godot": [
+            3.3,
+            0.0,
+            -2.1
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_bathroom_03",
+          "activity": "认识浴室，想想每天怎样保持身体清洁。"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "毛巾收纳架",
+          "position_blender": [
+            -3.4,
+            -3.0,
+            0.0
+          ],
+          "position_godot": [
+            -3.4,
+            0.0,
+            3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_bathroom_04",
+          "activity": "洗过脸后，把毛巾挂回原位。"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "节水提示与卫生间",
+          "position_blender": [
+            3.4,
+            -3.0,
+            0.0
+          ],
+          "position_godot": [
+            3.4,
+            0.0,
+            3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_bathroom_05",
+          "activity": "检查水龙头已经关闭，养成节约用水的习惯。"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入家园",
+          "position_blender": [
+            0.0,
+            -5.5,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.5
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回上一层",
+          "position_blender": [
+            0.0,
+            -6.4,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "家人或朋友停留位置",
+          "position_blender": [
+            -1.8,
+            -3.0,
+            0.0
+          ],
+          "position_godot": [
+            -1.8,
+            0.0,
+            3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 88828,
+      "glb_sha256": "58f7db6bffeffd9a119bc705de4d4eec05b3d77b5ccd7d31a9bd30a1c214122e"
+    },
+    {
+      "blend": "assets/blender/interiors/home_bedroom/home_bedroom_v01.blend",
+      "glb": "assets/blender/interiors/home_bedroom/home_bedroom_v01.glb",
+      "preview": "assets/blender/interiors/home_bedroom/preview_v01.png",
+      "room_id": "home_bedroom",
+      "name": "温暖卧室",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "床边与被子",
+          "position_blender": [
+            -4.6,
+            1.2,
+            0.0
+          ],
+          "position_godot": [
+            -4.6,
+            0.0,
+            -1.2
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_bedroom_01",
+          "activity": "把被子铺好，再摆正枕头。"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "床头小闹钟",
+          "position_blender": [
+            -1.6,
+            3.4,
+            0.0
+          ],
+          "position_godot": [
+            -1.6,
+            0.0,
+            -3.4
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_bedroom_02",
+          "activity": "看一看起床时间，讲讲自己的早晨。"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "穿衣镜与衣柜",
+          "position_blender": [
+            4.8,
+            2.8,
+            0.0
+          ],
+          "position_godot": [
+            4.8,
+            0.0,
+            -2.8
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_bedroom_03",
+          "activity": "选择今天喜欢的衣服，看看颜色。"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "书包收纳凳",
+          "position_blender": [
+            -3.1,
+            -3.3,
+            0.0
+          ],
+          "position_godot": [
+            -3.1,
+            0.0,
+            3.3
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_bedroom_04",
+          "activity": "找找铅笔盒，把物品放回书包里。"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "床头阅读灯",
+          "position_blender": [
+            3.0,
+            -3.3,
+            0.0
+          ],
+          "position_godot": [
+            3.0,
+            0.0,
+            3.3
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_bedroom_05",
+          "activity": "读一会儿书，再去休息；可以睡到游戏中的第二天。"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入家园",
+          "position_blender": [
+            0.0,
+            -5.5,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.5
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回上一层",
+          "position_blender": [
+            0.0,
+            -6.4,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "家人或朋友停留位置",
+          "position_blender": [
+            -1.8,
+            -3.0,
+            0.0
+          ],
+          "position_godot": [
+            -1.8,
+            0.0,
+            3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 54164,
+      "glb_sha256": "aa9b8e6d7610350e0fab3ffc7ef74be11a30e439025d7a473c719fba4d825b49"
+    },
+    {
+      "blend": "assets/blender/interiors/home_dining/home_dining_v01.blend",
+      "glb": "assets/blender/interiors/home_dining/home_dining_v01.glb",
+      "preview": "assets/blender/interiors/home_dining/preview_v01.png",
+      "room_id": "home_dining",
+      "name": "家庭餐厅",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "早餐边柜",
+          "position_blender": [
+            -4.8,
+            2.6,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            -2.6
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_dining_01",
+          "activity": "看时钟准备早餐，讲讲自己的早餐时间。"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "水果分享台",
+          "position_blender": [
+            3.2,
+            -4.8,
+            0.0
+          ],
+          "position_godot": [
+            3.2,
+            0.0,
+            4.8
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_dining_02",
+          "activity": "看看水果，说说自己喜欢哪一种。"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "家庭餐桌",
+          "position_blender": [
+            0.0,
+            -1.1,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            1.1
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_dining_03",
+          "activity": "为家人摆好餐盘，再一起吃饭。"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "生日点心桌",
+          "position_blender": [
+            -3.2,
+            -4.3,
+            0.0
+          ],
+          "position_godot": [
+            -3.2,
+            0.0,
+            4.3
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_dining_04",
+          "activity": "摆放生日蛋糕和贺卡，向家人送上祝福。"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "节日餐边架",
+          "position_blender": [
+            4.8,
+            3.0,
+            0.0
+          ],
+          "position_godot": [
+            4.8,
+            0.0,
+            -3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_dining_05",
+          "activity": "观察节日餐具，聊聊一家人团聚的晚餐。"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入家园",
+          "position_blender": [
+            0.0,
+            -5.5,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.5
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回上一层",
+          "position_blender": [
+            0.0,
+            -6.4,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "家人或朋友停留位置",
+          "position_blender": [
+            -1.8,
+            -3.0,
+            0.0
+          ],
+          "position_godot": [
+            -1.8,
+            0.0,
+            3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 80696,
+      "glb_sha256": "d17b2bacc9fcd266b37b0909a74503128b012f6f23a5efc951090576e48a1110"
+    },
+    {
+      "blend": "assets/blender/interiors/home_estate/home_estate_v02.blend",
+      "glb": "assets/blender/interiors/home_estate/home_estate_v02.glb",
+      "preview": "assets/blender/interiors/home_estate/preview_v02.png",
+      "room_id": "home_estate",
+      "name": "我的家 · 小院与住宅",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "门前信箱",
+          "position_blender": [
+            -10.0,
+            -10.2,
+            0.0
+          ],
+          "position_godot": [
+            -10.0,
+            0.0,
+            10.2
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_estate_01",
+          "activity": "读一张邀请卡，想想怎样欢迎来访的朋友。"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "小院花圃",
+          "position_blender": [
+            8.0,
+            -10.2,
+            0.0
+          ],
+          "position_godot": [
+            8.0,
+            0.0,
+            10.2
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_estate_02",
+          "activity": "拿起水壶，为花圃浇水，再把水壶放回去。"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "门廊随身篮",
+          "position_blender": [
+            -6.3,
+            -9.2,
+            0.0
+          ],
+          "position_godot": [
+            -6.3,
+            0.0,
+            9.2
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_estate_03",
+          "activity": "外出前整理随身物品，准备与家人一起散步。"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "家庭日程板",
+          "position_blender": [
+            2.0,
+            -10.2,
+            0.0
+          ],
+          "position_godot": [
+            2.0,
+            0.0,
+            10.2
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_estate_04",
+          "activity": "看看日程板，选择今天先去哪个房间。"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "门廊小树",
+          "position_blender": [
+            11.5,
+            -10.3,
+            0.0
+          ],
+          "position_godot": [
+            11.5,
+            0.0,
+            10.3
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_estate_05",
+          "activity": "观察小树怎样给门廊遮阴，照顾它慢慢长大。"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入家园",
+          "position_blender": [
+            0.0,
+            -13.4,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            13.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回字母岛",
+          "position_blender": [
+            0.0,
+            -14.5,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            14.5
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "家人停留位置",
+          "position_blender": [
+            -2.0,
+            -10.0,
+            0.0
+          ],
+          "position_godot": [
+            -2.0,
+            0.0,
+            10.0
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_HOUSE_ENTRY",
+          "label": "正门 · 走进家里",
+          "position_blender": [
+            -3.5,
+            -8.7,
+            0.0
+          ],
+          "position_godot": [
+            -3.5,
+            0.0,
+            8.7
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -17.0,
+        -16.0,
+        34.0,
+        32.0
+      ],
+      "triangles": 422560,
+      "glb_sha256": "e7351f5623f3c080d79fb311886e4623a4879e7773b87d62e3fa33d4cee56420"
+    },
+    {
+      "blend": "assets/blender/interiors/home_kitchen/home_kitchen_v01.blend",
+      "glb": "assets/blender/interiors/home_kitchen/home_kitchen_v01.glb",
+      "preview": "assets/blender/interiors/home_kitchen/preview_v01.png",
+      "room_id": "home_kitchen",
+      "name": "明亮厨房",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "食材储物柜",
+          "position_blender": [
+            -5.0,
+            2.5,
+            0.0
+          ],
+          "position_godot": [
+            -5.0,
+            0.0,
+            -2.5
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_kitchen_01",
+          "activity": "认识米饭、鱼和蔬菜，挑选今天的食材。"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "洗菜池",
+          "position_blender": [
+            -1.4,
+            3.0,
+            0.0
+          ],
+          "position_godot": [
+            -1.4,
+            0.0,
+            -3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_kitchen_02",
+          "activity": "将蔬菜放入水槽，洗净后放回篮子。"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "灶台与汤锅",
+          "position_blender": [
+            4.5,
+            2.6,
+            0.0
+          ],
+          "position_godot": [
+            4.5,
+            0.0,
+            -2.6
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_kitchen_03",
+          "activity": "看一看做饭的工具，和家人一起准备一餐。"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "备餐操作台",
+          "position_blender": [
+            2.0,
+            -0.5,
+            0.0
+          ],
+          "position_godot": [
+            2.0,
+            0.0,
+            0.5
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_kitchen_04",
+          "activity": "介绍厨房，观察台面上准备好的物品。"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "餐具收纳架",
+          "position_blender": [
+            -3.2,
+            -3.8,
+            0.0
+          ],
+          "position_godot": [
+            -3.2,
+            0.0,
+            3.8
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_kitchen_05",
+          "activity": "用过的餐具归位，保持厨房干净。"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入家园",
+          "position_blender": [
+            0.0,
+            -5.5,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.5
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回上一层",
+          "position_blender": [
+            0.0,
+            -6.4,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "家人或朋友停留位置",
+          "position_blender": [
+            -1.8,
+            -3.0,
+            0.0
+          ],
+          "position_godot": [
+            -1.8,
+            0.0,
+            3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 106664,
+      "glb_sha256": "f73e988fc03ce5eecbf3bf8b80a8c00ec1134c9248a503e638f0566b480275d4"
+    },
+    {
+      "blend": "assets/blender/interiors/home_study/home_study_v01.blend",
+      "glb": "assets/blender/interiors/home_study/home_study_v01.glb",
+      "preview": "assets/blender/interiors/home_study/preview_v01.png",
+      "room_id": "home_study",
+      "name": "窗边书房",
+      "anchors": [
+        {
+          "name": "SG_MEMORY_01",
+          "label": "电脑书桌",
+          "position_blender": [
+            -4.8,
+            2.5,
+            0.0
+          ],
+          "position_godot": [
+            -4.8,
+            0.0,
+            -2.5
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_study_01",
+          "activity": "看看电脑能帮我们做什么；这里的问候只发生在游戏里。"
+        },
+        {
+          "name": "SG_MEMORY_02",
+          "label": "绘本书架",
+          "position_blender": [
+            0.0,
+            3.6,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            -3.6
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_study_02",
+          "activity": "把读完的书放回书架，再挑一个故事。"
+        },
+        {
+          "name": "SG_MEMORY_03",
+          "label": "靠窗阅读座",
+          "position_blender": [
+            4.8,
+            2.4,
+            0.0
+          ],
+          "position_godot": [
+            4.8,
+            0.0,
+            -2.4
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_study_03",
+          "activity": "晚上坐下来读一会儿书。"
+        },
+        {
+          "name": "SG_MEMORY_04",
+          "label": "文具整理桌",
+          "position_blender": [
+            -3.0,
+            -3.9,
+            0.0
+          ],
+          "position_godot": [
+            -3.0,
+            0.0,
+            3.9
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_study_04",
+          "activity": "找一找铅笔盒，把文具放到合适的位置。"
+        },
+        {
+          "name": "SG_MEMORY_05",
+          "label": "贺卡手工台",
+          "position_blender": [
+            3.3,
+            -3.0,
+            0.0
+          ],
+          "position_godot": [
+            3.3,
+            0.0,
+            3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "memory_home_study_05",
+          "activity": "画一张送给家人的卡片，表达自己的心意。"
+        },
+        {
+          "name": "SG_SPAWN",
+          "label": "进入家园",
+          "position_blender": [
+            0.0,
+            -5.5,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            5.5
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_EXIT",
+          "label": "返回上一层",
+          "position_blender": [
+            0.0,
+            -6.4,
+            0.0
+          ],
+          "position_godot": [
+            0.0,
+            0.0,
+            6.4
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        },
+        {
+          "name": "SG_NPC_HOST",
+          "label": "家人或朋友停留位置",
+          "position_blender": [
+            -1.8,
+            -3.0,
+            0.0
+          ],
+          "position_godot": [
+            -1.8,
+            0.0,
+            3.0
+          ],
+          "associated_prop": null,
+          "memory_id": "",
+          "activity": ""
+        }
+      ],
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "triangles": 54808,
+      "glb_sha256": "e07354ad593632de71484be9639b78e506c7bd20da50b793a5f8fb8c103e8607"
+    }
+  ],
+  "coordinate_system": "GLB/Godot Y up; bounds = xmin, zmin, width, depth; metres",
+  "source_contract": "Edit .blend, then export_existing.py; generator is opt-in only",
+  "hierarchy": {
+    "world": "village",
+    "school_campus": "school",
+    "school_children": [
+      "classroom",
+      "music_room",
+      "art_room",
+      "science_room",
+      "canteen",
+      "playground",
+      "football_field"
+    ],
+    "home_estate": "home_estate",
+    "home_children": [
+      "home",
+      "home_bedroom",
+      "home_kitchen",
+      "home_dining",
+      "home_bathroom",
+      "home_study",
+      "home_balcony"
+    ]
+  }
+}

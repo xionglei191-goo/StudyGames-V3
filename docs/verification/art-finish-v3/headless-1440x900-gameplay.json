@@ -1,0 +1,136 @@
+{
+	"actual_window": [
+		0,
+		0
+	],
+	"captures": [],
+	"checks": [
+		{
+			"check": "production scene becomes ready",
+			"passed": true
+		},
+		{
+			"check": "production harness isolates save",
+			"passed": true
+		},
+		{
+			"check": "actual world player uses real skin",
+			"passed": true
+		},
+		{
+			"check": "map renders the actual current world",
+			"passed": true
+		},
+		{
+			"check": "real wardrobe preview uses skinned model",
+			"passed": true
+		},
+		{
+			"check": "enabled production button exists: outfit:pink",
+			"passed": true
+		},
+		{
+			"check": "production button is reachable: outfit:pink",
+			"passed": true
+		},
+		{
+			"check": "real wardrobe click persists selected outfit: pink",
+			"passed": true
+		},
+		{
+			"check": "world skin changes selected outfit: pink",
+			"passed": true
+		},
+		{
+			"check": "preview skin changes selected outfit: pink",
+			"passed": true
+		},
+		{
+			"check": "outfit override preserves shared authored materials: pink",
+			"passed": true
+		},
+		{
+			"check": "enabled production button exists: outfit:blue",
+			"passed": true
+		},
+		{
+			"check": "production button is reachable: outfit:blue",
+			"passed": true
+		},
+		{
+			"check": "real wardrobe click persists selected outfit: blue",
+			"passed": true
+		},
+		{
+			"check": "world skin changes selected outfit: blue",
+			"passed": true
+		},
+		{
+			"check": "preview skin changes selected outfit: blue",
+			"passed": true
+		},
+		{
+			"check": "outfit override preserves shared authored materials: blue",
+			"passed": true
+		},
+		{
+			"check": "enabled production button exists: outfit:yellow",
+			"passed": true
+		},
+		{
+			"check": "production button is reachable: outfit:yellow",
+			"passed": true
+		},
+		{
+			"check": "real wardrobe click persists selected outfit: yellow",
+			"passed": true
+		},
+		{
+			"check": "world skin changes selected outfit: yellow",
+			"passed": true
+		},
+		{
+			"check": "preview skin changes selected outfit: yellow",
+			"passed": true
+		},
+		{
+			"check": "outfit override preserves shared authored materials: yellow",
+			"passed": true
+		},
+		{
+			"check": "actual pointer drag rotates the wardrobe model",
+			"passed": true
+		},
+		{
+			"check": "pointer release ends wardrobe drag",
+			"passed": true
+		},
+		{
+			"check": "wardrobe drag leaves the world player intact",
+			"passed": true
+		},
+		{
+			"check": "closing wardrobe returns to the scene",
+			"passed": true
+		},
+		{
+			"check": "formal save unchanged: user://island-save-v1.json",
+			"passed": true
+		},
+		{
+			"check": "formal save unchanged: user://island-save-v1.json.bak",
+			"passed": true
+		}
+	],
+	"failures": [],
+	"logical_viewport": [
+		1440.0,
+		900.0
+	],
+	"requested_window": [
+		1440,
+		900
+	],
+	"scope": "Production main scene HUD, real world map, home, real wardrobe three-colour input and shared-material protection, pointer drag; separate movement/orchard tests cover navigation and action contacts.",
+	"status": "PASS"
+}

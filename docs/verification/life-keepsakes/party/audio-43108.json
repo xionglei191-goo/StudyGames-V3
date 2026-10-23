@@ -1,0 +1,70 @@
+{
+  "checks": [
+    {
+      "id": "party_uses_its_own_playing_narration",
+      "passed": true
+    },
+    {
+      "id": "voice_owned_by_visible_stage",
+      "passed": true
+    },
+    {
+      "id": "starting_party_leaves_existing_shared_voice_untouched",
+      "passed": true
+    },
+    {
+      "id": "explicit_pause_stops_voice_and_visual",
+      "passed": true
+    },
+    {
+      "id": "party_pause_does_not_pause_shared_voice",
+      "passed": true
+    },
+    {
+      "id": "resume_restores_party_voice_and_visual",
+      "passed": false
+    },
+    {
+      "id": "background_stops_narration_and_watch_timer",
+      "passed": true
+    },
+    {
+      "id": "foreground_resumes_owned_narration_and_timer",
+      "passed": false
+    },
+    {
+      "id": "leaving_clears_own_paused_narration",
+      "passed": true
+    },
+    {
+      "id": "new_shared_voice_not_stopped_or_left_paused",
+      "passed": true
+    },
+    {
+      "id": "cleanup_preserves_another_voices_own_pause",
+      "passed": true
+    },
+    {
+      "id": "next_party_starts_without_stale_pause",
+      "passed": true
+    },
+    {
+      "id": "stage_tree_exit_stops_its_owned_narration",
+      "passed": true
+    },
+    {
+      "id": "production_preserved_user://island-save-v1.json",
+      "passed": true
+    },
+    {
+      "id": "production_preserved_user://island-save-v1.json.bak",
+      "passed": true
+    }
+  ],
+  "failures": [
+    "resume_restores_party_voice_and_visual",
+    "foreground_resumes_owned_narration_and_timer"
+  ],
+  "result": "FAIL",
+  "scope": "Owned narration pause/resume, background watch timer, teardown, shared voice isolation. Uses existing phrases quietly; no save writes."
+}

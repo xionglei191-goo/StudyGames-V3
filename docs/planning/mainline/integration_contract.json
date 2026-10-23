@@ -1,0 +1,342 @@
+{
+  "schema_version": "mainline-integration-v1",
+  "status": "planning_only_not_runtime_api",
+  "date": "2026-10-22",
+  "global_rule_entry": "../../../GDD.md",
+  "authorities": {
+    "source_facts": "原教材文本、页图和各域来源审校记录",
+    "mainline": "curriculum_arcs.json 与 alphabet_prologue.json",
+    "vocabulary": "../vocabulary/data/catalog.json",
+    "vocabulary_adapter": "../vocabulary/data/mainline_entries.json",
+    "vocabulary_contract": "../vocabulary/data/integration_contract.json",
+    "character_identity": "../art/textbook_characters.json",
+    "npc_assets_and_slots": "../art/npc_animation_assets.json",
+    "environment": "../art/environment_motion_assets.json"
+  },
+  "coverage": {
+    "books": 8,
+    "unit_events": 81,
+    "alphabet_entries": 26,
+    "vocabulary_occurrences": 1314,
+    "vocabulary_exact_spellings": 1073,
+    "vocabulary_core_sense_stories": 1096,
+    "unit_objective_text_reviewed": 10,
+    "unit_title_only": 71,
+    "whole_units_human_reviewed": 0,
+    "runtime_integration_verified": false,
+    "unit_vocabulary_associations": 1359,
+    "multi_unit_occurrences": 45,
+    "unlocated_occurrences": 0
+  },
+  "curriculum_route": {
+    "new_save_requires_all_26_supported_experiences": true,
+    "default_start_book_id": "xiangshao-g3-1",
+    "start_book_ids": [
+      "xiangshao-g3-1",
+      "xiangshao-g3-2",
+      "xiangshao-g4-1",
+      "xiangshao-g4-2",
+      "english-grade5-volume1-smartedu-2022",
+      "xiangshao-g5-2",
+      "xiangshao-g6-1",
+      "xiangshao-g6-2"
+    ],
+    "selected_book_first_unit_exception": true,
+    "first_unit_id": "unit-1",
+    "first_event_id_rule": "event/{selected_start_book_id}/unit-1",
+    "bridging_may_use_full_demo": true,
+    "bridging_marks_prior_books_completed": false,
+    "route_switch_boundary": "chapter_boundary",
+    "route_switch_preserves_progress_and_attempts": true,
+    "legacy_save_keeps_existing_progress": true,
+    "legacy_save_forced_prologue_retake": false
+  },
+  "completion": {
+    "letter_required_facts": [
+      "visited",
+      "representative_image_presented",
+      "micro_action_feedback_seen",
+      "case_pair_presented",
+      "letter_name_support_offered"
+    ],
+    "letters_required": 26,
+    "accepted_modes": [
+      "independent_action",
+      "hinted_action",
+      "companion_action",
+      "demonstration_viewed"
+    ],
+    "story_is_not_mastery": true,
+    "story_unlock_uses_english_score": false,
+    "story_unlock_requires_review_queue_empty": false,
+    "world_doors_open_during_prologue": true
+  },
+  "assistance": {
+    "levels": [
+      {
+        "level": 0,
+        "id": "H0",
+        "name": "自主"
+      },
+      {
+        "level": 1,
+        "id": "H1",
+        "name": "位置与意义"
+      },
+      {
+        "level": 2,
+        "id": "H2",
+        "name": "第一步"
+      },
+      {
+        "level": 3,
+        "id": "H3",
+        "name": "缺口接续"
+      },
+      {
+        "level": 4,
+        "id": "H4",
+        "name": "逐步搭桥"
+      },
+      {
+        "level": 5,
+        "id": "H5",
+        "name": "完整示范"
+      }
+    ],
+    "catalog_field": "stories[].prompt_ladder[].level",
+    "lowest_level": 0,
+    "highest_level": 5,
+    "level_is_ability_rating": false,
+    "max_help_level_monotonic_within_attempt": true,
+    "h0_opening_story_counts_as_help": true,
+    "persist_fields": [
+      "attempt_id",
+      "invocation_id",
+      "max_help_level",
+      "support_used",
+      "answer_revealed",
+      "first_response_result",
+      "question_replay_count",
+      "content_revision",
+      "codebook_revision"
+    ],
+    "non_answer_question_replay_auto_escalates": false,
+    "unobserved_result": null,
+    "same_attempt_exit_resets_help": false,
+    "all_levels_same_story_reward": true,
+    "unassisted_attempt_requires": [
+      "task_actual_response_observed",
+      "no_relevant_answer_help",
+      "no_target_model_visible_for_recall_task"
+    ],
+    "independent_success_requires": [
+      "task_actual_response_observed",
+      "no_relevant_answer_help",
+      "no_target_model_visible_for_recall_task",
+      "first_response_correct"
+    ],
+    "unassisted_attempt_outcomes": [
+      "correct",
+      "not_correct"
+    ],
+    "attempt_classification_policy": "无提示作答描述实际作答条件，可正确也可错误；首次独立正确才额外要求first_response_correct。首次无提示错误保留为无提示尝试+not_correct，不能改成not_attempted。",
+    "retry_policy": "同一attempt_id首次错误后继续答对保留first_response与later_response，不洗成首次独立正确；具体已用帮助与重试事实分别保存，不虚构看过答案。",
+    "historical_record_policy": "本次只拆分策划判定语义，不修改既有存档字段、历史响应、结果或帮助记录；证据不足时保持未知。"
+  },
+  "learning_evidence": {
+    "dimensions": [
+      "letter_recognition",
+      "ordered_images_recalled",
+      "spelling_recalled",
+      "meaning_understood",
+      "listening_understood",
+      "spoken_expression"
+    ],
+    "result_values": [
+      "independent_correct",
+      "supported_correct",
+      "not_correct",
+      "not_attempted"
+    ],
+    "not_attempted_numeric_score": null,
+    "utc_timestamp_required": true,
+    "game_day_separate": true,
+    "requirement_policy": "Follow vocabulary integration contract requirement matrix; recognition or listen_speak is not compulsory spelling; no unsupported automatic speech scores.",
+    "historical_runtime_records_policy": "保留已有 independent/assisted 与地点发现，不反推缺失的音形义或内容版本。"
+  },
+  "vocabulary_call": {
+    "adapter_schema": "vocabulary-mainline-adapter-v1",
+    "entry_id_source": "catalog.occurrences[].id",
+    "lexeme_id_source": "catalog.occurrences[].lexeme_id",
+    "sense_id_source": "catalog.occurrences[].story_id",
+    "source_unit_join": "entry.source_unit.book_id == call.source_unit.book_id and call.source_unit.unit_id in entry.source_unit.unit_ids",
+    "unlocated_unit_auto_dispatch": false,
+    "entry_candidates_are_mandatory_tasks": false,
+    "required_call_fields": [
+      "invocation_id",
+      "attempt_id",
+      "entry_id",
+      "lexeme_id",
+      "sense_id",
+      "content_revision",
+      "codebook_revision",
+      "source_unit",
+      "story_step_id",
+      "purpose",
+      "requested_help_level",
+      "resume_state",
+      "return_to"
+    ],
+    "source_unit_fields": [
+      "book_id",
+      "unit_id"
+    ],
+    "resume_fields": [
+      "seen_beats",
+      "current_beat",
+      "max_help_level",
+      "support_used",
+      "answer_revealed",
+      "attempts",
+      "cue_events",
+      "task_mode",
+      "target_dimension",
+      "declared_stimulus",
+      "answer_visible_at_start"
+    ],
+    "no_story_body_duplication": true,
+    "encoding_position_rule": "concat(beat.letter_positions for beat in story_beats if beat.role == encoding) == range(1,letter_count+1)",
+    "supplemental_beat_rule": "references existing letters with ref_letter_positions; contributes no encoding positions",
+    "word_boundary_rule": "spaces and hyphens reset word_index/word_letter_index; apostrophes retain within-word indexing; all non-letter tokens retain source positions",
+    "memory_home_rule": "Logical story storage record; existing SG location is an entrance reference, not a new world node for each story.",
+    "missing_content_behavior": "返回content_unavailable；主线允许情境教学或陪同动作，未展示/未测维度保持未观察。",
+    "content_revision": "vocabulary-75cc8eb5b90ed004",
+    "codebook_revision": "codebook-7976c505db8c0ea5",
+    "attempt_evidence_contract_ref": "../vocabulary/data/integration_contract.json#/prompt_contract",
+    "requirement_permissions_ref": "../vocabulary/data/integration_contract.json#/requirement_permissions"
+  },
+  "clocks": {
+    "environment_world_clock": {
+      "drives": [
+        "visual_day_night",
+        "weather_transitions",
+        "npc_schedules",
+        "wind",
+        "water_ripples",
+        "clouds",
+        "environment_particles"
+      ],
+      "pause_during": [
+        "dialogue",
+        "memory",
+        "teaching",
+        "pause_menu",
+        "application_background"
+      ],
+      "all_npc_schedule_and_background_motion_paused": true,
+      "includes_offscreen_npcs": true,
+      "offline_catchup": false
+    },
+    "performance_clock": {
+      "continues_during": [
+        "dialogue",
+        "memory",
+        "teaching"
+      ],
+      "scope": "only active actor required speech, expression, teaching demonstration and player-controlled mnemonic current frame",
+      "pause_during": [
+        "pause_menu",
+        "application_background"
+      ],
+      "mnemonic_weather_affects_world_clock": false
+    },
+    "game_day": {
+      "advance_only_by": "explicit next_day action",
+      "advanced_by_visual_day_cycle": false
+    },
+    "learning_real_time": {
+      "basis": "UTC event timestamps and actual elapsed duration",
+      "sleep_advances_retention": false,
+      "unknown_or_reversed_clock": "interval_unknown; no delayed-retention claim; play continues"
+    },
+    "story_visual_override": {
+      "example": "Unit 1 morning greeting",
+      "changes_game_day": false,
+      "changes_utc_retention": false,
+      "requires_real_clock_wait": false
+    },
+    "weather_or_night_blocks_mainline": false
+  },
+  "rewards": {
+    "same_for_supported_and_independent_story_completion": true,
+    "transaction_fields": [
+      "step_result",
+      "inventory_change",
+      "wallet_change",
+      "reward_receipt"
+    ],
+    "announce_after_successful_save": true,
+    "receipt_key_fields": [
+      "event_id",
+      "reward_item_id"
+    ],
+    "replay_grants_again": false,
+    "restore_same_snapshot_for_progress_and_wallet": true,
+    "u1_new_leaf_coins": 0,
+    "u1_photo_receipt_step": "U1-08",
+    "u1_chapter_receipt_step": "U1-09",
+    "legacy_unit_reward_credited_once": true,
+    "essential_material_replacement_available": true,
+    "replacement_material_resellable": false
+  },
+  "review": {
+    "optional": true,
+    "blocks_next_chapter": false,
+    "missed_days_penalty": false,
+    "default_items_per_invitation": 1,
+    "automatic_invitation_limit_per_play_session_draft": 2,
+    "unplayed_is_not_wrong": true,
+    "no_auto_invites_during": [
+      "new_story_opening",
+      "movement_transition",
+      "craft_confirmation",
+      "chapter_ending"
+    ],
+    "timing_values_status": "untested_design_suggestions"
+  },
+  "npc_binding": {
+    "core_textbook_character_ids": [
+      "textbook_lingling",
+      "textbook_peter",
+      "textbook_anne",
+      "textbook_mingming",
+      "textbook_dongdong",
+      "textbook_tim",
+      "textbook_dino"
+    ],
+    "original_island_npc_ids": [
+      "npc_bear_uncle",
+      "npc_rabbit_gardener"
+    ],
+    "teacher_functional_role_slot": "current_teacher_slot",
+    "teacher_mapping_candidate": "textbook_miss_li",
+    "teacher_mapping_status": "proposed_identity_review_required",
+    "all_source_characters_first_batch": true,
+    "all_first_batch_appear_in_u1": false,
+    "source_mentions_automatically_approve_cast": false,
+    "unit_cast_status": "source_candidates_only_event_cast_review_pending",
+    "functional_labels_create_new_person_id": false
+  },
+  "fixed_codebook": {
+    "letter_count": 26,
+    "move_public_buildings_for_word_story": false,
+    "E": {
+      "canonical_word": "Egg",
+      "canonical_word_zh": "鸡蛋",
+      "representative_label_zh": "蛋壳（完整蛋形）",
+      "meaning_boundary": "egg is taught as 鸡蛋; the representative is the whole egg-shaped shell, never a replacement meaning of broken shell."
+    }
+  },
+  "validation_scope": "Static planning cross-references and consistency only. No Godot launch, asset creation, audio audition, save migration, gameplay acceptance or learning-outcome claim."
+}

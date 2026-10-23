@@ -1,0 +1,247 @@
+{
+	"checks": [
+		{
+			"id": "old_empty_save_has_no_invented_choices",
+			"passed": true
+		},
+		{
+			"id": "fresh_has_no_rewards",
+			"passed": true
+		},
+		{
+			"id": "unexperienced_card_rejected_without_mutation",
+			"passed": true
+		},
+		{
+			"id": "visit_alone_never_unlocks_card",
+			"passed": true
+		},
+		{
+			"id": "first_station_has_first_card_without_26_gate",
+			"passed": true
+		},
+		{
+			"id": "one_station_does_not_complete_district",
+			"passed": true
+		},
+		{
+			"id": "first_card_begin",
+			"passed": true
+		},
+		{
+			"id": "preview_does_not_create_or_display_confirmed_work",
+			"passed": true
+		},
+		{
+			"id": "choose_theme",
+			"passed": true
+		},
+		{
+			"id": "choose_layout",
+			"passed": true
+		},
+		{
+			"id": "choose_display_at_first_station",
+			"passed": true
+		},
+		{
+			"id": "draft_roundtrip_without_p2_dependency",
+			"passed": true
+		},
+		{
+			"id": "card_image_is_fixed_to_its_letter",
+			"passed": true
+		},
+		{
+			"id": "first_card_confirm",
+			"passed": true
+		},
+		{
+			"id": "confirmed_design_and_home_display",
+			"passed": true
+		},
+		{
+			"id": "one_card_one_result",
+			"passed": true
+		},
+		{
+			"id": "double_confirm_idempotent",
+			"passed": true
+		},
+		{
+			"id": "edit_existing",
+			"passed": true
+		},
+		{
+			"id": "draft_cannot_replace_world_theme",
+			"passed": true
+		},
+		{
+			"id": "cancel_preserves_confirmed_work",
+			"passed": true
+		},
+		{
+			"id": "style_edit_updates_same_card_no_extra_reward",
+			"passed": true
+		},
+		{
+			"id": "decoration_never_changes_learning_or_currency",
+			"passed": true
+		},
+		{
+			"id": "confirmed_state_normalizes",
+			"passed": true
+		},
+		{
+			"id": "demonstration_and_independent_get_same_eligibility",
+			"passed": true
+		},
+		{
+			"id": "district_same_reward_mode/independent_action",
+			"passed": true
+		},
+		{
+			"id": "district_same_reward_mode/hinted_action",
+			"passed": true
+		},
+		{
+			"id": "district_same_reward_mode/companion_action",
+			"passed": true
+		},
+		{
+			"id": "district_same_reward_mode/demonstration_viewed",
+			"passed": true
+		},
+		{
+			"id": "district_requires_all_experienced_not_visited",
+			"passed": true
+		},
+		{
+			"id": "complete_district_page_begin",
+			"passed": true
+		},
+		{
+			"id": "choose_real_district_image",
+			"passed": true
+		},
+		{
+			"id": "experienced_other_district_cannot_be_main_image",
+			"passed": true
+		},
+		{
+			"id": "unexperienced_image_rejected",
+			"passed": true
+		},
+		{
+			"id": "confirmed_page_keeps_actual_selected_image",
+			"passed": true
+		},
+		{
+			"id": "page_roundtrip",
+			"passed": true
+		},
+		{
+			"id": "all_five_districts_supported",
+			"passed": true
+		},
+		{
+			"id": "old_completed_save_restores_eligibility_without_fabricated_designs",
+			"passed": true
+		},
+		{
+			"id": "all_district_creation/morning_village",
+			"passed": true
+		},
+		{
+			"id": "all_district_creation/craft_street",
+			"passed": true
+		},
+		{
+			"id": "all_district_creation/woodland_village",
+			"passed": true
+		},
+		{
+			"id": "all_district_creation/hill_academy_district",
+			"passed": true
+		},
+		{
+			"id": "all_district_creation/bay_travel_district",
+			"passed": true
+		},
+		{
+			"id": "all_five_pages_roundtrip",
+			"passed": true
+		},
+		{
+			"id": "invalid_design_rejected/{ \"theme\": \"premium\" }",
+			"passed": true
+		},
+		{
+			"id": "invalid_design_rejected/{ \"layout\": \"freeform\" }",
+			"passed": true
+		},
+		{
+			"id": "invalid_design_rejected/{ \"image_letter\": \"G\" }",
+			"passed": true
+		},
+		{
+			"id": "invalid_design_rejected/{ \"image_letter\": \"\" }",
+			"passed": true
+		},
+		{
+			"id": "forged_display_rejected",
+			"passed": true
+		},
+		{
+			"id": "nonfinite_timestamp_rejected",
+			"passed": true
+		},
+		{
+			"id": "fractional_revision_rejected",
+			"passed": true
+		},
+		{
+			"id": "forged_draft_image_rejected",
+			"passed": true
+		},
+		{
+			"id": "invalid_event_atomic/theme/premium",
+			"passed": true
+		},
+		{
+			"id": "invalid_event_atomic/theme/<null>",
+			"passed": true
+		},
+		{
+			"id": "invalid_event_atomic/layout/unknown",
+			"passed": true
+		},
+		{
+			"id": "invalid_event_atomic/display/yes",
+			"passed": true
+		},
+		{
+			"id": "replace_display_keeps_previous_card_in_collection",
+			"passed": true
+		},
+		{
+			"id": "store_display_keeps_all_owned_works",
+			"passed": true
+		},
+		{
+			"id": "stored_collection_normalizes",
+			"passed": true
+		},
+		{
+			"id": "controller_script_parses",
+			"passed": true
+		},
+		{
+			"id": "artwork_script_parses",
+			"passed": true
+		}
+	],
+	"failed": 0,
+	"passed": 60,
+	"scope": "pure state and script parsing; no graphical run or player save writes"
+}

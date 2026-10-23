@@ -1,0 +1,112 @@
+{
+  "version": "0.8.1-dev",
+  "verified_at": "2026-10-23T14:45:16.8764637+08:00",
+  "production_files": [
+    {
+      "path": "C:\\Users\\Administrator\\AppData\\Roaming\\Godot\\app_userdata\\字母岛 · 我的第一天\\island-save-v1.json",
+      "before": "CF8D39020E6055A1F08C77991C7D8A11EABD6B7D627C01EB9AFF542D6241019C",
+      "after": "CF8D39020E6055A1F08C77991C7D8A11EABD6B7D627C01EB9AFF542D6241019C",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\Administrator\\AppData\\Roaming\\Godot\\app_userdata\\字母岛 · 我的第一天\\island-save-v1.json.bak",
+      "before": "3304DD68B65E4CE81AA724ED2EB244734928253CFFD0C3121B34E4F8BB3DCB20",
+      "after": "3304DD68B65E4CE81AA724ED2EB244734928253CFFD0C3121B34E4F8BB3DCB20",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\Administrator\\AppData\\Roaming\\Godot\\app_userdata\\字母岛 · 我的第一天\\welcome-photo-44948-21463.png",
+      "before": "B57F7B5D8F01CB002D3CB6A9AF5A01951BEDEE214F6BB47B212E4FE64B762734",
+      "after": "B57F7B5D8F01CB002D3CB6A9AF5A01951BEDEE214F6BB47B212E4FE64B762734",
+      "unchanged": true
+    },
+    {
+      "path": "C:\\Users\\Administrator\\AppData\\Roaming\\Godot\\app_userdata\\字母岛 · 我的第一天\\welcome-photo-7100-20320.png",
+      "before": "F526D1D9B9BA0C59764D56A3EC411A311E9153C70EB376A034DBDDE116405585",
+      "after": "F526D1D9B9BA0C59764D56A3EC411A311E9153C70EB376A034DBDDE116405585",
+      "unchanged": true
+    }
+  ],
+  "source_snapshot": [
+    {
+      "path": "game/project.godot",
+      "sha256": "09F1345DCF839EED7F1C15D2BF65BE6BED0ADF4889AEA94337194A2AD76751F0"
+    },
+    {
+      "path": "game/scripts/friend_corner_progress.gd",
+      "sha256": "94C7F919F923DC3F90BB4E3FB207B8035DFC9E1DD0A7704FCA57B74F5A42804A"
+    },
+    {
+      "path": "game/scripts/friend_corner_controller.gd",
+      "sha256": "AF15E14F2AB0ED073CCA9F36666DF4D288E35937B29040ACDF7E2E026AD0E732"
+    },
+    {
+      "path": "game/ui/friend_corner_board.gd",
+      "sha256": "68C60539DEE254C3736CDD0C386A461383C6FA7A31F17849776622C47EE97451"
+    },
+    {
+      "path": "game/data/learning/friend_corner.json",
+      "sha256": "4882517751EDBBFAD2E1AD6D8A902E44DE91E8D5462E9EAB7C35DB7328EB5176"
+    },
+    {
+      "path": "game/scripts/p2_progress.gd",
+      "sha256": "394966219FF52CAE7E010463BC27B450522711B93070328FF61DFB8D5ED433C4"
+    },
+    {
+      "path": "game/scripts/p2_journey_controller.gd",
+      "sha256": "6F9C337AA1BC2B486E44EF03CECA2A0987CCE37EEE3C3099E664227F7C94443B"
+    },
+    {
+      "path": "game/scripts/journey_controller.gd",
+      "sha256": "CAA2D14AF6E60DEBE9A2F10CF3373A429B0140E70694C04F707DE369363E10FA"
+    },
+    {
+      "path": "game/tests/test_friend_corner_state.gd",
+      "sha256": "51F07F14F646AE534CA6193F72619535C2DA4FDEA7A461182FD31FAC3D6D43CD"
+    },
+    {
+      "path": "game/tests/test_friend_corner_game.gd",
+      "sha256": "6C8A2EB3FC8F0AAB9163C929733C622F1417ACE5879B1FB0BD7FCE4BBA58C737"
+    },
+    {
+      "path": "game/tests/test_p2_chapters.gd",
+      "sha256": "285DED6E69DAFD248F51F62EE1DEEAE4654BE89DADBA310DE5D7D93951FDBA8D"
+    }
+  ],
+  "reports": [
+    {
+      "path": "state.json",
+      "checks": 91,
+      "failures": 0,
+      "pass": true
+    },
+    {
+      "path": "p2-state.json",
+      "checks": 284,
+      "failures": 0,
+      "pass": true
+    },
+    {
+      "path": "1440x900/report.json",
+      "checks": 240,
+      "failures": 0,
+      "pass": true
+    },
+    {
+      "path": "960x640/report.json",
+      "checks": 231,
+      "failures": 0,
+      "pass": true
+    },
+    {
+      "path": "regression/chapters-1440x900-native.json",
+      "checks": 509,
+      "failures": 0,
+      "pass": true
+    }
+  ],
+  "journey_state_checks": 727,
+  "journey_state_failures": 0,
+  "legacy_state": "PASS",
+  "scope": "Focused friend-corner and affected regression checks only; no full suite or distribution export."
+}

@@ -1,0 +1,326 @@
+{
+  "room_id": "school",
+  "anchors": [
+    {
+      "name": "SG_DOOR_CLASSROOM",
+      "label": "CLASSROOM",
+      "position_blender": [
+        -5.0,
+        5.3,
+        0.0
+      ],
+      "position_godot": [
+        -5.0,
+        0.0,
+        -5.3
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_CANTEEN",
+      "label": "CANTEEN",
+      "position_blender": [
+        0.0,
+        5.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -5.3
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_PLAYGROUND",
+      "label": "PLAYGROUND",
+      "position_blender": [
+        5.0,
+        5.3,
+        0.0
+      ],
+      "position_godot": [
+        5.0,
+        0.0,
+        -5.3
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_01",
+      "label": "门厅欢迎台",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Welcome_Desk_Cabinet",
+      "memory_id": "memory_SCHOOL_01",
+      "activity": "入校打招呼"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧教室门前点名台",
+      "position_blender": [
+        -4.8,
+        1.2,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        -1.2
+      ],
+      "associated_prop": "Locus_02_Roll_Call_Cabinet",
+      "memory_id": "memory_SCHOOL_02",
+      "activity": "认识同学与教室"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央图书角",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Library_Island_Back",
+      "memory_id": "memory_SCHOOL_03",
+      "activity": "选课间读物"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧操场门旁器材架",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Equipment_Back",
+      "memory_id": "memory_SCHOOL_04",
+      "activity": "领取活动器材"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "后侧食堂展示窗",
+      "position_blender": [
+        2.8,
+        5.15,
+        0.0
+      ],
+      "position_godot": [
+        2.8,
+        0.0,
+        -5.15
+      ],
+      "associated_prop": "Locus_05_Canteen_Display_Frame",
+      "memory_id": "memory_SCHOOL_05",
+      "activity": "看菜单并计划午餐"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_01_Welcome_Desk",
+      "aabb_blender": [
+        -5.5,
+        -5.300000190734863,
+        -0.06000000238418579,
+        -3.1000001430511475,
+        -4.300000190734863,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Roll_Call",
+      "aabb_blender": [
+        -6.5,
+        1.899999976158142,
+        -0.06000000238418579,
+        -3.6999998092651367,
+        3.0999999046325684,
+        0.9599999785423279
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_03_Library_Island",
+      "aabb_blender": [
+        -1.5700000524520874,
+        1.2750000953674316,
+        0.0,
+        1.5700000524520874,
+        2.125,
+        1.350000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_04_Equipment",
+      "aabb_blender": [
+        3.5799999237060547,
+        0.824999988079071,
+        0.0,
+        6.420000076293945,
+        1.6749999523162842,
+        1.7000000476837158
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 473,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05",
+    "SG_DOOR_CLASSROOM",
+    "SG_DOOR_CANTEEN",
+    "SG_DOOR_PLAYGROUND"
+  ],
+  "glb_bytes": 5243356,
+  "glb_node_count": 489,
+  "triangles_instanced": 155600,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "ea0da0ff220ac040ac3225ca3badd268abc94bb57aeddc3050e1bce82bd70f24",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/school/school_v01.blend",
+  "source_blend_preserved": true
+}

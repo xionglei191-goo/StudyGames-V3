@@ -1,0 +1,729 @@
+{
+  "schema_version": 1,
+  "inspected_at": "2026-10-23T00:28:20.181280+08:00",
+  "scope": "Source and GLB metadata inspection only; no runtime test.",
+  "project_version": "0.7.0-dev",
+  "renderer": "gl_compatibility",
+  "source_files": [
+    {
+      "path": "game/project.godot",
+      "bytes": 872,
+      "sha256": "2cb5039bc5497bf0c718995bd6b052e843904572803b281bf48131dae9568148"
+    },
+    {
+      "path": "game/scripts/world_builder.gd",
+      "bytes": 6867,
+      "sha256": "31ede503b93e7281b3026120e42505f69e8c743c3ff196ddb0a9c1b934b06f8b"
+    },
+    {
+      "path": "game/scripts/player.gd",
+      "bytes": 7313,
+      "sha256": "4f977d8b41fd44b3b2802d609192a48035cfab04eedacef09eb7ef534bbf2bf4"
+    },
+    {
+      "path": "game/scripts/main.gd",
+      "bytes": 62070,
+      "sha256": "8dee18306b5ff5c5acf0aff87b3f2c157a3232a80f13996c289f5d4b618975c6"
+    },
+    {
+      "path": "game/scripts/imported_world.gd",
+      "bytes": 9954,
+      "sha256": "7323b6e07b4bc74adda4d36a748d816d82d099117224775a57922cdd941b59b5"
+    },
+    {
+      "path": "game/scripts/imported_interior.gd",
+      "bytes": 6345,
+      "sha256": "a23e1aefce617978878f90f276584c742956dfe7257be58ffcfd83e9562c9a93"
+    },
+    {
+      "path": "game/scripts/blender_materials.gd",
+      "bytes": 1246,
+      "sha256": "17662bb97a26e9e7c894f4f571eaa8f2c418f1f1563e66d950b8990a28879838"
+    },
+    {
+      "path": "game/scripts/game_state.gd",
+      "bytes": 22920,
+      "sha256": "987b894959fc9bd4e53cb270c222aa857b5bddf53861cfa7af0f805a7b893ba8"
+    },
+    {
+      "path": "game/data/interiors_manifest.json",
+      "bytes": 31846,
+      "sha256": "17bfb84bf2552e75d0340c281feb9f40e421229366e5eda9ed437558c86c9ca7"
+    },
+    {
+      "path": "game/assets/world/manifest.json",
+      "bytes": 201558,
+      "sha256": "9cca6f35ba23a130222d01ed71fc78209fcfcd60fb97c2bea45e499864512bc3"
+    }
+  ],
+  "scenes": [
+    {
+      "scene_id": "village",
+      "path": "game/assets/world/island.glb",
+      "bytes": 129062304,
+      "json_chunk_sha256": "d921ecddc085aedeaa967c2c493641681bf96517b79746e4d03ca217fb8caf09",
+      "nodes": 4203,
+      "meshes": 2479,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 80,
+      "uv2_primitives": 17,
+      "sample_environment_nodes": [
+        "ALPHA_Coastal_Water_Glint",
+        "ALPHA_Coastal_Water_Glint.001",
+        "ALPHA_Coastal_Water_Glint.002",
+        "ALPHA_Coastal_Water_Glint.003",
+        "ALPHA_Coastal_Water_Glint.004",
+        "ALPHA_Coastal_Water_Glint.005",
+        "ALPHA_Coastal_Water_Glint.006",
+        "ALPHA_Coastal_Water_Glint.007",
+        "ALPHA_Coastal_Water_Glint.008",
+        "ALPHA_Coastal_Water_Glint.009",
+        "ALPHA_Coastal_Water_Glint.010",
+        "ALPHA_Coastal_Water_Glint.011",
+        "ALPHA_Coastal_Water_Glint.012",
+        "ALPHA_Coastal_Water_Glint.013",
+        "ALPHA_Coastal_Water_Glint.014",
+        "ALPHA_Coastal_Water_Glint.015"
+      ]
+    },
+    {
+      "scene_id": "landmark_A",
+      "path": "game/assets/interiors/landmark_A.glb",
+      "bytes": 14317420,
+      "json_chunk_sha256": "e5a8583b0c7ec585994061daa9c86230e2a27ee5fc9ba32ecea2886628f7439f",
+      "nodes": 711,
+      "meshes": 417,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "A_Tree_1_Branch",
+        "A_Tree_1_Branch.001",
+        "A_Tree_1_Branch.002",
+        "A_Tree_1_Crown_0",
+        "A_Tree_1_Crown_1",
+        "A_Tree_1_Crown_2",
+        "A_Tree_1_Crown_3",
+        "A_Tree_1_Fruit_0",
+        "A_Tree_1_Fruit_0_Leaf",
+        "A_Tree_1_Fruit_0_Stem",
+        "A_Tree_1_Fruit_1",
+        "A_Tree_1_Fruit_1_Leaf",
+        "A_Tree_1_Fruit_1_Stem",
+        "A_Tree_1_Fruit_2",
+        "A_Tree_1_Fruit_2_Leaf",
+        "A_Tree_1_Fruit_2_Stem"
+      ]
+    },
+    {
+      "scene_id": "landmark_B",
+      "path": "game/assets/interiors/landmark_B.glb",
+      "bytes": 2413612,
+      "json_chunk_sha256": "50ae14c27f134e387631b81017916e30a1b5996ce479dedaed052c3ad39cb5a3",
+      "nodes": 120,
+      "meshes": 110,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Harbour_Water"
+      ]
+    },
+    {
+      "scene_id": "landmark_C",
+      "path": "game/assets/interiors/landmark_C.glb",
+      "bytes": 5304884,
+      "json_chunk_sha256": "886764fa315a6fd61bbe98c55a8893ab85c724b832039b2444bd48938f0f5e92",
+      "nodes": 758,
+      "meshes": 577,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_D",
+      "path": "game/assets/interiors/landmark_D.glb",
+      "bytes": 5624268,
+      "json_chunk_sha256": "afa2eb8bc3fd8888c3ca98ee27e0c93509be51d4a16fd5d023919d5fdc1a8954",
+      "nodes": 487,
+      "meshes": 440,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_E",
+      "path": "game/assets/interiors/landmark_E.glb",
+      "bytes": 3388976,
+      "json_chunk_sha256": "eabb626ee695030dd72d645aae32228ee575e59bd569e914d759acfb0f4a7513",
+      "nodes": 372,
+      "meshes": 325,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Eggshell_Crown",
+        "Eggshell_Crown.001",
+        "Eggshell_Crown.002",
+        "Eggshell_Crown.003",
+        "Eggshell_Crown.004",
+        "Eggshell_Crown.005",
+        "Eggshell_Crown.006",
+        "Eggshell_Crown.007",
+        "Eggshell_Crown.008",
+        "Locus_04_Feed_Water_Cabinet",
+        "Locus_04_Feed_Water_Top",
+        "Rear_Crown",
+        "SG_COLLIDER_Locus_04_Feed_Water",
+        "Water_Bowl",
+        "Water_Bowl.001"
+      ]
+    },
+    {
+      "scene_id": "landmark_F",
+      "path": "game/assets/interiors/landmark_F.glb",
+      "bytes": 3395356,
+      "json_chunk_sha256": "f96ae57d1e633c8b682025f8e0f3d4cadd4e7075d821613b6bad070b46345642",
+      "nodes": 1314,
+      "meshes": 495,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": []
+    },
+    {
+      "scene_id": "landmark_G",
+      "path": "game/assets/interiors/landmark_G.glb",
+      "bytes": 3066476,
+      "json_chunk_sha256": "c9b6b29e5d866580fdfe383bc73e492a98172af64e731824362be31c7e72d7eb",
+      "nodes": 390,
+      "meshes": 330,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_H",
+      "path": "game/assets/interiors/landmark_H.glb",
+      "bytes": 2566360,
+      "json_chunk_sha256": "efb444040e65c66b003b09df2aa7bceee2e85394e02b20a4def3fdc6787970ff",
+      "nodes": 361,
+      "meshes": 316,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Ready_Hat_Crown",
+        "Rear_Crown",
+        "Trying_Hat_Crown",
+        "Wall_Hat_Crown",
+        "Wall_Hat_Crown.001",
+        "Wall_Hat_Crown.002"
+      ]
+    },
+    {
+      "scene_id": "landmark_I",
+      "path": "game/assets/interiors/landmark_I.glb",
+      "bytes": 2248236,
+      "json_chunk_sha256": "1e670842e949ebaa1c5c89caa4d75010e560e278c2aed30211092cec99f43604",
+      "nodes": 183,
+      "meshes": 133,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": []
+    },
+    {
+      "scene_id": "landmark_J",
+      "path": "game/assets/interiors/landmark_J.glb",
+      "bytes": 3893100,
+      "json_chunk_sha256": "3ec00ef3cf0dbf2f32709b6c63257a5856f28ba1d2ad30d6af9e10922809e0e4",
+      "nodes": 555,
+      "meshes": 510,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_K",
+      "path": "game/assets/interiors/landmark_K.glb",
+      "bytes": 2540344,
+      "json_chunk_sha256": "86aa93bbd4a7b2d9eeec2795ccd237c03acacb23246b43b5ebec69e843dfaa8a",
+      "nodes": 300,
+      "meshes": 230,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": []
+    },
+    {
+      "scene_id": "landmark_L",
+      "path": "game/assets/interiors/landmark_L.glb",
+      "bytes": 4232876,
+      "json_chunk_sha256": "9618fb46bb5d2f6288fdaf44f97eaf9971ac66cc5ce76ece72449d8bc76dd2f5",
+      "nodes": 531,
+      "meshes": 476,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_M",
+      "path": "game/assets/interiors/landmark_M.glb",
+      "bytes": 3892140,
+      "json_chunk_sha256": "fdfdc2fdca728190b15fdff354575ec0831b6c8313190479871131f1bb03e983",
+      "nodes": 432,
+      "meshes": 362,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_N",
+      "path": "game/assets/interiors/landmark_N.glb",
+      "bytes": 4366652,
+      "json_chunk_sha256": "48a55925398ba3abf3e432e1e3b9facaa1ffa4eaf2fd7fb35d32635304104c48",
+      "nodes": 353,
+      "meshes": 334,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Locus_04_Feed_Water_Leg",
+        "Locus_04_Feed_Water_Leg.001",
+        "Locus_04_Feed_Water_Leg.002",
+        "Locus_04_Feed_Water_Leg.003",
+        "Locus_04_Feed_Water_Top",
+        "Lookout_Tree_Crown",
+        "Lookout_Tree_Crown.001",
+        "Lookout_Tree_Crown.002",
+        "Lookout_Tree_Crown.003",
+        "Lookout_Tree_Crown.004",
+        "Lookout_Tree_Crown.005",
+        "Lookout_Tree_Crown.006",
+        "Lookout_Tree_Crown.007",
+        "Lookout_Tree_Trunk",
+        "Lookout_Tree_Trunk.001",
+        "SG_COLLIDER_Locus_04_Feed_Water"
+      ]
+    },
+    {
+      "scene_id": "landmark_O",
+      "path": "game/assets/interiors/landmark_O.glb",
+      "bytes": 4341960,
+      "json_chunk_sha256": "5b4917c94e748058c1ff90c38a2ed6286cd4188ae1f5e9d493243c09e7b039a6",
+      "nodes": 475,
+      "meshes": 427,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_P",
+      "path": "game/assets/interiors/landmark_P.glb",
+      "bytes": 2923908,
+      "json_chunk_sha256": "d36acae10137ced467b2fbd088962c580138c69cc180a867bcdc4719a64bbc8b",
+      "nodes": 519,
+      "meshes": 332,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": []
+    },
+    {
+      "scene_id": "landmark_Q",
+      "path": "game/assets/interiors/landmark_Q.glb",
+      "bytes": 5099508,
+      "json_chunk_sha256": "6fa6dd32983c1c0c8a95ddf38ab9f853663963005ee2cead0874f30b3fd2d335",
+      "nodes": 479,
+      "meshes": 424,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_R",
+      "path": "game/assets/interiors/landmark_R.glb",
+      "bytes": 3465692,
+      "json_chunk_sha256": "e7e0eba521cbe30619faaab95faa65bacd676ba7ca4a59dca599b0a7bf600c01",
+      "nodes": 284,
+      "meshes": 232,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_S",
+      "path": "game/assets/interiors/landmark_S.glb",
+      "bytes": 2075000,
+      "json_chunk_sha256": "f8feedbc289112141171e89daba75875d5590196c1b47a087535319e35ea4f31",
+      "nodes": 339,
+      "meshes": 286,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": []
+    },
+    {
+      "scene_id": "landmark_T",
+      "path": "game/assets/interiors/landmark_T.glb",
+      "bytes": 3926632,
+      "json_chunk_sha256": "3cecb955916f719e78702c0e981c6b166e809bf60a021882c2d51992126e0ba5",
+      "nodes": 165,
+      "meshes": 156,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": []
+    },
+    {
+      "scene_id": "landmark_U",
+      "path": "game/assets/interiors/landmark_U.glb",
+      "bytes": 3135980,
+      "json_chunk_sha256": "68a6c61e9b85f1cae4ccd6f1f77b4c61d390c4dfaa60123d620f9f632c64c96c",
+      "nodes": 725,
+      "meshes": 396,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Weather_Hat_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_V",
+      "path": "game/assets/interiors/landmark_V.glb",
+      "bytes": 3016224,
+      "json_chunk_sha256": "c7f4f817952b8300441e9147f2bf752cc314a3ff85516805c3a5d54034a7b799",
+      "nodes": 125,
+      "meshes": 97,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": []
+    },
+    {
+      "scene_id": "landmark_W",
+      "path": "game/assets/interiors/landmark_W.glb",
+      "bytes": 2443500,
+      "json_chunk_sha256": "f1e93abd098a26ffe6724f6ff052d06687b486a73639e92778e380d05462d71e",
+      "nodes": 312,
+      "meshes": 291,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Marine_Water",
+        "Rear_Crown",
+        "Shore_Water"
+      ]
+    },
+    {
+      "scene_id": "landmark_X",
+      "path": "game/assets/interiors/landmark_X.glb",
+      "bytes": 4311428,
+      "json_chunk_sha256": "7d00db467137dc4d332f50c510d03b7c48ede65a4d7001f5d8cff326c685a476",
+      "nodes": 219,
+      "meshes": 178,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": []
+    },
+    {
+      "scene_id": "landmark_Y",
+      "path": "game/assets/interiors/landmark_Y.glb",
+      "bytes": 5750804,
+      "json_chunk_sha256": "fb61bd6e5eef6ea2617b2efc7b601a3eb9ff9882917230e2fb19ce311e0bf8aa",
+      "nodes": 723,
+      "meshes": 623,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "landmark_Z",
+      "path": "game/assets/interiors/landmark_Z.glb",
+      "bytes": 5060000,
+      "json_chunk_sha256": "e0f34260b30dd5d0a147eb02c4ce4ae26dbd5859fbd964044df8badb1c60c1d0",
+      "nodes": 391,
+      "meshes": 344,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "school",
+      "path": "game/assets/interiors/school.glb",
+      "bytes": 7316360,
+      "json_chunk_sha256": "d93ae8d8019dad39932a5f957b47534d9acf4a7636130f10ac0fb46f2f21ef03",
+      "nodes": 1220,
+      "meshes": 940,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 4,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Boundary_Tree_Crown",
+        "Boundary_Tree_Crown.001",
+        "Boundary_Tree_Crown.002",
+        "Boundary_Tree_Crown.003",
+        "Boundary_Tree_Crown.004",
+        "Boundary_Tree_Crown.005",
+        "Boundary_Tree_Crown.006",
+        "Boundary_Tree_Crown.007",
+        "Boundary_Tree_Crown.008",
+        "Boundary_Tree_Crown.009",
+        "Boundary_Tree_Crown.010",
+        "Boundary_Tree_Crown.011",
+        "Boundary_Tree_Crown.012",
+        "Boundary_Tree_Crown.013",
+        "Boundary_Tree_Crown.014",
+        "Boundary_Tree_Crown.015"
+      ]
+    },
+    {
+      "scene_id": "classroom",
+      "path": "game/assets/interiors/classroom.glb",
+      "bytes": 5441356,
+      "json_chunk_sha256": "ef353b81d4b413fc0d126e8c73a69da3d4449372c272ce342268ede657c105b4",
+      "nodes": 290,
+      "meshes": 245,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Class_Prop_Hat_Crown",
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "music_room",
+      "path": "game/assets/interiors/music_room.glb",
+      "bytes": 5342500,
+      "json_chunk_sha256": "638f367166e4f3c409f17a46484d0e15a48be421fb7b935e63b9e13365d4d7c6",
+      "nodes": 410,
+      "meshes": 376,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "art_room",
+      "path": "game/assets/interiors/art_room.glb",
+      "bytes": 3973588,
+      "json_chunk_sha256": "b42e8bc5b078f82b34bdb653e0a64c9c5002196e14f4f3f7aa54605f4afa728a",
+      "nodes": 319,
+      "meshes": 234,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "science_room",
+      "path": "game/assets/interiors/science_room.glb",
+      "bytes": 5670152,
+      "json_chunk_sha256": "72c5b62428bd9031417ea35c065175773a48da3bd800d7106d0ac360617c7400",
+      "nodes": 356,
+      "meshes": 266,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "canteen",
+      "path": "game/assets/interiors/canteen.glb",
+      "bytes": 5233072,
+      "json_chunk_sha256": "a7469f92cc0d007f152a67e7c10cd0adb1c18b4ad55900ec6cf16836fcd1ae86",
+      "nodes": 421,
+      "meshes": 367,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    },
+    {
+      "scene_id": "playground",
+      "path": "game/assets/interiors/playground.glb",
+      "bytes": 3136392,
+      "json_chunk_sha256": "e9ed356e5023df152c57508f2d641d7735fefa7d9ed250724a6eefa28cfb0d7e",
+      "nodes": 94,
+      "meshes": 81,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Play_Shade_Tree_Crown",
+        "Play_Shade_Tree_Crown.001",
+        "Play_Shade_Tree_Crown.002",
+        "Play_Shade_Tree_Crown.003",
+        "Play_Shade_Tree_Trunk",
+        "SG_COLLIDER_Play_Shade_Tree"
+      ]
+    },
+    {
+      "scene_id": "football_field",
+      "path": "game/assets/interiors/football_field.glb",
+      "bytes": 4580896,
+      "json_chunk_sha256": "7e3ba417f2759b15032994344e41cd3907536cef1629bec6c5cb2d89bd27cbde",
+      "nodes": 418,
+      "meshes": 276,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Football_WaterBottle_Body",
+        "Football_WaterBottle_Body.001",
+        "Football_WaterBottle_Body.002",
+        "Football_WaterBottle_Label",
+        "Football_WaterBottle_Label.001",
+        "Football_WaterBottle_Label.002",
+        "Football_WaterBottle_Lid",
+        "Football_WaterBottle_Lid.001",
+        "Football_WaterBottle_Lid.002"
+      ]
+    },
+    {
+      "scene_id": "home",
+      "path": "game/assets/interiors/home.glb",
+      "bytes": 2393616,
+      "json_chunk_sha256": "79a56e60558fa2fb573c8e882e61ad26f62f484643008fa32880b5f0a34dee6a",
+      "nodes": 460,
+      "meshes": 326,
+      "skins": 0,
+      "animation_clips": 0,
+      "morph_target_primitives": 0,
+      "vertex_color_primitives": 0,
+      "uv2_primitives": 0,
+      "sample_environment_nodes": [
+        "Rear_Crown"
+      ]
+    }
+  ],
+  "totals": {
+    "scenes": 36,
+    "interior_scenes": 35,
+    "glb_animation_clips": 0,
+    "glb_skins": 0,
+    "glb_bytes": 278951572
+  },
+  "observations": [
+    "Current player.gd has procedural limb motion and gestures; GLB clip counts do not measure all game motion.",
+    "world_builder.gd constructs character mesh parts and fixed lighting; NPC label and static obstacle are currently separate siblings.",
+    "COLOR_0 is used as source albedo. Wind masks must not overwrite it.",
+    "Historical v0.3.2 screenshots are art references, not a new capture of v0.4.0."
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": "0.5.0",
+  "built_at": "2026-10-22T18:23:18.667257+08:00",
+  "engine": "Godot 4.7.2",
+  "files": {
+    "AlphabetIsland.exe": {
+      "bytes": 109268480,
+      "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562"
+    },
+    "AlphabetIsland.pck": {
+      "bytes": 313583592,
+      "sha256": "7850e35bb7acfe008835b5541eeab3e28148d9d5b3671bfcb1fb996a74f201e7"
+    }
+  },
+  "content": {
+    "entries": 1314,
+    "lexemes": 1073,
+    "stories": 1096,
+    "books": 8,
+    "units": 81,
+    "icons": 26,
+    "content_revision": "vocabulary-75cc8eb5b90ed004",
+    "codebook_revision": "codebook-7976c505db8c0ea5"
+  },
+  "implemented_mainline": "Home, 26 supported letter encounters, Grade 3 upper Unit 1 steps 01-09",
+  "validation": {
+    "result": "PASS",
+    "unique_quantified_checks": 8958,
+    "checks_by_suite": {
+      "journey_state": 544,
+      "memory_event_sink": 38,
+      "memory_story": 4989,
+      "living_world": 91,
+      "journey_game": 148,
+      "movement": 209,
+      "school_hierarchy": 352,
+      "blender_world": 2240,
+      "ui": 90,
+      "life_ui": 94,
+      "integration": 66,
+      "exported_package": 97
+    },
+    "legacy_state_suite": "PASS, count not emitted",
+    "actual_exported_package": true,
+    "native_captures": 4,
+    "environment_actor_pngs": 50
+  },
+  "limitations": [
+    "81 full narrative chapters not implemented",
+    "Rigid skeletal actor prototypes; final skinning and Mixamo/Tripo assets pending",
+    "Human content and audio review pending",
+    "No learning-effect or cross-device performance claim"
+  ]
+}

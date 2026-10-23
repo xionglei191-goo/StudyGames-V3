@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "created_utc": "2026-10-23T16:02:33.221160+00:00",
+  "scope": "One complete second-level residence and seven third-level rooms; 40 source-backed locations and eight authored three-step household activities. Source/runtime delivery, not a distribution export or learning-efficacy claim.",
+  "reports": {
+    "state-report.json": {
+      "passed": true,
+      "checks": 23,
+      "sha256": "436f74076b7fc4f6b00e70e64ad789f6d49d777eb58bc8ccb37c4c1c3700f975"
+    },
+    "asset-report.json": {
+      "passed": true,
+      "checks": 85,
+      "sha256": "c0c230a09dc08954010f946a58aa84940fab63bfc2147db46bc8c3c9693b6fa0"
+    },
+    "hierarchy-report.json": {
+      "passed": true,
+      "checks": 568,
+      "sha256": "774cc9503ddfc1bab2361b29150619e118d24803b72ff792b592d4dc923f525b"
+    },
+    "movement-report.json": {
+      "passed": true,
+      "checks": 231,
+      "sha256": "a86619b84c710dc09aae20003fe0de2a64d1efce44f1a5eab8832934a46e1225"
+    },
+    "journey-report.json": {
+      "passed": true,
+      "checks": 189,
+      "sha256": "2b80f7575aa684c614cc15069330910644fc12aea5ddb7af4ddbf8b069b861fd"
+    },
+    "native/report.json": {
+      "passed": true,
+      "checks": 61,
+      "sha256": "46d29224e32eee18abab21f18d513808310efcc3b0ef40ee3d1737ad4328c00a"
+    },
+    "friend-compatibility-native/1440x900/report.json": {
+      "passed": true,
+      "checks": 240,
+      "sha256": "c3041c596828f422782ead1ec0c677b4b272618644e2070a71aafbc1025b012a"
+    }
+  },
+  "household_assets": {
+    "home": "436856bb9e2d3810e30be5b41e9bed237699cf6491ad8ee2a573c749fb72b428",
+    "home_balcony": "c55c81ebb4d40ef9ce050dd6cffc1bc597d80068488610ab7678d00a73f63379",
+    "home_bathroom": "58f7db6bffeffd9a119bc705de4d4eec05b3d77b5ccd7d31a9bd30a1c214122e",
+    "home_bedroom": "aa9b8e6d7610350e0fab3ffc7ef74be11a30e439025d7a473c719fba4d825b49",
+    "home_dining": "d17b2bacc9fcd266b37b0909a74503128b012f6f23a5efc951090576e48a1110",
+    "home_estate": "77a965cb1c9a539bc94acabbde4340c8efcc88226b14060381bef46f9c624f1f",
+    "home_kitchen": "f73e988fc03ce5eecbf3bf8b80a8c00ec1134c9248a503e638f0566b480275d4",
+    "home_study": "e07354ad593632de71484be9639b78e506c7bd20da50b793a5f8fb8c103e8607"
+  },
+  "full_game_test_suite_run": false,
+  "original_assets_unchanged": {
+    "protected_assets": {
+      "checked": 196,
+      "changed": []
+    },
+    "textbook_sources": {
+      "checked": 8,
+      "changed": []
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "registry_sha256": "bdba52111f506e0dfcbdf3029f9a4a8ed5386dd3671dc2bd264de4083c80c394",
+  "scope": "curated false-positive checks and explicit noun screening on abstract actions; not exhaustive natural-language validation",
+  "summary": {
+    "stories": 1096,
+    "confirmed_rule_issues": 0,
+    "ambiguous_asset_sense_reviews": 0,
+    "abstract_concrete_candidates": 0,
+    "step_statuses": {
+      "concrete_asset": 2192,
+      "abstract_runtime_text": 3210,
+      "text_surface": 395,
+      "specialized_v2": 21,
+      "location_runtime_text": 297
+    }
+  },
+  "rule_issues": [],
+  "sense_reviews": [],
+  "abstract_concrete_candidates": [],
+  "limits": [
+    "Props are selected from action semantics, not only word class. An abstract vocabulary word may still manipulate a concrete entity.",
+    "Background furniture or weather can be rendered as deliberate scene art; it must not silently be labeled abstract completion.",
+    "The report is a snapshot; rerun after registry rebuild to distinguish fixed issues from stale evidence."
+  ]
+}

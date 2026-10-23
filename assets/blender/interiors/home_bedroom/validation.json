@@ -1,0 +1,294 @@
+{
+  "room_id": "home_bedroom",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "床边与被子",
+      "position_blender": [
+        -4.6,
+        1.2,
+        0.0
+      ],
+      "position_godot": [
+        -4.6,
+        0.0,
+        -1.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bedroom_01",
+      "activity": "把被子铺好，再摆正枕头。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "床头小闹钟",
+      "position_blender": [
+        -1.6,
+        3.4,
+        0.0
+      ],
+      "position_godot": [
+        -1.6,
+        0.0,
+        -3.4
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bedroom_02",
+      "activity": "看一看起床时间，讲讲自己的早晨。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "穿衣镜与衣柜",
+      "position_blender": [
+        4.8,
+        2.8,
+        0.0
+      ],
+      "position_godot": [
+        4.8,
+        0.0,
+        -2.8
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bedroom_03",
+      "activity": "选择今天喜欢的衣服，看看颜色。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "书包收纳凳",
+      "position_blender": [
+        -3.1,
+        -3.3,
+        0.0
+      ],
+      "position_godot": [
+        -3.1,
+        0.0,
+        3.3
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bedroom_04",
+      "activity": "找找铅笔盒，把物品放回书包里。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "床头阅读灯",
+      "position_blender": [
+        3.0,
+        -3.3,
+        0.0
+      ],
+      "position_godot": [
+        3.0,
+        0.0,
+        3.3
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bedroom_05",
+      "activity": "读一会儿书，再去休息；可以睡到游戏中的第二天。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Bedroom_Bed",
+      "aabb_blender": [
+        -6.0,
+        1.7999999523162842,
+        0.0,
+        -3.1999998092651367,
+        5.800000190734863,
+        1.2999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Bedside_Table",
+      "aabb_blender": [
+        -2.3499999046325684,
+        4.5,
+        -0.06000000238418579,
+        -0.8500000238418579,
+        5.5,
+        0.9599999785423279
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Clothes_Wardrobe",
+      "aabb_blender": [
+        3.3500001430511475,
+        4.400000095367432,
+        0.0,
+        6.25,
+        5.599999904632568,
+        2.9000000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Bag_Bench",
+      "aabb_blender": [
+        -6.099999904632568,
+        -4.625,
+        -0.06000000238418579,
+        -3.9000000953674316,
+        -3.9750001430511475,
+        0.6399999856948853
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Bedtime_Chair",
+      "aabb_blender": [
+        3.950000286102295,
+        -4.5,
+        0.0,
+        5.650000095367432,
+        -2.9000000953674316,
+        1.399999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Reading_Side_Table",
+      "aabb_blender": [
+        6.099999904632568,
+        -3.6000001430511475,
+        -0.06000000238418579,
+        6.900000095367432,
+        -2.799999952316284,
+        0.9100000262260437
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 168,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 2060448,
+  "glb_node_count": 183,
+  "triangles_instanced": 54164,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "aa9b8e6d7610350e0fab3ffc7ef74be11a30e439025d7a473c719fba4d825b49",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/home_bedroom/home_bedroom_v01.blend",
+  "source_blend_preserved": false
+}

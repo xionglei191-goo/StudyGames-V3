@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "F:\LoveStudy\scripts\build_home_scenes.py", line 458, in <module>
+    for rid in args or list(BUILDERS):build(rid)
+                                      ~~~~~^^^^^
+  File "F:\LoveStudy\scripts\build_home_scenes.py", line 442, in build
+    BUILDERS[rid]()
+    ~~~~~~~~~~~~~^^
+  File "F:\LoveStudy\scripts\build_home_scenes.py", line 325, in make_living
+    if missing: raise ValueError('Existing home missing palette '+str(missing))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Existing home missing palette ['sage', 'grass', 'water', 'navy', 'white', 'black', 'stone', 'rock', 'purple', 'lavender', 'metal', 'orange']

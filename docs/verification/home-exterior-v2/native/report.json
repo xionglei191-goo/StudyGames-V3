@@ -1,0 +1,1201 @@
+{
+	"captures": [
+		{
+			"id": "home_estate-play",
+			"image": [
+				1440,
+				900
+			],
+			"kind": "production_gameplay_camera_at_courtyard_gate",
+			"panel": "",
+			"room": "home_estate",
+			"window": [
+				1440,
+				900
+			]
+		},
+		{
+			"id": "home_estate-overview",
+			"image": [
+				1440,
+				900
+			],
+			"kind": "native_review_camera_whole_room_hud_hidden",
+			"panel": "",
+			"room": "home_estate",
+			"window": [
+				1440,
+				900
+			]
+		},
+		{
+			"id": "home-estate-map-1440",
+			"image": [
+				1440,
+				900
+			],
+			"kind": "production_exterior_map_single_front_door",
+			"panel": "map",
+			"room": "home_estate",
+			"window": [
+				1440,
+				900
+			]
+		},
+		{
+			"id": "home-estate-front-door",
+			"image": [
+				1440,
+				900
+			],
+			"kind": "production_gameplay_camera_after_actual_front_door_walk",
+			"panel": "",
+			"room": "home_estate",
+			"window": [
+				1440,
+				900
+			]
+		},
+		{
+			"id": "home-entry-1440",
+			"image": [
+				1440,
+				900
+			],
+			"kind": "production_seven_room_entry_panel",
+			"panel": "home_entry",
+			"room": "home_estate",
+			"window": [
+				1440,
+				900
+			]
+		},
+		{
+			"id": "home-entry-960",
+			"image": [
+				960,
+				600
+			],
+			"kind": "production_seven_room_entry_panel_minimum_window",
+			"panel": "home_entry",
+			"room": "home_estate",
+			"window": [
+				960,
+				640
+			]
+		},
+		{
+			"id": "home-balcony-from-entry-960",
+			"image": [
+				960,
+				600
+			],
+			"kind": "production_room_after_small_window_button",
+			"panel": "",
+			"room": "home_balcony",
+			"window": [
+				960,
+				640
+			]
+		},
+		{
+			"id": "home-estate-return-960",
+			"image": [
+				960,
+				600
+			],
+			"kind": "production_gameplay_camera_after_room_return",
+			"panel": "",
+			"room": "home_estate",
+			"window": [
+				960,
+				640
+			]
+		}
+	],
+	"checks": [
+		{
+			"name": "native_renderer",
+			"passed": true
+		},
+		{
+			"name": "walk_village/native_enter_residence/home_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/native_enter_residence/home_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_village/home_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_estate",
+			"passed": true
+		},
+		{
+			"name": "transition_village/home_gate->home_estate",
+			"passed": true
+		},
+		{
+			"name": "capture_saved/home_estate-play",
+			"passed": true
+		},
+		{
+			"name": "capture_saved/home_estate-overview",
+			"passed": true
+		},
+		{
+			"name": "panel_in_viewport/home-estate-map-1440",
+			"passed": true
+		},
+		{
+			"name": "capture_saved/home-estate-map-1440",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/house_entry",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走到正门 · 进屋",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走到正门 · 进屋",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/house_entry",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/home_estate/house_entry",
+			"passed": true
+		},
+		{
+			"name": "capture_saved/home-estate-front-door",
+			"passed": true
+		},
+		{
+			"name": "front_door_opens_entry",
+			"passed": true
+		},
+		{
+			"name": "panel_in_viewport/home-entry-1440",
+			"passed": true
+		},
+		{
+			"name": "capture_saved/home-entry-1440",
+			"passed": true
+		},
+		{
+			"name": "panel_in_viewport/home-entry-960",
+			"passed": true
+		},
+		{
+			"name": "capture_saved/home-entry-960",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/家务阳台\n晾好洗过的小袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/家务阳台\n晾好洗过的小袜子",
+			"passed": true
+		},
+		{
+			"name": "small_window_room_choice",
+			"passed": true
+		},
+		{
+			"name": "capture_saved/home-balcony-from-entry-960",
+			"passed": true
+		},
+		{
+			"name": "walk_home_balcony/native_return_front_door/home_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_balcony/native_return_front_door/home_exit",
+			"passed": true
+		},
+		{
+			"name": "return_from_room",
+			"passed": true
+		},
+		{
+			"name": "return_to_front_door",
+			"passed": true
+		},
+		{
+			"name": "capture_saved/home-estate-return-960",
+			"passed": true
+		},
+		{
+			"name": "production_save_unchanged",
+			"passed": true
+		}
+	],
+	"collisions": [],
+	"failures": [],
+	"native_performance_sample": {
+		"camera": "production_gameplay_at_courtyard_gate",
+		"display": "Windows",
+		"elapsed_seconds": 1.640586,
+		"measured_average_fps": 73.1445958943938,
+		"process_fixed_fps_argument": false,
+		"renderer": "gl_compatibility",
+		"room": "home_estate",
+		"samples": [
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 43.637,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 17.489,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 16.523,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 16.746,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 16.039,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.595,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 15.354,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 14.677,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 15.314,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 15.498,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 15.836,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 14.547,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 16.717,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 15.141,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.803,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 14.654,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 15.506,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 14.993,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.825,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.172,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.152,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.607,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.072,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.608,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.795,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 17.183,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.649,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.71,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 11.919,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.78,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.529,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 14.658,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.707,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.623,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.814,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.153,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 14.627,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.473,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.631,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.249,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.031,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.703,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 15.072,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 18.609,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 15.067,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.875,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.314,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.11,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.29,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 11.96,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.477,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.903,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.742,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.369,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.008,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.608,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.185,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.455,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.021,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 11.786,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.494,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.341,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.426,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 13.183,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.016,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 50.0,
+				"frame_ms": 12.904,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 11.729,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.643,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.914,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.028,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.278,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.562,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.297,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.397,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.486,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 11.74,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.061,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.967,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.291,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.425,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.758,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.728,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.269,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 15.901,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.876,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 14.188,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.872,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.468,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.858,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.821,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 11.87,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.732,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.477,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.721,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.695,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 11.733,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.4,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.876,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 14.825,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.686,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.435,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.743,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.482,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.273,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.801,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 14.967,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.847,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.577,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.82,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.232,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.506,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.401,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.952,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.969,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.416,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.036,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.761,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 13.171,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 12.564,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			},
+			{
+				"draw_calls": 5755.0,
+				"engine_fps": 70.0,
+				"frame_ms": 14.094,
+				"objects": 5806.0,
+				"primitives": 671048.0
+			}
+		],
+		"scope": "Short local native-renderer sample; includes this machine and window settings. Not target-device certification.",
+		"video_adapter": "NVIDIA GeForce RTX 4070",
+		"viewport": [
+			1440,
+			900
+		],
+		"vsync_mode": 1
+	},
+	"passed": true,
+	"planned_routes": [],
+	"production_save_unchanged": true,
+	"renderer": "gl_compatibility",
+	"routes": [
+		{
+			"accepted": true,
+			"allowed_distance": 2.6,
+			"destination": [
+				-3.0,
+				5.77650690078735,
+				18.5
+			],
+			"distance_walked": 4.06331399735063,
+			"finish": [
+				-3.12266421318054,
+				5.59307479858398,
+				18.8775634765625
+			],
+			"interaction_available": true,
+			"label": "native_enter_residence/home_gate",
+			"nearest_interaction": "home_gate",
+			"passed": true,
+			"physics_frames": 55,
+			"remaining_distance": 0.396989524364471,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-6.0,
+				5.55009698867798,
+				21.75
+			],
+			"target_interaction": "home_gate"
+		},
+		{
+			"allowed_distance": 1.5,
+			"destination": [
+				-3.5,
+				0.0,
+				8.69999980926514
+			],
+			"distance_walked": 4.84497996419668,
+			"finish": [
+				-3.42591977119446,
+				-0.0491637848317623,
+				10.0740833282471
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "house_entry",
+			"passed": true,
+			"physics_frames": 58,
+			"remaining_distance": 1.37607896327972,
+			"room": "home_estate",
+			"start": [
+				0.0,
+				-0.0499185100197792,
+				13.5
+			],
+			"target_interaction": "house_entry"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				6.40000009536743
+			],
+			"distance_walked": 0.578700542449951,
+			"finish": [
+				0.0,
+				-0.0491780489683151,
+				5.8341212272644
+			],
+			"interaction_available": true,
+			"label": "native_return_front_door/home_exit",
+			"nearest_interaction": "home_exit",
+			"passed": true,
+			"physics_frames": 14,
+			"remaining_distance": 0.565878868103027,
+			"remaining_waypoints": 0,
+			"room": "home_balcony",
+			"start": [
+				0.0,
+				-0.0500617399811745,
+				5.25
+			],
+			"target_interaction": "home_exit"
+		}
+	],
+	"scope": "Native exterior v2 captures after actual village entry and map-button courtyard walk. Seven-room panel uses production UI. Overview alone uses the same explicit size-44 review camera as v1. Full household navigation/activity coverage is in home-exterior-report.json.",
+	"transitions": [
+		{
+			"from": "village",
+			"interaction": "home_gate",
+			"passed": true,
+			"to": "home_estate"
+		}
+	]
+}

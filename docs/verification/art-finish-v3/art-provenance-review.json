@@ -1,0 +1,4288 @@
+{
+  "status": "PASS",
+  "scope": "Independent read-only provenance, current recorded SHA checks, source action preservation and reviewed 13-19 quantity contracts. No renderer launched.",
+  "registry_sha256": "bdba52111f506e0dfcbdf3029f9a4a8ed5386dd3671dc2bd264de4083c80c394",
+  "manifest_sha256": "b2694692187438c3e2fb068e8f87542e3031f0fa0b8a8a4b4cbc9aebe292f8f2",
+  "summary": {
+    "generated_assets": 182,
+    "reused_assets": 36,
+    "registry_assets": 218,
+    "asset_statuses": {
+      "available": 218
+    },
+    "coverage_entries": 1314,
+    "coverage_statuses": {
+      "covered": 1314
+    },
+    "source_actions_compared": 6115,
+    "step_statuses": {
+      "concrete_asset": 2192,
+      "abstract_runtime_text": 3210,
+      "text_surface": 395,
+      "specialized_v2": 21,
+      "location_runtime_text": 297
+    },
+    "teen_stories_reviewed": 7,
+    "recorded_file_hashes_checked": 141,
+    "errors": 0
+  },
+  "batches": [
+    {
+      "plan": "production_plan.json",
+      "records": "generation_records.json",
+      "planned": 154,
+      "recorded": 154
+    },
+    {
+      "plan": "root_batch_plan.json",
+      "records": "root_generation_records.json",
+      "planned": 25,
+      "recorded": 25
+    },
+    {
+      "plan": "world_extra_plan.json",
+      "records": "world_extra_generation_records.json",
+      "planned": 3,
+      "recorded": 3
+    },
+    {
+      "records": "correction_generation_records.json",
+      "overrides": 2,
+      "ids": [
+        "violin",
+        "horse"
+      ],
+      "merge_order": "applied last"
+    }
+  ],
+  "generated_assets": [
+    {
+      "id": "backpack",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "25e359426a71826f8332cebdb16bd86d4388ab43c550dd6e6cec09e6c6648fd8",
+        "source": "25e359426a71826f8332cebdb16bd86d4388ab43c550dd6e6cec09e6c6648fd8",
+        "runtime": "25e359426a71826f8332cebdb16bd86d4388ab43c550dd6e6cec09e6c6648fd8"
+      },
+      "manifest_sha256": "25e359426a71826f8332cebdb16bd86d4388ab43c550dd6e6cec09e6c6648fd8",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "travel_journal",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "7f9bcb89970b3a25b95780b6d3907d74c0230504af40c29fae44d8220644a060",
+        "source": "7f9bcb89970b3a25b95780b6d3907d74c0230504af40c29fae44d8220644a060",
+        "runtime": "7f9bcb89970b3a25b95780b6d3907d74c0230504af40c29fae44d8220644a060"
+      },
+      "manifest_sha256": "7f9bcb89970b3a25b95780b6d3907d74c0230504af40c29fae44d8220644a060",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "gift_box",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b2271634a81e83e875d1b1631eb9f0962df98bf5065ac92ebcabbd4613377929",
+        "source": "b2271634a81e83e875d1b1631eb9f0962df98bf5065ac92ebcabbd4613377929",
+        "runtime": "b2271634a81e83e875d1b1631eb9f0962df98bf5065ac92ebcabbd4613377929"
+      },
+      "manifest_sha256": "b2271634a81e83e875d1b1631eb9f0962df98bf5065ac92ebcabbd4613377929",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "cup",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "076069697614370f3044223ab7644df59f4c20451bd5616f5f49735c35d05885",
+        "source": "076069697614370f3044223ab7644df59f4c20451bd5616f5f49735c35d05885",
+        "runtime": "076069697614370f3044223ab7644df59f4c20451bd5616f5f49735c35d05885"
+      },
+      "manifest_sha256": "076069697614370f3044223ab7644df59f4c20451bd5616f5f49735c35d05885",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bowl",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "9aab742b69f405566e00e4694a09382e3be7f1c827b2e8f47f992c0042383f25",
+        "source": "9aab742b69f405566e00e4694a09382e3be7f1c827b2e8f47f992c0042383f25",
+        "runtime": "9aab742b69f405566e00e4694a09382e3be7f1c827b2e8f47f992c0042383f25"
+      },
+      "manifest_sha256": "9aab742b69f405566e00e4694a09382e3be7f1c827b2e8f47f992c0042383f25",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "blank_card",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "4d14d21a214786c77c31b63f020de9701625ee3b7161e70b353399c4b6b3cd5b",
+        "source": "4d14d21a214786c77c31b63f020de9701625ee3b7161e70b353399c4b6b3cd5b",
+        "runtime": "4d14d21a214786c77c31b63f020de9701625ee3b7161e70b353399c4b6b3cd5b"
+      },
+      "manifest_sha256": "4d14d21a214786c77c31b63f020de9701625ee3b7161e70b353399c4b6b3cd5b",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "picture_frame",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "3abb5732aabab4fdb9c01a899299d99ba1bfebd839b8070e0827e0a9dd0c2014",
+        "source": "3abb5732aabab4fdb9c01a899299d99ba1bfebd839b8070e0827e0a9dd0c2014",
+        "runtime": "3abb5732aabab4fdb9c01a899299d99ba1bfebd839b8070e0827e0a9dd0c2014"
+      },
+      "manifest_sha256": "3abb5732aabab4fdb9c01a899299d99ba1bfebd839b8070e0827e0a9dd0c2014",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "wooden_box",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "56017dc9c7f5d326097399f2cb5280fe6a3decbf4cbab3f5366bc1211ded2a0f",
+        "source": "56017dc9c7f5d326097399f2cb5280fe6a3decbf4cbab3f5366bc1211ded2a0f",
+        "runtime": "56017dc9c7f5d326097399f2cb5280fe6a3decbf4cbab3f5366bc1211ded2a0f"
+      },
+      "manifest_sha256": "56017dc9c7f5d326097399f2cb5280fe6a3decbf4cbab3f5366bc1211ded2a0f",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "wood_log",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e870b8283538f427ef5ba36bda358b2702a1aa0614e3a7c920dd8992075ad2ba",
+        "source": "e870b8283538f427ef5ba36bda358b2702a1aa0614e3a7c920dd8992075ad2ba",
+        "runtime": "e870b8283538f427ef5ba36bda358b2702a1aa0614e3a7c920dd8992075ad2ba"
+      },
+      "manifest_sha256": "e870b8283538f427ef5ba36bda358b2702a1aa0614e3a7c920dd8992075ad2ba",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "key",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "c2eeeaeb833216b043881c40194df4f16d6a25b3e38d8285378b4cc0e1859a78",
+        "source": "c2eeeaeb833216b043881c40194df4f16d6a25b3e38d8285378b4cc0e1859a78",
+        "runtime": "c2eeeaeb833216b043881c40194df4f16d6a25b3e38d8285378b4cc0e1859a78"
+      },
+      "manifest_sha256": "c2eeeaeb833216b043881c40194df4f16d6a25b3e38d8285378b4cc0e1859a78",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "banana",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "723d671bb53d2cc544b30e25fd897c97a0a061510f1edebefd8a9c299bf324d7",
+        "source": "723d671bb53d2cc544b30e25fd897c97a0a061510f1edebefd8a9c299bf324d7",
+        "runtime": "723d671bb53d2cc544b30e25fd897c97a0a061510f1edebefd8a9c299bf324d7"
+      },
+      "manifest_sha256": "723d671bb53d2cc544b30e25fd897c97a0a061510f1edebefd8a9c299bf324d7",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "lemon",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "6231ffc4531de07df60f9b14956d9c2177ccc31c20c233ee6e2f8e1688a4d99e",
+        "source": "6231ffc4531de07df60f9b14956d9c2177ccc31c20c233ee6e2f8e1688a4d99e",
+        "runtime": "6231ffc4531de07df60f9b14956d9c2177ccc31c20c233ee6e2f8e1688a4d99e"
+      },
+      "manifest_sha256": "6231ffc4531de07df60f9b14956d9c2177ccc31c20c233ee6e2f8e1688a4d99e",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "dog",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "5a0906ae0225ca445cdfd4baa6c5e074448ad4d3c4ee332dc4087fd1107e8652",
+        "source": "5a0906ae0225ca445cdfd4baa6c5e074448ad4d3c4ee332dc4087fd1107e8652",
+        "runtime": "5a0906ae0225ca445cdfd4baa6c5e074448ad4d3c4ee332dc4087fd1107e8652"
+      },
+      "manifest_sha256": "5a0906ae0225ca445cdfd4baa6c5e074448ad4d3c4ee332dc4087fd1107e8652",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "cat",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "48900e3c02a735a6026310387c43e1916b33b7b8f8ba067ea2a12abc1ef31193",
+        "source": "48900e3c02a735a6026310387c43e1916b33b7b8f8ba067ea2a12abc1ef31193",
+        "runtime": "48900e3c02a735a6026310387c43e1916b33b7b8f8ba067ea2a12abc1ef31193"
+      },
+      "manifest_sha256": "48900e3c02a735a6026310387c43e1916b33b7b8f8ba067ea2a12abc1ef31193",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "pencil",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "9b5c458ea6a9e38c62c1331a7d4076c23a5a28ca7480c1afe443d28ac9fa54e6",
+        "source": "9b5c458ea6a9e38c62c1331a7d4076c23a5a28ca7480c1afe443d28ac9fa54e6",
+        "runtime": "9b5c458ea6a9e38c62c1331a7d4076c23a5a28ca7480c1afe443d28ac9fa54e6"
+      },
+      "manifest_sha256": "9b5c458ea6a9e38c62c1331a7d4076c23a5a28ca7480c1afe443d28ac9fa54e6",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "paint_palette",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b2a46db321c70fd6e1bbc3b636976ef219abec332743af8f6c5e8cb31578dc57",
+        "source": "b2a46db321c70fd6e1bbc3b636976ef219abec332743af8f6c5e8cb31578dc57",
+        "runtime": "b2a46db321c70fd6e1bbc3b636976ef219abec332743af8f6c5e8cb31578dc57"
+      },
+      "manifest_sha256": "b2a46db321c70fd6e1bbc3b636976ef219abec332743af8f6c5e8cb31578dc57",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "flower_box",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "122837008e1a619ecc38fe4335541187aa859b18b0f3c86ebef53c64bafe702e",
+        "source": "122837008e1a619ecc38fe4335541187aa859b18b0f3c86ebef53c64bafe702e",
+        "runtime": "122837008e1a619ecc38fe4335541187aa859b18b0f3c86ebef53c64bafe702e"
+      },
+      "manifest_sha256": "122837008e1a619ecc38fe4335541187aa859b18b0f3c86ebef53c64bafe702e",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "folded_map",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "aaceac520542447c58cdf281a3cc6f7395ec7c921059a281fa1d3abc11dc1225",
+        "source": "aaceac520542447c58cdf281a3cc6f7395ec7c921059a281fa1d3abc11dc1225",
+        "runtime": "aaceac520542447c58cdf281a3cc6f7395ec7c921059a281fa1d3abc11dc1225"
+      },
+      "manifest_sha256": "aaceac520542447c58cdf281a3cc6f7395ec7c921059a281fa1d3abc11dc1225",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "picnic_basket",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b23c0ba71857386f8d6545c66f9ff7cef7193cfa783ba805a8673c8fba7e953d",
+        "source": "b23c0ba71857386f8d6545c66f9ff7cef7193cfa783ba805a8673c8fba7e953d",
+        "runtime": "b23c0ba71857386f8d6545c66f9ff7cef7193cfa783ba805a8673c8fba7e953d"
+      },
+      "manifest_sha256": "b23c0ba71857386f8d6545c66f9ff7cef7193cfa783ba805a8673c8fba7e953d",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "shirt",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "85750f61d7de6da30d94e0c8235826e9deb0d93b016bf7da7a009f5f483cc396",
+        "source": "85750f61d7de6da30d94e0c8235826e9deb0d93b016bf7da7a009f5f483cc396",
+        "runtime": "85750f61d7de6da30d94e0c8235826e9deb0d93b016bf7da7a009f5f483cc396"
+      },
+      "manifest_sha256": "85750f61d7de6da30d94e0c8235826e9deb0d93b016bf7da7a009f5f483cc396",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "sun",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "c3e0fa6231c1ac7ddc7f92e0249829312f5cfa63ead45a672c3eaaefb3158dda",
+        "source": "c3e0fa6231c1ac7ddc7f92e0249829312f5cfa63ead45a672c3eaaefb3158dda",
+        "runtime": "c3e0fa6231c1ac7ddc7f92e0249829312f5cfa63ead45a672c3eaaefb3158dda"
+      },
+      "manifest_sha256": "c3e0fa6231c1ac7ddc7f92e0249829312f5cfa63ead45a672c3eaaefb3158dda",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "leaf",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "178553722cd4bcdba5242175462fed6854af6ad48807384ef92eb68c5ce24e5b",
+        "source": "178553722cd4bcdba5242175462fed6854af6ad48807384ef92eb68c5ce24e5b",
+        "runtime": "178553722cd4bcdba5242175462fed6854af6ad48807384ef92eb68c5ce24e5b"
+      },
+      "manifest_sha256": "178553722cd4bcdba5242175462fed6854af6ad48807384ef92eb68c5ce24e5b",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "science_flask",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "d95616a35ac171cc3e5fda41b19c46fb065f3bb070bd3cf822b71f0539806809",
+        "source": "d95616a35ac171cc3e5fda41b19c46fb065f3bb070bd3cf822b71f0539806809",
+        "runtime": "d95616a35ac171cc3e5fda41b19c46fb065f3bb070bd3cf822b71f0539806809"
+      },
+      "manifest_sha256": "d95616a35ac171cc3e5fda41b19c46fb065f3bb070bd3cf822b71f0539806809",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "cottage",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b816dc5a5d43689a49fca02e380a0e62e4b80cafce16f93b089cc86e8fc53ed8",
+        "source": "b816dc5a5d43689a49fca02e380a0e62e4b80cafce16f93b089cc86e8fc53ed8",
+        "runtime": "b816dc5a5d43689a49fca02e380a0e62e4b80cafce16f93b089cc86e8fc53ed8"
+      },
+      "manifest_sha256": "b816dc5a5d43689a49fca02e380a0e62e4b80cafce16f93b089cc86e8fc53ed8",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "chair",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "8d7bf298dccbc871febb7830c3c7446d9bdf42695dbf2ba9913dbb050360840c",
+        "source": "8d7bf298dccbc871febb7830c3c7446d9bdf42695dbf2ba9913dbb050360840c",
+        "runtime": "8d7bf298dccbc871febb7830c3c7446d9bdf42695dbf2ba9913dbb050360840c"
+      },
+      "manifest_sha256": "8d7bf298dccbc871febb7830c3c7446d9bdf42695dbf2ba9913dbb050360840c",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bed",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "368221bda73ec4d95a83e767d4528ca557dee6e2231b7c5ebb123260cdc6e515",
+        "source": "368221bda73ec4d95a83e767d4528ca557dee6e2231b7c5ebb123260cdc6e515",
+        "runtime": "368221bda73ec4d95a83e767d4528ca557dee6e2231b7c5ebb123260cdc6e515"
+      },
+      "manifest_sha256": "368221bda73ec4d95a83e767d4528ca557dee6e2231b7c5ebb123260cdc6e515",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bottle",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "78f2ea837065d43956314571318a451ffa4d534495e2713dc3d1aab65411ff6e",
+        "source": "78f2ea837065d43956314571318a451ffa4d534495e2713dc3d1aab65411ff6e",
+        "runtime": "78f2ea837065d43956314571318a451ffa4d534495e2713dc3d1aab65411ff6e"
+      },
+      "manifest_sha256": "78f2ea837065d43956314571318a451ffa4d534495e2713dc3d1aab65411ff6e",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "clock",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "1e0ffc3294ddb5f526bba7796594bffbf6a3c65fc210238965ec7b50ef7eaf38",
+        "source": "1e0ffc3294ddb5f526bba7796594bffbf6a3c65fc210238965ec7b50ef7eaf38",
+        "runtime": "1e0ffc3294ddb5f526bba7796594bffbf6a3c65fc210238965ec7b50ef7eaf38"
+      },
+      "manifest_sha256": "1e0ffc3294ddb5f526bba7796594bffbf6a3c65fc210238965ec7b50ef7eaf38",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "tree",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "ec0da4a828f21bb88f262582395910df4b60c7e17214353d6773548ecac613e9",
+        "source": "ec0da4a828f21bb88f262582395910df4b60c7e17214353d6773548ecac613e9",
+        "runtime": "ec0da4a828f21bb88f262582395910df4b60c7e17214353d6773548ecac613e9"
+      },
+      "manifest_sha256": "ec0da4a828f21bb88f262582395910df4b60c7e17214353d6773548ecac613e9",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "fish",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "80bae6b3dfd296b1127f35ce220fba4d0ab751821f5af827ed87b3f7a77fa6e7",
+        "source": "80bae6b3dfd296b1127f35ce220fba4d0ab751821f5af827ed87b3f7a77fa6e7",
+        "runtime": "80bae6b3dfd296b1127f35ce220fba4d0ab751821f5af827ed87b3f7a77fa6e7"
+      },
+      "manifest_sha256": "80bae6b3dfd296b1127f35ce220fba4d0ab751821f5af827ed87b3f7a77fa6e7",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "cow",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "13aee19b77d6a61e86eb8b108780a7543907108f94ee46d5fbab1f170b01fef1",
+        "source": "13aee19b77d6a61e86eb8b108780a7543907108f94ee46d5fbab1f170b01fef1",
+        "runtime": "13aee19b77d6a61e86eb8b108780a7543907108f94ee46d5fbab1f170b01fef1"
+      },
+      "manifest_sha256": "13aee19b77d6a61e86eb8b108780a7543907108f94ee46d5fbab1f170b01fef1",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "dinosaur",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "c92b8ca54ce4f7caba047804c58eaf9064ddd43fcfcc2dfa8e73cf67cfd75b2f",
+        "source": "c92b8ca54ce4f7caba047804c58eaf9064ddd43fcfcc2dfa8e73cf67cfd75b2f",
+        "runtime": "c92b8ca54ce4f7caba047804c58eaf9064ddd43fcfcc2dfa8e73cf67cfd75b2f"
+      },
+      "manifest_sha256": "c92b8ca54ce4f7caba047804c58eaf9064ddd43fcfcc2dfa8e73cf67cfd75b2f",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "duck",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "2254537ceb51bf5eb4c68913c8aa05efb5e1c9ee8a6d704dde851594650eb6a1",
+        "source": "2254537ceb51bf5eb4c68913c8aa05efb5e1c9ee8a6d704dde851594650eb6a1",
+        "runtime": "2254537ceb51bf5eb4c68913c8aa05efb5e1c9ee8a6d704dde851594650eb6a1"
+      },
+      "manifest_sha256": "2254537ceb51bf5eb4c68913c8aa05efb5e1c9ee8a6d704dde851594650eb6a1",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "goose",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "62a21846cda5d562247e1686495e99c7b4bfaa47df11a14edb078a7f6106f3a0",
+        "source": "62a21846cda5d562247e1686495e99c7b4bfaa47df11a14edb078a7f6106f3a0",
+        "runtime": "62a21846cda5d562247e1686495e99c7b4bfaa47df11a14edb078a7f6106f3a0"
+      },
+      "manifest_sha256": "62a21846cda5d562247e1686495e99c7b4bfaa47df11a14edb078a7f6106f3a0",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "horse",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "46cfc10e6b3b1231721fbdf98694b16aaa8b4c02052e4bee7b83c5aa428dbcd3",
+        "source": "46cfc10e6b3b1231721fbdf98694b16aaa8b4c02052e4bee7b83c5aa428dbcd3",
+        "runtime": "46cfc10e6b3b1231721fbdf98694b16aaa8b4c02052e4bee7b83c5aa428dbcd3"
+      },
+      "manifest_sha256": "46cfc10e6b3b1231721fbdf98694b16aaa8b4c02052e4bee7b83c5aa428dbcd3",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "pig",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "50b348729e5831a254d204fbdc08b0ef0ed7d8228f355eb3dd5e6444655e0f1f",
+        "source": "50b348729e5831a254d204fbdc08b0ef0ed7d8228f355eb3dd5e6444655e0f1f",
+        "runtime": "50b348729e5831a254d204fbdc08b0ef0ed7d8228f355eb3dd5e6444655e0f1f"
+      },
+      "manifest_sha256": "50b348729e5831a254d204fbdc08b0ef0ed7d8228f355eb3dd5e6444655e0f1f",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "sheep",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "04482886fa8ed36b40ebb2e15eed77f4a15070cdbc91d20afa2368eb3659b2ad",
+        "source": "04482886fa8ed36b40ebb2e15eed77f4a15070cdbc91d20afa2368eb3659b2ad",
+        "runtime": "04482886fa8ed36b40ebb2e15eed77f4a15070cdbc91d20afa2368eb3659b2ad"
+      },
+      "manifest_sha256": "04482886fa8ed36b40ebb2e15eed77f4a15070cdbc91d20afa2368eb3659b2ad",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "swan",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "2362a2dcdd0e14063448aa25eb634516dab257449cb99b244f8e5842be9d7e50",
+        "source": "2362a2dcdd0e14063448aa25eb634516dab257449cb99b244f8e5842be9d7e50",
+        "runtime": "2362a2dcdd0e14063448aa25eb634516dab257449cb99b244f8e5842be9d7e50"
+      },
+      "manifest_sha256": "2362a2dcdd0e14063448aa25eb634516dab257449cb99b244f8e5842be9d7e50",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bear",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b5cbbf3566788ad8150a44d569ca6316f278f7e1d1615ebf7aec8163f538e36d",
+        "source": "b5cbbf3566788ad8150a44d569ca6316f278f7e1d1615ebf7aec8163f538e36d",
+        "runtime": "b5cbbf3566788ad8150a44d569ca6316f278f7e1d1615ebf7aec8163f538e36d"
+      },
+      "manifest_sha256": "b5cbbf3566788ad8150a44d569ca6316f278f7e1d1615ebf7aec8163f538e36d",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bee",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "75ce97a1e1a709347b4efc8f124ca9f3ad7cfd0869bf19ae8f532194c67b8bfc",
+        "source": "75ce97a1e1a709347b4efc8f124ca9f3ad7cfd0869bf19ae8f532194c67b8bfc",
+        "runtime": "75ce97a1e1a709347b4efc8f124ca9f3ad7cfd0869bf19ae8f532194c67b8bfc"
+      },
+      "manifest_sha256": "75ce97a1e1a709347b4efc8f124ca9f3ad7cfd0869bf19ae8f532194c67b8bfc",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "elephant",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "24ce31f4a53ec26d2f1fa30da5dfcb5c7aa7f09f502fc7521d3eeca6d4b095e7",
+        "source": "24ce31f4a53ec26d2f1fa30da5dfcb5c7aa7f09f502fc7521d3eeca6d4b095e7",
+        "runtime": "24ce31f4a53ec26d2f1fa30da5dfcb5c7aa7f09f502fc7521d3eeca6d4b095e7"
+      },
+      "manifest_sha256": "24ce31f4a53ec26d2f1fa30da5dfcb5c7aa7f09f502fc7521d3eeca6d4b095e7",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "kangaroo",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "a391db9f836c33fc9bb541f78751ee8701a7ae75f5a3db5cd6f25d48e3b864cb",
+        "source": "a391db9f836c33fc9bb541f78751ee8701a7ae75f5a3db5cd6f25d48e3b864cb",
+        "runtime": "a391db9f836c33fc9bb541f78751ee8701a7ae75f5a3db5cd6f25d48e3b864cb"
+      },
+      "manifest_sha256": "a391db9f836c33fc9bb541f78751ee8701a7ae75f5a3db5cd6f25d48e3b864cb",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "lion",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "08f1153848cc4d860d9485fa4a618a0c41cc3b116d6bfc78f275ce93f7029e67",
+        "source": "08f1153848cc4d860d9485fa4a618a0c41cc3b116d6bfc78f275ce93f7029e67",
+        "runtime": "08f1153848cc4d860d9485fa4a618a0c41cc3b116d6bfc78f275ce93f7029e67"
+      },
+      "manifest_sha256": "08f1153848cc4d860d9485fa4a618a0c41cc3b116d6bfc78f275ce93f7029e67",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "monkey",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "4f022cca15bb2614fa04ed765f2c2b9c7e836a324807e21b74f6e62505e3def2",
+        "source": "4f022cca15bb2614fa04ed765f2c2b9c7e836a324807e21b74f6e62505e3def2",
+        "runtime": "4f022cca15bb2614fa04ed765f2c2b9c7e836a324807e21b74f6e62505e3def2"
+      },
+      "manifest_sha256": "4f022cca15bb2614fa04ed765f2c2b9c7e836a324807e21b74f6e62505e3def2",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "panda",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "12ec51e7c8ead3bde4d9e8fbd409a3660939aa142d7d87ea626ec5bedbf581e4",
+        "source": "12ec51e7c8ead3bde4d9e8fbd409a3660939aa142d7d87ea626ec5bedbf581e4",
+        "runtime": "12ec51e7c8ead3bde4d9e8fbd409a3660939aa142d7d87ea626ec5bedbf581e4"
+      },
+      "manifest_sha256": "12ec51e7c8ead3bde4d9e8fbd409a3660939aa142d7d87ea626ec5bedbf581e4",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "rabbit",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "20d63778ee7a90a53c63f624079c4d6e457960496b9730c6fad822b9ea68d572",
+        "source": "20d63778ee7a90a53c63f624079c4d6e457960496b9730c6fad822b9ea68d572",
+        "runtime": "20d63778ee7a90a53c63f624079c4d6e457960496b9730c6fad822b9ea68d572"
+      },
+      "manifest_sha256": "20d63778ee7a90a53c63f624079c4d6e457960496b9730c6fad822b9ea68d572",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "tiger",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "04e78642e5a5038e0ac2e5fd02b8112c7acf6e8f76d7a1a4716ea89dbcb91a22",
+        "source": "04e78642e5a5038e0ac2e5fd02b8112c7acf6e8f76d7a1a4716ea89dbcb91a22",
+        "runtime": "04e78642e5a5038e0ac2e5fd02b8112c7acf6e8f76d7a1a4716ea89dbcb91a22"
+      },
+      "manifest_sha256": "04e78642e5a5038e0ac2e5fd02b8112c7acf6e8f76d7a1a4716ea89dbcb91a22",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "parrot",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "5ae590a14a9457532c649dd16cc3f4c58f69ba22bafa03ed9cb712b454b34c0c",
+        "source": "5ae590a14a9457532c649dd16cc3f4c58f69ba22bafa03ed9cb712b454b34c0c",
+        "runtime": "5ae590a14a9457532c649dd16cc3f4c58f69ba22bafa03ed9cb712b454b34c0c"
+      },
+      "manifest_sha256": "5ae590a14a9457532c649dd16cc3f4c58f69ba22bafa03ed9cb712b454b34c0c",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "chicken",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "d49bc4109fb988acc8a433e16be0837c9de36bbce7355ea04b6197a75f7c53cf",
+        "source": "d49bc4109fb988acc8a433e16be0837c9de36bbce7355ea04b6197a75f7c53cf",
+        "runtime": "d49bc4109fb988acc8a433e16be0837c9de36bbce7355ea04b6197a75f7c53cf"
+      },
+      "manifest_sha256": "d49bc4109fb988acc8a433e16be0837c9de36bbce7355ea04b6197a75f7c53cf",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "ant",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "d203d6e4d7fc0c0e1738980e6a89ab0b3c9a06a213623732bc6b4eb0f4ec0205",
+        "source": "d203d6e4d7fc0c0e1738980e6a89ab0b3c9a06a213623732bc6b4eb0f4ec0205",
+        "runtime": "d203d6e4d7fc0c0e1738980e6a89ab0b3c9a06a213623732bc6b4eb0f4ec0205"
+      },
+      "manifest_sha256": "d203d6e4d7fc0c0e1738980e6a89ab0b3c9a06a213623732bc6b4eb0f4ec0205",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "pear",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e4a47286a9fda3e49af5e2401e945cab3f0674895e4ae5d8338a57eac0015aba",
+        "source": "e4a47286a9fda3e49af5e2401e945cab3f0674895e4ae5d8338a57eac0015aba",
+        "runtime": "e4a47286a9fda3e49af5e2401e945cab3f0674895e4ae5d8338a57eac0015aba"
+      },
+      "manifest_sha256": "e4a47286a9fda3e49af5e2401e945cab3f0674895e4ae5d8338a57eac0015aba",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "orange",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e2d880f2a0605e67738d017ba0e98f0349700dcbb1851123f52aa0d45885d104",
+        "source": "e2d880f2a0605e67738d017ba0e98f0349700dcbb1851123f52aa0d45885d104",
+        "runtime": "e2d880f2a0605e67738d017ba0e98f0349700dcbb1851123f52aa0d45885d104"
+      },
+      "manifest_sha256": "e2d880f2a0605e67738d017ba0e98f0349700dcbb1851123f52aa0d45885d104",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "watermelon",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e15d0fd03d9436d63144b1e6218d5b58d721a30068de879f01f5af5a46842ff8",
+        "source": "e15d0fd03d9436d63144b1e6218d5b58d721a30068de879f01f5af5a46842ff8",
+        "runtime": "e15d0fd03d9436d63144b1e6218d5b58d721a30068de879f01f5af5a46842ff8"
+      },
+      "manifest_sha256": "e15d0fd03d9436d63144b1e6218d5b58d721a30068de879f01f5af5a46842ff8",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "grapes",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "9b64b2db25d45e31d880f15ccd6de4b1680fdf3a867228b38913b6a3ec47656f",
+        "source": "9b64b2db25d45e31d880f15ccd6de4b1680fdf3a867228b38913b6a3ec47656f",
+        "runtime": "9b64b2db25d45e31d880f15ccd6de4b1680fdf3a867228b38913b6a3ec47656f"
+      },
+      "manifest_sha256": "9b64b2db25d45e31d880f15ccd6de4b1680fdf3a867228b38913b6a3ec47656f",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "carrot",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e0b6aaedbd03947a4e2cd63483bd2f3db86a71665bab603b79f9695d58bdb465",
+        "source": "e0b6aaedbd03947a4e2cd63483bd2f3db86a71665bab603b79f9695d58bdb465",
+        "runtime": "e0b6aaedbd03947a4e2cd63483bd2f3db86a71665bab603b79f9695d58bdb465"
+      },
+      "manifest_sha256": "e0b6aaedbd03947a4e2cd63483bd2f3db86a71665bab603b79f9695d58bdb465",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "potato",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "d0b32769d1068a8bb082f0cd25d90c2f92ed7eb248c536927a8c51d4a49ea83e",
+        "source": "d0b32769d1068a8bb082f0cd25d90c2f92ed7eb248c536927a8c51d4a49ea83e",
+        "runtime": "d0b32769d1068a8bb082f0cd25d90c2f92ed7eb248c536927a8c51d4a49ea83e"
+      },
+      "manifest_sha256": "d0b32769d1068a8bb082f0cd25d90c2f92ed7eb248c536927a8c51d4a49ea83e",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "strawberry",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "31afdfb3e3a18a6e28c334e23db1d4f55cbbf75cef507305bb438d7012ffe267",
+        "source": "31afdfb3e3a18a6e28c334e23db1d4f55cbbf75cef507305bb438d7012ffe267",
+        "runtime": "31afdfb3e3a18a6e28c334e23db1d4f55cbbf75cef507305bb438d7012ffe267"
+      },
+      "manifest_sha256": "31afdfb3e3a18a6e28c334e23db1d4f55cbbf75cef507305bb438d7012ffe267",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "tomato",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b89b7b6408fd3238e5842c71fc300ee7a5e8f55767070ab48cf9da1d96a90742",
+        "source": "b89b7b6408fd3238e5842c71fc300ee7a5e8f55767070ab48cf9da1d96a90742",
+        "runtime": "b89b7b6408fd3238e5842c71fc300ee7a5e8f55767070ab48cf9da1d96a90742"
+      },
+      "manifest_sha256": "b89b7b6408fd3238e5842c71fc300ee7a5e8f55767070ab48cf9da1d96a90742",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bread",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "31477e5c0b0c75b71ba67060de7abef4feb0d5a54e6fd61a519ab2a9b000830f",
+        "source": "31477e5c0b0c75b71ba67060de7abef4feb0d5a54e6fd61a519ab2a9b000830f",
+        "runtime": "31477e5c0b0c75b71ba67060de7abef4feb0d5a54e6fd61a519ab2a9b000830f"
+      },
+      "manifest_sha256": "31477e5c0b0c75b71ba67060de7abef4feb0d5a54e6fd61a519ab2a9b000830f",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "rice_bowl",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "8ed79dea2f3f768cd4c40d4f64fd89088da2e72456b6f6798db58592a7846aa3",
+        "source": "8ed79dea2f3f768cd4c40d4f64fd89088da2e72456b6f6798db58592a7846aa3",
+        "runtime": "8ed79dea2f3f768cd4c40d4f64fd89088da2e72456b6f6798db58592a7846aa3"
+      },
+      "manifest_sha256": "8ed79dea2f3f768cd4c40d4f64fd89088da2e72456b6f6798db58592a7846aa3",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "dumpling",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "ce923c40ba7e7661fe040de7160c9b0cb52dd3c6a3e261595047f18da4e91951",
+        "source": "ce923c40ba7e7661fe040de7160c9b0cb52dd3c6a3e261595047f18da4e91951",
+        "runtime": "ce923c40ba7e7661fe040de7160c9b0cb52dd3c6a3e261595047f18da4e91951"
+      },
+      "manifest_sha256": "ce923c40ba7e7661fe040de7160c9b0cb52dd3c6a3e261595047f18da4e91951",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "hamburger",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "242b2156e2a8224b1dcfeeaff5e1ffb1279e7332b8b54f18a3d7ba39e5b5f54c",
+        "source": "242b2156e2a8224b1dcfeeaff5e1ffb1279e7332b8b54f18a3d7ba39e5b5f54c",
+        "runtime": "242b2156e2a8224b1dcfeeaff5e1ffb1279e7332b8b54f18a3d7ba39e5b5f54c"
+      },
+      "manifest_sha256": "242b2156e2a8224b1dcfeeaff5e1ffb1279e7332b8b54f18a3d7ba39e5b5f54c",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "sandwich",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "6ec044fcd19025320f4487c1fbe15d459bafef626d692a81ac2db86fc803632d",
+        "source": "6ec044fcd19025320f4487c1fbe15d459bafef626d692a81ac2db86fc803632d",
+        "runtime": "6ec044fcd19025320f4487c1fbe15d459bafef626d692a81ac2db86fc803632d"
+      },
+      "manifest_sha256": "6ec044fcd19025320f4487c1fbe15d459bafef626d692a81ac2db86fc803632d",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "meat_plate",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e87443757dba4d20959fb2614234dfe07eab37a697d686cbf782590e6a7732b7",
+        "source": "e87443757dba4d20959fb2614234dfe07eab37a697d686cbf782590e6a7732b7",
+        "runtime": "e87443757dba4d20959fb2614234dfe07eab37a697d686cbf782590e6a7732b7"
+      },
+      "manifest_sha256": "e87443757dba4d20959fb2614234dfe07eab37a697d686cbf782590e6a7732b7",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "candy",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "11842eb54ce46a6222a019d6dbdcb2f340bf92be6c0950df4ecbda5e9be7b0d3",
+        "source": "11842eb54ce46a6222a019d6dbdcb2f340bf92be6c0950df4ecbda5e9be7b0d3",
+        "runtime": "11842eb54ce46a6222a019d6dbdcb2f340bf92be6c0950df4ecbda5e9be7b0d3"
+      },
+      "manifest_sha256": "11842eb54ce46a6222a019d6dbdcb2f340bf92be6c0950df4ecbda5e9be7b0d3",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "biscuit",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "f9a77cf770a23b518d54307f723f4138646da405e3f5ac3ff2d42bd7a8d1ec74",
+        "source": "f9a77cf770a23b518d54307f723f4138646da405e3f5ac3ff2d42bd7a8d1ec74",
+        "runtime": "f9a77cf770a23b518d54307f723f4138646da405e3f5ac3ff2d42bd7a8d1ec74"
+      },
+      "manifest_sha256": "f9a77cf770a23b518d54307f723f4138646da405e3f5ac3ff2d42bd7a8d1ec74",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "chocolate",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "4fa7e96f04f206a2708d7a716e6c2031f289fd60d9a5d5e12e032b0fff0dd4a6",
+        "source": "4fa7e96f04f206a2708d7a716e6c2031f289fd60d9a5d5e12e032b0fff0dd4a6",
+        "runtime": "4fa7e96f04f206a2708d7a716e6c2031f289fd60d9a5d5e12e032b0fff0dd4a6"
+      },
+      "manifest_sha256": "4fa7e96f04f206a2708d7a716e6c2031f289fd60d9a5d5e12e032b0fff0dd4a6",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "pudding",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "f8ab106d9879893a96a81d962348b23a204b7e4c79ee1966988a1245311f2fea",
+        "source": "f8ab106d9879893a96a81d962348b23a204b7e4c79ee1966988a1245311f2fea",
+        "runtime": "f8ab106d9879893a96a81d962348b23a204b7e4c79ee1966988a1245311f2fea"
+      },
+      "manifest_sha256": "f8ab106d9879893a96a81d962348b23a204b7e4c79ee1966988a1245311f2fea",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "milk_carton",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "53e530f1848466fb72554b91804a5a3d8978e82af12a2522b9f056152c52dcf6",
+        "source": "53e530f1848466fb72554b91804a5a3d8978e82af12a2522b9f056152c52dcf6",
+        "runtime": "53e530f1848466fb72554b91804a5a3d8978e82af12a2522b9f056152c52dcf6"
+      },
+      "manifest_sha256": "53e530f1848466fb72554b91804a5a3d8978e82af12a2522b9f056152c52dcf6",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "mooncake",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "8729d7c4836cf54c38788cea2f98e0af6e78efc0d2368859f0ad9e189769a4bc",
+        "source": "8729d7c4836cf54c38788cea2f98e0af6e78efc0d2368859f0ad9e189769a4bc",
+        "runtime": "8729d7c4836cf54c38788cea2f98e0af6e78efc0d2368859f0ad9e189769a4bc"
+      },
+      "manifest_sha256": "8729d7c4836cf54c38788cea2f98e0af6e78efc0d2368859f0ad9e189769a4bc",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "shirt_button",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b37ae76d1f9890936ec8af19489ec4adf323f84b18f42f9d48ca26da74f8dc8c",
+        "source": "b37ae76d1f9890936ec8af19489ec4adf323f84b18f42f9d48ca26da74f8dc8c",
+        "runtime": "b37ae76d1f9890936ec8af19489ec4adf323f84b18f42f9d48ca26da74f8dc8c"
+      },
+      "manifest_sha256": "b37ae76d1f9890936ec8af19489ec4adf323f84b18f42f9d48ca26da74f8dc8c",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "coat",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "8afee66bc8ce9997a799fd6308aeafe5920ca3a23421c531ba20c0c2c17aab08",
+        "source": "8afee66bc8ce9997a799fd6308aeafe5920ca3a23421c531ba20c0c2c17aab08",
+        "runtime": "8afee66bc8ce9997a799fd6308aeafe5920ca3a23421c531ba20c0c2c17aab08"
+      },
+      "manifest_sha256": "8afee66bc8ce9997a799fd6308aeafe5920ca3a23421c531ba20c0c2c17aab08",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "dress",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "2b33ac5947e4ffca6ca0c149b6b79772ca9faf09b2d0cd08b141bc3e0186061d",
+        "source": "2b33ac5947e4ffca6ca0c149b6b79772ca9faf09b2d0cd08b141bc3e0186061d",
+        "runtime": "2b33ac5947e4ffca6ca0c149b6b79772ca9faf09b2d0cd08b141bc3e0186061d"
+      },
+      "manifest_sha256": "2b33ac5947e4ffca6ca0c149b6b79772ca9faf09b2d0cd08b141bc3e0186061d",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "shorts",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b6b37de8501ca20138af45cd104c81d8105b039bd32a0a7cb3e89404142e8660",
+        "source": "b6b37de8501ca20138af45cd104c81d8105b039bd32a0a7cb3e89404142e8660",
+        "runtime": "b6b37de8501ca20138af45cd104c81d8105b039bd32a0a7cb3e89404142e8660"
+      },
+      "manifest_sha256": "b6b37de8501ca20138af45cd104c81d8105b039bd32a0a7cb3e89404142e8660",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "skirt",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "8502cc88201108d440111f4b3fd95fe6d10b92c7f6f87eb3af902a4379c8242e",
+        "source": "8502cc88201108d440111f4b3fd95fe6d10b92c7f6f87eb3af902a4379c8242e",
+        "runtime": "8502cc88201108d440111f4b3fd95fe6d10b92c7f6f87eb3af902a4379c8242e"
+      },
+      "manifest_sha256": "8502cc88201108d440111f4b3fd95fe6d10b92c7f6f87eb3af902a4379c8242e",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "trousers",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "15064b5bf7164c610de6610d29a317de40a660f07bbb3538c6a3a7388206f984",
+        "source": "15064b5bf7164c610de6610d29a317de40a660f07bbb3538c6a3a7388206f984",
+        "runtime": "15064b5bf7164c610de6610d29a317de40a660f07bbb3538c6a3a7388206f984"
+      },
+      "manifest_sha256": "15064b5bf7164c610de6610d29a317de40a660f07bbb3538c6a3a7388206f984",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "sweater",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "0acc0f0626070fa8e2ac330ecabf6bb07b4fa67e0ed6c0e10f208b146b760bf8",
+        "source": "0acc0f0626070fa8e2ac330ecabf6bb07b4fa67e0ed6c0e10f208b146b760bf8",
+        "runtime": "0acc0f0626070fa8e2ac330ecabf6bb07b4fa67e0ed6c0e10f208b146b760bf8"
+      },
+      "manifest_sha256": "0acc0f0626070fa8e2ac330ecabf6bb07b4fa67e0ed6c0e10f208b146b760bf8",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "scarf",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "adc36912b6b0a21c632cf7c8aade05d566305bdeea6be63ec03a6e00718a6f19",
+        "source": "adc36912b6b0a21c632cf7c8aade05d566305bdeea6be63ec03a6e00718a6f19",
+        "runtime": "adc36912b6b0a21c632cf7c8aade05d566305bdeea6be63ec03a6e00718a6f19"
+      },
+      "manifest_sha256": "adc36912b6b0a21c632cf7c8aade05d566305bdeea6be63ec03a6e00718a6f19",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "shoe",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "4deae4e65db7776e357fcde13437d62c3de4c0d44910c0e121921a83bf6bffe4",
+        "source": "4deae4e65db7776e357fcde13437d62c3de4c0d44910c0e121921a83bf6bffe4",
+        "runtime": "4deae4e65db7776e357fcde13437d62c3de4c0d44910c0e121921a83bf6bffe4"
+      },
+      "manifest_sha256": "4deae4e65db7776e357fcde13437d62c3de4c0d44910c0e121921a83bf6bffe4",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "sock",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "5016cd652223bc8de50d3ee8b1ef892f58f5abd5cc3bae237fc44962ebfe6559",
+        "source": "5016cd652223bc8de50d3ee8b1ef892f58f5abd5cc3bae237fc44962ebfe6559",
+        "runtime": "5016cd652223bc8de50d3ee8b1ef892f58f5abd5cc3bae237fc44962ebfe6559"
+      },
+      "manifest_sha256": "5016cd652223bc8de50d3ee8b1ef892f58f5abd5cc3bae237fc44962ebfe6559",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bicycle",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "74a478a75e7a608686c86247ceeaec530b140458f26e5d480751f73d8e3509a4",
+        "source": "74a478a75e7a608686c86247ceeaec530b140458f26e5d480751f73d8e3509a4",
+        "runtime": "74a478a75e7a608686c86247ceeaec530b140458f26e5d480751f73d8e3509a4"
+      },
+      "manifest_sha256": "74a478a75e7a608686c86247ceeaec530b140458f26e5d480751f73d8e3509a4",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bus",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "aabaca5d8097fe8174beaa5c42a5ce141919973d31c64e33c07783239a0aa105",
+        "source": "aabaca5d8097fe8174beaa5c42a5ce141919973d31c64e33c07783239a0aa105",
+        "runtime": "aabaca5d8097fe8174beaa5c42a5ce141919973d31c64e33c07783239a0aa105"
+      },
+      "manifest_sha256": "aabaca5d8097fe8174beaa5c42a5ce141919973d31c64e33c07783239a0aa105",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "car",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "8f7c6933764e7b12ba9dcc29cabb605f0948455084b768d208e222145098b908",
+        "source": "8f7c6933764e7b12ba9dcc29cabb605f0948455084b768d208e222145098b908",
+        "runtime": "8f7c6933764e7b12ba9dcc29cabb605f0948455084b768d208e222145098b908"
+      },
+      "manifest_sha256": "8f7c6933764e7b12ba9dcc29cabb605f0948455084b768d208e222145098b908",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "airplane",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "51b080ebb8ed2ded4b6dedb1afb94b6eb6327ba902b4b03a0fdaa65ed7b40313",
+        "source": "51b080ebb8ed2ded4b6dedb1afb94b6eb6327ba902b4b03a0fdaa65ed7b40313",
+        "runtime": "51b080ebb8ed2ded4b6dedb1afb94b6eb6327ba902b4b03a0fdaa65ed7b40313"
+      },
+      "manifest_sha256": "51b080ebb8ed2ded4b6dedb1afb94b6eb6327ba902b4b03a0fdaa65ed7b40313",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "camera",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "30a8b10e7999affbd7fdb9a22bc3567bb8a7e0526777a586e174e95f32f40d92",
+        "source": "30a8b10e7999affbd7fdb9a22bc3567bb8a7e0526777a586e174e95f32f40d92",
+        "runtime": "30a8b10e7999affbd7fdb9a22bc3567bb8a7e0526777a586e174e95f32f40d92"
+      },
+      "manifest_sha256": "30a8b10e7999affbd7fdb9a22bc3567bb8a7e0526777a586e174e95f32f40d92",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "computer",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "f9326187ea492b7d74625d8d939ea399a912ee30acc6d84bb2a4cab67ab232cd",
+        "source": "f9326187ea492b7d74625d8d939ea399a912ee30acc6d84bb2a4cab67ab232cd",
+        "runtime": "f9326187ea492b7d74625d8d939ea399a912ee30acc6d84bb2a4cab67ab232cd"
+      },
+      "manifest_sha256": "f9326187ea492b7d74625d8d939ea399a912ee30acc6d84bb2a4cab67ab232cd",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "phone",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "29108f43aac0306d706c56f35909d8f082edeae8902d2fa8f78a15ba2b82817c",
+        "source": "29108f43aac0306d706c56f35909d8f082edeae8902d2fa8f78a15ba2b82817c",
+        "runtime": "29108f43aac0306d706c56f35909d8f082edeae8902d2fa8f78a15ba2b82817c"
+      },
+      "manifest_sha256": "29108f43aac0306d706c56f35909d8f082edeae8902d2fa8f78a15ba2b82817c",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "piano",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "c0be2ca97c905c2b7a820e1ec06f118deb3aba653f0980592c1c5eff21831b0e",
+        "source": "c0be2ca97c905c2b7a820e1ec06f118deb3aba653f0980592c1c5eff21831b0e",
+        "runtime": "c0be2ca97c905c2b7a820e1ec06f118deb3aba653f0980592c1c5eff21831b0e"
+      },
+      "manifest_sha256": "c0be2ca97c905c2b7a820e1ec06f118deb3aba653f0980592c1c5eff21831b0e",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "violin",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {
+        "strings": 4
+      },
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b942c04a2a8890d85840be64ad9d0e75108a5af788465aff101a4a2385665114",
+        "source": "b942c04a2a8890d85840be64ad9d0e75108a5af788465aff101a4a2385665114",
+        "runtime": "b942c04a2a8890d85840be64ad9d0e75108a5af788465aff101a4a2385665114"
+      },
+      "manifest_sha256": "b942c04a2a8890d85840be64ad9d0e75108a5af788465aff101a4a2385665114",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "spoon",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e207e4337c8ea49f19a7507cb8d36d3e006aa0b3a03f4eb8fc291cacd05eea33",
+        "source": "e207e4337c8ea49f19a7507cb8d36d3e006aa0b3a03f4eb8fc291cacd05eea33",
+        "runtime": "e207e4337c8ea49f19a7507cb8d36d3e006aa0b3a03f4eb8fc291cacd05eea33"
+      },
+      "manifest_sha256": "e207e4337c8ea49f19a7507cb8d36d3e006aa0b3a03f4eb8fc291cacd05eea33",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "plate",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "22272100ec1a31379d2ac38508831998961aa5543714492ce587f3cdb0276bf3",
+        "source": "22272100ec1a31379d2ac38508831998961aa5543714492ce587f3cdb0276bf3",
+        "runtime": "22272100ec1a31379d2ac38508831998961aa5543714492ce587f3cdb0276bf3"
+      },
+      "manifest_sha256": "22272100ec1a31379d2ac38508831998961aa5543714492ce587f3cdb0276bf3",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "eraser",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "181f381adb433f4d006aa69513ffd8402c9f588ebf7a2ae07a31a45f64c26abb",
+        "source": "181f381adb433f4d006aa69513ffd8402c9f588ebf7a2ae07a31a45f64c26abb",
+        "runtime": "181f381adb433f4d006aa69513ffd8402c9f588ebf7a2ae07a31a45f64c26abb"
+      },
+      "manifest_sha256": "181f381adb433f4d006aa69513ffd8402c9f588ebf7a2ae07a31a45f64c26abb",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "ruler",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "ea461b7719356aa56d967759d371f9e88a6712dd9d2135faaaaef169650c5bf1",
+        "source": "ea461b7719356aa56d967759d371f9e88a6712dd9d2135faaaaef169650c5bf1",
+        "runtime": "ea461b7719356aa56d967759d371f9e88a6712dd9d2135faaaaef169650c5bf1"
+      },
+      "manifest_sha256": "ea461b7719356aa56d967759d371f9e88a6712dd9d2135faaaaef169650c5bf1",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "glue",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "838e1947f1acef0511849575bfc6716753a5231433992c54ef68f7313404fe65",
+        "source": "838e1947f1acef0511849575bfc6716753a5231433992c54ef68f7313404fe65",
+        "runtime": "838e1947f1acef0511849575bfc6716753a5231433992c54ef68f7313404fe65"
+      },
+      "manifest_sha256": "838e1947f1acef0511849575bfc6716753a5231433992c54ef68f7313404fe65",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "candle",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "497e85d52d20a7a7bfd7492ff308330bbcd3629521a32c34324fc1b84708b57d",
+        "source": "497e85d52d20a7a7bfd7492ff308330bbcd3629521a32c34324fc1b84708b57d",
+        "runtime": "497e85d52d20a7a7bfd7492ff308330bbcd3629521a32c34324fc1b84708b57d"
+      },
+      "manifest_sha256": "497e85d52d20a7a7bfd7492ff308330bbcd3629521a32c34324fc1b84708b57d",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bin",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e988db0dcde2dac3048f7622cf32a2cfecdd63d79061cb4119cd66de110ae67b",
+        "source": "e988db0dcde2dac3048f7622cf32a2cfecdd63d79061cb4119cd66de110ae67b",
+        "runtime": "e988db0dcde2dac3048f7622cf32a2cfecdd63d79061cb4119cd66de110ae67b"
+      },
+      "manifest_sha256": "e988db0dcde2dac3048f7622cf32a2cfecdd63d79061cb4119cd66de110ae67b",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "doll",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "7c6d178ecf09b36fde393b103a2bff56ed7b3dd5bc87637d9d8f2eb1da802696",
+        "source": "7c6d178ecf09b36fde393b103a2bff56ed7b3dd5bc87637d9d8f2eb1da802696",
+        "runtime": "7c6d178ecf09b36fde393b103a2bff56ed7b3dd5bc87637d9d8f2eb1da802696"
+      },
+      "manifest_sha256": "7c6d178ecf09b36fde393b103a2bff56ed7b3dd5bc87637d9d8f2eb1da802696",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "anatomy_model",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "1fdf2130cbfa85d43d2a68837f83c3d2f936c54871ce01b1da2e461316c791f7",
+        "source": "1fdf2130cbfa85d43d2a68837f83c3d2f936c54871ce01b1da2e461316c791f7",
+        "runtime": "1fdf2130cbfa85d43d2a68837f83c3d2f936c54871ce01b1da2e461316c791f7"
+      },
+      "manifest_sha256": "1fdf2130cbfa85d43d2a68837f83c3d2f936c54871ce01b1da2e461316c791f7",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "ear_model",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "4dd65fd3b34a2a77059f086faafdffe9d293047588c41ee6f2a6fcf7f2ece5da",
+        "source": "4dd65fd3b34a2a77059f086faafdffe9d293047588c41ee6f2a6fcf7f2ece5da",
+        "runtime": "4dd65fd3b34a2a77059f086faafdffe9d293047588c41ee6f2a6fcf7f2ece5da"
+      },
+      "manifest_sha256": "4dd65fd3b34a2a77059f086faafdffe9d293047588c41ee6f2a6fcf7f2ece5da",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "eye_model",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "dcf78d2387a699fbe315a6d6da4ffeb356f886360e3dc883adcd99117b6b8412",
+        "source": "dcf78d2387a699fbe315a6d6da4ffeb356f886360e3dc883adcd99117b6b8412",
+        "runtime": "dcf78d2387a699fbe315a6d6da4ffeb356f886360e3dc883adcd99117b6b8412"
+      },
+      "manifest_sha256": "dcf78d2387a699fbe315a6d6da4ffeb356f886360e3dc883adcd99117b6b8412",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "mouth_model",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "809843e5e90625e0323a43afbeba747ff2c600d725c94e512d07dff1d417814f",
+        "source": "809843e5e90625e0323a43afbeba747ff2c600d725c94e512d07dff1d417814f",
+        "runtime": "809843e5e90625e0323a43afbeba747ff2c600d725c94e512d07dff1d417814f"
+      },
+      "manifest_sha256": "809843e5e90625e0323a43afbeba747ff2c600d725c94e512d07dff1d417814f",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "tooth",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "a523f086fb64d1068ff32f0d451a4d8d5aec42a7c11fd23d8700aaa95ab40ba7",
+        "source": "a523f086fb64d1068ff32f0d451a4d8d5aec42a7c11fd23d8700aaa95ab40ba7",
+        "runtime": "a523f086fb64d1068ff32f0d451a4d8d5aec42a7c11fd23d8700aaa95ab40ba7"
+      },
+      "manifest_sha256": "a523f086fb64d1068ff32f0d451a4d8d5aec42a7c11fd23d8700aaa95ab40ba7",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "cloud",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "78fd19758b172265f17c8d6ab50d6777b3b5dbc400d1c106e4fd42f5bc4b5439",
+        "source": "78fd19758b172265f17c8d6ab50d6777b3b5dbc400d1c106e4fd42f5bc4b5439",
+        "runtime": "78fd19758b172265f17c8d6ab50d6777b3b5dbc400d1c106e4fd42f5bc4b5439"
+      },
+      "manifest_sha256": "78fd19758b172265f17c8d6ab50d6777b3b5dbc400d1c106e4fd42f5bc4b5439",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "moon",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "8efeb57e1b49606200c283faf58d5d09ecb49102d9a1035eb52960ef72b81b27",
+        "source": "8efeb57e1b49606200c283faf58d5d09ecb49102d9a1035eb52960ef72b81b27",
+        "runtime": "8efeb57e1b49606200c283faf58d5d09ecb49102d9a1035eb52960ef72b81b27"
+      },
+      "manifest_sha256": "8efeb57e1b49606200c283faf58d5d09ecb49102d9a1035eb52960ef72b81b27",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "rainbow",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "7a21509b000200981d8d6c453cad39798d7b8f22d01be99602f9bece5683d817",
+        "source": "7a21509b000200981d8d6c453cad39798d7b8f22d01be99602f9bece5683d817",
+        "runtime": "7a21509b000200981d8d6c453cad39798d7b8f22d01be99602f9bece5683d817"
+      },
+      "manifest_sha256": "7a21509b000200981d8d6c453cad39798d7b8f22d01be99602f9bece5683d817",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "snowman",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "da371ea535e9018cce30783b79eb6926d04eca5b7e9ccefd2659a826e6577ac0",
+        "source": "da371ea535e9018cce30783b79eb6926d04eca5b7e9ccefd2659a826e6577ac0",
+        "runtime": "da371ea535e9018cce30783b79eb6926d04eca5b7e9ccefd2659a826e6577ac0"
+      },
+      "manifest_sha256": "da371ea535e9018cce30783b79eb6926d04eca5b7e9ccefd2659a826e6577ac0",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "dragon",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "0d0cfc3f3c14fb8044739788a162614e8dbe2e16eeea1af9026efcbbc6b64e70",
+        "source": "0d0cfc3f3c14fb8044739788a162614e8dbe2e16eeea1af9026efcbbc6b64e70",
+        "runtime": "0d0cfc3f3c14fb8044739788a162614e8dbe2e16eeea1af9026efcbbc6b64e70"
+      },
+      "manifest_sha256": "0d0cfc3f3c14fb8044739788a162614e8dbe2e16eeea1af9026efcbbc6b64e70",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "monster",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "fe889119fc4d88714d7ddfcac485b9fc9b41d93e41de8ad09c871de13d3cb785",
+        "source": "fe889119fc4d88714d7ddfcac485b9fc9b41d93e41de8ad09c871de13d3cb785",
+        "runtime": "fe889119fc4d88714d7ddfcac485b9fc9b41d93e41de8ad09c871de13d3cb785"
+      },
+      "manifest_sha256": "fe889119fc4d88714d7ddfcac485b9fc9b41d93e41de8ad09c871de13d3cb785",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "great_wall",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "1fcaa414620e286b2a0651fc7d9eaeec25a0deb637bc08a011a5bd0e43c2075c",
+        "source": "1fcaa414620e286b2a0651fc7d9eaeec25a0deb637bc08a011a5bd0e43c2075c",
+        "runtime": "1fcaa414620e286b2a0651fc7d9eaeec25a0deb637bc08a011a5bd0e43c2075c"
+      },
+      "manifest_sha256": "1fcaa414620e286b2a0651fc7d9eaeec25a0deb637bc08a011a5bd0e43c2075c",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "eiffel_tower",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "dd9124a299298366745fc79459e77c171935692de0c7c09d7217b9a69b7018d9",
+        "source": "dd9124a299298366745fc79459e77c171935692de0c7c09d7217b9a69b7018d9",
+        "runtime": "dd9124a299298366745fc79459e77c171935692de0c7c09d7217b9a69b7018d9"
+      },
+      "manifest_sha256": "dd9124a299298366745fc79459e77c171935692de0c7c09d7217b9a69b7018d9",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "golden_gate_bridge",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "251c4c98082a6fdbecb6c5807c6f982a979a03637414ae9af0e0d89a6e70fa62",
+        "source": "251c4c98082a6fdbecb6c5807c6f982a979a03637414ae9af0e0d89a6e70fa62",
+        "runtime": "251c4c98082a6fdbecb6c5807c6f982a979a03637414ae9af0e0d89a6e70fa62"
+      },
+      "manifest_sha256": "251c4c98082a6fdbecb6c5807c6f982a979a03637414ae9af0e0d89a6e70fa62",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "big_ben",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "5b135850d55da1549d2067195ae5314aa3b94fabbc2cba8fe3b6a645325974e1",
+        "source": "5b135850d55da1549d2067195ae5314aa3b94fabbc2cba8fe3b6a645325974e1",
+        "runtime": "5b135850d55da1549d2067195ae5314aa3b94fabbc2cba8fe3b6a645325974e1"
+      },
+      "manifest_sha256": "5b135850d55da1549d2067195ae5314aa3b94fabbc2cba8fe3b6a645325974e1",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "space_station",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "ccdaf4dda3768a35ebc183529c4e2c0de27f6213570e2606774a1cbd1dcb607a",
+        "source": "ccdaf4dda3768a35ebc183529c4e2c0de27f6213570e2606774a1cbd1dcb607a",
+        "runtime": "ccdaf4dda3768a35ebc183529c4e2c0de27f6213570e2606774a1cbd1dcb607a"
+      },
+      "manifest_sha256": "ccdaf4dda3768a35ebc183529c4e2c0de27f6213570e2606774a1cbd1dcb607a",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "basketball",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "21da90b32daf93de62e8b43365b95120fee04272dede44a86fcc80d0925dce7c",
+        "source": "21da90b32daf93de62e8b43365b95120fee04272dede44a86fcc80d0925dce7c",
+        "runtime": "21da90b32daf93de62e8b43365b95120fee04272dede44a86fcc80d0925dce7c"
+      },
+      "manifest_sha256": "21da90b32daf93de62e8b43365b95120fee04272dede44a86fcc80d0925dce7c",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "badminton",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "6a049e44dafe9b8959814722241bd084d0cd3bfb39fce2603b4074ce05f29ab1",
+        "source": "6a049e44dafe9b8959814722241bd084d0cd3bfb39fce2603b4074ce05f29ab1",
+        "runtime": "6a049e44dafe9b8959814722241bd084d0cd3bfb39fce2603b4074ce05f29ab1"
+      },
+      "manifest_sha256": "6a049e44dafe9b8959814722241bd084d0cd3bfb39fce2603b4074ce05f29ab1",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "fan",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "33ea8bbcdb34dae8f7d804b33ec1ccf96be31099f063a9afa76f35c04772d40b",
+        "source": "33ea8bbcdb34dae8f7d804b33ec1ccf96be31099f063a9afa76f35c04772d40b",
+        "runtime": "33ea8bbcdb34dae8f7d804b33ec1ccf96be31099f063a9afa76f35c04772d40b"
+      },
+      "manifest_sha256": "33ea8bbcdb34dae8f7d804b33ec1ccf96be31099f063a9afa76f35c04772d40b",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "glasses",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "6dff912f3765dd26f8ed1f6e15e8e1bda0adaa829f95af46d83c52be8a0195d5",
+        "source": "6dff912f3765dd26f8ed1f6e15e8e1bda0adaa829f95af46d83c52be8a0195d5",
+        "runtime": "6dff912f3765dd26f8ed1f6e15e8e1bda0adaa829f95af46d83c52be8a0195d5"
+      },
+      "manifest_sha256": "6dff912f3765dd26f8ed1f6e15e8e1bda0adaa829f95af46d83c52be8a0195d5",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "pot",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "c6bce455578248b8aa3e3611fc6dc1f6a3f0a75bcfa8eaefb5075267469cfc04",
+        "source": "c6bce455578248b8aa3e3611fc6dc1f6a3f0a75bcfa8eaefb5075267469cfc04",
+        "runtime": "c6bce455578248b8aa3e3611fc6dc1f6a3f0a75bcfa8eaefb5075267469cfc04"
+      },
+      "manifest_sha256": "c6bce455578248b8aa3e3611fc6dc1f6a3f0a75bcfa8eaefb5075267469cfc04",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bamboo",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "d8c0fafef27c693f3cf7e29c9d74884830a78afb1a28f91daf12fa35747b1478",
+        "source": "d8c0fafef27c693f3cf7e29c9d74884830a78afb1a28f91daf12fa35747b1478",
+        "runtime": "d8c0fafef27c693f3cf7e29c9d74884830a78afb1a28f91daf12fa35747b1478"
+      },
+      "manifest_sha256": "d8c0fafef27c693f3cf7e29c9d74884830a78afb1a28f91daf12fa35747b1478",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "rose",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "65dd460e855c5d6df1818f637dd832668a589fa1dfe1101cd9ef4550bde92483",
+        "source": "65dd460e855c5d6df1818f637dd832668a589fa1dfe1101cd9ef4550bde92483",
+        "runtime": "65dd460e855c5d6df1818f637dd832668a589fa1dfe1101cd9ef4550bde92483"
+      },
+      "manifest_sha256": "65dd460e855c5d6df1818f637dd832668a589fa1dfe1101cd9ef4550bde92483",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "lotus",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "25ffeb0fae63af5d04c9dbc5b6b17f2f9dd55d0645e310aee8a3bd7afeec125a",
+        "source": "25ffeb0fae63af5d04c9dbc5b6b17f2f9dd55d0645e310aee8a3bd7afeec125a",
+        "runtime": "25ffeb0fae63af5d04c9dbc5b6b17f2f9dd55d0645e310aee8a3bd7afeec125a"
+      },
+      "manifest_sha256": "25ffeb0fae63af5d04c9dbc5b6b17f2f9dd55d0645e310aee8a3bd7afeec125a",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "firecracker",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "08127a8f0503e06aabe485341f6b4ad2420cbeb45e7b3613d6103a0135edc79b",
+        "source": "08127a8f0503e06aabe485341f6b4ad2420cbeb45e7b3613d6103a0135edc79b",
+        "runtime": "08127a8f0503e06aabe485341f6b4ad2420cbeb45e7b3613d6103a0135edc79b"
+      },
+      "manifest_sha256": "08127a8f0503e06aabe485341f6b4ad2420cbeb45e7b3613d6103a0135edc79b",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "beach",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "a2935122da24f687f8d35f326f49d069b66f674bb4af0f5ee78f4cbc23fa3046",
+        "source": "a2935122da24f687f8d35f326f49d069b66f674bb4af0f5ee78f4cbc23fa3046",
+        "runtime": "a2935122da24f687f8d35f326f49d069b66f674bb4af0f5ee78f4cbc23fa3046"
+      },
+      "manifest_sha256": "a2935122da24f687f8d35f326f49d069b66f674bb4af0f5ee78f4cbc23fa3046",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bean",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "ba09a1588ef39b52e8d16dc22022b00e3e9f3eb86e8acfd8a34a4e1a6bf4534a",
+        "source": "ba09a1588ef39b52e8d16dc22022b00e3e9f3eb86e8acfd8a34a4e1a6bf4534a",
+        "runtime": "ba09a1588ef39b52e8d16dc22022b00e3e9f3eb86e8acfd8a34a4e1a6bf4534a"
+      },
+      "manifest_sha256": "ba09a1588ef39b52e8d16dc22022b00e3e9f3eb86e8acfd8a34a4e1a6bf4534a",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "tin_can",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "f130617fafe501afde897dac1fd6187b28bd8172226e1adaa0fff67e2dc2ff43",
+        "source": "f130617fafe501afde897dac1fd6187b28bd8172226e1adaa0fff67e2dc2ff43",
+        "runtime": "f130617fafe501afde897dac1fd6187b28bd8172226e1adaa0fff67e2dc2ff43"
+      },
+      "manifest_sha256": "f130617fafe501afde897dac1fd6187b28bd8172226e1adaa0fff67e2dc2ff43",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "chess",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "cf5604845f10c98acba47685cd37ee755952c0277a1057536f3c7892113d5293",
+        "source": "cf5604845f10c98acba47685cd37ee755952c0277a1057536f3c7892113d5293",
+        "runtime": "cf5604845f10c98acba47685cd37ee755952c0277a1057536f3c7892113d5293"
+      },
+      "manifest_sha256": "cf5604845f10c98acba47685cd37ee755952c0277a1057536f3c7892113d5293",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "chips",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "62e0b7695b719b4c1ce0b5323f1d28018ea46678ecebc97c243ccd134d90cafa",
+        "source": "62e0b7695b719b4c1ce0b5323f1d28018ea46678ecebc97c243ccd134d90cafa",
+        "runtime": "62e0b7695b719b4c1ce0b5323f1d28018ea46678ecebc97c243ccd134d90cafa"
+      },
+      "manifest_sha256": "62e0b7695b719b4c1ce0b5323f1d28018ea46678ecebc97c243ccd134d90cafa",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "clay",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "d3442c1f76bea1e69cf1feaf28e06c72d1e1739dc835c4947f00579a8f6118e8",
+        "source": "d3442c1f76bea1e69cf1feaf28e06c72d1e1739dc835c4947f00579a8f6118e8",
+        "runtime": "d3442c1f76bea1e69cf1feaf28e06c72d1e1739dc835c4947f00579a8f6118e8"
+      },
+      "manifest_sha256": "d3442c1f76bea1e69cf1feaf28e06c72d1e1739dc835c4947f00579a8f6118e8",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "flame",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "66265289db85747c5ae4bb0f8ec722e93f7929663484f5bc16d46041e95a2042",
+        "source": "66265289db85747c5ae4bb0f8ec722e93f7929663484f5bc16d46041e95a2042",
+        "runtime": "66265289db85747c5ae4bb0f8ec722e93f7929663484f5bc16d46041e95a2042"
+      },
+      "manifest_sha256": "66265289db85747c5ae4bb0f8ec722e93f7929663484f5bc16d46041e95a2042",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "glass",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "87a95675f6d995f2a8a97510d408f6c37ce212e9c1d85bd8ce3672cba8b4c345",
+        "source": "87a95675f6d995f2a8a97510d408f6c37ce212e9c1d85bd8ce3672cba8b4c345",
+        "runtime": "87a95675f6d995f2a8a97510d408f6c37ce212e9c1d85bd8ce3672cba8b4c345"
+      },
+      "manifest_sha256": "87a95675f6d995f2a8a97510d408f6c37ce212e9c1d85bd8ce3672cba8b4c345",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "hair",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "51c80cd2243d80df1e88fb4db03fd462d16b70a855d635c2ec8e0155fed90e04",
+        "source": "51c80cd2243d80df1e88fb4db03fd462d16b70a855d635c2ec8e0155fed90e04",
+        "runtime": "51c80cd2243d80df1e88fb4db03fd462d16b70a855d635c2ec8e0155fed90e04"
+      },
+      "manifest_sha256": "51c80cd2243d80df1e88fb4db03fd462d16b70a855d635c2ec8e0155fed90e04",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "ice_cube",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "5425003f3bd7b524819e9b3f34a7d42eeea2f15400789863202b5b9bd4aa92d8",
+        "source": "5425003f3bd7b524819e9b3f34a7d42eeea2f15400789863202b5b9bd4aa92d8",
+        "runtime": "5425003f3bd7b524819e9b3f34a7d42eeea2f15400789863202b5b9bd4aa92d8"
+      },
+      "manifest_sha256": "5425003f3bd7b524819e9b3f34a7d42eeea2f15400789863202b5b9bd4aa92d8",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "jeans",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "f91894b3fdd289d51cd5e07e28eb7a9c140f9964a5f365b37944908fcd76cddd",
+        "source": "f91894b3fdd289d51cd5e07e28eb7a9c140f9964a5f365b37944908fcd76cddd",
+        "runtime": "f91894b3fdd289d51cd5e07e28eb7a9c140f9964a5f365b37944908fcd76cddd"
+      },
+      "manifest_sha256": "f91894b3fdd289d51cd5e07e28eb7a9c140f9964a5f365b37944908fcd76cddd",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "raincoat",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "6059d7c630d6167ed87b9d4e409d08861e7539c30c326905c101eb76b07d6c05",
+        "source": "6059d7c630d6167ed87b9d4e409d08861e7539c30c326905c101eb76b07d6c05",
+        "runtime": "6059d7c630d6167ed87b9d4e409d08861e7539c30c326905c101eb76b07d6c05"
+      },
+      "manifest_sha256": "6059d7c630d6167ed87b9d4e409d08861e7539c30c326905c101eb76b07d6c05",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "river_stream",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "4008681279ba6f061b7a51590b9144992afca1d9b98c232cbc692fb874d6c2bc",
+        "source": "4008681279ba6f061b7a51590b9144992afca1d9b98c232cbc692fb874d6c2bc",
+        "runtime": "4008681279ba6f061b7a51590b9144992afca1d9b98c232cbc692fb874d6c2bc"
+      },
+      "manifest_sha256": "4008681279ba6f061b7a51590b9144992afca1d9b98c232cbc692fb874d6c2bc",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "lake",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "771f51188c9bfe2d02bd76abe95dbc8fc6ad1c056fbd7392c4a8a915fbddd625",
+        "source": "771f51188c9bfe2d02bd76abe95dbc8fc6ad1c056fbd7392c4a8a915fbddd625",
+        "runtime": "771f51188c9bfe2d02bd76abe95dbc8fc6ad1c056fbd7392c4a8a915fbddd625"
+      },
+      "manifest_sha256": "771f51188c9bfe2d02bd76abe95dbc8fc6ad1c056fbd7392c4a8a915fbddd625",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "sea_wave",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "edfd1e4873eed4e5edf36e8c050e21e6cc08042b98af1f3c2b9955ecd6b4ef4a",
+        "source": "edfd1e4873eed4e5edf36e8c050e21e6cc08042b98af1f3c2b9955ecd6b4ef4a",
+        "runtime": "edfd1e4873eed4e5edf36e8c050e21e6cc08042b98af1f3c2b9955ecd6b4ef4a"
+      },
+      "manifest_sha256": "edfd1e4873eed4e5edf36e8c050e21e6cc08042b98af1f3c2b9955ecd6b4ef4a",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "seed",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e10d054a798a24704f47c4661a0033ee34451ea57f60615dfccb20b120962399",
+        "source": "e10d054a798a24704f47c4661a0033ee34451ea57f60615dfccb20b120962399",
+        "runtime": "e10d054a798a24704f47c4661a0033ee34451ea57f60615dfccb20b120962399"
+      },
+      "manifest_sha256": "e10d054a798a24704f47c4661a0033ee34451ea57f60615dfccb20b120962399",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "snowflake",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "a409522465751f08995e80acfaf558d6da3213a47ddb7f71f907f4b6d758fd2c",
+        "source": "a409522465751f08995e80acfaf558d6da3213a47ddb7f71f907f4b6d758fd2c",
+        "runtime": "a409522465751f08995e80acfaf558d6da3213a47ddb7f71f907f4b6d758fd2c"
+      },
+      "manifest_sha256": "a409522465751f08995e80acfaf558d6da3213a47ddb7f71f907f4b6d758fd2c",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "swimwear",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "8da94758f58be19dd29084669eaa080949d20e289513739e11f351151bb118e3",
+        "source": "8da94758f58be19dd29084669eaa080949d20e289513739e11f351151bb118e3",
+        "runtime": "8da94758f58be19dd29084669eaa080949d20e289513739e11f351151bb118e3"
+      },
+      "manifest_sha256": "8da94758f58be19dd29084669eaa080949d20e289513739e11f351151bb118e3",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "tap",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "f33c402e514a8e9917d9890e3622bfc431dcd2f70fd697275029d95dbb7eb3db",
+        "source": "f33c402e514a8e9917d9890e3622bfc431dcd2f70fd697275029d95dbb7eb3db",
+        "runtime": "f33c402e514a8e9917d9890e3622bfc431dcd2f70fd697275029d95dbb7eb3db"
+      },
+      "manifest_sha256": "f33c402e514a8e9917d9890e3622bfc431dcd2f70fd697275029d95dbb7eb3db",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "water_drop",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "31b00b4d016b23e9b4fb848d99eb14e5deb8809481984b96678c59a8f5f96df4",
+        "source": "31b00b4d016b23e9b4fb848d99eb14e5deb8809481984b96678c59a8f5f96df4",
+        "runtime": "31b00b4d016b23e9b4fb848d99eb14e5deb8809481984b96678c59a8f5f96df4"
+      },
+      "manifest_sha256": "31b00b4d016b23e9b4fb848d99eb14e5deb8809481984b96678c59a8f5f96df4",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "rain_cloud",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "a420ea933e82b372a9cef1560e79242e3d46278466dddc5267a21fdb170e3217",
+        "source": "a420ea933e82b372a9cef1560e79242e3d46278466dddc5267a21fdb170e3217",
+        "runtime": "a420ea933e82b372a9cef1560e79242e3d46278466dddc5267a21fdb170e3217"
+      },
+      "manifest_sha256": "a420ea933e82b372a9cef1560e79242e3d46278466dddc5267a21fdb170e3217",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "mountain",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b280e6516a47560e29be482a85b8b9e26768b9b9c950ef458d8195bf731f46d7",
+        "source": "b280e6516a47560e29be482a85b8b9e26768b9b9c950ef458d8195bf731f46d7",
+        "runtime": "b280e6516a47560e29be482a85b8b9e26768b9b9c950ef458d8195bf731f46d7"
+      },
+      "manifest_sha256": "b280e6516a47560e29be482a85b8b9e26768b9b9c950ef458d8195bf731f46d7",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "pen",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e0342e252020e21e9abc7e0b7c6db97e7640ec7ddb22ac8fb12c912645bfd1c1",
+        "source": "e0342e252020e21e9abc7e0b7c6db97e7640ec7ddb22ac8fb12c912645bfd1c1",
+        "runtime": "e0342e252020e21e9abc7e0b7c6db97e7640ec7ddb22ac8fb12c912645bfd1c1"
+      },
+      "manifest_sha256": "e0342e252020e21e9abc7e0b7c6db97e7640ec7ddb22ac8fb12c912645bfd1c1",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "television",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "f8b1b6b9416b0b370d106c158fba6fe1fabb9fef87dcfb793e4d392e540a3b82",
+        "source": "f8b1b6b9416b0b370d106c158fba6fe1fabb9fef87dcfb793e4d392e540a3b82",
+        "runtime": "f8b1b6b9416b0b370d106c158fba6fe1fabb9fef87dcfb793e4d392e540a3b82"
+      },
+      "manifest_sha256": "f8b1b6b9416b0b370d106c158fba6fe1fabb9fef87dcfb793e4d392e540a3b82",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "turkey",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e823804db4bf1843c4b79ac5dbb53f8f5838dff5ae10149a7d035ab4d93d4d51",
+        "source": "e823804db4bf1843c4b79ac5dbb53f8f5838dff5ae10149a7d035ab4d93d4d51",
+        "runtime": "e823804db4bf1843c4b79ac5dbb53f8f5838dff5ae10149a7d035ab4d93d4d51"
+      },
+      "manifest_sha256": "e823804db4bf1843c4b79ac5dbb53f8f5838dff5ae10149a7d035ab4d93d4d51",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "pingpong",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "716fe6febf78f13f7dba34a53c36b3ea50f591017562a5ff82321f41dd885500",
+        "source": "716fe6febf78f13f7dba34a53c36b3ea50f591017562a5ff82321f41dd885500",
+        "runtime": "716fe6febf78f13f7dba34a53c36b3ea50f591017562a5ff82321f41dd885500"
+      },
+      "manifest_sha256": "716fe6febf78f13f7dba34a53c36b3ea50f591017562a5ff82321f41dd885500",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "cap",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "15f4d34664ca282d5f8e85fa34aa85bc70a967bfff10c58554fa83caac14ecc7",
+        "source": "15f4d34664ca282d5f8e85fa34aa85bc70a967bfff10c58554fa83caac14ecc7",
+        "runtime": "15f4d34664ca282d5f8e85fa34aa85bc70a967bfff10c58554fa83caac14ecc7"
+      },
+      "manifest_sha256": "15f4d34664ca282d5f8e85fa34aa85bc70a967bfff10c58554fa83caac14ecc7",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "subway",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "c22763cf9302519bf27266946f0d4ab522ef6a4ab5f05dd32e67ccc2dfafecbf",
+        "source": "c22763cf9302519bf27266946f0d4ab522ef6a4ab5f05dd32e67ccc2dfafecbf",
+        "runtime": "c22763cf9302519bf27266946f0d4ab522ef6a4ab5f05dd32e67ccc2dfafecbf"
+      },
+      "manifest_sha256": "c22763cf9302519bf27266946f0d4ab522ef6a4ab5f05dd32e67ccc2dfafecbf",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "lion_dance",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "1676c82441668872e748b6ebd1e0f7df89f167292429659365ce12d4647861ff",
+        "source": "1676c82441668872e748b6ebd1e0f7df89f167292429659365ce12d4647861ff",
+        "runtime": "1676c82441668872e748b6ebd1e0f7df89f167292429659365ce12d4647861ff"
+      },
+      "manifest_sha256": "1676c82441668872e748b6ebd1e0f7df89f167292429659365ce12d4647861ff",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bead",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "53556c207ac0368848533523debe8a0b84c152253032eb40400743f7049ca1f0",
+        "source": "53556c207ac0368848533523debe8a0b84c152253032eb40400743f7049ca1f0",
+        "runtime": "53556c207ac0368848533523debe8a0b84c152253032eb40400743f7049ca1f0"
+      },
+      "manifest_sha256": "53556c207ac0368848533523debe8a0b84c152253032eb40400743f7049ca1f0",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "button",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "197d0ba5d51368e8c23144d9b56ddebe506d80a660654a41c9ff0e9d2ceb14bb",
+        "source": "197d0ba5d51368e8c23144d9b56ddebe506d80a660654a41c9ff0e9d2ceb14bb",
+        "runtime": "197d0ba5d51368e8c23144d9b56ddebe506d80a660654a41c9ff0e9d2ceb14bb"
+      },
+      "manifest_sha256": "197d0ba5d51368e8c23144d9b56ddebe506d80a660654a41c9ff0e9d2ceb14bb",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "counting_stick",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "75bf5563f90a65c9e8211fefc3f47df9fd976c2b5ed4e5b0ac17f878385b13d0",
+        "source": "75bf5563f90a65c9e8211fefc3f47df9fd976c2b5ed4e5b0ac17f878385b13d0",
+        "runtime": "75bf5563f90a65c9e8211fefc3f47df9fd976c2b5ed4e5b0ac17f878385b13d0"
+      },
+      "manifest_sha256": "75bf5563f90a65c9e8211fefc3f47df9fd976c2b5ed4e5b0ac17f878385b13d0",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "seashell",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "c0ba25deee7ab9062c578e2e2cdeebb37094c24d0c0b1b44ebd8330201cfa9da",
+        "source": "c0ba25deee7ab9062c578e2e2cdeebb37094c24d0c0b1b44ebd8330201cfa9da",
+        "runtime": "c0ba25deee7ab9062c578e2e2cdeebb37094c24d0c0b1b44ebd8330201cfa9da"
+      },
+      "manifest_sha256": "c0ba25deee7ab9062c578e2e2cdeebb37094c24d0c0b1b44ebd8330201cfa9da",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "flowerpot",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "1d1bb0ad3674b702a527316e6d3a7a8443040b2e2f23d17c4075a36032f9a3b9",
+        "source": "1d1bb0ad3674b702a527316e6d3a7a8443040b2e2f23d17c4075a36032f9a3b9",
+        "runtime": "1d1bb0ad3674b702a527316e6d3a7a8443040b2e2f23d17c4075a36032f9a3b9"
+      },
+      "manifest_sha256": "1d1bb0ad3674b702a527316e6d3a7a8443040b2e2f23d17c4075a36032f9a3b9",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "bookshelf",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "f4725cbe39f3238b70464368dfb00fa10636507095620ba7fabe6c44b1f6bb9c",
+        "source": "f4725cbe39f3238b70464368dfb00fa10636507095620ba7fabe6c44b1f6bb9c",
+        "runtime": "f4725cbe39f3238b70464368dfb00fa10636507095620ba7fabe6c44b1f6bb9c"
+      },
+      "manifest_sha256": "f4725cbe39f3238b70464368dfb00fa10636507095620ba7fabe6c44b1f6bb9c",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "mirror",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "4580848cc0a3ac5dc938686d7968cf3765db10d6281b4875fa865543cb64b792",
+        "source": "4580848cc0a3ac5dc938686d7968cf3765db10d6281b4875fa865543cb64b792",
+        "runtime": "4580848cc0a3ac5dc938686d7968cf3765db10d6281b4875fa865543cb64b792"
+      },
+      "manifest_sha256": "4580848cc0a3ac5dc938686d7968cf3765db10d6281b4875fa865543cb64b792",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "tablecloth",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "bf3fdaa60be0f24bd2e6d9cce91ece58845c675cbcdc48d4046caa9e5330eef2",
+        "source": "bf3fdaa60be0f24bd2e6d9cce91ece58845c675cbcdc48d4046caa9e5330eef2",
+        "runtime": "bf3fdaa60be0f24bd2e6d9cce91ece58845c675cbcdc48d4046caa9e5330eef2"
+      },
+      "manifest_sha256": "bf3fdaa60be0f24bd2e6d9cce91ece58845c675cbcdc48d4046caa9e5330eef2",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "thermometer",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "602c87c1ddcf1319620174c9a30069f108ac5fa43d10345d632eff783ce50bc3",
+        "source": "602c87c1ddcf1319620174c9a30069f108ac5fa43d10345d632eff783ce50bc3",
+        "runtime": "602c87c1ddcf1319620174c9a30069f108ac5fa43d10345d632eff783ce50bc3"
+      },
+      "manifest_sha256": "602c87c1ddcf1319620174c9a30069f108ac5fa43d10345d632eff783ce50bc3",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "sofa",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "c76ab86d176c7e28d2cfa502279d41bcaa6a6c7d958f33eff0e0a52283193e25",
+        "source": "c76ab86d176c7e28d2cfa502279d41bcaa6a6c7d958f33eff0e0a52283193e25",
+        "runtime": "c76ab86d176c7e28d2cfa502279d41bcaa6a6c7d958f33eff0e0a52283193e25"
+      },
+      "manifest_sha256": "c76ab86d176c7e28d2cfa502279d41bcaa6a6c7d958f33eff0e0a52283193e25",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "blocks",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b2486f884dc5ca788422aa19a13554c8323739e494222724a14d4a8de2673507",
+        "source": "b2486f884dc5ca788422aa19a13554c8323739e494222724a14d4a8de2673507",
+        "runtime": "b2486f884dc5ca788422aa19a13554c8323739e494222724a14d4a8de2673507"
+      },
+      "manifest_sha256": "b2486f884dc5ca788422aa19a13554c8323739e494222724a14d4a8de2673507",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "hourglass",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "191bce5df834f623c153c7a7ad8e11d5f11a0c524b1a93f44dab09b3117398cc",
+        "source": "191bce5df834f623c153c7a7ad8e11d5f11a0c524b1a93f44dab09b3117398cc",
+        "runtime": "191bce5df834f623c153c7a7ad8e11d5f11a0c524b1a93f44dab09b3117398cc"
+      },
+      "manifest_sha256": "191bce5df834f623c153c7a7ad8e11d5f11a0c524b1a93f44dab09b3117398cc",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "envelope",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "df5066cf24029b2b688f50e99a92c63a36224d75f3688043a6084dfd334999f5",
+        "source": "df5066cf24029b2b688f50e99a92c63a36224d75f3688043a6084dfd334999f5",
+        "runtime": "df5066cf24029b2b688f50e99a92c63a36224d75f3688043a6084dfd334999f5"
+      },
+      "manifest_sha256": "df5066cf24029b2b688f50e99a92c63a36224d75f3688043a6084dfd334999f5",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "balloon",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "45e31371bb8c6ee51e8ef650e3464af3ed093b3740f87949a23a90102c137ca7",
+        "source": "45e31371bb8c6ee51e8ef650e3464af3ed093b3740f87949a23a90102c137ca7",
+        "runtime": "45e31371bb8c6ee51e8ef650e3464af3ed093b3740f87949a23a90102c137ca7"
+      },
+      "manifest_sha256": "45e31371bb8c6ee51e8ef650e3464af3ed093b3740f87949a23a90102c137ca7",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "blackboard",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "f68ffb95a114755ea3568620dc65cc9ba8ac2f19525c40846a050588cf5e921f",
+        "source": "f68ffb95a114755ea3568620dc65cc9ba8ac2f19525c40846a050588cf5e921f",
+        "runtime": "f68ffb95a114755ea3568620dc65cc9ba8ac2f19525c40846a050588cf5e921f"
+      },
+      "manifest_sha256": "f68ffb95a114755ea3568620dc65cc9ba8ac2f19525c40846a050588cf5e921f",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "cola",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "fdbe824ae5631a3e4bd1e8c77dfc4e4e42336706dc4542cf5c096819b49eb29a",
+        "source": "fdbe824ae5631a3e4bd1e8c77dfc4e4e42336706dc4542cf5c096819b49eb29a",
+        "runtime": "fdbe824ae5631a3e4bd1e8c77dfc4e4e42336706dc4542cf5c096819b49eb29a"
+      },
+      "manifest_sha256": "fdbe824ae5631a3e4bd1e8c77dfc4e4e42336706dc4542cf5c096819b49eb29a",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "grass_patch",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "a39f2b8497e632b2cd126c148470c90d3180c41468f0a53b51d76a6ff63f4d25",
+        "source": "a39f2b8497e632b2cd126c148470c90d3180c41468f0a53b51d76a6ff63f4d25",
+        "runtime": "a39f2b8497e632b2cd126c148470c90d3180c41468f0a53b51d76a6ff63f4d25"
+      },
+      "manifest_sha256": "a39f2b8497e632b2cd126c148470c90d3180c41468f0a53b51d76a6ff63f4d25",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "wall_section",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "fc4201d33792d03609efa265360b18f5a648378a4fcb269e36c2f2193667e4d1",
+        "source": "fc4201d33792d03609efa265360b18f5a648378a4fcb269e36c2f2193667e4d1",
+        "runtime": "fc4201d33792d03609efa265360b18f5a648378a4fcb269e36c2f2193667e4d1"
+      },
+      "manifest_sha256": "fc4201d33792d03609efa265360b18f5a648378a4fcb269e36c2f2193667e4d1",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "feather",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "03c11b916dc809c7af90a6b3a4d7e1d46748f5682e7a34ada6f9f5a755f0588b",
+        "source": "03c11b916dc809c7af90a6b3a4d7e1d46748f5682e7a34ada6f9f5a755f0588b",
+        "runtime": "03c11b916dc809c7af90a6b3a4d7e1d46748f5682e7a34ada6f9f5a755f0588b"
+      },
+      "manifest_sha256": "03c11b916dc809c7af90a6b3a4d7e1d46748f5682e7a34ada6f9f5a755f0588b",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "garland",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "93149d06313148b779a792afc00316b3c5502fc823c03187cee2f3bccace97dc",
+        "source": "93149d06313148b779a792afc00316b3c5502fc823c03187cee2f3bccace97dc",
+        "runtime": "93149d06313148b779a792afc00316b3c5502fc823c03187cee2f3bccace97dc"
+      },
+      "manifest_sha256": "93149d06313148b779a792afc00316b3c5502fc823c03187cee2f3bccace97dc",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "mask",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "7b36bffd3daf477f031facf5dee2fd28d7fb959506ed96e0ccdb06b88d0a29f7",
+        "source": "7b36bffd3daf477f031facf5dee2fd28d7fb959506ed96e0ccdb06b88d0a29f7",
+        "runtime": "7b36bffd3daf477f031facf5dee2fd28d7fb959506ed96e0ccdb06b88d0a29f7"
+      },
+      "manifest_sha256": "7b36bffd3daf477f031facf5dee2fd28d7fb959506ed96e0ccdb06b88d0a29f7",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "paper_cup",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "16b3d6fd85b59d62714f4067763717f925616110aaa4dd68fc90241aeec32327",
+        "source": "16b3d6fd85b59d62714f4067763717f925616110aaa4dd68fc90241aeec32327",
+        "runtime": "16b3d6fd85b59d62714f4067763717f925616110aaa4dd68fc90241aeec32327"
+      },
+      "manifest_sha256": "16b3d6fd85b59d62714f4067763717f925616110aaa4dd68fc90241aeec32327",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "staircase",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "76714c8987efb215509f5f4573160de45c20fa92c29107abf1d304e30d0da87e",
+        "source": "76714c8987efb215509f5f4573160de45c20fa92c29107abf1d304e30d0da87e",
+        "runtime": "76714c8987efb215509f5f4573160de45c20fa92c29107abf1d304e30d0da87e"
+      },
+      "manifest_sha256": "76714c8987efb215509f5f4573160de45c20fa92c29107abf1d304e30d0da87e",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "towel",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "a6bd5e7c160722fa0d2a6db4cceada8cf78fd392cc447d415b57bae5051ac004",
+        "source": "a6bd5e7c160722fa0d2a6db4cceada8cf78fd392cc447d415b57bae5051ac004",
+        "runtime": "a6bd5e7c160722fa0d2a6db4cceada8cf78fd392cc447d415b57bae5051ac004"
+      },
+      "manifest_sha256": "a6bd5e7c160722fa0d2a6db4cceada8cf78fd392cc447d415b57bae5051ac004",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "wheel",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "8fd0efc8375cf778a4a7d708a77196b338ff9e8fbfd043ce86a5980afa0e38ae",
+        "source": "8fd0efc8375cf778a4a7d708a77196b338ff9e8fbfd043ce86a5980afa0e38ae",
+        "runtime": "8fd0efc8375cf778a4a7d708a77196b338ff9e8fbfd043ce86a5980afa0e38ae"
+      },
+      "manifest_sha256": "8fd0efc8375cf778a4a7d708a77196b338ff9e8fbfd043ce86a5980afa0e38ae",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "balance_scale",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "4455b02f10873d1d6b595a7b95e370db2f2a3bbde88c48ba36e77fb053e0c1ff",
+        "source": "4455b02f10873d1d6b595a7b95e370db2f2a3bbde88c48ba36e77fb053e0c1ff",
+        "runtime": "4455b02f10873d1d6b595a7b95e370db2f2a3bbde88c48ba36e77fb053e0c1ff"
+      },
+      "manifest_sha256": "4455b02f10873d1d6b595a7b95e370db2f2a3bbde88c48ba36e77fb053e0c1ff",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "wristwatch",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "b3185104bb8c713898b7627f773442cb9763156ed3e2077cc1f4a3256fdfb6f2",
+        "source": "b3185104bb8c713898b7627f773442cb9763156ed3e2077cc1f4a3256fdfb6f2",
+        "runtime": "b3185104bb8c713898b7627f773442cb9763156ed3e2077cc1f4a3256fdfb6f2"
+      },
+      "manifest_sha256": "b3185104bb8c713898b7627f773442cb9763156ed3e2077cc1f4a3256fdfb6f2",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "steamship",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "67ad12c272bd76613b0fb384d8b35be1188ca1c016f4fd726fb4ffbfffa4ec36",
+        "source": "67ad12c272bd76613b0fb384d8b35be1188ca1c016f4fd726fb4ffbfffa4ec36",
+        "runtime": "67ad12c272bd76613b0fb384d8b35be1188ca1c016f4fd726fb4ffbfffa4ec36"
+      },
+      "manifest_sha256": "67ad12c272bd76613b0fb384d8b35be1188ca1c016f4fd726fb4ffbfffa4ec36",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "toothbrush",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "3f327b1528ee5836b10e57d1b1d2970eb9fcc49d89f595a5e9c5056f7b497f8d",
+        "source": "3f327b1528ee5836b10e57d1b1d2970eb9fcc49d89f595a5e9c5056f7b497f8d",
+        "runtime": "3f327b1528ee5836b10e57d1b1d2970eb9fcc49d89f595a5e9c5056f7b497f8d"
+      },
+      "manifest_sha256": "3f327b1528ee5836b10e57d1b1d2970eb9fcc49d89f595a5e9c5056f7b497f8d",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "paint_brush",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "db84b5a25d35a50647d12b25331c5c96fb1867513447bf91439610921a842db5",
+        "source": "db84b5a25d35a50647d12b25331c5c96fb1867513447bf91439610921a842db5",
+        "runtime": "db84b5a25d35a50647d12b25331c5c96fb1867513447bf91439610921a842db5"
+      },
+      "manifest_sha256": "db84b5a25d35a50647d12b25331c5c96fb1867513447bf91439610921a842db5",
+      "registry_status": "available",
+      "consistent": true
+    },
+    {
+      "id": "juice_glass",
+      "record_status": "generated",
+      "has_prompt": true,
+      "prompt_matches_manifest": true,
+      "runtime_parts": {},
+      "runtime_parts_match": true,
+      "hashes": {
+        "generated_original": "e9edf9c4fa642ed2503e205c890382c8b5854a415b84c4beafa72da93d23a30a",
+        "source": "e9edf9c4fa642ed2503e205c890382c8b5854a415b84c4beafa72da93d23a30a",
+        "runtime": "e9edf9c4fa642ed2503e205c890382c8b5854a415b84c4beafa72da93d23a30a"
+      },
+      "manifest_sha256": "e9edf9c4fa642ed2503e205c890382c8b5854a415b84c4beafa72da93d23a30a",
+      "registry_status": "available",
+      "consistent": true
+    }
+  ],
+  "reused_assets": [
+    {
+      "id": "apple",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "47ca6b067860f4d3e3ffa56cb57bd0dbeb209d5bf4a0c98d608c3a9c2cce5a87"
+    },
+    {
+      "id": "boat",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "71f962eadc41b23c2a74f263d02391cee2eeb978ad96a79a6747aa8d5f1ba613"
+    },
+    {
+      "id": "cake",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "b20620d8510f4ad9c30eec5b3e8477d2d321c0bc31d459a9c1729696c46f9447"
+    },
+    {
+      "id": "drum",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "d2251ec453c51da7a846a6d1780ffe29fef978e7e1cee3ebb596f7dc7527da06"
+    },
+    {
+      "id": "egg_shell",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "78edc63fd84ee7d57bb17e75d692bd58b95aca565e3500e79c3e17cf00599afe"
+    },
+    {
+      "id": "flower",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "52db0c6768520dca621f93e2f21e61040c5f25621d8b303878949982d49c5cd4"
+    },
+    {
+      "id": "globe",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "efd66d956c74ee8ed53115c1be4b9df1bb1b0f91932c9bb697e8f17f882c7246"
+    },
+    {
+      "id": "hat",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "df56054e2b563a6d02b615f583fff028659fd71e36970a376f1ade625b0a44a9"
+    },
+    {
+      "id": "ice_cream",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "783a7fb03d8cb0a0fab5b390858a2ab388d65029e86ade88eceaaf2dd10b6c24"
+    },
+    {
+      "id": "jar",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "05d39a15c871ad028e58c0376b7e86e7cc67313cd844b878f30b06fe118d8c3f"
+    },
+    {
+      "id": "kite",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "e1619574fc7d967926f147fdeb2d6ea2fd7d9b4ec2212914f79f29078edcee8f"
+    },
+    {
+      "id": "lantern",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "a43a49d573894a92f872ee516b5bba7e9120500ab514d658660f608bb2620cf1"
+    },
+    {
+      "id": "mushroom",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "6a9e100ecbad94ba949a36f51d0d0057f35aeaf8d40ef16407ec2c0093ca2acd"
+    },
+    {
+      "id": "nest",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "6cc80accb11906af0f37a219ebf81bd01d045295e4bf0878bcec728cf57bab33"
+    },
+    {
+      "id": "owl",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "6f565d80a4ff646540e1d301c319f25f4e966e1264d6aeb08b8e33b19f7bcbec"
+    },
+    {
+      "id": "pumpkin",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "773a497a886266dd9049eebed1bd40c07638949ef3c659457fef7a70de9f3b8b"
+    },
+    {
+      "id": "quilt",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "139045fd69257ae9761fffb4e9af732cdb0bf6e63541962dd57565b4ea89d17b"
+    },
+    {
+      "id": "robot",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "6794830f58ef9e3672936c8270535ea6e728686533155b8042fa252f2dada403"
+    },
+    {
+      "id": "star",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "de135074e3c522c2ea18a84ed06686cfba903439400ce62fd465ce067d948cd4"
+    },
+    {
+      "id": "train",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "be04ba7248fef1b166195be0098d0cc7a4c0c8f35ba1a598046dd2c4427700aa"
+    },
+    {
+      "id": "umbrella",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "4c285ae0052afcd78cb74365987740e5e04622f1422b98c8783623c38f193b57"
+    },
+    {
+      "id": "volcano",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "18a50ce571763b02d7656c38841beb291888335ff9497aefb61ea8c4d8624981"
+    },
+    {
+      "id": "whale",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "23af989f463be23ada6aae174d656e71f70d3d3164ec56e37e44f11276b604cf"
+    },
+    {
+      "id": "xylophone",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "30a0555cd61bc8c0a0b821a8098c07cf65770f32f907ab784cfe935b78209ff3"
+    },
+    {
+      "id": "yarn",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "fea37c0b6f68ebf6bc46e4db6a28c7adf9d88398c08e6de8c91dcc4807482d4f"
+    },
+    {
+      "id": "zebra",
+      "origin": "reused_accepted_storybook_v2_letter",
+      "sha256": "43243d361c6a7e8e8ff9d1289f2fe4194782d8a99335a64642e6c9454d0d3998"
+    },
+    {
+      "id": "book_cover",
+      "origin": "reused_accepted_storybook_v2_prop",
+      "sha256": "1afcdd803ee5a2fdef29ce65d3ac0f333c44c87f9fd9d875f06694850460818d"
+    },
+    {
+      "id": "book_open_base",
+      "origin": "reused_accepted_storybook_v2_prop",
+      "sha256": "8d92c8f8d80242addb052859bcc595d5b20bfe4afe077c884895917de06d5533"
+    },
+    {
+      "id": "book_page_leaf",
+      "origin": "reused_accepted_storybook_v2_prop",
+      "sha256": "d3ad9ca13f314bf44ce6d4757bbbc728973fb25482d2ab5848be93dc486e36f5"
+    },
+    {
+      "id": "drumstick",
+      "origin": "reused_accepted_storybook_v2_prop",
+      "sha256": "b360cbda4c6db4ec87360c2d9a9475493187e06c795f47beba6c811c6744e2f8"
+    },
+    {
+      "id": "football",
+      "origin": "reused_accepted_storybook_v2_prop",
+      "sha256": "c7e24fe99ea0bbbc9d9c9601f6b2500922a9a8a10977e248a8a321d116ea55ee"
+    },
+    {
+      "id": "football_goal_frame",
+      "origin": "reused_accepted_storybook_v2_prop",
+      "sha256": "e548c3eb70fb8ef969bbe45bd8145566dc86931298d104055b2c72e04e92cab0"
+    },
+    {
+      "id": "greeting_door",
+      "origin": "reused_accepted_storybook_v2_prop",
+      "sha256": "c3969d6b4b9981ace35ef1a96e0532f1868c3470829ba5138853dd39b18c221f"
+    },
+    {
+      "id": "greeting_window",
+      "origin": "reused_accepted_storybook_v2_prop",
+      "sha256": "e2bfa629779c7cb3869aee597718ea58e76bed33e413bab7de448bff396f4b62"
+    },
+    {
+      "id": "owl_wing",
+      "origin": "reused_accepted_storybook_v2_prop",
+      "sha256": "c2cd7c810c5e3efee8a31e0e209e290f78f360d4191052c7df1474c9c09f7dd2"
+    },
+    {
+      "id": "reading_table",
+      "origin": "reused_accepted_storybook_v2_prop",
+      "sha256": "ff61df7ad50702a3c45b0c937b02552d43094371004b2832e52b7ca8e535164e"
+    }
+  ],
+  "teen_quantity_review": [
+    {
+      "story_id": "story-9c9185b1b2e0",
+      "word": "eighteen",
+      "expected_counts": [
+        10,
+        8,
+        18,
+        8,
+        18,
+        10,
+        8,
+        18
+      ],
+      "actual_counts": [
+        10,
+        8,
+        18,
+        8,
+        18,
+        10,
+        8,
+        18
+      ],
+      "entities": [
+        "bead"
+      ],
+      "source_actions": [
+        "摆出十颗珠",
+        "添入八颗珠",
+        "转盘分十与八",
+        "用帽檐数八颗",
+        "载两组珠合并",
+        "托住十格",
+        "托住八格",
+        "收拢十八颗"
+      ],
+      "pass": true
+    },
+    {
+      "story_id": "story-253df9962692",
+      "word": "fifteen",
+      "expected_counts": [
+        10,
+        5,
+        15,
+        15,
+        10,
+        5,
+        15
+      ],
+      "actual_counts": [
+        10,
+        5,
+        15,
+        15,
+        10,
+        5,
+        15
+      ],
+      "entities": [
+        "bead"
+      ],
+      "source_actions": [
+        "托出十颗珠",
+        "再加五颗",
+        "把两组排好",
+        "载到计数板",
+        "托十格",
+        "托五格",
+        "收齐十五颗"
+      ],
+      "pass": true
+    },
+    {
+      "story_id": "story-9da1d75c60ff",
+      "word": "fourteen",
+      "expected_counts": [
+        10,
+        4,
+        14,
+        14,
+        14,
+        10,
+        4,
+        14
+      ],
+      "actual_counts": [
+        10,
+        4,
+        14,
+        14,
+        14,
+        10,
+        4,
+        14
+      ],
+      "entities": [
+        "bead"
+      ],
+      "source_actions": [
+        "托十颗珠",
+        "添四颗",
+        "托起两组",
+        "夹住计数板",
+        "载到桌前",
+        "盖十格",
+        "盖四格",
+        "数齐十四颗"
+      ],
+      "pass": true
+    },
+    {
+      "story_id": "story-ec0cc91250ed",
+      "word": "nineteen",
+      "expected_counts": [
+        10,
+        9,
+        19,
+        19,
+        19,
+        10,
+        9,
+        19
+      ],
+      "actual_counts": [
+        10,
+        9,
+        19,
+        19,
+        19,
+        10,
+        9,
+        19
+      ],
+      "entities": [
+        "bead"
+      ],
+      "source_actions": [
+        "托十颗珠",
+        "添九颗",
+        "把两组排好",
+        "盖住计数盘",
+        "载到桌前",
+        "托住十格",
+        "托住九格",
+        "数齐十九颗"
+      ],
+      "pass": true
+    },
+    {
+      "story_id": "story-5325410d5322",
+      "word": "seventeen",
+      "expected_counts": [
+        10,
+        7,
+        17,
+        17,
+        10,
+        17,
+        7,
+        17,
+        17
+      ],
+      "actual_counts": [
+        10,
+        7,
+        17,
+        17,
+        10,
+        17,
+        7,
+        17,
+        17
+      ],
+      "entities": [
+        "bead"
+      ],
+      "source_actions": [
+        "照出十格",
+        "添七颗珠",
+        "围起两组",
+        "盖好计数盘",
+        "接住十格端",
+        "载到桌前",
+        "托住七格",
+        "再确认无多珠",
+        "数齐十七颗"
+      ],
+      "pass": true
+    },
+    {
+      "story_id": "story-76e41c17c37f",
+      "word": "sixteen",
+      "expected_counts": [
+        10,
+        6,
+        6,
+        16,
+        10,
+        6,
+        16
+      ],
+      "actual_counts": [
+        10,
+        6,
+        6,
+        16,
+        10,
+        6,
+        16
+      ],
+      "entities": [
+        "bead"
+      ],
+      "source_actions": [
+        "照出十颗珠",
+        "再添六颗",
+        "敲六下确认",
+        "载两组到计数板",
+        "托住十格",
+        "托住六格",
+        "数齐十六颗"
+      ],
+      "pass": true
+    },
+    {
+      "story_id": "story-4e609a747705",
+      "word": "thirteen",
+      "expected_counts": [
+        10,
+        3,
+        13,
+        13,
+        13,
+        10,
+        3,
+        13
+      ],
+      "actual_counts": [
+        10,
+        3,
+        13,
+        13,
+        13,
+        10,
+        3,
+        13
+      ],
+      "entities": [
+        "bead"
+      ],
+      "source_actions": [
+        "载十颗珠",
+        "加三颗珠",
+        "分成十与三",
+        "夹住计数板",
+        "载到桌前",
+        "托住十格",
+        "托住三格",
+        "数齐十三颗"
+      ],
+      "pass": true
+    }
+  ],
+  "recorded_file_checks": [
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\A.png",
+      "kind": "reused_story_asset",
+      "sha256": "47ca6b067860f4d3e3ffa56cb57bd0dbeb209d5bf4a0c98d608c3a9c2cce5a87",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v1\\B.png",
+      "kind": "reused_story_asset",
+      "sha256": "71f962eadc41b23c2a74f263d02391cee2eeb978ad96a79a6747aa8d5f1ba613",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\C.png",
+      "kind": "reused_story_asset",
+      "sha256": "b20620d8510f4ad9c30eec5b3e8477d2d321c0bc31d459a9c1729696c46f9447",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\D.png",
+      "kind": "reused_story_asset",
+      "sha256": "d2251ec453c51da7a846a6d1780ffe29fef978e7e1cee3ebb596f7dc7527da06",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\E.png",
+      "kind": "reused_story_asset",
+      "sha256": "78edc63fd84ee7d57bb17e75d692bd58b95aca565e3500e79c3e17cf00599afe",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\F.png",
+      "kind": "reused_story_asset",
+      "sha256": "52db0c6768520dca621f93e2f21e61040c5f25621d8b303878949982d49c5cd4",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\G.png",
+      "kind": "reused_story_asset",
+      "sha256": "efd66d956c74ee8ed53115c1be4b9df1bb1b0f91932c9bb697e8f17f882c7246",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\H.png",
+      "kind": "reused_story_asset",
+      "sha256": "df56054e2b563a6d02b615f583fff028659fd71e36970a376f1ade625b0a44a9",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\I.png",
+      "kind": "reused_story_asset",
+      "sha256": "783a7fb03d8cb0a0fab5b390858a2ab388d65029e86ade88eceaaf2dd10b6c24",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\J.png",
+      "kind": "reused_story_asset",
+      "sha256": "05d39a15c871ad028e58c0376b7e86e7cc67313cd844b878f30b06fe118d8c3f",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v1\\K.png",
+      "kind": "reused_story_asset",
+      "sha256": "e1619574fc7d967926f147fdeb2d6ea2fd7d9b4ec2212914f79f29078edcee8f",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\L.png",
+      "kind": "reused_story_asset",
+      "sha256": "a43a49d573894a92f872ee516b5bba7e9120500ab514d658660f608bb2620cf1",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\M.png",
+      "kind": "reused_story_asset",
+      "sha256": "6a9e100ecbad94ba949a36f51d0d0057f35aeaf8d40ef16407ec2c0093ca2acd",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\N.png",
+      "kind": "reused_story_asset",
+      "sha256": "6cc80accb11906af0f37a219ebf81bd01d045295e4bf0878bcec728cf57bab33",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v1\\O.png",
+      "kind": "reused_story_asset",
+      "sha256": "6f565d80a4ff646540e1d301c319f25f4e966e1264d6aeb08b8e33b19f7bcbec",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\P.png",
+      "kind": "reused_story_asset",
+      "sha256": "773a497a886266dd9049eebed1bd40c07638949ef3c659457fef7a70de9f3b8b",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\Q.png",
+      "kind": "reused_story_asset",
+      "sha256": "139045fd69257ae9761fffb4e9af732cdb0bf6e63541962dd57565b4ea89d17b",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\R.png",
+      "kind": "reused_story_asset",
+      "sha256": "6794830f58ef9e3672936c8270535ea6e728686533155b8042fa252f2dada403",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\S.png",
+      "kind": "reused_story_asset",
+      "sha256": "de135074e3c522c2ea18a84ed06686cfba903439400ce62fd465ce067d948cd4",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\T.png",
+      "kind": "reused_story_asset",
+      "sha256": "be04ba7248fef1b166195be0098d0cc7a4c0c8f35ba1a598046dd2c4427700aa",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\U.png",
+      "kind": "reused_story_asset",
+      "sha256": "4c285ae0052afcd78cb74365987740e5e04622f1422b98c8783623c38f193b57",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\V.png",
+      "kind": "reused_story_asset",
+      "sha256": "18a50ce571763b02d7656c38841beb291888335ff9497aefb61ea8c4d8624981",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\W.png",
+      "kind": "reused_story_asset",
+      "sha256": "23af989f463be23ada6aae174d656e71f70d3d3164ec56e37e44f11276b604cf",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\X.png",
+      "kind": "reused_story_asset",
+      "sha256": "30a0555cd61bc8c0a0b821a8098c07cf65770f32f907ab784cfe935b78209ff3",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\Y.png",
+      "kind": "reused_story_asset",
+      "sha256": "fea37c0b6f68ebf6bc46e4db6a28c7adf9d88398c08e6de8c91dcc4807482d4f",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\Z.png",
+      "kind": "reused_story_asset",
+      "sha256": "43243d361c6a7e8e8ff9d1289f2fe4194782d8a99335a64642e6c9454d0d3998",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\props\\book_cover.png",
+      "kind": "reused_story_asset",
+      "sha256": "1afcdd803ee5a2fdef29ce65d3ac0f333c44c87f9fd9d875f06694850460818d",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\props\\book_open_base.png",
+      "kind": "reused_story_asset",
+      "sha256": "8d92c8f8d80242addb052859bcc595d5b20bfe4afe077c884895917de06d5533",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\props\\book_page_leaf.png",
+      "kind": "reused_story_asset",
+      "sha256": "d3ad9ca13f314bf44ce6d4757bbbc728973fb25482d2ab5848be93dc486e36f5",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\props\\drumstick.png",
+      "kind": "reused_story_asset",
+      "sha256": "b360cbda4c6db4ec87360c2d9a9475493187e06c795f47beba6c811c6744e2f8",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\props\\football.png",
+      "kind": "reused_story_asset",
+      "sha256": "c7e24fe99ea0bbbc9d9c9601f6b2500922a9a8a10977e248a8a321d116ea55ee",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\props\\football_goal_frame.png",
+      "kind": "reused_story_asset",
+      "sha256": "e548c3eb70fb8ef969bbe45bd8145566dc86931298d104055b2c72e04e92cab0",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\props\\greeting_door.png",
+      "kind": "reused_story_asset",
+      "sha256": "c3969d6b4b9981ace35ef1a96e0532f1868c3470829ba5138853dd39b18c221f",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\props\\greeting_window.png",
+      "kind": "reused_story_asset",
+      "sha256": "e2bfa629779c7cb3869aee597718ea58e76bed33e413bab7de448bff396f4b62",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\props\\owl_wing.png",
+      "kind": "reused_story_asset",
+      "sha256": "c2cd7c810c5e3efee8a31e0e209e290f78f360d4191052c7df1474c9c09f7dd2",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\props\\reading_table.png",
+      "kind": "reused_story_asset",
+      "sha256": "ff61df7ad50702a3c45b0c937b02552d43094371004b2832e52b7ca8e535164e",
+      "matches_record": true
+    },
+    {
+      "path": "scripts\\build_world_art_v3.py",
+      "kind": "world_source_script",
+      "sha256": "bf79716eb10311d334439181185422770f830abc19a71228b36c7c34eef399d4",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\world_props_v3.blend",
+      "kind": "world_editable_source",
+      "sha256": "8709debefd1418aa9680c2236058da381ebacd1f67c89bf43ce1341e9704400c",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\apple.glb",
+      "kind": "world_source_glb",
+      "sha256": "9f90ef1872d49cc7cb1ae63370dbdcdab6439e543e51d9f57db7d66c9abe9c7f",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\apple.glb",
+      "kind": "world_runtime_glb",
+      "sha256": "9f90ef1872d49cc7cb1ae63370dbdcdab6439e543e51d9f57db7d66c9abe9c7f",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\basket.glb",
+      "kind": "world_source_glb",
+      "sha256": "eccbde6de004a8c4907a47686a14e2dc81a032adac56ff27cf2783f94d3bec77",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\basket.glb",
+      "kind": "world_runtime_glb",
+      "sha256": "eccbde6de004a8c4907a47686a14e2dc81a032adac56ff27cf2783f94d3bec77",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\cake.glb",
+      "kind": "world_source_glb",
+      "sha256": "ffee7fea9d0b121d3e645e87001247b953547b2b5467da15176f6a89737f8ffb",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\cake.glb",
+      "kind": "world_runtime_glb",
+      "sha256": "ffee7fea9d0b121d3e645e87001247b953547b2b5467da15176f6a89737f8ffb",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\book.glb",
+      "kind": "world_source_glb",
+      "sha256": "86507f1942d1fcf78d11643bfeb700b332b5c9baacb6e52423403a530390846d",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\book.glb",
+      "kind": "world_runtime_glb",
+      "sha256": "86507f1942d1fcf78d11643bfeb700b332b5c9baacb6e52423403a530390846d",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\invitation.glb",
+      "kind": "world_source_glb",
+      "sha256": "a3f5cfadc89f286d614a06f243397876d78912201e8f99eff337de287656456e",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\invitation.glb",
+      "kind": "world_runtime_glb",
+      "sha256": "a3f5cfadc89f286d614a06f243397876d78912201e8f99eff337de287656456e",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\nameplate.glb",
+      "kind": "world_source_glb",
+      "sha256": "3b86dbc70c1d2d75ad73171d1cef0530994cfabe1344f09306d1507ceb5454d0",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\nameplate.glb",
+      "kind": "world_runtime_glb",
+      "sha256": "3b86dbc70c1d2d75ad73171d1cef0530994cfabe1344f09306d1507ceb5454d0",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\bark_detail.png",
+      "kind": "world_source_texture",
+      "sha256": "8b788ed4d17d1452613315fded3f9c8166d1eb2ac5e75310856007386ec317bf",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\bark_detail.png",
+      "kind": "world_runtime_texture",
+      "sha256": "8b788ed4d17d1452613315fded3f9c8166d1eb2ac5e75310856007386ec317bf",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\bark_normal.png",
+      "kind": "world_source_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\bark_normal.png",
+      "kind": "world_runtime_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\cloth_detail.png",
+      "kind": "world_source_texture",
+      "sha256": "9e3cd72ec1a01c133696707210278b72e9fb84410622bfd1efd27381da861517",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\cloth_detail.png",
+      "kind": "world_runtime_texture",
+      "sha256": "9e3cd72ec1a01c133696707210278b72e9fb84410622bfd1efd27381da861517",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\cloth_normal.png",
+      "kind": "world_source_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\cloth_normal.png",
+      "kind": "world_runtime_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\foliage_detail.png",
+      "kind": "world_source_texture",
+      "sha256": "5bc9800028e477bed6c0e38667f7163d35baff2a414c013e08124738b3d68e7e",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\foliage_detail.png",
+      "kind": "world_runtime_texture",
+      "sha256": "5bc9800028e477bed6c0e38667f7163d35baff2a414c013e08124738b3d68e7e",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\foliage_normal.png",
+      "kind": "world_source_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\foliage_normal.png",
+      "kind": "world_runtime_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\paper_detail.png",
+      "kind": "world_source_texture",
+      "sha256": "15327160da30472c79f56847edca136cf42acf00095b51c623c0e65d44fb8d26",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\paper_detail.png",
+      "kind": "world_runtime_texture",
+      "sha256": "15327160da30472c79f56847edca136cf42acf00095b51c623c0e65d44fb8d26",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\paper_normal.png",
+      "kind": "world_source_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\paper_normal.png",
+      "kind": "world_runtime_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\plaster_detail.png",
+      "kind": "world_source_texture",
+      "sha256": "b37bc9453ca063fe033a05638ab61a2fbd7d7ef5aae49075221b937b48bc7a25",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\plaster_detail.png",
+      "kind": "world_runtime_texture",
+      "sha256": "b37bc9453ca063fe033a05638ab61a2fbd7d7ef5aae49075221b937b48bc7a25",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\plaster_normal.png",
+      "kind": "world_source_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\plaster_normal.png",
+      "kind": "world_runtime_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\wood_detail.png",
+      "kind": "world_source_texture",
+      "sha256": "79473a987f3d4d2e8e4c019e9ad703af85cf4c6d04da2387facec3a92dfe347a",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\wood_detail.png",
+      "kind": "world_runtime_texture",
+      "sha256": "79473a987f3d4d2e8e4c019e9ad703af85cf4c6d04da2387facec3a92dfe347a",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\world_refresh_v3\\textures\\wood_normal.png",
+      "kind": "world_source_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\world_refresh_v3\\wood_normal.png",
+      "kind": "world_runtime_texture",
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\verification\\art-finish-v3\\world-headless.json",
+      "kind": "world_report",
+      "sha256": "a3bdb1ef649842d2e04aa8cf4398cf335ecff99e0a580613aef06fafef7716ce",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\verification\\art-finish-v3\\world-native-1440x900.json",
+      "kind": "world_report",
+      "sha256": "a17185ba067d085fd56ea138394babc9dc4f9e1f89d28fdd2de59d0f4178c724",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\screenshots\\art-finish-v3\\1440x900\\world\\landmark_A-A_Entrance_Basket.png",
+      "kind": "world_capture",
+      "sha256": "1dd590ef655783d2a2e6257b8a865685c5e3ef1eee3ae481c75c1222416ad734",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\screenshots\\art-finish-v3\\1440x900\\world\\landmark_A-A_Tree_3_Fruit_0.png",
+      "kind": "world_capture",
+      "sha256": "3da0df1204f2e6ad2c5dfbbf4b6d4bc3313edb2d5ce404d660fda9d4db9b1633",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\screenshots\\art-finish-v3\\1440x900\\world\\landmark_C-Pickup_Cake_Layer.png",
+      "kind": "world_capture",
+      "sha256": "41743cf8fa48b1b5c81c864939888e386887d3df20d1a855f0e17bb81f475cba",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\screenshots\\art-finish-v3\\1440x900\\world\\classroom-Pupil_Book.png",
+      "kind": "world_capture",
+      "sha256": "bbdb3b2995f8ad6d191c4df29b5c03bb15682299dbb21d66f9f4ca4971687af8",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\screenshots\\art-finish-v3\\1440x900\\world\\home-Desk_Journal.png",
+      "kind": "world_capture",
+      "sha256": "10e4a161b2ed9fca88f134db639c0ba2b5c89b78d507ed3d25caf6d9544802d1",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\verification\\art-finish-v3\\world-native-960x640.json",
+      "kind": "world_report",
+      "sha256": "f00f12d284a5f2f8d9ddb5d2bf44cd11caf9871ea9f0bff0b53a5f84bc7f4245",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\screenshots\\art-finish-v3\\960x640\\world\\landmark_A-A_Entrance_Basket.png",
+      "kind": "world_capture",
+      "sha256": "fa796ee528acc949059ca1b7223b994388f24d736c674cfbfb89a34432bd368b",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\screenshots\\art-finish-v3\\960x640\\world\\landmark_A-A_Tree_3_Fruit_0.png",
+      "kind": "world_capture",
+      "sha256": "53190996eabcf0c77311a55aae7c2780496912d9ef530797276813fab799db09",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\screenshots\\art-finish-v3\\960x640\\world\\landmark_C-Pickup_Cake_Layer.png",
+      "kind": "world_capture",
+      "sha256": "f3eed91e9cfb9e75abc18ca747fd6e7821002ab6fc885a54ccc35e78b6c4e363",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\screenshots\\art-finish-v3\\960x640\\world\\classroom-Pupil_Book.png",
+      "kind": "world_capture",
+      "sha256": "b988d3b7e3dc7598cb00a4f1b839da6fa47f557666d331cb7e83d4346741bf5f",
+      "matches_record": true
+    },
+    {
+      "path": "docs\\screenshots\\art-finish-v3\\960x640\\world\\home-Desk_Journal.png",
+      "kind": "world_capture",
+      "sha256": "197fb2c25bd6347ffecd38ad02d6f9bc834243a3388a25da70a9648c6f13e2e9",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\seashell.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "c0ba25deee7ab9062c578e2e2cdeebb37094c24d0c0b1b44ebd8330201cfa9da",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\flowerpot.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "1d1bb0ad3674b702a527316e6d3a7a8443040b2e2f23d17c4075a36032f9a3b9",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\bookshelf.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "f4725cbe39f3238b70464368dfb00fa10636507095620ba7fabe6c44b1f6bb9c",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\mirror.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "4580848cc0a3ac5dc938686d7968cf3765db10d6281b4875fa865543cb64b792",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\tablecloth.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "bf3fdaa60be0f24bd2e6d9cce91ece58845c675cbcdc48d4046caa9e5330eef2",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\thermometer.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "602c87c1ddcf1319620174c9a30069f108ac5fa43d10345d632eff783ce50bc3",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\sofa.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "c76ab86d176c7e28d2cfa502279d41bcaa6a6c7d958f33eff0e0a52283193e25",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\blocks.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "b2486f884dc5ca788422aa19a13554c8323739e494222724a14d4a8de2673507",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\hourglass.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "191bce5df834f623c153c7a7ad8e11d5f11a0c524b1a93f44dab09b3117398cc",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\envelope.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "df5066cf24029b2b688f50e99a92c63a36224d75f3688043a6084dfd334999f5",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\balloon.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "45e31371bb8c6ee51e8ef650e3464af3ed093b3740f87949a23a90102c137ca7",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\blackboard.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "f68ffb95a114755ea3568620dc65cc9ba8ac2f19525c40846a050588cf5e921f",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\cola.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "fdbe824ae5631a3e4bd1e8c77dfc4e4e42336706dc4542cf5c096819b49eb29a",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\grass_patch.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "a39f2b8497e632b2cd126c148470c90d3180c41468f0a53b51d76a6ff63f4d25",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\wall_section.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "fc4201d33792d03609efa265360b18f5a648378a4fcb269e36c2f2193667e4d1",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\feather.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "03c11b916dc809c7af90a6b3a4d7e1d46748f5682e7a34ada6f9f5a755f0588b",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\garland.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "93149d06313148b779a792afc00316b3c5502fc823c03187cee2f3bccace97dc",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\mask.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "7b36bffd3daf477f031facf5dee2fd28d7fb959506ed96e0ccdb06b88d0a29f7",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\paper_cup.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "16b3d6fd85b59d62714f4067763717f925616110aaa4dd68fc90241aeec32327",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\staircase.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "76714c8987efb215509f5f4573160de45c20fa92c29107abf1d304e30d0da87e",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\towel.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "a6bd5e7c160722fa0d2a6db4cceada8cf78fd392cc447d415b57bae5051ac004",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\wheel.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "8fd0efc8375cf778a4a7d708a77196b338ff9e8fbfd043ce86a5980afa0e38ae",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\balance_scale.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "4455b02f10873d1d6b595a7b95e370db2f2a3bbde88c48ba36e77fb053e0c1ff",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\wristwatch.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "b3185104bb8c713898b7627f773442cb9763156ed3e2077cc1f4a3256fdfb6f2",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\steamship.png",
+      "kind": "root-png-alpha-review.json",
+      "sha256": "67ad12c272bd76613b0fb384d8b35be1188ca1c016f4fd726fb4ffbfffa4ec36",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\seashell.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "c0ba25deee7ab9062c578e2e2cdeebb37094c24d0c0b1b44ebd8330201cfa9da",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\flowerpot.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "1d1bb0ad3674b702a527316e6d3a7a8443040b2e2f23d17c4075a36032f9a3b9",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\bookshelf.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "f4725cbe39f3238b70464368dfb00fa10636507095620ba7fabe6c44b1f6bb9c",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\mirror.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "4580848cc0a3ac5dc938686d7968cf3765db10d6281b4875fa865543cb64b792",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\tablecloth.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "bf3fdaa60be0f24bd2e6d9cce91ece58845c675cbcdc48d4046caa9e5330eef2",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\thermometer.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "602c87c1ddcf1319620174c9a30069f108ac5fa43d10345d632eff783ce50bc3",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\sofa.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "c76ab86d176c7e28d2cfa502279d41bcaa6a6c7d958f33eff0e0a52283193e25",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\blocks.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "b2486f884dc5ca788422aa19a13554c8323739e494222724a14d4a8de2673507",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\hourglass.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "191bce5df834f623c153c7a7ad8e11d5f11a0c524b1a93f44dab09b3117398cc",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\envelope.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "df5066cf24029b2b688f50e99a92c63a36224d75f3688043a6084dfd334999f5",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\balloon.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "45e31371bb8c6ee51e8ef650e3464af3ed093b3740f87949a23a90102c137ca7",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\blackboard.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "f68ffb95a114755ea3568620dc65cc9ba8ac2f19525c40846a050588cf5e921f",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\cola.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "fdbe824ae5631a3e4bd1e8c77dfc4e4e42336706dc4542cf5c096819b49eb29a",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\grass_patch.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "a39f2b8497e632b2cd126c148470c90d3180c41468f0a53b51d76a6ff63f4d25",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\wall_section.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "fc4201d33792d03609efa265360b18f5a648378a4fcb269e36c2f2193667e4d1",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\feather.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "03c11b916dc809c7af90a6b3a4d7e1d46748f5682e7a34ada6f9f5a755f0588b",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\garland.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "93149d06313148b779a792afc00316b3c5502fc823c03187cee2f3bccace97dc",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\mask.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "7b36bffd3daf477f031facf5dee2fd28d7fb959506ed96e0ccdb06b88d0a29f7",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\paper_cup.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "16b3d6fd85b59d62714f4067763717f925616110aaa4dd68fc90241aeec32327",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\staircase.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "76714c8987efb215509f5f4573160de45c20fa92c29107abf1d304e30d0da87e",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\towel.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "a6bd5e7c160722fa0d2a6db4cceada8cf78fd392cc447d415b57bae5051ac004",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\wheel.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "8fd0efc8375cf778a4a7d708a77196b338ff9e8fbfd043ce86a5980afa0e38ae",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\balance_scale.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "4455b02f10873d1d6b595a7b95e370db2f2a3bbde88c48ba36e77fb053e0c1ff",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\wristwatch.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "b3185104bb8c713898b7627f773442cb9763156ed3e2077cc1f4a3256fdfb6f2",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\steamship.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "67ad12c272bd76613b0fb384d8b35be1188ca1c016f4fd726fb4ffbfffa4ec36",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\turkey.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "e823804db4bf1843c4b79ac5dbb53f8f5838dff5ae10149a7d035ab4d93d4d51",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\subway.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "c22763cf9302519bf27266946f0d4ab522ef6a4ab5f05dd32e67ccc2dfafecbf",
+      "matches_record": true
+    },
+    {
+      "path": "assets\\art\\story_props_v3\\source\\lion_dance.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "1676c82441668872e748b6ebd1e0f7df89f167292429659365ce12d4647861ff",
+      "matches_record": true
+    },
+    {
+      "path": "game\\assets\\learning\\storybook_v2\\J.png",
+      "kind": "root-png-visual-review.json",
+      "sha256": "05d39a15c871ad028e58c0376b7e86e7cc67313cd844b878f30b06fe118d8c3f",
+      "matches_record": true
+    }
+  ],
+  "root_review_reports": [
+    {
+      "path": "docs\\verification\\art-finish-v3\\root-png-alpha-review.json",
+      "sha256": "ac93e7d602840993d5ae74cb8d1f945d2dbe343578c78e2235572cf23f30310a",
+      "asset_hashes_checked": 25
+    },
+    {
+      "path": "docs\\verification\\art-finish-v3\\root-png-visual-review.json",
+      "sha256": "2994251c76a502f3e64a1ec2df65d7c2b9214f8b3ace9f5892e76c488942c4f6",
+      "asset_hashes_checked": 29
+    }
+  ],
+  "errors": [],
+  "limits": [
+    "Known semantic rules and reviewed quantities do not establish exhaustive natural-language correctness.",
+    "Source and runtime byte identity does not establish on-screen readability, animation contact or performance.",
+    "Violin string count is completed with four runtime lines over an image-generated body; final rendered acceptance belongs to the engine validation report.",
+    "This is a hash-bound snapshot. Rerun after replacing any source image or registry."
+  ]
+}

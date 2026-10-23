@@ -1,0 +1,283 @@
+{
+  "room_id": "home_study",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "电脑书桌",
+      "position_blender": [
+        -4.8,
+        2.5,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        -2.5
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_study_01",
+      "activity": "看看电脑能帮我们做什么；这里的问候只发生在游戏里。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "绘本书架",
+      "position_blender": [
+        0.0,
+        3.6,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -3.6
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_study_02",
+      "activity": "把读完的书放回书架，再挑一个故事。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "靠窗阅读座",
+      "position_blender": [
+        4.8,
+        2.4,
+        0.0
+      ],
+      "position_godot": [
+        4.8,
+        0.0,
+        -2.4
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_study_03",
+      "activity": "晚上坐下来读一会儿书。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "文具整理桌",
+      "position_blender": [
+        -3.0,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        -3.0,
+        0.0,
+        3.9
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_study_04",
+      "activity": "找一找铅笔盒，把文具放到合适的位置。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "贺卡手工台",
+      "position_blender": [
+        3.3,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        3.3,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_study_05",
+      "activity": "画一张送给家人的卡片，表达自己的心意。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Computer_Desk",
+      "aabb_blender": [
+        -6.300000190734863,
+        3.8999998569488525,
+        -0.06000000238418579,
+        -3.3000001907348633,
+        5.299999713897705,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Reading_Bookcase",
+      "aabb_blender": [
+        -1.6699999570846558,
+        5.174999713897705,
+        0.0,
+        1.6699999570846558,
+        6.025000095367432,
+        2.9000000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Reading_Armchair",
+      "aabb_blender": [
+        3.950000286102295,
+        3.500000238418579,
+        0.0,
+        5.650000095367432,
+        5.100000381469727,
+        1.399999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Pencil_Desk",
+      "aabb_blender": [
+        -6.25,
+        -4.799999713897705,
+        -0.06000000238418579,
+        -3.9499998092651367,
+        -3.3999998569488525,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Card_Making_Desk",
+      "aabb_blender": [
+        3.700000047683716,
+        -4.75,
+        -0.06000000238418579,
+        6.300000190734863,
+        -3.25,
+        1.059999942779541
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 191,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 2180948,
+  "glb_node_count": 204,
+  "triangles_instanced": 54808,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "e07354ad593632de71484be9639b78e506c7bd20da50b793a5f8fb8c103e8607",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/home_study/home_study_v01.blend",
+  "source_blend_preserved": false
+}

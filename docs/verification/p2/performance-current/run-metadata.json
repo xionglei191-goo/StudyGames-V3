@@ -1,0 +1,70 @@
+{
+  "command": [
+    "F:\\Tools\\Godot\\4.7.2\\Godot_v4.7.2-stable_win64.exe",
+    "--path",
+    "F:\\LoveStudy\\game",
+    "--script",
+    "res://tests/test_p1_performance.gd",
+    "--",
+    "--test-harness",
+    "--p1-output=F:/LoveStudy/docs/verification/p2/performance-current",
+    "--p1-duration=60",
+    "--p1-warmup=10",
+    "--p1-repeats=2",
+    "--p1-rooms=landmark_A,village,school",
+    "--p1-width=1440",
+    "--p1-height=900",
+    "--p1-weather=clear",
+    "--p1-day-phase=day",
+    "--p1-motion-seconds=0",
+    "--p1-motion-fps=4",
+    "--p1-allow-background"
+  ],
+  "pilot": false,
+  "conflicting_processes": [],
+  "started_utc": "2026-10-22T17:10:10.664009+00:00",
+  "memory_sample_interval_s": 0.25,
+  "output": "F:\\LoveStudy\\docs\\verification\\p2\\performance-current",
+  "gpu_conditions_before": {
+    "available": true,
+    "fields": [
+      "name",
+      "driver_version",
+      "pstate",
+      "temperature.gpu",
+      "utilization.gpu",
+      "clocks.current.graphics",
+      "clocks.current.memory",
+      "power.draw"
+    ],
+    "raw_csv": "NVIDIA GeForce RTX 4070, 610.88, P8, 42, 0, 210, 405, 4.76",
+    "error": "",
+    "epoch": 1792689011.3285587,
+    "scope": "pre_or_post_snapshot_only_not_continuous_throttling_verification"
+  },
+  "memory_process_id": 36352,
+  "returncode": 0,
+  "timed_out": false,
+  "elapsed_s": 866.140999999996,
+  "ended_utc": "2026-10-22T17:24:37.513073+00:00",
+  "memory_errors": [],
+  "source_files_unchanged": true,
+  "gpu_conditions_after": {
+    "available": true,
+    "fields": [
+      "name",
+      "driver_version",
+      "pstate",
+      "temperature.gpu",
+      "utilization.gpu",
+      "clocks.current.graphics",
+      "clocks.current.memory",
+      "power.draw"
+    ],
+    "raw_csv": "NVIDIA GeForce RTX 4070, 610.88, P5, 50, 0, 615, 810, 13.28",
+    "error": "",
+    "epoch": 1792689877.5943148,
+    "scope": "pre_or_post_snapshot_only_not_continuous_throttling_verification"
+  },
+  "runtime_error_lines": []
+}

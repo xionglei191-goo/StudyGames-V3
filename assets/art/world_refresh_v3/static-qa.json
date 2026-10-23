@@ -1,0 +1,401 @@
+{
+  "status": "PASS",
+  "scope": "static GLB data, resource hashes, source map inventory; no engine acceptance",
+  "assets": [
+    {
+      "id": "apple",
+      "triangles": 1924,
+      "degenerate_triangles": 0,
+      "nonfinite_vectors": 0,
+      "bad_unit_normals": 0,
+      "missing_attributes": [],
+      "external_images": [],
+      "sha256": "9f90ef1872d49cc7cb1ae63370dbdcdab6439e543e51d9f57db7d66c9abe9c7f",
+      "bytes": 69640
+    },
+    {
+      "id": "basket",
+      "triangles": 22648,
+      "degenerate_triangles": 0,
+      "nonfinite_vectors": 0,
+      "bad_unit_normals": 0,
+      "missing_attributes": [],
+      "external_images": [],
+      "sha256": "eccbde6de004a8c4907a47686a14e2dc81a032adac56ff27cf2783f94d3bec77",
+      "bytes": 923984
+    },
+    {
+      "id": "cake",
+      "triangles": 11716,
+      "degenerate_triangles": 0,
+      "nonfinite_vectors": 0,
+      "bad_unit_normals": 0,
+      "missing_attributes": [],
+      "external_images": [],
+      "sha256": "ffee7fea9d0b121d3e645e87001247b953547b2b5467da15176f6a89737f8ffb",
+      "bytes": 418060
+    },
+    {
+      "id": "book",
+      "triangles": 2304,
+      "degenerate_triangles": 0,
+      "nonfinite_vectors": 0,
+      "bad_unit_normals": 0,
+      "missing_attributes": [],
+      "external_images": [],
+      "sha256": "86507f1942d1fcf78d11643bfeb700b332b5c9baacb6e52423403a530390846d",
+      "bytes": 140224
+    },
+    {
+      "id": "invitation",
+      "triangles": 1472,
+      "degenerate_triangles": 0,
+      "nonfinite_vectors": 0,
+      "bad_unit_normals": 0,
+      "missing_attributes": [],
+      "external_images": [],
+      "sha256": "a3f5cfadc89f286d614a06f243397876d78912201e8f99eff337de287656456e",
+      "bytes": 54760
+    },
+    {
+      "id": "nameplate",
+      "triangles": 940,
+      "degenerate_triangles": 0,
+      "nonfinite_vectors": 0,
+      "bad_unit_normals": 0,
+      "missing_attributes": [],
+      "external_images": [],
+      "sha256": "3b86dbc70c1d2d75ad73171d1cef0530994cfabe1344f09306d1507ceb5454d0",
+      "bytes": 46284
+    }
+  ],
+  "textures": [
+    {
+      "file": "bark_detail.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "8b788ed4d17d1452613315fded3f9c8166d1eb2ac5e75310856007386ec317bf"
+    },
+    {
+      "file": "bark_normal.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639"
+    },
+    {
+      "file": "cloth_detail.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "9e3cd72ec1a01c133696707210278b72e9fb84410622bfd1efd27381da861517"
+    },
+    {
+      "file": "cloth_normal.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639"
+    },
+    {
+      "file": "foliage_detail.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "5bc9800028e477bed6c0e38667f7163d35baff2a414c013e08124738b3d68e7e"
+    },
+    {
+      "file": "foliage_normal.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639"
+    },
+    {
+      "file": "paper_detail.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "15327160da30472c79f56847edca136cf42acf00095b51c623c0e65d44fb8d26"
+    },
+    {
+      "file": "paper_normal.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639"
+    },
+    {
+      "file": "plaster_detail.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "b37bc9453ca063fe033a05638ab61a2fbd7d7ef5aae49075221b937b48bc7a25"
+    },
+    {
+      "file": "plaster_normal.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639"
+    },
+    {
+      "file": "wood_detail.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "79473a987f3d4d2e8e4c019e9ad703af85cf4c6d04da2387facec3a92dfe347a"
+    },
+    {
+      "file": "wood_normal.png",
+      "size": [
+        256,
+        256
+      ],
+      "sha256": "ab5140637b7f6192e92fac400e32e957c8a7b1682cddd128e96e0bfbaef50639"
+    }
+  ],
+  "protected_rooms": [
+    {
+      "room": "art_room",
+      "protected_source_sha256": "de263fcb6e40135620f3ab43be79ef5bb4a8d61f12618408695475f1857bf60f",
+      "markers": 20,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "canteen",
+      "protected_source_sha256": "804ea0efe864c16b39c5843860990ed1dfb69caf6f3793b7a8b49afc2f19df75",
+      "markers": 21,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "classroom",
+      "protected_source_sha256": "c5e2b9d4017c871239ae59b33f619b2ef0528ff4c76ef7631587127fcb554379",
+      "markers": 22,
+      "replacement_candidates": {
+        "book": 3
+      }
+    },
+    {
+      "room": "football_field",
+      "protected_source_sha256": "1b3f0faf59c8f319212ad605df8b670a4aa885a34be2bfb727e71cc30afff21d",
+      "markers": 37,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "home",
+      "protected_source_sha256": "0c2964b6327ff8bd2d0328550d3e5fe8d3dd7fe203b1ec6841918327941d9629",
+      "markers": 133,
+      "replacement_candidates": {
+        "book": 1,
+        "basket": 2,
+        "apple": 3
+      }
+    },
+    {
+      "room": "landmark_A",
+      "protected_source_sha256": "9917caa337ac8a1eba79053213e57ddbded09963237eedfa2a6d121bf00930a3",
+      "markers": 152,
+      "replacement_candidates": {
+        "apple": 39,
+        "basket": 1
+      }
+    },
+    {
+      "room": "landmark_B",
+      "protected_source_sha256": "2ea13ca82b5608f87228d807ee2dc9aefa6d16c0b8c94047c54abdcd3672e666",
+      "markers": 20,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_C",
+      "protected_source_sha256": "6032cf0348ace271b5fa97dbc5ba3e5a0ca6e242dbb2c7af8a0cf4315ac3ac00",
+      "markers": 150,
+      "replacement_candidates": {
+        "cake": 2
+      }
+    },
+    {
+      "room": "landmark_D",
+      "protected_source_sha256": "f811cab2a24508911091a85e1de9be6e5cb389738693db3d18eb981aad5af353",
+      "markers": 140,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_E",
+      "protected_source_sha256": "6faf98040959751f14a4fa938e23178d707218dc9ea8220cc9af8c1e873798e0",
+      "markers": 143,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_F",
+      "protected_source_sha256": "a1630133d487bc7ca82d10855c5fc90d60cff89a867c3861e529e004ac1fad4e",
+      "markers": 160,
+      "replacement_candidates": {
+        "basket": 1
+      }
+    },
+    {
+      "room": "landmark_G",
+      "protected_source_sha256": "898150d41e855e524d0ab1228d42e5939ab00a03ee37382d79fc0c498701e53d",
+      "markers": 144,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_H",
+      "protected_source_sha256": "6f818ab8c96dde2d58056158d4542a1971a6578ce55c436eb3097e7403a6b33b",
+      "markers": 144,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_I",
+      "protected_source_sha256": "ca8849ace8633ef180c847efc7f217bf845ef27a225d8dbc1dcc14861ed2ee7a",
+      "markers": 19,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_J",
+      "protected_source_sha256": "a8dc05b2a7433317cff8dda8c1f15a652f46c33709086788bc4e8f040cfb809e",
+      "markers": 147,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_K",
+      "protected_source_sha256": "02641e90b5246b04b916256d86fe26e01f11745be77250d3aeeabbb5a11353ea",
+      "markers": 113,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_L",
+      "protected_source_sha256": "2f254502f34a2125215b95816d7e5bd55c1a3ea3359c18df0414bf737cdc0caf",
+      "markers": 152,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_M",
+      "protected_source_sha256": "52e15aa23518d277c9c140a340466e346d1d8cf82d8e3925ffda29806d15cf97",
+      "markers": 145,
+      "replacement_candidates": {
+        "cake": 1
+      }
+    },
+    {
+      "room": "landmark_N",
+      "protected_source_sha256": "a2d19c69956f83f1efa71a99a8191a3ad5b432fe686a6796533c2df1636cc41e",
+      "markers": 147,
+      "replacement_candidates": {
+        "book": 1
+      }
+    },
+    {
+      "room": "landmark_O",
+      "protected_source_sha256": "826649fa138289ab48bffa39dafa593e84db8874963b120191772fdaa9b7992e",
+      "markers": 23,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_P",
+      "protected_source_sha256": "89de8802b64e8d8d3e53973e51bfd71ec81454fc18619c4fc3b35be447f8ee8d",
+      "markers": 147,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_Q",
+      "protected_source_sha256": "2e9f362904ca49329e14cffbe1af56d4d5c323f7484bb68671f3d3fe4fb90a47",
+      "markers": 151,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_R",
+      "protected_source_sha256": "447d7c570b79854423954da0d7d343d15f1673d5cb8dd9174872d0f40dad6196",
+      "markers": 19,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_S",
+      "protected_source_sha256": "a830cb140e9de5c8a1bf00f0d2040780668a1c028c96e41bff6c849fd8179c39",
+      "markers": 136,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_T",
+      "protected_source_sha256": "6c83c828cd029591550c319e2576d67338c7863bb1174788710fa436b8ccbd90",
+      "markers": 21,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_U",
+      "protected_source_sha256": "379ed597abb8b7b414667f886eaacb808956c20645d8a227d4703a6d1847cea7",
+      "markers": 147,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_V",
+      "protected_source_sha256": "803970f384ad7f4a71de432b0a6c5765ccc1e9e969bab6a85814529c5dda76ae",
+      "markers": 20,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_W",
+      "protected_source_sha256": "c5fec92964e3dd2023ecf5463da1a73402535342ffb85e3173a86bc066002886",
+      "markers": 152,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_X",
+      "protected_source_sha256": "c853ea821cfd5d39883a2badf52c30eaafa88c25953c42eff720de03c137c2dc",
+      "markers": 19,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_Y",
+      "protected_source_sha256": "3808a2c4614165fe4a4a2c0bec2773ab538abb0636ef2a0fec0b4a157c0715c5",
+      "markers": 147,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "landmark_Z",
+      "protected_source_sha256": "e17988dcb33d3e29577df96cad832fa9a7b714a02f9a87319fdfebc980083048",
+      "markers": 22,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "music_room",
+      "protected_source_sha256": "09d281d71bf2cd1a6af5692b23d9961c350ef70d21d11e7e6e0214687f120581",
+      "markers": 20,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "playground",
+      "protected_source_sha256": "20630ea503b5e47a07cb8c8483ee21eca8afe4534719044c483456f722d27381",
+      "markers": 20,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "school",
+      "protected_source_sha256": "c089ad70c6351757979ca3713192994a63a6c8bbe5adf9842af284751d057d0c",
+      "markers": 96,
+      "replacement_candidates": {}
+    },
+    {
+      "room": "science_room",
+      "protected_source_sha256": "4c26d490fbf92047e4fbea1d912af90c65f6e43d3a62eaaeae5ca0a913d5a76b",
+      "markers": 20,
+      "replacement_candidates": {}
+    }
+  ],
+  "errors": [],
+  "runtime_contract": "visual descendants only; source MeshInstance retains AABB/transform; no CollisionObject3D created"
+}

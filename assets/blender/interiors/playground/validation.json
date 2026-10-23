@@ -1,0 +1,284 @@
+{
+  "room_id": "playground",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口活动约定牌",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Games_Face",
+      "memory_id": "memory_PLAYGROUND_01",
+      "activity": "选择活动并看轮流图标"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧器材架",
+      "position_blender": [
+        -4.4,
+        -0.4,
+        0.0
+      ],
+      "position_godot": [
+        -4.4,
+        0.0,
+        0.4
+      ],
+      "associated_prop": "Locus_02_Equipment_Back",
+      "memory_id": "memory_PLAYGROUND_02",
+      "activity": "找到要用的球或绳"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央合作游戏圈",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Court_Marker",
+      "memory_id": "memory_PLAYGROUND_03",
+      "activity": "邀请伙伴轮流参加"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧跳格线",
+      "position_blender": [
+        4.1,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.1,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Hopscotch",
+      "memory_id": "memory_PLAYGROUND_04",
+      "activity": "按已教过的数字或动作提示移动"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口活动照片栏",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Activity_Photos_Face",
+      "memory_id": "memory_PLAYGROUND_05",
+      "activity": "回顾一起做了什么"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回学校",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hoop_Post",
+      "aabb_blender": [
+        -0.20000000298023224,
+        5.5,
+        0.0,
+        0.20000000298023224,
+        5.899999618530273,
+        3.5999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_01_Games",
+      "aabb_blender": [
+        -5.5,
+        -4.925000190734863,
+        0.0,
+        -3.1000001430511475,
+        -4.675000190734863,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Equipment",
+      "aabb_blender": [
+        -7.020000457763672,
+        0.9749999642372131,
+        0.0,
+        -4.579999923706055,
+        1.8250000476837158,
+        1.7000000476837158
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Play_Shade_Tree",
+      "aabb_blender": [
+        -6.824999809265137,
+        4.975000381469727,
+        0.0,
+        -6.175000190734863,
+        5.625,
+        2.5999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_05_Activity_Photos",
+      "aabb_blender": [
+        3.999999761581421,
+        -5.275000095367432,
+        0.0,
+        6.399999618530273,
+        -5.025000095367432,
+        1.600000023841858
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 75,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main",
+    "SG_FLOOR_Court"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 3136392,
+  "glb_node_count": 94,
+  "triangles_instanced": 121780,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "20630ea503b5e47a07cb8c8483ee21eca8afe4534719044c483456f722d27381",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/playground/playground_v01.blend",
+  "source_blend_preserved": true
+}

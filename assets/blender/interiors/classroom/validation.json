@@ -1,0 +1,316 @@
+{
+  "room_id": "classroom",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "门口姓名牌台",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Name_Plates_Leg",
+      "memory_id": "memory_CLASSROOM_01",
+      "activity": "认出示例人物的名牌"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左窗阅读角",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Book_Corner_Back",
+      "memory_id": "memory_CLASSROOM_02",
+      "activity": "看图并听一句示范"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央结伴桌",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Shared_Desk_Leg",
+      "memory_id": "memory_CLASSROOM_03",
+      "activity": "与伙伴问候和介绍名字"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧情境道具柜",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Props_Cabinet_Back",
+      "memory_id": "memory_CLASSROOM_04",
+      "activity": "取当前情境需要的道具"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口作品墙",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Art_Display_Face",
+      "memory_id": "memory_CLASSROOM_05",
+      "activity": "展示完成的图片或记录"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回学校",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Book_Corner",
+      "aabb_blender": [
+        -6.670000076293945,
+        0.675000011920929,
+        0.0,
+        -3.5299997329711914,
+        1.5250000953674316,
+        2.25
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_03_Shared_Desk",
+      "aabb_blender": [
+        -1.5499999523162842,
+        1.0,
+        -0.06000000238418579,
+        1.5499999523162842,
+        2.4000000953674316,
+        0.9200000166893005
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Rear_Pupil_Desk",
+      "aabb_blender": [
+        -4.199999809265137,
+        3.75,
+        -0.06000000238418579,
+        -2.200000047683716,
+        4.75,
+        0.9200000166893005
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Rear_Pupil_Desk.001",
+      "aabb_blender": [
+        -1.0,
+        3.75,
+        -0.06000000238418579,
+        1.0,
+        4.75,
+        0.9200000166893005
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Rear_Pupil_Desk.002",
+      "aabb_blender": [
+        2.200000047683716,
+        3.75,
+        -0.06000000238418579,
+        4.199999809265137,
+        4.75,
+        0.9200000166893005
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_05_Art_Display",
+      "aabb_blender": [
+        3.999999761581421,
+        -5.275000095367432,
+        0.0,
+        6.399999618530273,
+        -5.025000095367432,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_01_Name_Plates",
+      "aabb_blender": [
+        -5.5,
+        -5.300000190734863,
+        -0.06000000238418579,
+        -3.1000001430511475,
+        -4.300000190734863,
+        0.8600000143051147
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_04_Props_Cabinet",
+      "aabb_blender": [
+        3.5299999713897705,
+        0.824999988079071,
+        0.0,
+        6.470000267028809,
+        1.6749999523162842,
+        1.850000023841858
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 277,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 5441356,
+  "glb_node_count": 290,
+  "triangles_instanced": 187000,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "c5e2b9d4017c871239ae59b33f619b2ef0528ff4c76ef7631587127fcb554379",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/classroom/classroom_v01.blend",
+  "source_blend_preserved": true
+}

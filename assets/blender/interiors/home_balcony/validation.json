@@ -1,0 +1,283 @@
+{
+  "room_id": "home_balcony",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "洗衣篮与晾衣架",
+      "position_blender": [
+        -4.8,
+        2.3,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        -2.3
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_balcony_01",
+      "activity": "将洗好的袜子挂好，再整理衣篮。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "盆栽照料台",
+      "position_blender": [
+        4.8,
+        2.8,
+        0.0
+      ],
+      "position_godot": [
+        4.8,
+        0.0,
+        -2.8
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_balcony_02",
+      "activity": "观察盆栽，学着给植物浇水。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "窗户清洁台",
+      "position_blender": [
+        0.0,
+        4.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -4.5
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_balcony_03",
+      "activity": "擦一擦窗户，看看家人在做什么。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "扫帚与簸箕",
+      "position_blender": [
+        -3.3,
+        -4.2,
+        0.0
+      ],
+      "position_godot": [
+        -3.3,
+        0.0,
+        4.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_balcony_04",
+      "activity": "找到扫帚，把地面的小纸屑扫起来。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "节水储物角",
+      "position_blender": [
+        3.2,
+        -3.8,
+        0.0
+      ],
+      "position_godot": [
+        3.2,
+        0.0,
+        3.8
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_balcony_05",
+      "activity": "洗衣后关好水，收起用品。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Drying_Rack",
+      "aabb_blender": [
+        -6.25,
+        4.050000190734863,
+        0.0,
+        -3.3500001430511475,
+        4.75,
+        2.4000000953674316
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Washer",
+      "aabb_blender": [
+        -6.900000095367432,
+        0.5000000596046448,
+        0.0,
+        -5.299999713897705,
+        1.9000000953674316,
+        1.2999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Balcony_Plants",
+      "aabb_blender": [
+        3.000000238418579,
+        4.400000095367432,
+        0.0,
+        6.600000381469727,
+        5.599999904632568,
+        0.800000011920929
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Window_Cleaning_Stand",
+      "aabb_blender": [
+        -0.699999988079071,
+        5.375,
+        -0.06000000238418579,
+        0.699999988079071,
+        6.024999618530273,
+        0.8100000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Laundry_Sink",
+      "aabb_blender": [
+        3.875,
+        -4.699999809265137,
+        -0.06000000238418579,
+        6.125,
+        -3.5,
+        1.059999942779541
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 322,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 1916464,
+  "glb_node_count": 335,
+  "triangles_instanced": 96532,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "c55c81ebb4d40ef9ce050dd6cffc1bc597d80068488610ab7678d00a73f63379",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/home_balcony/home_balcony_v01.blend",
+  "source_blend_preserved": false
+}

@@ -1,0 +1,294 @@
+{
+  "room_id": "landmark_V",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口观察路线牌",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Trail_Face",
+      "memory_id": "memory_V_01",
+      "activity": "选择观察路线"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧岩石样本台",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Specimens_Back",
+      "memory_id": "memory_V_02",
+      "activity": "辨认岩石外形"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央火山地形沙盘",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Volcano_Model_Leg",
+      "memory_id": "memory_V_03",
+      "activity": "比较山顶山脚"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧岩层观察窗",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Rock_Section_Frame",
+      "memory_id": "memory_V_04",
+      "activity": "观察岩层纹理"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口探险记录架",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Field_Records_Back",
+      "memory_id": "memory_V_05",
+      "activity": "回顾走过的路线"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Volcanic_Rock_Ridge",
+      "aabb_blender": [
+        -2.75,
+        2.5500001907348633,
+        0.0,
+        2.75,
+        7.25,
+        2.799999952316284
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_01_Trail",
+      "aabb_blender": [
+        -5.5,
+        -4.925000190734863,
+        0.0,
+        -3.1000001430511475,
+        -4.675000190734863,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Specimens",
+      "aabb_blender": [
+        -6.569999694824219,
+        0.675000011920929,
+        0.0,
+        -3.629999876022339,
+        1.5250000953674316,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_03_Volcano_Model",
+      "aabb_blender": [
+        -1.5,
+        0.8500000238418579,
+        -0.06000000238418579,
+        1.5,
+        2.5500001907348633,
+        0.9599999785423279
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_04_Rock_Section",
+      "aabb_blender": [
+        3.700000047683716,
+        0.925000011920929,
+        0.0,
+        6.300000190734863,
+        1.5750000476837158,
+        2.700000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_05_Field_Records",
+      "aabb_blender": [
+        3.929999828338623,
+        -5.725000381469727,
+        0.0,
+        6.46999979019165,
+        -4.875,
+        1.600000023841858
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 113,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 3016224,
+  "glb_node_count": 125,
+  "triangles_instanced": 114380,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "803970f384ad7f4a71de432b0a6c5765ccc1e9e969bab6a85814529c5dda76ae",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/landmark_V/landmark_V_v01.blend",
+  "source_blend_preserved": true
+}

@@ -1,0 +1,2308 @@
+{
+  "version": "0.8.0-dev",
+  "scope": "GDD project P0-P2 engineering, local Windows source build; not P3/full textbook production or human validation",
+  "reports": [
+    {
+      "report": "state-report.json",
+      "passed": true,
+      "checks": 284
+    },
+    {
+      "report": "actor-animation.json",
+      "passed": true,
+      "checks": 623
+    },
+    {
+      "report": "orchard-integration.json",
+      "passed": true,
+      "checks": 50
+    },
+    {
+      "report": "story-animation.json",
+      "passed": true,
+      "checks": 3030
+    },
+    {
+      "report": "alternate-choices.json",
+      "passed": true,
+      "checks": 26
+    },
+    {
+      "report": "learning-art/headless-1440x900-report.json",
+      "passed": true,
+      "checks": 1170
+    },
+    {
+      "report": "ui-1440x900-native.json",
+      "passed": true,
+      "checks": 504
+    },
+    {
+      "report": "chapters-1440x900-native.json",
+      "passed": true,
+      "checks": 499
+    },
+    {
+      "report": "journey-game-1440x900-native.json",
+      "passed": true,
+      "checks": 189
+    },
+    {
+      "report": "ui-960x640-native.json",
+      "passed": true,
+      "checks": 504
+    },
+    {
+      "report": "chapters-960x640-native.json",
+      "passed": true,
+      "checks": 499
+    },
+    {
+      "report": "journey-game-960x640-native.json",
+      "passed": true,
+      "checks": 189
+    }
+  ],
+  "final_jobs": [
+    {
+      "name": "test_state",
+      "exit_code": 0,
+      "seconds": 1.0,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-test_state.log"
+    },
+    {
+      "name": "test_journey_state",
+      "exit_code": 0,
+      "seconds": 5.26,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-test_journey_state.log"
+    },
+    {
+      "name": "test_p2_state",
+      "exit_code": 0,
+      "seconds": 0.65,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-test_p2_state.log"
+    },
+    {
+      "name": "test_memory_event_sink",
+      "exit_code": 0,
+      "seconds": 0.45,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-test_memory_event_sink.log"
+    },
+    {
+      "name": "test_living_world",
+      "exit_code": 0,
+      "seconds": 3.12,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-test_living_world.log"
+    },
+    {
+      "name": "test_p1_orchard",
+      "exit_code": 0,
+      "seconds": 26.2,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-test_p1_orchard.log"
+    },
+    {
+      "name": "test_p1_story_animation",
+      "exit_code": 0,
+      "seconds": 3.22,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-test_p1_story_animation.log"
+    },
+    {
+      "name": "chapters-1440x900",
+      "exit_code": 0,
+      "seconds": 24.95,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-chapters-1440x900.log"
+    },
+    {
+      "name": "journey-1440x900",
+      "exit_code": 0,
+      "seconds": 64.02,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-journey-1440x900.log"
+    },
+    {
+      "name": "chapters-960x640",
+      "exit_code": 0,
+      "seconds": 23.18,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-chapters-960x640.log"
+    },
+    {
+      "name": "journey-960x640",
+      "exit_code": 0,
+      "seconds": 63.61,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-journey-960x640.log"
+    },
+    {
+      "name": "landmarks-1440x900",
+      "exit_code": 0,
+      "seconds": 42.1,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-landmarks-1440x900.log"
+    },
+    {
+      "name": "landmarks-960x640",
+      "exit_code": 0,
+      "seconds": 39.04,
+      "errors": [],
+      "log": "docs\\verification\\p2\\final-landmarks-960x640.log"
+    }
+  ],
+  "final_jobs_passed": true,
+  "planning_integration_passed": true,
+  "source_preservation_passed": true,
+  "source_protected_records": 217,
+  "landmark_source_views": 52,
+  "performance_record_valid": true,
+  "performance_invalid_reasons": [],
+  "native_captures": [
+    {
+      "folder": "native-alternate-960",
+      "count": 4,
+      "files": [
+        {
+          "path": "docs/verification/p2/native-alternate-960/F-alternate.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "d2e22a1e4529338ffdcfc711aa4a19c7bfa06b3370d055cb85ad5525bca086bc"
+        },
+        {
+          "path": "docs/verification/p2/native-alternate-960/H-alternate.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "87e344099c2894f145e78bb8a456bc70d185aafe74d5d82ebdf07602aa5bb3f3"
+        },
+        {
+          "path": "docs/verification/p2/native-alternate-960/P-alternate.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "7462918c2bf0b262596105ee4a7f8b4156052c049c6cab1a3093ee41daeee7aa"
+        },
+        {
+          "path": "docs/verification/p2/native-alternate-960/R-alternate.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "66cf78e7c5ea7a549c37c9e9ba37c580124a16dab1eadd05acd9807e8d70db9d"
+        }
+      ]
+    },
+    {
+      "folder": "native-chapters-1440",
+      "count": 29,
+      "files": [
+        {
+          "path": "docs/verification/p2/native-chapters-1440/district-bay_travel_district.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "752d2e918f71a41996a03e5eb0add68b827ab9cd3f2f04666e11dc54ddcddf20"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/district-craft_street.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "1442e3547078bbfa781a30bc4d0e177169747e2cb07ab4e14f3fd2a8e5cc8814"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/district-hill_academy_district.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "c86f0b41874583758439609f9388cddf332be14515607d855a712c8a1df9b8a0"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/district-morning_village.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "b17f19e08767a936d94aa2881b765832a67491d7f39b7406368cdbda346fec81"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/district-woodland_village.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "ef0a1fec35f3638a2d734224b8c18147e46f67f82899722606d1a7878b16a479"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/keepsakes.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "a234ac446dbbbaf0331c0436f94b2a06dded0a2d0ca57a677bb76afb65d1f6fd"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/recall-self-report.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "fdf3e3e81399f2784c40b9355c087cdada7ffb06b879508d722429cd557ecc1d"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/retaken-photo.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "3332da6445a824648475373ab3af0ffcafc1d6f99c43178ab7ae6fe075474319"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/trip-three-stops.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "d461f9b2d5b6a4760d6b0bcfbeded44868c05ba4915adb248ceb37694efd4778"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U2-01-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "510cd3fac0ada6f7ef862abc9da050ec5c787b38788b2a20eae17de256490635"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U2-02-demo.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "c0f83a820dd68d02ff1ea0894a21de14415813827983aa9092d391d5bc9f79dd"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U2-02-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "1dac0c5d25a5b5b3ce02b0c1024634a87637cc999c5eefbd839185d3d8adf368"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U2-03-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "b28bd6f899514938e2d2ba67dc2cfd83d397cd4a1640c4f2f7fb601e5553b6d6"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U2-04-delivered.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "73950c8cd191b0f908e10d681cd1149389470bc2758d574d3fb2b060e405d943"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U2-04-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "4f829da24a6924881e85e82c4ec171aceb2397ec613f57d7d6ad920bdc1d456f"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U2-05-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "58628136582cf7095a0c22cafde61f14beaa66105b2427454a8463512e8bfc5f"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U2-06-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "f9519f69782f983c5d2796faff6610c441a58ab69edb074acb4fc560baede748"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U2-07-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "d9600e238939e1e108a900b599250bdd000efd217590b94a0a5fa0c8a786ce18"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-01-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "b0334b951d316935d00285a20534d8d7e7c4a9a396d1629ef66c74e5648d013d"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-02-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "3f45ed762c62c4fa3d203c4d1dbfc7f182aeafc249bff976c4001fcf39b71e64"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-03-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "c729616b0204269f7bb8e484c6d4676ea8ee7969bae7f7e19af6effec58eafab"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-04-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "9bfe9a7589c563ac4a82adaec6391f47545734c240c6dcac28cc3ffd274faed5"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-05-correct-count.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "e367f391eb1cb121a87a217264be498e82b4e9ea4fa782a51c65d8cdadd6ee4e"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-05-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "aac3ba5af354ba8dd5a44037d8dc9a3534cb41ff0f77840f310b740d7cf4fdf5"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-06-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "bd34f7f077e6340b5fd952d07d436a6710be5e8e02b526fbc4ee1c35e5cd344f"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-07-correct-count.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "8e074e2150b17689e118d93e49bef2da9fbb04bd53796f9e64797e5a93d319ae"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-07-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "04f97fbe261e4b16d935612c905662eabe26d41a9a4dcde5273838e1e6a25b91"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-08-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "87e62a57f7d4ea7d96b2e4fd9dab67eaf6f4d3013a0969381843d4b24395959b"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-1440/U3-09-scene.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "ddc43db349975e75b7378af78e7f912ae3d9cafd6f618d599378be5abc14c04e"
+        }
+      ]
+    },
+    {
+      "folder": "native-chapters-960",
+      "count": 29,
+      "files": [
+        {
+          "path": "docs/verification/p2/native-chapters-960/district-bay_travel_district.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "a9565f12e58bdbe6841dee9263ceb515c106e3991fc56f330330bc1af71d28e0"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/district-craft_street.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "7f1b26d1f4966bca2fe8d9701daed186d21c3ac0332bbf0689c3684f08b950dd"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/district-hill_academy_district.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "5260c06931af998bd7a9e9db78a532cf32385f5f9ace7ef1e3bf5d4d151ec90e"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/district-morning_village.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "cadc0773b172393ea3248cab0a32c57fd1fbc753bb4d6736cc90ba20b80ea199"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/district-woodland_village.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "4fbc2915394dab485cf8ead2a9d0d97b8a6d9bf31802359204ca99db8c16502c"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/keepsakes.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "4ae7e78d7b0c0b62719b68cb1478a64c9c5429497655b22174cf8664cc5db840"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/recall-self-report.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "fc4db25fd10ea1d3572824a679efe7cc23f57f37e0d1cd655c50487421fd2707"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/retaken-photo.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "2c7349587b93596150567619adb75f7c2b8bb33394312c51816dad84d8966244"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/trip-three-stops.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "a3fad1263defb9793b9e2d1fa91b13de337b9981043ac18e898ef3b3f5b24c9a"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U2-01-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "24f803802f251372e2a75e985b7c870023602aca43f2e35dab712f7e2c0b9290"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U2-02-demo.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "aa7e1c89d6e2d4e69a91d2bc9c94de432aaed625ce899c76c842bf9433ccd554"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U2-02-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "9ffad100f06a2679133e835e74729afb39de844af1f7d1eee1505305dcf5e602"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U2-03-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "619eaeff2b068f5b4e5afdcdae8a472157a4cf34448739896be6d10e08db37d0"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U2-04-delivered.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "c16a0b5bb27b09889708c24833abefceea2c55e6de405358dfddb3c4c03b3dd9"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U2-04-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "93ae9f8ebeac6f067b8600b6466699ce4424ab4873191bb7466326442f487a47"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U2-05-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "9c64f9993a9fd23add57f61fb30c7884e527ee0f201208218553ffbc7926c338"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U2-06-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "f780014aad9954bd9b61dae4feed4ecafd6ef3834585f5e1a34c5bdee6967be6"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U2-07-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "65f4bfcc97d0ea5fc618b3b7ea9501b224a77a9157416432909ff07469fca330"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-01-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "a1c7813ea2d3777c64e5e07819e5468723345179c60aa68da3be08d6bfb93aa9"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-02-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "43782514bfb8c30178739fdb2daaa5c7494ebda3f10b5552f5f2ec5597c0049e"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-03-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "bad36ef824f0a5f186e8250bd09e4843c03d60d1923584961f5fcf8b3fba4e83"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-04-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "dd6683927e86e478acf435b3a6ef6b5044d4be8f376dd9bfed6646438859b8a1"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-05-correct-count.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "307cc4461b3b3df3f14f63fdbde8da8112a5d33770a5cd808cbfd5167b23784c"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-05-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "74bd00721fd3d41b544dd8509404bf70eb0f15203806977efd4c4480cc91e3c3"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-06-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "b127a491a4d59acade8ec13b299eb5c9ddfabb2edb8201d2b8b2c222016ab92d"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-07-correct-count.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "d9f05263253ca0606498e623c4391efe392c28ea1be3da1a20ab91dd74416484"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-07-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "12749994fad36261e63478dd9a7dee5401fa0abd684f33eea359f024ce27ee1f"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-08-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "70004e8091d85471ce3ba9e4bf409b6aeebfd183babafc3ce9315eb622d6aab8"
+        },
+        {
+          "path": "docs/verification/p2/native-chapters-960/U3-09-scene.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "7ac5c496d6e45860651a2e4231c91d4b6bb7e4a21c115b8b2180ebeec3f97f40"
+        }
+      ]
+    },
+    {
+      "folder": "native-journey-1440",
+      "count": 9,
+      "files": [
+        {
+          "path": "docs/verification/p2/native-journey-1440/01-home-invitation.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "789b4fc2de64f0e5aca93984e587689dd47e58ac72c34b46d484452f521b5203"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-1440/01b-home-preview.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "fb7e5fcb6fe7e922ba51db4fa32d7ae85bc5c9feab80d57fba717b1ce3e1de35"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-1440/02a-orchard-ready.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "2ed96f0c7b714f00e437970e194b09072a7637ec51f0033a487434a06f39e181"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-1440/02b-orchard-discovery.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "8323912388ba870d777c2c5807f279ce60a2ebfd933f842e7cde7d845e065764"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-1440/03-alphabet-book.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "30e5628451e481c31dfcc53b954d5a37dce9740b9170a7f93de15bbd7b41812d"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-1440/04-school-greeting.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "1ecf95e05409b44570daeba9005fe6b3cbe66e8ce2e7b7774ce823a000d7df09"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-1440/05-hello-story.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "229a05ed173f0538cadcabdb61be1006b84f143a1aae68714459a8eaa5673bff"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-1440/06-welcome-photo.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "7eca7857babae22563a2a8121d07b1cabdfc03cac4a951a168322c8440601993"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-1440/07-word-library.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "6188df2340e61de75f13c539baefea33cdfbc3a3effd38bbd010dd00e7a70471"
+        }
+      ]
+    },
+    {
+      "folder": "native-journey-960",
+      "count": 9,
+      "files": [
+        {
+          "path": "docs/verification/p2/native-journey-960/01-home-invitation.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "c5cf969fc2922852e1cce2c4267c4ecad5a5d786e55692f3e28f64a8b775b98b"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-960/01b-home-preview.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "f3d43241a28a2f12b9ddd2b79052ddc70d5136fa57dbf2273cfecafadc9be979"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-960/02a-orchard-ready.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "1c25b7789b07dccb26817c234443b5017f0d5c248d50385afaa5b89a83ec68ad"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-960/02b-orchard-discovery.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "58106c4e5f31e3f61ffa74066e4b2a88f38d43934087c56b850682be8b4cb97d"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-960/03-alphabet-book.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "5ba2ad6f2577d710b09cc267c388ea14b7b30378903f22609eb4a8082e849881"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-960/04-school-greeting.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "891fe95f0735a81c0c67981bd7ec4d638adb81652aa412e38b6adf96b272e5e0"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-960/05-hello-story.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "190246aff532517e35b662cfa5d463d231a40462687fd50f5bf87a1ec3587ae9"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-960/06-welcome-photo.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "2973402b00010ec420468418636cd54bb4247dd1ed1704a75e98afe2e260b23f"
+        },
+        {
+          "path": "docs/verification/p2/native-journey-960/07-word-library.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "af25a1002a0867aa3a18ac19648d0abf966e9a10d60b3405bd6da50e5cfe4563"
+        }
+      ]
+    },
+    {
+      "folder": "native-landmarks-1440",
+      "count": 90,
+      "files": [
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/B-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "8a968ef5799ca1a79dfce5b9dc5f1838ad2818a772971ff7a35dd4d3f284e376"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/B-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "b1baf0ad3379703b2bf75f19b4d4dab4906b78d5b7f775190c1d7dcde8f6d973"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/B-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "aa816eec2c39a3a5677b94924d9a971ec2dde23733f450065f57552b8e069129"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/B-step-1.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "adb926f962079ebe7ab5fa3643009c2eb96a63e215ad8529d750a449a863519f"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/B-step-2.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "e85c296d0a419e742b8dd2ab3e8b5e85622b9def1acad3febfc80307cf36717c"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/B-step-3.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "6481e72adb87ba47598b18458245c24b60f29e21bf19fa1c4c3c1ac9a75f437d"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/C-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "d291f7e61ac07f61ba15923444b60b41b03b962fdd616b4db7087a0b3ec6abd0"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/C-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "a0b6ed822193a771263dd2b75e0fcb1dd3da65423ffdf3181befd76f557f7502"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/C-drag-complete.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "0ad46ccabd5174447dd1772324a3921105d0ad6b06424192070c1bffb3fc9427"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/C-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "5d95513084c39b943660254938c697f29ab24a8ba7ce2697fbb960ac42a06bc6"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/D-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "cd7fd2b0dfedeff8d11558c3202f18423bfbf4a2ec5b283e037b8ff8b47175c8"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/D-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "a078437237df62c469f023218f2b60d5801977afda15121003c49725f0dee717"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/D-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "dec65b558fe12cfbeeea8fd256296a5f4289b7f2118128ae6ccf87e75239d6ef"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/E-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "283f42d6bab9fbafb5e9530dff32405a71673921f701f306388efc47abd88983"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/E-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "1f31a26592741bcd4ea8bec31f238ce7bc06548f84ede011e66c54e02475f4e5"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/E-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "0b05ec54f9595e4c1a91b553eb79b526bdf07a67ea93e193c5461beef1677f20"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/F-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "442f6cfb09ef5d9bb3a0d9d148b498cc3932f8a1f640e34241d41f415c8934b3"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/F-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "add5a24623cb8bc4bb2bd58fac8df29e40bb45d8dee638063203d0fd9963430f"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/F-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "242cfe4adb09d735b8f39e2435c7fdeb83b0b655f11556f296b32031367a2fdc"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/G-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "30661883a9303d242b17b3fe698b25a4729a0f00f1d6abfefaaac6d19b5a2125"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/G-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "6cb3dff9082b9da81fe13cb5cbfa25bd4a711fee86b34748867c37b1aa160b7b"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/G-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "2673db1c0cca1b3fac93c43fe00d5d398a546c469a2917674cbd9b00b0da3a17"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/H-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "20d27d00fa7d19bd9bcee70027f94a2dfe76c2bb6bf3349685fc75acd4739939"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/H-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "df04ac3191d3c191659e2c1befe7b27c1896d04544b2cd03bba7d3d49d853fc1"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/H-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "39bc02ff06d703e877ba1e644f56c82691eb527732b1a984a97905e8d57aa486"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/I-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "f946e2f4bc90b554e5fff947b0adb0e03f0fb5966fc94f4ea2b50e7c5182adbb"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/I-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "8548a8495fe7ed2ea7498463014d29f8605cf2a5ba1714ba162c3cc12262ceb4"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/I-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "7bfec56ead42742ac078dc81598cdc6e8a4ce408953b4671e8df5d23d721a603"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/I-step-1.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "7bb10316a51d7eae033490048e9f267ca3da530b6416117efeaaefab2f6b4ca8"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/I-step-2.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "6911a82c4aab16ed661813f023e320463af5405a64df75c5b757631584d8105b"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/J-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "dd4e44c1c66bb61e0d7c3d7ed25f5ec7f79f22e788283b928f4d3d2f8f49fdab"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/J-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "5de3fa875806d6e7c1fd44d31114e4ccd9938ea37e0ed28d005bdba95956e298"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/J-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "4cbb520ef336da0127315ca83c1bebe8a68d9ac9be3fcdfbee913e7827ab8380"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/J-step-1.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "fd680781428749fb3c1e0460a3fa4b3d52e8315fc0477a7bee0cf7b186a6fb4a"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/J-step-2.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "96c56b082d2f8291e22460d37fad235d4777759fadc59d42baf7a308d76df9fa"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/K-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "4da5d9ce85b4916a1acddd84b0f2f411d15e28b1026ba6f91e892ccc21ddeffb"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/K-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "2ea2e9e52edb1d9015b5f27fe0295ed823ae652375206287da5c2546b020fd42"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/K-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "922633ecb5d26296c50d8b21a5dd7a38cbe51b7c8404405da8d8377e80515f94"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/K-step-1.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "aad711c54ed3c3cccbd8b6693ef746b554a2cad4e6938603be405b49af191f7f"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/K-step-2.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "d9a550e5634762bfcb2eab96dff79b80a5872808ba0d56d7bcfebeaf2367abb4"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/L-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "72cd19118986b97f0aaae3c4b5b6236ca9205a91f7401853c48590066f6674c0"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/L-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "646018924c7a63e19bb530a0c26f894e77fbd7e079473e862b85d3e8f7c67c60"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/L-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "f086c9e1aae2868a0b5d1d457312f97069330bab233817a8ba0984232993c148"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/M-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "5ef40dedfdc082c80fee5ca2467c233e1ccdd9a553fdee2e27d1d2be1a41c223"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/M-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "752cdc2f7e077852a112b93bb96d33ee3b622035f1cd7cc354565ac5670b322e"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/M-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "7e632286dda31a4910496aa0ac8eed7701bd6917b4b60fee192ec44dc54e8ba6"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/M-step-1.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "1b7536d898f66513ec18daf02ff926f316852093b0d90ffa2287e8135a71fa0a"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/M-step-2.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "35d1aed55e805ee7be048cca5bdec98b16abf52349867f91332358514af3161a"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/M-step-3.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "0bbb220729dbd29faef7286c6c5ef8720e4af3dd6dbb676e854ce9f8ecb2cb5c"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/N-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "6f800d921c3a5b35e196c4e07433ceb298bc6083f3308b6348b288c45df26803"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/N-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "e1e62281585de7da3f30f21b22f8d3c3891a19547ced86bba1d68157d3b7f072"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/N-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "51e5d84b7b2a946ec8e5e8672841892a982f2e089c77a92d4e8e9e8590bed1bf"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/O-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "b911d844d6221da4689403611eba1f5aa6f39b5b2d11ad66a673e657a3b24cf0"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/O-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "f29e209c99ea5bd08501941685f91a35045b58681ce5f2ebaa89b9b65b8f6bcb"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/O-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "ce64550edc23640cf417aa6e6abb89480f2eb3fa6f8a7a67ad4e57662b5fd70c"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/P-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "4c23065e45b502ba1a72f55d8edadb4dca44390ba2c9c81b2dd602437ab89f97"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/P-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "b7f20fb3c147079814320be1a818f02e20458eb907de925dedc5c53f8c4e9284"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/P-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "d9e9517c4fe2b0b56e912354a020f908fe3440eae597d87f57a7a408f2652877"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/Q-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "cccc39875147c70b7869bd66b2c89e06ea2c7e7e7a74af155005534f3e9df075"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/Q-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "533136b926e5b558a758f4c9cbd4da889f109cb03e64782989bf9d393d3c662b"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/Q-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "36f2afc8235ec5916c03f9abc9ae255055fe577d6e637962f8c685f3b05df996"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/R-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "4380ac1916be47118a212ba24b7695b561a42fb0b3d1d53e44e7760db47f8f14"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/R-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "7e8d31f02040e46533207a37f67e75294f61818e6fbd00c3b844da8188ec2669"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/R-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "f302eb2d99fc5241e02cd48d94461ea13cb42e25ff6d2701044ef6a1425313ad"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/S-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "46f16e969259857804255e687d881ae2b18e6e31f18933fc4d9acab94790ff3d"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/S-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "aaf08e932db62b06ae9754509b0f2425f5a15588fa14b1fb7de9d0399996b4e1"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/S-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "964db848904205fe2b02bd3d61b768dc7e4db6960e8d00a81c53f7bf4a806f4b"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/T-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "9c7ede1fc407fb5372a1da096466857e19d6b7f0ee17c11e5a3cb8891a29edc0"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/T-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "4547fe1482a86f70e22ce92dd1690367e57709261b7e98a7b025c831d234a0ad"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/T-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "25008b4798d41a58e6cfe90c477f9f996bb6dd78c716522add2537bf8799a890"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/T-step-1.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "5eade9b1abf48a67ddf0822d2b580b5c39c8aa97e61542343e3bbe1903e26dcf"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/T-step-2.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "1cbcb3fd0ee263c7d4f2f119aa55010154185949e7add2e71218e35ee51a1945"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/U-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "4767cc0e7c257549ea7832f97e08d48512d83c27532b9ebc4e78f74eef7b1bd3"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/U-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "45dff962ef29f1193c5cd984e5ad7376f8c72960287e3272cd1f59f16c26bb91"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/U-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "73f9c5d1c327c371f5111fdaab60158b2ac2ef3e65c0e4907f6371ba355d2b0c"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/V-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "c757a1e680e98feee85cd8ac97411d20292f0ab3bda9cbdacb2e9a6907846c98"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/V-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "2a03539124dc328c8f746fe9ee7c98e0c6e47eae701abb9fdb564b335e16a44c"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/V-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "f05331bf64b793b803952d458dcbb689510e52b1588ed10f5b9b6eb7c70017dc"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/W-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "5fa9086d5c587f2f9f498ad4b468b0afb1041efaaee4f98ef3f9cc5aaedd9c9e"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/W-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "0c8b071b2114b2792494a9a674b38f40cbdd418b8ff5e23bd8a9d9c4d318d31e"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/W-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "054756e3f40ae3eb7a9055d5dcc6d15b66d24661ce762193e6224e054a61479d"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/X-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "9049bb97d69557723edb7d430cd84a5b8bd71046d80f3ac8b2615875a71959bd"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/X-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "81e25b9da21a7fdf908d07c8137916604ab7bd600786c98f7e6b75f56b44b1ed"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/X-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "8f2c2341737ec8964f0ea9aa7db6a458bcba26e68b78393a7839003630ccd1c2"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/Y-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "a0bb80689aea3e80964d3a52ff3ab52c3921bbf5a75154f64bbe9e25a9c99c75"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/Y-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "21763b766b97b1318396936b856f4328346b5f49f65f749515abc4fc3002a343"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/Y-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "73bc5465c1b45ddf792cf9a43408a522d7f23df9450fe49bc16b4fcf852ccdd5"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/Z-after.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "f099c8d38de262480a5553ba43eed562abbd282a7bd894d2955e0ee915f32865"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/Z-before.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "0194dc4fbe0d0a7f32124dcd7ed324ec7042b637a26eb6b06364009dd944d659"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-1440/Z-glyph.png",
+          "pixels": [
+            1440,
+            900
+          ],
+          "sha256": "59cf8b178eec83b6e038b569ee9b9404f605f7f39de316e6985e384fae4d6767"
+        }
+      ]
+    },
+    {
+      "folder": "native-landmarks-960",
+      "count": 90,
+      "files": [
+        {
+          "path": "docs/verification/p2/native-landmarks-960/B-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "adf186a021cfe135d56e39e0cbb8f30ff780b7a7a692a7492f395dd3ebc9b1fc"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/B-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "2f6901a9b40858421cec0ecbc82d62d70dff3ebe3c2cddcdb85b65c30a5eab35"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/B-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "4ad182017fd110c41ce255d106fce0cb2916a207d37c29c35f26f656a677397a"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/B-step-1.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "88e12d4e719fae44d1ae3853634743b20b14eb4a899195db855fd9fe7fd92142"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/B-step-2.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "374f8c133e649fdc45e938f545998a41f6033d47b94be079831f5b878f475b70"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/B-step-3.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "7eb436c5f62a52471a7110edd7d6ca6c5b9aeb86769fede95df805560c4218fe"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/C-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "6e1039b3f047aecbd4f57fbea9629f8eae869187c4b244ea4994d98a3ac193d9"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/C-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "a048cf6b9034a584cfb559b7950a68d2c0ac179639defd10c971d22f15a87d0f"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/C-drag-complete.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "990be3847095451ddca29c1a28e79b040d09150b34f314d583272c806e3b5c3a"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/C-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "ac4f04ba139a0dee3a606541b7c0c52a987623bbfe5a0a3134293e779ff46f59"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/D-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "1c47b8e32ed821f9d372ee57a4df7662c4839c3c87bb21ff918fa5d5881d7a3f"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/D-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "6be6c939b9bdf82a48e2abd22b4d330f5b9b4363aa4f85d478f078f176221a25"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/D-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "42ac7d502cce43aa467a7ee2c370792c91a08c2b18fd67bcca602eabab0e0902"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/E-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "102a77c16dd9f6c47874336e40b7af9e1982296f5e6e18490d4b3d44f84299a3"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/E-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "af8023fd5a8acaf017debb5d8703a08da127a577f4164d8800a7bbb5917df7eb"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/E-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "69d98803c0b77f35654e0d19b3aa0535e39e439afb17d16a6cf832c289d7462f"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/F-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "30b113ea7df95c169c3113654dba1bec81d02117ad8f7279d6bc6b04827dbd0f"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/F-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "06f42b4135ea0d49593d215f48c137d331d92db6e3392653ad172c6777bf2da8"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/F-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "9a075d10699bb5298e61a5d6b89049892f9abce7a800f79268739128cab9570d"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/G-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "6df06c2375d3b79bf9a1c4c8738d2dfa824a59b02d8750eab8dd5cd84486f4b5"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/G-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "cc743c3e122491a6c7c2b88261cf5e7fc666d28431fb52208b4e41b3d0cf8c56"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/G-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "b61720ac8d25403bd2e01d78e4838fb6cd94bd5eb9ba4b3c3233b4366c0c0aeb"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/H-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "7827670bac0fc58a19560c8641f184817de1f153e3f58db68f3faf6b4c4e31cc"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/H-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "f5233ce19305b96a2a0524371568c31f8451a475b01a3e99b65e28a88a998ea1"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/H-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "6779283ff8039a46dec66d0b6c757bec6df33fd6dbdacce6f33f743dcf15dcf7"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/I-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "5bef70e32c247cc68fff5d9a535b926be0b7b12a95d89e34103fce35b2faa911"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/I-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "58558aaabb7452104985ac29aedadd4407ae4b647a7f37a50c44a127a48974ff"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/I-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "ab5c1200264e6e7b9de6f4460bf3a34436cff3dfb1e8b0ead8cfb9bdd2b6a970"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/I-step-1.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "14dca9c6121e02cfb48193c5eb0136f8de899b99eac18e6a5cf61fbdc9232d78"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/I-step-2.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "5056b545052f7b0eff8f1509d822071dac21909f795b7dbba711bfe24faa0677"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/J-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "406487c5efb415f86ce7f6fef241310eebadc64f9f30b9a555b3a5a22cf79d8f"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/J-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "c1150cccb57dc618b907588c48128c1e2ef5cb56238c5986db7d80a322982916"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/J-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "e44e490a92e6046bb85b761d9e0e579d6ef1cc70532ddbf399ab6f67bf621e2b"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/J-step-1.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "529342ed63bb07caef395f34c6aa4fc4b39d367dcfeeb95f926f6ca267397698"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/J-step-2.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "56e4276d24d09b15a4bbf83c0b267c1364637fe4c652bbf76fb55015cc1e2afe"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/K-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "3a1730c97e391b6937ac59c6e3aa75af09854cb0b84161e9838233512ded8248"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/K-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "76e060e67a30e2e2b1aad410902e8e82c15e277ccff492761902dc55a441a272"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/K-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "ef49525243e95627c5893ac17068e4c65b1380ca5ca53ad00f034d291c597344"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/K-step-1.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "e8fb1e637b96254aa9eee6cf653a2eba67df0bee3f026b1b57c44968e00b1a07"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/K-step-2.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "e465857c9585a41fdd90a3429252ba07c8313e1a3e841eb2039e86aa801b123e"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/L-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "383ef01c70e610bcf3001f6c0b1409480217b4ebfd3ddf43661fec1a0edaa51e"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/L-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "9336f54af645ad088b95b13707ff385c4d939a2d664790600080d72b74610b31"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/L-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "5d79026403174907872774f95f1337562a2004b0df127aa3a81d524d9ce16da4"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/M-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "76d6bc195b62bde5a64915d278510264e724004084136497d74dcfb2a1de53d8"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/M-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "b0ebd395162b1360fc7b3d0ff7255c281baef8537c09ff2e070101621121f001"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/M-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "fab81e2d22ef96b0102f347289081a40a470de6cac5b13df96b0eb47e99dd5cf"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/M-step-1.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "a4d976fc9dd97b7c8847b0eb02fd27d9e4381059a5b46c1d439061417a8c59ca"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/M-step-2.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "74e9d366f1248d8861a6dba8e425c88e97432e84216e5116cb305be275eb72a6"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/M-step-3.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "a404b3aa42671e74704af03015b6df8cd2298ee389df0203ee4618c8082bcd7b"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/N-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "76ca351b202fdc537736d03e6f013eb0d9cc12acff5fe450af99c6923b3597f1"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/N-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "ef44328cf7bcf428e03135d00783a8c33f6b0d29e24bd3613bbc4b0aed1d1721"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/N-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "5c0df02f91182729cfffb8b857e9b29e830b51e5fba4724cdb6e33053c690e4c"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/O-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "924106ff38fa1cf92e2f562eac04fdfd2924075b37c18fd86e6dd8118119a7b6"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/O-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "b07e1aec9ddc3497d87a179247cbc9c7820e0b5c3eb0235b0389a2272e178e57"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/O-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "b832b707e06a9ea7f0092258ac7e46d0adbf47343e2de6d1490e3d5e910ee880"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/P-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "a3b68610503c023806c4a377405b9609dca6025741727d6046273d17b44b1350"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/P-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "43b8e95cbae254bbe208a4b75c075adb353834351e48205d922a94c6885fa090"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/P-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "3f8de90dc03bd31b55860452bbad23f6313f6b94e836aa4c5e5690859eeb0d05"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/Q-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "5c12d096924479845532eb7034537694eea07b153172e7c889bf6f588806036c"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/Q-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "b82c3b23d38ae8d37ec10e95dc432f977a9c7cd98c397a86766912d153762b83"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/Q-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "12f44bfa853e1cc54e275ae45ca4bb4223c51e269b439c329d92e206340b385a"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/R-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "8376d13c2065ff5c1a43ba94c6d2cfaf0969f4359a5f2171eb3aefbea32d1f39"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/R-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "45a4938781fc157071122f8067d32333618e793385d05427bee018c051bab9af"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/R-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "80bb8a1bfa56ee92644ce41698a71c8328a0251e0488acb8fd5f9604beabd82d"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/S-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "857de409c542fee1e90eaa54d0dc063b06a5e5f54ee960b4a4ad866d05d55760"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/S-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "dab7503140498de895ac1738cd9985281dca13e0106db58223b14ad377d0556d"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/S-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "124d34849d6f552a61e36c8d84d15c45d251bee136272867e1ce8fc9dadd4eb3"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/T-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "8ba62a9340fa7b329b1ecd802177d9def08c4aea0fe146fbf4c2dba34a38e3cd"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/T-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "065b01517d4d63b3cd208a81b9d38cfa25a6ae7a1006125eceacd123897bebfa"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/T-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "4173630ba46e84d1cbb3d94a6f1424dfb7505d3ef172d7e37cc8721e25adcc55"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/T-step-1.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "991b0485a42681dc5905c48e9119c661df2bb2c0723e57e32754a114f4a65815"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/T-step-2.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "8056bedda4d434b5f158cdbe084f31304592f89bbc58f7a7260c013cd49fb5cd"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/U-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "232e3430e691adedf765a0763a5500de7f868e2f4f2ff53b68db3780af88f299"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/U-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "0f40691d2a59c5cc5df55f9abec8d2fcb933379c4e6a2c78679106afbc7edd49"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/U-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "f57885fe018b78b2a3ff1bcfafefb71624d10fd25bb9066f2d947344f0f300f4"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/V-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "9c3028b4a70a7150550f60d57393a7e8ee354792b5e955a04a96d21b0a14f8ea"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/V-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "e3d8f675ecc107f6961a4747fb939df93e7a10cbfee2243937b24db9fc434c52"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/V-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "2af4c0511bc92ff080075bf6d1ccd41712a062d0f5a30000215aad647413d27f"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/W-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "ed172bfe8a33899b6f77176600d7d3d353c542735bf15c14d1392f786d381fee"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/W-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "ca9f7c498a960cedd9a2897d39c33b707ebc2c69ea2e49c88f0a13466bbbc6a3"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/W-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "99013f0b29c8ed9acd4f3be4a8b78b3b299ed90a29862073259b1c164f9c8d27"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/X-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "bad745265ba8536df85b27baca9d34850f9f341389bda1113ece7051bc0b5af1"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/X-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "4333cff98e6fcdadac97b3e84869c183563afce822a1bfb18a270e04a47e7242"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/X-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "5d35ee9f351d0333c7a936ba5e6f229e06735e430f163ec5d63252833f90eb56"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/Y-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "260addd51566832d3b9fcf5b0f155935b4b9546ca2394f07b091e538daa8106e"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/Y-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "b2adf2ed352352f87bdf45a2ae43b216b81d8e5620d05171dd3b343d25ea654f"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/Y-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "3ead588f1b9418ff807ea50fe98f15720e05b64d44eafa70155b2e2a082c150e"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/Z-after.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "37e1344cc0b957fc4fc448b64207596587c9ed401deb9c3059e42fbd821acfe0"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/Z-before.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "c77f9bb634cdd00434c9bdf29dcfdf4077177b54c3c06c7bf3ef0331a30e6f61"
+        },
+        {
+          "path": "docs/verification/p2/native-landmarks-960/Z-glyph.png",
+          "pixels": [
+            960,
+            600
+          ],
+          "sha256": "0ce7a146d4337667185c206498083882ed2310197fca81effab520dbee2e80bb"
+        }
+      ]
+    }
+  ],
+  "visual_review": {
+    "method": "Agent inspected original captures and contact sheets, separately from input/layout assertions",
+    "reviewed": "All B-Z before/after at 1440 via five contact sheets; all 26 source-model front views via three sheets; detailed J/K/I/R/T/V steps and both-size home/chapter/photo/route samples; four second-option F/H/P/R native captures",
+    "limits": "Not an independent human art review or a child usability study"
+  },
+  "remaining_human_validation": [
+    "Independent textbook/editorial review",
+    "Synthetic voice listening review",
+    "Child usability sessions",
+    "Longitudinal memory-effect evaluation"
+  ],
+  "later_scope": [
+    "P3 full eight-book 81-chapter production",
+    "All 144 character identities produced",
+    "All weather/time/quality/hardware combinations",
+    "P4 expansion"
+  ],
+  "engineering_evidence_passed": true
+}

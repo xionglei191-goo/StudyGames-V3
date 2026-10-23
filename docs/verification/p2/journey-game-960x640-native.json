@@ -1,0 +1,791 @@
+{
+  "checks": [
+    {
+      "id": "scene_ready",
+      "passed": true
+    },
+    {
+      "id": "isolated_save",
+      "passed": true
+    },
+    {
+      "id": "home_has_guide_with_stable_identity",
+      "passed": true
+    },
+    {
+      "id": "clickable/去和熊叔打招呼",
+      "passed": true
+    },
+    {
+      "id": "walking_to_bear_opens_home_guide",
+      "passed": true
+    },
+    {
+      "id": "clickable/预览花朵",
+      "passed": true
+    },
+    {
+      "id": "preview_does_not_commit_home_choice",
+      "passed": true
+    },
+    {
+      "id": "clickable/取消预览",
+      "passed": true
+    },
+    {
+      "id": "cancel_preview_does_not_complete_home_step",
+      "passed": true
+    },
+    {
+      "id": "clickable/预览星星",
+      "passed": true
+    },
+    {
+      "id": "clickable/就摆这个",
+      "passed": true
+    },
+    {
+      "id": "home_decoration_confirmed",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下旅行册，看看地图",
+      "passed": true
+    },
+    {
+      "id": "receiving_book_opens_real_home_map",
+      "passed": true
+    },
+    {
+      "id": "clickable/请向导陪我去苹果屋",
+      "passed": true
+    },
+    {
+      "id": "guided_travel_opens_real_orchard_activity",
+      "passed": true
+    },
+    {
+      "id": "clickable/请兔兔示范",
+      "passed": true
+    },
+    {
+      "id": "real_orchard_button_starts_supported_demonstration",
+      "passed": true
+    },
+    {
+      "id": "demonstration_physically_deposits_apple",
+      "passed": true
+    },
+    {
+      "id": "deposited_apple_opens_discovery_card",
+      "passed": true
+    },
+    {
+      "id": "orchard_deposit_is_durably_recorded",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这次发现",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 A",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "demonstration_can_complete_supported_encounter",
+      "passed": true
+    },
+    {
+      "id": "demonstration_mode_persisted",
+      "passed": true
+    },
+    {
+      "id": "accepting_discovery_leaves_orchard_activity",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看船头",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看船尾",
+      "passed": true
+    },
+    {
+      "id": "clickable/把整条船放进取景框",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 B",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/B",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/拿起一颗莓果",
+      "passed": true
+    },
+    {
+      "id": "clickable/把莓果放到蛋糕上",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 C",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/C",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/轻敲鼓面",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 D",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/D",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/揭开观察遮片",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 E",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/E",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/珊瑚粉",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 F",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/F",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/转动观察滑条",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 G",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/G",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/宽檐帽",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 H",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/H",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/拿起冰淇淋球",
+      "passed": true
+    },
+    {
+      "id": "clickable/放到蛋筒上",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 I",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/I",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/揭开罐盖",
+      "passed": true
+    },
+    {
+      "id": "clickable/把罐盖合好",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 J",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/J",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/拿起尾带",
+      "passed": true
+    },
+    {
+      "id": "clickable/把尾带接到风筝下面",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 K",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/K",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/点亮灯笼",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 L",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/L",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/观察菌盖",
+      "passed": true
+    },
+    {
+      "id": "clickable/观察菌柄",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看完整的蘑菇",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 M",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/M",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/移动取景窗，对准鸟巢",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 N",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/N",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/猫头鹰",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 O",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/O",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/圆圆的大南瓜",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 P",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/P",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/拿起花纹布片",
+      "passed": true
+    },
+    {
+      "id": "clickable/把布片放进拼布被的空格",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 Q",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/Q",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/挥挥手",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 R",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/R",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/拿起星星",
+      "passed": true
+    },
+    {
+      "id": "clickable/放到五角星轮廓上",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 S",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/S",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/拿起一节车厢",
+      "passed": true
+    },
+    {
+      "id": "clickable/把车厢接到车头后面",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 T",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/T",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/雨天",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 U",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/U",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/移动放大窗，找到山顶火山口",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 V",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/V",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/鲸鱼",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 W",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/W",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/敲一根长音条",
+      "passed": true
+    },
+    {
+      "id": "clickable/敲一根短音条",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 X",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/X",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/找到短线头",
+      "passed": true
+    },
+    {
+      "id": "clickable/沿着线头连到毛线团",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 Y",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/Y",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "clickable/拿起斑马邮票",
+      "passed": true
+    },
+    {
+      "id": "clickable/把邮票盖在明信片上",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 Z",
+      "passed": true
+    },
+    {
+      "id": "actual_room_card_and_glyph_encounter/Z",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这张发现页",
+      "passed": true
+    },
+    {
+      "id": "all_26_encounters_unlock_mainline",
+      "passed": true
+    },
+    {
+      "id": "letter_encounters_do_not_grant_old_course_mastery",
+      "passed": true
+    },
+    {
+      "id": "letter_progress_survives_reload",
+      "passed": true
+    },
+    {
+      "id": "clickable/接受学校的邀请",
+      "passed": true
+    },
+    {
+      "id": "clickable/一起去校园",
+      "passed": true
+    },
+    {
+      "id": "u1_arrives_in_school",
+      "passed": true
+    },
+    {
+      "id": "clickable/Hello! 你好！",
+      "passed": true
+    },
+    {
+      "id": "clickable/星星",
+      "passed": true
+    },
+    {
+      "id": "clickable/花朵欢迎牌",
+      "passed": true
+    },
+    {
+      "id": "welcome_corner_has_visible_saved_result",
+      "passed": true
+    },
+    {
+      "id": "clickable/Thank you, Peter!",
+      "passed": true
+    },
+    {
+      "id": "u1_book_contact_precedes_commit",
+      "passed": true
+    },
+    {
+      "id": "clickable/打开 hello 的故事",
+      "passed": true
+    },
+    {
+      "id": "optional_story_opens_inside_u1",
+      "passed": true
+    },
+    {
+      "id": "story_component_is_live",
+      "passed": true
+    },
+    {
+      "id": "u1_story_uses_live_animation_stage",
+      "passed": true
+    },
+    {
+      "id": "clickable/播放故事",
+      "passed": true
+    },
+    {
+      "id": "clickable/暂停",
+      "passed": true
+    },
+    {
+      "id": "actual_animation_phase_is_saved_in_current_session",
+      "passed": true
+    },
+    {
+      "id": "rendered_animation_cue_reaches_authoritative_session",
+      "passed": true
+    },
+    {
+      "id": "actual_demonstration_and_later_gap_help_are_saved",
+      "passed": true
+    },
+    {
+      "id": "escape_pauses_same_memory_session",
+      "passed": true
+    },
+    {
+      "id": "reopen_resumes_same_invocation",
+      "passed": true
+    },
+    {
+      "id": "help_level_restored",
+      "passed": true
+    },
+    {
+      "id": "failed_save_keeps_learning_page_open",
+      "passed": true
+    },
+    {
+      "id": "failed_observations_stay_in_ordered_queue",
+      "passed": true
+    },
+    {
+      "id": "restored_storage_flushes_before_closing",
+      "passed": true
+    },
+    {
+      "id": "post_demo_correct_is_not_independent_success",
+      "passed": true
+    },
+    {
+      "id": "optional_story_returns_to_life_event",
+      "passed": true
+    },
+    {
+      "id": "clickable/请再示范一次",
+      "passed": true
+    },
+    {
+      "id": "clickable/暖黄色相框 · 拍照",
+      "passed": true
+    },
+    {
+      "id": "photo_does_not_complete_chapter",
+      "passed": true
+    },
+    {
+      "id": "clickable/陪我回家",
+      "passed": true
+    },
+    {
+      "id": "clickable/把合照摆到展示架",
+      "passed": true
+    },
+    {
+      "id": "home_display_completes_chapter_with_separate_receipt",
+      "passed": true
+    },
+    {
+      "id": "u1_has_no_unplanned_coin_reward",
+      "passed": true
+    },
+    {
+      "id": "chapter_completion_survives_reload",
+      "passed": true
+    },
+    {
+      "id": "full_selected_book_word_list_visible",
+      "passed": true
+    },
+    {
+      "id": "runtime_book_available/xiangshao-g3-1",
+      "passed": true
+    },
+    {
+      "id": "runtime_book_available/xiangshao-g3-2",
+      "passed": true
+    },
+    {
+      "id": "runtime_book_available/xiangshao-g4-1",
+      "passed": true
+    },
+    {
+      "id": "runtime_book_available/xiangshao-g4-2",
+      "passed": true
+    },
+    {
+      "id": "runtime_book_available/english-grade5-volume1-smartedu-2022",
+      "passed": true
+    },
+    {
+      "id": "runtime_book_available/xiangshao-g5-2",
+      "passed": true
+    },
+    {
+      "id": "runtime_book_available/xiangshao-g6-1",
+      "passed": true
+    },
+    {
+      "id": "runtime_book_available/xiangshao-g6-2",
+      "passed": true
+    },
+    {
+      "id": "production_save_unchanged",
+      "passed": true
+    },
+    {
+      "id": "production_save_and_backup_unchanged_on_exit",
+      "passed": true
+    }
+  ],
+  "engine_input_dispatch": true,
+  "failures": [],
+  "journey_evidence": {},
+  "orchard_evidence": {
+    "actor_position": "(-3.399547, 0.02, 1.197426)",
+    "apple_position": "(-2.5, 0.45, 0.8)",
+    "apple_target": "(-6.73091, 1.123141, 0.160307)",
+    "basket_target": "(-2.5, 0.6, 0.8)",
+    "contacts": [
+      {
+        "action": "pick",
+        "distance": 0.139513865113258,
+        "round_id": "orchard-1792688414.616-12434346"
+      },
+      {
+        "action": "place",
+        "distance": 0.136881172657013,
+        "round_id": "orchard-1792688414.616-12434346"
+      }
+    ],
+    "mode": "demonstration_viewed",
+    "paused": false,
+    "phase": "deposited",
+    "pick_stand": "(-6.0, 0.030002, 0.0)",
+    "place_stand": "(-3.289663, 0.03, 1.129879)",
+    "round_id": "orchard-1792688414.616-12434346"
+  },
+  "production_save_and_backup_unchanged": true,
+  "protected_production_save": "user://island-save-v1.json",
+  "reduced_motion": false,
+  "result": "PASS"
+}

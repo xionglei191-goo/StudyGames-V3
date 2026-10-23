@@ -1,0 +1,283 @@
+{
+  "room_id": "landmark_R",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口指令卡槽",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Command_Cards_Cabinet",
+      "memory_id": "memory_R_01",
+      "activity": "选择要做的动作"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧零件格",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Parts_Back",
+      "memory_id": "memory_R_02",
+      "activity": "找所需零件"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央动作测试台",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Robot_Workbench_Cabinet",
+      "memory_id": "memory_R_03",
+      "activity": "让机器人依序移动"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧维修臂桌",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Repair_Arm_Cabinet",
+      "memory_id": "memory_R_04",
+      "activity": "替换缺失部件"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口完成状态屏",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Status_Face",
+      "memory_id": "memory_R_05",
+      "activity": "核对任务结果"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Parts",
+      "aabb_blender": [
+        -6.569999694824219,
+        0.675000011920929,
+        0.0,
+        -3.629999876022339,
+        1.5250000953674316,
+        2.25
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_03_Robot_Workbench",
+      "aabb_blender": [
+        -1.600000023841858,
+        0.8500000238418579,
+        -0.06000000238418579,
+        1.600000023841858,
+        2.5500001907348633,
+        0.9599999785423279
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_01_Command_Cards",
+      "aabb_blender": [
+        -5.450000286102295,
+        -5.300000190734863,
+        -0.06000000238418579,
+        -3.1500000953674316,
+        -4.300000190734863,
+        0.9100000262260437
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_04_Repair_Arm",
+      "aabb_blender": [
+        3.6500000953674316,
+        0.6000000238418579,
+        -0.06000000238418579,
+        6.349999904632568,
+        1.899999976158142,
+        0.9599999785423279
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_05_Status",
+      "aabb_blender": [
+        3.999999761581421,
+        -5.275000095367432,
+        0.0,
+        6.399999618530273,
+        -5.025000095367432,
+        1.600000023841858
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 273,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 3465692,
+  "glb_node_count": 284,
+  "triangles_instanced": 129144,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "447d7c570b79854423954da0d7d343d15f1673d5cb8dd9174872d0f40dad6196",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/landmark_R/landmark_R_v01.blend",
+  "source_blend_preserved": true
+}

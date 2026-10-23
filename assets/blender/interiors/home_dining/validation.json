@@ -1,0 +1,283 @@
+{
+  "room_id": "home_dining",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "早餐边柜",
+      "position_blender": [
+        -4.8,
+        2.6,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        -2.6
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_dining_01",
+      "activity": "看时钟准备早餐，讲讲自己的早餐时间。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "水果分享台",
+      "position_blender": [
+        3.2,
+        -4.8,
+        0.0
+      ],
+      "position_godot": [
+        3.2,
+        0.0,
+        4.8
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_dining_02",
+      "activity": "看看水果，说说自己喜欢哪一种。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "家庭餐桌",
+      "position_blender": [
+        0.0,
+        -1.1,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        1.1
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_dining_03",
+      "activity": "为家人摆好餐盘，再一起吃饭。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "生日点心桌",
+      "position_blender": [
+        -3.2,
+        -4.3,
+        0.0
+      ],
+      "position_godot": [
+        -3.2,
+        0.0,
+        4.3
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_dining_04",
+      "activity": "摆放生日蛋糕和贺卡，向家人送上祝福。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "节日餐边架",
+      "position_blender": [
+        4.8,
+        3.0,
+        0.0
+      ],
+      "position_godot": [
+        4.8,
+        0.0,
+        -3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_dining_05",
+      "activity": "观察节日餐具，聊聊一家人团聚的晚餐。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Family_Table",
+      "aabb_blender": [
+        -1.7999999523162842,
+        0.5500000715255737,
+        -0.06000000238418579,
+        1.7999999523162842,
+        2.8499999046325684,
+        1.1099998950958252
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Breakfast_Cabinet",
+      "aabb_blender": [
+        -6.300000190734863,
+        4.099999904632568,
+        -0.06000000238418579,
+        -3.700000047683716,
+        5.299999713897705,
+        1.1600000858306885
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Fruit_Side_Table",
+      "aabb_blender": [
+        4.0,
+        -5.400000095367432,
+        -0.06000003218650818,
+        6.0,
+        -4.200000286102295,
+        1.0099999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Birthday_Table",
+      "aabb_blender": [
+        -6.150000095367432,
+        -5.0,
+        -0.0599999725818634,
+        -3.8499999046325684,
+        -3.6000001430511475,
+        0.9800000190734863
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Festival_Cabinet",
+      "aabb_blender": [
+        3.630000114440918,
+        5.074999809265137,
+        0.0,
+        6.369999885559082,
+        5.925000190734863,
+        1.899999976158142
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 282,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 2790764,
+  "glb_node_count": 295,
+  "triangles_instanced": 80696,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "d17b2bacc9fcd266b37b0909a74503128b012f6f23a5efc951090576e48a1110",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/home_dining/home_dining_v01.blend",
+  "source_blend_preserved": false
+}

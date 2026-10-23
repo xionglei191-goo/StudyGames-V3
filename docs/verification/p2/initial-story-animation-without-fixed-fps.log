@@ -1,0 +1,32 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ERROR: FAIL: H3 safe actions complete
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/test_p1_story_animation.gd:300)
+       [1] _check_support_boundaries (res://tests/test_p1_story_animation.gd:192)
+ERROR: FAIL: Reduced motion switches to a semantic middle keyframe
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/test_p1_story_animation.gd:300)
+       [1] _check_reduced_motion (res://tests/test_p1_story_animation.gd:222)
+       [2] _ticks (res://tests/test_p1_story_animation.gd:283)
+ERROR: FAIL: Reduced motion does not interpolate between keyframes
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/test_p1_story_animation.gd:300)
+       [1] _check_reduced_motion (res://tests/test_p1_story_animation.gd:225)
+       [2] _ticks (res://tests/test_p1_story_animation.gd:283)
+ERROR: FAIL: Reduced motion shows a final semantic keyframe
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/test_p1_story_animation.gd:300)
+       [1] _check_reduced_motion (res://tests/test_p1_story_animation.gd:228)
+       [2] _ticks (res://tests/test_p1_story_animation.gd:283)
+ERROR: FAIL: Reduced keyframes preserve carried-book meaning
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] _check (res://tests/test_p1_story_animation.gd:300)
+       [1] _check_reduced_motion (res://tests/test_p1_story_animation.gd:229)
+       [2] _ticks (res://tests/test_p1_story_animation.gd:283)
+{"action_kinds":34,"actual_playback_frames":63,"captures":0,"checks":3028,"failures":["H3 safe actions complete","Reduced motion switches to a semantic middle keyframe","Reduced motion does not interpolate between keyframes","Reduced motion shows a final semantic keyframe","Reduced keyframes preserve carried-book meaning"],"status":"failed"}

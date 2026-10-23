@@ -1,0 +1,115 @@
+{
+  "source": "assets/blender/A_orchard/A_orchard_with_apple_house_v02.blend",
+  "source_sha256": "5301c10ce7b5bc55482732363220fda61b06051ea4d3643e021a4a5949c0426d",
+  "normalization_offset_blender": [
+    0,
+    0,
+    -0.65
+  ],
+  "xy_layout_preserved": true,
+  "legacy_aliases": [
+    {
+      "legacy_node": "A_LOCUS_01_Entrance_Basket",
+      "legacy_xy": [
+        -2.5,
+        -0.8
+      ],
+      "alias": "SG_MEMORY_01",
+      "approach_xy": [
+        -2.5,
+        -1.6
+      ],
+      "offset": [
+        0.0,
+        -0.8,
+        0
+      ],
+      "reason": "Stand beside the permanent prop rather than inside its collision proxy"
+    },
+    {
+      "legacy_node": "A_LOCUS_02_Left_Apple_Tree",
+      "legacy_xy": [
+        -8.0,
+        0.5
+      ],
+      "alias": "SG_MEMORY_02",
+      "approach_xy": [
+        -6.95,
+        0.5
+      ],
+      "offset": [
+        1.05,
+        0.0,
+        0
+      ],
+      "reason": "Stand beside the permanent prop rather than inside its collision proxy"
+    },
+    {
+      "legacy_node": "A_LOCUS_03_Sorting_Table",
+      "legacy_xy": [
+        -2.8,
+        -4.7
+      ],
+      "alias": "SG_MEMORY_03",
+      "approach_xy": [
+        -2.8,
+        -5.65
+      ],
+      "offset": [
+        -0.0,
+        -0.95,
+        0
+      ],
+      "reason": "Stand beside the permanent prop rather than inside its collision proxy"
+    },
+    {
+      "legacy_node": "A_LOCUS_04_Wash_Basin",
+      "legacy_xy": [
+        4.15,
+        -1.3
+      ],
+      "alias": "SG_MEMORY_04",
+      "approach_xy": [
+        4.15,
+        -2.35
+      ],
+      "offset": [
+        -0.0,
+        -1.05,
+        0
+      ],
+      "reason": "Stand beside the permanent prop rather than inside its collision proxy"
+    },
+    {
+      "legacy_node": "A_LOCUS_05_Gift_Shelf",
+      "legacy_xy": [
+        3.6,
+        -6.2
+      ],
+      "alias": "SG_MEMORY_05",
+      "approach_xy": [
+        3.6,
+        -7.05
+      ],
+      "offset": [
+        0.0,
+        -0.85,
+        0
+      ],
+      "reason": "Stand beside the permanent prop rather than inside its collision proxy"
+    }
+  ],
+  "kept": [
+    "real Tripo apple house",
+    "original irregular island",
+    "orchard loop and five mature trees",
+    "creek and original bridge",
+    "all five original A_LOCUS nodes"
+  ],
+  "added": [
+    "SG gameplay aliases",
+    "simple collision proxies",
+    "two bridge approach ramps"
+  ],
+  "source_file_written": false
+}

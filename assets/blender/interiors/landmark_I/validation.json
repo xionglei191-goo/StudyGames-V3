@@ -1,0 +1,283 @@
+{
+  "room_id": "landmark_I",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口点单图牌",
+      "position_blender": [
+        -3.01,
+        -3.808,
+        0.0
+      ],
+      "position_godot": [
+        -3.01,
+        0.0,
+        3.808
+      ],
+      "associated_prop": "Locus_01_Flavours_Face",
+      "memory_id": "memory_I_01",
+      "activity": "听清客人口味"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧口味柜",
+      "position_blender": [
+        -4.128,
+        -0.784,
+        0.0
+      ],
+      "position_godot": [
+        -4.128,
+        0.0,
+        0.784
+      ],
+      "associated_prop": "Locus_02_Flavour_Cabinet_Cabinet",
+      "memory_id": "memory_I_02",
+      "activity": "找相应口味"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央冰淇淋台",
+      "position_blender": [
+        0.0,
+        -0.336,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.336
+      ],
+      "associated_prop": "Locus_03_Gelato_Counter_Cabinet",
+      "memory_id": "memory_I_03",
+      "activity": "把冰淇淋装入蛋筒"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧配料槽",
+      "position_blender": [
+        4.042,
+        -0.784,
+        0.0
+      ],
+      "position_godot": [
+        4.042,
+        0.0,
+        0.784
+      ],
+      "associated_prop": "Locus_04_Toppings_Back",
+      "memory_id": "memory_I_04",
+      "activity": "添加选定配料"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口取餐台",
+      "position_blender": [
+        3.956,
+        -4.368,
+        0.0
+      ],
+      "position_godot": [
+        3.956,
+        0.0,
+        4.368
+      ],
+      "associated_prop": "Locus_05_Collect_Cabinet",
+      "memory_id": "memory_I_05",
+      "activity": "礼貌递出并道谢"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -6.328,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.328
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -7.224,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        7.224
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -1.892,
+        -1.568,
+        0.0
+      ],
+      "position_godot": [
+        -1.892,
+        0.0,
+        1.568
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -7.052000045776367,
+        7.840000152587891,
+        0.0,
+        7.052000045776367,
+        8.176000595092773,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -7.138000011444092,
+        -7.840000152587891,
+        0.0,
+        -6.87999963760376,
+        7.840000152587891,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        6.87999963760376,
+        -7.840000152587891,
+        0.0,
+        7.138000011444092,
+        7.840000152587891,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -6.880000114440918,
+        -8.176000595092773,
+        0.0,
+        -1.2039997577667236,
+        -7.840000152587891,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.2039997577667236,
+        -8.176000595092773,
+        0.0,
+        6.880000114440918,
+        -7.840000152587891,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_01_Flavours",
+      "aabb_blender": [
+        -4.7300004959106445,
+        -5.516000270843506,
+        0.0,
+        -2.6660001277923584,
+        -5.2360005378723145,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_03_Gelato_Counter",
+      "aabb_blender": [
+        -1.4620000123977661,
+        1.0640000104904175,
+        -0.06000000238418579,
+        1.4620000123977661,
+        2.74399995803833,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_04_Toppings",
+      "aabb_blender": [
+        3.121800184249878,
+        0.9239999651908875,
+        0.0,
+        5.4781999588012695,
+        1.875999927520752,
+        1.899999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_05_Collect",
+      "aabb_blender": [
+        3.482999563217163,
+        -6.328000068664551,
+        -0.06000000238418579,
+        5.460999488830566,
+        -5.208000183105469,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Flavour_Cabinet",
+      "aabb_blender": [
+        -5.589999675750732,
+        0.559999942779541,
+        -0.06000000238418579,
+        -3.181999683380127,
+        1.9040000438690186,
+        1.059999942779541
+      ]
+    }
+  ],
+  "bounds": [
+    -6.880000114440918,
+    -7.840000152587891,
+    13.760000228881836,
+    15.680000305175781
+  ],
+  "mesh_objects": 172,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 2248236,
+  "glb_node_count": 183,
+  "triangles_instanced": 85416,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "ca8849ace8633ef180c847efc7f217bf845ef27a225d8dbc1dcc14861ed2ee7a",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/landmark_I/landmark_I_v01.blend",
+  "source_blend_preserved": true
+}

@@ -1,0 +1,305 @@
+{
+  "room_id": "landmark_T",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口时刻牌",
+      "position_blender": [
+        -4.2,
+        -2.992,
+        0.0
+      ],
+      "position_godot": [
+        -4.2,
+        0.0,
+        2.992
+      ],
+      "associated_prop": "Locus_01_Timetable_Face",
+      "memory_id": "memory_T_01",
+      "activity": "看出发安排"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧售票窗",
+      "position_blender": [
+        -5.76,
+        -0.616,
+        0.0
+      ],
+      "position_godot": [
+        -5.76,
+        0.0,
+        0.616
+      ],
+      "associated_prop": "Locus_02_Ticket_Window_Cabinet",
+      "memory_id": "memory_T_02",
+      "activity": "说明目的地"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央候车站台",
+      "position_blender": [
+        0.0,
+        -0.264,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.264
+      ],
+      "associated_prop": "Locus_03_Waiting_Platform_Back",
+      "memory_id": "memory_T_03",
+      "activity": "找到候车位"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧行李架",
+      "position_blender": [
+        5.64,
+        -0.616,
+        0.0
+      ],
+      "position_godot": [
+        5.64,
+        0.0,
+        0.616
+      ],
+      "associated_prop": "Locus_04_Luggage_Back",
+      "memory_id": "memory_T_04",
+      "activity": "放好并辨认行李"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口到站屏",
+      "position_blender": [
+        5.52,
+        -3.432,
+        0.0
+      ],
+      "position_godot": [
+        5.52,
+        0.0,
+        3.432
+      ],
+      "associated_prop": "Locus_05_Arrivals_Face",
+      "memory_id": "memory_T_05",
+      "activity": "确认下一站"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -4.972,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        4.972
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -5.676,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.676
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.64,
+        -1.232,
+        0.0
+      ],
+      "position_godot": [
+        -2.64,
+        0.0,
+        1.232
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -9.84000015258789,
+        6.160000324249268,
+        0.0,
+        9.84000015258789,
+        6.424000263214111,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -9.960000038146973,
+        -6.159999847412109,
+        0.0,
+        -9.59999942779541,
+        6.159999847412109,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        9.59999942779541,
+        -6.159999847412109,
+        0.0,
+        9.960000038146973,
+        6.159999847412109,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -9.600000381469727,
+        -6.424000263214111,
+        0.0,
+        -1.679999828338623,
+        -6.160000324249268,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.679999828338623,
+        -6.424000263214111,
+        0.0,
+        9.600000381469727,
+        -6.160000324249268,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Train",
+      "aabb_blender": [
+        -5.100000381469727,
+        3.1680002212524414,
+        0.0,
+        5.100000381469727,
+        5.456000328063965,
+        2.5999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_01_Timetable",
+      "aabb_blender": [
+        -6.600000381469727,
+        -4.334000110626221,
+        0.0,
+        -3.7200002670288086,
+        -4.113999843597412,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_04_Luggage",
+      "aabb_blender": [
+        4.296000003814697,
+        0.7260000109672546,
+        0.0,
+        7.703999996185303,
+        1.4739999771118164,
+        1.899999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Ticket_Window",
+      "aabb_blender": [
+        -7.739999771118164,
+        0.48399999737739563,
+        -0.06000000238418579,
+        -4.5,
+        1.4520000219345093,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Ticket_Window",
+      "aabb_blender": [
+        -7.679999828338623,
+        1.0779999494552612,
+        0.0,
+        -4.559999942779541,
+        1.649999976158142,
+        2.700000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_03_Waiting_Platform",
+      "aabb_blender": [
+        -1.8000000715255737,
+        1.2100000381469727,
+        -0.06000000238418579,
+        1.8000000715255737,
+        1.7820000648498535,
+        0.6399999856948853
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_05_Arrivals",
+      "aabb_blender": [
+        4.799999713897705,
+        -4.642000198364258,
+        0.0,
+        7.679999828338623,
+        -4.421999931335449,
+        1.600000023841858
+      ]
+    }
+  ],
+  "bounds": [
+    -9.600000381469727,
+    -6.159999847412109,
+    19.200000762939453,
+    12.319999694824219
+  ],
+  "mesh_objects": 151,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 3926632,
+  "glb_node_count": 165,
+  "triangles_instanced": 131672,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "6c83c828cd029591550c319e2576d67338c7863bb1174788710fa436b8ccbd90",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/landmark_T/landmark_T_v01.blend",
+  "source_blend_preserved": true
+}

@@ -1,0 +1,434 @@
+{
+  "id": "npc_bear_uncle",
+  "revision": "tripo-character-v1",
+  "family": "animal",
+  "height": 2.15,
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hips",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.6234999895095825,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Spine",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.22575008869171143,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "Spine",
+      "origin": [
+        0.0,
+        0.36549997329711914,
+        0.03225000202655792
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "origin": [
+        0.0,
+        0.053749918937683105,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_L",
+      "parent": "Spine",
+      "origin": [
+        -0.3655000329017639,
+        0.2687499523162842,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_L",
+      "parent": "UpperArm_L",
+      "origin": [
+        -0.09674999117851257,
+        -0.2687499523162842,
+        0.015050001442432404
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_L",
+      "parent": "LowerArm_L",
+      "origin": [
+        -0.085999995470047,
+        -0.21500009298324585,
+        0.03225000202655792
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_L",
+      "parent": "Hips",
+      "origin": [
+        -0.2580000162124634,
+        -0.05374997854232788,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_L",
+      "parent": "UpperLeg_L",
+      "origin": [
+        0.0,
+        -0.20424997806549072,
+        0.017200002446770668
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_L",
+      "parent": "LowerLeg_L",
+      "origin": [
+        0.0,
+        -0.23650002479553223,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_R",
+      "parent": "Spine",
+      "origin": [
+        0.3655000329017639,
+        0.2687499523162842,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_R",
+      "parent": "UpperArm_R",
+      "origin": [
+        0.09674999117851257,
+        -0.2687499523162842,
+        0.015050001442432404
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_R",
+      "parent": "LowerArm_R",
+      "origin": [
+        0.085999995470047,
+        -0.21500009298324585,
+        0.03225000202655792
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_R",
+      "parent": "Hips",
+      "origin": [
+        0.2580000162124634,
+        -0.05374997854232788,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_R",
+      "parent": "UpperLeg_R",
+      "origin": [
+        0.0,
+        -0.20424997806549072,
+        0.017200002446770668
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_R",
+      "parent": "LowerLeg_R",
+      "origin": [
+        0.0,
+        -0.23650002479553223,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hand_sockets": {
+    "L": [
+      -0.08922502398490906,
+      -0.26337504386901855,
+      0.07262500375509262
+    ],
+    "R": [
+      0.08922502398490906,
+      -0.26337504386901855,
+      0.07262500375509262
+    ]
+  },
+  "source": "assets/tripo/10_bear_uncle.glb",
+  "source_sha256": "e7deb8c45c97ee825e9b84d2a2a1c24afd2b53dce321368c078939c74b7d29af",
+  "source_triangles": 1074486,
+  "triangles": 35998,
+  "textures": [
+    {
+      "name": "10_bear_uncle_basecolor.jpg",
+      "input_size": [
+        2048,
+        2048
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "10_bear_uncle_normal.png",
+      "input_size": [
+        2048,
+        2048
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "10_bear_uncle_rm.jpg",
+      "input_size": [
+        2048,
+        2048
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "editable_source": "assets/characters/tripo_v1/npc_bear_uncle/rigged.blend",
+  "export_glb": "assets/characters/tripo_v1/npc_bear_uncle/character.glb",
+  "weight_method": "Blender bone heat with fitted anatomical joints and rigid head anchors; four normalized influences",
+  "vertices": 18001,
+  "blended_vertices": 11582,
+  "unweighted_vertices": 0,
+  "weight_sum_max_error": 1.3336539268493652e-06,
+  "bone_vertex_counts": {
+    "Root": 0,
+    "Hips": 5258,
+    "Spine": 6454,
+    "Neck": 0,
+    "Head": 8922,
+    "UpperArm_L": 3170,
+    "LowerArm_L": 1558,
+    "Hand_L": 976,
+    "UpperLeg_L": 2798,
+    "LowerLeg_L": 1920,
+    "Foot_L": 1338,
+    "UpperArm_R": 3180,
+    "LowerArm_R": 1538,
+    "Hand_R": 969,
+    "UpperLeg_R": 2785,
+    "LowerLeg_R": 1911,
+    "Foot_R": 1338
+  },
+  "morph_vertex_counts": {
+    "Blink": 515,
+    "Smile": 614,
+    "Talk": 273
+  },
+  "actions": [
+    {
+      "name": "carry_item",
+      "duration": 2.0,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "carry_walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "give_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "greet_wave",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "idle",
+      "duration": 3.2,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "listen_nod",
+      "duration": 1.8,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pick_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "place_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "point_target",
+      "duration": 2.0,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pose_photo",
+      "duration": 2.4,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "reach_target",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "take_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "talk_gesture",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    }
+  ],
+  "meshes": [
+    "Body"
+  ],
+  "raw_model_preserved": true,
+  "status": "validated_in_godot",
+  "elapsed_seconds": 6.74,
+  "garment_refinement": {
+    "changed_vertices": 5270,
+    "method": "torso-anchored overalls with connected-surface cuff and strap blending"
+  },
+  "gesture_refinement": {
+    "revision": "anatomical-wave-v2",
+    "source": "game/assets/characters/tripo_v1/gesture-overrides.json",
+    "description": "fitted elbow raise, forearm roll, neutral wrist and small palm-forward wave; stable original duration"
+  },
+  "validation": {
+    "engine": "Godot 4.7.2",
+    "native_report": "docs/verification/tripo-characters-v1/native-1440x900-characters.json",
+    "scope": "real skin arrays, expressions, action and UI integration; native screenshot review"
+  }
+}

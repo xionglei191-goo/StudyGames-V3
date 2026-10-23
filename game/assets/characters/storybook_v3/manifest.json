@@ -1,0 +1,2743 @@
+{
+	"art_revision": "storybook-character-v3",
+	"characters": {
+		"npc_bear_uncle": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/npc_bear_uncle/Body.res",
+					"vertices": 18240
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/npc_bear_uncle/Outfit.res",
+					"vertices": 5280
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/npc_bear_uncle/Details.res",
+					"vertices": 13236
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/npc_bear_uncle/Face.res",
+					"vertices": 9504
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Accessories",
+					"path": "res://assets/characters/storybook_v3/npc_bear_uncle/Accessories.res",
+					"vertices": 5136
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/npc_bear_uncle/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/npc_bear_uncle/Eyes.res",
+					"vertices": 3648
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/npc_bear_uncle/Hair.res",
+					"vertices": 192
+				}
+			],
+			"profile": {
+				"kind": "bear",
+				"name": "熊叔",
+				"outfit": "78a8b6",
+				"trim": "eee0bc"
+			}
+		},
+		"npc_rabbit_gardener": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/npc_rabbit_gardener/Body.res",
+					"vertices": 19560
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/npc_rabbit_gardener/Outfit.res",
+					"vertices": 5280
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/npc_rabbit_gardener/Details.res",
+					"vertices": 23904
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/npc_rabbit_gardener/Face.res",
+					"vertices": 7920
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Accessories",
+					"path": "res://assets/characters/storybook_v3/npc_rabbit_gardener/Accessories.res",
+					"vertices": 1440
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/npc_rabbit_gardener/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/npc_rabbit_gardener/Eyes.res",
+					"vertices": 3648
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/npc_rabbit_gardener/Hair.res",
+					"vertices": 192
+				}
+			],
+			"profile": {
+				"kind": "rabbit",
+				"name": "兔兔",
+				"outfit": "86a57a",
+				"trim": "ebdbb2"
+			}
+		},
+		"player": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/player/Details.res",
+					"vertices": 13176
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/player/Body.res",
+					"vertices": 17184
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/player/Face.res",
+					"vertices": 6480
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/player/Outfit.res",
+					"vertices": 3384
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/player/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/player/Hair.res",
+					"vertices": 14472
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/player/Eyes.res",
+					"vertices": 3648
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Accessories",
+					"path": "res://assets/characters/storybook_v3/player/Accessories.res",
+					"vertices": 2700
+				}
+			],
+			"profile": {
+				"backpack": true,
+				"hair": "674737",
+				"name": "小岛旅人",
+				"outfit": "e6b946",
+				"overalls": true,
+				"style": "bob",
+				"trim": "f4ead4"
+			}
+		},
+		"textbook_anne": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/textbook_anne/Outfit.res",
+					"vertices": 3312
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/textbook_anne/Body.res",
+					"vertices": 17184
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/textbook_anne/Face.res",
+					"vertices": 6480
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/textbook_anne/Details.res",
+					"vertices": 13260
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/textbook_anne/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/textbook_anne/Hair.res",
+					"vertices": 12888
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/textbook_anne/Eyes.res",
+					"vertices": 3648
+				}
+			],
+			"profile": {
+				"dress": true,
+				"hair": "bd6943",
+				"name": "Anne",
+				"outfit": "8fbbcb",
+				"style": "ponytail",
+				"trim": "a39eb7"
+			}
+		},
+		"textbook_dino": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Tail",
+					"origin": [
+						0.0,
+						0.04,
+						-0.22
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Wing_L",
+					"origin": [
+						-0.25,
+						0.2,
+						-0.17
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Wing_R",
+					"origin": [
+						0.25,
+						0.2,
+						-0.17
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/textbook_dino/Body.res",
+					"vertices": 17364
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/textbook_dino/Details.res",
+					"vertices": 16536
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/textbook_dino/Face.res",
+					"vertices": 6480
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/textbook_dino/Outfit.res",
+					"vertices": 1920
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/textbook_dino/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/textbook_dino/Eyes.res",
+					"vertices": 3648
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/textbook_dino/Hair.res",
+					"vertices": 192
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Accessories",
+					"path": "res://assets/characters/storybook_v3/textbook_dino/Accessories.res",
+					"vertices": 144
+				}
+			],
+			"profile": {
+				"kind": "dino",
+				"name": "Dino",
+				"outfit": "86ac75",
+				"trim": "e4d9b4"
+			}
+		},
+		"textbook_dongdong": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/textbook_dongdong/Outfit.res",
+					"vertices": 3072
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/textbook_dongdong/Body.res",
+					"vertices": 17184
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/textbook_dongdong/Face.res",
+					"vertices": 6480
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/textbook_dongdong/Details.res",
+					"vertices": 19860
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/textbook_dongdong/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/textbook_dongdong/Hair.res",
+					"vertices": 11304
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/textbook_dongdong/Eyes.res",
+					"vertices": 3648
+				}
+			],
+			"profile": {
+				"hair": "2b2e30",
+				"name": "Dongdong",
+				"outfit": "e2bd56",
+				"shorts": "c57668",
+				"striped": true,
+				"style": "short",
+				"trim": "f4e6c8"
+			}
+		},
+		"textbook_jim": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.88,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						-1.5707963267949,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						1.5707963267949,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						-1.5707963267949,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						1.5707963267949,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/textbook_jim/Outfit.res",
+					"vertices": 3072
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/textbook_jim/Body.res",
+					"vertices": 17184
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/textbook_jim/Face.res",
+					"vertices": 6480
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/textbook_jim/Details.res",
+					"vertices": 20496
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/textbook_jim/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/textbook_jim/Hair.res",
+					"vertices": 11304
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/textbook_jim/Eyes.res",
+					"vertices": 3648
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Accessories",
+					"path": "res://assets/characters/storybook_v3/textbook_jim/Accessories.res",
+					"vertices": 18264
+				}
+			],
+			"profile": {
+				"hair": "8b6247",
+				"kind": "wheelchair",
+				"name": "Jim",
+				"outfit": "dadbd1",
+				"style": "short",
+				"trim": "7d99a1"
+			}
+		},
+		"textbook_lingling": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/textbook_lingling/Outfit.res",
+					"vertices": 3312
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/textbook_lingling/Body.res",
+					"vertices": 17184
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/textbook_lingling/Face.res",
+					"vertices": 6480
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/textbook_lingling/Details.res",
+					"vertices": 14448
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/textbook_lingling/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/textbook_lingling/Hair.res",
+					"vertices": 14472
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/textbook_lingling/Eyes.res",
+					"vertices": 3648
+				}
+			],
+			"profile": {
+				"dress": true,
+				"hair": "242729",
+				"name": "Lingling",
+				"outfit": "dc8ea5",
+				"style": "pigtails",
+				"trim": "f5dbe0"
+			}
+		},
+		"textbook_mingming": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/textbook_mingming/Outfit.res",
+					"vertices": 3072
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/textbook_mingming/Body.res",
+					"vertices": 17184
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/textbook_mingming/Face.res",
+					"vertices": 6480
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/textbook_mingming/Details.res",
+					"vertices": 12840
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/textbook_mingming/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/textbook_mingming/Hair.res",
+					"vertices": 11304
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/textbook_mingming/Eyes.res",
+					"vertices": 3648
+				}
+			],
+			"profile": {
+				"hair": "2e3032",
+				"name": "Mingming",
+				"outfit": "7198b5",
+				"shorts": "587f9f",
+				"style": "short",
+				"trim": "d8e1dc"
+			}
+		},
+		"textbook_miss_li": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/textbook_miss_li/Outfit.res",
+					"vertices": 3312
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/textbook_miss_li/Body.res",
+					"vertices": 17184
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/textbook_miss_li/Face.res",
+					"vertices": 6480
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/textbook_miss_li/Details.res",
+					"vertices": 12072
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/textbook_miss_li/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/textbook_miss_li/Hair.res",
+					"vertices": 14472
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/textbook_miss_li/Eyes.res",
+					"vertices": 3648
+				}
+			],
+			"profile": {
+				"dress": true,
+				"hair": "292a2e",
+				"name": "Miss Li",
+				"outfit": "d49cae",
+				"style": "bob",
+				"trim": "ead3d8"
+			}
+		},
+		"textbook_peter": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/textbook_peter/Outfit.res",
+					"vertices": 3072
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/textbook_peter/Body.res",
+					"vertices": 17184
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/textbook_peter/Face.res",
+					"vertices": 6480
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/textbook_peter/Details.res",
+					"vertices": 12840
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/textbook_peter/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/textbook_peter/Hair.res",
+					"vertices": 18108
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/textbook_peter/Eyes.res",
+					"vertices": 3648
+				}
+			],
+			"profile": {
+				"hair": "dfb758",
+				"name": "Peter",
+				"outfit": "f1e8cf",
+				"shorts": "dca04c",
+				"style": "curls",
+				"trim": "dca04c"
+			}
+		},
+		"textbook_tim": {
+			"bones": [
+				{
+					"name": "Hips",
+					"origin": [
+						0.0,
+						0.79,
+						0.0
+					],
+					"parent": null,
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Spine",
+					"origin": [
+						0.0,
+						0.2,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "Head",
+					"origin": [
+						0.0,
+						0.56,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_L",
+					"origin": [
+						-0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_L",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_L",
+					"origin": [
+						-0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_L",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_L",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperArm_R",
+					"origin": [
+						0.39,
+						0.22,
+						0.0
+					],
+					"parent": "Spine",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerArm_R",
+					"origin": [
+						0.0,
+						-0.34,
+						0.0
+					],
+					"parent": "UpperArm_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "UpperLeg_R",
+					"origin": [
+						0.18,
+						-0.03,
+						0.0
+					],
+					"parent": "Hips",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				},
+				{
+					"name": "LowerLeg_R",
+					"origin": [
+						0.0,
+						-0.38,
+						0.0
+					],
+					"parent": "UpperLeg_R",
+					"rotation": [
+						0.0,
+						0.0,
+						0.0
+					]
+				}
+			],
+			"groups": [
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Outfit",
+					"path": "res://assets/characters/storybook_v3/textbook_tim/Outfit.res",
+					"vertices": 3072
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Body",
+					"path": "res://assets/characters/storybook_v3/textbook_tim/Body.res",
+					"vertices": 17184
+				},
+				{
+					"blend_shapes": [
+						"Smile",
+						"Talk"
+					],
+					"blink": false,
+					"name": "Face",
+					"path": "res://assets/characters/storybook_v3/textbook_tim/Face.res",
+					"vertices": 6480
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Details",
+					"path": "res://assets/characters/storybook_v3/textbook_tim/Details.res",
+					"vertices": 12840
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Shoes",
+					"path": "res://assets/characters/storybook_v3/textbook_tim/Shoes.res",
+					"vertices": 3168
+				},
+				{
+					"blend_shapes": [],
+					"blink": false,
+					"name": "Hair",
+					"path": "res://assets/characters/storybook_v3/textbook_tim/Hair.res",
+					"vertices": 18108
+				},
+				{
+					"blend_shapes": [
+						"Blink"
+					],
+					"blink": true,
+					"name": "Eyes",
+					"path": "res://assets/characters/storybook_v3/textbook_tim/Eyes.res",
+					"vertices": 3648
+				}
+			],
+			"profile": {
+				"hair": "a86a47",
+				"name": "Tim",
+				"outfit": "f0e8d4",
+				"shorts": "6ca4a0",
+				"style": "curls",
+				"trim": "6ca4a0"
+			}
+		}
+	},
+	"schema_version": 3
+}

@@ -1,0 +1,1747 @@
+{
+  "schema_version": 1,
+  "formal_record_valid": true,
+  "aggregation": "Pool raw frame rows across both equal-duration repetitions for each room/mode; memory and process CPU rows are selected by each stage UTC interval. Quantiles are recomputed from raw rows, not averaged from stage quantiles.",
+  "original_capture_run": "F:\\LoveStudy\\.local\\p1-performance-20261022-193930",
+  "archive": "F:\\LoveStudy\\docs\\verification\\p1\\performance-20261022-193930",
+  "rooms": [
+    {
+      "room": "landmark_A",
+      "environment_enabled": false,
+      "stage_ids": [
+        "01-landmark_A-r1-off",
+        "04-landmark_A-r2-off"
+      ],
+      "sample_seconds": 120.002577,
+      "frames": 42507,
+      "process_samples": 478,
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 42507,
+          "p50": 2.691,
+          "p95": 3.536,
+          "p99": 4.215880000000005,
+          "mean": 2.8231250617545345,
+          "min": 2.435,
+          "max": 7.121
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 42507,
+          "p50": 4.038,
+          "p95": 6.305,
+          "p99": 155.517,
+          "mean": 6.916845154915661,
+          "min": 3.46,
+          "max": 156.045
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 42507,
+          "p50": 0.036,
+          "p95": 0.118,
+          "p99": 0.134,
+          "mean": 0.04523471428235349,
+          "min": 0.028,
+          "max": 0.141
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 42507,
+          "p50": 2.006,
+          "p95": 2.499,
+          "p99": 2.953820000000007,
+          "mean": 2.087475945138448,
+          "min": 1.87,
+          "max": 5.026
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 42507,
+          "p50": 0.911,
+          "p95": 0.966,
+          "p99": 1.005,
+          "mean": 0.9143948996635849,
+          "min": 0.866,
+          "max": 1.51
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 42507,
+          "p50": 0.013,
+          "p95": 0.025,
+          "p99": 0.032,
+          "mean": 0.014940409814854025,
+          "min": 0.007,
+          "max": 0.237
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 42507,
+          "p50": 1482.0,
+          "p95": 1482.0,
+          "p99": 1482.0,
+          "mean": 1482.0,
+          "min": 1482.0,
+          "max": 1482.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 42507,
+          "p50": 310858.0,
+          "p95": 310858.0,
+          "p99": 310858.0,
+          "mean": 310858.0,
+          "min": 310858.0,
+          "max": 310858.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 42507,
+          "p50": 1428.0,
+          "p95": 1428.0,
+          "p99": 1428.0,
+          "mean": 1428.0,
+          "min": 1428.0,
+          "max": 1428.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 42507,
+          "p50": 222778792.0,
+          "p95": 224979204.4,
+          "p99": 225145840.48,
+          "mean": 222806203.0352648,
+          "min": 220417508.0,
+          "max": 225227452.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 42507,
+          "p50": 363458230.0,
+          "p95": 363458230.0,
+          "p99": 363458230.0,
+          "mean": 363458230.0,
+          "min": 363458230.0,
+          "max": 363458230.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 478,
+          "p50": 583972864.0,
+          "p95": 656265216.0,
+          "p99": 656265216.0,
+          "mean": 584081982.125523,
+          "min": 511942656.0,
+          "max": 656281600.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 478,
+          "p50": 1059395584.0,
+          "p95": 1137115136.0,
+          "p99": 1137115136.0,
+          "mean": 1059458926.3263599,
+          "min": 981909504.0,
+          "max": 1137115136.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 478,
+          "p50": 1401073664.0,
+          "p95": 1401073664.0,
+          "p99": 1401073664.0,
+          "mean": 1401073664.0,
+          "min": 1401073664.0,
+          "max": 1401073664.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 478,
+          "p50": 8.333333333333334,
+          "p95": 8.854166666666666,
+          "p99": 8.973958333333343,
+          "mean": 8.299330376001079,
+          "min": 7.291666666666667,
+          "max": 9.895833333333334
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 478,
+          "p50": 100.0,
+          "p95": 106.25,
+          "p99": 107.68750000000011,
+          "mean": 99.59196451201294,
+          "min": 87.5,
+          "max": 118.75
+        }
+      },
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 188581,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 666
+      },
+      "resident_actor_count": 0,
+      "windows_foreground_samples": 478,
+      "windows_background_samples": 0
+    },
+    {
+      "room": "landmark_A",
+      "environment_enabled": true,
+      "stage_ids": [
+        "02-landmark_A-r1-on",
+        "03-landmark_A-r2-on"
+      ],
+      "sample_seconds": 120.003303,
+      "frames": 42263,
+      "process_samples": 478,
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 42263,
+          "p50": 2.731,
+          "p95": 3.482,
+          "p99": 3.92,
+          "mean": 2.839441189693112,
+          "min": 2.488,
+          "max": 6.882
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 42263,
+          "p50": 3.972,
+          "p95": 5.605,
+          "p99": 156.244,
+          "mean": 6.632259186522489,
+          "min": 3.498,
+          "max": 157.324
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 42263,
+          "p50": 0.035,
+          "p95": 0.067,
+          "p99": 0.09,
+          "mean": 0.03977365544329555,
+          "min": 0.028,
+          "max": 0.14
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 42263,
+          "p50": 1.999,
+          "p95": 2.444,
+          "p99": 2.721,
+          "mean": 2.06992944182855,
+          "min": 1.872,
+          "max": 4.934
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 42263,
+          "p50": 0.935,
+          "p95": 0.961,
+          "p99": 0.983,
+          "mean": 0.9349650758346545,
+          "min": 0.881,
+          "max": 1.483
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 42263,
+          "p50": 0.02,
+          "p95": 0.038,
+          "p99": 0.053,
+          "mean": 0.0236101317937676,
+          "min": 0.014,
+          "max": 0.249
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 42263,
+          "p50": 1483.0,
+          "p95": 1483.0,
+          "p99": 1483.0,
+          "mean": 1483.0,
+          "min": 1483.0,
+          "max": 1483.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 42263,
+          "p50": 311046.0,
+          "p95": 311046.0,
+          "p99": 311046.0,
+          "mean": 311046.0,
+          "min": 311046.0,
+          "max": 311046.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 42263,
+          "p50": 1429.0,
+          "p95": 1429.0,
+          "p99": 1429.0,
+          "mean": 1429.0,
+          "min": 1429.0,
+          "max": 1429.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 42263,
+          "p50": 222781432.0,
+          "p95": 224971271.2,
+          "p99": 225133537.12,
+          "mean": 222806763.1532073,
+          "min": 220456280.0,
+          "max": 225199192.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 42263,
+          "p50": 363458230.0,
+          "p95": 363458230.0,
+          "p99": 363458230.0,
+          "mean": 363458230.0,
+          "min": 363458230.0,
+          "max": 363458230.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 478,
+          "p50": 511913984.0,
+          "p95": 657985536.0,
+          "p99": 657985536.0,
+          "mean": 567203660.0502092,
+          "min": 511709184.0,
+          "max": 657985536.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 478,
+          "p50": 983885824.0,
+          "p95": 1137627136.0,
+          "p99": 1137627136.0,
+          "mean": 1041328393.6401674,
+          "min": 981839872.0,
+          "max": 1137627136.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 478,
+          "p50": 1401073664.0,
+          "p95": 1401073664.0,
+          "p99": 1401073664.0,
+          "mean": 1401073664.0,
+          "min": 1401073664.0,
+          "max": 1401073664.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 478,
+          "p50": 8.333333333333334,
+          "p95": 8.854166666666666,
+          "p99": 8.854166666666666,
+          "mean": 8.28286288172463,
+          "min": 7.291666666666667,
+          "max": 9.375
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 478,
+          "p50": 100.0,
+          "p95": 106.25,
+          "p99": 106.25,
+          "mean": 99.39435458069556,
+          "min": 87.5,
+          "max": 112.5
+        }
+      },
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 188581,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 666
+      },
+      "resident_actor_count": 0,
+      "windows_foreground_samples": 478,
+      "windows_background_samples": 0
+    },
+    {
+      "room": "village",
+      "environment_enabled": false,
+      "stage_ids": [
+        "05-village-r1-off",
+        "08-village-r2-off"
+      ],
+      "sample_seconds": 120.004626,
+      "frames": 27452,
+      "process_samples": 479,
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 27452,
+          "p50": 4.254,
+          "p95": 5.216,
+          "p99": 5.816489999999998,
+          "mean": 4.3714347224245955,
+          "min": 3.687,
+          "max": 8.446
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 27452,
+          "p50": 5.714,
+          "p95": 7.708,
+          "p99": 149.722,
+          "mean": 10.297772147748798,
+          "min": 4.959,
+          "max": 991.467
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 27452,
+          "p50": 0.037,
+          "p95": 0.069,
+          "p99": 0.127,
+          "mean": 0.043136929914031764,
+          "min": 0.03,
+          "max": 0.129
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 27452,
+          "p50": 3.122,
+          "p95": 3.791,
+          "p99": 4.234,
+          "mean": 3.2145017849337023,
+          "min": 2.75,
+          "max": 6.391
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 27452,
+          "p50": 1.463,
+          "p95": 1.544,
+          "p99": 1.983,
+          "mean": 1.4681257103307592,
+          "min": 0.64,
+          "max": 5.125
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 27452,
+          "p50": 0.022,
+          "p95": 0.028,
+          "p99": 0.047,
+          "mean": 0.022776482587789595,
+          "min": 0.014,
+          "max": 0.279
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 27452,
+          "p50": 2370.0,
+          "p95": 2370.0,
+          "p99": 2370.0,
+          "mean": 2370.0,
+          "min": 2370.0,
+          "max": 2370.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 27452,
+          "p50": 895769.0,
+          "p95": 895769.0,
+          "p99": 895769.0,
+          "mean": 895769.0,
+          "min": 895769.0,
+          "max": 895769.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 27452,
+          "p50": 2323.0,
+          "p95": 2323.0,
+          "p99": 2323.0,
+          "mean": 2323.0,
+          "min": 2323.0,
+          "max": 2323.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 27452,
+          "p50": 562604809.0,
+          "p95": 565074879.4,
+          "p99": 565285703.08,
+          "mean": 562574913.0378844,
+          "min": 559838505.0,
+          "max": 565338409.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 27452,
+          "p50": 454280132.0,
+          "p95": 454280132.0,
+          "p99": 454280132.0,
+          "mean": 454280132.0,
+          "min": 454280132.0,
+          "max": 454280132.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 479,
+          "p50": 971358208.0,
+          "p95": 1019584512.0,
+          "p99": 1019584512.0,
+          "mean": 994165240.5177453,
+          "min": 968314880.0,
+          "max": 1019584512.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 479,
+          "p50": 1564315648.0,
+          "p95": 1607462912.0,
+          "p99": 1607462912.0,
+          "mean": 1580538954.822547,
+          "min": 1551593472.0,
+          "max": 1607462912.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 479,
+          "p50": 1401073664.0,
+          "p95": 1401073664.0,
+          "p99": 1401073664.0,
+          "mean": 1401073664.0,
+          "min": 1401073664.0,
+          "max": 1401073664.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 479,
+          "p50": 8.333333333333334,
+          "p95": 13.07291666666665,
+          "p99": 14.697916666666652,
+          "mean": 9.018778253735174,
+          "min": 6.770833333333333,
+          "max": 17.708333333333332
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 479,
+          "p50": 100.0,
+          "p95": 156.87499999999977,
+          "p99": 176.37499999999983,
+          "mean": 108.22533904482209,
+          "min": 81.25,
+          "max": 212.5
+        }
+      },
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 1998902,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 4106
+      },
+      "resident_actor_count": 0,
+      "windows_foreground_samples": 479,
+      "windows_background_samples": 0
+    },
+    {
+      "room": "village",
+      "environment_enabled": true,
+      "stage_ids": [
+        "06-village-r1-on",
+        "07-village-r2-on"
+      ],
+      "sample_seconds": 120.00286399999999,
+      "frames": 24876,
+      "process_samples": 478,
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 24876,
+          "p50": 4.699,
+          "p95": 5.775,
+          "p99": 6.568,
+          "mean": 4.824041807364528,
+          "min": 4.081,
+          "max": 10.384
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 24876,
+          "p50": 6.276,
+          "p95": 8.399,
+          "p99": 455.477,
+          "mean": 13.370955016883743,
+          "min": 5.527,
+          "max": 458.897
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 24876,
+          "p50": 0.039,
+          "p95": 0.07,
+          "p99": 0.141,
+          "mean": 0.04494826338639653,
+          "min": 0.03,
+          "max": 0.161
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 24876,
+          "p50": 3.191,
+          "p95": 3.928,
+          "p99": 4.5634999999999994,
+          "mean": 3.2947884708152433,
+          "min": 2.821,
+          "max": 7.525
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 24876,
+          "p50": 1.576,
+          "p95": 1.701,
+          "p99": 2.144,
+          "mean": 1.5740632336388485,
+          "min": 0.602,
+          "max": 3.488
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 24876,
+          "p50": 0.086,
+          "p95": 0.131,
+          "p99": 0.167,
+          "mean": 0.08972266441550088,
+          "min": 0.057,
+          "max": 0.376
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 24876,
+          "p50": 2373.0,
+          "p95": 2373.0,
+          "p99": 2373.0,
+          "mean": 2373.0,
+          "min": 2373.0,
+          "max": 2373.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 24876,
+          "p50": 897469.0,
+          "p95": 897469.0,
+          "p99": 897469.0,
+          "mean": 897469.0,
+          "min": 897469.0,
+          "max": 897469.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 24876,
+          "p50": 2326.0,
+          "p95": 2326.0,
+          "p99": 2326.0,
+          "mean": 2326.0,
+          "min": 2326.0,
+          "max": 2326.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 24876,
+          "p50": 563634185.0,
+          "p95": 564805867.0,
+          "p99": 565047323.0,
+          "mean": 563621098.9697701,
+          "min": 562240453.0,
+          "max": 565076653.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 24876,
+          "p50": 454280132.0,
+          "p95": 454280132.0,
+          "p99": 454280132.0,
+          "mean": 454280132.0,
+          "min": 454280132.0,
+          "max": 454280132.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 478,
+          "p50": 1012701184.0,
+          "p95": 1013809152.0,
+          "p99": 1013809152.0,
+          "mean": 1010310696.7029289,
+          "min": 1006301184.0,
+          "max": 1013829632.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 478,
+          "p50": 1596661760.0,
+          "p95": 1600856064.0,
+          "p99": 1600921600.0,
+          "mean": 1596142639.129707,
+          "min": 1589846016.0,
+          "max": 1600925696.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 478,
+          "p50": 1401073664.0,
+          "p95": 1401073664.0,
+          "p99": 1401073664.0,
+          "mean": 1401073664.0,
+          "min": 1401073664.0,
+          "max": 1401073664.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 478,
+          "p50": 8.333333333333334,
+          "p95": 13.541666666666666,
+          "p99": 14.661458333333382,
+          "mean": 9.231502496323692,
+          "min": 6.770833333333333,
+          "max": 18.75
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 478,
+          "p50": 100.0,
+          "p95": 162.5,
+          "p99": 175.93750000000057,
+          "mean": 110.77802995588432,
+          "min": 81.25,
+          "max": 225.0
+        }
+      },
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 1998902,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 4106
+      },
+      "resident_actor_count": 0,
+      "windows_foreground_samples": 478,
+      "windows_background_samples": 0
+    },
+    {
+      "room": "school",
+      "environment_enabled": false,
+      "stage_ids": [
+        "09-school-r1-off",
+        "12-school-r2-off"
+      ],
+      "sample_seconds": 120.005724,
+      "frames": 29122,
+      "process_samples": 479,
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 29122,
+          "p50": 4.014,
+          "p95": 4.911,
+          "p99": 5.484790000000001,
+          "mean": 4.120792665338919,
+          "min": 3.419,
+          "max": 8.484
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 29122,
+          "p50": 5.468,
+          "p95": 7.636,
+          "p99": 97.538,
+          "mean": 7.207451926378683,
+          "min": 4.793,
+          "max": 103.561
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 29122,
+          "p50": 0.052,
+          "p95": 0.092,
+          "p99": 0.197,
+          "mean": 0.05923971567886821,
+          "min": 0.044,
+          "max": 0.25
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 29122,
+          "p50": 2.871,
+          "p95": 3.501,
+          "p99": 3.937790000000001,
+          "mean": 2.9508580454639106,
+          "min": 2.518,
+          "max": 6.125
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 29122,
+          "p50": 1.414,
+          "p95": 2.001,
+          "p99": 2.176,
+          "mean": 1.5169044708467825,
+          "min": 1.217,
+          "max": 3.303
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 29122,
+          "p50": 0.043,
+          "p95": 0.058,
+          "p99": 0.07,
+          "mean": 0.045075750291875556,
+          "min": 0.03,
+          "max": 0.256
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 29122,
+          "p50": 1943.0,
+          "p95": 1943.0,
+          "p99": 1943.0,
+          "mean": 1943.0,
+          "min": 1943.0,
+          "max": 1943.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 29122,
+          "p50": 242858.0,
+          "p95": 242858.0,
+          "p99": 242858.0,
+          "mean": 242858.0,
+          "min": 242858.0,
+          "max": 242858.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 29122,
+          "p50": 1892.0,
+          "p95": 1892.0,
+          "p99": 1892.0,
+          "mean": 1892.0,
+          "min": 1892.0,
+          "max": 1892.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 29122,
+          "p50": 240015038.0,
+          "p95": 241515843.2,
+          "p99": 241676129.68,
+          "mean": 240039355.40951857,
+          "min": 238350802.0,
+          "max": 241732042.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 29122,
+          "p50": 97106863.0,
+          "p95": 97106863.0,
+          "p99": 97106863.0,
+          "mean": 97106863.0,
+          "min": 97106863.0,
+          "max": 97106863.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 479,
+          "p50": 573612032.0,
+          "p95": 704675840.0,
+          "p99": 704675840.0,
+          "mean": 596663704.3173277,
+          "min": 571817984.0,
+          "max": 704675840.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 479,
+          "p50": 702222336.0,
+          "p95": 839200768.0,
+          "p99": 839200768.0,
+          "mean": 726949811.0396659,
+          "min": 699858944.0,
+          "max": 839200768.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 479,
+          "p50": 1401073664.0,
+          "p95": 1401073664.0,
+          "p99": 1401073664.0,
+          "mean": 1401073664.0,
+          "min": 1401073664.0,
+          "max": 1401073664.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 479,
+          "p50": 8.333333333333334,
+          "p95": 13.020833333333334,
+          "p99": 15.104166666666666,
+          "mean": 8.91564573509816,
+          "min": 7.291666666666667,
+          "max": 17.1875
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 479,
+          "p50": 100.0,
+          "p95": 156.25,
+          "p99": 181.25,
+          "mean": 106.98774882117789,
+          "min": 87.5,
+          "max": 206.25
+        }
+      },
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 255024,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 1312
+      },
+      "resident_actor_count": 3,
+      "windows_foreground_samples": 479,
+      "windows_background_samples": 0
+    },
+    {
+      "room": "school",
+      "environment_enabled": true,
+      "stage_ids": [
+        "10-school-r1-on",
+        "11-school-r2-on"
+      ],
+      "sample_seconds": 120.000822,
+      "frames": 28458,
+      "process_samples": 479,
+      "metrics": {
+        "wall_frame_ms": {
+          "available": true,
+          "n": 28458,
+          "p50": 4.115,
+          "p95": 4.984,
+          "p99": 5.512,
+          "mean": 4.216769344296859,
+          "min": 3.561,
+          "max": 8.293
+        },
+        "engine_process_ms": {
+          "available": true,
+          "n": 28458,
+          "p50": 5.535,
+          "p95": 7.566,
+          "p99": 95.397,
+          "mean": 7.221645828940896,
+          "min": 4.864,
+          "max": 96.705
+        },
+        "engine_physics_ms": {
+          "available": true,
+          "n": 28458,
+          "p50": 0.054,
+          "p95": 0.077,
+          "p99": 0.144,
+          "mean": 0.05814758591608686,
+          "min": 0.044,
+          "max": 0.18
+        },
+        "viewport_render_cpu_ms": {
+          "available": true,
+          "n": 28458,
+          "p50": 2.872,
+          "p95": 3.49,
+          "p99": 3.861720000000001,
+          "mean": 2.9476157846651203,
+          "min": 2.5,
+          "max": 5.789
+        },
+        "viewport_render_gpu_ms": {
+          "available": true,
+          "n": 28458,
+          "p50": 1.466,
+          "p95": 2.041,
+          "p99": 2.212,
+          "mean": 1.5640442406353223,
+          "min": 1.167,
+          "max": 3.511
+        },
+        "frame_setup_cpu_ms": {
+          "available": true,
+          "n": 28458,
+          "p50": 0.058,
+          "p95": 0.078,
+          "p99": 0.096,
+          "mean": 0.06064505587181109,
+          "min": 0.04,
+          "max": 0.282
+        },
+        "rendered_objects": {
+          "available": true,
+          "n": 28458,
+          "p50": 1943.0,
+          "p95": 1943.0,
+          "p99": 1943.0,
+          "mean": 1943.0,
+          "min": 1943.0,
+          "max": 1943.0
+        },
+        "rendered_vertices_or_indices": {
+          "available": true,
+          "n": 28458,
+          "p50": 242858.0,
+          "p95": 242858.0,
+          "p99": 242858.0,
+          "mean": 242858.0,
+          "min": 242858.0,
+          "max": 242858.0
+        },
+        "draw_calls": {
+          "available": true,
+          "n": 28458,
+          "p50": 1892.0,
+          "p95": 1892.0,
+          "p99": 1892.0,
+          "mean": 1892.0,
+          "min": 1892.0,
+          "max": 1892.0
+        },
+        "engine_static_memory_bytes": {
+          "available": true,
+          "n": 28458,
+          "p50": 239999454.0,
+          "p95": 241471542.4,
+          "p99": 241580828.48,
+          "mean": 240018496.90280414,
+          "min": 238420602.0,
+          "max": 241611106.0
+        },
+        "video_memory_bytes": {
+          "available": true,
+          "n": 28458,
+          "p50": 97106863.0,
+          "p95": 97106863.0,
+          "p99": 97106863.0,
+          "mean": 97106863.0,
+          "min": 97106863.0,
+          "max": 97106863.0
+        },
+        "working_set_bytes": {
+          "available": true,
+          "n": 479,
+          "p50": 573517824.0,
+          "p95": 573517824.0,
+          "p99": 573517824.0,
+          "mean": 573225263.565762,
+          "min": 572919808.0,
+          "max": 573517824.0
+        },
+        "private_commit_bytes": {
+          "available": true,
+          "n": 479,
+          "p50": 702353408.0,
+          "p95": 702353408.0,
+          "p99": 702353408.0,
+          "mean": 702026412.091858,
+          "min": 701698048.0,
+          "max": 702353408.0
+        },
+        "peak_working_set_bytes": {
+          "available": true,
+          "n": 479,
+          "p50": 1401073664.0,
+          "p95": 1401073664.0,
+          "p99": 1401073664.0,
+          "mean": 1401073664.0,
+          "min": 1401073664.0,
+          "max": 1401073664.0
+        },
+        "process_cpu_percent_machine": {
+          "available": true,
+          "n": 479,
+          "p50": 8.333333333333334,
+          "p95": 12.5,
+          "p99": 14.291666666666636,
+          "mean": 8.852177718738309,
+          "min": 7.291666666666667,
+          "max": 18.75
+        },
+        "process_cpu_percent_single_core": {
+          "available": true,
+          "n": 479,
+          "p50": 100.0,
+          "p95": 150.0,
+          "p99": 171.49999999999963,
+          "mean": 106.22613262485972,
+          "min": 87.5,
+          "max": 225.0
+        }
+      },
+      "geometry": {
+        "empty_or_non_triangle_meshes": 0,
+        "scene_mesh_triangles": 255024,
+        "scope": "visible-in-tree MeshInstance3D geometry including off-camera meshes; excludes MultiMesh particles and render-pass duplication; not a GPU triangle counter",
+        "visible_tree_mesh_instances": 1312
+      },
+      "resident_actor_count": 3,
+      "windows_foreground_samples": 479,
+      "windows_background_samples": 0
+    }
+  ],
+  "pairs": [
+    {
+      "room": "landmark_A",
+      "repetition": 1,
+      "off": "01-landmark_A-r1-off",
+      "on": "02-landmark_A-r1-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.07900000000000018,
+          "p95": 0.09290000000000154,
+          "p99": 0.08111000000000068
+        },
+        "engine_process_ms": {
+          "p50": 0.04700000000000015,
+          "p95": 0.5729999999999995,
+          "p99": 0.19900000000001228
+        },
+        "engine_physics_ms": {
+          "p50": -0.0010000000000000009,
+          "p95": -0.006999999999999992,
+          "p99": -0.04600000000000001
+        },
+        "viewport_render_cpu_ms": {
+          "p50": 0.01200000000000001,
+          "p95": 0.016999999999999904,
+          "p99": 0.024729999999999475
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.026000000000000023,
+          "p95": 0.025999999999999912,
+          "p99": 0.025000000000000022
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.007000000000000001,
+          "p95": 0.013999999999999999,
+          "p99": 0.020999999999999998
+        },
+        "rendered_objects": {
+          "p50": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 188.0,
+          "p95": 188.0,
+          "p99": 188.0
+        },
+        "draw_calls": {
+          "p50": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": -19884.0,
+          "p95": -72674.39999997616,
+          "p99": -77366.87999999523
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": 1724416.0,
+          "p95": 1720320.0,
+          "p99": 1713684.480000019
+        },
+        "private_commit_bytes": {
+          "p50": 589824.0,
+          "p95": 512000.0,
+          "p99": 512000.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": -0.3229166666666696
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": -3.8750000000000284
+        }
+      }
+    },
+    {
+      "room": "landmark_A",
+      "repetition": 2,
+      "off": "04-landmark_A-r2-off",
+      "on": "03-landmark_A-r2-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": -0.010999999999999677,
+          "p95": -0.190649999999998,
+          "p99": -0.7126599999999934
+        },
+        "engine_process_ms": {
+          "p50": -0.29800000000000004,
+          "p95": -0.8549999999999995,
+          "p99": 1.8070000000000164
+        },
+        "engine_physics_ms": {
+          "p50": -0.0020000000000000018,
+          "p95": -0.047,
+          "p99": -0.0009999999999999731
+        },
+        "viewport_render_cpu_ms": {
+          "p50": -0.028000000000000025,
+          "p95": -0.1259999999999999,
+          "p99": -0.5796599999999965
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.020000000000000018,
+          "p95": -0.02200000000000002,
+          "p99": -0.03399999999999992
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.007000000000000001,
+          "p95": 0.012299999999999273,
+          "p99": 0.020999999999999998
+        },
+        "rendered_objects": {
+          "p50": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 188.0,
+          "p95": 188.0,
+          "p99": 188.0
+        },
+        "draw_calls": {
+          "p50": 1.0,
+          "p95": 1.0,
+          "p99": 1.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": 25008.0,
+          "p95": 56716.79999998212,
+          "p99": 59535.3599999845
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": -28672.0,
+          "p95": -28672.0,
+          "p99": -28672.0
+        },
+        "private_commit_bytes": {
+          "p50": -69632.0,
+          "p95": -69632.0,
+          "p99": -69632.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        }
+      }
+    },
+    {
+      "room": "school",
+      "repetition": 1,
+      "off": "09-school-r1-off",
+      "on": "10-school-r1-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.0730000000000004,
+          "p95": 0.01750000000000096,
+          "p99": -0.07972000000000001
+        },
+        "engine_process_ms": {
+          "p50": -0.13700000000000045,
+          "p95": -0.07400000000000073,
+          "p99": -8.164000000000001
+        },
+        "engine_physics_ms": {
+          "p50": 0.0,
+          "p95": -0.010999999999999996,
+          "p99": -0.019000000000000017
+        },
+        "viewport_render_cpu_ms": {
+          "p50": -0.010000000000000231,
+          "p95": -0.040999999999999925,
+          "p99": -0.14981999999999962
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.05700000000000016,
+          "p95": 0.04100000000000015,
+          "p99": 0.028899999999999704
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.014000000000000005,
+          "p95": 0.018999999999999996,
+          "p99": 0.024380000000001026
+        },
+        "rendered_objects": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "draw_calls": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": 47912.0,
+          "p95": 28212.80000001192,
+          "p99": 26461.760000020266
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": 462848.0,
+          "p95": -131743744.0,
+          "p99": -131743744.0
+        },
+        "private_commit_bytes": {
+          "p50": -2269184.0,
+          "p95": -137502720.0,
+          "p99": -137502720.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": 0.5208333333333339,
+          "p99": 0.9739583333333481
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": 6.25,
+          "p99": 11.687500000000199
+        }
+      }
+    },
+    {
+      "room": "school",
+      "repetition": 2,
+      "off": "12-school-r2-off",
+      "on": "11-school-r2-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.13200000000000056,
+          "p95": 0.133,
+          "p99": 0.1535399999999978
+        },
+        "engine_process_ms": {
+          "p50": 0.20099999999999962,
+          "p95": -0.010000000000000675,
+          "p99": -0.8329999999999984
+        },
+        "engine_physics_ms": {
+          "p50": 0.0030000000000000027,
+          "p95": -0.05,
+          "p99": -0.07
+        },
+        "viewport_render_cpu_ms": {
+          "p50": 0.015000000000000124,
+          "p95": 0.01710000000000056,
+          "p99": 0.03579999999999606
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.04400000000000004,
+          "p95": 0.04069999999999885,
+          "p99": 0.05553999999999926
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.016,
+          "p95": 0.022,
+          "p99": 0.028999999999999998
+        },
+        "rendered_objects": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "draw_calls": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": -79080.0,
+          "p95": -116750.40000000596,
+          "p99": -120098.87999999523
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": -94208.0,
+          "p95": -94208.0,
+          "p99": -94208.0
+        },
+        "private_commit_bytes": {
+          "p50": 131072.0,
+          "p95": 131072.0,
+          "p99": 131072.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": -1.5625,
+          "p99": -2.083333333333332
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": -18.75,
+          "p99": -25.0
+        }
+      }
+    },
+    {
+      "room": "village",
+      "repetition": 1,
+      "off": "05-village-r1-off",
+      "on": "06-village-r1-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.4500000000000002,
+          "p95": 0.47905000000000086,
+          "p99": 0.36278999999999506
+        },
+        "engine_process_ms": {
+          "p50": 0.593,
+          "p95": 0.23899999999999988,
+          "p99": 447.14099999999996
+        },
+        "engine_physics_ms": {
+          "p50": 0.0020000000000000018,
+          "p95": -0.03899999999999999,
+          "p99": -0.022000000000000006
+        },
+        "viewport_render_cpu_ms": {
+          "p50": 0.07399999999999984,
+          "p95": 0.07425000000000015,
+          "p99": 0.02565999999999935
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.11599999999999988,
+          "p95": 0.16500000000000004,
+          "p99": 0.21663999999999928
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.064,
+          "p95": 0.101,
+          "p99": 0.11900000000000001
+        },
+        "rendered_objects": {
+          "p50": 3.0,
+          "p95": 3.0,
+          "p99": 3.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 1700.0,
+          "p95": 1700.0,
+          "p99": 1700.0
+        },
+        "draw_calls": {
+          "p50": 3.0,
+          "p95": 3.0,
+          "p99": 3.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": 2280508.0,
+          "p95": 2025556.0,
+          "p99": 2162056.7999999523
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": 38012928.0,
+          "p95": 40309760.0,
+          "p99": 40247296.0
+        },
+        "private_commit_bytes": {
+          "p50": 38170624.0,
+          "p95": 35969433.599999905,
+          "p99": 35471360.0
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 2.7291666666666696
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 32.75000000000006
+        }
+      }
+    },
+    {
+      "room": "village",
+      "repetition": 2,
+      "off": "08-village-r2-off",
+      "on": "07-village-r2-on",
+      "comparable": true,
+      "mismatched_fields": [],
+      "camera_numeric_absolute_tolerance": 0.001,
+      "windows_foreground_fraction_absolute_delta": 0.0,
+      "windows_foreground_fraction_tolerance": 0.05,
+      "on_minus_off": {
+        "wall_frame_ms": {
+          "p50": 0.44099999999999984,
+          "p95": 0.6660000000000004,
+          "p99": 1.0671499999999856
+        },
+        "engine_process_ms": {
+          "p50": 0.6680000000000001,
+          "p95": 1.8820000000000006,
+          "p99": 5.411999999999978
+        },
+        "engine_physics_ms": {
+          "p50": 0.0030000000000000027,
+          "p95": 0.069,
+          "p99": 0.034
+        },
+        "viewport_render_cpu_ms": {
+          "p50": 0.06399999999999961,
+          "p95": 0.18800000000000017,
+          "p99": 0.5355999999999987
+        },
+        "viewport_render_gpu_ms": {
+          "p50": 0.09499999999999997,
+          "p95": 0.10999999999999988,
+          "p99": 0.13148999999999966
+        },
+        "frame_setup_cpu_ms": {
+          "p50": 0.064,
+          "p95": 0.10600000000000001,
+          "p99": 0.12000000000000001
+        },
+        "rendered_objects": {
+          "p50": 3.0,
+          "p95": 3.0,
+          "p99": 3.0
+        },
+        "rendered_vertices_or_indices": {
+          "p50": 1700.0,
+          "p95": 1700.0,
+          "p99": 1700.0
+        },
+        "draw_calls": {
+          "p50": 3.0,
+          "p95": 3.0,
+          "p99": 3.0
+        },
+        "engine_static_memory_bytes": {
+          "p50": -135900.0,
+          "p95": -394826.39999997616,
+          "p99": -259238.87999999523
+        },
+        "video_memory_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "working_set_bytes": {
+          "p50": -5783552.0,
+          "p95": -5775360.0,
+          "p99": -5762662.399999976
+        },
+        "private_commit_bytes": {
+          "p50": -6606848.0,
+          "p95": -6541312.0,
+          "p99": -6538772.480000019
+        },
+        "peak_working_set_bytes": {
+          "p50": 0.0,
+          "p95": 0.0,
+          "p99": 0.0
+        },
+        "process_cpu_percent_machine": {
+          "p50": 0.0,
+          "p95": 0.5208333333333321,
+          "p99": -0.6458333333333375
+        },
+        "process_cpu_percent_single_core": {
+          "p50": 0.0,
+          "p95": 6.25,
+          "p99": -7.750000000000057
+        }
+      }
+    }
+  ],
+  "hardware": {
+    "cpu": "AMD Ryzen 5 3600 6-Core Processor",
+    "debug_build": true,
+    "display_server": "Windows",
+    "engine": {
+      "build": "official",
+      "hash": "ed1daf0bf001b61586d9930840f2f1394092c079",
+      "hex": 263938,
+      "major": 4,
+      "minor": 7,
+      "patch": 2,
+      "status": "stable",
+      "string": "4.7.2-stable (official)",
+      "timestamp": 0
+    },
+    "focus_policy": "native_background_NO_FOCUS_fixture_keeps_world_running",
+    "gpu": "NVIDIA GeForce RTX 4070",
+    "gpu_vendor": "NVIDIA",
+    "graphics_api": "3.3.0 NVIDIA 610.88",
+    "logical_processor_count": 12,
+    "max_fps": 0,
+    "msaa_3d": 2,
+    "os": "Windows",
+    "os_version": "10.0.26200",
+    "physics_ticks_per_second": 60,
+    "process_id": 38132,
+    "project_version": "0.6.0",
+    "quality_scope": "current_runtime_settings_only_no_low_high_preset_claim",
+    "renderer": "gl_compatibility",
+    "requested_window": [
+      1440,
+      900
+    ],
+    "system_memory": {
+      "available": 72920678400,
+      "free": 44211204096,
+      "physical": 68625711104,
+      "stack": 8388608
+    },
+    "vsync_mode": 0,
+    "window_no_focus_flag": true
+  },
+  "vram": {
+    "captured_utc": "2026-10-22T11:55:34.170416+00:00",
+    "available": true,
+    "source": "nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader,nounits",
+    "memory_total_unit": "MiB",
+    "raw_csv": "NVIDIA GeForce RTX 4070, 610.88, 12282",
+    "stderr": "",
+    "win32_adapterram_is_not_used_as_capacity": true
+  },
+  "collector_hashes": {
+    "scripts/verify_p1.py": "54ee246b2ca45fd583fc20178062f6f24b56bc6b7fa55d4ce54a207c40cf1692",
+    "game/tests/test_p1_performance.gd": "e6a9e4f7e15feeb3282b7c13bbed71afec8e59ee9bbc46f1439977b97fcb2c58"
+  },
+  "limitations": [
+    "One actual machine and current GL Compatibility settings; no low/standard/high preset acceptance.",
+    "Static camera and stationary player. Does not measure gameplay travel or word-story animation.",
+    "Environment off disables foliage deformation, water overlay and rain display while retaining actors, weather lighting/fog and resident resources. The delta is not total weather cost or asset-unloading memory savings.",
+    "Viewport GPU/CPU timers cover the root viewport only; they are not whole-process GPU time.",
+    "Rendered primitives monitor counts vertices/indices across passes, not triangles.",
+    "scene_mesh_triangles counts visible-in-tree mesh geometry, including off-camera meshes; excludes MultiMesh and repeated render passes.",
+    "Godot monitor updates can lag. Recorder overhead is present in both modes.",
+    "GPU timer all-zero values are reported unavailable; CPU timings are not substituted for GPU.",
+    "Working set is resident process memory; private commit and engine static memory are separate metrics.",
+    "If background fixture is enabled, it overrides focus-pause only inside the profiler; this is not foreground user experience or normal game background behavior.",
+    "Requested NO_FOCUS does not prove background operation. Per-stage Windows foreground PID observations report actual foreground/background samples separately from Godot's focus flag.",
+    "Windows compositor occlusion is not separately measured. Do not minimize the capture window or overlap competing render tests.",
+    "This records performance; device-class budgets require designated target hardware and acceptance thresholds.",
+    "The timing executable is the Godot editor/debug build running the production main scene, not the exported release executable.",
+    "VSync is disabled and max_fps is zero only for this matched measurement; these distributions are not the default player-facing frame rate.",
+    "Scene loading and native screenshot/sequence readback are outside each timed sample.",
+    "TIME_PROCESS and TIME_PHYSICS_PROCESS are cached one-second maxima in this engine. Their sampled quantiles are diagnostics, not per-frame CPU distributions or CPU budget acceptance; screenshot/setup spikes may remain cached."
+  ],
+  "metric_definitions": {
+    "engine_process_ms": "Diagnostic Performance.TIME_PROCESS monitor: this engine publishes the preceding one-second interval maximum, held between updates. Not per-frame CPU timing; prior screenshot/setup work can remain cached.",
+    "engine_physics_ms": "Diagnostic Performance.TIME_PHYSICS_PROCESS monitor: preceding one-second interval maximum, not per-frame physics timing.",
+    "viewport_render_cpu_ms": "Measured root-viewport render CPU time only, excluding other engine subsystems and other viewports.",
+    "process_cpu_percent_machine": "Windows cumulative process kernel+user CPU time delta divided by elapsed wall time and logical processor count.",
+    "engine_monitor_implementation_source": "https://github.com/godotengine/godot/blob/ed1daf0bf/main/main.cpp#L4723-L4761"
+  },
+  "analysis_script_sha256": "6c057011d3d40cb5f247a2d33b30fbd0ed457faca226721e9c21e2eff8e533cd",
+  "capture_collector_source_files": [
+    "collector-source/verify_p1.py",
+    "collector-source/test_p1_performance.gd"
+  ]
+}

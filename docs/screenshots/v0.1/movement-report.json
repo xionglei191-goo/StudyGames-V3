@@ -1,0 +1,1560 @@
+{
+	"actual_physics_movement": true,
+	"checks": [
+		{
+			"name": "initial_scene_ready",
+			"passed": true
+		},
+		{
+			"name": "isolated_validation_save",
+			"passed": true
+		},
+		{
+			"name": "no_welcome_modal_in_harness",
+			"passed": true
+		},
+		{
+			"name": "village_interaction_count",
+			"passed": true
+		},
+		{
+			"name": "walk_village/spawn_before_baker",
+			"passed": true
+		},
+		{
+			"name": "walk_village/from_spawn/baker",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/from_spawn/baker",
+			"passed": true
+		},
+		{
+			"name": "walk_village/spawn_before_gardener",
+			"passed": true
+		},
+		{
+			"name": "walk_village/from_spawn/gardener",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/from_spawn/gardener",
+			"passed": true
+		},
+		{
+			"name": "walk_village/spawn_before_orchard",
+			"passed": true
+		},
+		{
+			"name": "walk_village/from_spawn/orchard",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/from_spawn/orchard",
+			"passed": true
+		},
+		{
+			"name": "walk_village/spawn_before_bakery",
+			"passed": true
+		},
+		{
+			"name": "walk_village/from_spawn/bakery",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/from_spawn/bakery",
+			"passed": true
+		},
+		{
+			"name": "walk_village/spawn_before_school_gate",
+			"passed": true
+		},
+		{
+			"name": "walk_village/from_spawn/school_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/from_spawn/school_gate",
+			"passed": true
+		},
+		{
+			"name": "walk_village/spawn_before_home_gate",
+			"passed": true
+		},
+		{
+			"name": "walk_village/from_spawn/home_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/from_spawn/home_gate",
+			"passed": true
+		},
+		{
+			"name": "walk_village/sequential_tour/baker",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/sequential_tour/baker",
+			"passed": true
+		},
+		{
+			"name": "walk_village/sequential_tour/gardener",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/sequential_tour/gardener",
+			"passed": true
+		},
+		{
+			"name": "walk_village/sequential_tour/orchard",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/sequential_tour/orchard",
+			"passed": true
+		},
+		{
+			"name": "walk_village/sequential_tour/bakery",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/sequential_tour/bakery",
+			"passed": true
+		},
+		{
+			"name": "walk_village/sequential_tour/school_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/sequential_tour/school_gate",
+			"passed": true
+		},
+		{
+			"name": "walk_village/sequential_tour/home_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/sequential_tour/home_gate",
+			"passed": true
+		},
+		{
+			"name": "walk_village/enter_school/school_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/enter_school/school_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_village/school_gate->school",
+			"passed": true
+		},
+		{
+			"name": "walk_school/campus_door/classroom_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_school/campus_door/classroom_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_school/classroom_gate->classroom",
+			"passed": true
+		},
+		{
+			"name": "walk_classroom/room_activity/teacher",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_classroom/room_activity/teacher",
+			"passed": true
+		},
+		{
+			"name": "activity_panel_classroom/teacher",
+			"passed": true
+		},
+		{
+			"name": "activity_unlocked_classroom/teacher",
+			"passed": true
+		},
+		{
+			"name": "walk_classroom/return_from_classroom/school_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_classroom/return_from_classroom/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_classroom/school_exit->school",
+			"passed": true
+		},
+		{
+			"name": "walk_school/campus_door/canteen_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_school/campus_door/canteen_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_school/canteen_gate->canteen",
+			"passed": true
+		},
+		{
+			"name": "walk_canteen/room_activity/lunch",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_canteen/room_activity/lunch",
+			"passed": true
+		},
+		{
+			"name": "activity_panel_canteen/lunch",
+			"passed": true
+		},
+		{
+			"name": "activity_unlocked_canteen/lunch",
+			"passed": true
+		},
+		{
+			"name": "walk_canteen/return_from_canteen/school_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_canteen/return_from_canteen/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_canteen/school_exit->school",
+			"passed": true
+		},
+		{
+			"name": "walk_school/campus_door/playground_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_school/campus_door/playground_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_school/playground_gate->playground",
+			"passed": true
+		},
+		{
+			"name": "walk_playground/room_activity/sports",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_playground/room_activity/sports",
+			"passed": true
+		},
+		{
+			"name": "activity_panel_playground/sports",
+			"passed": true
+		},
+		{
+			"name": "activity_unlocked_playground/sports",
+			"passed": true
+		},
+		{
+			"name": "walk_playground/return_from_playground/school_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_playground/return_from_playground/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_playground/school_exit->school",
+			"passed": true
+		},
+		{
+			"name": "walk_school/leave_school/village_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_school/leave_school/village_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_school/village_exit->village",
+			"passed": true
+		},
+		{
+			"name": "walk_village/enter_home/home_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/enter_home/home_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_village/home_gate->home",
+			"passed": true
+		},
+		{
+			"name": "walk_home/home_activity/bed",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home/home_activity/bed",
+			"passed": true
+		},
+		{
+			"name": "activity_panel_home/bed",
+			"passed": true
+		},
+		{
+			"name": "activity_unlocked_home/bed",
+			"passed": true
+		},
+		{
+			"name": "walk_home/home_activity/decorate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home/home_activity/decorate",
+			"passed": true
+		},
+		{
+			"name": "activity_panel_home/decorate",
+			"passed": true
+		},
+		{
+			"name": "activity_unlocked_home/decorate",
+			"passed": true
+		},
+		{
+			"name": "walk_home/leave_home/village_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home/leave_home/village_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_home/village_exit->village",
+			"passed": true
+		},
+		{
+			"name": "journey_returns_to_village",
+			"passed": true
+		},
+		{
+			"name": "walk_village/collision_house_approach/home_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/collision_house_approach/home_gate",
+			"passed": true
+		},
+		{
+			"name": "physical_collision_apple_house",
+			"passed": true
+		},
+		{
+			"name": "walk_village/collision_river_approach",
+			"passed": true
+		},
+		{
+			"name": "physical_collision_river_bank",
+			"passed": true
+		},
+		{
+			"name": "walk_village/bridge_east_approach",
+			"passed": true
+		},
+		{
+			"name": "walk_village/bridge_cross_west",
+			"passed": true
+		},
+		{
+			"name": "walk_village/bridge_cross_east",
+			"passed": true
+		},
+		{
+			"name": "production_save_unchanged",
+			"passed": true
+		}
+	],
+	"collisions": [
+		{
+			"axis": "z",
+			"finish": [
+				-8.24319839477539,
+				-0.0496884249150753,
+				-3.04325485229492
+			],
+			"frames_driven": 120,
+			"horizontal_collision_observed": true,
+			"minimum_coordinate": -3.15,
+			"obstacle": "apple_house",
+			"passed": true,
+			"start": [
+				-8.24319839477539,
+				-0.0491620786488056,
+				-2.08992099761963
+			]
+		},
+		{
+			"axis": "x",
+			"finish": [
+				-13.3090562820435,
+				-0.0498892329633236,
+				-0.112729728221893
+			],
+			"frames_driven": 120,
+			"horizontal_collision_observed": true,
+			"minimum_coordinate": -13.4,
+			"obstacle": "river_bank",
+			"passed": true,
+			"start": [
+				-12.6370668411255,
+				-0.049159549176693,
+				-0.112729728221893
+			]
+		}
+	],
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"passed": true,
+	"production_save_unchanged": true,
+	"routes": [
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				0.0,
+				-0.0494661554694176,
+				4.0
+			],
+			"distance_walked": 0.0866665840148926,
+			"finish": [
+				0.0,
+				-0.0491616278886795,
+				3.91333341598511
+			],
+			"label": "spawn_before_baker",
+			"passed": true,
+			"physics_frames": 2,
+			"remaining_distance": 0.0866665840148926,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				0.0,
+				-0.0494661554694176,
+				4.0
+			]
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.3,
+			"destination": [
+				4.0,
+				0.0,
+				3.09999990463257
+			],
+			"distance_walked": 5.20000088214874,
+			"finish": [
+				4.46851491928101,
+				-0.0506630651652813,
+				3.90244293212891
+			],
+			"interaction_available": true,
+			"label": "from_spawn/baker",
+			"nearest_interaction": "baker",
+			"passed": true,
+			"physics_frames": 68,
+			"remaining_distance": 0.929204523563385,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				0.0,
+				-0.0491616278886795,
+				3.91333341598511
+			],
+			"target_interaction": "baker"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				0.0,
+				-0.0494661554694176,
+				4.0
+			],
+			"distance_walked": 5.02666814625263,
+			"finish": [
+				0.150189414620399,
+				-0.0491620376706123,
+				3.7505738735199
+			],
+			"label": "spawn_before_gardener",
+			"passed": true,
+			"physics_frames": 66,
+			"remaining_distance": 0.291153311729431,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				4.46851491928101,
+				-0.0506630651652813,
+				3.90244293212891
+			]
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.2,
+			"destination": [
+				-5.19999980926514,
+				0.0,
+				1.70000004768372
+			],
+			"distance_walked": 5.28666703402996,
+			"finish": [
+				-4.36632013320923,
+				-0.0491604991257191,
+				1.63032793998718
+			],
+			"interaction_available": true,
+			"label": "from_spawn/gardener",
+			"nearest_interaction": "gardener",
+			"passed": true,
+			"physics_frames": 68,
+			"remaining_distance": 0.836585938930511,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				0.150189414620399,
+				-0.0491620376706123,
+				3.7505738735199
+			],
+			"target_interaction": "gardener"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				0.0,
+				-0.0494661554694176,
+				4.0
+			],
+			"distance_walked": 5.02666735649109,
+			"finish": [
+				-0.125265002250671,
+				-0.0491595566272736,
+				3.6275360584259
+			],
+			"label": "spawn_before_orchard",
+			"passed": true,
+			"physics_frames": 65,
+			"remaining_distance": 0.392964005470276,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-4.36632013320923,
+				-0.0491604991257191,
+				1.63032793998718
+			]
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.3,
+			"destination": [
+				-10.0,
+				0.0,
+				3.5
+			],
+			"distance_walked": 9.44665443897247,
+			"finish": [
+				-9.5619649887085,
+				-0.0491592809557915,
+				3.74999976158142
+			],
+			"interaction_available": true,
+			"label": "from_spawn/orchard",
+			"nearest_interaction": "orchard",
+			"passed": true,
+			"physics_frames": 123,
+			"remaining_distance": 0.504355609416962,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-0.125265002250671,
+				-0.0491595566272736,
+				3.6275360584259
+			],
+			"target_interaction": "orchard"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				0.0,
+				-0.0494661554694176,
+				4.0
+			],
+			"distance_walked": 9.44665662199259,
+			"finish": [
+				-0.115308366715908,
+				-0.04916175827384,
+				3.74999976158142
+			],
+			"label": "spawn_before_bakery",
+			"passed": true,
+			"physics_frames": 123,
+			"remaining_distance": 0.27531099319458,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-9.5619649887085,
+				-0.0491592809557915,
+				3.74999976158142
+			]
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.1,
+			"destination": [
+				8.0,
+				0.0,
+				1.20000004768372
+			],
+			"distance_walked": 9.10000212490559,
+			"finish": [
+				8.12144660949707,
+				-0.049162033945322,
+				1.50000023841858
+			],
+			"interaction_available": true,
+			"label": "from_spawn/bakery",
+			"nearest_interaction": "bakery",
+			"passed": true,
+			"physics_frames": 117,
+			"remaining_distance": 0.323650121688843,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-0.115308366715908,
+				-0.04916175827384,
+				3.74999976158142
+			],
+			"target_interaction": "bakery"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				0.0,
+				-0.0494661554694176,
+				4.0
+			],
+			"distance_walked": 8.8399997651577,
+			"finish": [
+				0.118443928658962,
+				-0.0491617992520332,
+				3.73153758049011
+			],
+			"label": "spawn_before_school_gate",
+			"passed": true,
+			"physics_frames": 114,
+			"remaining_distance": 0.293429791927338,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				8.12144660949707,
+				-0.049162033945322,
+				1.50000023841858
+			]
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.1,
+			"destination": [
+				1.0,
+				0.0,
+				-8.39999961853027
+			],
+			"distance_walked": 12.046666175127,
+			"finish": [
+				0.749999940395355,
+				-0.0491605140268803,
+				-8.11822605133057
+			],
+			"interaction_available": true,
+			"label": "from_spawn/school_gate",
+			"nearest_interaction": "school_gate",
+			"passed": true,
+			"physics_frames": 156,
+			"remaining_distance": 0.376691341400146,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				0.118443928658962,
+				-0.0491617992520332,
+				3.73153758049011
+			],
+			"target_interaction": "school_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				0.0,
+				-0.0494661554694176,
+				4.0
+			],
+			"distance_walked": 12.0466537848115,
+			"finish": [
+				0.000000000000310594920008983,
+				-0.0491617769002914,
+				3.6342990398407
+			],
+			"label": "spawn_before_home_gate",
+			"passed": true,
+			"physics_frames": 156,
+			"remaining_distance": 0.365700960159302,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				0.749999940395355,
+				-0.0491605140268803,
+				-8.11822605133057
+			]
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.0,
+			"destination": [
+				-8.0,
+				0.0,
+				-1.89999997615814
+			],
+			"distance_walked": 10.3999995216727,
+			"finish": [
+				-8.10489082336426,
+				-0.0491607636213303,
+				-2.24642443656921
+			],
+			"interaction_available": true,
+			"label": "from_spawn/home_gate",
+			"nearest_interaction": "home_gate",
+			"passed": true,
+			"physics_frames": 132,
+			"remaining_distance": 0.361955791711807,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				0.000000000000310594920008983,
+				-0.0491617769002914,
+				3.6342990398407
+			],
+			"target_interaction": "home_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.3,
+			"destination": [
+				4.0,
+				0.0,
+				3.09999990463257
+			],
+			"distance_walked": 15.7733310312033,
+			"finish": [
+				4.47597599029541,
+				-0.0503732077777386,
+				3.89920425415039
+			],
+			"interaction_available": true,
+			"label": "sequential_tour/baker",
+			"nearest_interaction": "baker",
+			"passed": true,
+			"physics_frames": 201,
+			"remaining_distance": 0.930204689502716,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-8.10489082336426,
+				-0.0491607636213303,
+				-2.24642443656921
+			],
+			"target_interaction": "baker"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.2,
+			"destination": [
+				-5.19999980926514,
+				0.0,
+				1.70000004768372
+			],
+			"distance_walked": 10.4866662919521,
+			"finish": [
+				-4.38064861297607,
+				-0.0499077998101711,
+				1.5000022649765
+			],
+			"interaction_available": true,
+			"label": "sequential_tour/gardener",
+			"nearest_interaction": "gardener",
+			"passed": true,
+			"physics_frames": 135,
+			"remaining_distance": 0.843407094478607,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				4.47597599029541,
+				-0.0503732077777386,
+				3.89920425415039
+			],
+			"target_interaction": "gardener"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.3,
+			"destination": [
+				-10.0,
+				0.0,
+				3.5
+			],
+			"distance_walked": 6.84665692597628,
+			"finish": [
+				-9.61659240722656,
+				-0.0491617955267429,
+				3.74999475479126
+			],
+			"interaction_available": true,
+			"label": "sequential_tour/orchard",
+			"nearest_interaction": "orchard",
+			"passed": true,
+			"physics_frames": 89,
+			"remaining_distance": 0.457710355520248,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-4.38064861297607,
+				-0.0499077998101711,
+				1.5000022649765
+			],
+			"target_interaction": "orchard"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.1,
+			"destination": [
+				8.0,
+				0.0,
+				1.20000004768372
+			],
+			"distance_walked": 18.4599907174706,
+			"finish": [
+				8.05347442626953,
+				-0.0491595342755318,
+				1.50000023841858
+			],
+			"interaction_available": true,
+			"label": "sequential_tour/bakery",
+			"nearest_interaction": "bakery",
+			"passed": true,
+			"physics_frames": 238,
+			"remaining_distance": 0.304728776216507,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-9.61659240722656,
+				-0.0491617955267429,
+				3.74999475479126
+			],
+			"target_interaction": "bakery"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.1,
+			"destination": [
+				1.0,
+				0.0,
+				-8.39999961853027
+			],
+			"distance_walked": 13.6933340355754,
+			"finish": [
+				0.750015258789063,
+				-0.0491620562970638,
+				-8.11931228637695
+			],
+			"interaction_available": true,
+			"label": "sequential_tour/school_gate",
+			"nearest_interaction": "school_gate",
+			"passed": true,
+			"physics_frames": 175,
+			"remaining_distance": 0.375869333744049,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				8.05347442626953,
+				-0.0491595342755318,
+				1.50000023841858
+			],
+			"target_interaction": "school_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.0,
+			"destination": [
+				-8.0,
+				0.0,
+				-1.89999997615814
+			],
+			"distance_walked": 11.1800024732947,
+			"finish": [
+				-8.07492351531982,
+				-0.0491592325270176,
+				-2.25010132789612
+			],
+			"interaction_available": true,
+			"label": "sequential_tour/home_gate",
+			"nearest_interaction": "home_gate",
+			"passed": true,
+			"physics_frames": 142,
+			"remaining_distance": 0.358028620481491,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				0.750015258789063,
+				-0.0491620562970638,
+				-8.11931228637695
+			],
+			"target_interaction": "home_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.1,
+			"destination": [
+				1.0,
+				0.0,
+				-8.39999961853027
+			],
+			"distance_walked": 11.0933369472623,
+			"finish": [
+				0.622651994228363,
+				-0.0491617880761623,
+				-8.12265110015869
+			],
+			"interaction_available": true,
+			"label": "enter_school/school_gate",
+			"nearest_interaction": "school_gate",
+			"passed": true,
+			"physics_frames": 141,
+			"remaining_distance": 0.468309432268143,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-8.07492351531982,
+				-0.0491592325270176,
+				-2.25010132789612
+			],
+			"target_interaction": "school_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.1,
+			"destination": [
+				0.0,
+				0.0,
+				-2.5
+			],
+			"distance_walked": 9.09999966621399,
+			"finish": [
+				0.0,
+				-0.0491634085774422,
+				-2.09999966621399
+			],
+			"interaction_available": true,
+			"label": "campus_door/classroom_gate",
+			"nearest_interaction": "classroom_gate",
+			"passed": true,
+			"physics_frames": 118,
+			"remaining_distance": 0.400000333786011,
+			"remaining_waypoints": 0,
+			"room": "school",
+			"start": [
+				0.0,
+				-0.049986969679594,
+				7.0
+			],
+			"target_interaction": "classroom_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.5,
+			"destination": [
+				0.0,
+				0.0,
+				-3.25
+			],
+			"distance_walked": 7.1066682562232,
+			"finish": [
+				-0.74999988079071,
+				-0.0491681285202503,
+				-2.86648797988892
+			],
+			"interaction_available": true,
+			"label": "room_activity/teacher",
+			"nearest_interaction": "teacher",
+			"passed": true,
+			"physics_frames": 92,
+			"remaining_distance": 0.842366456985474,
+			"remaining_waypoints": 0,
+			"room": "classroom",
+			"start": [
+				0.0,
+				-0.0499739497900009,
+				4.0
+			],
+			"target_interaction": "teacher"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				4.90000009536743
+			],
+			"distance_walked": 7.45333528518677,
+			"finish": [
+				-0.0000000673602258416395,
+				-0.0491703525185585,
+				4.35290384292603
+			],
+			"interaction_available": true,
+			"label": "return_from_classroom/school_exit",
+			"nearest_interaction": "school_exit",
+			"passed": true,
+			"physics_frames": 97,
+			"remaining_distance": 0.547096252441406,
+			"remaining_waypoints": 0,
+			"room": "classroom",
+			"start": [
+				-0.74999988079071,
+				-0.0491681285202503,
+				-2.86648797988892
+			],
+			"target_interaction": "school_exit"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.2,
+			"destination": [
+				7.0,
+				0.0,
+				1.79999995231628
+			],
+			"distance_walked": 7.79999785125256,
+			"finish": [
+				6.59281349182129,
+				-0.0491605512797832,
+				1.49997591972351
+			],
+			"interaction_available": true,
+			"label": "campus_door/canteen_gate",
+			"nearest_interaction": "canteen_gate",
+			"passed": true,
+			"physics_frames": 100,
+			"remaining_distance": 0.505781829357147,
+			"remaining_waypoints": 0,
+			"room": "school",
+			"start": [
+				0.0,
+				-0.0533333346247673,
+				-1.29999995231628
+			],
+			"target_interaction": "canteen_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.2,
+			"destination": [
+				0.0,
+				0.0,
+				-2.59999990463257
+			],
+			"distance_walked": 6.06666827201843,
+			"finish": [
+				0.0,
+				-0.0491671822965145,
+				-2.06666827201843
+			],
+			"interaction_available": true,
+			"label": "room_activity/lunch",
+			"nearest_interaction": "lunch",
+			"passed": true,
+			"physics_frames": 79,
+			"remaining_distance": 0.533331632614136,
+			"remaining_waypoints": 0,
+			"room": "canteen",
+			"start": [
+				0.0,
+				-0.0499739497900009,
+				4.0
+			],
+			"target_interaction": "lunch"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				4.90000009536743
+			],
+			"distance_walked": 6.41333413124084,
+			"finish": [
+				0.0,
+				-0.0491703525185585,
+				4.34666585922241
+			],
+			"interaction_available": true,
+			"label": "return_from_canteen/school_exit",
+			"nearest_interaction": "school_exit",
+			"passed": true,
+			"physics_frames": 84,
+			"remaining_distance": 0.55333423614502,
+			"remaining_waypoints": 0,
+			"room": "canteen",
+			"start": [
+				0.0,
+				-0.0491671822965145,
+				-2.06666827201843
+			],
+			"target_interaction": "school_exit"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.2,
+			"destination": [
+				-8.0,
+				0.0,
+				1.79999995231628
+			],
+			"distance_walked": 15.5999939739704,
+			"finish": [
+				-8.06145668029785,
+				-0.0491617918014526,
+				1.50000011920929
+			],
+			"interaction_available": true,
+			"label": "campus_door/playground_gate",
+			"nearest_interaction": "playground_gate",
+			"passed": true,
+			"physics_frames": 201,
+			"remaining_distance": 0.306230008602142,
+			"remaining_waypoints": 0,
+			"room": "school",
+			"start": [
+				7.0,
+				-0.049947913736105,
+				3.0
+			],
+			"target_interaction": "playground_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.5,
+			"destination": [
+				-1.0,
+				0.0,
+				1.0
+			],
+			"distance_walked": 5.37332882732153,
+			"finish": [
+				-0.749996602535248,
+				-0.0525026842951775,
+				0.889827132225037
+			],
+			"interaction_available": true,
+			"label": "room_activity/sports",
+			"nearest_interaction": "sports",
+			"passed": true,
+			"physics_frames": 70,
+			"remaining_distance": 0.273202776908875,
+			"remaining_waypoints": 0,
+			"room": "playground",
+			"start": [
+				0.0,
+				-0.049908846616745,
+				6.0
+			],
+			"target_interaction": "sports"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.0,
+			"destination": [
+				0.0,
+				0.0,
+				8.0
+			],
+			"distance_walked": 7.5399946719408,
+			"finish": [
+				-0.0000000135044651017324,
+				-0.0491617880761623,
+				8.13216781616211
+			],
+			"interaction_available": true,
+			"label": "return_from_playground/school_exit",
+			"nearest_interaction": "school_exit",
+			"passed": true,
+			"physics_frames": 98,
+			"remaining_distance": 0.132167816162109,
+			"remaining_waypoints": 0,
+			"room": "playground",
+			"start": [
+				-0.749996602535248,
+				-0.0525026842951775,
+				0.889827132225037
+			],
+			"target_interaction": "school_exit"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.1,
+			"destination": [
+				0.0,
+				0.0,
+				9.0
+			],
+			"distance_walked": 10.4866683855653,
+			"finish": [
+				-0.127982050180435,
+				-0.0491617955267429,
+				8.99745941162109
+			],
+			"interaction_available": true,
+			"label": "leave_school/village_exit",
+			"nearest_interaction": "village_exit",
+			"passed": true,
+			"physics_frames": 133,
+			"remaining_distance": 0.128007262945175,
+			"remaining_waypoints": 0,
+			"room": "school",
+			"start": [
+				-8.0,
+				-0.0499088540673256,
+				3.0
+			],
+			"target_interaction": "village_exit"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.0,
+			"destination": [
+				-8.0,
+				0.0,
+				-1.89999997615814
+			],
+			"distance_walked": 11.1800049692392,
+			"finish": [
+				-8.10555076599121,
+				-0.0491620898246765,
+				-2.25006341934204
+			],
+			"interaction_available": true,
+			"label": "enter_home/home_gate",
+			"nearest_interaction": "home_gate",
+			"passed": true,
+			"physics_frames": 142,
+			"remaining_distance": 0.365630120038986,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				1.0,
+				-0.0499088540673256,
+				-7.19999980926514
+			],
+			"target_interaction": "home_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.1,
+			"destination": [
+				-2.59999990463257,
+				0.0,
+				-2.70000004768372
+			],
+			"distance_walked": 7.71333571523428,
+			"finish": [
+				-2.24999594688416,
+				-0.0491660200059414,
+				-2.86971664428711
+			],
+			"interaction_available": true,
+			"label": "home_activity/bed",
+			"nearest_interaction": "bed",
+			"passed": true,
+			"physics_frames": 99,
+			"remaining_distance": 0.388981342315674,
+			"remaining_waypoints": 0,
+			"room": "home",
+			"start": [
+				0.0,
+				-0.0499739497900009,
+				4.0
+			],
+			"target_interaction": "bed"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.0,
+			"destination": [
+				4.59999990463257,
+				0.0,
+				2.20000004768372
+			],
+			"distance_walked": 8.58000016957521,
+			"finish": [
+				4.37629985809326,
+				-0.0491672232747078,
+				2.12630128860474
+			],
+			"interaction_available": true,
+			"label": "home_activity/decorate",
+			"nearest_interaction": "decorate",
+			"passed": true,
+			"physics_frames": 109,
+			"remaining_distance": 0.235527530312538,
+			"remaining_waypoints": 0,
+			"room": "home",
+			"start": [
+				-2.24999594688416,
+				-0.0491660200059414,
+				-2.86971664428711
+			],
+			"target_interaction": "decorate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				4.90000009536743
+			],
+			"distance_walked": 5.02666387706995,
+			"finish": [
+				0.133451208472252,
+				-0.0491703450679779,
+				4.36987972259521
+			],
+			"interaction_available": true,
+			"label": "leave_home/village_exit",
+			"nearest_interaction": "village_exit",
+			"passed": true,
+			"physics_frames": 65,
+			"remaining_distance": 0.546659708023071,
+			"remaining_waypoints": 0,
+			"room": "home",
+			"start": [
+				4.37629985809326,
+				-0.0491672232747078,
+				2.12630128860474
+			],
+			"target_interaction": "village_exit"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 2.0,
+			"destination": [
+				-8.0,
+				0.0,
+				-1.89999997615814
+			],
+			"distance_walked": 1.47333311289549,
+			"finish": [
+				-8.24319839477539,
+				-0.0491620786488056,
+				-2.08992099761963
+			],
+			"interaction_available": true,
+			"label": "collision_house_approach/home_gate",
+			"nearest_interaction": "home_gate",
+			"passed": true,
+			"physics_frames": 20,
+			"remaining_distance": 0.308570027351379,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-8.0,
+				-0.0498958304524422,
+				-0.699999928474426
+			],
+			"target_interaction": "home_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				-12.3999996185303,
+				0.0,
+				0.0
+			],
+			"distance_walked": 5.54666794836521,
+			"finish": [
+				-12.6370668411255,
+				-0.049159549176693,
+				-0.112729728221893
+			],
+			"label": "collision_river_approach",
+			"passed": true,
+			"physics_frames": 71,
+			"remaining_distance": 0.26250496506691,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-8.24319839477539,
+				-0.0496884249150753,
+				-3.04325485229492
+			]
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				-12.0,
+				0.0,
+				6.0
+			],
+			"distance_walked": 6.67333623766899,
+			"finish": [
+				-12.0000019073486,
+				-0.0491595454514027,
+				5.85411739349365
+			],
+			"label": "bridge_east_approach",
+			"passed": true,
+			"physics_frames": 86,
+			"remaining_distance": 0.145882606506348,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-13.3090562820435,
+				-0.0498892329633236,
+				-0.112729728221893
+			]
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				-17.7999992370605,
+				0.0,
+				6.0
+			],
+			"distance_walked": 5.84375022351742,
+			"finish": [
+				-17.832670211792,
+				0.0208150967955589,
+				5.99999856948853
+			],
+			"label": "bridge_cross_west",
+			"passed": true,
+			"physics_frames": 77,
+			"remaining_distance": 0.0326709747314453,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-12.0000019073486,
+				-0.0491595454514027,
+				5.85411739349365
+			]
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				-12.0,
+				0.0,
+				6.0
+			],
+			"distance_walked": 5.63376045227051,
+			"finish": [
+				-12.1989097595215,
+				-0.049159225076437,
+				5.99999904632568
+			],
+			"label": "bridge_cross_east",
+			"passed": true,
+			"physics_frames": 74,
+			"remaining_distance": 0.198909759521484,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-17.832670211792,
+				0.0208150967955589,
+				5.99999856948853
+			]
+		}
+	],
+	"timestamp_utc": "2026-10-22T04:11:33",
+	"transitions": [
+		{
+			"from": "village",
+			"interaction": "school_gate",
+			"passed": true,
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "classroom_gate",
+			"passed": true,
+			"to": "classroom"
+		},
+		{
+			"from": "classroom",
+			"interaction": "school_exit",
+			"passed": true,
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "canteen_gate",
+			"passed": true,
+			"to": "canteen"
+		},
+		{
+			"from": "canteen",
+			"interaction": "school_exit",
+			"passed": true,
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "playground_gate",
+			"passed": true,
+			"to": "playground"
+		},
+		{
+			"from": "playground",
+			"interaction": "school_exit",
+			"passed": true,
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "village_exit",
+			"passed": true,
+			"to": "village"
+		},
+		{
+			"from": "village",
+			"interaction": "home_gate",
+			"passed": true,
+			"to": "home"
+		},
+		{
+			"from": "home",
+			"interaction": "village_exit",
+			"passed": true,
+			"to": "village"
+		}
+	]
+}

@@ -1,0 +1,30 @@
+{
+  "purpose": "Source-preserving copies for the first playable Godot build",
+  "created": "2026-10-22",
+  "models": [
+    {
+      "source": "assets/tripo/A_apple_house/A_apple_house_optimized_v02.glb",
+      "runtime": "game/assets/models/apple_house.glb",
+      "sha256": "0b1249f07fd78bfb07ff3aef8adf5e80c6229f55bc4c2cd2abb7f2a7e17027b5",
+      "source_unchanged_copy": true,
+      "bytes": 11318852
+    },
+    {
+      "source": "assets/tripo/C_cake_bakery.glb",
+      "runtime": "game/assets/models/cake_bakery.glb",
+      "sha256": "e39d8940694f13d83dc2644f241e8ab8e8bd419012e467bb148039cc87c2118a",
+      "source_unchanged_copy": true,
+      "bytes": 13670928
+    },
+    {
+      "source": "assets/blender/school/school_building_v01.glb",
+      "runtime": "game/assets/models/school.glb",
+      "sha256": "9c32cbdb08674b0b15c87eb09ae197216e3ce37fa1ee833cd744669f1241986a",
+      "source_unchanged_copy": true,
+      "bytes": 1495864
+    }
+  ],
+  "placement": "Runtime normalized by mesh bounds in world_builder.gd; source transforms unchanged",
+  "collisions": "Simple independent BoxShape3D building and terrain collision",
+  "runtime_adaptations": "School Tile_Color materials use a teal runtime override because the original procedural Blender color node has no glTF baseColorFactor; source GLB bytes unchanged."
+}

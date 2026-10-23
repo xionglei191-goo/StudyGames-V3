@@ -1,0 +1,294 @@
+{
+  "room_id": "music_room",
+  "anchors": [
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.9,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.9
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回完整校园",
+      "position_blender": [
+        0.0,
+        -6.95,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.95
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "音乐教室老师",
+      "position_blender": [
+        -1.25,
+        -2.1,
+        0.0
+      ],
+      "position_godot": [
+        -1.25,
+        0.0,
+        2.1
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口乐谱柜",
+      "position_blender": [
+        -6.35,
+        -4.4,
+        0.0
+      ],
+      "position_godot": [
+        -6.35,
+        0.0,
+        4.4
+      ],
+      "associated_prop": "Music_ScoreCabinet_Back",
+      "memory_id": "memory_MUSIC_ROOM_01",
+      "activity": "翻看示例乐谱并认识乐器图标"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "钢琴",
+      "position_blender": [
+        -5.0,
+        -0.1,
+        0.0
+      ],
+      "position_godot": [
+        -5.0,
+        0.0,
+        0.1
+      ],
+      "associated_prop": "Music_Piano_CurvedCase",
+      "memory_id": "memory_MUSIC_ROOM_02",
+      "activity": "观察琴键与钢琴外形"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "节奏鼓",
+      "position_blender": [
+        2.0,
+        -1.25,
+        0.0
+      ],
+      "position_godot": [
+        2.0,
+        0.0,
+        1.25
+      ],
+      "associated_prop": "Music_Rhythm_Drum_01_Shell",
+      "memory_id": "memory_MUSIC_ROOM_03",
+      "activity": "看鼓面和节奏图案"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "弦乐器架",
+      "position_blender": [
+        6.0,
+        -5.0,
+        0.0
+      ],
+      "position_godot": [
+        6.0,
+        0.0,
+        5.0
+      ],
+      "associated_prop": "Music_StringRack_Platform",
+      "memory_id": "memory_MUSIC_ROOM_04",
+      "activity": "比较弦乐器的形状"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "小舞台",
+      "position_blender": [
+        0.0,
+        4.1,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -4.1
+      ],
+      "associated_prop": "Music_Stage_Platform",
+      "memory_id": "memory_MUSIC_ROOM_05",
+      "activity": "在舞台前回顾见到的乐器"
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -9.199999809265137,
+        7.999999523162842,
+        0.0,
+        9.199999809265137,
+        8.299999237060547,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -9.299999237060547,
+        -8.0,
+        0.0,
+        -9.0,
+        8.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        9.0,
+        -8.0,
+        0.0,
+        9.299999237060547,
+        8.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -9.0,
+        -8.299999237060547,
+        0.0,
+        -1.3999998569488525,
+        -7.999999523162842,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -8.299999237060547,
+        0.0,
+        9.0,
+        -7.999999523162842,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Music_ScoreCabinet",
+      "aabb_blender": [
+        -7.96999979019165,
+        -3.2249999046325684,
+        0.0,
+        -4.730000019073486,
+        -2.375,
+        2.5
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Music_Piano_Bench",
+      "aabb_blender": [
+        -6.0,
+        0.925000011920929,
+        -0.06000000238418579,
+        -4.0,
+        1.5750000476837158,
+        0.6399999856948853
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Music_Piano",
+      "aabb_blender": [
+        -6.849999904632568,
+        1.8250000476837158,
+        0.0,
+        -3.1500000953674316,
+        5.074999809265137,
+        1.440000057220459
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Music_Rhythm_Drums",
+      "aabb_blender": [
+        -0.17499995231628418,
+        0.21999990940093994,
+        0.0,
+        4.175000190734863,
+        2.619999885559082,
+        1.7000000476837158
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Music_StringRack",
+      "aabb_blender": [
+        4.25,
+        -3.549999952316284,
+        0.0,
+        7.75,
+        -2.450000047683716,
+        2.700000047683716
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Music_Stage",
+      "aabb_blender": [
+        -2.6500000953674316,
+        5.300000190734863,
+        0.0,
+        2.6500000953674316,
+        7.399999618530273,
+        0.4000000059604645
+      ]
+    }
+  ],
+  "bounds": [
+    -9.0,
+    -8.0,
+    18.0,
+    16.0
+  ],
+  "mesh_objects": 397,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 5342500,
+  "glb_node_count": 410,
+  "triangles_instanced": 167728,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "09d281d71bf2cd1a6af5692b23d9961c350ef70d21d11e7e6e0214687f120581",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/music_room/music_room_v01.blend",
+  "source_blend_preserved": true
+}

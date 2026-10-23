@@ -1,0 +1,63 @@
+{
+  "collision_stats": {
+    "barriers": 441,
+    "buildings": 30,
+    "ground_meshes": 220,
+    "ground_triangles": 98820,
+    "ignored_decorative_meshes": 3112,
+    "marker_count": 33,
+    "props": 1,
+    "trunks": 168,
+    "visual_meshes": 3974,
+    "water_meshes": 2,
+    "water_shapes": 121
+  },
+  "failures": [],
+  "marker_transform_errors": [],
+  "player_collision_mask": 5,
+  "result": "PASS",
+  "routes": [
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-4.313373, 5.7165, 17.45205)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-4.297663, 5.7165, 17.46733)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-4.268231, 5.7165, 17.49595)"
+        }
+      ],
+      "distance": 1.62,
+      "goal": [
+        -3.0,
+        5.77650690078735,
+        18.5
+      ],
+      "id": "home_gate",
+      "next_waypoint": [
+        -3.75,
+        5.71649932861328,
+        18.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -4.26823091506958,
+        5.66735553741455,
+        17.4959506988525
+      ],
+      "reached": true,
+      "ticks": 1016
+    }
+  ],
+  "source": "res://assets/world/island.glb",
+  "start_id": "school_gate"
+}

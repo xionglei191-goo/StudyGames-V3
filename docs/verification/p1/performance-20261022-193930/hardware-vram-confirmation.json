@@ -1,0 +1,9 @@
+{
+  "captured_utc": "2026-10-22T11:55:34.170416+00:00",
+  "available": true,
+  "source": "nvidia-smi --query-gpu=name,driver_version,memory.total --format=csv,noheader,nounits",
+  "memory_total_unit": "MiB",
+  "raw_csv": "NVIDIA GeForce RTX 4070, 610.88, 12282",
+  "stderr": "",
+  "win32_adapterram_is_not_used_as_capacity": true
+}

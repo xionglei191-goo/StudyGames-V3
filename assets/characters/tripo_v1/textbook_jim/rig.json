@@ -1,0 +1,488 @@
+{
+  "id": "textbook_jim",
+  "revision": "tripo-character-v1",
+  "family": "wheelchair",
+  "height": 2.05,
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hips",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.8302499651908875,
+        -0.3279999792575836
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Spine",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.13324999809265137,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "Spine",
+      "origin": [
+        0.0,
+        0.34849995374679565,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "origin": [
+        0.0,
+        0.06150007247924805,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_L",
+      "parent": "Spine",
+      "origin": [
+        -0.26649999618530273,
+        0.19475001096725464,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_L",
+      "parent": "UpperArm_L",
+      "origin": [
+        -0.030749976634979248,
+        -0.2254999876022339,
+        0.19474998116493225
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_L",
+      "parent": "LowerArm_L",
+      "origin": [
+        0.08199998736381531,
+        -0.14350003004074097,
+        0.44075000286102295
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_L",
+      "parent": "Hips",
+      "origin": [
+        -0.17424999177455902,
+        -0.05124998092651367,
+        0.0
+      ],
+      "rotation": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_L",
+      "parent": "UpperLeg_L",
+      "origin": [
+        0.0,
+        -0.6150000095367432,
+        -0.09225000441074371
+      ],
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_L",
+      "parent": "LowerLeg_L",
+      "origin": [
+        0.0,
+        -0.3895000219345093,
+        0.10249990969896317
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_R",
+      "parent": "Spine",
+      "origin": [
+        0.26649999618530273,
+        0.19475001096725464,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_R",
+      "parent": "UpperArm_R",
+      "origin": [
+        0.030749976634979248,
+        -0.2254999876022339,
+        0.19474998116493225
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_R",
+      "parent": "LowerArm_R",
+      "origin": [
+        -0.08199998736381531,
+        -0.14350003004074097,
+        0.44075000286102295
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_R",
+      "parent": "Hips",
+      "origin": [
+        0.17424999177455902,
+        -0.05124998092651367,
+        0.0
+      ],
+      "rotation": [
+        -1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_R",
+      "parent": "UpperLeg_R",
+      "origin": [
+        0.0,
+        -0.6150000095367432,
+        -0.09225000441074371
+      ],
+      "rotation": [
+        1.5707963267948966,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_R",
+      "parent": "LowerLeg_R",
+      "origin": [
+        0.0,
+        -0.3895000219345093,
+        0.10249990969896317
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "ChairRoot",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Wheel_L",
+      "parent": "ChairRoot",
+      "origin": [
+        -0.461249977350235,
+        0.44075000286102295,
+        -0.2357500046491623
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Wheel_R",
+      "parent": "ChairRoot",
+      "origin": [
+        0.461249977350235,
+        0.44075000286102295,
+        -0.2357500046491623
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Castor_L",
+      "parent": "ChairRoot",
+      "origin": [
+        -0.3792499899864197,
+        0.10249999910593033,
+        0.4919999837875366
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Castor_R",
+      "parent": "ChairRoot",
+      "origin": [
+        0.3792499899864197,
+        0.10249999910593033,
+        0.4919999837875366
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hand_sockets": {
+    "L": [
+      0.08199998736381531,
+      -0.18449997901916504,
+      0.5065000057220459
+    ],
+    "R": [
+      -0.08199998736381531,
+      -0.18449997901916504,
+      0.5065000057220459
+    ]
+  },
+  "source": "assets/tripo/12_jim.glb",
+  "source_sha256": "ffc89e797e67b5d9ad11ff47dc58653cf3556b23936e7df087aa1ea32f5e3e03",
+  "source_triangles": 1818370,
+  "triangles": 60368,
+  "textures": [
+    {
+      "name": "12_jim_basecolor.jpg",
+      "input_size": [
+        2048,
+        2048
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "12_jim_normal.png",
+      "input_size": [
+        2048,
+        2048
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    },
+    {
+      "name": "12_jim_rm.jpg",
+      "input_size": [
+        2048,
+        2048
+      ],
+      "size": [
+        2048,
+        2048
+      ]
+    }
+  ],
+  "editable_source": "assets/characters/tripo_v1/textbook_jim/rigged.blend",
+  "export_glb": "assets/characters/tripo_v1/textbook_jim/character.glb",
+  "weight_method": "repaired hand contact seams, seated surface geodesics, constrained sleeve weights and rigid separate wheelchair; four normalized influences",
+  "vertices": 30670,
+  "blended_vertices": 10584,
+  "unweighted_vertices": 0,
+  "weight_sum_max_error": 1.0533913155086339e-06,
+  "bone_vertex_counts": {
+    "Root": 0,
+    "Hips": 4485,
+    "Spine": 3459,
+    "Neck": 0,
+    "Head": 7658,
+    "UpperArm_L": 1974,
+    "LowerArm_L": 1224,
+    "Hand_L": 778,
+    "UpperLeg_L": 3060,
+    "LowerLeg_L": 4278,
+    "Foot_L": 1948,
+    "UpperArm_R": 1961,
+    "LowerArm_R": 1216,
+    "Hand_R": 776,
+    "UpperLeg_R": 3200,
+    "LowerLeg_R": 4218,
+    "Foot_R": 2015,
+    "ChairRoot": 14188,
+    "Wheel_L": 0,
+    "Wheel_R": 0,
+    "Castor_L": 49,
+    "Castor_R": 47
+  },
+  "morph_vertex_counts": {
+    "Blink": 627,
+    "Smile": 850,
+    "Talk": 436
+  },
+  "actions": [
+    {
+      "name": "carry_item",
+      "duration": 2.0,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "give_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "greet_wave",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "idle",
+      "duration": 3.2,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "listen_nod",
+      "duration": 1.8,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "place_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "point_target",
+      "duration": 2.0,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pose_photo",
+      "duration": 2.4,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "reach_target",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "take_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "talk_gesture",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    }
+  ],
+  "meshes": [
+    "Body",
+    "Wheelchair"
+  ],
+  "raw_model_preserved": true,
+  "status": "validated_in_godot",
+  "elapsed_seconds": 13.48,
+  "validation": {
+    "engine": "Godot 4.7.2",
+    "native_report": "docs/verification/tripo-characters-v1/native-1440x900-characters.json",
+    "scope": "real skin arrays, expressions, action and UI integration; native screenshot review"
+  },
+  "gesture_refinement": {
+    "revision": "anatomical-wave-v2",
+    "source": "game/assets/characters/tripo_v1/gesture-overrides.json",
+    "description": "fitted elbow raise, forearm roll, neutral wrist and small palm-forward wave; stable original duration"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "status": "complete_ready_for_godot_sync",
+  "production_assets_frozen": true,
+  "room_count": 31,
+  "manifest": "assets/blender/interiors/interiors_manifest.json",
+  "asset_validation": "passed",
+  "plan_memory_labels_checked": 155,
+  "original_assets_checked": 115,
+  "original_assets_changed": 0,
+  "current_work": "S floor winding repair complete; assets frozen for primary chat Godot retest.",
+  "scope": "Assets only; Godot integration handled by primary chat",
+  "final_changed_rooms": [
+    "landmark_B",
+    "landmark_C",
+    "landmark_S"
+  ],
+  "final_changes": {
+    "landmark_S": "Observatory sign support posts added. Subsequently corrected existing SG_FLOOR_Main outward winding only; vertex coordinates and all SG anchors unchanged. Focused floor repair and GLB ray evidence are in reports/S_floor_fix/repair_report.json.",
+    "landmark_C": "Pickup window frame added; gameplay anchors and collision proxies unchanged in last pass.",
+    "landmark_B": "Cabin moved to rear right pier. SG_MEMORY_05 Blender=(6.8,4.75,0), Godot=(6.8,0,-4.75). Cabin collision moved with it."
+  },
+  "roundtrip_passed": true,
+  "roundtrip_room_count": 31,
+  "acceptance_report": "assets/blender/interiors/reports/acceptance_report.json",
+  "focused_floor_repair": {
+    "room_id": "landmark_S",
+    "passed": true,
+    "report": "assets/blender/interiors/reports/S_floor_fix/repair_report.json",
+    "glb_sha256": "a830cb140e9de5c8a1bf00f0d2040780668a1c028c96e41bff6c849fd8179c39",
+    "godot_runtime_retest": "Primary chat"
+  }
+}

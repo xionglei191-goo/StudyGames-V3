@@ -1,0 +1,55 @@
+{
+  "version": "0.6.0",
+  "built_at": "2026-10-22T20:06:04.136452+08:00",
+  "engine": "Godot 4.7.2",
+  "milestone": "P1 interaction and asset prototypes",
+  "files": {
+    "AlphabetIsland.exe": {
+      "bytes": 109268480,
+      "sha256": "d34d36f3be1a6c49c56525ae86469b92e4f417ddf0b43cf00dd80c385c4b0562"
+    },
+    "AlphabetIsland.pck": {
+      "bytes": 314084544,
+      "sha256": "eb98953ca58074089aa1f5e318784e038bda12f1a66866afa1b72ac918ce7a2e"
+    }
+  },
+  "content": {
+    "entries": 1314,
+    "lexemes": 1073,
+    "stories": 1096,
+    "books": 8,
+    "units": 81,
+    "icons": 26
+  },
+  "validation": {
+    "result": "PASS",
+    "actual_exported_package": true,
+    "reports": {
+      "movement-report.json": 209,
+      "school-hierarchy-report.json": 352,
+      "blender-world-report.json": 2240,
+      "memory-story-report.json": 4989,
+      "journey-game-report.json": 159,
+      "life-ui-report.json": 94,
+      "orchard-integration.json": 41,
+      "orchard-motion.json": 89,
+      "story-animation-native-report.json": 3094,
+      "story-specials-headless-report.json": 452,
+      "story-specials-native-report.json": 533,
+      "story-narrow-native-report.json": 839,
+      "release-smoke-report.json": 107,
+      "integration-report.json": 66,
+      "actor-animation-report.json": 623,
+      "story-animation-headless-report.json": 3030
+    },
+    "p1_acceptance": "docs/verification/p1/acceptance-matrix.json",
+    "original_maps_and_blend_files_unchanged": 94
+  },
+  "limitations": [
+    "P2 U2/U3 continuation and cross-context replay unfinished",
+    "81 complete narrative chapters not implemented",
+    "Rigid BoneAttachment prototypes, final skinning pending",
+    "Human content/audio review and child trials pending",
+    "Performance applies only to the measured device and recorded conditions"
+  ]
+}

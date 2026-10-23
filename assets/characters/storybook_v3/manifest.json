@@ -1,0 +1,250 @@
+{
+  "schema_version": 3,
+  "art_revision": "storybook-character-v3",
+  "status": "authored_pending_engine_validation",
+  "creator": "Project-authored parametric Blender meshes",
+  "license": "Original project asset; no external mesh library",
+  "direction": "Rounded storybook dolls; tailored clothes, stitched trims, sculpted hair, warm restrained pigment, smooth joint weights",
+  "source_script": "../../../scripts/build_character_art_v3.py",
+  "source_script_sha256": "82fc2ca49880d4f4d2de7682f24b5669e8a84dabac5ed3e3ad38679e2807ecfa",
+  "editable_source": "storybook_characters_v3.blend",
+  "technical": {
+    "coordinates": "Godot +Y up +Z front; Blender coordinate conversion in source",
+    "runtime": "Godot baked ArrayMesh with Skin on original P1 bones",
+    "scale": "matches existing P1 contact bones in metres",
+    "weights": "up to four normalized influences; blended elbow knee waist loops",
+    "texture": "vertex pigment plus UVs; no image texture dependency",
+    "collision": "unchanged existing CharacterBody3D capsule",
+    "lod": "single authored LOD for near-camera small cast; no automatic claim of mobile acceptance"
+  },
+  "assets": [
+    {
+      "id": "player",
+      "display_name": "小岛旅人",
+      "kind": "human",
+      "meshes": 8,
+      "vertices": 10856,
+      "triangles": 21404,
+      "bones": 11,
+      "smooth_weight_vertices": 376,
+      "source_glb": "player.glb",
+      "runtime_source": "source/player.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "npc_bear_uncle",
+      "display_name": "熊叔",
+      "kind": "bear",
+      "meshes": 8,
+      "vertices": 9862,
+      "triangles": 19468,
+      "bones": 11,
+      "smooth_weight_vertices": 328,
+      "source_glb": "npc_bear_uncle.glb",
+      "runtime_source": "source/npc_bear_uncle.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "npc_rabbit_gardener",
+      "display_name": "兔兔",
+      "kind": "rabbit",
+      "meshes": 8,
+      "vertices": 10982,
+      "triangles": 21704,
+      "bones": 11,
+      "smooth_weight_vertices": 328,
+      "source_glb": "npc_rabbit_gardener.glb",
+      "runtime_source": "source/npc_rabbit_gardener.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "textbook_lingling",
+      "display_name": "Lingling",
+      "kind": "human",
+      "meshes": 7,
+      "vertices": 10588,
+      "triangles": 20904,
+      "bones": 11,
+      "smooth_weight_vertices": 376,
+      "source_glb": "textbook_lingling.glb",
+      "runtime_source": "source/textbook_lingling.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "textbook_peter",
+      "display_name": "Peter",
+      "kind": "human",
+      "meshes": 7,
+      "vertices": 10906,
+      "triangles": 21500,
+      "bones": 11,
+      "smooth_weight_vertices": 376,
+      "source_glb": "textbook_peter.glb",
+      "runtime_source": "source/textbook_peter.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "textbook_anne",
+      "display_name": "Anne",
+      "kind": "human",
+      "meshes": 7,
+      "vertices": 10122,
+      "triangles": 19980,
+      "bones": 11,
+      "smooth_weight_vertices": 376,
+      "source_glb": "textbook_anne.glb",
+      "runtime_source": "source/textbook_anne.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "textbook_mingming",
+      "display_name": "Mingming",
+      "kind": "human",
+      "meshes": 7,
+      "vertices": 9758,
+      "triangles": 19232,
+      "bones": 11,
+      "smooth_weight_vertices": 376,
+      "source_glb": "textbook_mingming.glb",
+      "runtime_source": "source/textbook_mingming.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "textbook_dongdong",
+      "display_name": "Dongdong",
+      "kind": "human",
+      "meshes": 7,
+      "vertices": 10934,
+      "triangles": 21572,
+      "bones": 11,
+      "smooth_weight_vertices": 376,
+      "source_glb": "textbook_dongdong.glb",
+      "runtime_source": "source/textbook_dongdong.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "textbook_tim",
+      "display_name": "Tim",
+      "kind": "human",
+      "meshes": 7,
+      "vertices": 10906,
+      "triangles": 21500,
+      "bones": 11,
+      "smooth_weight_vertices": 376,
+      "source_glb": "textbook_tim.glb",
+      "runtime_source": "source/textbook_tim.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "textbook_dino",
+      "display_name": "Dino",
+      "kind": "dino",
+      "meshes": 8,
+      "vertices": 8372,
+      "triangles": 16484,
+      "bones": 14,
+      "smooth_weight_vertices": 280,
+      "source_glb": "textbook_dino.glb",
+      "runtime_source": "source/textbook_dino.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "textbook_miss_li",
+      "display_name": "Miss Li",
+      "kind": "human",
+      "meshes": 7,
+      "vertices": 10188,
+      "triangles": 20112,
+      "bones": 11,
+      "smooth_weight_vertices": 376,
+      "source_glb": "textbook_miss_li.glb",
+      "runtime_source": "source/textbook_miss_li.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": false
+    },
+    {
+      "id": "textbook_jim",
+      "display_name": "Jim",
+      "kind": "wheelchair",
+      "meshes": 8,
+      "vertices": 14160,
+      "triangles": 27872,
+      "bones": 11,
+      "smooth_weight_vertices": 376,
+      "source_glb": "textbook_jim.glb",
+      "runtime_source": "source/textbook_jim.json",
+      "blend_shapes": [
+        "Blink",
+        "Smile",
+        "Talk"
+      ],
+      "source_reference": "existing sourced character profile; original project-authored mesh",
+      "seated_rest": true
+    }
+  ]
+}

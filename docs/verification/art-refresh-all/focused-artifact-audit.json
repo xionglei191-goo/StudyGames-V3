@@ -1,0 +1,105 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "report": "headless-1440x900-report.json",
+      "status": "PASS",
+      "checks": 1121,
+      "assets": 36,
+      "generic_tween_samples": 13,
+      "prop_samples": 28,
+      "actual_drawn_props": 10,
+      "ui_clicks": 45,
+      "unreachable_clicks": 0,
+      "captures": 0,
+      "requested_window": [
+        1440,
+        900
+      ],
+      "actual_window": [
+        0,
+        0
+      ],
+      "logical_viewport": [
+        1440.0,
+        900.0
+      ],
+      "image_sizes": [],
+      "save_unchanged": true
+    },
+    {
+      "report": "native-1440x900-report.json",
+      "status": "PASS",
+      "checks": 1198,
+      "assets": 36,
+      "generic_tween_samples": 13,
+      "prop_samples": 28,
+      "actual_drawn_props": 10,
+      "ui_clicks": 45,
+      "unreachable_clicks": 0,
+      "captures": 76,
+      "requested_window": [
+        1440,
+        900
+      ],
+      "actual_window": [
+        1440,
+        900
+      ],
+      "logical_viewport": [
+        1440.0,
+        900.0
+      ],
+      "image_sizes": [
+        [
+          1440,
+          900
+        ]
+      ],
+      "save_unchanged": true
+    },
+    {
+      "report": "native-960x640-report.json",
+      "status": "PASS",
+      "checks": 1197,
+      "assets": 36,
+      "generic_tween_samples": 13,
+      "prop_samples": 28,
+      "actual_drawn_props": 10,
+      "ui_clicks": 45,
+      "unreachable_clicks": 0,
+      "captures": 75,
+      "requested_window": [
+        960,
+        640
+      ],
+      "actual_window": [
+        960,
+        640
+      ],
+      "logical_viewport": [
+        1440.0,
+        900.0
+      ],
+      "image_sizes": [
+        [
+          960,
+          600
+        ]
+      ],
+      "save_unchanged": true
+    }
+  ],
+  "capture_sha_mismatches": [],
+  "final_code_sha256": {
+    "game/tests/test_learning_art_all.gd": "13e9abbc6022c74f41c58b26a6669f57f211f09b361cc1c8f9d13ac10b332bae",
+    "game/ui/memory_story_content.gd": "c77241940aa5819c76d98ae6fbc6ed788cef2fcd31565d13a1a10ecab41d6896",
+    "game/ui/memory_story_stage.gd": "a6ff885e6fc47e37387ded7ddcfe4f341316304af2e22f1862a636eedce2abf5",
+    "game/data/learning/catalog.json": "c69c1dde30e9a73502a2e28418b257b753118d681f8ca1f080ab40e21be02af3",
+    "game/data/learning/prologue.json": "a24f07a2491d01dc00c52b8daa28fa566244a524384fc9b72d47196a61ed3a8f"
+  },
+  "native_stderr_bytes": {
+    "native-1440x900-errors.log": 0,
+    "native-960x640-errors.log": 0
+  }
+}

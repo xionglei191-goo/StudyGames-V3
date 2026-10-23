@@ -1,0 +1,385 @@
+{
+  "actual_mouse_and_keyboard_dispatch": true,
+  "checks": [
+    {
+      "id": "scene_ready",
+      "passed": true
+    },
+    {
+      "id": "isolated_save",
+      "passed": true
+    },
+    {
+      "id": "npc_scene_ray_selects_baker",
+      "passed": true
+    },
+    {
+      "id": "scene_mouse_click_starts_npc_route",
+      "passed": true
+    },
+    {
+      "id": "walking_to_npc_opens_dialogue_automatically",
+      "passed": true
+    },
+    {
+      "id": "dialogue_arrival_stops_walking",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/close",
+      "passed": true
+    },
+    {
+      "id": "manual_movement_cancels_pending_interaction",
+      "passed": true
+    },
+    {
+      "id": "cancelled_route_does_not_open_delayed_dialogue",
+      "passed": true
+    },
+    {
+      "id": "escape_cancels_walk_without_opening_settings",
+      "passed": true
+    },
+    {
+      "id": "harvesting_gives_item_in_scene_without_modal",
+      "passed": true
+    },
+    {
+      "id": "harvesting_triggers_character_gesture",
+      "passed": true
+    },
+    {
+      "id": "all_island_map_pins_and_current_position_remain_visible",
+      "passed": true
+    },
+    {
+      "id": "spatial_map_has_music_destination",
+      "passed": true
+    },
+    {
+      "id": "map_uses_real_authored_world",
+      "passed": true
+    },
+    {
+      "id": "map_previews_walkable_route",
+      "passed": true
+    },
+    {
+      "id": "actual_spatial_pin_click_starts_route",
+      "passed": true
+    },
+    {
+      "id": "map_arrival_keeps_player_in_control_of_entry",
+      "passed": true
+    },
+    {
+      "id": "purchase_preview_changes_world",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/close",
+      "passed": true
+    },
+    {
+      "id": "closing_purchase_reverts_preview_without_spending",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/buy:flower_box",
+      "passed": true
+    },
+    {
+      "id": "buy_and_place_commits_together",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/preview_place:flower_box",
+      "passed": true
+    },
+    {
+      "id": "removal_preview_does_not_change_saved_state",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/cancel_place",
+      "passed": true
+    },
+    {
+      "id": "cancel_restores_saved_decoration",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/preview_place:flower_box",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/confirm_place",
+      "passed": true
+    },
+    {
+      "id": "confirmed_removal_updates_world_and_state",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/undo_place",
+      "passed": true
+    },
+    {
+      "id": "undo_restores_previous_placement",
+      "passed": true
+    },
+    {
+      "id": "undo_survives_reload",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/preview_place:flower_box",
+      "passed": true
+    },
+    {
+      "id": "escape_rolls_back_unconfirmed_removal",
+      "passed": true
+    },
+    {
+      "id": "decoration_persists_after_room_rebuild",
+      "passed": true
+    },
+    {
+      "id": "listening_to_music_demo_does_not_complete_activity",
+      "passed": true
+    },
+    {
+      "id": "actual_piano_clicks_complete_melody",
+      "passed": true
+    },
+    {
+      "id": "keyboard_melody_replay_has_no_extra_reward",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/close",
+      "passed": true
+    },
+    {
+      "id": "closing_during_music_demo_is_safe",
+      "passed": true
+    },
+    {
+      "id": "first_paint_contact_marks_unsaved_changes_immediately",
+      "passed": true
+    },
+    {
+      "id": "actual_mouse_drag_creates_normalized_stroke",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/close",
+      "passed": true
+    },
+    {
+      "id": "unsaved_art_close_prompts_without_overwriting_saved_work",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/return_art",
+      "passed": true
+    },
+    {
+      "id": "continue_restores_unsaved_art",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/close",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/save_art_draft",
+      "passed": true
+    },
+    {
+      "id": "save_before_leaving_keeps_postcard",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/close",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/discard_art",
+      "passed": true
+    },
+    {
+      "id": "discarding_draft_preserves_previous_postcard",
+      "passed": true
+    },
+    {
+      "id": "saved_postcard_opens_in_memory_book",
+      "passed": true
+    },
+    {
+      "id": "three_actual_color_mixes_complete_science",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/close",
+      "passed": true
+    },
+    {
+      "id": "football_uses_authored_goal",
+      "passed": true
+    },
+    {
+      "id": "scene_click_aims_at_goal",
+      "passed": true
+    },
+    {
+      "id": "keyboard_slider_adjusts_football_aim",
+      "passed": true
+    },
+    {
+      "id": "weak_shot_cannot_reach_goal",
+      "passed": true
+    },
+    {
+      "id": "overpowered_shot_goes_over_crossbar",
+      "passed": true
+    },
+    {
+      "id": "wide_shot_misses_posts",
+      "passed": true
+    },
+    {
+      "id": "centered_moderate_shot_fits_goal",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/football_shoot",
+      "passed": true
+    },
+    {
+      "id": "shot_starts_1",
+      "passed": true
+    },
+    {
+      "id": "cannot_double_shoot_1",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/football_shoot",
+      "passed": true
+    },
+    {
+      "id": "shot_starts_2",
+      "passed": true
+    },
+    {
+      "id": "cannot_double_shoot_2",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/football_shoot",
+      "passed": true
+    },
+    {
+      "id": "shot_starts_3",
+      "passed": true
+    },
+    {
+      "id": "cannot_double_shoot_3",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/football_shoot",
+      "passed": true
+    },
+    {
+      "id": "shot_starts_4",
+      "passed": true
+    },
+    {
+      "id": "cannot_double_shoot_4",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/football_shoot",
+      "passed": true
+    },
+    {
+      "id": "shot_starts_5",
+      "passed": true
+    },
+    {
+      "id": "cannot_double_shoot_5",
+      "passed": true
+    },
+    {
+      "id": "five_shot_round_scores_consistently",
+      "passed": true
+    },
+    {
+      "id": "completed_round_saves_best_score_and_first_reward",
+      "passed": true
+    },
+    {
+      "id": "sixth_shot_requires_restart",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/football_restart",
+      "passed": true
+    },
+    {
+      "id": "restart_resets_round",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/football_shoot",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/close",
+      "passed": true
+    },
+    {
+      "id": "leaving_mid_flight_cleans_up_practice",
+      "passed": true
+    },
+    {
+      "id": "leaving_practice_restores_player_position",
+      "passed": true
+    },
+    {
+      "id": "incomplete_replay_grants_no_reward",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/toggle_effects",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/toggle_motion",
+      "passed": true
+    },
+    {
+      "id": "settings_roundtrip",
+      "passed": true
+    },
+    {
+      "id": "enabled_action/close",
+      "passed": true
+    },
+    {
+      "id": "life_play_never_grants_english_mastery",
+      "passed": true
+    },
+    {
+      "id": "production_save_unchanged",
+      "passed": true
+    }
+  ],
+  "engine": "4.7.2-stable (official)",
+  "failures": [],
+  "result": "PASS",
+  "version": "0.6.0"
+}

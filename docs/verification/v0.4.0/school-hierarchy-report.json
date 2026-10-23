@@ -1,0 +1,3158 @@
+{
+	"actual_mouse_dispatch": true,
+	"actual_physics_movement": true,
+	"checks": [
+		{
+			"name": "initial_scene_ready",
+			"passed": true
+		},
+		{
+			"name": "isolated_validation_save",
+			"passed": true
+		},
+		{
+			"name": "walk_village/village_to_campus/school_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/village_to_campus/school_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_village/school_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/school",
+			"passed": true
+		},
+		{
+			"name": "transition_village/school_gate->school",
+			"passed": true
+		},
+		{
+			"name": "campus_is_second_level",
+			"passed": true
+		},
+		{
+			"name": "plan_contains_expected_third_level_rooms",
+			"passed": true
+		},
+		{
+			"name": "plan_child_present/classroom",
+			"passed": true
+		},
+		{
+			"name": "plan_child_hierarchy/classroom",
+			"passed": true
+		},
+		{
+			"name": "campus_door_binding/classroom",
+			"passed": true
+		},
+		{
+			"name": "plan_child_present/music_room",
+			"passed": true
+		},
+		{
+			"name": "plan_child_hierarchy/music_room",
+			"passed": true
+		},
+		{
+			"name": "campus_door_binding/music_room",
+			"passed": true
+		},
+		{
+			"name": "plan_child_present/art_room",
+			"passed": true
+		},
+		{
+			"name": "plan_child_hierarchy/art_room",
+			"passed": true
+		},
+		{
+			"name": "campus_door_binding/art_room",
+			"passed": true
+		},
+		{
+			"name": "plan_child_present/science_room",
+			"passed": true
+		},
+		{
+			"name": "plan_child_hierarchy/science_room",
+			"passed": true
+		},
+		{
+			"name": "campus_door_binding/science_room",
+			"passed": true
+		},
+		{
+			"name": "plan_child_present/canteen",
+			"passed": true
+		},
+		{
+			"name": "plan_child_hierarchy/canteen",
+			"passed": true
+		},
+		{
+			"name": "campus_door_binding/canteen",
+			"passed": true
+		},
+		{
+			"name": "plan_child_present/playground",
+			"passed": true
+		},
+		{
+			"name": "plan_child_hierarchy/playground",
+			"passed": true
+		},
+		{
+			"name": "campus_door_binding/playground",
+			"passed": true
+		},
+		{
+			"name": "plan_child_present/football_field",
+			"passed": true
+		},
+		{
+			"name": "plan_child_hierarchy/football_field",
+			"passed": true
+		},
+		{
+			"name": "campus_door_binding/football_field",
+			"passed": true
+		},
+		{
+			"name": "campus_map_has_exact_navigation_buttons",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "campus_map_opens_five_point_page",
+			"passed": true
+		},
+		{
+			"name": "campus_five_point_page_has_five_destinations_and_return",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/返回校园导览",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/返回校园导览",
+			"passed": true
+		},
+		{
+			"name": "five_point_page_returns_to_campus_map",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "campus_memory_page/memory_01",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/memory_01",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/校门导览",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/校门导览",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/memory_01",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/school/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/school/memory_01",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "campus_memory_page/memory_02",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/memory_02",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/教学楼前",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/教学楼前",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/memory_02",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/school/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/school/memory_02",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "campus_memory_page/memory_03",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/memory_03",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/中心花园",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/中心花园",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/memory_03",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/school/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/school/memory_03",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "campus_memory_page/memory_04",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/memory_04",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/运动器材旁",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/运动器材旁",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/memory_04",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/school/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/school/memory_04",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/校园里的五个探索位置",
+			"passed": true
+		},
+		{
+			"name": "campus_memory_page/memory_05",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/memory_05",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/餐厅菜单",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/餐厅菜单",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/memory_05",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/school/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/school/memory_05",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/classroom_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进阳光教室",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进阳光教室",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/classroom_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/classroom_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_school/classroom_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/classroom",
+			"passed": true
+		},
+		{
+			"name": "transition_school/classroom_gate->classroom",
+			"passed": true
+		},
+		{
+			"name": "third_level_metadata/classroom",
+			"passed": true
+		},
+		{
+			"name": "child_exit_binding/classroom",
+			"passed": true
+		},
+		{
+			"name": "walk_classroom/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_classroom/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/classroom/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/classroom/memory_01",
+			"passed": true
+		},
+		{
+			"name": "walk_classroom/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_classroom/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/classroom/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/classroom/memory_02",
+			"passed": true
+		},
+		{
+			"name": "walk_classroom/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_classroom/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/classroom/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/classroom/memory_03",
+			"passed": true
+		},
+		{
+			"name": "walk_classroom/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_classroom/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/classroom/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/classroom/memory_04",
+			"passed": true
+		},
+		{
+			"name": "walk_classroom/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_classroom/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/classroom/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/classroom/memory_05",
+			"passed": true
+		},
+		{
+			"name": "walk_classroom/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_classroom/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_classroom/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/school",
+			"passed": true
+		},
+		{
+			"name": "return_at_own_door/classroom",
+			"passed": true
+		},
+		{
+			"name": "transition_classroom/school_exit->school",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/music_room_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进音乐教室",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进音乐教室",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/music_room_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/music_room_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_school/music_room_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/music_room",
+			"passed": true
+		},
+		{
+			"name": "transition_school/music_room_gate->music_room",
+			"passed": true
+		},
+		{
+			"name": "third_level_metadata/music_room",
+			"passed": true
+		},
+		{
+			"name": "child_exit_binding/music_room",
+			"passed": true
+		},
+		{
+			"name": "walk_music_room/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_music_room/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/music_room/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/music_room/memory_01",
+			"passed": true
+		},
+		{
+			"name": "walk_music_room/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_music_room/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/music_room/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/music_room/memory_02",
+			"passed": true
+		},
+		{
+			"name": "walk_music_room/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_music_room/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/music_room/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/music_room/memory_03",
+			"passed": true
+		},
+		{
+			"name": "walk_music_room/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_music_room/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/music_room/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/music_room/memory_04",
+			"passed": true
+		},
+		{
+			"name": "walk_music_room/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_music_room/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/music_room/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/music_room/memory_05",
+			"passed": true
+		},
+		{
+			"name": "walk_music_room/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_music_room/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_music_room/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/school",
+			"passed": true
+		},
+		{
+			"name": "return_at_own_door/music_room",
+			"passed": true
+		},
+		{
+			"name": "transition_music_room/school_exit->school",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/art_room_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进美术教室",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进美术教室",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/art_room_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/art_room_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_school/art_room_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/art_room",
+			"passed": true
+		},
+		{
+			"name": "transition_school/art_room_gate->art_room",
+			"passed": true
+		},
+		{
+			"name": "third_level_metadata/art_room",
+			"passed": true
+		},
+		{
+			"name": "child_exit_binding/art_room",
+			"passed": true
+		},
+		{
+			"name": "walk_art_room/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_art_room/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/art_room/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/art_room/memory_01",
+			"passed": true
+		},
+		{
+			"name": "walk_art_room/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_art_room/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/art_room/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/art_room/memory_02",
+			"passed": true
+		},
+		{
+			"name": "walk_art_room/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_art_room/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/art_room/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/art_room/memory_03",
+			"passed": true
+		},
+		{
+			"name": "walk_art_room/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_art_room/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/art_room/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/art_room/memory_04",
+			"passed": true
+		},
+		{
+			"name": "walk_art_room/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_art_room/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/art_room/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/art_room/memory_05",
+			"passed": true
+		},
+		{
+			"name": "walk_art_room/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_art_room/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_art_room/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/school",
+			"passed": true
+		},
+		{
+			"name": "return_at_own_door/art_room",
+			"passed": true
+		},
+		{
+			"name": "transition_art_room/school_exit->school",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/science_room_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进科学教室",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进科学教室",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/science_room_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/science_room_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_school/science_room_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/science_room",
+			"passed": true
+		},
+		{
+			"name": "transition_school/science_room_gate->science_room",
+			"passed": true
+		},
+		{
+			"name": "third_level_metadata/science_room",
+			"passed": true
+		},
+		{
+			"name": "child_exit_binding/science_room",
+			"passed": true
+		},
+		{
+			"name": "walk_science_room/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_science_room/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/science_room/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/science_room/memory_01",
+			"passed": true
+		},
+		{
+			"name": "walk_science_room/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_science_room/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/science_room/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/science_room/memory_02",
+			"passed": true
+		},
+		{
+			"name": "walk_science_room/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_science_room/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/science_room/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/science_room/memory_03",
+			"passed": true
+		},
+		{
+			"name": "walk_science_room/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_science_room/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/science_room/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/science_room/memory_04",
+			"passed": true
+		},
+		{
+			"name": "walk_science_room/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_science_room/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/science_room/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/science_room/memory_05",
+			"passed": true
+		},
+		{
+			"name": "walk_science_room/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_science_room/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_science_room/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/school",
+			"passed": true
+		},
+		{
+			"name": "return_at_own_door/science_room",
+			"passed": true
+		},
+		{
+			"name": "transition_science_room/school_exit->school",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/canteen_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进校园食堂",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进校园食堂",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/canteen_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/canteen_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_school/canteen_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/canteen",
+			"passed": true
+		},
+		{
+			"name": "transition_school/canteen_gate->canteen",
+			"passed": true
+		},
+		{
+			"name": "third_level_metadata/canteen",
+			"passed": true
+		},
+		{
+			"name": "child_exit_binding/canteen",
+			"passed": true
+		},
+		{
+			"name": "walk_canteen/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_canteen/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/canteen/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/canteen/memory_01",
+			"passed": true
+		},
+		{
+			"name": "walk_canteen/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_canteen/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/canteen/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/canteen/memory_02",
+			"passed": true
+		},
+		{
+			"name": "walk_canteen/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_canteen/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/canteen/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/canteen/memory_03",
+			"passed": true
+		},
+		{
+			"name": "walk_canteen/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_canteen/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/canteen/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/canteen/memory_04",
+			"passed": true
+		},
+		{
+			"name": "walk_canteen/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_canteen/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/canteen/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/canteen/memory_05",
+			"passed": true
+		},
+		{
+			"name": "walk_canteen/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_canteen/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_canteen/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/school",
+			"passed": true
+		},
+		{
+			"name": "return_at_own_door/canteen",
+			"passed": true
+		},
+		{
+			"name": "transition_canteen/school_exit->school",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/playground_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进青草操场",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进青草操场",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/playground_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/playground_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_school/playground_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/playground",
+			"passed": true
+		},
+		{
+			"name": "transition_school/playground_gate->playground",
+			"passed": true
+		},
+		{
+			"name": "third_level_metadata/playground",
+			"passed": true
+		},
+		{
+			"name": "child_exit_binding/playground",
+			"passed": true
+		},
+		{
+			"name": "walk_playground/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_playground/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/playground/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/playground/memory_01",
+			"passed": true
+		},
+		{
+			"name": "walk_playground/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_playground/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/playground/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/playground/memory_02",
+			"passed": true
+		},
+		{
+			"name": "walk_playground/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_playground/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/playground/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/playground/memory_03",
+			"passed": true
+		},
+		{
+			"name": "walk_playground/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_playground/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/playground/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/playground/memory_04",
+			"passed": true
+		},
+		{
+			"name": "walk_playground/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_playground/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/playground/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/playground/memory_05",
+			"passed": true
+		},
+		{
+			"name": "walk_playground/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_playground/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_playground/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/school",
+			"passed": true
+		},
+		{
+			"name": "return_at_own_door/playground",
+			"passed": true
+		},
+		{
+			"name": "transition_playground/school_exit->school",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/football_field_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进校园足球场",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进校园足球场",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/football_field_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/football_field_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_school/football_field_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/football_field",
+			"passed": true
+		},
+		{
+			"name": "transition_school/football_field_gate->football_field",
+			"passed": true
+		},
+		{
+			"name": "third_level_metadata/football_field",
+			"passed": true
+		},
+		{
+			"name": "child_exit_binding/football_field",
+			"passed": true
+		},
+		{
+			"name": "walk_football_field/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_football_field/third_level_memory/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/football_field/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/football_field/memory_01",
+			"passed": true
+		},
+		{
+			"name": "walk_football_field/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_football_field/third_level_memory/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/football_field/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/football_field/memory_02",
+			"passed": true
+		},
+		{
+			"name": "walk_football_field/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_football_field/third_level_memory/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/football_field/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/football_field/memory_03",
+			"passed": true
+		},
+		{
+			"name": "walk_football_field/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_football_field/third_level_memory/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/football_field/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/football_field/memory_04",
+			"passed": true
+		},
+		{
+			"name": "walk_football_field/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_football_field/third_level_memory/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_selected/football_field/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_panel_from_nearest/football_field/memory_05",
+			"passed": true
+		},
+		{
+			"name": "walk_football_field/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_football_field/return_to_campus/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_football_field/school_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/school",
+			"passed": true
+		},
+		{
+			"name": "return_at_own_door/football_field",
+			"passed": true
+		},
+		{
+			"name": "transition_football_field/school_exit->school",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/village_exit",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/回到字母岛",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/回到字母岛",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/village_exit",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/school/village_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_school/village_exit",
+			"passed": true
+		},
+		{
+			"name": "return_at_own_door/school",
+			"passed": true
+		},
+		{
+			"name": "transition_school/village_exit->village",
+			"passed": true
+		},
+		{
+			"name": "hierarchy_journey_returns_to_village",
+			"passed": true
+		},
+		{
+			"name": "free_exploration_does_not_change_learning",
+			"passed": true
+		},
+		{
+			"name": "free_exploration_does_not_complete_units",
+			"passed": true
+		},
+		{
+			"name": "production_save_unchanged",
+			"passed": true
+		}
+	],
+	"collisions": [],
+	"complete": true,
+	"coverage": "Actual village entry, all 9 campus map navigation buttons, five-point page and return, all 7 third-level doors, 40 memory points, nearest interactions, and each return to its corresponding parent door.",
+	"engine": "4.7.2-stable (official)",
+	"expected_campus_navigation_buttons": 9,
+	"expected_memory_points": 40,
+	"expected_school_children": 7,
+	"failures": [],
+	"map_pages": [
+		{
+			"labels": [
+				"回到字母岛",
+				"走进阳光教室",
+				"走进音乐教室",
+				"走进美术教室",
+				"走进科学教室",
+				"走进校园食堂",
+				"走进青草操场",
+				"走进校园足球场",
+				"校园里的五个探索位置"
+			],
+			"navigation_button_count": 9,
+			"panel": "map",
+			"passed": true
+		},
+		{
+			"labels": [
+				"校门导览",
+				"教学楼前",
+				"中心花园",
+				"运动器材旁",
+				"餐厅菜单",
+				"返回校园导览"
+			],
+			"navigation_button_count": 6,
+			"panel": "campus_memories",
+			"passed": true
+		}
+	],
+	"passed": true,
+	"planned_routes": [],
+	"production_save_unchanged": true,
+	"routes": [
+		{
+			"accepted": true,
+			"allowed_distance": 2.7,
+			"destination": [
+				0.0,
+				10.4008665084839,
+				-46.8599967956543
+			],
+			"distance_walked": 83.1611270233989,
+			"finish": [
+				-0.105527140200138,
+				10.2799444198608,
+				-46.3940277099609
+			],
+			"interaction_available": true,
+			"label": "village_to_campus/school_gate",
+			"nearest_interaction": "school_gate",
+			"passed": true,
+			"physics_frames": 1073,
+			"remaining_distance": 0.477768957614899,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-6.0,
+				5.55009698867798,
+				21.75
+			],
+			"target_interaction": "school_gate"
+		},
+		{
+			"allowed_distance": 1.65,
+			"destination": [
+				-6.5,
+				0.0,
+				16.6000003814697
+			],
+			"distance_walked": 5.02666425704956,
+			"finish": [
+				-5.02666425704956,
+				-0.0491617880761623,
+				16.5
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 64,
+			"remaining_distance": 1.47672545909882,
+			"room": "school",
+			"start": [
+				0.0,
+				-0.0499098598957062,
+				16.5
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"allowed_distance": 1.65,
+			"destination": [
+				-5.80000019073486,
+				0.0,
+				-6.19999980926514
+			],
+			"distance_walked": 22.0133049860597,
+			"finish": [
+				-5.99788093566895,
+				-0.0491605065762997,
+				-4.70226049423218
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 282,
+			"remaining_distance": 1.5107547044754,
+			"room": "school",
+			"start": [
+				-5.02666425704956,
+				-0.0491617880761623,
+				16.5
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"allowed_distance": 1.65,
+			"destination": [
+				4.80000019073486,
+				0.0,
+				0.0
+			],
+			"distance_walked": 11.7866752743721,
+			"finish": [
+				4.38766431808472,
+				-0.0491605065762997,
+				-1.46736192703247
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 150,
+			"remaining_distance": 1.52419543266296,
+			"room": "school",
+			"start": [
+				-5.99788093566895,
+				-0.0491605065762997,
+				-4.70226049423218
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"allowed_distance": 1.65,
+			"destination": [
+				20.7000007629395,
+				0.0,
+				12.6000003814697
+			],
+			"distance_walked": 21.4066728726029,
+			"finish": [
+				19.2407150268555,
+				-0.0491628013551235,
+				12.749418258667
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 268,
+			"remaining_distance": 1.46691536903381,
+			"room": "school",
+			"start": [
+				4.38766431808472,
+				-0.0491605065762997,
+				-1.46736192703247
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"allowed_distance": 1.65,
+			"destination": [
+				21.0,
+				0.0,
+				6.90000009536743
+			],
+			"distance_walked": 5.37333917617798,
+			"finish": [
+				20.2752857208252,
+				-0.0491617880761623,
+				8.22608280181885
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 68,
+			"remaining_distance": 1.51119363307953,
+			"room": "school",
+			"start": [
+				19.2407150268555,
+				-0.0491628013551235,
+				12.749418258667
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				-6.69999980926514
+			],
+			"distance_walked": 25.9133525639772,
+			"finish": [
+				1.08233344554901,
+				-0.0491618067026138,
+				-5.59986019134521
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "classroom_gate",
+			"passed": true,
+			"physics_frames": 327,
+			"remaining_distance": 1.54329288005829,
+			"room": "school",
+			"start": [
+				20.2752857208252,
+				-0.0491617880761623,
+				8.22608280181885
+			],
+			"target_interaction": "classroom_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-3.5,
+				0.0,
+				3.40000009536743
+			],
+			"distance_walked": 4.50666558742523,
+			"finish": [
+				-3.61284852027893,
+				-0.0491972863674164,
+				3.75306963920593
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 58,
+			"remaining_distance": 0.370665460824966,
+			"remaining_waypoints": 0,
+			"room": "classroom",
+			"start": [
+				0.0,
+				-0.0500356964766979,
+				6.0
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-4.80000019073486,
+				0.0,
+				0.699999988079071
+			],
+			"distance_walked": 3.20668475329876,
+			"finish": [
+				-4.4993691444397,
+				-0.0491823852062225,
+				0.917907416820526
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 42,
+			"remaining_distance": 0.371298640966415,
+			"remaining_waypoints": 0,
+			"room": "classroom",
+			"start": [
+				-3.61284852027893,
+				-0.0491972863674164,
+				3.75306963920593
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.0,
+				0.0,
+				0.300000011920929
+			],
+			"distance_walked": 4.76666678488255,
+			"finish": [
+				-0.121295407414436,
+				-0.0491858460009098,
+				0.0000128648080135463
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 62,
+			"remaining_distance": 0.32358130812645,
+			"remaining_waypoints": 0,
+			"room": "classroom",
+			"start": [
+				-4.4993691444397,
+				-0.0491823852062225,
+				0.917907416820526
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.69999980926514,
+				0.0,
+				0.699999988079071
+			],
+			"distance_walked": 4.6799825951457,
+			"finish": [
+				4.31993246078491,
+				-0.0491848513484001,
+				0.749982535839081
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 61,
+			"remaining_distance": 0.38333985209465,
+			"remaining_waypoints": 0,
+			"room": "classroom",
+			"start": [
+				-0.121295407414436,
+				-0.0491858460009098,
+				0.0000128648080135463
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.59999990463257,
+				0.0,
+				3.90000009536743
+			],
+			"distance_walked": 2.85999988764524,
+			"finish": [
+				4.49980211257935,
+				-0.0491824746131897,
+				3.59251046180725
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 38,
+			"remaining_distance": 0.323402941226959,
+			"remaining_waypoints": 0,
+			"room": "classroom",
+			"start": [
+				4.31993246078491,
+				-0.0491848513484001,
+				0.749982535839081
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				6.44999980926514
+			],
+			"distance_walked": 5.1999996304512,
+			"finish": [
+				0.113360501825809,
+				-0.0491723604500294,
+				5.88873386383057
+			],
+			"interaction_available": true,
+			"label": "return_to_campus/school_exit",
+			"nearest_interaction": "school_exit",
+			"passed": true,
+			"physics_frames": 67,
+			"remaining_distance": 0.572599411010742,
+			"remaining_waypoints": 0,
+			"room": "classroom",
+			"start": [
+				4.49980211257935,
+				-0.0491824746131897,
+				3.59251046180725
+			],
+			"target_interaction": "school_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				-16.0,
+				0.0,
+				-3.79999995231628
+			],
+			"distance_walked": 15.5999521613121,
+			"finish": [
+				-14.475118637085,
+				-0.0491605028510094,
+				-3.75000047683716
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "music_room_gate",
+			"passed": true,
+			"physics_frames": 199,
+			"remaining_distance": 1.5257009267807,
+			"room": "school",
+			"start": [
+				0.0,
+				-0.0499098598957062,
+				-6.75
+			],
+			"target_interaction": "music_room_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-6.34999990463257,
+				0.0,
+				4.40000009536743
+			],
+			"distance_walked": 6.41334224492311,
+			"finish": [
+				-5.82539463043213,
+				-0.0491786524653435,
+				4.49999952316284
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 83,
+			"remaining_distance": 0.534051120281219,
+			"remaining_waypoints": 0,
+			"room": "music_room",
+			"start": [
+				0.0,
+				-0.0499575734138489,
+				6.0
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-5.0,
+				0.0,
+				0.100000001490116
+			],
+			"distance_walked": 6.41332750767469,
+			"finish": [
+				-5.12662696838379,
+				-0.0491738058626652,
+				0.12689596414566
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 83,
+			"remaining_distance": 0.129451856017113,
+			"remaining_waypoints": 0,
+			"room": "music_room",
+			"start": [
+				-5.82539463043213,
+				-0.0491786524653435,
+				4.49999952316284
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				2.0,
+				0.0,
+				1.25
+			],
+			"distance_walked": 7.62660967558622,
+			"finish": [
+				2.05041360855103,
+				-0.0491715408861637,
+				1.49936354160309
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 99,
+			"remaining_distance": 0.254408538341522,
+			"remaining_waypoints": 0,
+			"room": "music_room",
+			"start": [
+				-5.12662696838379,
+				-0.0491738058626652,
+				0.12689596414566
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				6.0,
+				0.0,
+				5.0
+			],
+			"distance_walked": 6.06666462123394,
+			"finish": [
+				5.87246751785278,
+				-0.0491762794554234,
+				5.24699926376343
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 78,
+			"remaining_distance": 0.277980506420136,
+			"remaining_waypoints": 0,
+			"room": "music_room",
+			"start": [
+				2.05041360855103,
+				-0.0491715408861637,
+				1.49936354160309
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.0,
+				0.0,
+				-4.09999990463257
+			],
+			"distance_walked": 13.1733389496803,
+			"finish": [
+				-0.163454279303551,
+				-0.0491855517029762,
+				-3.70681476593018
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 169,
+			"remaining_distance": 0.425807297229767,
+			"remaining_waypoints": 0,
+			"room": "music_room",
+			"start": [
+				5.87246751785278,
+				-0.0491762794554234,
+				5.24699926376343
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				6.94999980926514
+			],
+			"distance_walked": 11.006619758904,
+			"finish": [
+				-0.000000432812100825686,
+				-0.049174178391695,
+				6.58287858963013
+			],
+			"interaction_available": true,
+			"label": "return_to_campus/school_exit",
+			"nearest_interaction": "school_exit",
+			"passed": true,
+			"physics_frames": 143,
+			"remaining_distance": 0.36712121963501,
+			"remaining_waypoints": 0,
+			"room": "music_room",
+			"start": [
+				-0.163454279303551,
+				-0.0491855517029762,
+				-3.70681476593018
+			],
+			"target_interaction": "school_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				-16.0,
+				0.0,
+				8.69999980926514
+			],
+			"distance_walked": 17.5933229848742,
+			"finish": [
+				-14.4756088256836,
+				-0.0491608083248138,
+				8.99866008758545
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "art_room_gate",
+			"passed": true,
+			"physics_frames": 224,
+			"remaining_distance": 1.55337250232697,
+			"room": "school",
+			"start": [
+				-15.75,
+				-0.0499098598957062,
+				-3.75
+			],
+			"target_interaction": "art_room_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-5.80000019073486,
+				0.0,
+				4.40000009536743
+			],
+			"distance_walked": 6.06666142493486,
+			"finish": [
+				-5.80350494384766,
+				-0.0491804108023643,
+				4.50000190734863
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 79,
+			"remaining_distance": 0.10006320476532,
+			"remaining_waypoints": 0,
+			"room": "art_room",
+			"start": [
+				0.0,
+				-0.0500617399811745,
+				5.25
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-5.0,
+				0.0,
+				-0.150000005960464
+			],
+			"distance_walked": 7.71334467828274,
+			"finish": [
+				-5.11727523803711,
+				-0.0491731576621532,
+				0.130221724510193
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 100,
+			"remaining_distance": 0.303772449493408,
+			"remaining_waypoints": 0,
+			"room": "art_room",
+			"start": [
+				-5.80350494384766,
+				-0.0491804108023643,
+				4.50000190734863
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.899999976158142,
+				0.0,
+				0.899999976158142
+			],
+			"distance_walked": 5.893320299685,
+			"finish": [
+				0.564310133457184,
+				-0.0491666346788406,
+				0.749998688697815
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 77,
+			"remaining_distance": 0.367679297924042,
+			"remaining_waypoints": 0,
+			"room": "art_room",
+			"start": [
+				-5.11727523803711,
+				-0.0491731576621532,
+				0.130221724510193
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				5.0,
+				0.0,
+				4.94999980926514
+			],
+			"distance_walked": 7.10666789859533,
+			"finish": [
+				5.11833763122559,
+				-0.0491846986114979,
+				5.2466893196106
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 91,
+			"remaining_distance": 0.31941893696785,
+			"remaining_waypoints": 0,
+			"room": "art_room",
+			"start": [
+				0.564310133457184,
+				-0.0491666346788406,
+				0.749998688697815
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.0,
+				0.0,
+				-4.69999980926514
+			],
+			"distance_walked": 13.6066754758358,
+			"finish": [
+				0.135260254144669,
+				-0.0491855069994926,
+				-4.49914455413818
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 176,
+			"remaining_distance": 0.242153197526932,
+			"remaining_waypoints": 0,
+			"room": "art_room",
+			"start": [
+				5.11833763122559,
+				-0.0491846986114979,
+				5.2466893196106
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				5.94999980926514
+			],
+			"distance_walked": 11.8733250796795,
+			"finish": [
+				-0.00000294388178190275,
+				-0.0491790547966957,
+				5.81463432312012
+			],
+			"interaction_available": true,
+			"label": "return_to_campus/school_exit",
+			"nearest_interaction": "school_exit",
+			"passed": true,
+			"physics_frames": 153,
+			"remaining_distance": 0.13536548614502,
+			"remaining_waypoints": 0,
+			"room": "art_room",
+			"start": [
+				0.135260254144669,
+				-0.0491855069994926,
+				-4.49914455413818
+			],
+			"target_interaction": "school_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				16.0,
+				0.0,
+				-5.19999980926514
+			],
+			"distance_walked": 35.7066174447536,
+			"finish": [
+				14.751389503479,
+				-0.049165029078722,
+				-4.25204944610596
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "science_room_gate",
+			"passed": true,
+			"physics_frames": 452,
+			"remaining_distance": 1.56768560409546,
+			"room": "school",
+			"start": [
+				-15.75,
+				-0.0498968362808228,
+				9.0
+			],
+			"target_interaction": "science_room_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-6.0,
+				0.0,
+				5.25
+			],
+			"distance_walked": 6.06666434556246,
+			"finish": [
+				-5.80350875854492,
+				-0.0491903536021709,
+				5.25000190734863
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 79,
+			"remaining_distance": 0.196491241455078,
+			"remaining_waypoints": 0,
+			"room": "science_room",
+			"start": [
+				0.0,
+				-0.0499575734138489,
+				6.0
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-5.40000009536743,
+				0.0,
+				-1.64999997615814
+			],
+			"distance_walked": 8.66664588451386,
+			"finish": [
+				-5.23344087600708,
+				-0.0491786934435368,
+				-1.34634757041931
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 112,
+			"remaining_distance": 0.34633332490921,
+			"remaining_waypoints": 0,
+			"room": "science_room",
+			"start": [
+				-5.80350875854492,
+				-0.0491903536021709,
+				5.25000190734863
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				1.04999995231628,
+				0.0,
+				0.899999976158142
+			],
+			"distance_walked": 6.58665129542351,
+			"finish": [
+				0.551946103572845,
+				-0.0504008084535599,
+				0.749986946582794
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 85,
+			"remaining_distance": 0.520155310630798,
+			"remaining_waypoints": 0,
+			"room": "science_room",
+			"start": [
+				-5.23344087600708,
+				-0.0491786934435368,
+				-1.34634757041931
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				5.34999990463257,
+				0.0,
+				5.65000009536743
+			],
+			"distance_walked": 7.88666645437479,
+			"finish": [
+				5.12203311920166,
+				-0.0491723939776421,
+				5.99693489074707
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 101,
+			"remaining_distance": 0.415129631757736,
+			"remaining_waypoints": 0,
+			"room": "science_room",
+			"start": [
+				0.551946103572845,
+				-0.0504008084535599,
+				0.749986946582794
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.0,
+				0.0,
+				-4.59999990463257
+			],
+			"distance_walked": 14.3866573646665,
+			"finish": [
+				-0.10177593678236,
+				-0.0491823628544807,
+				-4.39636325836182
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 183,
+			"remaining_distance": 0.227653741836548,
+			"remaining_waypoints": 0,
+			"room": "science_room",
+			"start": [
+				5.12203311920166,
+				-0.0491723939776421,
+				5.99693489074707
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				6.94999980926514
+			],
+			"distance_walked": 12.0466667041183,
+			"finish": [
+				-0.00000321228299071663,
+				-0.0491730272769928,
+				6.56247186660767
+			],
+			"interaction_available": true,
+			"label": "return_to_campus/school_exit",
+			"nearest_interaction": "school_exit",
+			"passed": true,
+			"physics_frames": 155,
+			"remaining_distance": 0.387527942657471,
+			"remaining_waypoints": 0,
+			"room": "science_room",
+			"start": [
+				-0.10177593678236,
+				-0.0491823628544807,
+				-4.39636325836182
+			],
+			"target_interaction": "school_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				16.0,
+				0.0,
+				7.40000009536743
+			],
+			"distance_walked": 20.2799796313047,
+			"finish": [
+				14.4722766876221,
+				-0.0491640456020832,
+				7.49958276748657
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "canteen_gate",
+			"passed": true,
+			"physics_frames": 257,
+			"remaining_distance": 1.53096544742584,
+			"room": "school",
+			"start": [
+				15.75,
+				-0.0499358996748924,
+				-5.25
+			],
+			"target_interaction": "canteen_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-3.5,
+				0.0,
+				3.40000009536743
+			],
+			"distance_walked": 4.50666558742523,
+			"finish": [
+				-3.61284852027893,
+				-0.0491972863674164,
+				3.75306963920593
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 58,
+			"remaining_distance": 0.370665460824966,
+			"remaining_waypoints": 0,
+			"room": "canteen",
+			"start": [
+				0.0,
+				-0.0500356964766979,
+				6.0
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-4.80000019073486,
+				0.0,
+				0.699999988079071
+			],
+			"distance_walked": 3.20668475329876,
+			"finish": [
+				-4.4993691444397,
+				-0.0491823852062225,
+				0.917907416820526
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 42,
+			"remaining_distance": 0.371298640966415,
+			"remaining_waypoints": 0,
+			"room": "canteen",
+			"start": [
+				-3.61284852027893,
+				-0.0491972863674164,
+				3.75306963920593
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.0,
+				0.0,
+				0.300000011920929
+			],
+			"distance_walked": 4.76666678488255,
+			"finish": [
+				-0.121295407414436,
+				-0.0491858460009098,
+				0.0000128648080135463
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 62,
+			"remaining_distance": 0.32358130812645,
+			"remaining_waypoints": 0,
+			"room": "canteen",
+			"start": [
+				-4.4993691444397,
+				-0.0491823852062225,
+				0.917907416820526
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.69999980926514,
+				0.0,
+				0.699999988079071
+			],
+			"distance_walked": 4.6799825951457,
+			"finish": [
+				4.31993246078491,
+				-0.0491848513484001,
+				0.749982535839081
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 61,
+			"remaining_distance": 0.38333985209465,
+			"remaining_waypoints": 0,
+			"room": "canteen",
+			"start": [
+				-0.121295407414436,
+				-0.0491858460009098,
+				0.0000128648080135463
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.59999990463257,
+				0.0,
+				3.90000009536743
+			],
+			"distance_walked": 2.85999988764524,
+			"finish": [
+				4.49980211257935,
+				-0.0491824746131897,
+				3.59251046180725
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 38,
+			"remaining_distance": 0.323402941226959,
+			"remaining_waypoints": 0,
+			"room": "canteen",
+			"start": [
+				4.31993246078491,
+				-0.0491848513484001,
+				0.749982535839081
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				6.44999980926514
+			],
+			"distance_walked": 5.1999996304512,
+			"finish": [
+				0.113360501825809,
+				-0.0491723604500294,
+				5.88873386383057
+			],
+			"interaction_available": true,
+			"label": "return_to_campus/school_exit",
+			"nearest_interaction": "school_exit",
+			"passed": true,
+			"physics_frames": 67,
+			"remaining_distance": 0.572599411010742,
+			"remaining_waypoints": 0,
+			"room": "canteen",
+			"start": [
+				4.49980211257935,
+				-0.0491824746131897,
+				3.59251046180725
+			],
+			"target_interaction": "school_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				10.5,
+				0.0,
+				17.7000007629395
+			],
+			"distance_walked": 10.8332787230611,
+			"finish": [
+				10.5000352859497,
+				-0.0491617880761623,
+				16.1959056854248
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "playground_gate",
+			"passed": true,
+			"physics_frames": 136,
+			"remaining_distance": 1.50409507751465,
+			"room": "school",
+			"start": [
+				15.75,
+				-0.0499228797852993,
+				7.5
+			],
+			"target_interaction": "playground_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-3.5,
+				0.0,
+				3.40000009536743
+			],
+			"distance_walked": 4.50666558742523,
+			"finish": [
+				-3.61284852027893,
+				-0.0491972863674164,
+				3.75306963920593
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 58,
+			"remaining_distance": 0.370665460824966,
+			"remaining_waypoints": 0,
+			"room": "playground",
+			"start": [
+				0.0,
+				-0.0500356964766979,
+				6.0
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-4.40000009536743,
+				0.0,
+				0.400000005960464
+			],
+			"distance_walked": 3.20668475329876,
+			"finish": [
+				-4.4993691444397,
+				-0.0491823852062225,
+				0.917907416820526
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 42,
+			"remaining_distance": 0.527354001998901,
+			"remaining_waypoints": 0,
+			"room": "playground",
+			"start": [
+				-3.61284852027893,
+				-0.0491972863674164,
+				3.75306963920593
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.0,
+				0.0,
+				0.300000011920929
+			],
+			"distance_walked": 4.75193997472525,
+			"finish": [
+				-0.134783640503883,
+				-0.0210450422018766,
+				0.0000199574387806933
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 62,
+			"remaining_distance": 0.328868746757507,
+			"remaining_waypoints": 0,
+			"room": "playground",
+			"start": [
+				-4.4993691444397,
+				-0.0491823852062225,
+				0.917907416820526
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.09999990463257,
+				0.0,
+				0.699999988079071
+			],
+			"distance_walked": 3.98666754364967,
+			"finish": [
+				3.60220527648926,
+				-0.0191855058073998,
+				0.749939203262329
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 52,
+			"remaining_distance": 0.50029331445694,
+			"remaining_waypoints": 0,
+			"room": "playground",
+			"start": [
+				-0.134783640503883,
+				-0.0210450422018766,
+				0.0000199574387806933
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.59999990463257,
+				0.0,
+				3.90000009536743
+			],
+			"distance_walked": 3.20677342265844,
+			"finish": [
+				4.49955940246582,
+				-0.0491803884506226,
+				3.57841348648071
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 42,
+			"remaining_distance": 0.336906880140305,
+			"remaining_waypoints": 0,
+			"room": "playground",
+			"start": [
+				3.60220527648926,
+				-0.0191855058073998,
+				0.749939203262329
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				6.44999980926514
+			],
+			"distance_walked": 5.19999970495701,
+			"finish": [
+				0.114454701542854,
+				-0.0491761565208435,
+				5.88769912719727
+			],
+			"interaction_available": true,
+			"label": "return_to_campus/school_exit",
+			"nearest_interaction": "school_exit",
+			"passed": true,
+			"physics_frames": 67,
+			"remaining_distance": 0.573830902576447,
+			"remaining_waypoints": 0,
+			"room": "playground",
+			"start": [
+				4.49955940246582,
+				-0.0491803884506226,
+				3.57841348648071
+			],
+			"target_interaction": "school_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				28.0,
+				0.0,
+				17.0
+			],
+			"distance_walked": 16.206580966711,
+			"finish": [
+				26.4685344696045,
+				-0.0491617918014526,
+				17.2500038146973
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "football_field_gate",
+			"passed": true,
+			"physics_frames": 208,
+			"remaining_distance": 1.5517373085022,
+			"room": "school",
+			"start": [
+				10.5,
+				-0.0499098598957062,
+				18.0
+			],
+			"target_interaction": "football_field_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-10.6000003814697,
+				0.0,
+				12.6000003814697
+			],
+			"distance_walked": 10.8333160504699,
+			"finish": [
+				-10.3320474624634,
+				-0.0491628013551235,
+				12.7499980926514
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 140,
+			"remaining_distance": 0.307079911231995,
+			"remaining_waypoints": 0,
+			"room": "football_field",
+			"start": [
+				0.0,
+				-0.0499369241297245,
+				11.25
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.0,
+				0.0,
+				0.0
+			],
+			"distance_walked": 17.8533473536372,
+			"finish": [
+				-0.00325189507566392,
+				-0.0491791404783726,
+				0.140099123120308
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 227,
+			"remaining_distance": 0.140136852860451,
+			"remaining_waypoints": 0,
+			"room": "football_field",
+			"start": [
+				-10.3320474624634,
+				-0.0491628013551235,
+				12.7499980926514
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				10.6000003814697,
+				0.0,
+				0.0
+			],
+			"distance_walked": 10.4000075682998,
+			"finish": [
+				10.386116027832,
+				-0.049165029078722,
+				0.00000000000145670053710439
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 135,
+			"remaining_distance": 0.213884353637695,
+			"remaining_waypoints": 0,
+			"room": "football_field",
+			"start": [
+				-0.00325189507566392,
+				-0.0491791404783726,
+				0.140099123120308
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-6.0,
+				0.0,
+				-4.5
+			],
+			"distance_walked": 18.026667393744,
+			"finish": [
+				-5.86013460159302,
+				-0.0491672493517399,
+				-4.49999904632568
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 231,
+			"remaining_distance": 0.139865398406982,
+			"remaining_waypoints": 0,
+			"room": "football_field",
+			"start": [
+				10.386116027832,
+				-0.049165029078722,
+				0.00000000000145670053710439
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				10.1999998092651,
+				0.0,
+				-10.1999998092651
+			],
+			"distance_walked": 18.5466677024961,
+			"finish": [
+				10.3070001602173,
+				-0.0491643771529198,
+				-10.4999971389771
+			],
+			"interaction_available": true,
+			"label": "third_level_memory/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 237,
+			"remaining_distance": 0.318508207798004,
+			"remaining_waypoints": 0,
+			"room": "football_field",
+			"start": [
+				-5.86013460159302,
+				-0.0491672493517399,
+				-4.49999904632568
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				12.8999996185303
+			],
+			"distance_walked": 27.3866785019636,
+			"finish": [
+				0.000000002653310016143,
+				-0.0491628237068653,
+				12.5959148406982
+			],
+			"interaction_available": true,
+			"label": "return_to_campus/school_exit",
+			"nearest_interaction": "school_exit",
+			"passed": true,
+			"physics_frames": 348,
+			"remaining_distance": 0.304084777832031,
+			"remaining_waypoints": 0,
+			"room": "football_field",
+			"start": [
+				10.3070001602173,
+				-0.0491643771529198,
+				-10.4999971389771
+			],
+			"target_interaction": "school_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				19.0
+			],
+			"distance_walked": 26.6932047605515,
+			"finish": [
+				1.52338349819183,
+				-0.0491617918014526,
+				18.669038772583
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "village_exit",
+			"passed": true,
+			"physics_frames": 343,
+			"remaining_distance": 1.55892026424408,
+			"room": "school",
+			"start": [
+				27.75,
+				-0.0499098598957062,
+				17.25
+			],
+			"target_interaction": "village_exit"
+		}
+	],
+	"timestamp_utc": "2026-10-22T07:38:42",
+	"transitions": [
+		{
+			"from": "village",
+			"interaction": "school_gate",
+			"passed": true,
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "classroom_gate",
+			"passed": true,
+			"to": "classroom"
+		},
+		{
+			"from": "classroom",
+			"interaction": "school_exit",
+			"passed": true,
+			"return_distance": 0.0500001907348633,
+			"return_door": "classroom_gate",
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "music_room_gate",
+			"passed": true,
+			"to": "music_room"
+		},
+		{
+			"from": "music_room",
+			"interaction": "school_exit",
+			"passed": true,
+			"return_distance": 0.254950970411301,
+			"return_door": "music_room_gate",
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "art_room_gate",
+			"passed": true,
+			"to": "art_room"
+		},
+		{
+			"from": "art_room",
+			"interaction": "school_exit",
+			"passed": true,
+			"return_distance": 0.390512645244598,
+			"return_door": "art_room_gate",
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "science_room_gate",
+			"passed": true,
+			"to": "science_room"
+		},
+		{
+			"from": "science_room",
+			"interaction": "school_exit",
+			"passed": true,
+			"return_distance": 0.254951000213623,
+			"return_door": "science_room_gate",
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "canteen_gate",
+			"passed": true,
+			"to": "canteen"
+		},
+		{
+			"from": "canteen",
+			"interaction": "school_exit",
+			"passed": true,
+			"return_distance": 0.269258201122284,
+			"return_door": "canteen_gate",
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "playground_gate",
+			"passed": true,
+			"to": "playground"
+		},
+		{
+			"from": "playground",
+			"interaction": "school_exit",
+			"passed": true,
+			"return_distance": 0.299999237060547,
+			"return_door": "playground_gate",
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "football_field_gate",
+			"passed": true,
+			"to": "football_field"
+		},
+		{
+			"from": "football_field",
+			"interaction": "school_exit",
+			"passed": true,
+			"return_distance": 0.353553384542465,
+			"return_door": "football_field_gate",
+			"to": "school"
+		},
+		{
+			"from": "school",
+			"interaction": "village_exit",
+			"passed": true,
+			"return_distance": 0.359996795654297,
+			"return_door": "school_gate",
+			"to": "village"
+		}
+	]
+}

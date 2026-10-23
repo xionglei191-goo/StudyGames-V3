@@ -1,0 +1,405 @@
+{
+  "status": "PASS",
+  "date": "2026-10-23",
+  "active_manifest": "game/assets/characters/tripo_v1/manifest.json",
+  "characters": [
+    {
+      "id": "player",
+      "name": "旅行小女孩",
+      "provider": "Mixamo",
+      "bones": 17,
+      "triangles": 35999,
+      "clips": 14,
+      "source": "assets/tripo/01_player.glb",
+      "editable": "assets/characters/tripo_v1/player/rigged.blend",
+      "glb": "assets/characters/tripo_v1/player/character.glb",
+      "source_triangles": 910525,
+      "mixamo_fbx": "assets/characters/mixamo_v1/downloads/player/t_pose.fbx",
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/player-idle.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/player-walk/frame-007.png"
+        },
+        {
+          "name": "粉色换装",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/player-outfit-pink.png"
+        },
+        {
+          "name": "蓝色换装",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/player-outfit-blue.png"
+        }
+      ]
+    },
+    {
+      "id": "textbook_lingling",
+      "name": "Lingling 玲玲",
+      "provider": "Mixamo",
+      "bones": 17,
+      "triangles": 35999,
+      "clips": 14,
+      "source": "assets/tripo/02_lingling.glb",
+      "editable": "assets/characters/tripo_v1/textbook_lingling/rigged.blend",
+      "glb": "assets/characters/tripo_v1/textbook_lingling/character.glb",
+      "source_triangles": 1038906,
+      "mixamo_fbx": "assets/characters/mixamo_v1/downloads/textbook_lingling/t_pose.fbx",
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_lingling-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_lingling-wave.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_lingling-walk.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_lingling-give.png"
+        }
+      ]
+    },
+    {
+      "id": "textbook_peter",
+      "name": "Peter",
+      "provider": "Mixamo",
+      "bones": 17,
+      "triangles": 35998,
+      "clips": 14,
+      "source": "assets/tripo/03_peter.glb",
+      "editable": "assets/characters/tripo_v1/textbook_peter/rigged.blend",
+      "glb": "assets/characters/tripo_v1/textbook_peter/character.glb",
+      "source_triangles": 796616,
+      "mixamo_fbx": "assets/characters/mixamo_v1/downloads/textbook_peter/t_pose.fbx",
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_peter-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_peter-wave.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_peter-walk.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_peter-give.png"
+        }
+      ]
+    },
+    {
+      "id": "textbook_anne",
+      "name": "Anne",
+      "provider": "Mixamo",
+      "bones": 17,
+      "triangles": 35998,
+      "clips": 14,
+      "source": "assets/tripo/04_anne.glb",
+      "editable": "assets/characters/tripo_v1/textbook_anne/rigged.blend",
+      "glb": "assets/characters/tripo_v1/textbook_anne/character.glb",
+      "source_triangles": 921776,
+      "mixamo_fbx": "assets/characters/mixamo_v1/downloads/textbook_anne/t_pose.fbx",
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_anne-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_anne-wave.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_anne-walk.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_anne-give.png"
+        }
+      ]
+    },
+    {
+      "id": "textbook_mingming",
+      "name": "Mingming 明明",
+      "provider": "Mixamo",
+      "bones": 17,
+      "triangles": 35999,
+      "clips": 14,
+      "source": "assets/tripo/05_mingming.glb",
+      "editable": "assets/characters/tripo_v1/textbook_mingming/rigged.blend",
+      "glb": "assets/characters/tripo_v1/textbook_mingming/character.glb",
+      "source_triangles": 679439,
+      "mixamo_fbx": "assets/characters/mixamo_v1/downloads/textbook_mingming/t_pose.fbx",
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_mingming-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_mingming-wave.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_mingming-walk.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_mingming-give.png"
+        }
+      ]
+    },
+    {
+      "id": "textbook_dongdong",
+      "name": "Dongdong 东东",
+      "provider": "Mixamo",
+      "bones": 17,
+      "triangles": 35998,
+      "clips": 14,
+      "source": "assets/tripo/06_dongdong.glb",
+      "editable": "assets/characters/tripo_v1/textbook_dongdong/rigged.blend",
+      "glb": "assets/characters/tripo_v1/textbook_dongdong/character.glb",
+      "source_triangles": 748720,
+      "mixamo_fbx": "assets/characters/mixamo_v1/downloads/textbook_dongdong/t_pose.fbx",
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_dongdong-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_dongdong-wave.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_dongdong-walk.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_dongdong-give.png"
+        }
+      ]
+    },
+    {
+      "id": "textbook_tim",
+      "name": "Tim",
+      "provider": "Mixamo",
+      "bones": 17,
+      "triangles": 36000,
+      "clips": 14,
+      "source": "assets/tripo/07_tim.glb",
+      "editable": "assets/characters/tripo_v1/textbook_tim/rigged.blend",
+      "glb": "assets/characters/tripo_v1/textbook_tim/character.glb",
+      "source_triangles": 727748,
+      "mixamo_fbx": "assets/characters/mixamo_v1/downloads/textbook_tim/t_pose.fbx",
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_tim-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_tim-wave.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_tim-walk.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_tim-give.png"
+        }
+      ]
+    },
+    {
+      "id": "textbook_miss_li",
+      "name": "Miss Li 李老师",
+      "provider": "Mixamo",
+      "bones": 17,
+      "triangles": 36000,
+      "clips": 14,
+      "source": "assets/tripo/08_miss_li.glb",
+      "editable": "assets/characters/tripo_v1/textbook_miss_li/rigged.blend",
+      "glb": "assets/characters/tripo_v1/textbook_miss_li/character.glb",
+      "source_triangles": 563942,
+      "mixamo_fbx": "assets/characters/mixamo_v1/downloads/textbook_miss_li/t_pose.fbx",
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_miss_li-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_miss_li-wave.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_miss_li-walk.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_miss_li-give.png"
+        }
+      ]
+    },
+    {
+      "id": "textbook_dino",
+      "name": "Dino",
+      "provider": "Blender 定制骨架",
+      "bones": 22,
+      "triangles": 48000,
+      "clips": 14,
+      "source": "assets/tripo/09_dino.glb",
+      "editable": "assets/characters/tripo_v1/textbook_dino/rigged.blend",
+      "glb": "assets/characters/tripo_v1/textbook_dino/character.glb",
+      "source_triangles": 1965696,
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_dino-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_dino-wave.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_dino-walk.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_dino-give.png"
+        }
+      ]
+    },
+    {
+      "id": "npc_bear_uncle",
+      "name": "熊叔",
+      "provider": "Blender 定制骨架",
+      "bones": 17,
+      "triangles": 35998,
+      "clips": 14,
+      "source": "assets/tripo/10_bear_uncle.glb",
+      "editable": "assets/characters/tripo_v1/npc_bear_uncle/rigged.blend",
+      "glb": "assets/characters/tripo_v1/npc_bear_uncle/character.glb",
+      "source_triangles": 1074486,
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/npc_bear_uncle-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/npc_bear_uncle-wave.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/npc_bear_uncle-walk.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/npc_bear_uncle-give.png"
+        }
+      ]
+    },
+    {
+      "id": "npc_rabbit_gardener",
+      "name": "兔兔园丁",
+      "provider": "Blender 定制骨架",
+      "bones": 20,
+      "triangles": 39999,
+      "clips": 14,
+      "source": "assets/tripo/11_rabbit_gardener.glb",
+      "editable": "assets/characters/tripo_v1/npc_rabbit_gardener/rigged.blend",
+      "glb": "assets/characters/tripo_v1/npc_rabbit_gardener/character.glb",
+      "source_triangles": 917061,
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/npc_rabbit_gardener-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/npc_rabbit_gardener-wave.png"
+        },
+        {
+          "name": "步行",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/npc_rabbit_gardener-walk.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/npc_rabbit_gardener-give.png"
+        }
+      ]
+    },
+    {
+      "id": "textbook_jim",
+      "name": "Jim",
+      "provider": "Blender 定制骨架",
+      "bones": 22,
+      "triangles": 60368,
+      "clips": 11,
+      "source": "assets/tripo/12_jim.glb",
+      "editable": "assets/characters/tripo_v1/textbook_jim/rigged.blend",
+      "glb": "assets/characters/tripo_v1/textbook_jim/character.glb",
+      "source_triangles": 1818370,
+      "views": [
+        {
+          "name": "静态",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_jim-idle.png"
+        },
+        {
+          "name": "挥手",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_jim-wave.png"
+        },
+        {
+          "name": "接物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_jim-take.png"
+        },
+        {
+          "name": "递物",
+          "path": "screenshots/tripo-characters-v1/1440x900/characters/textbook_jim-give.png"
+        }
+      ]
+    }
+  ],
+  "mixamo_count": 8,
+  "custom_rig_count": 4,
+  "checks": {
+    "characters": 1098,
+    "actions": 623,
+    "gameplay": 38,
+    "orchard": 53,
+    "greeting": 198
+  },
+  "original_files_unchanged": 115,
+  "source_triangles_total": 12163285,
+  "runtime_triangles_total": 472356,
+  "native_character_captures": 403,
+  "gesture_revision": "anatomical-wave-v2",
+  "gesture_comparison": "docs/tripo-wave-refinement.html",
+  "limitations": [
+    "Jim 原模型的手掌/裤腿及手臂/轮椅接触处做了网格分离与补面；近景仍可见局部材质和轮廓过渡，可继续美术精修。",
+    "完整 Mixamo FBX 保留原始下载骨架；游戏使用 17 骨语义映射，暂不提供独立手指抓握。",
+    "行走贴地修正存放于 Godot grounding.json；Blender/GLB 的基础动作可编辑，运行时的贴地修正在引擎适配层应用。",
+    "挥手已按体形校正手掌朝向并减小抬肩幅度；熊叔采用肩侧的小幅招手。原生成模型的袖口近景仍有美术精修空间。",
+    "本次验证覆盖本地角色和关联流程，未运行项目全量测试，也未更新旧 Windows 安装包。"
+  ],
+  "reports": {
+    "characters": "docs/verification/tripo-characters-v1/native-1440x900-characters.json",
+    "actions": "docs/verification/tripo-characters-v1/p1-actor-animation.json",
+    "gameplay": "docs/verification/tripo-characters-v1/native-1440x900-gameplay.json",
+    "orchard": "docs/verification/tripo-characters-v1/orchard-integration.json",
+    "preservation": "docs/verification/tripo-characters-v1/preservation.json",
+    "greeting": "docs/verification/tripo-characters-v1/../tripo-wave-refinement/wave-regression.json"
+  }
+}

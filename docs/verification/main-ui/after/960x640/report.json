@@ -1,0 +1,6040 @@
+{
+  "canvas_size": [
+    1280.0,
+    800.0
+  ],
+  "checks": [
+    {
+      "id": "production_photo_manifest_readable",
+      "passed": true
+    },
+    {
+      "id": "production_photo_matches_backup/welcome-photo-44948-21463.png",
+      "passed": true
+    },
+    {
+      "id": "production_photo_matches_backup/welcome-photo-7100-20320.png",
+      "passed": true
+    },
+    {
+      "id": "two_production_photos_protected",
+      "passed": true
+    },
+    {
+      "id": "scene_ready",
+      "passed": true
+    },
+    {
+      "id": "isolated_save",
+      "passed": true
+    },
+    {
+      "id": "fresh_fixture_saved",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/01-home/bag",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/01-home/quest",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/TodayWish/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/01-home/settings",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUDSettings/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUDSettings/TodayWish",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/01-home/map",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_map/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_map/TodayWish",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_map/HUDSettings",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/01-home/bag",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_bag/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_bag/TodayWish",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_bag/HUDSettings",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_bag/HUD_map",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/01-home/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_journal/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_journal/TodayWish",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_journal/HUDSettings",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_journal/HUD_map",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/HUD_journal/HUD_bag",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/01-home/interact",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/ContextAction/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/ContextAction/TodayWish",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/ContextAction/HUDSettings",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/ContextAction/HUD_map",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/ContextAction/HUD_bag",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/01-home/ContextAction/HUD_journal",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/01-home",
+      "passed": true
+    },
+    {
+      "id": "capture/01-home",
+      "passed": true
+    },
+    {
+      "id": "hud_empty_space_allows_ground_walk",
+      "passed": true
+    },
+    {
+      "id": "button/map",
+      "passed": true
+    },
+    {
+      "id": "clickable/map",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/map",
+      "passed": true
+    },
+    {
+      "id": "hud_action/map",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/02-map",
+      "passed": true
+    },
+    {
+      "id": "capture/02-map",
+      "passed": true
+    },
+    {
+      "id": "close_starts_from_modal",
+      "passed": true
+    },
+    {
+      "id": "button/close",
+      "passed": true
+    },
+    {
+      "id": "clickable/close",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/close",
+      "passed": true
+    },
+    {
+      "id": "close_restores_hud",
+      "passed": true
+    },
+    {
+      "id": "button/bag",
+      "passed": true
+    },
+    {
+      "id": "clickable/bag",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/bag",
+      "passed": true
+    },
+    {
+      "id": "hud_action/bag",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/03-wardrobe",
+      "passed": true
+    },
+    {
+      "id": "capture/03-wardrobe",
+      "passed": true
+    },
+    {
+      "id": "close_starts_from_modal",
+      "passed": true
+    },
+    {
+      "id": "button/close",
+      "passed": true
+    },
+    {
+      "id": "clickable/close",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/close",
+      "passed": true
+    },
+    {
+      "id": "close_restores_hud",
+      "passed": true
+    },
+    {
+      "id": "button/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "clickable/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "hud_action/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/04-travel-book-fresh",
+      "passed": true
+    },
+    {
+      "id": "capture/04-travel-book-fresh",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:continue",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:continue",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:friend_corner",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:friend_corner",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:friends",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:friends",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:orchard_play",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:orchard_play",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:discoveries",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:discoveries",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:letters",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:letters",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:home",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:home",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:p2:home",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:p2:home",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:old_journal",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:old_journal",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:library",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:library",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:books",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:books",
+      "passed": true
+    },
+    {
+      "id": "close_starts_from_modal",
+      "passed": true
+    },
+    {
+      "id": "button/close",
+      "passed": true
+    },
+    {
+      "id": "clickable/close",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/close",
+      "passed": true
+    },
+    {
+      "id": "close_restores_hud",
+      "passed": true
+    },
+    {
+      "id": "button/settings",
+      "passed": true
+    },
+    {
+      "id": "clickable/settings",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/settings",
+      "passed": true
+    },
+    {
+      "id": "hud_action/settings",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/05-settings",
+      "passed": true
+    },
+    {
+      "id": "capture/05-settings",
+      "passed": true
+    },
+    {
+      "id": "close_starts_from_modal",
+      "passed": true
+    },
+    {
+      "id": "close_restores_hud",
+      "passed": true
+    },
+    {
+      "id": "button/quest",
+      "passed": true
+    },
+    {
+      "id": "clickable/quest",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/quest",
+      "passed": true
+    },
+    {
+      "id": "hud_action/quest",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/06-dialogue",
+      "passed": true
+    },
+    {
+      "id": "capture/06-dialogue",
+      "passed": true
+    },
+    {
+      "id": "close_starts_from_modal",
+      "passed": true
+    },
+    {
+      "id": "button/close",
+      "passed": true
+    },
+    {
+      "id": "clickable/close",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/close",
+      "passed": true
+    },
+    {
+      "id": "close_restores_hud",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U2-01",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_begin/U2-02",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_help/U2-02",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_answer/U2-02",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U2-02",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_begin/U2-03",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_help/U2-03",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_answer/U2-03",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U2-03",
+      "passed": true
+    },
+    {
+      "id": "fixture/mail/",
+      "passed": true
+    },
+    {
+      "id": "fixture/mail/",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U2-04",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_begin/U2-05",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_help/U2-05",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_answer/U2-05",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U2-05",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U2-06",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U2-07",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U3-01",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_begin/U3-02",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_help/U3-02",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_answer/U3-02",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U3-02",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_begin/U3-03",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_help/U3-03",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_answer/U3-03",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U3-03",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_begin/U3-04",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_help/U3-04",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_answer/U3-04",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U3-04",
+      "passed": true
+    },
+    {
+      "id": "fixture/seats/",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U3-05",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_begin/U3-06",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_help/U3-06",
+      "passed": true
+    },
+    {
+      "id": "fixture/trial_answer/U3-06",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U3-06",
+      "passed": true
+    },
+    {
+      "id": "fixture/seats/",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U3-07",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U3-08",
+      "passed": true
+    },
+    {
+      "id": "fixture/chapter_step/U3-09",
+      "passed": true
+    },
+    {
+      "id": "u3_fixture_normalizes",
+      "passed": true
+    },
+    {
+      "id": "u3_fixture_saved",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/07-island/bag",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/07-island/quest",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/TodayWish/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/07-island/settings",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUDSettings/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUDSettings/TodayWish",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/07-island/map",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_map/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_map/TodayWish",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_map/HUDSettings",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/07-island/bag",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_bag/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_bag/TodayWish",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_bag/HUDSettings",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_bag/HUD_map",
+      "passed": true
+    },
+    {
+      "id": "hud_inside/07-island/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_journal/PlayerWardrobe",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_journal/TodayWish",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_journal/HUDSettings",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_journal/HUD_map",
+      "passed": true
+    },
+    {
+      "id": "hud_no_overlap/07-island/HUD_journal/HUD_bag",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/07-island",
+      "passed": true
+    },
+    {
+      "id": "capture/07-island",
+      "passed": true
+    },
+    {
+      "id": "button/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "clickable/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/08-travel-book-u3",
+      "passed": true
+    },
+    {
+      "id": "capture/08-travel-book-u3",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:continue",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:continue",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:friend_corner",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:friend_corner",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:party",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:party",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:friends",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:friends",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:orchard_play",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:orchard_play",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:p2:transfer",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:p2:transfer",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:discoveries",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:discoveries",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:letters",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:letters",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:photo",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:photo",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:p2:keepsakes",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:p2:keepsakes",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:home",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:home",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:p2:home",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:p2:home",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:old_journal",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:old_journal",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:library",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:library",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_unclipped/journey:books",
+      "passed": true
+    },
+    {
+      "id": "journal_entry_reachable/journey:books",
+      "passed": true
+    },
+    {
+      "id": "button/journey:friends",
+      "passed": true
+    },
+    {
+      "id": "clickable/journey:friends",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/journey:friends",
+      "passed": true
+    },
+    {
+      "id": "journal_action/friends",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/09-friends",
+      "passed": true
+    },
+    {
+      "id": "capture/09-friends",
+      "passed": true
+    },
+    {
+      "id": "close_starts_from_modal",
+      "passed": true
+    },
+    {
+      "id": "button/close",
+      "passed": true
+    },
+    {
+      "id": "clickable/close",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/close",
+      "passed": true
+    },
+    {
+      "id": "close_restores_hud",
+      "passed": true
+    },
+    {
+      "id": "button/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "clickable/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "button/journey:discoveries",
+      "passed": true
+    },
+    {
+      "id": "clickable/journey:discoveries",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/journey:discoveries",
+      "passed": true
+    },
+    {
+      "id": "journal_action/discoveries",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/09-discoveries",
+      "passed": true
+    },
+    {
+      "id": "capture/09-discoveries",
+      "passed": true
+    },
+    {
+      "id": "close_starts_from_modal",
+      "passed": true
+    },
+    {
+      "id": "button/close",
+      "passed": true
+    },
+    {
+      "id": "clickable/close",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/close",
+      "passed": true
+    },
+    {
+      "id": "close_restores_hud",
+      "passed": true
+    },
+    {
+      "id": "button/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "clickable/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "button/journey:friend_corner",
+      "passed": true
+    },
+    {
+      "id": "clickable/journey:friend_corner",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/journey:friend_corner",
+      "passed": true
+    },
+    {
+      "id": "journal_action/friend_corner",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/09-friend_corner",
+      "passed": true
+    },
+    {
+      "id": "capture/09-friend_corner",
+      "passed": true
+    },
+    {
+      "id": "close_starts_from_modal",
+      "passed": true
+    },
+    {
+      "id": "button/close",
+      "passed": true
+    },
+    {
+      "id": "clickable/close",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/close",
+      "passed": true
+    },
+    {
+      "id": "close_restores_hud",
+      "passed": true
+    },
+    {
+      "id": "button/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "clickable/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "button/journey:party",
+      "passed": true
+    },
+    {
+      "id": "clickable/journey:party",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/journey:party",
+      "passed": true
+    },
+    {
+      "id": "journal_action/party",
+      "passed": true
+    },
+    {
+      "id": "panel_inside/09-party",
+      "passed": true
+    },
+    {
+      "id": "capture/09-party",
+      "passed": true
+    },
+    {
+      "id": "close_starts_from_modal",
+      "passed": true
+    },
+    {
+      "id": "button/close",
+      "passed": true
+    },
+    {
+      "id": "clickable/close",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/close",
+      "passed": true
+    },
+    {
+      "id": "close_restores_hud",
+      "passed": true
+    },
+    {
+      "id": "button/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "clickable/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/journey:hub",
+      "passed": true
+    },
+    {
+      "id": "close_starts_from_modal",
+      "passed": true
+    },
+    {
+      "id": "button/close",
+      "passed": true
+    },
+    {
+      "id": "clickable/close",
+      "passed": true
+    },
+    {
+      "id": "native_action_received/close",
+      "passed": true
+    },
+    {
+      "id": "close_restores_hud",
+      "passed": true
+    },
+    {
+      "id": "production_preserved/user://island-save-v1.json",
+      "passed": true
+    },
+    {
+      "id": "production_preserved/user://island-save-v1.json.bak",
+      "passed": true
+    },
+    {
+      "id": "production_preserved/C:/Users/Administrator/AppData/Roaming/Godot/app_userdata/字母岛 · 我的第一天/welcome-photo-44948-21463.png",
+      "passed": true
+    },
+    {
+      "id": "production_preserved/C:/Users/Administrator/AppData/Roaming/Godot/app_userdata/字母岛 · 我的第一天/welcome-photo-7100-20320.png",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "input_trace": [
+    {
+      "action": "map",
+      "after_frame": {
+        "action": "map",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_map",
+        "rect": [
+          437.0,
+          704.0,
+          130.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "map",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_map",
+        "rect": [
+          437.0,
+          704.0,
+          130.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "map",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_map",
+        "rect": [
+          437.0,
+          704.0,
+          130.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "",
+      "point": "(502.0, 736.0)",
+      "window_focus": true
+    },
+    {
+      "action": "map",
+      "disabled": false,
+      "expected": {
+        "action": "map",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_map",
+        "rect": [
+          437.0,
+          704.0,
+          130.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "map",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_map",
+        "rect": [
+          437.0,
+          704.0,
+          130.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "map",
+      "received": [
+        "map"
+      ],
+      "requested": "map"
+    },
+    {
+      "action": "close",
+      "after_frame": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1271/@Button@1275",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1271/@Button@1275",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1271/@Button@1275",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "map",
+      "point": "(1206.0, 100.0)",
+      "window_focus": true
+    },
+    {
+      "action": "close",
+      "disabled": false,
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1271/@Button@1275",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1271/@Button@1275",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "map",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "",
+      "received": [
+        "close"
+      ],
+      "requested": "close"
+    },
+    {
+      "action": "bag",
+      "after_frame": {
+        "action": "bag",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/PlaceAndPlayer/@HBoxContainer@5/PlayerWardrobe",
+        "rect": [
+          34.0,
+          34.0,
+          54.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "bag",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/PlaceAndPlayer/@HBoxContainer@5/PlayerWardrobe",
+        "rect": [
+          34.0,
+          34.0,
+          54.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "bag",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/PlaceAndPlayer/@HBoxContainer@5/PlayerWardrobe",
+        "rect": [
+          34.0,
+          34.0,
+          54.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "",
+      "point": "(61.0, 66.0)",
+      "window_focus": true
+    },
+    {
+      "action": "bag",
+      "disabled": false,
+      "expected": {
+        "action": "bag",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/PlaceAndPlayer/@HBoxContainer@5/PlayerWardrobe",
+        "rect": [
+          34.0,
+          34.0,
+          54.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "bag",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/PlaceAndPlayer/@HBoxContainer@5/PlayerWardrobe",
+        "rect": [
+          34.0,
+          34.0,
+          54.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "bag",
+      "received": [
+        "bag"
+      ],
+      "requested": "bag"
+    },
+    {
+      "action": "close",
+      "after_frame": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1302/@Button@1306",
+        "rect": [
+          1072.0,
+          91.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1302/@Button@1306",
+        "rect": [
+          1072.0,
+          91.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1302/@Button@1306",
+        "rect": [
+          1072.0,
+          91.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "bag",
+      "point": "(1096.0, 115.0)",
+      "window_focus": true
+    },
+    {
+      "action": "close",
+      "disabled": false,
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1302/@Button@1306",
+        "rect": [
+          1072.0,
+          91.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1302/@Button@1306",
+        "rect": [
+          1072.0,
+          91.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "bag",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "",
+      "received": [
+        "close"
+      ],
+      "requested": "close"
+    },
+    {
+      "action": "journey:hub",
+      "after_frame": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "",
+      "point": "(776.0, 736.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:hub",
+      "disabled": false,
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "journey",
+      "received": [
+        "journey:hub"
+      ],
+      "requested": "journey:hub"
+    },
+    {
+      "action": "journey:continue",
+      "after_frame": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(216.0, 453.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:friend_corner",
+      "after_frame": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1354/@GridContainer@1356/@Button@1357",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1354/@GridContainer@1356/@Button@1357",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1354/@GridContainer@1356/@Button@1357",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 287.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:friends",
+      "after_frame": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1354/@GridContainer@1356/@Button@1358",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1354/@GridContainer@1356/@Button@1358",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1354/@GridContainer@1356/@Button@1358",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 287.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:orchard_play",
+      "after_frame": {
+        "action": "journey:orchard_play",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1354/@GridContainer@1356/@Button@1359",
+        "rect": [
+          411.0,
+          320.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:orchard_play",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1354/@GridContainer@1356/@Button@1359",
+        "rect": [
+          411.0,
+          320.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:orchard_play",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1354/@GridContainer@1356/@Button@1359",
+        "rect": [
+          411.0,
+          320.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 349.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:discoveries",
+      "after_frame": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1363",
+        "rect": [
+          411.0,
+          439.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1363",
+        "rect": [
+          411.0,
+          439.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1363",
+        "rect": [
+          411.0,
+          439.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 468.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:letters",
+      "after_frame": {
+        "action": "journey:letters",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1364",
+        "rect": [
+          816.0,
+          439.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:letters",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1364",
+        "rect": [
+          816.0,
+          439.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:letters",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1364",
+        "rect": [
+          816.0,
+          439.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 468.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:home",
+      "after_frame": {
+        "action": "journey:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1365",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1365",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1365",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 530.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:p2:home",
+      "after_frame": {
+        "action": "journey:p2:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1366",
+        "rect": [
+          816.0,
+          501.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:p2:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1366",
+        "rect": [
+          816.0,
+          501.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:p2:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1366",
+        "rect": [
+          816.0,
+          501.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 530.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:old_journal",
+      "after_frame": {
+        "action": "journey:old_journal",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1367",
+        "rect": [
+          411.0,
+          563.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:old_journal",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1367",
+        "rect": [
+          411.0,
+          563.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:old_journal",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1360/@GridContainer@1362/@Button@1367",
+        "rect": [
+          411.0,
+          563.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 592.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:library",
+      "after_frame": {
+        "action": "journey:library",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1368/@GridContainer@1370/@Button@1371",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:library",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1368/@GridContainer@1370/@Button@1371",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:library",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1368/@GridContainer@1370/@Button@1371",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 654.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:books",
+      "after_frame": {
+        "action": "journey:books",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1368/@GridContainer@1370/@Button@1372",
+        "rect": [
+          816.0,
+          625.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:books",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1368/@GridContainer@1370/@Button@1372",
+        "rect": [
+          816.0,
+          625.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:books",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@1368/@GridContainer@1370/@Button@1372",
+        "rect": [
+          816.0,
+          625.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 654.0)",
+      "window_focus": true
+    },
+    {
+      "action": "close",
+      "after_frame": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1337/@Button@1341",
+        "rect": [
+          1162.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1337/@Button@1341",
+        "rect": [
+          1162.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@1342/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1337/@Button@1341",
+        "rect": [
+          1162.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1186.0, 100.0)",
+      "window_focus": true
+    },
+    {
+      "action": "close",
+      "disabled": false,
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1337/@Button@1341",
+        "rect": [
+          1162.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1337/@Button@1341",
+        "rect": [
+          1162.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "",
+      "received": [
+        "close"
+      ],
+      "requested": "close"
+    },
+    {
+      "action": "settings",
+      "after_frame": {
+        "action": "settings",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/WalletAndSettings/@HBoxContainer@20/HUDSettings",
+        "rect": [
+          1201.0,
+          31.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "settings",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/WalletAndSettings/@HBoxContainer@20/HUDSettings",
+        "rect": [
+          1201.0,
+          31.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "settings",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/WalletAndSettings/@HBoxContainer@20/HUDSettings",
+        "rect": [
+          1201.0,
+          31.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "",
+      "point": "(1225.0, 55.0)",
+      "window_focus": true
+    },
+    {
+      "action": "settings",
+      "disabled": false,
+      "expected": {
+        "action": "settings",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/WalletAndSettings/@HBoxContainer@20/HUDSettings",
+        "rect": [
+          1201.0,
+          31.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "settings",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/WalletAndSettings/@HBoxContainer@20/HUDSettings",
+        "rect": [
+          1201.0,
+          31.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "settings",
+      "received": [
+        "settings"
+      ],
+      "requested": "settings"
+    },
+    {
+      "action": "quest",
+      "after_frame": {
+        "action": "quest",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/TodayWish",
+        "rect": [
+          24.0,
+          120.0,
+          318.0,
+          88.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "quest",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/TodayWish",
+        "rect": [
+          24.0,
+          120.0,
+          318.0,
+          88.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "quest",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/TodayWish",
+        "rect": [
+          24.0,
+          120.0,
+          318.0,
+          88.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "",
+      "point": "(183.0, 164.0)",
+      "window_focus": true
+    },
+    {
+      "action": "quest",
+      "disabled": false,
+      "expected": {
+        "action": "quest",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/TodayWish",
+        "rect": [
+          24.0,
+          120.0,
+          318.0,
+          88.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "quest",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/TodayWish",
+        "rect": [
+          24.0,
+          120.0,
+          318.0,
+          88.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "journey_home",
+      "received": [
+        "quest"
+      ],
+      "requested": "quest"
+    },
+    {
+      "action": "close",
+      "after_frame": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1392/@Button@1403",
+        "rect": [
+          1067.0,
+          528.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1392/@Button@1403",
+        "rect": [
+          1067.0,
+          528.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:guide",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@ScrollContainer@1407/@GridContainer@1408/@Button@1409",
+        "rect": [
+          165.0,
+          674.0,
+          469.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1392/@Button@1403",
+        "rect": [
+          1067.0,
+          528.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey_home",
+      "point": "(1091.0, 552.0)",
+      "window_focus": true
+    },
+    {
+      "action": "close",
+      "disabled": false,
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1392/@Button@1403",
+        "rect": [
+          1067.0,
+          528.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@1392/@Button@1403",
+        "rect": [
+          1067.0,
+          528.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "journey_home",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "",
+      "received": [
+        "close"
+      ],
+      "requested": "close"
+    },
+    {
+      "action": "journey:hub",
+      "after_frame": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "",
+      "point": "(776.0, 736.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:hub",
+      "disabled": false,
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "journey",
+      "received": [
+        "journey:hub"
+      ],
+      "requested": "journey:hub"
+    },
+    {
+      "action": "journey:continue",
+      "after_frame": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(216.0, 453.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:friend_corner",
+      "after_frame": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2332",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2332",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2332",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 287.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:party",
+      "after_frame": {
+        "action": "journey:party",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2333",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:party",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2333",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:party",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2333",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 287.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:friends",
+      "after_frame": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2334",
+        "rect": [
+          411.0,
+          320.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2334",
+        "rect": [
+          411.0,
+          320.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2334",
+        "rect": [
+          411.0,
+          320.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 349.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:orchard_play",
+      "after_frame": {
+        "action": "journey:orchard_play",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2335",
+        "rect": [
+          816.0,
+          320.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:orchard_play",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2335",
+        "rect": [
+          816.0,
+          320.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:orchard_play",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2335",
+        "rect": [
+          816.0,
+          320.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 349.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:p2:transfer",
+      "after_frame": {
+        "action": "journey:p2:transfer",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2336",
+        "rect": [
+          411.0,
+          382.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:p2:transfer",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2336",
+        "rect": [
+          411.0,
+          382.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:p2:transfer",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2336",
+        "rect": [
+          411.0,
+          382.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 411.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:discoveries",
+      "after_frame": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2340",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2340",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2340",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 530.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:letters",
+      "after_frame": {
+        "action": "journey:letters",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2341",
+        "rect": [
+          816.0,
+          501.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:letters",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2341",
+        "rect": [
+          816.0,
+          501.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:letters",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2341",
+        "rect": [
+          816.0,
+          501.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 530.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:photo",
+      "after_frame": {
+        "action": "journey:photo",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2342",
+        "rect": [
+          411.0,
+          563.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:photo",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2342",
+        "rect": [
+          411.0,
+          563.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:photo",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2342",
+        "rect": [
+          411.0,
+          563.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 592.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:p2:keepsakes",
+      "after_frame": {
+        "action": "journey:p2:keepsakes",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2343",
+        "rect": [
+          816.0,
+          563.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:p2:keepsakes",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2343",
+        "rect": [
+          816.0,
+          563.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:p2:keepsakes",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2343",
+        "rect": [
+          816.0,
+          563.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 592.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:home",
+      "after_frame": {
+        "action": "journey:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2344",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2344",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2344",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 654.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:p2:home",
+      "after_frame": {
+        "action": "journey:p2:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2345",
+        "rect": [
+          816.0,
+          625.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:p2:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2345",
+        "rect": [
+          816.0,
+          625.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:p2:home",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2345",
+        "rect": [
+          816.0,
+          625.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 654.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:old_journal",
+      "after_frame": {
+        "action": "journey:old_journal",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2346",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:old_journal",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2346",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:old_journal",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2337/@GridContainer@2339/@Button@2346",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 654.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:library",
+      "after_frame": {
+        "action": "journey:library",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2347/@GridContainer@2349/@Button@2350",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:library",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2347/@GridContainer@2349/@Button@2350",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:library",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2347/@GridContainer@2349/@Button@2350",
+        "rect": [
+          411.0,
+          625.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 654.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:books",
+      "after_frame": {
+        "action": "journey:books",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2347/@GridContainer@2349/@Button@2351",
+        "rect": [
+          816.0,
+          625.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:books",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2347/@GridContainer@2349/@Button@2351",
+        "rect": [
+          816.0,
+          625.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:books",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2347/@GridContainer@2349/@Button@2351",
+        "rect": [
+          816.0,
+          625.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 654.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:friends",
+      "after_frame": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2334",
+        "rect": [
+          411.0,
+          219.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2334",
+        "rect": [
+          411.0,
+          219.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2317/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2334",
+        "rect": [
+          411.0,
+          219.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 248.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:friends",
+      "disabled": false,
+      "expected": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2334",
+        "rect": [
+          411.0,
+          219.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "journey:friends",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2329/@GridContainer@2331/@Button@2334",
+        "rect": [
+          411.0,
+          219.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "journey_friends",
+      "received": [
+        "journey:friends"
+      ],
+      "requested": "journey:friends"
+    },
+    {
+      "action": "close",
+      "after_frame": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2353/@Button@2357",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2353/@Button@2357",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/FriendMemoryScroll/@VBoxContainer@2360/MemoryVisit_npc_bear_uncle",
+        "rect": [
+          50.0,
+          170.0,
+          1172.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2353/@Button@2357",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey_friends",
+      "point": "(1206.0, 100.0)",
+      "window_focus": true
+    },
+    {
+      "action": "close",
+      "disabled": false,
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2353/@Button@2357",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2353/@Button@2357",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "journey_friends",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "",
+      "received": [
+        "close"
+      ],
+      "requested": "close"
+    },
+    {
+      "action": "journey:hub",
+      "after_frame": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "",
+      "point": "(776.0, 736.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:hub",
+      "disabled": false,
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "journey",
+      "received": [
+        "journey:hub"
+      ],
+      "requested": "journey:hub"
+    },
+    {
+      "action": "journey:discoveries",
+      "after_frame": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2386/@GridContainer@2388/@Button@2389",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2386/@GridContainer@2388/@Button@2389",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2366/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2386/@GridContainer@2388/@Button@2389",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 530.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:discoveries",
+      "disabled": false,
+      "expected": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2386/@GridContainer@2388/@Button@2389",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "journey:discoveries",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2386/@GridContainer@2388/@Button@2389",
+        "rect": [
+          411.0,
+          501.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "discovery",
+      "received": [
+        "journey:discoveries"
+      ],
+      "requested": "journey:discoveries"
+    },
+    {
+      "action": "close",
+      "after_frame": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2402/@Button@2406",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2402/@Button@2406",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2415/DiscoveryGoHome",
+        "rect": [
+          50.0,
+          660.0,
+          386.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2402/@Button@2406",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "discovery",
+      "point": "(1206.0, 100.0)",
+      "window_focus": true
+    },
+    {
+      "action": "close",
+      "disabled": false,
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2402/@Button@2406",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2402/@Button@2406",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "discovery",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "",
+      "received": [
+        "close"
+      ],
+      "requested": "close"
+    },
+    {
+      "action": "journey:hub",
+      "after_frame": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "",
+      "point": "(776.0, 736.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:hub",
+      "disabled": false,
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "journey",
+      "received": [
+        "journey:hub"
+      ],
+      "requested": "journey:hub"
+    },
+    {
+      "action": "journey:friend_corner",
+      "after_frame": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2433/@GridContainer@2435/@Button@2436",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2433/@GridContainer@2435/@Button@2436",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2421/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2433/@GridContainer@2435/@Button@2436",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(604.5, 287.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:friend_corner",
+      "disabled": false,
+      "expected": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2433/@GridContainer@2435/@Button@2436",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "journey:friend_corner",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2433/@GridContainer@2435/@Button@2436",
+        "rect": [
+          411.0,
+          258.0,
+          387.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "friend_corner",
+      "received": [
+        "journey:friend_corner"
+      ],
+      "requested": "journey:friend_corner"
+    },
+    {
+      "action": "close",
+      "after_frame": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2457/@Button@2461",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2457/@Button@2461",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2469/CornerBegin",
+        "rect": [
+          50.0,
+          660.0,
+          386.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2457/@Button@2461",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "friend_corner",
+      "point": "(1206.0, 100.0)",
+      "window_focus": true
+    },
+    {
+      "action": "close",
+      "disabled": false,
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2457/@Button@2461",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2457/@Button@2461",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "friend_corner",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "",
+      "received": [
+        "close"
+      ],
+      "requested": "close"
+    },
+    {
+      "action": "journey:hub",
+      "after_frame": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "",
+      "point": "(776.0, 736.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:hub",
+      "disabled": false,
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "journey",
+      "received": [
+        "journey:hub"
+      ],
+      "requested": "journey:hub"
+    },
+    {
+      "action": "journey:party",
+      "after_frame": {
+        "action": "journey:party",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2487/@GridContainer@2489/@Button@2491",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:party",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2487/@GridContainer@2489/@Button@2491",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2475/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:party",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2487/@GridContainer@2489/@Button@2491",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1009.0, 287.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:party",
+      "disabled": false,
+      "expected": {
+        "action": "journey:party",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2487/@GridContainer@2489/@Button@2491",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "journey:party",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/TravelBookDirectory/TravelBookScroll/TravelBookSections/@VBoxContainer@2487/@GridContainer@2489/@Button@2491",
+        "rect": [
+          816.0,
+          258.0,
+          386.0,
+          58.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "party",
+      "received": [
+        "journey:party"
+      ],
+      "requested": "journey:party"
+    },
+    {
+      "action": "close",
+      "after_frame": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2511/@Button@2515",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2511/@Button@2515",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2516/PartySidebarScroll/@VBoxContainer@2532/PartyBegin",
+        "rect": [
+          930.0,
+          345.0,
+          300.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2511/@Button@2515",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "party",
+      "point": "(1206.0, 100.0)",
+      "window_focus": true
+    },
+    {
+      "action": "close",
+      "disabled": false,
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2511/@Button@2515",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2511/@Button@2515",
+        "rect": [
+          1182.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "party",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "",
+      "received": [
+        "close"
+      ],
+      "requested": "close"
+    },
+    {
+      "action": "journey:hub",
+      "after_frame": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {},
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "",
+      "point": "(776.0, 736.0)",
+      "window_focus": true
+    },
+    {
+      "action": "journey:hub",
+      "disabled": false,
+      "expected": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "journey:hub",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/IslandHUD/BelongingsTray/@HBoxContainer@24/HUD_journal",
+        "rect": [
+          709.0,
+          704.0,
+          134.0,
+          64.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "journey",
+      "received": [
+        "journey:hub"
+      ],
+      "requested": "journey:hub"
+    },
+    {
+      "action": "close",
+      "after_frame": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2538/@Button@2542",
+        "rect": [
+          1162.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2538/@Button@2542",
+        "rect": [
+          1162.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "focus_owner": {
+        "action": "journey:continue",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/TravelBookPages/CurrentJourneyPage/@VBoxContainer@2543/ContinueJourney",
+        "rect": [
+          92.0,
+          422.0,
+          248.0,
+          62.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "immediate": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2538/@Button@2542",
+        "rect": [
+          1162.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "hover",
+      "mouse_after_frame": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "point": "(1186.0, 100.0)",
+      "window_focus": true
+    },
+    {
+      "action": "close",
+      "disabled": false,
+      "expected": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2538/@Button@2542",
+        "rect": [
+          1162.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "hit_at_motion": true,
+      "hovered_now": {
+        "action": "close",
+        "mouse_filter": 0,
+        "path": "/root/AlphabetIsland/@CanvasLayer@2/@Control@3/@ColorRect@27/@PanelContainer@28/@VBoxContainer@29/@HBoxContainer@2538/@Button@2542",
+        "rect": [
+          1162.0,
+          76.0,
+          48.0,
+          48.0
+        ],
+        "visible": true
+      },
+      "kind": "click_preflight",
+      "mouse_now": "(2173.333, 1454.667)",
+      "panel": "journey",
+      "unclipped": true,
+      "window_focus": true
+    },
+    {
+      "kind": "click_result",
+      "panel": "",
+      "received": [
+        "close"
+      ],
+      "requested": "close"
+    }
+  ],
+  "layout": [
+    {
+      "action": "bag",
+      "rect": [
+        34.0,
+        34.0,
+        54.0,
+        64.0
+      ],
+      "screen": "01-home"
+    },
+    {
+      "action": "quest",
+      "rect": [
+        24.0,
+        120.0,
+        318.0,
+        88.0
+      ],
+      "screen": "01-home"
+    },
+    {
+      "action": "settings",
+      "rect": [
+        1201.0,
+        31.0,
+        48.0,
+        48.0
+      ],
+      "screen": "01-home"
+    },
+    {
+      "action": "map",
+      "rect": [
+        437.0,
+        704.0,
+        130.0,
+        64.0
+      ],
+      "screen": "01-home"
+    },
+    {
+      "action": "bag",
+      "rect": [
+        573.0,
+        704.0,
+        130.0,
+        64.0
+      ],
+      "screen": "01-home"
+    },
+    {
+      "action": "journey:hub",
+      "rect": [
+        709.0,
+        704.0,
+        134.0,
+        64.0
+      ],
+      "screen": "01-home"
+    },
+    {
+      "action": "interact",
+      "rect": [
+        521.5,
+        626.0,
+        237.0,
+        49.0
+      ],
+      "screen": "01-home"
+    },
+    {
+      "action": "close",
+      "rect": [
+        1182.0,
+        76.0,
+        48.0,
+        48.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "",
+      "rect": [
+        482.0,
+        613.228637695313,
+        48.0,
+        42.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "",
+      "rect": [
+        372.103881835938,
+        514.847778320313,
+        42.0,
+        42.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "",
+      "rect": [
+        330.171020507813,
+        427.756439208984,
+        42.0,
+        42.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "",
+      "rect": [
+        485.0,
+        414.854034423828,
+        42.0,
+        42.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "",
+      "rect": [
+        636.603393554688,
+        427.756439208984,
+        42.0,
+        42.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "",
+      "rect": [
+        633.377746582031,
+        530.975769042969,
+        42.0,
+        42.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "",
+      "rect": [
+        327.171020507813,
+        371.756439208984,
+        48.0,
+        42.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "navigate:home_exit",
+      "rect": [
+        980.0,
+        217.0,
+        250.0,
+        51.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "navigate:memory_01",
+      "rect": [
+        980.0,
+        272.0,
+        250.0,
+        51.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "navigate:memory_02",
+      "rect": [
+        980.0,
+        327.0,
+        250.0,
+        51.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "navigate:memory_03",
+      "rect": [
+        980.0,
+        382.0,
+        250.0,
+        51.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "navigate:memory_04",
+      "rect": [
+        980.0,
+        437.0,
+        250.0,
+        51.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "navigate:memory_05",
+      "rect": [
+        980.0,
+        492.0,
+        250.0,
+        51.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "navigate:decorate",
+      "rect": [
+        980.0,
+        547.0,
+        250.0,
+        51.0
+      ],
+      "screen": "02-map"
+    },
+    {
+      "action": "close",
+      "rect": [
+        1072.0,
+        91.0,
+        48.0,
+        48.0
+      ],
+      "screen": "03-wardrobe"
+    },
+    {
+      "action": "outfit:yellow",
+      "rect": [
+        654.0,
+        405.0,
+        466.0,
+        64.0
+      ],
+      "screen": "03-wardrobe"
+    },
+    {
+      "action": "outfit:pink",
+      "rect": [
+        654.0,
+        485.0,
+        466.0,
+        64.0
+      ],
+      "screen": "03-wardrobe"
+    },
+    {
+      "action": "outfit:blue",
+      "rect": [
+        654.0,
+        565.0,
+        466.0,
+        64.0
+      ],
+      "screen": "03-wardrobe"
+    },
+    {
+      "action": "decorate",
+      "rect": [
+        654.0,
+        645.0,
+        466.0,
+        64.0
+      ],
+      "screen": "03-wardrobe"
+    },
+    {
+      "action": "close",
+      "rect": [
+        1162.0,
+        76.0,
+        48.0,
+        48.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:continue",
+      "rect": [
+        92.0,
+        422.0,
+        248.0,
+        62.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:friend_corner",
+      "rect": [
+        411.0,
+        258.0,
+        387.0,
+        58.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:friends",
+      "rect": [
+        816.0,
+        258.0,
+        386.0,
+        58.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:orchard_play",
+      "rect": [
+        411.0,
+        320.0,
+        387.0,
+        58.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:discoveries",
+      "rect": [
+        411.0,
+        439.0,
+        387.0,
+        58.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:letters",
+      "rect": [
+        816.0,
+        439.0,
+        386.0,
+        58.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:home",
+      "rect": [
+        411.0,
+        501.0,
+        387.0,
+        58.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:p2:home",
+      "rect": [
+        816.0,
+        501.0,
+        386.0,
+        58.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:old_journal",
+      "rect": [
+        411.0,
+        563.0,
+        387.0,
+        58.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:library",
+      "rect": [
+        411.0,
+        682.0,
+        387.0,
+        58.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "journey:books",
+      "rect": [
+        816.0,
+        682.0,
+        386.0,
+        58.0
+      ],
+      "screen": "04-travel-book-fresh"
+    },
+    {
+      "action": "close",
+      "rect": [
+        1042.0,
+        95.0,
+        48.0,
+        48.0
+      ],
+      "screen": "05-settings"
+    },
+    {
+      "action": "toggle_audio",
+      "rect": [
+        190.0,
+        315.0,
+        444.0,
+        64.0
+      ],
+      "screen": "05-settings"
+    },
+    {
+      "action": "toggle_effects",
+      "rect": [
+        646.0,
+        315.0,
+        444.0,
+        64.0
+      ],
+      "screen": "05-settings"
+    },
+    {
+      "action": "toggle_motion",
+      "rect": [
+        190.0,
+        389.0,
+        444.0,
+        64.0
+      ],
+      "screen": "05-settings"
+    },
+    {
+      "action": "toggle_day",
+      "rect": [
+        646.0,
+        389.0,
+        444.0,
+        64.0
+      ],
+      "screen": "05-settings"
+    },
+    {
+      "action": "fullscreen",
+      "rect": [
+        190.0,
+        463.0,
+        444.0,
+        64.0
+      ],
+      "screen": "05-settings"
+    },
+    {
+      "action": "save",
+      "rect": [
+        646.0,
+        463.0,
+        444.0,
+        64.0
+      ],
+      "screen": "05-settings"
+    },
+    {
+      "action": "quit",
+      "rect": [
+        190.0,
+        537.0,
+        444.0,
+        64.0
+      ],
+      "screen": "05-settings"
+    },
+    {
+      "action": "close",
+      "rect": [
+        1067.0,
+        528.0,
+        48.0,
+        48.0
+      ],
+      "screen": "06-dialogue"
+    },
+    {
+      "action": "journey:guide",
+      "rect": [
+        165.0,
+        674.0,
+        469.0,
+        64.0
+      ],
+      "screen": "06-dialogue"
+    },
+    {
+      "action": "close",
+      "rect": [
+        646.0,
+        674.0,
+        469.0,
+        64.0
+      ],
+      "screen": "06-dialogue"
+    },
+    {
+      "action": "bag",
+      "rect": [
+        34.0,
+        34.0,
+        54.0,
+        64.0
+      ],
+      "screen": "07-island"
+    },
+    {
+      "action": "quest",
+      "rect": [
+        24.0,
+        120.0,
+        318.0,
+        88.0
+      ],
+      "screen": "07-island"
+    },
+    {
+      "action": "settings",
+      "rect": [
+        1201.0,
+        31.0,
+        48.0,
+        48.0
+      ],
+      "screen": "07-island"
+    },
+    {
+      "action": "map",
+      "rect": [
+        437.0,
+        704.0,
+        130.0,
+        64.0
+      ],
+      "screen": "07-island"
+    },
+    {
+      "action": "bag",
+      "rect": [
+        573.0,
+        704.0,
+        130.0,
+        64.0
+      ],
+      "screen": "07-island"
+    },
+    {
+      "action": "journey:hub",
+      "rect": [
+        709.0,
+        704.0,
+        134.0,
+        64.0
+      ],
+      "screen": "07-island"
+    },
+    {
+      "action": "close",
+      "rect": [
+        1162.0,
+        76.0,
+        48.0,
+        48.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:continue",
+      "rect": [
+        92.0,
+        422.0,
+        248.0,
+        62.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:friend_corner",
+      "rect": [
+        411.0,
+        258.0,
+        387.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:party",
+      "rect": [
+        816.0,
+        258.0,
+        386.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:friends",
+      "rect": [
+        411.0,
+        320.0,
+        387.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:orchard_play",
+      "rect": [
+        816.0,
+        320.0,
+        386.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:p2:transfer",
+      "rect": [
+        411.0,
+        382.0,
+        387.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:discoveries",
+      "rect": [
+        411.0,
+        501.0,
+        387.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:letters",
+      "rect": [
+        816.0,
+        501.0,
+        386.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:photo",
+      "rect": [
+        411.0,
+        563.0,
+        387.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:p2:keepsakes",
+      "rect": [
+        816.0,
+        563.0,
+        386.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:home",
+      "rect": [
+        411.0,
+        625.0,
+        387.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:p2:home",
+      "rect": [
+        816.0,
+        625.0,
+        386.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:old_journal",
+      "rect": [
+        411.0,
+        687.0,
+        387.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:library",
+      "rect": [
+        411.0,
+        806.0,
+        387.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "journey:books",
+      "rect": [
+        816.0,
+        806.0,
+        386.0,
+        58.0
+      ],
+      "screen": "08-travel-book-u3"
+    },
+    {
+      "action": "close",
+      "rect": [
+        1182.0,
+        76.0,
+        48.0,
+        48.0
+      ],
+      "screen": "09-friends"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        170.0,
+        1172.0,
+        64.0
+      ],
+      "screen": "09-friends"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        244.0,
+        1172.0,
+        64.0
+      ],
+      "screen": "09-friends"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        318.0,
+        1172.0,
+        64.0
+      ],
+      "screen": "09-friends"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        392.0,
+        1172.0,
+        64.0
+      ],
+      "screen": "09-friends"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        466.0,
+        1172.0,
+        64.0
+      ],
+      "screen": "09-friends"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        540.0,
+        1172.0,
+        64.0
+      ],
+      "screen": "09-friends"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        614.0,
+        1172.0,
+        64.0
+      ],
+      "screen": "09-friends"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        660.0,
+        1180.0,
+        64.0
+      ],
+      "screen": "09-friends"
+    },
+    {
+      "action": "close",
+      "rect": [
+        1182.0,
+        76.0,
+        48.0,
+        48.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        219.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        346.0,
+        219.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        642.0,
+        219.0,
+        285.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        937.0,
+        219.0,
+        285.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        325.0,
+        286.0,
+        129.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        346.0,
+        325.0,
+        286.0,
+        129.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        642.0,
+        325.0,
+        285.0,
+        129.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        937.0,
+        325.0,
+        285.0,
+        129.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        464.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        346.0,
+        464.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        642.0,
+        464.0,
+        285.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        937.0,
+        464.0,
+        285.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        570.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        346.0,
+        570.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        642.0,
+        570.0,
+        285.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        937.0,
+        570.0,
+        285.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        676.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        346.0,
+        676.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        642.0,
+        676.0,
+        285.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        937.0,
+        676.0,
+        285.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        782.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        346.0,
+        782.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        642.0,
+        782.0,
+        285.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        937.0,
+        782.0,
+        285.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        888.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        346.0,
+        888.0,
+        286.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        1045.0,
+        384.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        444.0,
+        1045.0,
+        384.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        838.0,
+        1045.0,
+        384.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        1151.0,
+        384.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        444.0,
+        1151.0,
+        384.0,
+        96.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        660.0,
+        386.0,
+        64.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        446.0,
+        660.0,
+        387.0,
+        64.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "",
+      "rect": [
+        843.0,
+        660.0,
+        387.0,
+        64.0
+      ],
+      "screen": "09-discoveries"
+    },
+    {
+      "action": "close",
+      "rect": [
+        1182.0,
+        76.0,
+        48.0,
+        48.0
+      ],
+      "screen": "09-friend_corner"
+    },
+    {
+      "action": "",
+      "rect": [
+        135.100006103516,
+        501.5,
+        212.5,
+        127.5
+      ],
+      "screen": "09-friend_corner"
+    },
+    {
+      "action": "",
+      "rect": [
+        694.400024414063,
+        501.5,
+        212.5,
+        127.5
+      ],
+      "screen": "09-friend_corner"
+    },
+    {
+      "action": "",
+      "rect": [
+        1002.0,
+        492.0,
+        228.0,
+        64.0
+      ],
+      "screen": "09-friend_corner"
+    },
+    {
+      "action": "",
+      "rect": [
+        1002.0,
+        566.0,
+        228.0,
+        64.0
+      ],
+      "screen": "09-friend_corner"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        660.0,
+        386.0,
+        64.0
+      ],
+      "screen": "09-friend_corner"
+    },
+    {
+      "action": "",
+      "rect": [
+        446.0,
+        660.0,
+        387.0,
+        64.0
+      ],
+      "screen": "09-friend_corner"
+    },
+    {
+      "action": "",
+      "rect": [
+        843.0,
+        660.0,
+        387.0,
+        64.0
+      ],
+      "screen": "09-friend_corner"
+    },
+    {
+      "action": "close",
+      "rect": [
+        1182.0,
+        76.0,
+        48.0,
+        48.0
+      ],
+      "screen": "09-party"
+    },
+    {
+      "action": "",
+      "rect": [
+        930.0,
+        345.0,
+        300.0,
+        64.0
+      ],
+      "screen": "09-party"
+    },
+    {
+      "action": "",
+      "rect": [
+        50.0,
+        660.0,
+        585.0,
+        64.0
+      ],
+      "screen": "09-party"
+    },
+    {
+      "action": "",
+      "rect": [
+        645.0,
+        660.0,
+        585.0,
+        64.0
+      ],
+      "screen": "09-party"
+    }
+  ],
+  "renderer": "Windows",
+  "result": "PASS",
+  "scope": "Native HUD/panel input, layout, journal entry access, fresh and U3-completed fixtures, daylight screenshots. Focused UI acceptance; not a full gameplay regression.",
+  "size": "960x640",
+  "window_size": [
+    960,
+    640
+  ]
+}

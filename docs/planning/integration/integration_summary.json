@@ -1,0 +1,626 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "checked_at": "2026-10-23T01:04:56.962900+08:00",
+  "scope": "Cross-domain planning/content/source-reference audit; not runtime, pedagogy or child testing.",
+  "counts": {
+    "books": 8,
+    "unit_events": 81,
+    "prologue_letters": 26,
+    "book_occurrences": 1314,
+    "exact_spellings": 1073,
+    "core_sense_stories": 1096,
+    "unit_entry_associations": 1359,
+    "environment_specs": 24,
+    "npc_source_records": 142,
+    "npc_plan_records": 144,
+    "animation_specs": 40,
+    "special_rig_basic_specs": 9,
+    "static_pose_specs": 18,
+    "special_character_work_orders": 26,
+    "planned_pose_bindings": 52,
+    "pending_behavior_bindings": 0,
+    "art_story_samples": 20
+  },
+  "requirement_counts": {
+    "listen_speak_read_write": 708,
+    "recognition": 358,
+    "listen_speak": 102,
+    "listen_speak_read": 146
+  },
+  "versions": {
+    "content_revision": "vocabulary-75cc8eb5b90ed004",
+    "codebook_revision": "codebook-7976c505db8c0ea5"
+  },
+  "check_count": 47508,
+  "checks_by_group": {
+    "vocabulary_ids": 3,
+    "adapter": 10514,
+    "source_versions": 25,
+    "codebook": 6102,
+    "progression": 4,
+    "help_protocol": 1104,
+    "content_revisions": 2,
+    "orthography": 16539,
+    "story_frames": 4384,
+    "requirements": 5256,
+    "unit_joins": 2755,
+    "world_refs": 81,
+    "actor_refs": 169,
+    "special_rig_plans": 266,
+    "planning_boundary": 20,
+    "art_story_refs": 211,
+    "art_source_revisions": 5,
+    "gdd_contract": 7,
+    "gdd_counts": 12,
+    "gdd_links": 20,
+    "gdd_baseline": 17,
+    "domain_reports": 6,
+    "domain_documents": 6
+  },
+  "errors": [],
+  "domain_reports": {
+    "mainline/validation_report.json": {
+      "status": "pass",
+      "sha256": "fe57a35910b0685de7864f3c2b874062bc5cc01cc9c93148e9f926b3d6c0dde0",
+      "warnings": [
+        {
+          "kind": "workspace_changed_after_readonly_snapshot",
+          "path": "game/project.godot",
+          "note": "Other active work can change code; this is not a runtime validation."
+        },
+        {
+          "kind": "workspace_changed_after_readonly_snapshot",
+          "path": "game/scripts/game_state.gd",
+          "note": "Other active work can change code; this is not a runtime validation."
+        },
+        {
+          "kind": "workspace_changed_after_readonly_snapshot",
+          "path": "game/scripts/main.gd",
+          "note": "Other active work can change code; this is not a runtime validation."
+        },
+        {
+          "kind": "workspace_changed_after_readonly_snapshot",
+          "path": "docs/Blender地图版游玩说明.md",
+          "note": "Other active work can change code; this is not a runtime validation."
+        }
+      ],
+      "runtime_validation": false
+    },
+    "art/validation_report.json": {
+      "status": "pass",
+      "sha256": "4aee827a4d3336cd9800569eeffd317bb58adc954e7d5fa98925edcc9b937235",
+      "warnings": [],
+      "runtime_validation": false
+    },
+    "vocabulary/review/validation.json": {
+      "status": "passed",
+      "sha256": "34352ae250ffecc458e881620d75baf2f8f9d6f7ad9fc41e34e3367cdbde4eb0",
+      "warnings": [],
+      "runtime_validation": false
+    }
+  },
+  "input_sha256": {
+    "docs/planning/vocabulary/data/catalog.json": "927e713ca78dbae3b89563dd5755a853aad4fd1ddf4778b53f6104e8433795a1",
+    "docs/planning/vocabulary/data/integration_contract.json": "6c14693018ac7ea081d0a245e25f58950ba1f6be23bfbe247a60b8dbe39bb6b2",
+    "docs/planning/vocabulary/data/mainline_entries.json": "8ddbd88ef34b61fe9c7ebee47c3f458fbb58a5920e8d163d7e7ea213f105cf3b",
+    "docs/planning/mainline/curriculum_arcs.json": "965795c6808aede28f0dc556dd429ee01c8b54a793f1c26de37184872297194c",
+    "docs/planning/mainline/alphabet_prologue.json": "b3fb3c6ba4dcc1c42b29ce3500370d75f1d48fc21960326e9c8592cf0378c4f4",
+    "docs/planning/mainline/integration_contract.json": "abb489cb629032202d28d0019b03941f2dceb0c348704b7508b7732b6792fb1e",
+    "docs/planning/art/textbook_characters.json": "abf4e1bb757316c5a00cdf10c392996ff06c6ab3b042577b3220a36ec36b18d1",
+    "docs/planning/art/npc_animation_assets.json": "415361a1e5ddf35128976f2149943cc84925f60c6e4dba3786be9001a4c3aaf2",
+    "docs/planning/art/environment_motion_assets.json": "315293523e7e584bb632377c61819be43048473a20b44526652b77bf94211686",
+    "docs/planning/art/mnemonic_story_assets.json": "8446669e0eac8a2ce1e43d433a85f9c064eb131ed9c21ef66b5bb2029945e8e1",
+    "GDD.md": "98842a3abfd2cf83d5effa4645a5e842e904dcb1e7608d1eb6dcd525200bc378",
+    "README.md": "b20b8f0fd179e685a907d86a3b179eb751c74cb1b3597de0b51e094571cc8252",
+    "docs/planning/integration/冲突核查与整合记录.md": "3201aa84fe627053fa3560eb3d66632af7975e1d21bf11478755b6b7ff8c9a35",
+    "docs/planning/integration/validate_gdd.py": "9cd41d2bf731c34594588a1ef4deb717fe3056be9588314ca1de836c72c58ac9",
+    "docs/planning/mainline/README.md": "021d144e3fa175bf4c3916116f8f6b476fbf83e913580e23d4b34d8583dc1636",
+    "docs/planning/mainline/整合核查与修订.md": "8448a977a73258ae71dca2a8fa45c97cd11408aec7a48795e5ddba321941df33",
+    "docs/planning/vocabulary/README.md": "9f0d5547787e8e7d6f2bb83a878ccdd66753bc3f6d30a73e758fe235bf00255c",
+    "docs/planning/vocabulary/整合核查与修订.md": "8535f96ea800e405f1eae0f69c178e11c04774c9284e27879decf9bee1d137c9",
+    "docs/planning/art/README.md": "cb57ba9cc1ea1019df0bcb7a62b186481f6f5a1ee520acf2a464208b331d0df9",
+    "docs/planning/art/整合核查与修订.md": "2fccf0173166c1bc826e44a0992f1348d345798540b29e44830fbc424705696f"
+  },
+  "units": [
+    {
+      "source_unit_key": "xiangshao-g3-1/unit-1",
+      "vocabulary_candidate_count": 16,
+      "event_evidence": "objective_region_text_read",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-1/unit-2",
+      "vocabulary_candidate_count": 29,
+      "event_evidence": "objective_region_text_read",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-1/unit-3",
+      "vocabulary_candidate_count": 19,
+      "event_evidence": "objective_region_text_read",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-1/unit-4",
+      "vocabulary_candidate_count": 31,
+      "event_evidence": "objective_region_text_read",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-1/unit-5",
+      "vocabulary_candidate_count": 20,
+      "event_evidence": "objective_region_text_read",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-1/unit-6",
+      "vocabulary_candidate_count": 19,
+      "event_evidence": "objective_region_text_read",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-1/unit-7",
+      "vocabulary_candidate_count": 17,
+      "event_evidence": "objective_region_text_read",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-1/unit-8",
+      "vocabulary_candidate_count": 16,
+      "event_evidence": "objective_region_text_read",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-1/unit-9",
+      "vocabulary_candidate_count": 12,
+      "event_evidence": "objective_region_text_read",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-1/unit-10",
+      "vocabulary_candidate_count": 18,
+      "event_evidence": "objective_region_text_read",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-2/unit-1",
+      "vocabulary_candidate_count": 16,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-2/unit-2",
+      "vocabulary_candidate_count": 17,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-2/unit-3",
+      "vocabulary_candidate_count": 14,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-2/unit-4",
+      "vocabulary_candidate_count": 17,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-2/unit-5",
+      "vocabulary_candidate_count": 15,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-2/unit-6",
+      "vocabulary_candidate_count": 14,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-2/unit-7",
+      "vocabulary_candidate_count": 16,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-2/unit-8",
+      "vocabulary_candidate_count": 17,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-2/unit-9",
+      "vocabulary_candidate_count": 18,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g3-2/unit-10",
+      "vocabulary_candidate_count": 14,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-1/unit-1",
+      "vocabulary_candidate_count": 18,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-1/unit-2",
+      "vocabulary_candidate_count": 24,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-1/unit-3",
+      "vocabulary_candidate_count": 12,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-1/unit-4",
+      "vocabulary_candidate_count": 20,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-1/unit-5",
+      "vocabulary_candidate_count": 19,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-1/unit-6",
+      "vocabulary_candidate_count": 18,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-1/unit-7",
+      "vocabulary_candidate_count": 12,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-1/unit-8",
+      "vocabulary_candidate_count": 20,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-1/unit-9",
+      "vocabulary_candidate_count": 13,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-1/unit-10",
+      "vocabulary_candidate_count": 20,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-2/unit-1",
+      "vocabulary_candidate_count": 20,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-2/unit-2",
+      "vocabulary_candidate_count": 14,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-2/unit-3",
+      "vocabulary_candidate_count": 17,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-2/unit-4",
+      "vocabulary_candidate_count": 24,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-2/unit-5",
+      "vocabulary_candidate_count": 18,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-2/unit-6",
+      "vocabulary_candidate_count": 16,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-2/unit-7",
+      "vocabulary_candidate_count": 13,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-2/unit-8",
+      "vocabulary_candidate_count": 17,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-2/unit-9",
+      "vocabulary_candidate_count": 17,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g4-2/unit-10",
+      "vocabulary_candidate_count": 16,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "english-grade5-volume1-smartedu-2022/unit-1",
+      "vocabulary_candidate_count": 29,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "english-grade5-volume1-smartedu-2022/unit-2",
+      "vocabulary_candidate_count": 28,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "english-grade5-volume1-smartedu-2022/unit-3",
+      "vocabulary_candidate_count": 33,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "english-grade5-volume1-smartedu-2022/unit-4",
+      "vocabulary_candidate_count": 17,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "english-grade5-volume1-smartedu-2022/unit-5",
+      "vocabulary_candidate_count": 17,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "english-grade5-volume1-smartedu-2022/unit-6",
+      "vocabulary_candidate_count": 22,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "english-grade5-volume1-smartedu-2022/unit-7",
+      "vocabulary_candidate_count": 21,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "english-grade5-volume1-smartedu-2022/unit-8",
+      "vocabulary_candidate_count": 27,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "english-grade5-volume1-smartedu-2022/unit-9",
+      "vocabulary_candidate_count": 19,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "english-grade5-volume1-smartedu-2022/unit-10",
+      "vocabulary_candidate_count": 21,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-1",
+      "vocabulary_candidate_count": 12,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-2",
+      "vocabulary_candidate_count": 10,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-3",
+      "vocabulary_candidate_count": 19,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-4",
+      "vocabulary_candidate_count": 19,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-5",
+      "vocabulary_candidate_count": 25,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-6",
+      "vocabulary_candidate_count": 12,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-7",
+      "vocabulary_candidate_count": 19,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-8",
+      "vocabulary_candidate_count": 21,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-9",
+      "vocabulary_candidate_count": 15,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-10",
+      "vocabulary_candidate_count": 10,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-11",
+      "vocabulary_candidate_count": 26,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g5-2/unit-12",
+      "vocabulary_candidate_count": 7,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-1/unit-1",
+      "vocabulary_candidate_count": 25,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-1/unit-2",
+      "vocabulary_candidate_count": 15,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-1/unit-3",
+      "vocabulary_candidate_count": 22,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-1/unit-4",
+      "vocabulary_candidate_count": 15,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-1/unit-5",
+      "vocabulary_candidate_count": 21,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-1/unit-6",
+      "vocabulary_candidate_count": 11,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-1/unit-7",
+      "vocabulary_candidate_count": 20,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-1/unit-8",
+      "vocabulary_candidate_count": 5,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-1/unit-9",
+      "vocabulary_candidate_count": 14,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-1/unit-10",
+      "vocabulary_candidate_count": 14,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-2/unit-1",
+      "vocabulary_candidate_count": 5,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-2/unit-2",
+      "vocabulary_candidate_count": 13,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-2/unit-3",
+      "vocabulary_candidate_count": 6,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-2/unit-4",
+      "vocabulary_candidate_count": 7,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-2/unit-5",
+      "vocabulary_candidate_count": 6,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-2/unit-6",
+      "vocabulary_candidate_count": 5,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-2/unit-7",
+      "vocabulary_candidate_count": 15,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-2/unit-8",
+      "vocabulary_candidate_count": 1,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    },
+    {
+      "source_unit_key": "xiangshao-g6-2/unit-9",
+      "vocabulary_candidate_count": 7,
+      "event_evidence": "chapter_title_only",
+      "cast_status": "source_candidates_only_event_cast_review_pending"
+    }
+  ],
+  "remaining_gates": [
+    "full_unit_editorial_review",
+    "vocabulary_independent_human_review",
+    "unconfirmed_character_identity_and_appearance_review",
+    "audio_production_and_listening_review",
+    "asset_production",
+    "runtime_integration",
+    "device_performance",
+    "child_usability_and_learning_evidence"
+  ],
+  "runtime_changed_by_this_validator": false,
+  "source_files_changed_by_this_validator": false,
+  "full_game_tests_run": false
+}

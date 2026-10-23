@@ -1,0 +1,305 @@
+{
+  "room_id": "canteen",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口菜单板",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Menu_Face",
+      "memory_id": "memory_CANTEEN_01",
+      "activity": "看今日食物"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧餐具台",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Cutlery_Cabinet",
+      "memory_id": "memory_CANTEEN_02",
+      "activity": "选择所需餐具"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央取餐窗口",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Serving_Window_Cabinet",
+      "memory_id": "memory_CANTEEN_03",
+      "activity": "礼貌说明想要的食物"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧用餐分享桌",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Shared_Dining_Leg",
+      "memory_id": "memory_CANTEEN_04",
+      "activity": "与同学描述口味并道谢"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口餐盘回收台",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Return_Cabinet",
+      "memory_id": "memory_CANTEEN_05",
+      "activity": "整理餐盘归位"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回学校",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_01_Menu",
+      "aabb_blender": [
+        -5.5,
+        -4.925000190734863,
+        0.0,
+        -3.1000001430511475,
+        -4.675000190734863,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Cutlery",
+      "aabb_blender": [
+        -6.300000190734863,
+        0.5,
+        -0.06000000238418579,
+        -3.8999998569488525,
+        1.7000000476837158,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_05_Return",
+      "aabb_blender": [
+        3.999999761581421,
+        -5.650000095367432,
+        -0.06000000238418579,
+        6.399999618530273,
+        -4.650000095367432,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Kitchen_Back_Counter",
+      "aabb_blender": [
+        -6.5,
+        5.049999713897705,
+        -0.06000000238418579,
+        6.5,
+        6.150000095367432,
+        1.1099998950958252
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_03_Serving_Window",
+      "aabb_blender": [
+        -1.7000000476837158,
+        1.0,
+        -0.06000000238418579,
+        1.7000000476837158,
+        2.4000000953674316,
+        1.1099998950958252
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_04_Shared_Dining",
+      "aabb_blender": [
+        3.549999952316284,
+        0.5,
+        -0.06000000238418579,
+        6.449999809265137,
+        2.0,
+        0.9100000262260437
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Lunch_Bench",
+      "aabb_blender": [
+        3.5999999046325684,
+        2.2249999046325684,
+        -0.06000000238418579,
+        6.400000095367432,
+        2.875,
+        0.6399999856948853
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 409,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 5233072,
+  "glb_node_count": 421,
+  "triangles_instanced": 157080,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "804ea0efe864c16b39c5843860990ed1dfb69caf6f3793b7a8b49afc2f19df75",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/canteen/canteen_v01.blend",
+  "source_blend_preserved": true
+}

@@ -1,0 +1,1142 @@
+{
+  "checks": [
+    {
+      "id": "fresh_normalizes",
+      "passed": true
+    },
+    {
+      "id": "pre_p2_save_migrates_without_reset",
+      "passed": true
+    },
+    {
+      "id": "home_choice_requires_greeting",
+      "passed": true
+    },
+    {
+      "id": "home_choice_commits_without_spend",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/A",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/A",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/A/pick",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/A/pick",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/A/pick",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/A/place",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/A/place",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/A/place",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/B",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/B",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/B/bow",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/B/bow",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/B/bow",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/B/stern",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/B/stern",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/B/stern",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/B/whole",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/B/whole",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/B/whole",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/C",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/C",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/C/pick",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/C/pick",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/C/pick",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/C/place",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/C/place",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/C/place",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/D",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/D",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/D/tap",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/D/tap",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/D/tap",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/E",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/E",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/E/uncover",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/E/uncover",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/E/uncover",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/F",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/F",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/F/choose",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/F/choose",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/F/choose",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/G",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/G",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/G/rotate",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/G/rotate",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/G/rotate",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/H",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/H",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/H/choose",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/H/choose",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/H/choose",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/I",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/I",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/I/pick",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/I/pick",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/I/pick",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/I/place",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/I/place",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/I/place",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/J",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/J",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/J/open",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/J/open",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/J/open",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/J/close",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/J/close",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/J/close",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/K",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/K",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/K/pick",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/K/pick",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/K/pick",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/K/place",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/K/place",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/K/place",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/L",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/L",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/L/switch",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/L/switch",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/L/switch",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/M",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/M",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/M/cap",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/M/cap",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/M/cap",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/M/stem",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/M/stem",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/M/stem",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/M/whole",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/M/whole",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/M/whole",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/N",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/N",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/N/frame",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/N/frame",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/N/frame",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/O",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/O",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/O/choose",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/O/choose",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/O/choose",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/P",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/P",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/P/choose",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/P/choose",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/P/choose",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/Q",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/Q",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/Q/pick",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/Q/pick",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/Q/pick",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/Q/place",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/Q/place",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/Q/place",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/R",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/R",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/R/choose",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/R/choose",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/R/choose",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/S",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/S",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/S/pick",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/S/pick",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/S/pick",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/S/place",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/S/place",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/S/place",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/T",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/T",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/T/pick",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/T/pick",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/T/pick",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/T/place",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/T/place",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/T/place",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/U",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/U",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/U/rain",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/U/rain",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/U/rain",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/V",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/V",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/V/crater",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/V/crater",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/V/crater",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/W",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/W",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/W/whale",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/W/whale",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/W/whale",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/X",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/X",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/X/long",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/X/long",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/X/long",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/X/short",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/X/short",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/X/short",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/Y",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/Y",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/Y/start",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/Y/start",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/Y/start",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/Y/trace",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/Y/trace",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/Y/trace",
+      "passed": true
+    },
+    {
+      "id": "cannot_observe_unvisited/Z",
+      "passed": true
+    },
+    {
+      "id": "help_does_not_downgrade/Z",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/Z/pick",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/Z/pick",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/Z/pick",
+      "passed": true
+    },
+    {
+      "id": "actual_config_transition/Z/stamp",
+      "passed": true
+    },
+    {
+      "id": "duplicate_action_idempotent/Z/stamp",
+      "passed": true
+    },
+    {
+      "id": "mid_action_roundtrip/Z/stamp",
+      "passed": true
+    },
+    {
+      "id": "xylophone_requires_long_and_short",
+      "passed": true
+    },
+    {
+      "id": "jar_closes_after_open",
+      "passed": true
+    },
+    {
+      "id": "no_playback_no_audio_evidence",
+      "passed": true
+    },
+    {
+      "id": "optional_recall_separate/case_pair",
+      "passed": true
+    },
+    {
+      "id": "dimension_result/case_pair",
+      "passed": true
+    },
+    {
+      "id": "optional_recall_separate/landmark",
+      "passed": true
+    },
+    {
+      "id": "dimension_result/landmark",
+      "passed": true
+    },
+    {
+      "id": "optional_recall_separate/letter_name",
+      "passed": true
+    },
+    {
+      "id": "dimension_result/letter_name",
+      "passed": true
+    },
+    {
+      "id": "forged_spoken_assessment_rejected",
+      "passed": true
+    },
+    {
+      "id": "three_stop_trip",
+      "passed": true
+    },
+    {
+      "id": "four_stops_rejected",
+      "passed": true
+    },
+    {
+      "id": "duplicate_stops_rejected",
+      "passed": true
+    },
+    {
+      "id": "wrong_answer_attempt_limit_reached",
+      "passed": true
+    },
+    {
+      "id": "demonstration_still_works_after_attempt_limit",
+      "passed": true
+    },
+    {
+      "id": "bounded_final_demonstration_normalizes",
+      "passed": true
+    },
+    {
+      "id": "stale_trial_cannot_answer_new_round",
+      "passed": true
+    },
+    {
+      "id": "repeat_after_demo_not_independent",
+      "passed": true
+    },
+    {
+      "id": "invalid_trial_sequence_rejected",
+      "passed": true
+    },
+    {
+      "id": "invalid_trial_location_rejected",
+      "passed": true
+    },
+    {
+      "id": "u1_hands_off_to_u2",
+      "passed": true
+    },
+    {
+      "id": "retry_is_not_independent",
+      "passed": true
+    },
+    {
+      "id": "same_day_transfer_not_claimed_delayed",
+      "passed": true
+    },
+    {
+      "id": "real_fractional_clock_and_old_receipt_normalize",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U2-01",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U2-01",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U2-01",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U2-01",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U2-02",
+      "passed": true
+    },
+    {
+      "id": "no_response_no_step/U2-02",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U2-02",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U2-02",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U2-02",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U2-03",
+      "passed": true
+    },
+    {
+      "id": "no_response_no_step/U2-03",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U2-03",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U2-03",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U2-03",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U2-04",
+      "passed": true
+    },
+    {
+      "id": "wrong_mailbox_no_delivery",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U2-04",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U2-04",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U2-04",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U2-05",
+      "passed": true
+    },
+    {
+      "id": "no_response_no_step/U2-05",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U2-05",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U2-05",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U2-05",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U2-06",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U2-06",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U2-06",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U2-06",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U2-07",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U2-07",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U2-07",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U2-07",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U3-01",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U3-01",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U3-01",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U3-01",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U3-02",
+      "passed": true
+    },
+    {
+      "id": "no_response_no_step/U3-02",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U3-02",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U3-02",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U3-02",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U3-03",
+      "passed": true
+    },
+    {
+      "id": "no_response_no_step/U3-03",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U3-03",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U3-03",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U3-03",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U3-04",
+      "passed": true
+    },
+    {
+      "id": "no_response_no_step/U3-04",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U3-04",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U3-04",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U3-04",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U3-05",
+      "passed": true
+    },
+    {
+      "id": "age_ten_not_seat_count/U3-05",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U3-05",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U3-05",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U3-05",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U3-06",
+      "passed": true
+    },
+    {
+      "id": "no_response_no_step/U3-06",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U3-06",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U3-06",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U3-06",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U3-07",
+      "passed": true
+    },
+    {
+      "id": "age_ten_not_seat_count/U3-07",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U3-07",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U3-07",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U3-07",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U3-08",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U3-08",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U3-08",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U3-08",
+      "passed": true
+    },
+    {
+      "id": "wrong_room_rejected/U3-09",
+      "passed": true
+    },
+    {
+      "id": "chapter_step/U3-09",
+      "passed": true
+    },
+    {
+      "id": "chapter_step_idempotent/U3-09",
+      "passed": true
+    },
+    {
+      "id": "chapter_disk_shape/U3-09",
+      "passed": true
+    },
+    {
+      "id": "separate_four_chapter_photo_receipts",
+      "passed": true
+    },
+    {
+      "id": "real_disk_write",
+      "passed": true
+    },
+    {
+      "id": "real_disk_restore",
+      "passed": true
+    },
+    {
+      "id": "retake_from_legacy_empty_photo_metadata",
+      "passed": true
+    },
+    {
+      "id": "retake_preserves_original_receipts",
+      "passed": true
+    },
+    {
+      "id": "failed_save_rolls_back_p2_and_old_state",
+      "passed": true
+    },
+    {
+      "id": "official_save_untouched",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "status": "PASS"
+}

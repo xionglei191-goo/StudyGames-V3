@@ -1,0 +1,1268 @@
+{
+	"families": {
+		"animal": {
+			"actions": {
+				"carry_item": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.0,
+					"family": "animal",
+					"id": "carry_item",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 2.0
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"carry_walk": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 1.12,
+					"family": "animal",
+					"id": "carry_walk",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 1.12
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"give_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "animal",
+					"id": "give_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"greet_wave": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.2,
+					"family": "animal",
+					"id": "greet_wave",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"idle": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 3.2,
+					"family": "animal",
+					"id": "idle",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 3.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"listen_nod": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 1.8,
+					"family": "animal",
+					"id": "listen_nod",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 1.8
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"pick_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "animal",
+					"id": "pick_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"place_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "animal",
+					"id": "place_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"point_target": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.0,
+					"family": "animal",
+					"id": "point_target",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.0
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"pose_photo": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.4,
+					"family": "animal",
+					"id": "pose_photo",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.4
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"reach_target": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "animal",
+					"id": "reach_target",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"take_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "animal",
+					"id": "take_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"talk_gesture": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.2,
+					"family": "animal",
+					"id": "talk_gesture",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"walk": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 1.12,
+					"family": "animal",
+					"id": "walk",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 1.12
+						}
+					],
+					"semantic_data_mutation": false
+				}
+			},
+			"libraries": {
+				"normal": {
+					"animation_count": 14,
+					"path": "res://actors/p1/animal.tres",
+					"save_error": 0
+				},
+				"reduced": {
+					"animation_count": 14,
+					"path": "res://actors/p1/animal_reduced.tres",
+					"save_error": 0
+				}
+			}
+		},
+		"dino": {
+			"actions": {
+				"carry_item": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.0,
+					"family": "dino",
+					"id": "carry_item",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 2.0
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"carry_walk": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 1.12,
+					"family": "dino",
+					"id": "carry_walk",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 1.12
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"give_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "dino",
+					"id": "give_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"greet_wave": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.2,
+					"family": "dino",
+					"id": "greet_wave",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"idle": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 3.2,
+					"family": "dino",
+					"id": "idle",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 3.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"listen_nod": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 1.8,
+					"family": "dino",
+					"id": "listen_nod",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 1.8
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"pick_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "dino",
+					"id": "pick_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"place_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "dino",
+					"id": "place_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"point_target": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.0,
+					"family": "dino",
+					"id": "point_target",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.0
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"pose_photo": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.4,
+					"family": "dino",
+					"id": "pose_photo",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.4
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"reach_target": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "dino",
+					"id": "reach_target",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"take_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "dino",
+					"id": "take_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"talk_gesture": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.2,
+					"family": "dino",
+					"id": "talk_gesture",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"walk": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 1.12,
+					"family": "dino",
+					"id": "walk",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 1.12
+						}
+					],
+					"semantic_data_mutation": false
+				}
+			},
+			"libraries": {
+				"normal": {
+					"animation_count": 14,
+					"path": "res://actors/p1/dino.tres",
+					"save_error": 0
+				},
+				"reduced": {
+					"animation_count": 14,
+					"path": "res://actors/p1/dino_reduced.tres",
+					"save_error": 0
+				}
+			}
+		},
+		"humanoid": {
+			"actions": {
+				"carry_item": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.0,
+					"family": "humanoid",
+					"id": "carry_item",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 2.0
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"carry_walk": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 1.12,
+					"family": "humanoid",
+					"id": "carry_walk",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 1.12
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"give_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "humanoid",
+					"id": "give_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"greet_wave": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.2,
+					"family": "humanoid",
+					"id": "greet_wave",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"idle": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 3.2,
+					"family": "humanoid",
+					"id": "idle",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 3.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"listen_nod": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 1.8,
+					"family": "humanoid",
+					"id": "listen_nod",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 1.8
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"pick_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "humanoid",
+					"id": "pick_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"place_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "humanoid",
+					"id": "place_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"point_target": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.0,
+					"family": "humanoid",
+					"id": "point_target",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.0
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"pose_photo": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.4,
+					"family": "humanoid",
+					"id": "pose_photo",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.4
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"reach_target": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "humanoid",
+					"id": "reach_target",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"take_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "humanoid",
+					"id": "take_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"talk_gesture": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.2,
+					"family": "humanoid",
+					"id": "talk_gesture",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"walk": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 1.12,
+					"family": "humanoid",
+					"id": "walk",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 1.12
+						}
+					],
+					"semantic_data_mutation": false
+				}
+			},
+			"libraries": {
+				"normal": {
+					"animation_count": 14,
+					"path": "res://actors/p1/humanoid.tres",
+					"save_error": 0
+				},
+				"reduced": {
+					"animation_count": 14,
+					"path": "res://actors/p1/humanoid_reduced.tres",
+					"save_error": 0
+				}
+			}
+		},
+		"wheelchair": {
+			"actions": {
+				"carry_item": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.0,
+					"family": "wheelchair",
+					"id": "carry_item",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 2.0
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"carry_walk": {
+					"allowed": false,
+					"contact_time": -1.0,
+					"duration": 1.12,
+					"family": "wheelchair",
+					"id": "carry_walk",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 1.12
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"give_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "wheelchair",
+					"id": "give_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"greet_wave": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.2,
+					"family": "wheelchair",
+					"id": "greet_wave",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"idle": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 3.2,
+					"family": "wheelchair",
+					"id": "idle",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 3.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"listen_nod": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 1.8,
+					"family": "wheelchair",
+					"id": "listen_nod",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 1.8
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"pick_item": {
+					"allowed": false,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "wheelchair",
+					"id": "pick_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"place_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "wheelchair",
+					"id": "place_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"point_target": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.0,
+					"family": "wheelchair",
+					"id": "point_target",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.0
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"pose_photo": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.4,
+					"family": "wheelchair",
+					"id": "pose_photo",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.4
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"reach_target": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "wheelchair",
+					"id": "reach_target",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"take_item": {
+					"allowed": true,
+					"contact_time": 1.1,
+					"duration": 2.2,
+					"family": "wheelchair",
+					"id": "take_item",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "anticipation",
+							"to": 0.3
+						},
+						{
+							"from": 0.3,
+							"phase": "reach",
+							"to": 1.1
+						},
+						{
+							"from": 1.1,
+							"phase": "contact",
+							"to": 1.4
+						},
+						{
+							"from": 1.4,
+							"phase": "recover",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"talk_gesture": {
+					"allowed": true,
+					"contact_time": -1.0,
+					"duration": 2.2,
+					"family": "wheelchair",
+					"id": "talk_gesture",
+					"loop": false,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "perform",
+							"to": 2.2
+						}
+					],
+					"semantic_data_mutation": false
+				},
+				"walk": {
+					"allowed": false,
+					"contact_time": -1.0,
+					"duration": 1.12,
+					"family": "wheelchair",
+					"id": "walk",
+					"loop": true,
+					"phases": [
+						{
+							"from": 0.0,
+							"phase": "loop",
+							"to": 1.12
+						}
+					],
+					"semantic_data_mutation": false
+				}
+			},
+			"libraries": {
+				"normal": {
+					"animation_count": 11,
+					"path": "res://actors/p1/wheelchair.tres",
+					"save_error": 0
+				},
+				"reduced": {
+					"animation_count": 11,
+					"path": "res://actors/p1/wheelchair_reduced.tres",
+					"save_error": 0
+				}
+			}
+		}
+	},
+	"schema_version": 1,
+	"semantic_data_mutation": false,
+	"source": "res://actors/p1_action_source.gd",
+	"status": "saved_keyframed_rigid_bone_prototypes_not_skinned"
+}

@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-22",
+  "status": "passed",
+  "catalog_sha256": "c3cfec16ede3901a66e3b47510c1c93e01747c13845897d238d1e097d84ee9c3",
+  "scope": "最终可读样例及既有复用问题的定向复验；不是全库语义人工验收",
+  "examples": [
+    {
+      "spelling": "nose",
+      "letter_chain": "NOSE",
+      "character_roundtrip": true
+    },
+    {
+      "spelling": "book",
+      "letter_chain": "BOOK",
+      "character_roundtrip": true
+    },
+    {
+      "spelling": "apple",
+      "letter_chain": "APPLE",
+      "character_roundtrip": true
+    },
+    {
+      "spelling": "school",
+      "letter_chain": "SCHOOL",
+      "character_roundtrip": true
+    },
+    {
+      "spelling": "football",
+      "letter_chain": "FOOTBALL",
+      "character_roundtrip": true
+    },
+    {
+      "spelling": "pencil case",
+      "letter_chain": "PENCILCASE",
+      "character_roundtrip": true
+    },
+    {
+      "spelling": "T-shirt",
+      "letter_chain": "TSHIRT",
+      "character_roundtrip": true
+    },
+    {
+      "spelling": "o'clock",
+      "letter_chain": "OCLOCK",
+      "character_roundtrip": true
+    },
+    {
+      "spelling": "café",
+      "letter_chain": "CAFE",
+      "character_roundtrip": true
+    }
+  ],
+  "shared_core_checks": [
+    "park",
+    "with",
+    "make"
+  ],
+  "distinct_core_sense_checks": [
+    "can",
+    "cold",
+    "face",
+    "name"
+  ],
+  "abbreviation_point_checks": [
+    "No.",
+    "p.m."
+  ],
+  "fixed_supplemental_scenes": 46,
+  "with_tool_scene_id": "sense-scene-a4c3f6323963",
+  "with_tool_memory_scene": "首次四上画笔动作",
+  "with_later_context": "五下scissors保留为迁移练习",
+  "source_baseline_files_unchanged": 11,
+  "human_editor": "pending",
+  "child_trial": "not_conducted"
+}

@@ -1,0 +1,95 @@
+{
+  "version": "0.9.0-dev",
+  "result": "PASS",
+  "reports": {
+    "controls": {
+      "result": "PASS",
+      "checks": 20,
+      "failures": 0,
+      "file": "controls-report.json"
+    },
+    "movement": {
+      "result": "PASS",
+      "checks": 209,
+      "failures": 0,
+      "file": "movement-report.json"
+    },
+    "life_ui": {
+      "result": "PASS",
+      "checks": 94,
+      "failures": 0,
+      "file": "life-ui-report.json"
+    },
+    "friend_1440": {
+      "result": "PASS",
+      "checks": 240,
+      "failures": 0,
+      "file": "friend-corner/1440x900/report.json"
+    },
+    "friend_960": {
+      "result": "PASS",
+      "checks": 240,
+      "failures": 0,
+      "file": "friend-corner/960x640/report.json"
+    },
+    "capture_1440x900": {
+      "result": "PASS",
+      "images": 10,
+      "production_preserved": true,
+      "actual_window": [
+        1440,
+        900
+      ],
+      "image_size": [
+        1440,
+        900
+      ],
+      "logical_ui": [
+        1440.0,
+        900.0
+      ]
+    },
+    "capture_960x640": {
+      "result": "PASS",
+      "images": 10,
+      "production_preserved": true,
+      "actual_window": [
+        960,
+        640
+      ],
+      "image_size": [
+        960,
+        600
+      ],
+      "logical_ui": [
+        1280.0,
+        800.0
+      ]
+    },
+    "living_world": {
+      "result": "PASS",
+      "checks": 91,
+      "failures": 0
+    }
+  },
+  "preservation": "PASS",
+  "full_suite_run": false,
+  "exported_exe_or_zip": false,
+  "files_sha256": {
+    "game/project.godot": "50ca6b96712a5e9ae97f6925526e498f785f1e8bf21481127b45ea76db44f559",
+    "game/scripts/main.gd": "922d2e9554be6ddc90d7093d6eaf7d3ed44c469042c45dc3822c277f9fbb1fb1",
+    "game/scripts/ui.gd": "055b9776e4600837c13defd607c1bc4de7acdd8718f9a9e55931101f96b69516",
+    "game/scripts/player.gd": "e57a9660442cccffd8ed6190552201a527087521c330d6cfe761ea2602f9516d",
+    "game/scripts/world_builder.gd": "82c2322c90d594fb51a788f523f20de998f5d0a33cfc34ec75fe3355fa972f16",
+    "game/scripts/world_feedback.gd": "9fe2e91d06d53f3929d902cb047127f2e66fe7b174ca39a82113ead6ee2fe2ef",
+    "game/scripts/journey_controller.gd": "3f503e517c668f4af3f2ff74b26bfe6df4b61360ab4e25b439b0811ed68b55d3",
+    "game/scripts/living_world.gd": "93a2ec98eeba522b4162d6ac5b55304960f4bcf9a35711cecb48f4c4bab749db",
+    "game/ui/island_theme.gd": "23d82f7f7497c90755f333f2933db21ae916fea9160ee54260bfba3f244e02a7",
+    "game/ui/character_preview.gd": "bcfa75ba11e55d60e69e9382c389e066ea161ca1c7082316fdaa89467c9eefb8",
+    "game/ui/friend_corner_board.gd": "c8b1a1a27fac7b66f1c2d567cd12f903c4a90e1b82f6c852b8cd825ec1a857a4"
+  },
+  "limitations": [
+    "Focused regression and visual fixtures, not the full release gate.",
+    "No child usability or learning-outcome study."
+  ]
+}

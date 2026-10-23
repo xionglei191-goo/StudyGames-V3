@@ -1,0 +1,1639 @@
+{
+	"check_details": [
+		{
+			"check": "palm faces outward throughout the greeting: npc_bear_unclefalse",
+			"detail": {
+				"id": "npc_bear_uncle",
+				"maximum_frame_rotation_degrees": 5.2067654755352,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: npc_bear_unclefalse",
+			"detail": {
+				"id": "npc_bear_uncle",
+				"maximum_frame_rotation_degrees": 5.2067654755352,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: npc_bear_unclefalse",
+			"detail": {
+				"id": "npc_bear_uncle",
+				"maximum_frame_rotation_degrees": 5.2067654755352,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: npc_bear_unclefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: npc_bear_unclefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: npc_bear_unclefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: npc_bear_unclefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: npc_bear_unclefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: npc_bear_unclefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: npc_bear_uncletrue",
+			"detail": {
+				"id": "npc_bear_uncle",
+				"maximum_frame_rotation_degrees": 5.25732381643211,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: npc_bear_uncletrue",
+			"detail": {
+				"id": "npc_bear_uncle",
+				"maximum_frame_rotation_degrees": 5.25732381643211,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: npc_bear_uncletrue",
+			"detail": {
+				"id": "npc_bear_uncle",
+				"maximum_frame_rotation_degrees": 5.25732381643211,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: npc_bear_uncletrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: npc_bear_uncletrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: npc_bear_uncletrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: npc_bear_uncletrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: npc_bear_uncletrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: npc_bear_uncletrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: npc_rabbit_gardenerfalse",
+			"detail": {
+				"id": "npc_rabbit_gardener",
+				"maximum_frame_rotation_degrees": 5.20751807700437,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: npc_rabbit_gardenerfalse",
+			"detail": {
+				"id": "npc_rabbit_gardener",
+				"maximum_frame_rotation_degrees": 5.20751807700437,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: npc_rabbit_gardenerfalse",
+			"detail": {
+				"id": "npc_rabbit_gardener",
+				"maximum_frame_rotation_degrees": 5.20751807700437,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: npc_rabbit_gardenerfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: npc_rabbit_gardenerfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: npc_rabbit_gardenerfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: npc_rabbit_gardenerfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: npc_rabbit_gardenerfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: npc_rabbit_gardenerfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: npc_rabbit_gardenertrue",
+			"detail": {
+				"id": "npc_rabbit_gardener",
+				"maximum_frame_rotation_degrees": 5.21443663174677,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998760044574738
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: npc_rabbit_gardenertrue",
+			"detail": {
+				"id": "npc_rabbit_gardener",
+				"maximum_frame_rotation_degrees": 5.21443663174677,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998760044574738
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: npc_rabbit_gardenertrue",
+			"detail": {
+				"id": "npc_rabbit_gardener",
+				"maximum_frame_rotation_degrees": 5.21443663174677,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998760044574738
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: npc_rabbit_gardenertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: npc_rabbit_gardenertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: npc_rabbit_gardenertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: npc_rabbit_gardenertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: npc_rabbit_gardenertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: npc_rabbit_gardenertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_linglingfalse",
+			"detail": {
+				"id": "textbook_lingling",
+				"maximum_frame_rotation_degrees": 4.85792893160243,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256211280823
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_linglingfalse",
+			"detail": {
+				"id": "textbook_lingling",
+				"maximum_frame_rotation_degrees": 4.85792893160243,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256211280823
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_linglingfalse",
+			"detail": {
+				"id": "textbook_lingling",
+				"maximum_frame_rotation_degrees": 4.85792893160243,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256211280823
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_linglingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_linglingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_linglingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_linglingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_linglingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_linglingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_linglingtrue",
+			"detail": {
+				"id": "textbook_lingling",
+				"maximum_frame_rotation_degrees": 4.85809029482158,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759984970093
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_linglingtrue",
+			"detail": {
+				"id": "textbook_lingling",
+				"maximum_frame_rotation_degrees": 4.85809029482158,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759984970093
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_linglingtrue",
+			"detail": {
+				"id": "textbook_lingling",
+				"maximum_frame_rotation_degrees": 4.85809029482158,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759984970093
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_linglingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_linglingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_linglingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_linglingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_linglingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_linglingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_peterfalse",
+			"detail": {
+				"id": "textbook_peter",
+				"maximum_frame_rotation_degrees": 4.66589645554023,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256151676178
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_peterfalse",
+			"detail": {
+				"id": "textbook_peter",
+				"maximum_frame_rotation_degrees": 4.66589645554023,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256151676178
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_peterfalse",
+			"detail": {
+				"id": "textbook_peter",
+				"maximum_frame_rotation_degrees": 4.66589645554023,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256151676178
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_peterfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_peterfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_peterfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_peterfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_peterfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_peterfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_petertrue",
+			"detail": {
+				"id": "textbook_peter",
+				"maximum_frame_rotation_degrees": 4.66623241547003,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_petertrue",
+			"detail": {
+				"id": "textbook_peter",
+				"maximum_frame_rotation_degrees": 4.66623241547003,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_petertrue",
+			"detail": {
+				"id": "textbook_peter",
+				"maximum_frame_rotation_degrees": 4.66623241547003,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_petertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_petertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_petertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_petertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_petertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_petertrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_annefalse",
+			"detail": {
+				"id": "textbook_anne",
+				"maximum_frame_rotation_degrees": 5.2322928806713,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_annefalse",
+			"detail": {
+				"id": "textbook_anne",
+				"maximum_frame_rotation_degrees": 5.2322928806713,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_annefalse",
+			"detail": {
+				"id": "textbook_anne",
+				"maximum_frame_rotation_degrees": 5.2322928806713,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_annefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_annefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_annefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_annefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_annefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_annefalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_annetrue",
+			"detail": {
+				"id": "textbook_anne",
+				"maximum_frame_rotation_degrees": 5.23858049668912,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_annetrue",
+			"detail": {
+				"id": "textbook_anne",
+				"maximum_frame_rotation_degrees": 5.23858049668912,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_annetrue",
+			"detail": {
+				"id": "textbook_anne",
+				"maximum_frame_rotation_degrees": 5.23858049668912,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_annetrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_annetrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_annetrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_annetrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_annetrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_annetrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_mingmingfalse",
+			"detail": {
+				"id": "textbook_mingming",
+				"maximum_frame_rotation_degrees": 4.83812864008539,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256092071533
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_mingmingfalse",
+			"detail": {
+				"id": "textbook_mingming",
+				"maximum_frame_rotation_degrees": 4.83812864008539,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256092071533
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_mingmingfalse",
+			"detail": {
+				"id": "textbook_mingming",
+				"maximum_frame_rotation_degrees": 4.83812864008539,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256092071533
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_mingmingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_mingmingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_mingmingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_mingmingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_mingmingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_mingmingfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_mingmingtrue",
+			"detail": {
+				"id": "textbook_mingming",
+				"maximum_frame_rotation_degrees": 4.85534754698299,
+				"maximum_rotation_frame": 37,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759865760803
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_mingmingtrue",
+			"detail": {
+				"id": "textbook_mingming",
+				"maximum_frame_rotation_degrees": 4.85534754698299,
+				"maximum_rotation_frame": 37,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759865760803
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_mingmingtrue",
+			"detail": {
+				"id": "textbook_mingming",
+				"maximum_frame_rotation_degrees": 4.85534754698299,
+				"maximum_rotation_frame": 37,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759865760803
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_mingmingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_mingmingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_mingmingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_mingmingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_mingmingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_mingmingtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_dongdongfalse",
+			"detail": {
+				"id": "textbook_dongdong",
+				"maximum_frame_rotation_degrees": 4.59456964381144,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_dongdongfalse",
+			"detail": {
+				"id": "textbook_dongdong",
+				"maximum_frame_rotation_degrees": 4.59456964381144,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_dongdongfalse",
+			"detail": {
+				"id": "textbook_dongdong",
+				"maximum_frame_rotation_degrees": 4.59456964381144,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_dongdongfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_dongdongfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_dongdongfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_dongdongfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_dongdongfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_dongdongfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_dongdongtrue",
+			"detail": {
+				"id": "textbook_dongdong",
+				"maximum_frame_rotation_degrees": 4.5935463960964,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_dongdongtrue",
+			"detail": {
+				"id": "textbook_dongdong",
+				"maximum_frame_rotation_degrees": 4.5935463960964,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_dongdongtrue",
+			"detail": {
+				"id": "textbook_dongdong",
+				"maximum_frame_rotation_degrees": 4.5935463960964,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_dongdongtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_dongdongtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_dongdongtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_dongdongtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_dongdongtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_dongdongtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_timfalse",
+			"detail": {
+				"id": "textbook_tim",
+				"maximum_frame_rotation_degrees": 4.76501658766228,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256330490112
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_timfalse",
+			"detail": {
+				"id": "textbook_tim",
+				"maximum_frame_rotation_degrees": 4.76501658766228,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256330490112
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_timfalse",
+			"detail": {
+				"id": "textbook_tim",
+				"maximum_frame_rotation_degrees": 4.76501658766228,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256330490112
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_timfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_timfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_timfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_timfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_timfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_timfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_timtrue",
+			"detail": {
+				"id": "textbook_tim",
+				"maximum_frame_rotation_degrees": 4.770604536177,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_timtrue",
+			"detail": {
+				"id": "textbook_tim",
+				"maximum_frame_rotation_degrees": 4.770604536177,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_timtrue",
+			"detail": {
+				"id": "textbook_tim",
+				"maximum_frame_rotation_degrees": 4.770604536177,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_timtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_timtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_timtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_timtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_timtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_timtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_dinofalse",
+			"detail": {
+				"id": "textbook_dino",
+				"maximum_frame_rotation_degrees": 5.21894412971216,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_dinofalse",
+			"detail": {
+				"id": "textbook_dino",
+				"maximum_frame_rotation_degrees": 5.21894412971216,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_dinofalse",
+			"detail": {
+				"id": "textbook_dino",
+				"maximum_frame_rotation_degrees": 5.21894412971216,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256270885468
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_dinofalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_dinofalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_dinofalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_dinofalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_dinofalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_dinofalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_dinotrue",
+			"detail": {
+				"id": "textbook_dino",
+				"maximum_frame_rotation_degrees": 5.23349115198382,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_dinotrue",
+			"detail": {
+				"id": "textbook_dino",
+				"maximum_frame_rotation_degrees": 5.23349115198382,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_dinotrue",
+			"detail": {
+				"id": "textbook_dino",
+				"maximum_frame_rotation_degrees": 5.23349115198382,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_dinotrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_dinotrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_dinotrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_dinotrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_dinotrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_dinotrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_miss_lifalse",
+			"detail": {
+				"id": "textbook_miss_li",
+				"maximum_frame_rotation_degrees": 4.86050946244823,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256151676178
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_miss_lifalse",
+			"detail": {
+				"id": "textbook_miss_li",
+				"maximum_frame_rotation_degrees": 4.86050946244823,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256151676178
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_miss_lifalse",
+			"detail": {
+				"id": "textbook_miss_li",
+				"maximum_frame_rotation_degrees": 4.86050946244823,
+				"maximum_rotation_frame": 15,
+				"palm_front_min_dot": 0.97524356842041,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256151676178
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_miss_lifalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_miss_lifalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_miss_lifalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_miss_lifalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_miss_lifalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_miss_lifalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_miss_litrue",
+			"detail": {
+				"id": "textbook_miss_li",
+				"maximum_frame_rotation_degrees": 4.8942488894008,
+				"maximum_rotation_frame": 38,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_miss_litrue",
+			"detail": {
+				"id": "textbook_miss_li",
+				"maximum_frame_rotation_degrees": 4.8942488894008,
+				"maximum_rotation_frame": 38,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_miss_litrue",
+			"detail": {
+				"id": "textbook_miss_li",
+				"maximum_frame_rotation_degrees": 4.8942488894008,
+				"maximum_rotation_frame": 38,
+				"palm_front_min_dot": 0.975310504436493,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759925365448
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_miss_litrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_miss_litrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_miss_litrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_miss_litrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_miss_litrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_miss_litrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_jimfalse",
+			"detail": {
+				"id": "textbook_jim",
+				"maximum_frame_rotation_degrees": 4.42607015764769,
+				"maximum_rotation_frame": 38,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256211280823
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_jimfalse",
+			"detail": {
+				"id": "textbook_jim",
+				"maximum_frame_rotation_degrees": 4.42607015764769,
+				"maximum_rotation_frame": 38,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256211280823
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_jimfalse",
+			"detail": {
+				"id": "textbook_jim",
+				"maximum_frame_rotation_degrees": 4.42607015764769,
+				"maximum_rotation_frame": 38,
+				"palm_front_min_dot": 0.975243628025055,
+				"reduced": false,
+				"wrist_forearm_min_dot": 0.993256211280823
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_jimfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_jimfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_jimfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_jimfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_jimfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_jimfalse",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "palm faces outward throughout the greeting: textbook_jimtrue",
+			"detail": {
+				"id": "textbook_jim",
+				"maximum_frame_rotation_degrees": 4.51136556000281,
+				"maximum_rotation_frame": 38,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759984970093
+			},
+			"passed": true
+		},
+		{
+			"check": "wrist follows the forearm without folding backward: textbook_jimtrue",
+			"detail": {
+				"id": "textbook_jim",
+				"maximum_frame_rotation_degrees": 4.51136556000281,
+				"maximum_rotation_frame": 38,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759984970093
+			},
+			"passed": true
+		},
+		{
+			"check": "greeting has no sudden palm flip: textbook_jimtrue",
+			"detail": {
+				"id": "textbook_jim",
+				"maximum_frame_rotation_degrees": 4.51136556000281,
+				"maximum_rotation_frame": 38,
+				"palm_front_min_dot": 0.975310444831848,
+				"reduced": true,
+				"wrist_forearm_min_dot": 0.998759984970093
+			},
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for idle: textbook_jimtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for give: textbook_jimtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for take: textbook_jimtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for carry: textbook_jimtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for talk: textbook_jimtrue",
+			"detail": null,
+			"passed": true
+		},
+		{
+			"check": "interrupted wave releases wrist for point: textbook_jimtrue",
+			"detail": null,
+			"passed": true
+		}
+	],
+	"checks": 198,
+	"failures": [],
+	"gesture_sha256": "5dc5b5bca132aa83f5b07ee2893eb193f6469a5c36811177f1126b84f1480103",
+	"measurements": [
+		{
+			"id": "npc_bear_uncle",
+			"maximum_frame_rotation_degrees": 5.2067654755352,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975243628025055,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256270885468
+		},
+		{
+			"id": "npc_bear_uncle",
+			"maximum_frame_rotation_degrees": 5.25732381643211,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975310504436493,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998759925365448
+		},
+		{
+			"id": "npc_rabbit_gardener",
+			"maximum_frame_rotation_degrees": 5.20751807700437,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975243628025055,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256270885468
+		},
+		{
+			"id": "npc_rabbit_gardener",
+			"maximum_frame_rotation_degrees": 5.21443663174677,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975310504436493,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998760044574738
+		},
+		{
+			"id": "textbook_lingling",
+			"maximum_frame_rotation_degrees": 4.85792893160243,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.97524356842041,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256211280823
+		},
+		{
+			"id": "textbook_lingling",
+			"maximum_frame_rotation_degrees": 4.85809029482158,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975310444831848,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998759984970093
+		},
+		{
+			"id": "textbook_peter",
+			"maximum_frame_rotation_degrees": 4.66589645554023,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.97524356842041,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256151676178
+		},
+		{
+			"id": "textbook_peter",
+			"maximum_frame_rotation_degrees": 4.66623241547003,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975310504436493,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998759925365448
+		},
+		{
+			"id": "textbook_anne",
+			"maximum_frame_rotation_degrees": 5.2322928806713,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975243628025055,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256270885468
+		},
+		{
+			"id": "textbook_anne",
+			"maximum_frame_rotation_degrees": 5.23858049668912,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975310444831848,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998759925365448
+		},
+		{
+			"id": "textbook_mingming",
+			"maximum_frame_rotation_degrees": 4.83812864008539,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.97524356842041,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256092071533
+		},
+		{
+			"id": "textbook_mingming",
+			"maximum_frame_rotation_degrees": 4.85534754698299,
+			"maximum_rotation_frame": 37,
+			"palm_front_min_dot": 0.975310444831848,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998759865760803
+		},
+		{
+			"id": "textbook_dongdong",
+			"maximum_frame_rotation_degrees": 4.59456964381144,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.97524356842041,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256270885468
+		},
+		{
+			"id": "textbook_dongdong",
+			"maximum_frame_rotation_degrees": 4.5935463960964,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975310444831848,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998759925365448
+		},
+		{
+			"id": "textbook_tim",
+			"maximum_frame_rotation_degrees": 4.76501658766228,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.97524356842041,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256330490112
+		},
+		{
+			"id": "textbook_tim",
+			"maximum_frame_rotation_degrees": 4.770604536177,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975310444831848,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998759925365448
+		},
+		{
+			"id": "textbook_dino",
+			"maximum_frame_rotation_degrees": 5.21894412971216,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975243628025055,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256270885468
+		},
+		{
+			"id": "textbook_dino",
+			"maximum_frame_rotation_degrees": 5.23349115198382,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.975310444831848,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998759925365448
+		},
+		{
+			"id": "textbook_miss_li",
+			"maximum_frame_rotation_degrees": 4.86050946244823,
+			"maximum_rotation_frame": 15,
+			"palm_front_min_dot": 0.97524356842041,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256151676178
+		},
+		{
+			"id": "textbook_miss_li",
+			"maximum_frame_rotation_degrees": 4.8942488894008,
+			"maximum_rotation_frame": 38,
+			"palm_front_min_dot": 0.975310504436493,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998759925365448
+		},
+		{
+			"id": "textbook_jim",
+			"maximum_frame_rotation_degrees": 4.42607015764769,
+			"maximum_rotation_frame": 38,
+			"palm_front_min_dot": 0.975243628025055,
+			"reduced": false,
+			"wrist_forearm_min_dot": 0.993256211280823
+		},
+		{
+			"id": "textbook_jim",
+			"maximum_frame_rotation_degrees": 4.51136556000281,
+			"maximum_rotation_frame": 38,
+			"palm_front_min_dot": 0.975310444831848,
+			"reduced": true,
+			"wrist_forearm_min_dot": 0.998759984970093
+		}
+	],
+	"scope": "11 production NPCs in normal and reduced motion; palm orientation, wrist alignment, frame continuity and six interrupted-action transitions. Visual mesh acceptance uses separate native captures.",
+	"status": "PASS"
+}

@@ -1,0 +1,398 @@
+{
+  "schema_version": 1,
+  "milestone": "GDD P1 interaction and asset prototypes",
+  "status": "passed",
+  "basis": [
+    {
+      "path": "GDD.md",
+      "line": 377
+    },
+    {
+      "path": "docs/planning/art/动态美术总策划.md",
+      "line": 104
+    },
+    {
+      "path": "docs/planning/art/角色制作与替换管线.md",
+      "line": 117
+    },
+    {
+      "path": "docs/planning/art/环境动态与天气昼夜策划.md",
+      "line": 184
+    }
+  ],
+  "gates": [
+    {
+      "id": "p1_orchard_physical_sequence",
+      "status": "passed_logic_and_native",
+      "requirement": "Physical pick-up, carry and deposit in a real district; contact, distance, obstruction, interruption and reentry agree with saved state.",
+      "evidence_required": [
+        "native scene sequence",
+        "physical contact checks",
+        "restart and duplicate receipt checks"
+      ],
+      "owner": "integration",
+      "evidence": [
+        "docs/verification/v0.6.0/orchard-integration.json",
+        "docs/verification/v0.6.0/orchard-motion.json",
+        "docs/verification/v0.6.0/orchard-motion-visual.md"
+      ],
+      "evidence_files": [
+        {
+          "path": "docs/verification/v0.6.0/orchard-integration.json",
+          "sha256": "a997111217b04e66e304ce7b62774241265ed1919e43b5f3f60453aa9f891404"
+        },
+        {
+          "path": "docs/verification/v0.6.0/orchard-motion.json",
+          "sha256": "c90c0e4f65e48bf08bc0de1ce0cce1bfefe3d6ffc0fc007059af16cd27924ca6"
+        },
+        {
+          "path": "docs/verification/v0.6.0/orchard-motion-visual.md",
+          "sha256": "be62e09e1ff12c79c04dbec2a1dd309d12bf252ff3f513086f18eb2d14c3ce78"
+        }
+      ]
+    },
+    {
+      "id": "p1_story_semantics",
+      "status": "passed_sample_scope",
+      "requirement": "nose, book, I'm, cafe-accent, long multi-frame word and rain communicate image-letter-meaning links, repeated letters remain independent, punctuation and accents are exact.",
+      "evidence_required": [
+        "actual GUI animation checks",
+        "default and narrow native screenshots",
+        "pause and restore receipts"
+      ],
+      "owner": "word_story",
+      "evidence": [
+        "docs/verification/v0.6.0/story-animation-native-report.json",
+        "docs/verification/v0.6.0/story-specials-native-report.json",
+        "docs/verification/v0.6.0/story-specials-visual.md",
+        "docs/verification/v0.6.0/story-narrow-native-report.json",
+        "docs/verification/v0.6.0/story-narrow-visual.md"
+      ],
+      "evidence_files": [
+        {
+          "path": "docs/verification/v0.6.0/story-animation-native-report.json",
+          "sha256": "f58735482a27abd592a9503307521a7b7fc49c1da66ab1a9d7a44c5757d24fa4"
+        },
+        {
+          "path": "docs/verification/v0.6.0/story-specials-native-report.json",
+          "sha256": "3888940f2512a6333cc826d89dd004b51c12df783d71bedc7c9a3879d2eece1d"
+        },
+        {
+          "path": "docs/verification/v0.6.0/story-specials-visual.md",
+          "sha256": "8e15e296eeead372f3893d38787209cdf22d8ed91cc159a09ce8165fb9a7e966"
+        },
+        {
+          "path": "docs/verification/v0.6.0/story-narrow-native-report.json",
+          "sha256": "0e979d55e39f77b9a82070c2eecf3af8223447f9083cf91ef989f17638c7419d"
+        },
+        {
+          "path": "docs/verification/v0.6.0/story-narrow-visual.md",
+          "sha256": "d780c1fce0fd5da8723fff1edebb7c984e0eac6a58955a10fc955c7e4c6010bb"
+        }
+      ],
+      "limitation": "Four bespoke word chains plus source-derived generic special-word animation samples; no per-word semantic editorial or child-learning acceptance."
+    },
+    {
+      "id": "p1_help_evidence",
+      "status": "passed_logic_and_native",
+      "requirement": "H0-H5 visible assistance matches evidence; animation cannot expose a hidden H3 answer or manufacture independent mastery.",
+      "evidence_required": [
+        "visibility checks",
+        "cue-before-response failure retry checks",
+        "state-backed interaction receipts"
+      ],
+      "owner": "word_story",
+      "evidence": [
+        "docs/verification/p1/journey-state.log",
+        "docs/verification/p1/memory-event-sink.log",
+        "docs/verification/v0.6.0/story-animation-native-report.json",
+        "docs/verification/v0.6.0/story-specials-native-report.json"
+      ],
+      "evidence_files": [
+        {
+          "path": "docs/verification/p1/journey-state.log",
+          "sha256": "ce86de1c575869b7956282589150eadfc3824caa42215cbc34194cc327c173dd"
+        },
+        {
+          "path": "docs/verification/p1/memory-event-sink.log",
+          "sha256": "dd68691bec686f3023965ab87fff01c469112415369ec2bc0077e73dcf5c5869"
+        },
+        {
+          "path": "docs/verification/v0.6.0/story-animation-native-report.json",
+          "sha256": "f58735482a27abd592a9503307521a7b7fc49c1da66ab1a9d7a44c5757d24fa4"
+        },
+        {
+          "path": "docs/verification/v0.6.0/story-specials-native-report.json",
+          "sha256": "3888940f2512a6333cc826d89dd004b51c12df783d71bedc7c9a3879d2eece1d"
+        }
+      ]
+    },
+    {
+      "id": "p1_state_contract",
+      "status": "passed_logic",
+      "requirement": "Orchard transactions are atomic and idempotent; validated animation state restores without invalid letter/help evidence; old saves remain compatible. Current-round assistance persists from pick-up, never downgrades within the round, and resets only for a new round.",
+      "evidence": [
+        "docs/verification/p1/journey-state.log",
+        "docs/verification/p1/base-state.log",
+        "game/tests/test_journey_state.gd"
+      ],
+      "observed_checks": 727,
+      "observed_failures": 0,
+      "limitation": "State logic only; runtime or native visuals not implied.",
+      "owner": "state",
+      "memory_sink_checks": 38,
+      "evidence_files": [
+        {
+          "path": "docs/verification/p1/journey-state.log",
+          "sha256": "ce86de1c575869b7956282589150eadfc3824caa42215cbc34194cc327c173dd"
+        },
+        {
+          "path": "docs/verification/p1/base-state.log",
+          "sha256": "1663a71a1dc2ad0b792db69137e9702805cb97d76d9afda5949095c10005c696"
+        },
+        {
+          "path": "game/tests/test_journey_state.gd",
+          "sha256": "58a9fa461bd94bf3dea1bb48cad243b79e742991f98d7181f8bb7679f10ce8eb"
+        }
+      ]
+    },
+    {
+      "id": "p1_four_actor_types",
+      "status": "passed_prototype_scope",
+      "requirement": "Separate human, island animal, Dino and Jim wheelchair prototypes; walkable characters approach/stop/turn/wave/speak/handoff/idle; Jim uses seated contact only.",
+      "evidence_required": [
+        "saved action assets",
+        "four-type contact tests",
+        "native action frame sequences"
+      ],
+      "owner": "actors",
+      "logic_evidence": "docs/verification/v0.6.0/actor-animation-report.json",
+      "evidence_sha256": "d1b7b569d72be3323e0b810892336a3887acaf48d883bc700ea726794c6b5d12",
+      "observed_checks": 623,
+      "observed_failures": 0,
+      "measurement_count": 68,
+      "limitation": "Rigid BoneAttachment prototype action assets, 364 native PNG and 8 GIF at 960x600 close-up; actual orchard separately captured at 1440x900 and 960x640 windows. Not final skinning or all-character production.",
+      "evidence": [
+        "game/actors/p1/animation-test-report.json",
+        "assets/characters/p1/validation/capture-report.json",
+        "assets/characters/p1/validation/视觉核查.md"
+      ],
+      "evidence_files": [
+        {
+          "path": "game/actors/p1/animation-test-report.json",
+          "sha256": "d1b7b569d72be3323e0b810892336a3887acaf48d883bc700ea726794c6b5d12"
+        },
+        {
+          "path": "assets/characters/p1/validation/capture-report.json",
+          "sha256": "1eb66e0141b46377f0b3ba348c5a5c55f398483b397b81efd4cda03e7c1e00f8"
+        },
+        {
+          "path": "assets/characters/p1/validation/视觉核查.md",
+          "sha256": "0d64b8c76aef4a32720e4aa60ca2274cd3baf59c148358c7c38e8ca86b3ffc5e"
+        }
+      ]
+    },
+    {
+      "id": "p1_action_collision",
+      "status": "passed_logic_and_native",
+      "requirement": "Feet, hand sockets, carried props, Dino wings/tail and Jim seat/footrests agree with motion; animation events do not directly grant task rewards.",
+      "evidence_required": [
+        "physical path probes",
+        "action contact transforms",
+        "duplicate and interrupted handoff checks"
+      ],
+      "owner": "actors",
+      "logic_evidence": "docs/verification/v0.6.0/actor-animation-report.json",
+      "evidence_sha256": "d1b7b569d72be3323e0b810892336a3887acaf48d883bc700ea726794c6b5d12",
+      "observed_checks": 623,
+      "observed_failures": 0,
+      "measurement_count": 68,
+      "limitation": "Measured prototype contacts and selected actual orchard paths; no global proof of every final asset or future map route.",
+      "evidence": [
+        "game/actors/p1/animation-test-report.json",
+        "docs/verification/v0.6.0/orchard-integration.json",
+        "docs/verification/v0.6.0/orchard-motion.json",
+        "assets/characters/p1/validation/视觉核查.md",
+        "docs/verification/p1/performance-20261022-193930/summary.json"
+      ],
+      "evidence_files": [
+        {
+          "path": "game/actors/p1/animation-test-report.json",
+          "sha256": "d1b7b569d72be3323e0b810892336a3887acaf48d883bc700ea726794c6b5d12"
+        },
+        {
+          "path": "docs/verification/v0.6.0/orchard-integration.json",
+          "sha256": "a997111217b04e66e304ce7b62774241265ed1919e43b5f3f60453aa9f891404"
+        },
+        {
+          "path": "docs/verification/v0.6.0/orchard-motion.json",
+          "sha256": "c90c0e4f65e48bf08bc0de1ce0cce1bfefe3d6ffc0fc007059af16cd27924ca6"
+        },
+        {
+          "path": "assets/characters/p1/validation/视觉核查.md",
+          "sha256": "0d64b8c76aef4a32720e4aa60ca2274cd3baf59c148358c7c38e8ca86b3ffc5e"
+        },
+        {
+          "path": "docs/verification/p1/performance-20261022-193930/summary.json",
+          "sha256": "7cbf2e24dab576d34c591e571b126f395a62446ef430a5ab29959b486a2d43c4"
+        }
+      ]
+    },
+    {
+      "id": "p1_pause_and_comfort",
+      "status": "passed_logic_and_native",
+      "requirement": "World and performance clocks pause for specified reasons; background and reduced motion are respected; restored word animation starts paused.",
+      "evidence_required": [
+        "clock checks",
+        "background pause",
+        "manual pause/resume",
+        "reduced motion readable key poses"
+      ],
+      "owner": "integration",
+      "evidence": [
+        "game/actors/p1/animation-test-report.json",
+        "docs/verification/v0.6.0/orchard-integration.json",
+        "docs/verification/v0.6.0/story-animation-native-report.json",
+        "docs/verification/v0.6.0/story-specials-native-report.json"
+      ],
+      "evidence_files": [
+        {
+          "path": "game/actors/p1/animation-test-report.json",
+          "sha256": "d1b7b569d72be3323e0b810892336a3887acaf48d883bc700ea726794c6b5d12"
+        },
+        {
+          "path": "docs/verification/v0.6.0/orchard-integration.json",
+          "sha256": "a997111217b04e66e304ce7b62774241265ed1919e43b5f3f60453aa9f891404"
+        },
+        {
+          "path": "docs/verification/v0.6.0/story-animation-native-report.json",
+          "sha256": "f58735482a27abd592a9503307521a7b7fc49c1da66ab1a9d7a44c5757d24fa4"
+        },
+        {
+          "path": "docs/verification/v0.6.0/story-specials-native-report.json",
+          "sha256": "3888940f2512a6333cc826d89dd004b51c12df783d71bedc7c9a3879d2eece1d"
+        }
+      ]
+    },
+    {
+      "id": "p1_wind_water_sample",
+      "status": "passed_sample_scope",
+      "requirement": "Wind and water preserve original material/color, root anchors, collision and task state; switching environment effects is a real static baseline.",
+      "evidence_required": [
+        "source hashes",
+        "SG/collision transform comparison",
+        "paired native screenshots",
+        "motion sequence"
+      ],
+      "owner": "environment",
+      "evidence": [
+        "docs/verification/p1/environment-visual-review.md",
+        "docs/screenshots/v0.6.0/environment-motion/visual-capture-report.json",
+        "docs/verification/p1/performance-20261022-193930/raw-report.json",
+        "docs/verification/v0.6.0/living-world-tests.stdout.log"
+      ],
+      "scope": "Clear/day wind and water sample in orchard and village; school has wind only. 243 native PNG, native structure/source preservation and visual review. Sampling sequences are not real-time video or all-frame flicker certification.",
+      "evidence_files": [
+        {
+          "path": "docs/verification/p1/environment-visual-review.md",
+          "sha256": "4905d2bafd0ec5c3a6a6b70af8f3d7ed508ecc21c6cca550909a699b72c6ab45"
+        },
+        {
+          "path": "docs/screenshots/v0.6.0/environment-motion/visual-capture-report.json",
+          "sha256": "b7e0ad256729781add9ba9db3db0a1ed1f9333d86a4b81c9ec6b16cb8ec9d147"
+        },
+        {
+          "path": "docs/verification/p1/performance-20261022-193930/raw-report.json",
+          "sha256": "8995c79be522b7e530243a83a6abc13b32debe0a17962aa8eed892c7ceb711ef"
+        },
+        {
+          "path": "docs/verification/v0.6.0/living-world-tests.stdout.log",
+          "sha256": "6e113426ab81c0f516c3af55048c8a76d5db90fcea3b1c8ea196d24bbceb3b07"
+        }
+      ]
+    },
+    {
+      "id": "p1_actual_performance",
+      "status": "passed_current_hardware_record",
+      "requirement": "Actual native rendering at matched hardware, profile, resolution, save and camera, 10s warmup plus 60s sampling per off/on stage.",
+      "evidence_required": [
+        "hardware",
+        "raw frame CSV",
+        "Windows process memory CSV",
+        "p50/p95/p99",
+        "draw calls",
+        "scene mesh triangles",
+        "paired deltas",
+        "source hashes"
+      ],
+      "tools": [
+        "scripts/verify_p1.py",
+        "game/tests/test_p1_performance.gd"
+      ],
+      "owner": "verification",
+      "evidence": [
+        "docs/verification/p1/performance-20261022-193930/summary.json",
+        "docs/verification/p1/performance-20261022-193930/pooled-metrics.json",
+        "docs/verification/p1/performance-20261022-193930/performance-review.md",
+        "docs/verification/p1/performance-20261022-193930/metric-method-review.md",
+        "docs/verification/p1/performance-20261022-193930/archive-integrity-review.json",
+        "docs/verification/p1/performance-20261022-193930/hardware-vram-confirmation.json"
+      ],
+      "evidence_files": [
+        {
+          "path": "docs/verification/p1/performance-20261022-193930/summary.json",
+          "sha256": "7cbf2e24dab576d34c591e571b126f395a62446ef430a5ab29959b486a2d43c4"
+        },
+        {
+          "path": "docs/verification/p1/performance-20261022-193930/pooled-metrics.json",
+          "sha256": "b57424384d1e1b50144e580057067a6920995bf4741315de5927f087911a6d68"
+        },
+        {
+          "path": "docs/verification/p1/performance-20261022-193930/performance-review.md",
+          "sha256": "7453d1ec5ee737c104ec7db808d179d8685afd0ad203c522eab4c0c35bfa6c61"
+        },
+        {
+          "path": "docs/verification/p1/performance-20261022-193930/metric-method-review.md",
+          "sha256": "923e036e804ebf12c3736c998631124c0ce6defcccde581c7a987c589d966cef"
+        },
+        {
+          "path": "docs/verification/p1/performance-20261022-193930/archive-integrity-review.json",
+          "sha256": "193656e27abeb2cab11dacd403b7eda35eeb84417c7fbf8b9274e3e30b0d810c"
+        },
+        {
+          "path": "docs/verification/p1/performance-20261022-193930/hardware-vram-confirmation.json",
+          "sha256": "fb4df5c494a596729b753cc875a822d38a463762269bd07795c7413c8ceec2ae"
+        }
+      ],
+      "observed_stages": 12,
+      "comparable_pairs": 6,
+      "runtime_error_count": 0,
+      "scope": "One current device/profile, clear/day, static camera; root-viewport CPU/GPU and Windows process CPU/RSS. TIME_PROCESS/PHYSICS are peak monitor diagnostics only."
+    }
+  ],
+  "broader_gates": [
+    {
+      "id": "full_weather_phase_room_resolution_matrix",
+      "status": "not_yet_recorded",
+      "requirement": "Four weather modes x four day phases, village/school/orchard/interior, 1440x900 and 960x640; do not infer from one P1 wind/water sample."
+    },
+    {
+      "id": "low_standard_high_presets",
+      "status": "not_implemented_or_measured",
+      "requirement": "Distinct actual quality presets and target device measurements; current runtime profile alone is not three-tier acceptance."
+    },
+    {
+      "id": "all_textbook_characters",
+      "status": "outside_P1_sample_scope",
+      "requirement": "All source-scoped identities remain the P3 production responsibility; four samples do not imply full coverage."
+    },
+    {
+      "id": "child_usability_and_learning",
+      "status": "not_measured",
+      "requirement": "Real child observations; no inference from automated checks or asset counts."
+    }
+  ],
+  "accepted_utc": "2026-10-22T12:05:24.068350+00:00",
+  "acceptance_scope": "The nine GDD P1 interaction/asset sample gates only. Not P2/P3, all-character production, device-tier budgets, full weather/time/resolution matrix, or child-learning validation.",
+  "final_report": "docs/verification/p1/final-acceptance.md"
+}

@@ -1,0 +1,14 @@
+ERROR: Attempted to find a variable of type 'Nil' into a TypedArray of type 'String'.
+   at: _internal_validate (./core/variant/container_type_validate.h:73)
+   GDScript backtrace (most recent call first):
+       [0] apply (res://scripts/discovery_progress.gd:81)
+       [1] event (res://tests/test_discovery_state.gd:24)
+       [2] corruption_checks (res://tests/test_discovery_state.gd:142)
+       [3] run (res://tests/test_discovery_state.gd:91)
+ERROR: Condition "!_p->typed.validate(value, "find")" is true. Returning: -1
+   at: find (core/variant/array.cpp:374)
+   GDScript backtrace (most recent call first):
+       [0] apply (res://scripts/discovery_progress.gd:81)
+       [1] event (res://tests/test_discovery_state.gd:24)
+       [2] corruption_checks (res://tests/test_discovery_state.gd:142)
+       [3] run (res://tests/test_discovery_state.gd:91)

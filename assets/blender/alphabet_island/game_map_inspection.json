@@ -1,0 +1,556 @@
+{
+  "file": "F:\\LoveStudy\\assets\\blender\\alphabet_island\\alphabet_island_layout_v05.blend",
+  "objects": 4169,
+  "collections": {
+    "A_00_Site": 3,
+    "A_01_Paths_Water": 44,
+    "A_02_Orchard": 135,
+    "A_03_Fences": 56,
+    "A_04_Memory_Loci": 143,
+    "A_05_Dressing": 192,
+    "A_90_Landmark_Import": 3,
+    "A_91_Tripo_Apple_House": 2,
+    "A_99_Cameras_Lights": 4,
+    "ALPHA_Bridges_Docks": 347,
+    "ALPHA_Camera_Lighting": 21,
+    "ALPHA_Character_Polish_v05": 563,
+    "ALPHA_Forest": 708,
+    "ALPHA_Gardens": 961,
+    "ALPHA_Home": 35,
+    "ALPHA_Landmarks": 79,
+    "ALPHA_Orchard": 533,
+    "ALPHA_Paths": 64,
+    "ALPHA_Plots": 28,
+    "ALPHA_Polish_v03": 426,
+    "ALPHA_School_Building": 172,
+    "ALPHA_School_Campus": 173,
+    "ALPHA_School_Paths": 4,
+    "ALPHA_Site_Detail_v02": 248,
+    "ALPHA_Street_Furniture": 168,
+    "ALPHA_Terrain": 56,
+    "ALPHA_Water": 129,
+    "ALPHA_Wayfinding_Editor": 149,
+    "Collection": 3,
+    "SCHOOL_ASSET": 349
+  },
+  "collision_counts": {
+    "ground": 220,
+    "none": 3113,
+    "water": 1,
+    "barrier": 441,
+    "building": 30,
+    "trunk": 168
+  },
+  "ground_names": [
+    "ALPHA_Island_Continuous_Terrain",
+    "ALPHA_Coastal_Sand_Shelf",
+    "ALPHA_Lake_Islet",
+    "ALPHA_Lake_Islet_Grass",
+    "ALPHA_Islet_Jetty_Plank",
+    "ALPHA_Islet_Jetty_Plank.001",
+    "ALPHA_Islet_Jetty_Plank.002",
+    "ALPHA_Islet_Jetty_Plank.003",
+    "ALPHA_Islet_Jetty_Plank.004",
+    "ALPHA_Islet_Jetty_Plank.005",
+    "ALPHA_Islet_Jetty_Plank.006",
+    "ALPHA_Islet_Jetty_Plank.007",
+    "ALPHA_Islet_Jetty_Plank.008",
+    "ALPHA_Islet_Jetty_Plank.009",
+    "ALPHA_Islet_Jetty_Plank.010",
+    "ALPHA_Islet_Jetty_Plank.011",
+    "ALPHA_Islet_Jetty_Plank.012",
+    "ALPHA_Islet_Jetty_Plank.013",
+    "ALPHA_Islet_Jetty_Plank.014",
+    "ALPHA_North_Bridge_Deck",
+    "ALPHA_North_Bridge_Deck.001",
+    "ALPHA_North_Bridge_Deck.002",
+    "ALPHA_North_Bridge_Deck.003",
+    "ALPHA_North_Bridge_Deck.004",
+    "ALPHA_North_Bridge_Deck.005",
+    "ALPHA_North_Bridge_Deck.006",
+    "ALPHA_North_Bridge_Deck.007",
+    "ALPHA_North_Bridge_Deck.008",
+    "ALPHA_North_Bridge_Deck.009",
+    "ALPHA_North_Bridge_Deck.010",
+    "ALPHA_North_Bridge_Deck.011",
+    "ALPHA_North_Bridge_Deck.012",
+    "ALPHA_North_Bridge_Deck.013",
+    "ALPHA_North_Bridge_Deck.014",
+    "ALPHA_North_Bridge_Deck.015",
+    "ALPHA_North_Bridge_Deck.016",
+    "ALPHA_North_Bridge_Deck.017",
+    "ALPHA_North_Bridge_Deck.018",
+    "ALPHA_North_Bridge_Deck.019",
+    "ALPHA_North_Bridge_Deck.020",
+    "ALPHA_North_Bridge_Deck.021",
+    "ALPHA_North_Bridge_Deck.022",
+    "ALPHA_North_Bridge_Deck.023",
+    "ALPHA_North_Bridge_Deck.024",
+    "ALPHA_North_Bridge_Deck.025",
+    "ALPHA_North_Bridge_Deck.026",
+    "ALPHA_North_Bridge_Deck.027",
+    "ALPHA_North_Bridge_Deck.028",
+    "ALPHA_North_Bridge_Deck.029",
+    "ALPHA_Village_Bridge_Deck",
+    "ALPHA_Village_Bridge_Deck.001",
+    "ALPHA_Village_Bridge_Deck.002",
+    "ALPHA_Village_Bridge_Deck.003",
+    "ALPHA_Village_Bridge_Deck.004",
+    "ALPHA_Village_Bridge_Deck.005",
+    "ALPHA_Village_Bridge_Deck.006",
+    "ALPHA_Village_Bridge_Deck.007",
+    "ALPHA_Village_Bridge_Deck.008",
+    "ALPHA_Village_Bridge_Deck.009",
+    "ALPHA_Village_Bridge_Deck.010",
+    "ALPHA_Village_Bridge_Deck.011",
+    "ALPHA_Village_Bridge_Deck.012",
+    "ALPHA_Village_Bridge_Deck.013",
+    "ALPHA_Village_Bridge_Deck.014",
+    "ALPHA_Village_Bridge_Deck.015",
+    "ALPHA_Village_Bridge_Deck.016",
+    "ALPHA_Village_Bridge_Deck.017",
+    "ALPHA_Village_Bridge_Deck.018",
+    "ALPHA_Village_Bridge_Deck.019",
+    "ALPHA_Village_Bridge_Deck.020",
+    "ALPHA_Village_Bridge_Deck.021",
+    "ALPHA_Village_Bridge_Deck.022",
+    "ALPHA_Village_Bridge_Deck.023",
+    "ALPHA_Village_Bridge_Deck.024",
+    "ALPHA_Village_Bridge_Deck.025",
+    "ALPHA_Village_Bridge_Deck.026",
+    "ALPHA_Village_Bridge_Deck.027",
+    "ALPHA_Village_Bridge_Deck.028",
+    "ALPHA_Village_Bridge_Deck.029",
+    "ALPHA_South_Bridge_Deck",
+    "ALPHA_South_Bridge_Deck.001",
+    "ALPHA_South_Bridge_Deck.002",
+    "ALPHA_South_Bridge_Deck.003",
+    "ALPHA_South_Bridge_Deck.004",
+    "ALPHA_South_Bridge_Deck.005",
+    "ALPHA_South_Bridge_Deck.006",
+    "ALPHA_South_Bridge_Deck.007",
+    "ALPHA_South_Bridge_Deck.008",
+    "ALPHA_South_Bridge_Deck.009",
+    "ALPHA_South_Bridge_Deck.010",
+    "ALPHA_South_Bridge_Deck.011",
+    "ALPHA_South_Bridge_Deck.012",
+    "ALPHA_South_Bridge_Deck.013",
+    "ALPHA_South_Bridge_Deck.014",
+    "ALPHA_South_Bridge_Deck.015",
+    "ALPHA_South_Bridge_Deck.016",
+    "ALPHA_South_Bridge_Deck.017",
+    "ALPHA_South_Bridge_Deck.018",
+    "ALPHA_South_Bridge_Deck.019",
+    "ALPHA_South_Bridge_Deck.020",
+    "ALPHA_South_Bridge_Deck.021",
+    "ALPHA_South_Bridge_Deck.022",
+    "ALPHA_South_Bridge_Deck.023",
+    "ALPHA_South_Bridge_Deck.024",
+    "ALPHA_South_Bridge_Deck.025",
+    "ALPHA_South_Bridge_Deck.026",
+    "ALPHA_South_Bridge_Deck.027",
+    "ALPHA_South_Bridge_Deck.028",
+    "ALPHA_South_Bridge_Deck.029",
+    "ALPHA_W_Seaside_Jetty_Plank",
+    "ALPHA_W_Seaside_Jetty_Plank.001",
+    "ALPHA_W_Seaside_Jetty_Plank.002",
+    "ALPHA_W_Seaside_Jetty_Plank.003",
+    "ALPHA_W_Seaside_Jetty_Plank.004",
+    "ALPHA_W_Seaside_Jetty_Plank.005",
+    "ALPHA_W_Seaside_Jetty_Plank.006",
+    "ALPHA_W_Seaside_Jetty_Plank.007",
+    "ALPHA_W_Seaside_Jetty_Plank.008",
+    "ALPHA_W_Seaside_Jetty_Plank.009",
+    "ALPHA_W_Seaside_Jetty_Plank.010",
+    "ALPHA_W_Seaside_Jetty_Plank.011",
+    "ALPHA_W_Seaside_Jetty_Plank.012",
+    "ALPHA_B_Pier_Ramp_Plank",
+    "ALPHA_B_Pier_Ramp_Plank.001",
+    "ALPHA_B_Pier_Ramp_Plank.002",
+    "ALPHA_B_Pier_Ramp_Plank.003",
+    "ALPHA_B_Pier_Ramp_Plank.004",
+    "ALPHA_B_Pier_Ramp_Plank.005",
+    "ALPHA_B_Pier_Ramp_Plank.006",
+    "ALPHA_B_Pier_Ramp_Plank.007",
+    "ALPHA_B_Pier_Ramp_Plank.008",
+    "ALPHA_B_Pier_Ramp_Plank.009",
+    "ALPHA_B_Pier_Ramp_Plank.010",
+    "ALPHA_B_Pier_Ramp_Plank.011",
+    "ALPHA_B_Pier_Ramp_Plank.012",
+    "ALPHA_B_Pier_Ramp_Plank.013",
+    "ALPHA_B_Pier_Ramp_Plank.014",
+    "ALPHA_B_Pier_Ramp_Plank.015",
+    "ALPHA_B_Pier_Ramp_Plank.016",
+    "ALPHA_B_Pier_Ramp_Plank.017",
+    "ALPHA_B_Pier_Ramp_Plank.018",
+    "ALPHA_B_Pier_Ramp_Plank.019",
+    "ALPHA_B_Pier_Ramp_Plank.020",
+    "ALPHA_B_Pier_Ramp_Plank.021",
+    "ALPHA_B_Pier_Ramp_Plank.022",
+    "ALPHA_B_Pier_Ramp_Plank.023",
+    "ALPHA_B_Pier_Ramp_Plank.024",
+    "ALPHA_B_Pier_Ramp_Plank.025",
+    "ALPHA_B_Pier_Ramp_Plank.026",
+    "ALPHA_B_Pier_Ramp_Plank.027",
+    "ALPHA_B_Pier_Ramp_Plank.028",
+    "ALPHA_B_Pier_Ramp_Plank.029",
+    "ALPHA_B_Pier_Ramp_Plank.030",
+    "ALPHA_B_Pier_Ramp_Plank.031",
+    "ALPHA_B_Pier_Ramp_Plank.032",
+    "ALPHA_B_Pier_Ramp_Plank.033",
+    "ALPHA_B_Pier_Ramp_Plank.034",
+    "ALPHA_B_Pier_Ramp_Plank.035",
+    "ALPHA_B_Pier_Ramp_Plank.036",
+    "ALPHA_B_Pier_Ramp_Plank.037",
+    "ALPHA_B_Pier_Ramp_Plank.038",
+    "ALPHA_B_Pier_Ramp_Plank.039",
+    "ALPHA_B_Pier_Ramp_Plank.040",
+    "ALPHA_B_Pier_Ramp_Plank.041",
+    "ALPHA_B_Pier_Landing_Plank",
+    "ALPHA_B_Pier_Landing_Plank.001",
+    "ALPHA_B_Pier_Landing_Plank.002",
+    "ALPHA_B_Pier_Landing_Plank.003",
+    "ALPHA_B_Pier_Landing_Plank.004",
+    "ALPHA_B_Pier_Landing_Plank.005",
+    "ALPHA_B_Pier_Landing_Plank.006",
+    "ALPHA_B_Pier_Landing_Plank.007",
+    "ALPHA_B_Pier_Landing_Plank.008",
+    "ALPHA_B_Pier_Landing_Plank.009",
+    "ALPHA_B_Pier_Landing_Plank.010",
+    "ALPHA_B_Pier_Landing_Plank.011",
+    "ALPHA_B_Pier_Landing_Plank.012",
+    "ALPHA_B_Pier_Landing_Plank.013",
+    "ALPHA_B_Pier_Landing_Plank.014",
+    "ALPHA_B_Pier_Landing_Plank.015",
+    "ALPHA_B_Pier_Landing_Plank.016",
+    "ALPHA_B_Pier_Landing_Plank.017",
+    "ALPHA_B_Pier_Landing_Plank.018",
+    "ALPHA_B_Pier_Landing_Plank.019",
+    "ALPHA_B_Pier_Landing_Plank.020",
+    "ALPHA_B_Pier_Landing_Plank.021",
+    "ALPHA_B_Pier_Landing_Plank.022",
+    "ALPHA_B_Pier_Landing_Plank.023",
+    "ALPHA_B_Pier_Landing_Plank.024",
+    "ALPHA_H_Terrace_Retaining_Edge",
+    "ALPHA_U_Terrace_Retaining_Edge",
+    "ALPHA_V_Terrace_Retaining_Edge",
+    "ALPHA_Home_Stone_Foundation",
+    "ALPHA_Home_Entry_Step",
+    "ALPHA_Home_Plaza_Rim",
+    "ALPHA_Home_Plaza",
+    "ALPHA_V3_Home_Porch_Planks",
+    "ALPHA_V3_Garden_Entry_Stepping_Stones",
+    "ALPHA_School_Entry_Step",
+    "ALPHA_School_Courtyard_Base",
+    "ALPHA_V4_Connected_Paths",
+    "ALPHA_V4_Path_Shoulders",
+    "ALPHA_V5_School_Gate_Pavers",
+    "ALPHA_V5_School_Gate_Pavers.001",
+    "ALPHA_V5_School_Gate_Pavers.002",
+    "ALPHA_V5_School_Gate_Pavers.003",
+    "ALPHA_V5_School_Gate_Pavers.004",
+    "ALPHA_V5_School_Gate_Pavers.005",
+    "ALPHA_V5_School_Gate_Pavers.006",
+    "ALPHA_V5_School_Gate_Pavers.007",
+    "ALPHA_V5_School_Gate_Pavers.008",
+    "ALPHA_V5_School_Gate_Pavers.009",
+    "ALPHA_V5_School_Gate_Pavers.010",
+    "ALPHA_V5_School_Gate_Pavers.011",
+    "ALPHA_V5_School_Gate_Pavers.012",
+    "ALPHA_V5_School_Gate_Pavers.013",
+    "ALPHA_V5_School_Gate_Pavers.014",
+    "ALPHA_V5_School_Gate_Pavers.015",
+    "ALPHA_V5_School_Gate_Pavers.016",
+    "ALPHA_V5_School_Gate_Pavers.017"
+  ],
+  "building_names": [
+    "ALPHA_A_Tripo_01",
+    "ALPHA_B_Tripo_00",
+    "ALPHA_C_Tripo_00",
+    "ALPHA_D_Tripo_00",
+    "ALPHA_E_Tripo_00",
+    "ALPHA_F_Tripo_00",
+    "ALPHA_G_Tripo_00",
+    "ALPHA_H_Tripo_00",
+    "ALPHA_I_Tripo_00",
+    "ALPHA_J_Tripo_00",
+    "ALPHA_K_Tripo_00",
+    "ALPHA_L_Tripo_00",
+    "ALPHA_M_Tripo_00",
+    "ALPHA_N_Tripo_00",
+    "ALPHA_O_Tripo_00",
+    "ALPHA_P_Tripo_00",
+    "ALPHA_Q_Tripo_00",
+    "ALPHA_R_Tripo_00",
+    "ALPHA_S_Tripo_00",
+    "ALPHA_T_Tripo_00",
+    "ALPHA_U_Tripo_00",
+    "ALPHA_V_Tripo_00",
+    "ALPHA_W_Tripo_00",
+    "ALPHA_X_Tripo_00",
+    "ALPHA_Y_Tripo_00",
+    "ALPHA_Z_Tripo_00",
+    "ALPHA_Home_Cream_Walls",
+    "ALPHA_School_Main_Walls",
+    "ALPHA_School_Library_Walls",
+    "ALPHA_School_Canteen_Walls"
+  ],
+  "anchors": [
+    {
+      "name": "ALPHA_Home_Cream_Walls",
+      "position": [
+        -3.0,
+        -14.0,
+        7.380000114440918
+      ]
+    },
+    {
+      "name": "ALPHA_ORCHARD_A_LOCUS_01_Entrance_Basket",
+      "position": [
+        -52.5,
+        -27.149999618530273,
+        5.124382495880127
+      ]
+    },
+    {
+      "name": "ALPHA_B_LOCUS_01",
+      "position": [
+        -55.0,
+        -49.0,
+        2.009999990463257
+      ]
+    },
+    {
+      "name": "ALPHA_C_LOCUS_01",
+      "position": [
+        -33.0,
+        -38.19728088378906,
+        4.542657852172852
+      ]
+    },
+    {
+      "name": "ALPHA_D_LOCUS_01",
+      "position": [
+        -24.0,
+        -20.961612701416016,
+        5.604265213012695
+      ]
+    },
+    {
+      "name": "ALPHA_E_LOCUS_01",
+      "position": [
+        -39.0,
+        -9.684436798095703,
+        5.665109634399414
+      ]
+    },
+    {
+      "name": "ALPHA_F_LOCUS_01",
+      "position": [
+        -55.0,
+        -8.137758255004883,
+        5.856454849243164
+      ]
+    },
+    {
+      "name": "ALPHA_G_LOCUS_01",
+      "position": [
+        -52.0,
+        15.311644554138184,
+        8.213899612426758
+      ]
+    },
+    {
+      "name": "ALPHA_H_LOCUS_01",
+      "position": [
+        -54.0,
+        34.53935241699219,
+        10.140230178833008
+      ]
+    },
+    {
+      "name": "ALPHA_I_LOCUS_01",
+      "position": [
+        -36.0,
+        40.40237045288086,
+        10.360330581665039
+      ]
+    },
+    {
+      "name": "ALPHA_J_LOCUS_01",
+      "position": [
+        -20.0,
+        34.950748443603516,
+        10.596216201782227
+      ]
+    },
+    {
+      "name": "ALPHA_K_LOCUS_01",
+      "position": [
+        -31.0,
+        16.393949508666992,
+        8.591470718383789
+      ]
+    },
+    {
+      "name": "ALPHA_L_LOCUS_01",
+      "position": [
+        -8.0,
+        37.617210388183594,
+        10.473443984985352
+      ]
+    },
+    {
+      "name": "ALPHA_M_LOCUS_01",
+      "position": [
+        13.0,
+        39.37776565551758,
+        10.279443740844727
+      ]
+    },
+    {
+      "name": "ALPHA_N_LOCUS_01",
+      "position": [
+        33.0,
+        33.97988510131836,
+        11.06517219543457
+      ]
+    },
+    {
+      "name": "ALPHA_O_LOCUS_01",
+      "position": [
+        52.0,
+        24.966096878051758,
+        11.761415481567383
+      ]
+    },
+    {
+      "name": "ALPHA_P_LOCUS_01",
+      "position": [
+        28.0,
+        16.781768798828125,
+        9.121286392211914
+      ]
+    },
+    {
+      "name": "ALPHA_Q_LOCUS_01",
+      "position": [
+        49.0,
+        4.114418029785156,
+        7.126993179321289
+      ]
+    },
+    {
+      "name": "ALPHA_R_LOCUS_01",
+      "position": [
+        58.0,
+        -10.229914665222168,
+        6.675165176391602
+      ]
+    },
+    {
+      "name": "ALPHA_S_LOCUS_01",
+      "position": [
+        39.0,
+        -20.00737762451172,
+        6.613092422485352
+      ]
+    },
+    {
+      "name": "ALPHA_T_LOCUS_01",
+      "position": [
+        50.0,
+        -30.02189826965332,
+        6.821786880493164
+      ]
+    },
+    {
+      "name": "ALPHA_U_LOCUS_01",
+      "position": [
+        35.0,
+        -40.29618453979492,
+        5.10630989074707
+      ]
+    },
+    {
+      "name": "ALPHA_V_LOCUS_01",
+      "position": [
+        16.0,
+        -43.18635177612305,
+        3.7673587799072266
+      ]
+    },
+    {
+      "name": "ALPHA_W_LOCUS_01",
+      "position": [
+        12.0,
+        -58.659732818603516,
+        3.3491382598876953
+      ]
+    },
+    {
+      "name": "ALPHA_X_LOCUS_01",
+      "position": [
+        -7.0,
+        -57.837730407714844,
+        3.0654773712158203
+      ]
+    },
+    {
+      "name": "ALPHA_Y_LOCUS_01",
+      "position": [
+        -20.0,
+        -45.10853576660156,
+        3.867532730102539
+      ]
+    },
+    {
+      "name": "ALPHA_Z_LOCUS_01",
+      "position": [
+        -33.0,
+        -52.98854446411133,
+        3.1544971466064453
+      ]
+    },
+    {
+      "name": "ALPHA_SCHOOL_ANCHOR_Gate",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "ALPHA_SCHOOL_ANCHOR_Classroom",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "ALPHA_SCHOOL_ANCHOR_Library",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "ALPHA_SCHOOL_ANCHOR_Playground",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "ALPHA_SCHOOL_ANCHOR_Canteen",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

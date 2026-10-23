@@ -1,0 +1,294 @@
+{
+  "room_id": "art_room",
+  "anchors": [
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -4.9,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        4.9
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回完整校园",
+      "position_blender": [
+        0.0,
+        -5.95,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.95
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "美术教室老师",
+      "position_blender": [
+        -2.0,
+        -3.1,
+        0.0
+      ],
+      "position_godot": [
+        -2.0,
+        0.0,
+        3.1
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_01",
+      "label": "围裙柜",
+      "position_blender": [
+        -5.8,
+        -4.4,
+        0.0
+      ],
+      "position_godot": [
+        -5.8,
+        0.0,
+        4.4
+      ],
+      "associated_prop": "Art_ApronCabinet_Back",
+      "memory_id": "memory_ART_ROOM_01",
+      "activity": "认识创作时使用的围裙和工具"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "颜料调色台",
+      "position_blender": [
+        -5.0,
+        0.15,
+        0.0
+      ],
+      "position_godot": [
+        -5.0,
+        0.0,
+        -0.15
+      ],
+      "associated_prop": "Art_PaintTable_Top",
+      "memory_id": "memory_ART_ROOM_02",
+      "activity": "观察颜料颜色与调色盘"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "画架",
+      "position_blender": [
+        0.9,
+        -0.9,
+        0.0
+      ],
+      "position_godot": [
+        0.9,
+        0.0,
+        0.9
+      ],
+      "associated_prop": "Art_Easel_00_CanvasShelf",
+      "memory_id": "memory_ART_ROOM_03",
+      "activity": "在画架前观察示例画作"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "陶泥桌",
+      "position_blender": [
+        5.0,
+        -4.95,
+        0.0
+      ],
+      "position_godot": [
+        5.0,
+        0.0,
+        4.95
+      ],
+      "associated_prop": "Art_ClayTable_Top",
+      "memory_id": "memory_ART_ROOM_04",
+      "activity": "比较陶泥作品的形状"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "作品墙",
+      "position_blender": [
+        0.0,
+        4.7,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -4.7
+      ],
+      "associated_prop": "Art_Gallery_02_Frame",
+      "memory_id": "memory_ART_ROOM_05",
+      "activity": "看看墙上不同的作品"
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_ApronCabinet",
+      "aabb_blender": [
+        -7.5,
+        -3.200000047683716,
+        0.0,
+        -4.100000381469727,
+        -2.299999952316284,
+        2.799999952316284
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_PaintTable",
+      "aabb_blender": [
+        -6.699999809265137,
+        1.350000023841858,
+        -0.06000000238418579,
+        -3.299999952316284,
+        3.1500000953674316,
+        1.0999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_EaselIsland",
+      "aabb_blender": [
+        -0.8000000715255737,
+        0.42500007152557373,
+        0.0,
+        2.5999999046325684,
+        2.7750000953674316,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_ClayTable",
+      "aabb_blender": [
+        3.450000047683716,
+        -3.7249999046325684,
+        -0.06000000238418579,
+        6.550000190734863,
+        -1.9749999046325684,
+        1.0899999141693115
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_RinseSink",
+      "aabb_blender": [
+        -7.275000095367432,
+        4.75,
+        -0.06000000238418579,
+        -5.025000095367432,
+        5.949999809265137,
+        1.059999942779541
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Art_DryingRack",
+      "aabb_blender": [
+        5.75,
+        2.049999952316284,
+        0.0,
+        6.850000381469727,
+        4.149999618530273,
+        1.7999999523162842
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 307,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 3973588,
+  "glb_node_count": 319,
+  "triangles_instanced": 142324,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "de263fcb6e40135620f3ab43be79ef5bb4a8d61f12618408695475f1857bf60f",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/art_room/art_room_v01.blend",
+  "source_blend_preserved": true
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "before": {
+    "data/catalog.json": "74047710633cbc903e5ef7bc13bd311be877f46ee4d05c9deae96a3362eb0603",
+    "data/integration_contract.json": "6c14693018ac7ea081d0a245e25f58950ba1f6be23bfbe247a60b8dbe39bb6b2",
+    "data/mainline_entries.json": "8ddbd88ef34b61fe9c7ebee47c3f458fbb58a5920e8d163d7e7ea213f105cf3b",
+    "review/integration_validation.json": "821312b6fdaee54203053b997d9008662cc56af60d8aec7457755fb90b65e89f"
+  },
+  "after": {
+    "data/catalog.json": "74047710633cbc903e5ef7bc13bd311be877f46ee4d05c9deae96a3362eb0603",
+    "data/integration_contract.json": "6c14693018ac7ea081d0a245e25f58950ba1f6be23bfbe247a60b8dbe39bb6b2",
+    "data/mainline_entries.json": "8ddbd88ef34b61fe9c7ebee47c3f458fbb58a5920e8d163d7e7ea213f105cf3b",
+    "review/integration_validation.json": "821312b6fdaee54203053b997d9008662cc56af60d8aec7457755fb90b65e89f"
+  },
+  "matches": {
+    "data/catalog.json": true,
+    "data/integration_contract.json": true,
+    "data/mainline_entries.json": true,
+    "review/integration_validation.json": true
+  },
+  "scope": "Two consecutive full builder runs with unchanged vocabulary author inputs; full byte equality for catalog, integration contract, adapters, integration validation"
+}

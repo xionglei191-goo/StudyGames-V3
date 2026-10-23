@@ -1,0 +1,886 @@
+{
+  "schema_version": 1,
+  "title": "小镇英语 · 开场三课",
+  "coverage": {
+    "library_books_indexed": 8,
+    "playable_book_id": "xiangshao-g3-1",
+    "playable_units": [
+      1,
+      2,
+      3
+    ],
+    "full_curriculum_implemented": false,
+    "note": "首版仅实装三年级上册开场三个单元中的核心表达与九个新编情境题；不代表完整单元覆盖。生活词汇为额外预览，不计入主线过关。"
+  },
+  "source_books": [
+    {
+      "id": "xiangshao-g3-1",
+      "title": "三年级上册",
+      "grade": 3,
+      "volume": 1,
+      "edition": "2022年课标修订版",
+      "page_count": 89,
+      "unit_count": 10,
+      "manifest": "/books/xiangshao-g3-1.json",
+      "manifest_sha256": "4b6a169bc93952e4bae98840bf4f7909bf86252965617ef3860815b9ba1ee67f",
+      "source_pdf_sha256": "4df3652b94ad6b12b0b7fd5a10901d7289e2fd7b3f4263ccb4f4583ed5abc9d2",
+      "playable_scope": "opening_three_units"
+    },
+    {
+      "id": "xiangshao-g3-2",
+      "title": "三年级下册",
+      "grade": 3,
+      "volume": 2,
+      "edition": "2022年课标修订版",
+      "page_count": 89,
+      "unit_count": 10,
+      "manifest": "/books/xiangshao-g3-2.json",
+      "manifest_sha256": "2becac3febf02fe7f2ebf20dd10639de3e1fc763d5cf8817f31271b41f0597c4",
+      "source_pdf_sha256": "75186f78e11608276322ba622d20f710f59b71050f49b115773cd606046729cd",
+      "playable_scope": "life_preview_only"
+    },
+    {
+      "id": "xiangshao-g4-1",
+      "title": "四年级上册",
+      "grade": 4,
+      "volume": 1,
+      "edition": "2022年课标修订版",
+      "page_count": 89,
+      "unit_count": 10,
+      "manifest": "/books/xiangshao-g4-1.json",
+      "manifest_sha256": "b445a429cfe54c1711aaeaf3e4e6c393ea57d58e4c6f44d4bb88d2b35e6097ee",
+      "source_pdf_sha256": "2190a8a0ae11b5713e73cbbd33843ecc7ce34f40a8fd0ac4f24975efe47d6686",
+      "playable_scope": "life_preview_only"
+    },
+    {
+      "id": "xiangshao-g4-2",
+      "title": "四年级下册",
+      "grade": 4,
+      "volume": 2,
+      "edition": "2022年课标修订版",
+      "page_count": 89,
+      "unit_count": 10,
+      "manifest": "/books/xiangshao-g4-2.json",
+      "manifest_sha256": "cc44b8883a472ef4214801b54c59f09233a273c07b321556471b153347e95db9",
+      "source_pdf_sha256": "bc96c0f99f2539cd2c4b30083511b428d2223b0cee4dd31fa0d0bf3fd15750b2",
+      "playable_scope": "indexed_only"
+    },
+    {
+      "id": "english-grade5-volume1-smartedu-2022",
+      "title": "五年级上册",
+      "grade": 5,
+      "volume": 1,
+      "edition": "2022年课标修订版",
+      "page_count": 89,
+      "unit_count": 10,
+      "manifest": "/books/english-grade5-volume1-smartedu-2022.json",
+      "manifest_sha256": "a3039c39030941d1cfadd71ee4c3b0bff45d507e4dc6d336dd500c4d7836510f",
+      "source_pdf_sha256": "f9089f3d12737a996ddf7b59719481c5e21b998192eb563996ed5f6c6b98e669",
+      "playable_scope": "indexed_only"
+    },
+    {
+      "id": "xiangshao-g5-2",
+      "title": "五年级下册",
+      "grade": 5,
+      "volume": 2,
+      "edition": "三年级起点版",
+      "page_count": 89,
+      "unit_count": 12,
+      "manifest": "/books/xiangshao-g5-2.json",
+      "manifest_sha256": "d18f125aa412113e084380c71559dae345df43f0c5274dc4cb87897b28774245",
+      "source_pdf_sha256": "5f083e237bedfd79115f55fa18f1750e5ef7e1e32f0b4f037cf08f80f76235dc",
+      "playable_scope": "indexed_only"
+    },
+    {
+      "id": "xiangshao-g6-1",
+      "title": "六年级上册",
+      "grade": 6,
+      "volume": 1,
+      "edition": "2022年课标修订版",
+      "page_count": 89,
+      "unit_count": 10,
+      "manifest": "/books/xiangshao-g6-1.json",
+      "manifest_sha256": "94ec4bc7121ccc33e871111e4cc1065ce4ee047a8c9a9c2da45ab6160d764b7f",
+      "source_pdf_sha256": "f244ba6c5ab92af03f2431bc2ea2fd321d3cb57d03144237ce7b6df3188eb7dd",
+      "playable_scope": "indexed_only"
+    },
+    {
+      "id": "xiangshao-g6-2",
+      "title": "六年级下册",
+      "grade": 6,
+      "volume": 2,
+      "edition": "三年级起点版",
+      "page_count": 89,
+      "unit_count": 9,
+      "manifest": "/books/xiangshao-g6-2.json",
+      "manifest_sha256": "dbcc670c5ef9c12338df844aa92c31a1519eb14d184db7ea95b924caf89b7832",
+      "source_pdf_sha256": "b88e2d2a351a31a976c593215388d2cbae2869f99b003f3dff4596ca2e0f2f38",
+      "playable_scope": "indexed_only"
+    }
+  ],
+  "units": [
+    {
+      "id": "unit1",
+      "number": 1,
+      "title": "Hello!",
+      "zh": "问候新朋友",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "chapter_id": "unit-1",
+        "page_start": 1,
+        "page_end": 5,
+        "file_page_start": 8,
+        "file_page_end": 12,
+        "kind": "textbook_sequence"
+      },
+      "phrase_keys": [
+        "hello",
+        "good_morning",
+        "thank_you",
+        "hello_lingling"
+      ],
+      "question_ids": [
+        "u1_greeting",
+        "u1_morning",
+        "u1_goodbye"
+      ]
+    },
+    {
+      "id": "unit2",
+      "number": 2,
+      "title": "What's your name?",
+      "zh": "认识彼此",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "chapter_id": "unit-2",
+        "page_start": 6,
+        "page_end": 10,
+        "file_page_start": 13,
+        "file_page_end": 17,
+        "kind": "textbook_sequence"
+      },
+      "phrase_keys": [
+        "what_name",
+        "my_name",
+        "goodbye",
+        "good_afternoon"
+      ],
+      "question_ids": [
+        "u2_name",
+        "u2_intro",
+        "u2_polite"
+      ]
+    },
+    {
+      "id": "unit3",
+      "number": 3,
+      "title": "How old are you?",
+      "zh": "年龄与数字",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "chapter_id": "unit-3",
+        "page_start": 11,
+        "page_end": 15,
+        "file_page_start": 18,
+        "file_page_end": 22,
+        "kind": "textbook_sequence"
+      },
+      "phrase_keys": [
+        "how_old",
+        "im_nine",
+        "im_eight",
+        "nine"
+      ],
+      "question_ids": [
+        "u3_age",
+        "u3_nine",
+        "u3_birthday"
+      ]
+    }
+  ],
+  "phrases": {
+    "hello": {
+      "en": "Hello!",
+      "zh": "你好！",
+      "audio": "res://assets/audio/hello.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 1,
+        "file_page": 8,
+        "region_id": "p8-r2",
+        "chapter_id": "unit-1",
+        "kind": "textbook_exact",
+        "source_text": "Hello!",
+        "source_verified_in_manifest": true
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "good_morning": {
+      "en": "Good morning.",
+      "zh": "早上好。",
+      "audio": "res://assets/audio/good_morning.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 1,
+        "file_page": 8,
+        "region_id": "p8-r10",
+        "chapter_id": "unit-1",
+        "kind": "textbook_exact",
+        "source_text": "Good morning.",
+        "source_verified_in_manifest": true
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "my_name": {
+      "en": "My name is Lulu.",
+      "zh": "我叫露露。",
+      "audio": "res://assets/audio/my_name.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 6,
+        "file_page": 13,
+        "region_id": "p13-r14",
+        "chapter_id": "unit-2",
+        "kind": "textbook_exact",
+        "source_text": "My name is Lulu.",
+        "source_verified_in_manifest": true
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "what_name": {
+      "en": "What's your name?",
+      "zh": "你叫什么名字？",
+      "audio": "res://assets/audio/what_name.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 6,
+        "file_page": 13,
+        "region_id": "p13-r11",
+        "chapter_id": "unit-2",
+        "kind": "textbook_exact",
+        "source_text": "What's your name?",
+        "source_verified_in_manifest": true
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "how_old": {
+      "en": "How old are you?",
+      "zh": "你几岁了？",
+      "audio": "res://assets/audio/how_old.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 11,
+        "file_page": 18,
+        "region_id": "p18-r11",
+        "chapter_id": "unit-3",
+        "kind": "textbook_exact",
+        "source_text": "How old are you?",
+        "source_verified_in_manifest": false
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "im_nine": {
+      "en": "I'm nine.",
+      "zh": "我九岁了。",
+      "audio": "res://assets/audio/im_nine.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 11,
+        "file_page": 18,
+        "region_id": "p18-r9",
+        "chapter_id": "unit-3",
+        "kind": "textbook_exact",
+        "source_text": "I'm nine.",
+        "source_verified_in_manifest": false
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "thank_you": {
+      "en": "Thank you.",
+      "zh": "谢谢你。",
+      "audio": "res://assets/audio/thank_you.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 4,
+        "file_page": 11,
+        "region_id": "p11-r4",
+        "chapter_id": "unit-1",
+        "kind": "textbook_exact",
+        "source_text": "Thank you.",
+        "source_verified_in_manifest": false
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "goodbye": {
+      "en": "Goodbye.",
+      "zh": "再见。",
+      "audio": "res://assets/audio/goodbye.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 6,
+        "file_page": 13,
+        "region_id": "p13-r15",
+        "chapter_id": "unit-2",
+        "kind": "textbook_exact",
+        "source_text": "Goodbye.",
+        "source_verified_in_manifest": true
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "apple": {
+      "en": "apple",
+      "zh": "苹果",
+      "audio": "res://assets/audio/apple.mp3",
+      "role": "life_preview",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 52,
+        "file_page": 59,
+        "region_id": "p59-r6",
+        "chapter_id": "unit-9",
+        "kind": "textbook_exact",
+        "source_text": "apple",
+        "source_verified_in_manifest": false
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "cake": {
+      "en": "cake",
+      "zh": "蛋糕",
+      "audio": "res://assets/audio/cake.mp3",
+      "role": "life_preview",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 58,
+        "file_page": 65,
+        "region_id": "p65-r24",
+        "chapter_id": "unit-10",
+        "kind": "textbook_exact",
+        "source_text": "cake",
+        "source_verified_in_manifest": true
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "milk": {
+      "en": "milk",
+      "zh": "牛奶",
+      "audio": "res://assets/audio/milk.mp3",
+      "role": "life_preview",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 23,
+        "file_page": 30,
+        "region_id": "p30-r9",
+        "chapter_id": "unit-4",
+        "kind": "textbook_exact",
+        "source_text": "milk",
+        "source_verified_in_manifest": false
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "bread": {
+      "en": "bread",
+      "zh": "面包",
+      "audio": "res://assets/audio/bread.mp3",
+      "role": "life_preview",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g4-1",
+        "page": 68,
+        "file_page": 75,
+        "region_id": "p75-r17",
+        "chapter_id": "section-68",
+        "kind": "textbook_exact",
+        "source_text": "bread",
+        "source_verified_in_manifest": false
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "please": {
+      "en": "please",
+      "zh": "请",
+      "audio": "res://assets/audio/please.mp3",
+      "role": "life_preview",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-2",
+        "page": 66,
+        "file_page": 73,
+        "region_id": "p73-r4",
+        "chapter_id": "section-66",
+        "kind": "textbook_exact",
+        "source_text": "please",
+        "source_verified_in_manifest": false
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "like_apples": {
+      "en": "I like apples.",
+      "zh": "我喜欢苹果。",
+      "audio": "res://assets/audio/like_apples.mp3",
+      "role": "life_preview",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 53,
+        "file_page": 60,
+        "region_id": "p60-r4",
+        "chapter_id": "unit-9",
+        "kind": "textbook_exact",
+        "source_text": "I like apples.",
+        "source_verified_in_manifest": false
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "im_eight": {
+      "en": "I'm eight.",
+      "zh": "我八岁了。",
+      "audio": "res://assets/audio/im_eight.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 11,
+        "file_page": 18,
+        "region_id": "p18-r13",
+        "chapter_id": "unit-3",
+        "kind": "textbook_exact",
+        "source_text": "I'm eight.",
+        "source_verified_in_manifest": false
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "nine": {
+      "en": "nine",
+      "zh": "九",
+      "audio": "res://assets/audio/nine.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 12,
+        "file_page": 19,
+        "region_id": "p19-r12",
+        "chapter_id": "unit-3",
+        "kind": "textbook_exact",
+        "source_text": "nine",
+        "source_verified_in_manifest": false
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "hello_lingling": {
+      "en": "Hello, I'm Lingling.",
+      "zh": "你好，我是玲玲。",
+      "audio": "res://assets/audio/hello_lingling.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 1,
+        "file_page": 8,
+        "region_id": "p8-r8",
+        "chapter_id": "unit-1",
+        "kind": "textbook_exact",
+        "source_text": "Hello, I'm Lingling.",
+        "source_verified_in_manifest": true
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    },
+    "good_afternoon": {
+      "en": "Good afternoon, class.",
+      "zh": "同学们，下午好。",
+      "audio": "res://assets/audio/good_afternoon.mp3",
+      "role": "core",
+      "translation_kind": "authored_gloss",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 6,
+        "file_page": 13,
+        "region_id": "p13-r8",
+        "chapter_id": "unit-2",
+        "kind": "textbook_exact",
+        "source_text": "Good afternoon, class.",
+        "source_verified_in_manifest": true
+      },
+      "audio_kind": "cached_synthetic_speech",
+      "voice": "en-US-JennyNeural"
+    }
+  },
+  "questions": [
+    {
+      "id": "u1_greeting",
+      "unit": 1,
+      "prompt": "Hello!",
+      "zh": "你好！",
+      "audio": "hello",
+      "instruction": "第一次见面，朋友在向你问好。选一句回应。",
+      "choices": [
+        {
+          "id": "greet",
+          "text": "Hello!",
+          "zh": "你好！"
+        },
+        {
+          "id": "thanks",
+          "text": "Thank you.",
+          "zh": "谢谢你。"
+        },
+        {
+          "id": "age",
+          "text": "I'm nine.",
+          "zh": "我九岁了。"
+        }
+      ],
+      "answer": "greet",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 1,
+        "file_page": 8,
+        "region_id": "p8-r2",
+        "chapter_id": "unit-1",
+        "kind": "authored_adaptation",
+        "source_text": "Hello!",
+        "source_verified_in_manifest": true,
+        "note": "游戏情境与选择题为新编；仅目标英语表达取自所列教材位置。"
+      }
+    },
+    {
+      "id": "u1_morning",
+      "unit": 1,
+      "prompt": "Good morning.",
+      "zh": "早上好。",
+      "audio": "good_morning",
+      "instruction": "清晨到校，选一句早晨的问候。",
+      "choices": [
+        {
+          "id": "thanks",
+          "text": "Thank you.",
+          "zh": "谢谢你。"
+        },
+        {
+          "id": "morning",
+          "text": "Good morning.",
+          "zh": "早上好。"
+        },
+        {
+          "id": "bye",
+          "text": "Goodbye.",
+          "zh": "再见。"
+        }
+      ],
+      "answer": "morning",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 1,
+        "file_page": 8,
+        "region_id": "p8-r10",
+        "chapter_id": "unit-1",
+        "kind": "authored_adaptation",
+        "source_text": "Good morning.",
+        "source_verified_in_manifest": true,
+        "note": "游戏情境与选择题为新编；仅目标英语表达取自所列教材位置。"
+      }
+    },
+    {
+      "id": "u1_goodbye",
+      "unit": 1,
+      "prompt": "Thank you.",
+      "zh": "谢谢你。",
+      "audio": "thank_you",
+      "instruction": "朋友帮你找到回家的路。离开前，选一句表达感谢。",
+      "choices": [
+        {
+          "id": "morning",
+          "text": "Good morning.",
+          "zh": "早上好。"
+        },
+        {
+          "id": "greet",
+          "text": "Hello!",
+          "zh": "你好！"
+        },
+        {
+          "id": "thanks",
+          "text": "Thank you.",
+          "zh": "谢谢你。"
+        }
+      ],
+      "answer": "thanks",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 4,
+        "file_page": 11,
+        "region_id": "p11-r4",
+        "chapter_id": "unit-1",
+        "kind": "authored_adaptation",
+        "source_text": "Thank you.",
+        "source_verified_in_manifest": false,
+        "note": "游戏情境与选择题为新编；仅目标英语表达取自所列教材位置。"
+      }
+    },
+    {
+      "id": "u2_name",
+      "unit": 2,
+      "prompt": "What's your name?",
+      "zh": "你叫什么名字？",
+      "audio": "what_name",
+      "instruction": "新同学正在问你的名字。请替露露选一句回答。",
+      "choices": [
+        {
+          "id": "lulu",
+          "text": "My name is Lulu.",
+          "zh": "我叫露露。"
+        },
+        {
+          "id": "nine",
+          "text": "I'm nine.",
+          "zh": "我九岁了。"
+        },
+        {
+          "id": "thanks",
+          "text": "Thank you.",
+          "zh": "谢谢你。"
+        }
+      ],
+      "answer": "lulu",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 6,
+        "file_page": 13,
+        "region_id": "p13-r11",
+        "chapter_id": "unit-2",
+        "kind": "authored_adaptation",
+        "source_text": "What's your name?",
+        "source_verified_in_manifest": true,
+        "note": "游戏情境与选择题为新编；仅目标英语表达取自所列教材位置。"
+      }
+    },
+    {
+      "id": "u2_intro",
+      "unit": 2,
+      "prompt": "My name is Lulu.",
+      "zh": "我叫露露。",
+      "audio": "my_name",
+      "instruction": "听一听露露的自我介绍。选出她介绍的内容。",
+      "choices": [
+        {
+          "id": "age",
+          "text": "Nine",
+          "zh": "九岁"
+        },
+        {
+          "id": "name",
+          "text": "Lulu",
+          "zh": "露露"
+        },
+        {
+          "id": "morning",
+          "text": "Morning",
+          "zh": "早晨"
+        }
+      ],
+      "answer": "name",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 6,
+        "file_page": 13,
+        "region_id": "p13-r14",
+        "chapter_id": "unit-2",
+        "kind": "authored_adaptation",
+        "source_text": "My name is Lulu.",
+        "source_verified_in_manifest": true,
+        "note": "游戏情境与选择题为新编；仅目标英语表达取自所列教材位置。"
+      }
+    },
+    {
+      "id": "u2_polite",
+      "unit": 2,
+      "prompt": "Goodbye.",
+      "zh": "再见。",
+      "audio": "goodbye",
+      "instruction": "放学要离开了，选一句向朋友告别的话。",
+      "choices": [
+        {
+          "id": "name",
+          "text": "What's your name?",
+          "zh": "你叫什么名字？"
+        },
+        {
+          "id": "hello",
+          "text": "Hello!",
+          "zh": "你好！"
+        },
+        {
+          "id": "bye",
+          "text": "Goodbye.",
+          "zh": "再见。"
+        }
+      ],
+      "answer": "bye",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 6,
+        "file_page": 13,
+        "region_id": "p13-r15",
+        "chapter_id": "unit-2",
+        "kind": "authored_adaptation",
+        "source_text": "Goodbye.",
+        "source_verified_in_manifest": true,
+        "note": "游戏情境与选择题为新编；仅目标英语表达取自所列教材位置。"
+      }
+    },
+    {
+      "id": "u3_age",
+      "unit": 3,
+      "prompt": "How old are you?",
+      "zh": "你几岁了？",
+      "audio": "how_old",
+      "instruction": "朋友问年龄。请替九岁的露露选一句回答。",
+      "choices": [
+        {
+          "id": "name",
+          "text": "My name is Lulu.",
+          "zh": "我叫露露。"
+        },
+        {
+          "id": "nine",
+          "text": "I'm nine.",
+          "zh": "我九岁了。"
+        },
+        {
+          "id": "hello",
+          "text": "Hello!",
+          "zh": "你好！"
+        }
+      ],
+      "answer": "nine",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 11,
+        "file_page": 18,
+        "region_id": "p18-r11",
+        "chapter_id": "unit-3",
+        "kind": "authored_adaptation",
+        "source_text": "How old are you?",
+        "source_verified_in_manifest": false,
+        "note": "游戏情境与选择题为新编；仅目标英语表达取自所列教材位置。"
+      }
+    },
+    {
+      "id": "u3_nine",
+      "unit": 3,
+      "prompt": "I'm nine.",
+      "zh": "我九岁了。",
+      "audio": "im_nine",
+      "instruction": "听一听，露露说自己几岁了？",
+      "choices": [
+        {
+          "id": "eight",
+          "text": "Eight",
+          "zh": "八"
+        },
+        {
+          "id": "six",
+          "text": "Six",
+          "zh": "六"
+        },
+        {
+          "id": "nine",
+          "text": "Nine",
+          "zh": "九"
+        }
+      ],
+      "answer": "nine",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 11,
+        "file_page": 18,
+        "region_id": "p18-r9",
+        "chapter_id": "unit-3",
+        "kind": "authored_adaptation",
+        "source_text": "I'm nine.",
+        "source_verified_in_manifest": false,
+        "note": "游戏情境与选择题为新编；仅目标英语表达取自所列教材位置。"
+      }
+    },
+    {
+      "id": "u3_birthday",
+      "unit": 3,
+      "prompt": "I'm eight.",
+      "zh": "我八岁了。",
+      "audio": "im_eight",
+      "instruction": "生日名牌上写着 8。请选出八岁的英语表达。",
+      "choices": [
+        {
+          "id": "eight",
+          "text": "I'm eight.",
+          "zh": "我八岁了。"
+        },
+        {
+          "id": "nine",
+          "text": "I'm nine.",
+          "zh": "我九岁了。"
+        },
+        {
+          "id": "name",
+          "text": "My name is Lulu.",
+          "zh": "我叫露露。"
+        }
+      ],
+      "answer": "eight",
+      "source": {
+        "book_id": "xiangshao-g3-1",
+        "page": 11,
+        "file_page": 18,
+        "region_id": "p18-r13",
+        "chapter_id": "unit-3",
+        "kind": "authored_adaptation",
+        "source_text": "I'm eight.",
+        "source_verified_in_manifest": false,
+        "note": "游戏情境与选择题为新编；仅目标英语表达取自所列教材位置。"
+      }
+    }
+  ],
+  "assessment_policy": {
+    "independent": "首次作答正确，且本题未打开中文提示或接受答案辅助。",
+    "assisted": "打开中文提示、答案辅助或错后重试所得的正确结果。",
+    "audio_replay_is_assistance": false,
+    "note": "数据仅声明记录口径，实际记录与解锁逻辑由游戏状态模块执行；九题不构成标准化水平测评。"
+  }
+}

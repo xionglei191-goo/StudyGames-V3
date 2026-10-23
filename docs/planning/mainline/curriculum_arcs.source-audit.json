@@ -1,0 +1,4169 @@
+{
+  "schema_version": 1,
+  "status": "source_inventory_and_design_crosscheck",
+  "read_at_utc": "2026-10-22T07:39:18.271662+00:00",
+  "library_path": "D:\\Project\\Englishbook\\public\\library.json",
+  "library_sha256": "d92ddc038e5562733e8cac217d65f5102351c2dab4550da81f94c26113b759f5",
+  "source_interpretation": {
+    "manifest_sha256": "本次实际读取 JSON 文件的 SHA-256。",
+    "declared_source_sha256": "源 JSON 自报的原始教材文件 SHA-256，未在本次重新散列原始 PDF。",
+    "sourceVerified": "仅源区域字段自报；不等同本次人工页图审校。",
+    "printed_page_policy": "每个单元独立采用 chapter.printedStart / printedEnd；缺失时逐页查 pages[].printedPage，禁止固定偏移推算。",
+    "title_only": "其余 71 单元目标仅据目录标题，不能作为完整知识点或语言功能清单。"
+  },
+  "coverage": {
+    "books": 8,
+    "units": 81,
+    "objective_region_text_read": 10,
+    "chapter_title_only": 71,
+    "whole_units_human_reviewed": 0,
+    "page_images_independently_reviewed_for_this_plan": 0,
+    "missing_printed_pages": []
+  },
+  "runtime_static_basis": {
+    "project_version": "0.4.0",
+    "observed_by": "source_code_read_only",
+    "files": [
+      {
+        "path": "game/project.godot",
+        "sha256": "878ab46be6a9d4450f8ef988a85a8c99a7b80a37e333d7277013a334c7032d55"
+      },
+      {
+        "path": "game/scripts/game_state.gd",
+        "sha256": "6aac01c5661d745395d4f47c04b9f92cc1f5c7203b9886e674f84fbdecedc231"
+      },
+      {
+        "path": "game/scripts/main.gd",
+        "sha256": "aacbee16401ea333550de90b862a82ac49177c74927ecc04397687274da4b412"
+      },
+      {
+        "path": "game/data/landmark_interiors.json",
+        "sha256": "a489f04fa3962b7c6b36da1e15d914005d5d22e18420935a55764b9fea45e05d"
+      }
+    ],
+    "runtime_validation_performed_for_this_plan": false
+  },
+  "books": [
+    {
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "edition": "2022年课标修订版",
+      "grade": 3,
+      "volume": 1,
+      "manifest_path": "D:\\Project\\Englishbook\\public\\books\\xiangshao-g3-1.json",
+      "manifest_sha256": "4b6a169bc93952e4bae98840bf4f7909bf86252965617ef3860815b9ba1ee67f",
+      "source_file": "sources/library/xiangshao-g3-1/textbook.pdf",
+      "declared_source_sha256": "4df3652b94ad6b12b0b7fd5a10901d7289e2fd7b3f4263ccb4f4583ed5abc9d2",
+      "content_revision": "reader-finalization-v1",
+      "excluded_chapters": [
+        {
+          "id": "front",
+          "title": "开始阅读",
+          "file_page_start": 1,
+          "file_page_end": 7
+        },
+        {
+          "id": "section-16",
+          "title": "Greetings",
+          "file_page_start": 23,
+          "file_page_end": 23
+        },
+        {
+          "id": "section-17",
+          "title": "Show numbers with our fingers",
+          "file_page_start": 24,
+          "file_page_end": 24
+        },
+        {
+          "id": "section-18",
+          "title": "Assessment I",
+          "file_page_start": 25,
+          "file_page_end": 27
+        },
+        {
+          "id": "section-36",
+          "title": "Family love",
+          "file_page_start": 43,
+          "file_page_end": 43
+        },
+        {
+          "id": "section-37",
+          "title": "The five senses",
+          "file_page_start": 44,
+          "file_page_end": 44
+        },
+        {
+          "id": "section-38",
+          "title": "Assessment II",
+          "file_page_start": 45,
+          "file_page_end": 47
+        },
+        {
+          "id": "section-61",
+          "title": "Animal sounds",
+          "file_page_start": 68,
+          "file_page_end": 68
+        },
+        {
+          "id": "section-62",
+          "title": "Happy birthday！",
+          "file_page_start": 69,
+          "file_page_end": 69
+        },
+        {
+          "id": "section-63",
+          "title": "Assessment III",
+          "file_page_start": 70,
+          "file_page_end": 72
+        },
+        {
+          "id": "section-66",
+          "title": "Vocabulary",
+          "file_page_start": 73,
+          "file_page_end": 75
+        },
+        {
+          "id": "section-69",
+          "title": "Word List",
+          "file_page_start": 76,
+          "file_page_end": 79
+        },
+        {
+          "id": "section-73",
+          "title": "Structures",
+          "file_page_start": 80,
+          "file_page_end": 82
+        },
+        {
+          "id": "section-76",
+          "title": "Some Common Animals",
+          "file_page_start": 83,
+          "file_page_end": 84
+        },
+        {
+          "id": "section-78",
+          "title": "Alphabet",
+          "file_page_start": 85,
+          "file_page_end": 86
+        },
+        {
+          "id": "section-80",
+          "title": "Classroom Language",
+          "file_page_start": 87,
+          "file_page_end": 87
+        },
+        {
+          "id": "section-81",
+          "title": "Formative Assessment",
+          "file_page_start": 88,
+          "file_page_end": 88
+        },
+        {
+          "id": "back",
+          "title": "后记",
+          "file_page_start": 89,
+          "file_page_end": 89
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "unit-1",
+          "unit_label": "Unit 1",
+          "title": "Hello！",
+          "file_page_start": 8,
+          "file_page_end": 12,
+          "chapter_printed_start": 1,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 8,
+              "printed_page": 1,
+              "reviewed": false
+            },
+            {
+              "file_page": 9,
+              "printed_page": 2,
+              "reviewed": false
+            },
+            {
+              "file_page": 10,
+              "printed_page": 3,
+              "reviewed": false
+            },
+            {
+              "file_page": 11,
+              "printed_page": 4,
+              "reviewed": false
+            },
+            {
+              "file_page": 12,
+              "printed_page": 5,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": [
+            {
+              "file_page": 8,
+              "printed_page": 1,
+              "region": {
+                "id": "p8-r5",
+                "text": "1. Greet people 2. Say your name 3. Read letters Aa, Bb, Cc",
+                "rect": [
+                  0.559744,
+                  0.131829,
+                  0.191811,
+                  0.049071
+                ],
+                "source": "ai-repaired",
+                "reviewed": false,
+                "audio": "/audio/edge-jenny-v1/4150bf1478dc32ffacbaf94f.mp3",
+                "sourceIds": [
+                  "p8-r5"
+                ],
+                "sourceVerified": true
+              }
+            }
+          ]
+        },
+        {
+          "unit_id": "unit-2",
+          "unit_label": "Unit 2",
+          "title": "What's your name？",
+          "file_page_start": 13,
+          "file_page_end": 17,
+          "chapter_printed_start": 6,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 13,
+              "printed_page": 6,
+              "reviewed": false
+            },
+            {
+              "file_page": 14,
+              "printed_page": 7,
+              "reviewed": false
+            },
+            {
+              "file_page": 15,
+              "printed_page": 8,
+              "reviewed": false
+            },
+            {
+              "file_page": 16,
+              "printed_page": 9,
+              "reviewed": false
+            },
+            {
+              "file_page": 17,
+              "printed_page": 10,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": [
+            {
+              "file_page": 13,
+              "printed_page": 6,
+              "region": {
+                "id": "p13-r5",
+                "text": "1. Ask someone's name 2. Say goodbye 3. Read letters Dd, Ee, Ff, Gg",
+                "rect": [
+                  0.547881,
+                  0.128719,
+                  0.214778,
+                  0.049071
+                ],
+                "source": "ai-repaired",
+                "reviewed": false,
+                "audio": "/audio/edge-jenny-v1/6f3a7dcd1e59a52255c0f940.mp3",
+                "sourceIds": [
+                  "p13-r5"
+                ],
+                "sourceVerified": true
+              }
+            }
+          ]
+        },
+        {
+          "unit_id": "unit-3",
+          "unit_label": "Unit 3",
+          "title": "How old are you？",
+          "file_page_start": 18,
+          "file_page_end": 22,
+          "chapter_printed_start": 11,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 18,
+              "printed_page": 11,
+              "reviewed": false
+            },
+            {
+              "file_page": 19,
+              "printed_page": 12,
+              "reviewed": false
+            },
+            {
+              "file_page": 20,
+              "printed_page": 13,
+              "reviewed": false
+            },
+            {
+              "file_page": 21,
+              "printed_page": 14,
+              "reviewed": false
+            },
+            {
+              "file_page": 22,
+              "printed_page": 15,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": [
+            {
+              "file_page": 18,
+              "printed_page": 11,
+              "region": {
+                "id": "p18-r5",
+                "text": "1. Ask someone's age 2. Count from 1 to 10 3. Read letters Hh, Ii, Jj, Kk",
+                "rect": [
+                  0.559127,
+                  0.131363,
+                  0.205118,
+                  0.049071
+                ],
+                "source": "pdf",
+                "reviewed": false,
+                "audio": "/audio/edge-jenny-v1/65a42c7c332124b83554f620.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "unit_id": "unit-4",
+          "unit_label": "Unit 4",
+          "title": "This is my family",
+          "file_page_start": 28,
+          "file_page_end": 32,
+          "chapter_printed_start": 21,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 28,
+              "printed_page": 21,
+              "reviewed": false
+            },
+            {
+              "file_page": 29,
+              "printed_page": 22,
+              "reviewed": false
+            },
+            {
+              "file_page": 30,
+              "printed_page": 23,
+              "reviewed": false
+            },
+            {
+              "file_page": 31,
+              "printed_page": 24,
+              "reviewed": false
+            },
+            {
+              "file_page": 32,
+              "printed_page": 25,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": [
+            {
+              "file_page": 28,
+              "printed_page": 21,
+              "region": {
+                "id": "p28-r5",
+                "text": "1. Name family members 2. Ask about the relations in a family 3. Read letters Ll, Mm, Nn, Oo, Pp",
+                "rect": [
+                  0.559127,
+                  0.127604,
+                  0.265259,
+                  0.049071
+                ],
+                "source": "pdf",
+                "reviewed": false,
+                "audio": "/audio/edge-jenny-v1/81dce098957305c15c146872.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "unit_id": "unit-5",
+          "unit_label": "Unit 5",
+          "title": "Is this your pen？",
+          "file_page_start": 33,
+          "file_page_end": 37,
+          "chapter_printed_start": 26,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 33,
+              "printed_page": 26,
+              "reviewed": false
+            },
+            {
+              "file_page": 34,
+              "printed_page": 27,
+              "reviewed": false
+            },
+            {
+              "file_page": 35,
+              "printed_page": 28,
+              "reviewed": false
+            },
+            {
+              "file_page": 36,
+              "printed_page": 29,
+              "reviewed": false
+            },
+            {
+              "file_page": 37,
+              "printed_page": 30,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": [
+            {
+              "file_page": 33,
+              "printed_page": 26,
+              "region": {
+                "id": "p33-r5",
+                "text": "1. Name school things 2. Ask about the ownership of something 3. Read letters Qq, Rr, Ss, Tt",
+                "rect": [
+                  0.547881,
+                  0.138515,
+                  0.292922,
+                  0.049071
+                ],
+                "source": "pdf",
+                "reviewed": false,
+                "audio": "/audio/edge-jenny-v1/a6c9c97995edd044515ec8cf.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "unit_id": "unit-6",
+          "unit_label": "Unit 6",
+          "title": "Touch your head",
+          "file_page_start": 38,
+          "file_page_end": 42,
+          "chapter_printed_start": 31,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 38,
+              "printed_page": 31,
+              "reviewed": false
+            },
+            {
+              "file_page": 39,
+              "printed_page": 32,
+              "reviewed": false
+            },
+            {
+              "file_page": 40,
+              "printed_page": 33,
+              "reviewed": false
+            },
+            {
+              "file_page": 41,
+              "printed_page": 34,
+              "reviewed": false
+            },
+            {
+              "file_page": 42,
+              "printed_page": 35,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": [
+            {
+              "file_page": 38,
+              "printed_page": 31,
+              "region": {
+                "id": "p38-r5",
+                "text": "1. Name body parts 2. Listen and act with your body 3. Read letters Uu, Vv, Ww, Xx, Yy, Zz",
+                "rect": [
+                  0.558519,
+                  0.130244,
+                  0.280472,
+                  0.049071
+                ],
+                "source": "ai-repaired",
+                "reviewed": false,
+                "audio": "/audio/edge-jenny-v1/480f91ac5d85af57c8b340f7.mp3",
+                "sourceIds": [
+                  "p38-r5"
+                ],
+                "sourceVerified": true
+              }
+            }
+          ]
+        },
+        {
+          "unit_id": "unit-7",
+          "unit_label": "Unit 7",
+          "title": "What colour is it？",
+          "file_page_start": 48,
+          "file_page_end": 52,
+          "chapter_printed_start": 41,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 48,
+              "printed_page": 41,
+              "reviewed": false
+            },
+            {
+              "file_page": 49,
+              "printed_page": 42,
+              "reviewed": false
+            },
+            {
+              "file_page": 50,
+              "printed_page": 43,
+              "reviewed": false
+            },
+            {
+              "file_page": 51,
+              "printed_page": 44,
+              "reviewed": false
+            },
+            {
+              "file_page": 52,
+              "printed_page": 45,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": [
+            {
+              "file_page": 48,
+              "printed_page": 41,
+              "region": {
+                "id": "p48-r5",
+                "text": "1. Name some colours 2. Talk about colours of things",
+                "rect": [
+                  0.558519,
+                  0.135131,
+                  0.21787,
+                  0.033156
+                ],
+                "source": "ai-repaired",
+                "reviewed": false,
+                "audio": "/audio/edge-jenny-v1/fd7a531d41b38aa52aec135e.mp3",
+                "sourceIds": [
+                  "p48-r5"
+                ],
+                "sourceVerified": true
+              }
+            }
+          ]
+        },
+        {
+          "unit_id": "unit-8",
+          "unit_label": "Unit 8",
+          "title": "What's this？",
+          "file_page_start": 53,
+          "file_page_end": 57,
+          "chapter_printed_start": 46,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 53,
+              "printed_page": 46,
+              "reviewed": false
+            },
+            {
+              "file_page": 54,
+              "printed_page": 47,
+              "reviewed": false
+            },
+            {
+              "file_page": 55,
+              "printed_page": 48,
+              "reviewed": false
+            },
+            {
+              "file_page": 56,
+              "printed_page": 49,
+              "reviewed": false
+            },
+            {
+              "file_page": 57,
+              "printed_page": 50,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": [
+            {
+              "file_page": 53,
+              "printed_page": 46,
+              "region": {
+                "id": "p53-r5",
+                "text": "1. Name some animals 2. Talk about animals",
+                "rect": [
+                  0.547881,
+                  0.134368,
+                  0.169857,
+                  0.033156
+                ],
+                "source": "ai-repaired",
+                "reviewed": false,
+                "audio": "/audio/edge-jenny-v1/e5ecc5863233bd50018f078c.mp3",
+                "sourceIds": [
+                  "p53-r5"
+                ],
+                "sourceVerified": true
+              }
+            }
+          ]
+        },
+        {
+          "unit_id": "unit-9",
+          "unit_label": "Unit 9",
+          "title": "I like apples",
+          "file_page_start": 58,
+          "file_page_end": 62,
+          "chapter_printed_start": 51,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 58,
+              "printed_page": 51,
+              "reviewed": false
+            },
+            {
+              "file_page": 59,
+              "printed_page": 52,
+              "reviewed": false
+            },
+            {
+              "file_page": 60,
+              "printed_page": 53,
+              "reviewed": false
+            },
+            {
+              "file_page": 61,
+              "printed_page": 54,
+              "reviewed": false
+            },
+            {
+              "file_page": 62,
+              "printed_page": 55,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": [
+            {
+              "file_page": 58,
+              "printed_page": 51,
+              "region": {
+                "id": "p58-r5",
+                "text": "1. Name some fruit 2. Talk about fruit you like or don't like",
+                "rect": [
+                  0.559051,
+                  0.145635,
+                  0.277132,
+                  0.033156
+                ],
+                "source": "pdf",
+                "reviewed": false,
+                "audio": "/audio/edge-jenny-v1/969b8a2c77a78cb7fbbe7abb.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "unit_id": "unit-10",
+          "unit_label": "Unit 10",
+          "title": "Happy birthday！",
+          "file_page_start": 63,
+          "file_page_end": 67,
+          "chapter_printed_start": 56,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 63,
+              "printed_page": 56,
+              "reviewed": false
+            },
+            {
+              "file_page": 64,
+              "printed_page": 57,
+              "reviewed": false
+            },
+            {
+              "file_page": 65,
+              "printed_page": 58,
+              "reviewed": false
+            },
+            {
+              "file_page": 66,
+              "printed_page": 59,
+              "reviewed": false
+            },
+            {
+              "file_page": 67,
+              "printed_page": 60,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": [
+            {
+              "file_page": 63,
+              "printed_page": 56,
+              "region": {
+                "id": "p63-r5",
+                "text": "1. Say “Happy birthday” 2. Understand the culture of birthdays 3. Show thanks when taking gifts",
+                "rect": [
+                  0.547881,
+                  0.14056,
+                  0.272352,
+                  0.049071
+                ],
+                "source": "ai-repaired",
+                "reviewed": false,
+                "audio": "/audio/edge-jenny-v1/007792799b743e0fae2ef561.mp3",
+                "sourceIds": [
+                  "p63-r5"
+                ],
+                "sourceVerified": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "edition": "2022年课标修订版",
+      "grade": 3,
+      "volume": 2,
+      "manifest_path": "D:\\Project\\Englishbook\\public\\books\\xiangshao-g3-2.json",
+      "manifest_sha256": "2becac3febf02fe7f2ebf20dd10639de3e1fc763d5cf8817f31271b41f0597c4",
+      "source_file": "sources/library/xiangshao-g3-2/textbook.pdf",
+      "declared_source_sha256": "75186f78e11608276322ba622d20f710f59b71050f49b115773cd606046729cd",
+      "content_revision": "reader-finalization-v1",
+      "excluded_chapters": [
+        {
+          "id": "front",
+          "title": "开始阅读",
+          "file_page_start": 1,
+          "file_page_end": 7
+        },
+        {
+          "id": "section-16",
+          "title": "Let's Know More",
+          "file_page_start": 23,
+          "file_page_end": 24
+        },
+        {
+          "id": "section-18",
+          "title": "Assessment I",
+          "file_page_start": 25,
+          "file_page_end": 27
+        },
+        {
+          "id": "section-36",
+          "title": "Let's Know More",
+          "file_page_start": 43,
+          "file_page_end": 44
+        },
+        {
+          "id": "section-38",
+          "title": "Assessment II",
+          "file_page_start": 45,
+          "file_page_end": 47
+        },
+        {
+          "id": "section-61",
+          "title": "Let's Know More",
+          "file_page_start": 68,
+          "file_page_end": 69
+        },
+        {
+          "id": "section-63",
+          "title": "Assessment III",
+          "file_page_start": 70,
+          "file_page_end": 72
+        },
+        {
+          "id": "section-66",
+          "title": "Vocabulary",
+          "file_page_start": 73,
+          "file_page_end": 75
+        },
+        {
+          "id": "section-69",
+          "title": "Word List",
+          "file_page_start": 76,
+          "file_page_end": 79
+        },
+        {
+          "id": "section-73",
+          "title": "Structures",
+          "file_page_start": 80,
+          "file_page_end": 82
+        },
+        {
+          "id": "section-76",
+          "title": "Some Common Fruit",
+          "file_page_start": 83,
+          "file_page_end": 84
+        },
+        {
+          "id": "section-78",
+          "title": "Time",
+          "file_page_start": 85,
+          "file_page_end": 85
+        },
+        {
+          "id": "section-79",
+          "title": "Jobs",
+          "file_page_start": 86,
+          "file_page_end": 86
+        },
+        {
+          "id": "section-80",
+          "title": "Vowels",
+          "file_page_start": 87,
+          "file_page_end": 87
+        },
+        {
+          "id": "section-81",
+          "title": "Formative Assessment",
+          "file_page_start": 88,
+          "file_page_end": 88
+        },
+        {
+          "id": "back",
+          "title": "后记",
+          "file_page_start": 89,
+          "file_page_end": 89
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "unit-1",
+          "unit_label": "Unit 1",
+          "title": "How are you?",
+          "file_page_start": 8,
+          "file_page_end": 12,
+          "chapter_printed_start": 1,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 8,
+              "printed_page": 1,
+              "reviewed": false
+            },
+            {
+              "file_page": 9,
+              "printed_page": 2,
+              "reviewed": false
+            },
+            {
+              "file_page": 10,
+              "printed_page": 3,
+              "reviewed": false
+            },
+            {
+              "file_page": 11,
+              "printed_page": 4,
+              "reviewed": false
+            },
+            {
+              "file_page": 12,
+              "printed_page": 5,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-2",
+          "unit_label": "Unit 2",
+          "title": "What time is it?",
+          "file_page_start": 13,
+          "file_page_end": 17,
+          "chapter_printed_start": 6,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 13,
+              "printed_page": 6,
+              "reviewed": false
+            },
+            {
+              "file_page": 14,
+              "printed_page": 7,
+              "reviewed": false
+            },
+            {
+              "file_page": 15,
+              "printed_page": 8,
+              "reviewed": false
+            },
+            {
+              "file_page": 16,
+              "printed_page": 9,
+              "reviewed": false
+            },
+            {
+              "file_page": 17,
+              "printed_page": 10,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-3",
+          "unit_label": "Unit 3",
+          "title": "What's the weather like?",
+          "file_page_start": 18,
+          "file_page_end": 22,
+          "chapter_printed_start": 11,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 18,
+              "printed_page": 11,
+              "reviewed": false
+            },
+            {
+              "file_page": 19,
+              "printed_page": 12,
+              "reviewed": false
+            },
+            {
+              "file_page": 20,
+              "printed_page": 13,
+              "reviewed": false
+            },
+            {
+              "file_page": 21,
+              "printed_page": 14,
+              "reviewed": false
+            },
+            {
+              "file_page": 22,
+              "printed_page": 15,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-4",
+          "unit_label": "Unit 4",
+          "title": "Do you like the dress?",
+          "file_page_start": 28,
+          "file_page_end": 32,
+          "chapter_printed_start": 21,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 28,
+              "printed_page": 21,
+              "reviewed": false
+            },
+            {
+              "file_page": 29,
+              "printed_page": 22,
+              "reviewed": false
+            },
+            {
+              "file_page": 30,
+              "printed_page": 23,
+              "reviewed": false
+            },
+            {
+              "file_page": 31,
+              "printed_page": 24,
+              "reviewed": false
+            },
+            {
+              "file_page": 32,
+              "printed_page": 25,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-5",
+          "unit_label": "Unit 5",
+          "title": "How many kites are there?",
+          "file_page_start": 33,
+          "file_page_end": 37,
+          "chapter_printed_start": 26,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 33,
+              "printed_page": 26,
+              "reviewed": false
+            },
+            {
+              "file_page": 34,
+              "printed_page": 27,
+              "reviewed": false
+            },
+            {
+              "file_page": 35,
+              "printed_page": 28,
+              "reviewed": false
+            },
+            {
+              "file_page": 36,
+              "printed_page": 29,
+              "reviewed": false
+            },
+            {
+              "file_page": 37,
+              "printed_page": 30,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-6",
+          "unit_label": "Unit 6",
+          "title": "There is an egg here",
+          "file_page_start": 38,
+          "file_page_end": 42,
+          "chapter_printed_start": 31,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 38,
+              "printed_page": 31,
+              "reviewed": false
+            },
+            {
+              "file_page": 39,
+              "printed_page": 32,
+              "reviewed": false
+            },
+            {
+              "file_page": 40,
+              "printed_page": 33,
+              "reviewed": false
+            },
+            {
+              "file_page": 41,
+              "printed_page": 34,
+              "reviewed": false
+            },
+            {
+              "file_page": 42,
+              "printed_page": 35,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-7",
+          "unit_label": "Unit 7",
+          "title": "Wash your hands",
+          "file_page_start": 48,
+          "file_page_end": 52,
+          "chapter_printed_start": 41,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 48,
+              "printed_page": 41,
+              "reviewed": false
+            },
+            {
+              "file_page": 49,
+              "printed_page": 42,
+              "reviewed": false
+            },
+            {
+              "file_page": 50,
+              "printed_page": 43,
+              "reviewed": false
+            },
+            {
+              "file_page": 51,
+              "printed_page": 44,
+              "reviewed": false
+            },
+            {
+              "file_page": 52,
+              "printed_page": 45,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-8",
+          "unit_label": "Unit 8",
+          "title": "Children's Day",
+          "file_page_start": 53,
+          "file_page_end": 57,
+          "chapter_printed_start": 46,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 53,
+              "printed_page": 46,
+              "reviewed": false
+            },
+            {
+              "file_page": 54,
+              "printed_page": 47,
+              "reviewed": false
+            },
+            {
+              "file_page": 55,
+              "printed_page": 48,
+              "reviewed": false
+            },
+            {
+              "file_page": 56,
+              "printed_page": 49,
+              "reviewed": false
+            },
+            {
+              "file_page": 57,
+              "printed_page": 50,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-9",
+          "unit_label": "Unit 9",
+          "title": "I go there by bus",
+          "file_page_start": 58,
+          "file_page_end": 62,
+          "chapter_printed_start": 51,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 58,
+              "printed_page": 51,
+              "reviewed": false
+            },
+            {
+              "file_page": 59,
+              "printed_page": 52,
+              "reviewed": false
+            },
+            {
+              "file_page": 60,
+              "printed_page": 53,
+              "reviewed": false
+            },
+            {
+              "file_page": 61,
+              "printed_page": 54,
+              "reviewed": false
+            },
+            {
+              "file_page": 62,
+              "printed_page": 55,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-10",
+          "unit_label": "Unit 10",
+          "title": "Is she a driver?",
+          "file_page_start": 63,
+          "file_page_end": 67,
+          "chapter_printed_start": 56,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 63,
+              "printed_page": 56,
+              "reviewed": false
+            },
+            {
+              "file_page": 64,
+              "printed_page": 57,
+              "reviewed": false
+            },
+            {
+              "file_page": 65,
+              "printed_page": 58,
+              "reviewed": false
+            },
+            {
+              "file_page": 66,
+              "printed_page": 59,
+              "reviewed": false
+            },
+            {
+              "file_page": 67,
+              "printed_page": 60,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        }
+      ]
+    },
+    {
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "edition": "2022年课标修订版",
+      "grade": 4,
+      "volume": 1,
+      "manifest_path": "D:\\Project\\Englishbook\\public\\books\\xiangshao-g4-1.json",
+      "manifest_sha256": "b445a429cfe54c1711aaeaf3e4e6c393ea57d58e4c6f44d4bb88d2b35e6097ee",
+      "source_file": "sources/library/xiangshao-g4-1/textbook.pdf",
+      "declared_source_sha256": "2190a8a0ae11b5713e73cbbd33843ecc7ce34f40a8fd0ac4f24975efe47d6686",
+      "content_revision": "reader-finalization-v1",
+      "excluded_chapters": [
+        {
+          "id": "front",
+          "title": "开始阅读",
+          "file_page_start": 1,
+          "file_page_end": 7
+        },
+        {
+          "id": "section-16",
+          "title": "School life",
+          "file_page_start": 23,
+          "file_page_end": 23
+        },
+        {
+          "id": "section-17",
+          "title": "What do you eat for breakfast?",
+          "file_page_start": 24,
+          "file_page_end": 24
+        },
+        {
+          "id": "section-18",
+          "title": "Assessment I",
+          "file_page_start": 25,
+          "file_page_end": 27
+        },
+        {
+          "id": "section-36",
+          "title": "Animals",
+          "file_page_start": 43,
+          "file_page_end": 43
+        },
+        {
+          "id": "section-37",
+          "title": "Hop! Skip! Jump!",
+          "file_page_start": 44,
+          "file_page_end": 44
+        },
+        {
+          "id": "section-38",
+          "title": "Assessment II",
+          "file_page_start": 45,
+          "file_page_end": 47
+        },
+        {
+          "id": "section-61",
+          "title": "Rooms",
+          "file_page_start": 68,
+          "file_page_end": 68
+        },
+        {
+          "id": "section-62",
+          "title": "Jobs",
+          "file_page_start": 69,
+          "file_page_end": 69
+        },
+        {
+          "id": "section-63",
+          "title": "Assessment III",
+          "file_page_start": 70,
+          "file_page_end": 72
+        },
+        {
+          "id": "section-66",
+          "title": "Big Bird and Little Fish",
+          "file_page_start": 73,
+          "file_page_end": 73
+        },
+        {
+          "id": "section-67",
+          "title": "I Want to Be a Spaceman!",
+          "file_page_start": 74,
+          "file_page_end": 74
+        },
+        {
+          "id": "section-68",
+          "title": "Vocabulary",
+          "file_page_start": 75,
+          "file_page_end": 77
+        },
+        {
+          "id": "section-71",
+          "title": "Word List",
+          "file_page_start": 78,
+          "file_page_end": 81
+        },
+        {
+          "id": "section-75",
+          "title": "Structures",
+          "file_page_start": 82,
+          "file_page_end": 85
+        },
+        {
+          "id": "section-79",
+          "title": "Things at Home",
+          "file_page_start": 86,
+          "file_page_end": 86
+        },
+        {
+          "id": "section-80",
+          "title": "Some Common Food",
+          "file_page_start": 87,
+          "file_page_end": 87
+        },
+        {
+          "id": "section-81",
+          "title": "Formative Assessment",
+          "file_page_start": 88,
+          "file_page_end": 88
+        },
+        {
+          "id": "back",
+          "title": "后记",
+          "file_page_start": 89,
+          "file_page_end": 89
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "unit-1",
+          "unit_label": "Unit 1",
+          "title": "This is our school",
+          "file_page_start": 8,
+          "file_page_end": 12,
+          "chapter_printed_start": 1,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 8,
+              "printed_page": 1,
+              "reviewed": false
+            },
+            {
+              "file_page": 9,
+              "printed_page": 2,
+              "reviewed": false
+            },
+            {
+              "file_page": 10,
+              "printed_page": 3,
+              "reviewed": false
+            },
+            {
+              "file_page": 11,
+              "printed_page": 4,
+              "reviewed": false
+            },
+            {
+              "file_page": 12,
+              "printed_page": 5,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-2",
+          "unit_label": "Unit 2",
+          "title": "What time do you get up?",
+          "file_page_start": 13,
+          "file_page_end": 17,
+          "chapter_printed_start": 6,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 13,
+              "printed_page": 6,
+              "reviewed": false
+            },
+            {
+              "file_page": 14,
+              "printed_page": 7,
+              "reviewed": false
+            },
+            {
+              "file_page": 15,
+              "printed_page": 8,
+              "reviewed": false
+            },
+            {
+              "file_page": 16,
+              "printed_page": 9,
+              "reviewed": false
+            },
+            {
+              "file_page": 17,
+              "printed_page": 10,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-3",
+          "unit_label": "Unit 3",
+          "title": "I like dumplings",
+          "file_page_start": 18,
+          "file_page_end": 22,
+          "chapter_printed_start": 11,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 18,
+              "printed_page": 11,
+              "reviewed": false
+            },
+            {
+              "file_page": 19,
+              "printed_page": 12,
+              "reviewed": false
+            },
+            {
+              "file_page": 20,
+              "printed_page": 13,
+              "reviewed": false
+            },
+            {
+              "file_page": 21,
+              "printed_page": 14,
+              "reviewed": false
+            },
+            {
+              "file_page": 22,
+              "printed_page": 15,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-4",
+          "unit_label": "Unit 4",
+          "title": "Look at the elephant",
+          "file_page_start": 28,
+          "file_page_end": 32,
+          "chapter_printed_start": 21,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 28,
+              "printed_page": 21,
+              "reviewed": false
+            },
+            {
+              "file_page": 29,
+              "printed_page": 22,
+              "reviewed": false
+            },
+            {
+              "file_page": 30,
+              "printed_page": 23,
+              "reviewed": false
+            },
+            {
+              "file_page": 31,
+              "printed_page": 24,
+              "reviewed": false
+            },
+            {
+              "file_page": 32,
+              "printed_page": 25,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-5",
+          "unit_label": "Unit 5",
+          "title": "Can you play basketball?",
+          "file_page_start": 33,
+          "file_page_end": 37,
+          "chapter_printed_start": 26,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 33,
+              "printed_page": 26,
+              "reviewed": false
+            },
+            {
+              "file_page": 34,
+              "printed_page": 27,
+              "reviewed": false
+            },
+            {
+              "file_page": 35,
+              "printed_page": 28,
+              "reviewed": false
+            },
+            {
+              "file_page": 36,
+              "printed_page": 29,
+              "reviewed": false
+            },
+            {
+              "file_page": 37,
+              "printed_page": 30,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-6",
+          "unit_label": "Unit 6",
+          "title": "What are those?",
+          "file_page_start": 38,
+          "file_page_end": 42,
+          "chapter_printed_start": 31,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 38,
+              "printed_page": 31,
+              "reviewed": false
+            },
+            {
+              "file_page": 39,
+              "printed_page": 32,
+              "reviewed": false
+            },
+            {
+              "file_page": 40,
+              "printed_page": 33,
+              "reviewed": false
+            },
+            {
+              "file_page": 41,
+              "printed_page": 34,
+              "reviewed": false
+            },
+            {
+              "file_page": 42,
+              "printed_page": 35,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-7",
+          "unit_label": "Unit 7",
+          "title": "Whose watch is this?",
+          "file_page_start": 48,
+          "file_page_end": 52,
+          "chapter_printed_start": 41,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 48,
+              "printed_page": 41,
+              "reviewed": false
+            },
+            {
+              "file_page": 49,
+              "printed_page": 42,
+              "reviewed": false
+            },
+            {
+              "file_page": 50,
+              "printed_page": 43,
+              "reviewed": false
+            },
+            {
+              "file_page": 51,
+              "printed_page": 44,
+              "reviewed": false
+            },
+            {
+              "file_page": 52,
+              "printed_page": 45,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-8",
+          "unit_label": "Unit 8",
+          "title": "Don't talk in the library",
+          "file_page_start": 53,
+          "file_page_end": 57,
+          "chapter_printed_start": 46,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 53,
+              "printed_page": 46,
+              "reviewed": false
+            },
+            {
+              "file_page": 54,
+              "printed_page": 47,
+              "reviewed": false
+            },
+            {
+              "file_page": 55,
+              "printed_page": 48,
+              "reviewed": false
+            },
+            {
+              "file_page": 56,
+              "printed_page": 49,
+              "reviewed": false
+            },
+            {
+              "file_page": 57,
+              "printed_page": 50,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-9",
+          "unit_label": "Unit 9",
+          "title": "Welcome to my home!",
+          "file_page_start": 58,
+          "file_page_end": 62,
+          "chapter_printed_start": 51,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 58,
+              "printed_page": 51,
+              "reviewed": false
+            },
+            {
+              "file_page": 59,
+              "printed_page": 52,
+              "reviewed": false
+            },
+            {
+              "file_page": 60,
+              "printed_page": 53,
+              "reviewed": false
+            },
+            {
+              "file_page": 61,
+              "printed_page": 54,
+              "reviewed": false
+            },
+            {
+              "file_page": 62,
+              "printed_page": 55,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-10",
+          "unit_label": "Unit 10",
+          "title": "What's her job?",
+          "file_page_start": 63,
+          "file_page_end": 67,
+          "chapter_printed_start": 56,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 63,
+              "printed_page": 56,
+              "reviewed": false
+            },
+            {
+              "file_page": 64,
+              "printed_page": 57,
+              "reviewed": false
+            },
+            {
+              "file_page": 65,
+              "printed_page": 58,
+              "reviewed": false
+            },
+            {
+              "file_page": 66,
+              "printed_page": 59,
+              "reviewed": false
+            },
+            {
+              "file_page": 67,
+              "printed_page": 60,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        }
+      ]
+    },
+    {
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "edition": "2022年课标修订版",
+      "grade": 4,
+      "volume": 2,
+      "manifest_path": "D:\\Project\\Englishbook\\public\\books\\xiangshao-g4-2.json",
+      "manifest_sha256": "cc44b8883a472ef4214801b54c59f09233a273c07b321556471b153347e95db9",
+      "source_file": "sources/library/xiangshao-g4-2/textbook.pdf",
+      "declared_source_sha256": "bc96c0f99f2539cd2c4b30083511b428d2223b0cee4dd31fa0d0bf3fd15750b2",
+      "content_revision": "reader-finalization-v1",
+      "excluded_chapters": [
+        {
+          "id": "front",
+          "title": "开始阅读",
+          "file_page_start": 1,
+          "file_page_end": 7
+        },
+        {
+          "id": "section-16",
+          "title": "Good habits",
+          "file_page_start": 23,
+          "file_page_end": 23
+        },
+        {
+          "id": "section-17",
+          "title": "Research courses",
+          "file_page_start": 24,
+          "file_page_end": 24
+        },
+        {
+          "id": "section-18",
+          "title": "Assessment I",
+          "file_page_start": 25,
+          "file_page_end": 27
+        },
+        {
+          "id": "section-36",
+          "title": "Thank you for your hard work!",
+          "file_page_start": 43,
+          "file_page_end": 43
+        },
+        {
+          "id": "section-37",
+          "title": "Seasons",
+          "file_page_start": 44,
+          "file_page_end": 44
+        },
+        {
+          "id": "section-38",
+          "title": "Assessment II",
+          "file_page_start": 45,
+          "file_page_end": 47
+        },
+        {
+          "id": "section-61",
+          "title": "Beautiful China",
+          "file_page_start": 68,
+          "file_page_end": 68
+        },
+        {
+          "id": "section-62",
+          "title": "The Dragon Boat Festival",
+          "file_page_start": 69,
+          "file_page_end": 69
+        },
+        {
+          "id": "section-63",
+          "title": "Assessment III",
+          "file_page_start": 70,
+          "file_page_end": 72
+        },
+        {
+          "id": "section-66",
+          "title": "David and the Big, Bad Man",
+          "file_page_start": 73,
+          "file_page_end": 73
+        },
+        {
+          "id": "section-67",
+          "title": "Golden Monkeys",
+          "file_page_start": 74,
+          "file_page_end": 74
+        },
+        {
+          "id": "section-68",
+          "title": "Vocabulary",
+          "file_page_start": 75,
+          "file_page_end": 77
+        },
+        {
+          "id": "section-71",
+          "title": "Word List",
+          "file_page_start": 78,
+          "file_page_end": 81
+        },
+        {
+          "id": "section-75",
+          "title": "Structures",
+          "file_page_start": 82,
+          "file_page_end": 85
+        },
+        {
+          "id": "section-79",
+          "title": "Months of the year",
+          "file_page_start": 86,
+          "file_page_end": 86
+        },
+        {
+          "id": "section-80",
+          "title": "Numbers",
+          "file_page_start": 87,
+          "file_page_end": 87
+        },
+        {
+          "id": "section-81",
+          "title": "Formative Assessment",
+          "file_page_start": 88,
+          "file_page_end": 88
+        },
+        {
+          "id": "back",
+          "title": "后记",
+          "file_page_start": 89,
+          "file_page_end": 89
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "unit-1",
+          "unit_label": "Unit 1",
+          "title": "It's on your head",
+          "file_page_start": 8,
+          "file_page_end": 12,
+          "chapter_printed_start": 1,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 8,
+              "printed_page": 1,
+              "reviewed": false
+            },
+            {
+              "file_page": 9,
+              "printed_page": 2,
+              "reviewed": false
+            },
+            {
+              "file_page": 10,
+              "printed_page": 3,
+              "reviewed": false
+            },
+            {
+              "file_page": 11,
+              "printed_page": 4,
+              "reviewed": false
+            },
+            {
+              "file_page": 12,
+              "printed_page": 5,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-2",
+          "unit_label": "Unit 2",
+          "title": "What classes do you have this morning?",
+          "file_page_start": 13,
+          "file_page_end": 17,
+          "chapter_printed_start": 6,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 13,
+              "printed_page": 6,
+              "reviewed": false
+            },
+            {
+              "file_page": 14,
+              "printed_page": 7,
+              "reviewed": false
+            },
+            {
+              "file_page": 15,
+              "printed_page": 8,
+              "reviewed": false
+            },
+            {
+              "file_page": 16,
+              "printed_page": 9,
+              "reviewed": false
+            },
+            {
+              "file_page": 17,
+              "printed_page": 10,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-3",
+          "unit_label": "Unit 3",
+          "title": "Today is Wednesday",
+          "file_page_start": 18,
+          "file_page_end": 22,
+          "chapter_printed_start": 11,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 18,
+              "printed_page": 11,
+              "reviewed": false
+            },
+            {
+              "file_page": 19,
+              "printed_page": 12,
+              "reviewed": false
+            },
+            {
+              "file_page": 20,
+              "printed_page": 13,
+              "reviewed": false
+            },
+            {
+              "file_page": 21,
+              "printed_page": 14,
+              "reviewed": false
+            },
+            {
+              "file_page": 22,
+              "printed_page": 15,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-4",
+          "unit_label": "Unit 4",
+          "title": "Class one gets 54 points",
+          "file_page_start": 28,
+          "file_page_end": 32,
+          "chapter_printed_start": 21,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 28,
+              "printed_page": 21,
+              "reviewed": false
+            },
+            {
+              "file_page": 29,
+              "printed_page": 22,
+              "reviewed": false
+            },
+            {
+              "file_page": 30,
+              "printed_page": 23,
+              "reviewed": false
+            },
+            {
+              "file_page": 31,
+              "printed_page": 24,
+              "reviewed": false
+            },
+            {
+              "file_page": 32,
+              "printed_page": 25,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-5",
+          "unit_label": "Unit 5",
+          "title": "She helps students",
+          "file_page_start": 33,
+          "file_page_end": 37,
+          "chapter_printed_start": 26,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 33,
+              "printed_page": 26,
+              "reviewed": false
+            },
+            {
+              "file_page": 34,
+              "printed_page": 27,
+              "reviewed": false
+            },
+            {
+              "file_page": 35,
+              "printed_page": 28,
+              "reviewed": false
+            },
+            {
+              "file_page": 36,
+              "printed_page": 29,
+              "reviewed": false
+            },
+            {
+              "file_page": 37,
+              "printed_page": 30,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-6",
+          "unit_label": "Unit 6",
+          "title": "What's your favourite season?",
+          "file_page_start": 38,
+          "file_page_end": 42,
+          "chapter_printed_start": 31,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 38,
+              "printed_page": 31,
+              "reviewed": false
+            },
+            {
+              "file_page": 39,
+              "printed_page": 32,
+              "reviewed": false
+            },
+            {
+              "file_page": 40,
+              "printed_page": 33,
+              "reviewed": false
+            },
+            {
+              "file_page": 41,
+              "printed_page": 34,
+              "reviewed": false
+            },
+            {
+              "file_page": 42,
+              "printed_page": 35,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-7",
+          "unit_label": "Unit 7",
+          "title": "What can you see?",
+          "file_page_start": 48,
+          "file_page_end": 52,
+          "chapter_printed_start": 41,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 48,
+              "printed_page": 41,
+              "reviewed": false
+            },
+            {
+              "file_page": 49,
+              "printed_page": 42,
+              "reviewed": false
+            },
+            {
+              "file_page": 50,
+              "printed_page": 43,
+              "reviewed": false
+            },
+            {
+              "file_page": 51,
+              "printed_page": 44,
+              "reviewed": false
+            },
+            {
+              "file_page": 52,
+              "printed_page": 45,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-8",
+          "unit_label": "Unit 8",
+          "title": "He is cleaning the window",
+          "file_page_start": 53,
+          "file_page_end": 57,
+          "chapter_printed_start": 46,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 53,
+              "printed_page": 46,
+              "reviewed": false
+            },
+            {
+              "file_page": 54,
+              "printed_page": 47,
+              "reviewed": false
+            },
+            {
+              "file_page": 55,
+              "printed_page": 48,
+              "reviewed": false
+            },
+            {
+              "file_page": 56,
+              "printed_page": 49,
+              "reviewed": false
+            },
+            {
+              "file_page": 57,
+              "printed_page": 50,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-9",
+          "unit_label": "Unit 9",
+          "title": "The Dragon Boat Festival",
+          "file_page_start": 58,
+          "file_page_end": 62,
+          "chapter_printed_start": 51,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 58,
+              "printed_page": 51,
+              "reviewed": false
+            },
+            {
+              "file_page": 59,
+              "printed_page": 52,
+              "reviewed": false
+            },
+            {
+              "file_page": 60,
+              "printed_page": 53,
+              "reviewed": false
+            },
+            {
+              "file_page": 61,
+              "printed_page": 54,
+              "reviewed": false
+            },
+            {
+              "file_page": 62,
+              "printed_page": 55,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-10",
+          "unit_label": "Unit 10",
+          "title": "What does that sign mean?",
+          "file_page_start": 63,
+          "file_page_end": 67,
+          "chapter_printed_start": 56,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 63,
+              "printed_page": 56,
+              "reviewed": false
+            },
+            {
+              "file_page": 64,
+              "printed_page": 57,
+              "reviewed": false
+            },
+            {
+              "file_page": 65,
+              "printed_page": 58,
+              "reviewed": false
+            },
+            {
+              "file_page": 66,
+              "printed_page": 59,
+              "reviewed": false
+            },
+            {
+              "file_page": 67,
+              "printed_page": 60,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        }
+      ]
+    },
+    {
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "edition": "2022年课标修订版",
+      "grade": 5,
+      "volume": 1,
+      "manifest_path": "D:\\Project\\Englishbook\\public\\books\\english-grade5-volume1-smartedu-2022.json",
+      "manifest_sha256": "a3039c39030941d1cfadd71ee4c3b0bff45d507e4dc6d336dd500c4d7836510f",
+      "source_file": "sources/smartedu-2022/textbook.pdf",
+      "declared_source_sha256": "f9089f3d12737a996ddf7b59719481c5e21b998192eb563996ed5f6c6b98e669",
+      "content_revision": "reader-finalization-v1",
+      "excluded_chapters": [
+        {
+          "id": "front",
+          "title": "修订版 · 开始阅读",
+          "file_page_start": 1,
+          "file_page_end": 7
+        },
+        {
+          "id": "meals",
+          "title": "Meals",
+          "file_page_start": 23,
+          "file_page_end": 23
+        },
+        {
+          "id": "internet",
+          "title": "Internet security",
+          "file_page_start": 24,
+          "file_page_end": 24
+        },
+        {
+          "id": "assessment-1",
+          "title": "Assessment I",
+          "file_page_start": 25,
+          "file_page_end": 27
+        },
+        {
+          "id": "manners",
+          "title": "Good manners",
+          "file_page_start": 43,
+          "file_page_end": 43
+        },
+        {
+          "id": "pet",
+          "title": "My pet",
+          "file_page_start": 44,
+          "file_page_end": 44
+        },
+        {
+          "id": "assessment-2",
+          "title": "Assessment II",
+          "file_page_start": 45,
+          "file_page_end": 47
+        },
+        {
+          "id": "hobbies",
+          "title": "Interesting hobbies",
+          "file_page_start": 68,
+          "file_page_end": 68
+        },
+        {
+          "id": "festival",
+          "title": "During the Spring Festival",
+          "file_page_start": 69,
+          "file_page_end": 69
+        },
+        {
+          "id": "assessment-3",
+          "title": "Assessment III",
+          "file_page_start": 70,
+          "file_page_end": 72
+        },
+        {
+          "id": "nian",
+          "title": "The Story of Nian",
+          "file_page_start": 73,
+          "file_page_end": 73
+        },
+        {
+          "id": "fire",
+          "title": "A Big Fire",
+          "file_page_start": 74,
+          "file_page_end": 74
+        },
+        {
+          "id": "vocabulary",
+          "title": "Vocabulary",
+          "file_page_start": 75,
+          "file_page_end": 77
+        },
+        {
+          "id": "word-list",
+          "title": "Word List",
+          "file_page_start": 78,
+          "file_page_end": 81
+        },
+        {
+          "id": "structures",
+          "title": "Structures",
+          "file_page_start": 82,
+          "file_page_end": 85
+        },
+        {
+          "id": "animals",
+          "title": "Animals and Their Young",
+          "file_page_start": 86,
+          "file_page_end": 86
+        },
+        {
+          "id": "songs",
+          "title": "Songs",
+          "file_page_start": 87,
+          "file_page_end": 87
+        },
+        {
+          "id": "formative",
+          "title": "Formative Assessment",
+          "file_page_start": 88,
+          "file_page_end": 88
+        },
+        {
+          "id": "back",
+          "title": "封底",
+          "file_page_start": 89,
+          "file_page_end": 89
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "unit-1",
+          "unit_label": "Unit 1",
+          "title": "What does she look like?",
+          "file_page_start": 8,
+          "file_page_end": 12,
+          "chapter_printed_start": null,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 8,
+              "printed_page": 1,
+              "reviewed": true
+            },
+            {
+              "file_page": 9,
+              "printed_page": 2,
+              "reviewed": true
+            },
+            {
+              "file_page": 10,
+              "printed_page": 3,
+              "reviewed": false
+            },
+            {
+              "file_page": 11,
+              "printed_page": 4,
+              "reviewed": false
+            },
+            {
+              "file_page": 12,
+              "printed_page": 5,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-2",
+          "unit_label": "Unit 2",
+          "title": "I'd like a sandwich",
+          "file_page_start": 13,
+          "file_page_end": 17,
+          "chapter_printed_start": null,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 13,
+              "printed_page": 6,
+              "reviewed": false
+            },
+            {
+              "file_page": 14,
+              "printed_page": 7,
+              "reviewed": false
+            },
+            {
+              "file_page": 15,
+              "printed_page": 8,
+              "reviewed": false
+            },
+            {
+              "file_page": 16,
+              "printed_page": 9,
+              "reviewed": false
+            },
+            {
+              "file_page": 17,
+              "printed_page": 10,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-3",
+          "unit_label": "Unit 3",
+          "title": "I can email my friends with the computer",
+          "file_page_start": 18,
+          "file_page_end": 22,
+          "chapter_printed_start": null,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 18,
+              "printed_page": 11,
+              "reviewed": false
+            },
+            {
+              "file_page": 19,
+              "printed_page": 12,
+              "reviewed": false
+            },
+            {
+              "file_page": 20,
+              "printed_page": 13,
+              "reviewed": false
+            },
+            {
+              "file_page": 21,
+              "printed_page": 14,
+              "reviewed": false
+            },
+            {
+              "file_page": 22,
+              "printed_page": 15,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-4",
+          "unit_label": "Unit 4",
+          "title": "Can I use your pencil, please?",
+          "file_page_start": 28,
+          "file_page_end": 32,
+          "chapter_printed_start": null,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 28,
+              "printed_page": 21,
+              "reviewed": false
+            },
+            {
+              "file_page": 29,
+              "printed_page": 22,
+              "reviewed": false
+            },
+            {
+              "file_page": 30,
+              "printed_page": 23,
+              "reviewed": false
+            },
+            {
+              "file_page": 31,
+              "printed_page": 24,
+              "reviewed": false
+            },
+            {
+              "file_page": 32,
+              "printed_page": 25,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-5",
+          "unit_label": "Unit 5",
+          "title": "May I have a pet?",
+          "file_page_start": 33,
+          "file_page_end": 37,
+          "chapter_printed_start": null,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 33,
+              "printed_page": 26,
+              "reviewed": false
+            },
+            {
+              "file_page": 34,
+              "printed_page": 27,
+              "reviewed": false
+            },
+            {
+              "file_page": 35,
+              "printed_page": 28,
+              "reviewed": false
+            },
+            {
+              "file_page": 36,
+              "printed_page": 29,
+              "reviewed": false
+            },
+            {
+              "file_page": 37,
+              "printed_page": 30,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-6",
+          "unit_label": "Unit 6",
+          "title": "Which one do you want?",
+          "file_page_start": 38,
+          "file_page_end": 42,
+          "chapter_printed_start": null,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 38,
+              "printed_page": 31,
+              "reviewed": false
+            },
+            {
+              "file_page": 39,
+              "printed_page": 32,
+              "reviewed": false
+            },
+            {
+              "file_page": 40,
+              "printed_page": 33,
+              "reviewed": false
+            },
+            {
+              "file_page": 41,
+              "printed_page": 34,
+              "reviewed": false
+            },
+            {
+              "file_page": 42,
+              "printed_page": 35,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-7",
+          "unit_label": "Unit 7",
+          "title": "What chores do you do at home?",
+          "file_page_start": 48,
+          "file_page_end": 52,
+          "chapter_printed_start": null,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 48,
+              "printed_page": 41,
+              "reviewed": false
+            },
+            {
+              "file_page": 49,
+              "printed_page": 42,
+              "reviewed": false
+            },
+            {
+              "file_page": 50,
+              "printed_page": 43,
+              "reviewed": false
+            },
+            {
+              "file_page": 51,
+              "printed_page": 44,
+              "reviewed": false
+            },
+            {
+              "file_page": 52,
+              "printed_page": 45,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-8",
+          "unit_label": "Unit 8",
+          "title": "What's your hobby?",
+          "file_page_start": 53,
+          "file_page_end": 57,
+          "chapter_printed_start": null,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 53,
+              "printed_page": 46,
+              "reviewed": false
+            },
+            {
+              "file_page": 54,
+              "printed_page": 47,
+              "reviewed": false
+            },
+            {
+              "file_page": 55,
+              "printed_page": 48,
+              "reviewed": false
+            },
+            {
+              "file_page": 56,
+              "printed_page": 49,
+              "reviewed": false
+            },
+            {
+              "file_page": 57,
+              "printed_page": 50,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-9",
+          "unit_label": "Unit 9",
+          "title": "I'm sorry",
+          "file_page_start": 58,
+          "file_page_end": 62,
+          "chapter_printed_start": null,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 58,
+              "printed_page": 51,
+              "reviewed": false
+            },
+            {
+              "file_page": 59,
+              "printed_page": 52,
+              "reviewed": false
+            },
+            {
+              "file_page": 60,
+              "printed_page": 53,
+              "reviewed": false
+            },
+            {
+              "file_page": 61,
+              "printed_page": 54,
+              "reviewed": false
+            },
+            {
+              "file_page": 62,
+              "printed_page": 55,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-10",
+          "unit_label": "Unit 10",
+          "title": "The Spring Festival",
+          "file_page_start": 63,
+          "file_page_end": 67,
+          "chapter_printed_start": null,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 63,
+              "printed_page": 56,
+              "reviewed": false
+            },
+            {
+              "file_page": 64,
+              "printed_page": 57,
+              "reviewed": false
+            },
+            {
+              "file_page": 65,
+              "printed_page": 58,
+              "reviewed": false
+            },
+            {
+              "file_page": 66,
+              "printed_page": 59,
+              "reviewed": false
+            },
+            {
+              "file_page": 67,
+              "printed_page": 60,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        }
+      ]
+    },
+    {
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "edition": "三年级起点版",
+      "grade": 5,
+      "volume": 2,
+      "manifest_path": "D:\\Project\\Englishbook\\public\\books\\xiangshao-g5-2.json",
+      "manifest_sha256": "d18f125aa412113e084380c71559dae345df43f0c5274dc4cb87897b28774245",
+      "source_file": "sources/library/xiangshao-g5-2/textbook.pdf",
+      "declared_source_sha256": "5f083e237bedfd79115f55fa18f1750e5ef7e1e32f0b4f037cf08f80f76235dc",
+      "content_revision": "reader-finalization-v1",
+      "excluded_chapters": [
+        {
+          "id": "front",
+          "title": "开始阅读",
+          "file_page_start": 1,
+          "file_page_end": 7
+        },
+        {
+          "id": "section-13",
+          "title": "Let's Know More",
+          "file_page_start": 20,
+          "file_page_end": 20
+        },
+        {
+          "id": "section-14",
+          "title": "Assessment I",
+          "file_page_start": 21,
+          "file_page_end": 23
+        },
+        {
+          "id": "section-29",
+          "title": "Let's Know More",
+          "file_page_start": 36,
+          "file_page_end": 36
+        },
+        {
+          "id": "section-30",
+          "title": "Assessment II",
+          "file_page_start": 37,
+          "file_page_end": 39
+        },
+        {
+          "id": "section-45",
+          "title": "Let's Know More",
+          "file_page_start": 52,
+          "file_page_end": 52
+        },
+        {
+          "id": "section-46",
+          "title": "Assessment III",
+          "file_page_start": 53,
+          "file_page_end": 55
+        },
+        {
+          "id": "section-61",
+          "title": "Let's Know More",
+          "file_page_start": 68,
+          "file_page_end": 68
+        },
+        {
+          "id": "section-62",
+          "title": "Assessment IV",
+          "file_page_start": 69,
+          "file_page_end": 71
+        },
+        {
+          "id": "section-65",
+          "title": "Let's Read More",
+          "file_page_start": 72,
+          "file_page_end": 73
+        },
+        {
+          "id": "section-67",
+          "title": "Word List I",
+          "file_page_start": 74,
+          "file_page_end": 76
+        },
+        {
+          "id": "section-70",
+          "title": "Word List II",
+          "file_page_start": 77,
+          "file_page_end": 80
+        },
+        {
+          "id": "section-74",
+          "title": "Structures",
+          "file_page_start": 81,
+          "file_page_end": 86
+        },
+        {
+          "id": "section-80",
+          "title": "Past Form / Full Form and Short Form",
+          "file_page_start": 87,
+          "file_page_end": 87
+        },
+        {
+          "id": "section-81",
+          "title": "Countries of the World",
+          "file_page_start": 88,
+          "file_page_end": 88
+        },
+        {
+          "id": "section-82",
+          "title": "Self-Assessment",
+          "file_page_start": 89,
+          "file_page_end": 89
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "unit-1",
+          "unit_label": "Unit 1",
+          "title": "We're going to read stories",
+          "file_page_start": 8,
+          "file_page_end": 11,
+          "chapter_printed_start": 1,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 8,
+              "printed_page": 1,
+              "reviewed": false
+            },
+            {
+              "file_page": 9,
+              "printed_page": 2,
+              "reviewed": false
+            },
+            {
+              "file_page": 10,
+              "printed_page": 3,
+              "reviewed": false
+            },
+            {
+              "file_page": 11,
+              "printed_page": 4,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-2",
+          "unit_label": "Unit 2",
+          "title": "We're going to do some research",
+          "file_page_start": 12,
+          "file_page_end": 15,
+          "chapter_printed_start": 5,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 12,
+              "printed_page": 5,
+              "reviewed": false
+            },
+            {
+              "file_page": 13,
+              "printed_page": 6,
+              "reviewed": false
+            },
+            {
+              "file_page": 14,
+              "printed_page": 7,
+              "reviewed": false
+            },
+            {
+              "file_page": 15,
+              "printed_page": 8,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-3",
+          "unit_label": "Unit 3",
+          "title": "Let's make a kite",
+          "file_page_start": 16,
+          "file_page_end": 19,
+          "chapter_printed_start": 9,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 16,
+              "printed_page": 9,
+              "reviewed": false
+            },
+            {
+              "file_page": 17,
+              "printed_page": 10,
+              "reviewed": false
+            },
+            {
+              "file_page": 18,
+              "printed_page": 11,
+              "reviewed": false
+            },
+            {
+              "file_page": 19,
+              "printed_page": 12,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-4",
+          "unit_label": "Unit 4",
+          "title": "Don't talk here",
+          "file_page_start": 24,
+          "file_page_end": 27,
+          "chapter_printed_start": 17,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 24,
+              "printed_page": 17,
+              "reviewed": false
+            },
+            {
+              "file_page": 25,
+              "printed_page": 18,
+              "reviewed": false
+            },
+            {
+              "file_page": 26,
+              "printed_page": 19,
+              "reviewed": false
+            },
+            {
+              "file_page": 27,
+              "printed_page": 20,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-5",
+          "unit_label": "Unit 5",
+          "title": "When's your birthday?",
+          "file_page_start": 28,
+          "file_page_end": 31,
+          "chapter_printed_start": 21,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 28,
+              "printed_page": 21,
+              "reviewed": false
+            },
+            {
+              "file_page": 29,
+              "printed_page": 22,
+              "reviewed": false
+            },
+            {
+              "file_page": 30,
+              "printed_page": 23,
+              "reviewed": false
+            },
+            {
+              "file_page": 31,
+              "printed_page": 24,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-6",
+          "unit_label": "Unit 6",
+          "title": "I'll make a beautiful card",
+          "file_page_start": 32,
+          "file_page_end": 35,
+          "chapter_printed_start": 25,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 32,
+              "printed_page": 25,
+              "reviewed": false
+            },
+            {
+              "file_page": 33,
+              "printed_page": 26,
+              "reviewed": false
+            },
+            {
+              "file_page": 34,
+              "printed_page": 27,
+              "reviewed": false
+            },
+            {
+              "file_page": 35,
+              "printed_page": 28,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-7",
+          "unit_label": "Unit 7",
+          "title": "There's a post office near my school",
+          "file_page_start": 40,
+          "file_page_end": 43,
+          "chapter_printed_start": 33,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 40,
+              "printed_page": 33,
+              "reviewed": false
+            },
+            {
+              "file_page": 41,
+              "printed_page": 34,
+              "reviewed": false
+            },
+            {
+              "file_page": 42,
+              "printed_page": 35,
+              "reviewed": false
+            },
+            {
+              "file_page": 43,
+              "printed_page": 36,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-8",
+          "unit_label": "Unit 8",
+          "title": "Can you show me the way to the Xinhua Hotel?",
+          "file_page_start": 44,
+          "file_page_end": 47,
+          "chapter_printed_start": 37,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 44,
+              "printed_page": 37,
+              "reviewed": false
+            },
+            {
+              "file_page": 45,
+              "printed_page": 38,
+              "reviewed": false
+            },
+            {
+              "file_page": 46,
+              "printed_page": 39,
+              "reviewed": false
+            },
+            {
+              "file_page": 47,
+              "printed_page": 40,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-9",
+          "unit_label": "Unit 9",
+          "title": "He's kind to children",
+          "file_page_start": 48,
+          "file_page_end": 51,
+          "chapter_printed_start": 41,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 48,
+              "printed_page": 41,
+              "reviewed": false
+            },
+            {
+              "file_page": 49,
+              "printed_page": 42,
+              "reviewed": false
+            },
+            {
+              "file_page": 50,
+              "printed_page": 43,
+              "reviewed": false
+            },
+            {
+              "file_page": 51,
+              "printed_page": 44,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-10",
+          "unit_label": "Unit 10",
+          "title": "Where were you yesterday?",
+          "file_page_start": 56,
+          "file_page_end": 59,
+          "chapter_printed_start": 49,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 56,
+              "printed_page": 49,
+              "reviewed": false
+            },
+            {
+              "file_page": 57,
+              "printed_page": 50,
+              "reviewed": false
+            },
+            {
+              "file_page": 58,
+              "printed_page": 51,
+              "reviewed": false
+            },
+            {
+              "file_page": 59,
+              "printed_page": 52,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-11",
+          "unit_label": "Unit 11",
+          "title": "Who was first?",
+          "file_page_start": 60,
+          "file_page_end": 63,
+          "chapter_printed_start": 53,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 60,
+              "printed_page": 53,
+              "reviewed": false
+            },
+            {
+              "file_page": 61,
+              "printed_page": 54,
+              "reviewed": false
+            },
+            {
+              "file_page": 62,
+              "printed_page": 55,
+              "reviewed": false
+            },
+            {
+              "file_page": 63,
+              "printed_page": 56,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-12",
+          "unit_label": "Unit 12",
+          "title": "Where did you go?",
+          "file_page_start": 64,
+          "file_page_end": 67,
+          "chapter_printed_start": 57,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 64,
+              "printed_page": 57,
+              "reviewed": false
+            },
+            {
+              "file_page": 65,
+              "printed_page": 58,
+              "reviewed": false
+            },
+            {
+              "file_page": 66,
+              "printed_page": 59,
+              "reviewed": false
+            },
+            {
+              "file_page": 67,
+              "printed_page": 60,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        }
+      ]
+    },
+    {
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "edition": "2022年课标修订版",
+      "grade": 6,
+      "volume": 1,
+      "manifest_path": "D:\\Project\\Englishbook\\public\\books\\xiangshao-g6-1.json",
+      "manifest_sha256": "94ec4bc7121ccc33e871111e4cc1065ce4ee047a8c9a9c2da45ab6160d764b7f",
+      "source_file": "sources/library/xiangshao-g6-1/textbook.pdf",
+      "declared_source_sha256": "f244ba6c5ab92af03f2431bc2ea2fd321d3cb57d03144237ce7b6df3188eb7dd",
+      "content_revision": "reader-finalization-v1",
+      "excluded_chapters": [
+        {
+          "id": "front",
+          "title": "开始阅读",
+          "file_page_start": 1,
+          "file_page_end": 7
+        },
+        {
+          "id": "section-16",
+          "title": "Travelling around China",
+          "file_page_start": 23,
+          "file_page_end": 23
+        },
+        {
+          "id": "section-17",
+          "title": "TFlying to the moon",
+          "file_page_start": 24,
+          "file_page_end": 24
+        },
+        {
+          "id": "section-18",
+          "title": "Assessment I",
+          "file_page_start": 25,
+          "file_page_end": 27
+        },
+        {
+          "id": "section-36",
+          "title": "Outings, picnics and parties",
+          "file_page_start": 43,
+          "file_page_end": 43
+        },
+        {
+          "id": "section-37",
+          "title": "Services for the elderly",
+          "file_page_start": 44,
+          "file_page_end": 44
+        },
+        {
+          "id": "section-38",
+          "title": "Assessment II",
+          "file_page_start": 45,
+          "file_page_end": 47
+        },
+        {
+          "id": "section-61",
+          "title": "Let's compare!",
+          "file_page_start": 68,
+          "file_page_end": 68
+        },
+        {
+          "id": "section-62",
+          "title": "Let's save water!",
+          "file_page_start": 69,
+          "file_page_end": 69
+        },
+        {
+          "id": "section-63",
+          "title": "Assessment III",
+          "file_page_start": 70,
+          "file_page_end": 72
+        },
+        {
+          "id": "section-66",
+          "title": "A Helping Hand",
+          "file_page_start": 73,
+          "file_page_end": 73
+        },
+        {
+          "id": "section-67",
+          "title": "Two Trees",
+          "file_page_start": 74,
+          "file_page_end": 74
+        },
+        {
+          "id": "section-68",
+          "title": "Vocabulary",
+          "file_page_start": 75,
+          "file_page_end": 77
+        },
+        {
+          "id": "section-71",
+          "title": "Word List",
+          "file_page_start": 78,
+          "file_page_end": 81
+        },
+        {
+          "id": "section-75",
+          "title": "Structures",
+          "file_page_start": 82,
+          "file_page_end": 85
+        },
+        {
+          "id": "section-79",
+          "title": "Verbs",
+          "file_page_start": 86,
+          "file_page_end": 86
+        },
+        {
+          "id": "section-80",
+          "title": "Songs",
+          "file_page_start": 87,
+          "file_page_end": 87
+        },
+        {
+          "id": "section-81",
+          "title": "Formative Assessment",
+          "file_page_start": 88,
+          "file_page_end": 88
+        },
+        {
+          "id": "back",
+          "title": "后记",
+          "file_page_start": 89,
+          "file_page_end": 89
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "unit-1",
+          "unit_label": "Unit 1",
+          "title": "What did you do during the holidays?",
+          "file_page_start": 8,
+          "file_page_end": 12,
+          "chapter_printed_start": 1,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 8,
+              "printed_page": 1,
+              "reviewed": false
+            },
+            {
+              "file_page": 9,
+              "printed_page": 2,
+              "reviewed": false
+            },
+            {
+              "file_page": 10,
+              "printed_page": 3,
+              "reviewed": false
+            },
+            {
+              "file_page": 11,
+              "printed_page": 4,
+              "reviewed": false
+            },
+            {
+              "file_page": 12,
+              "printed_page": 5,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-2",
+          "unit_label": "Unit 2",
+          "title": "Beibei always gets up early",
+          "file_page_start": 13,
+          "file_page_end": 17,
+          "chapter_printed_start": 6,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 13,
+              "printed_page": 6,
+              "reviewed": false
+            },
+            {
+              "file_page": 14,
+              "printed_page": 7,
+              "reviewed": false
+            },
+            {
+              "file_page": 15,
+              "printed_page": 8,
+              "reviewed": false
+            },
+            {
+              "file_page": 16,
+              "printed_page": 9,
+              "reviewed": false
+            },
+            {
+              "file_page": 17,
+              "printed_page": 10,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-3",
+          "unit_label": "Unit 3",
+          "title": "The Mid-Autumn Festival",
+          "file_page_start": 18,
+          "file_page_end": 22,
+          "chapter_printed_start": 11,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 18,
+              "printed_page": 11,
+              "reviewed": false
+            },
+            {
+              "file_page": 19,
+              "printed_page": 12,
+              "reviewed": false
+            },
+            {
+              "file_page": 20,
+              "printed_page": 13,
+              "reviewed": false
+            },
+            {
+              "file_page": 21,
+              "printed_page": 14,
+              "reviewed": false
+            },
+            {
+              "file_page": 22,
+              "printed_page": 15,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-4",
+          "unit_label": "Unit 4",
+          "title": "It will be sunny and cool tomorrow",
+          "file_page_start": 28,
+          "file_page_end": 32,
+          "chapter_printed_start": 21,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 28,
+              "printed_page": 21,
+              "reviewed": false
+            },
+            {
+              "file_page": 29,
+              "printed_page": 22,
+              "reviewed": false
+            },
+            {
+              "file_page": 30,
+              "printed_page": 23,
+              "reviewed": false
+            },
+            {
+              "file_page": 31,
+              "printed_page": 24,
+              "reviewed": false
+            },
+            {
+              "file_page": 32,
+              "printed_page": 25,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-5",
+          "unit_label": "Unit 5",
+          "title": "I will bring a bottle of orange juice",
+          "file_page_start": 33,
+          "file_page_end": 37,
+          "chapter_printed_start": 26,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 33,
+              "printed_page": 26,
+              "reviewed": false
+            },
+            {
+              "file_page": 34,
+              "printed_page": 27,
+              "reviewed": false
+            },
+            {
+              "file_page": 35,
+              "printed_page": 28,
+              "reviewed": false
+            },
+            {
+              "file_page": 36,
+              "printed_page": 29,
+              "reviewed": false
+            },
+            {
+              "file_page": 37,
+              "printed_page": 30,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-6",
+          "unit_label": "Unit 6",
+          "title": "What can I do?",
+          "file_page_start": 38,
+          "file_page_end": 42,
+          "chapter_printed_start": 31,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 38,
+              "printed_page": 31,
+              "reviewed": false
+            },
+            {
+              "file_page": 39,
+              "printed_page": 32,
+              "reviewed": false
+            },
+            {
+              "file_page": 40,
+              "printed_page": 33,
+              "reviewed": false
+            },
+            {
+              "file_page": 41,
+              "printed_page": 34,
+              "reviewed": false
+            },
+            {
+              "file_page": 42,
+              "printed_page": 35,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-7",
+          "unit_label": "Unit 7",
+          "title": "We shouldn't waste water",
+          "file_page_start": 48,
+          "file_page_end": 52,
+          "chapter_printed_start": 41,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 48,
+              "printed_page": 41,
+              "reviewed": false
+            },
+            {
+              "file_page": 49,
+              "printed_page": 42,
+              "reviewed": false
+            },
+            {
+              "file_page": 50,
+              "printed_page": 43,
+              "reviewed": false
+            },
+            {
+              "file_page": 51,
+              "printed_page": 44,
+              "reviewed": false
+            },
+            {
+              "file_page": 52,
+              "printed_page": 45,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-8",
+          "unit_label": "Unit 8",
+          "title": "This bird is bigger than the first one",
+          "file_page_start": 53,
+          "file_page_end": 57,
+          "chapter_printed_start": 46,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 53,
+              "printed_page": 46,
+              "reviewed": false
+            },
+            {
+              "file_page": 54,
+              "printed_page": 47,
+              "reviewed": false
+            },
+            {
+              "file_page": 55,
+              "printed_page": 48,
+              "reviewed": false
+            },
+            {
+              "file_page": 56,
+              "printed_page": 49,
+              "reviewed": false
+            },
+            {
+              "file_page": 57,
+              "printed_page": 50,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-9",
+          "unit_label": "Unit 9",
+          "title": "I don't feel well",
+          "file_page_start": 58,
+          "file_page_end": 62,
+          "chapter_printed_start": 51,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 58,
+              "printed_page": 51,
+              "reviewed": false
+            },
+            {
+              "file_page": 59,
+              "printed_page": 52,
+              "reviewed": false
+            },
+            {
+              "file_page": 60,
+              "printed_page": 53,
+              "reviewed": false
+            },
+            {
+              "file_page": 61,
+              "printed_page": 54,
+              "reviewed": false
+            },
+            {
+              "file_page": 62,
+              "printed_page": 55,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-10",
+          "unit_label": "Unit 10",
+          "title": "Festivals bring families together",
+          "file_page_start": 63,
+          "file_page_end": 67,
+          "chapter_printed_start": 56,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 63,
+              "printed_page": 56,
+              "reviewed": false
+            },
+            {
+              "file_page": 64,
+              "printed_page": 57,
+              "reviewed": false
+            },
+            {
+              "file_page": 65,
+              "printed_page": 58,
+              "reviewed": false
+            },
+            {
+              "file_page": 66,
+              "printed_page": 59,
+              "reviewed": false
+            },
+            {
+              "file_page": 67,
+              "printed_page": 60,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        }
+      ]
+    },
+    {
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "edition": "三年级起点版",
+      "grade": 6,
+      "volume": 2,
+      "manifest_path": "D:\\Project\\Englishbook\\public\\books\\xiangshao-g6-2.json",
+      "manifest_sha256": "dbcc670c5ef9c12338df844aa92c31a1519eb14d184db7ea95b924caf89b7832",
+      "source_file": "sources/library/xiangshao-g6-2/textbook.pdf",
+      "declared_source_sha256": "b88e2d2a351a31a976c593215388d2cbae2869f99b003f3dff4596ca2e0f2f38",
+      "content_revision": "reader-finalization-v1",
+      "excluded_chapters": [
+        {
+          "id": "front",
+          "title": "开始阅读",
+          "file_page_start": 1,
+          "file_page_end": 7
+        },
+        {
+          "id": "section-13",
+          "title": "Let's Know More",
+          "file_page_start": 20,
+          "file_page_end": 20
+        },
+        {
+          "id": "section-14",
+          "title": "Assessment I",
+          "file_page_start": 21,
+          "file_page_end": 23
+        },
+        {
+          "id": "section-29",
+          "title": "Let's Know More",
+          "file_page_start": 36,
+          "file_page_end": 36
+        },
+        {
+          "id": "section-30",
+          "title": "Assessment II",
+          "file_page_start": 37,
+          "file_page_end": 39
+        },
+        {
+          "id": "section-45",
+          "title": "Let's Know More",
+          "file_page_start": 52,
+          "file_page_end": 52
+        },
+        {
+          "id": "section-46",
+          "title": "Assessment III",
+          "file_page_start": 53,
+          "file_page_end": 55
+        },
+        {
+          "id": "section-49",
+          "title": "Let's Read More",
+          "file_page_start": 56,
+          "file_page_end": 63
+        },
+        {
+          "id": "section-57",
+          "title": "General Revision I",
+          "file_page_start": 64,
+          "file_page_end": 68
+        },
+        {
+          "id": "section-62",
+          "title": "General Revision II",
+          "file_page_start": 69,
+          "file_page_end": 76
+        },
+        {
+          "id": "section-70",
+          "title": "Word List I",
+          "file_page_start": 77,
+          "file_page_end": 77
+        },
+        {
+          "id": "section-71",
+          "title": "Word List II",
+          "file_page_start": 78,
+          "file_page_end": 79
+        },
+        {
+          "id": "section-73",
+          "title": "Structures",
+          "file_page_start": 80,
+          "file_page_end": 84
+        },
+        {
+          "id": "section-78",
+          "title": "Actions",
+          "file_page_start": 85,
+          "file_page_end": 86
+        },
+        {
+          "id": "section-80",
+          "title": "Opposites",
+          "file_page_start": 87,
+          "file_page_end": 87
+        },
+        {
+          "id": "section-81",
+          "title": "Singular and Plural",
+          "file_page_start": 88,
+          "file_page_end": 88
+        },
+        {
+          "id": "section-82",
+          "title": "Self-Assessment",
+          "file_page_start": 89,
+          "file_page_end": 89
+        }
+      ],
+      "units": [
+        {
+          "unit_id": "unit-1",
+          "unit_label": "Unit 1",
+          "title": "A family outing",
+          "file_page_start": 8,
+          "file_page_end": 11,
+          "chapter_printed_start": 1,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 8,
+              "printed_page": 1,
+              "reviewed": false
+            },
+            {
+              "file_page": 9,
+              "printed_page": 2,
+              "reviewed": false
+            },
+            {
+              "file_page": 10,
+              "printed_page": 3,
+              "reviewed": false
+            },
+            {
+              "file_page": 11,
+              "printed_page": 4,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-2",
+          "unit_label": "Unit 2",
+          "title": "Some stories are more interesting",
+          "file_page_start": 12,
+          "file_page_end": 15,
+          "chapter_printed_start": 5,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 12,
+              "printed_page": 5,
+              "reviewed": false
+            },
+            {
+              "file_page": 13,
+              "printed_page": 6,
+              "reviewed": false
+            },
+            {
+              "file_page": 14,
+              "printed_page": 7,
+              "reviewed": false
+            },
+            {
+              "file_page": 15,
+              "printed_page": 8,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-3",
+          "unit_label": "Unit 3",
+          "title": "We should learn to take care of ourselves",
+          "file_page_start": 16,
+          "file_page_end": 19,
+          "chapter_printed_start": 9,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 16,
+              "printed_page": 9,
+              "reviewed": false
+            },
+            {
+              "file_page": 17,
+              "printed_page": 10,
+              "reviewed": false
+            },
+            {
+              "file_page": 18,
+              "printed_page": 11,
+              "reviewed": false
+            },
+            {
+              "file_page": 19,
+              "printed_page": 12,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-4",
+          "unit_label": "Unit 4",
+          "title": "Planting trees is good for us",
+          "file_page_start": 24,
+          "file_page_end": 27,
+          "chapter_printed_start": 17,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 24,
+              "printed_page": 17,
+              "reviewed": false
+            },
+            {
+              "file_page": 25,
+              "printed_page": 18,
+              "reviewed": false
+            },
+            {
+              "file_page": 26,
+              "printed_page": 19,
+              "reviewed": false
+            },
+            {
+              "file_page": 27,
+              "printed_page": 20,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-5",
+          "unit_label": "Unit 5",
+          "title": "Our Earth looks like this in space",
+          "file_page_start": 28,
+          "file_page_end": 31,
+          "chapter_printed_start": 21,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 28,
+              "printed_page": 21,
+              "reviewed": false
+            },
+            {
+              "file_page": 29,
+              "printed_page": 22,
+              "reviewed": false
+            },
+            {
+              "file_page": 30,
+              "printed_page": 23,
+              "reviewed": false
+            },
+            {
+              "file_page": 31,
+              "printed_page": 24,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-6",
+          "unit_label": "Unit 6",
+          "title": "Anne wanted to dance",
+          "file_page_start": 32,
+          "file_page_end": 35,
+          "chapter_printed_start": 25,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 32,
+              "printed_page": 25,
+              "reviewed": false
+            },
+            {
+              "file_page": 33,
+              "printed_page": 26,
+              "reviewed": false
+            },
+            {
+              "file_page": 34,
+              "printed_page": 27,
+              "reviewed": false
+            },
+            {
+              "file_page": 35,
+              "printed_page": 28,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-7",
+          "unit_label": "Unit 7",
+          "title": "I'm not afraid!",
+          "file_page_start": 40,
+          "file_page_end": 43,
+          "chapter_printed_start": 33,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 40,
+              "printed_page": 33,
+              "reviewed": false
+            },
+            {
+              "file_page": 41,
+              "printed_page": 34,
+              "reviewed": false
+            },
+            {
+              "file_page": 42,
+              "printed_page": 35,
+              "reviewed": false
+            },
+            {
+              "file_page": 43,
+              "printed_page": 36,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-8",
+          "unit_label": "Unit 8",
+          "title": "International Children's Day",
+          "file_page_start": 44,
+          "file_page_end": 47,
+          "chapter_printed_start": 37,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 44,
+              "printed_page": 37,
+              "reviewed": false
+            },
+            {
+              "file_page": 45,
+              "printed_page": 38,
+              "reviewed": false
+            },
+            {
+              "file_page": 46,
+              "printed_page": 39,
+              "reviewed": false
+            },
+            {
+              "file_page": 47,
+              "printed_page": 40,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        },
+        {
+          "unit_id": "unit-9",
+          "unit_label": "Unit 9",
+          "title": "Look at these beautiful places in the world",
+          "file_page_start": 48,
+          "file_page_end": 51,
+          "chapter_printed_start": 41,
+          "chapter_printed_end": null,
+          "pages": [
+            {
+              "file_page": 48,
+              "printed_page": 41,
+              "reviewed": false
+            },
+            {
+              "file_page": 49,
+              "printed_page": 42,
+              "reviewed": false
+            },
+            {
+              "file_page": 50,
+              "printed_page": 43,
+              "reviewed": false
+            },
+            {
+              "file_page": 51,
+              "printed_page": 44,
+              "reviewed": false
+            }
+          ],
+          "objective_evidence": []
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "generated_keys_unique": true,
+    "all_prior_links_refer_to_earlier_units": true,
+    "source_and_output_counts_match": true,
+    "independent_crosscheck_status": "PASS",
+    "checked_at_utc": "2026-10-22T07:52:13.655009+00:00",
+    "checked_unit_count": 81,
+    "source_title_edition_sha_and_pages_match": true,
+    "all_room_ids_exist": true,
+    "existing_room_id_count_including_village": 36,
+    "distinct_event_titles": 81,
+    "markdown_unit_sections": 81,
+    "default_route_and_selected_start_exception_present": true,
+    "u1_nameplate_and_photo_unified": true,
+    "runtime_tests_run": false,
+    "limitations": [
+      "仅结构、出处和文档一致性核对；不是完整教材审校。",
+      "本次没有执行Godot或声称新增事件已在游戏中实现。"
+    ],
+    "delivery_files": [
+      {
+        "path": "curriculum_arcs.json",
+        "sha256": "0f37179fa78883af3c4ae53e2e5c23b65a67bf1b8b4242133a47cb1ab3ab6991"
+      },
+      {
+        "path": "教材章节与主线事件.md",
+        "sha256": "74c5afe5c9f691e0e8be0fbe1cab02376f19c3766ea306a2b5522a73c7ebf6a4"
+      }
+    ],
+    "independent_review": {
+      "status": "issues_resolved",
+      "checks": "81 keys, source titles/editions/SHA/file and printed pages, 10 objective quotes, evidence boundaries, scene realism, entry route consistency",
+      "resolved": [
+        "Objectives source summary now accurately distinguishes 6 ai-repaired and 4 pdf regions.",
+        "Grade 5 volume 2 Unit 7 uses a clearly simulated school-area map without claiming the actual island post office is near school.",
+        "Prologue exit opens the selected starting book, defaulting to Grade 3 volume 1."
+      ]
+    }
+  }
+}

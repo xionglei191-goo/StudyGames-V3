@@ -1,0 +1,2062 @@
+{
+  "schema_version": 1,
+  "id": "environment_motion_weather_daynight",
+  "title": "环境动态与天气昼夜资产策划",
+  "date": "2026-10-22",
+  "status": "planning_only",
+  "implementation_state": "not_implemented",
+  "authority_note": "本文件仅为当前美术策划与实施交接，不表示天气、风动、昼夜或相关设置已进入游戏；全部资产项 implementation_status=planned。",
+  "ownership": {
+    "owned_files": [
+      "docs/planning/art/环境动态与天气昼夜策划.md",
+      "docs/planning/art/environment_motion_assets.json"
+    ],
+    "excluded_work": [
+      "运行时代码与工程配置",
+      "Blender 源文件、导出 GLB 与碰撞",
+      "NPC 角色、Mixamo 与行为日程资产",
+      "词汇策划目录",
+      "构建、发布与重型验证"
+    ]
+  },
+  "source_snapshot": {
+    "project_path": "game/project.godot",
+    "project_version_at_inspection": "0.4.0",
+    "render_method": "gl_compatibility",
+    "default_viewport": [
+      1440,
+      900
+    ],
+    "minimum_window": [
+      960,
+      640
+    ],
+    "source_files_inspected": [
+      "game/scripts/world_builder.gd",
+      "game/scripts/blender_materials.gd",
+      "game/scripts/imported_world.gd",
+      "game/scripts/imported_interior.gd",
+      "game/scripts/game_state.gd",
+      "game/data/interiors_manifest.json",
+      "game/assets/world/island.glb",
+      "game/assets/world/manifest.json",
+      "docs/美术风格与配色方向.md",
+      "docs/planning/mainline/字母探索序章.md"
+    ],
+    "observations": [
+      "现有 _lighting() 提供固定自然光照基准；本策划未把它误写为现有动态天气。",
+      "blender_materials.gd 将网格颜色作为 albedo 并保持 vertex_color_is_srgb=false。",
+      "当前主岛 GLB JSON 中 80 个 primitive 条目有 COLOR_0，17 个有 TEXCOORD_1；UV2 不是空闲通道。",
+      "现有主岛水碰撞节点为 ALPHA_River_Water 与 ALPHA_V3_Lake_Deep_To_Shallow；运行时水体层为 9，地面层为 4。",
+      "现有 day 与 next_day 控制游戏日/果园；学习 last_seen 使用真实 Unix 时间。",
+      "现有 preferences.reduced_motion 已由主菜单与角色/反馈读取；本轮仅规划把环境响应接到该偏好，不能建立冲突的第二套减少动态状态。"
+    ],
+    "status": "read_only_inspection_no_engine_run"
+  },
+  "design_goal": "风、水、天气与光线有缓慢而可察觉的生命感；保持柔和自然配色、字母识别、行走可读性与学习专注。",
+  "non_goals": [
+    "写实风暴、雷电、雪灾或生存系统",
+    "GPU/CPU 流体与实时布料解算",
+    "改岛屿布局、地标身份、SG 位置或静态碰撞",
+    "用天气/夜晚锁主线或制造真实时间等待",
+    "擅自替换原地图、换渲染器或全局重做美术",
+    "将表面动效状态写入学习间隔或掌握度"
+  ],
+  "priority_definition": {
+    "P0": "样区与安全接入基础，先独立验收后扩大",
+    "P1": "基础成立后的环境完整度",
+    "P2": "可关闭的锦上添花，性能或可读性不足可延期"
+  },
+  "scene_catalog": [
+    "village",
+    "landmark_A",
+    "landmark_B",
+    "landmark_C",
+    "landmark_D",
+    "landmark_E",
+    "landmark_F",
+    "landmark_G",
+    "landmark_H",
+    "landmark_I",
+    "landmark_J",
+    "landmark_K",
+    "landmark_L",
+    "landmark_M",
+    "landmark_N",
+    "landmark_O",
+    "landmark_P",
+    "landmark_Q",
+    "landmark_R",
+    "landmark_S",
+    "landmark_T",
+    "landmark_U",
+    "landmark_V",
+    "landmark_W",
+    "landmark_X",
+    "landmark_Y",
+    "landmark_Z",
+    "school",
+    "classroom",
+    "music_room",
+    "art_room",
+    "science_room",
+    "canteen",
+    "playground",
+    "football_field",
+    "home"
+  ],
+  "state_catalog": [
+    "wind_calm",
+    "wind_breeze",
+    "wind_soft_gust",
+    "paused",
+    "weather_clear",
+    "weather_cloudy",
+    "weather_light_rain",
+    "weather_mist",
+    "dawn",
+    "day",
+    "dusk",
+    "night",
+    "learning_focus",
+    "zone_outdoor",
+    "zone_mixed",
+    "zone_sheltered",
+    "quality_low",
+    "quality_standard",
+    "quality_high",
+    "motion_full",
+    "motion_reduced",
+    "motion_static",
+    "audio_muted"
+  ],
+  "source_candidate_contract": {
+    "existing_verified": "本轮只读验证文件存在；selection 为选择候选，实施仍需逐物件检查。",
+    "proposed_new": "明确标记的新拟路径，本轮未创建且不得被调用为已存在资源。",
+    "external_sources": "本轮无已取得的外部风雨音频或贴图；未来取得许可与出处后才可替换 proposed_new。"
+  },
+  "material_and_geometry_contract": {
+    "color_0": "保留原 albedo 语义与数值；不可把任一 RGBA 分量改写为风权重。",
+    "uv": "保留已有 TEXCOORD_0/TEXCOORD_1；额外 UV/自定义通道必须另行证明 Blender→GLB→Godot 的无损传输，不当作当前可用。",
+    "first_pilot_weighting": "独立小网格可用经审查的局部根部/高度函数；大合并树冠与草丛必须按簇定义固定区，无法证明正确则静止。",
+    "future_weight_asset": "必要时新副本生成专用遮罩与映射数据；源物件颜色/UV/拓扑不覆写。方案通过往返导入检查后再采纳。",
+    "material_binding": "在现有顶点色恢复之后复制许可材质；先比对静止外观再注入位移，不对共享建筑材质盲目替换。",
+    "immutable_items": [
+      "SG_* 变换和语义",
+      "地标 A–Z 身份与入口",
+      "SG_MEMORY_* 锚点",
+      "地形/道路/建筑/树干的静态碰撞",
+      "水体安全边界与桥面通行",
+      "原版 .blend/.glb"
+    ],
+    "visual_parent_rule": "不得让含碰撞、门口、记忆点或角色的父节点随风摆动；只作用于许可的可视网格。",
+    "bounds": "最大动态位移必须计入视觉剔除范围；不能通过变大碰撞解决视觉问题。",
+    "water": "首版仅材质/法线动效，零水面高度位移；无流体解算，无动态地形。"
+  },
+  "clock_contract": {
+    "default": "样板试制与 26 字母首次引导固定晴天白昼；动态验收通过后的正式自由生活模式默认启用温和慢速日照与天气变化，并保留固定晴天、固定白昼、减少动态选项。",
+    "visual_clock": "单独累积的环境表现秒，仅前台自由行走时推进；正式自由生活模式默认启用，样板/首次引导使用固定相位，用户固定选项优先。",
+    "narrative_override": "剧情明确指定清晨、黄昏等时，可暂时覆盖表现相位与天气；保存覆盖前自由生活状态，剧情结束后平滑恢复，不调用 next_day、不改学习时间、不要求等待真实时段。固定白昼或减少动态偏好应继续生效，剧情通过对白说明即可。",
+    "decorative_motion_pause_rule": "对话、学习/记忆阅读、暂停菜单及后台期间，风、水纹、云和环境粒子与表现时钟一并冻结，天气插值与昼夜相位也暂停；恢复时平滑继续，不补跑离开期间的时间。NPC 自身必要的对白/表情动作不在环境资产范围。",
+    "pause_contexts": [
+      "学习题目",
+      "字母/单词阅读卡",
+      "NPC 对话",
+      "暂停菜单",
+      "应用进入后台"
+    ],
+    "optional_cycle_minutes": {
+      "total": 36,
+      "dawn": 4,
+      "day": 20,
+      "dusk": 4,
+      "night": 8,
+      "status": "suggested_untested"
+    },
+    "scene_change": "保存连续相位并平滑切换场景配置，不从场景载入瞬间随机重抽天气。",
+    "save": "未来只在独立环境偏好/表现状态中保存；现有存档迁移需由集成者另行设计，本轮没有变更。",
+    "never_write": [
+      "day",
+      "harvested",
+      "learning.last_seen",
+      "学习复习间隔",
+      "正确率/独立完成标记",
+      "任务冷却和奖励"
+    ],
+    "npc_contract": "日程系统可读取 phase/weather 作装饰行为提示；夜间与下雨都必须提供可到达的任务服务，不强制任务等到白天。",
+    "shader_note": "官方 Shader TIME 受 time_scale 影响且不会随场景暂停自动停止；本项目应使用自有表现时钟，实际接入需验证。"
+  },
+  "weather_profiles": [
+    {
+      "id": "weather_clear",
+      "name": "晴",
+      "wind_strength_proposal": 0.2,
+      "visual": "现有自然配色的稳定母版",
+      "precipitation": false,
+      "near_path_readability": "基准",
+      "transition_seconds_proposal": [
+        20,
+        40
+      ]
+    },
+    {
+      "id": "weather_cloudy",
+      "name": "多云",
+      "wind_strength_proposal": 0.25,
+      "visual": "云量增加、阳光稍柔；保留草木与道路分离",
+      "precipitation": false,
+      "near_path_readability": "等同晴天",
+      "transition_seconds_proposal": [
+        20,
+        40
+      ]
+    },
+    {
+      "id": "weather_light_rain",
+      "name": "小雨",
+      "wind_strength_proposal": 0.3,
+      "visual": "短细低对比雨丝、稀疏水圈、少量雨声",
+      "precipitation": true,
+      "near_path_readability": "等同晴天；不加镜头雨滴",
+      "transition_seconds_proposal": [
+        20,
+        40
+      ]
+    },
+    {
+      "id": "weather_mist",
+      "name": "薄雾",
+      "wind_strength_proposal": 0.1,
+      "visual": "远景轻收敛，近景字母与门口清楚",
+      "precipitation": false,
+      "near_path_readability": "等同晴天；逐相机调雾起点",
+      "transition_seconds_proposal": [
+        25,
+        45
+      ]
+    }
+  ],
+  "weather_transition_rules": {
+    "scheduler_status": "planned",
+    "scheduler": "样板和首次引导固定晴天，可由策划手动预览；动态验收通过后的正式自由生活模式默认温和自动变化，仅自由行走时推进，每个天气至少驻留 8 分钟为待测建议值；用户可固定晴天。",
+    "transition": "每次只在两个主天气间插值；雨与雾不同时达到上限。",
+    "learning_lock": "读音/题目/关键对话开始后冻结该轮天气插值，结束再缓慢继续。",
+    "no_penalty": "没有天气扣分、路滑、损坏作物或关门惩罚。"
+  },
+  "scene_exposure_profiles": {
+    "outdoor": [
+      "village",
+      "school",
+      "playground",
+      "football_field"
+    ],
+    "mixed_pending_region_review": [
+      "landmark_A",
+      "landmark_B",
+      "landmark_F"
+    ],
+    "sheltered": [
+      "home",
+      "classroom",
+      "music_room",
+      "art_room",
+      "science_room",
+      "canteen"
+    ],
+    "other_scene_default": "保持现有静态/无雨；审查实际几何与屋檐范围后逐场景扩展，不按名称推断。",
+    "open_diorama_rule": "开放式展示模型仍可作为室内，不因缺少物理屋顶就添加降雨。"
+  },
+  "quality_profiles": {
+    "status": "suggested_limits_not_benchmarked",
+    "common": "主地图原始质量不改；表内是新增环境效果的初始上限，须按设备实测调整。粒子数量为所有可见环境粒子合计上限，子项不得相加突破总上限。",
+    "tiers": [
+      {
+        "id": "quality_low",
+        "foliage": "仅树冠慢摆；草叶细颤关闭",
+        "active_environment_particles_max": 120,
+        "rain_particles_max": 120,
+        "water": "单层慢纹，无雨圈",
+        "extra_draw_calls_target_max": 20,
+        "extra_uncompressed_texture_memory_mib_target_max": 8,
+        "local_lights_max": 0,
+        "fog": "低密度或关闭",
+        "target_additional_gpu_ms_max": 1.5,
+        "target_additional_cpu_ms_max": 0.5
+      },
+      {
+        "id": "quality_standard",
+        "foliage": "树冠+邻近草叶",
+        "active_environment_particles_max": 340,
+        "rain_particles_max": 300,
+        "water": "双层柔纹、至多 16 个雨圈",
+        "extra_draw_calls_target_max": 35,
+        "extra_uncompressed_texture_memory_mib_target_max": 16,
+        "local_lights_max": 4,
+        "fog": "普通距离雾",
+        "target_additional_gpu_ms_max": 2,
+        "target_additional_cpu_ms_max": 0.7
+      },
+      {
+        "id": "quality_high",
+        "foliage": "增加近景细节，摆幅不增大",
+        "active_environment_particles_max": 650,
+        "rain_particles_max": 600,
+        "water": "增加局部细纹，仍无 SSR/流体",
+        "extra_draw_calls_target_max": 60,
+        "extra_uncompressed_texture_memory_mib_target_max": 24,
+        "local_lights_max": 6,
+        "fog": "同标准档，仅参数更细",
+        "target_additional_gpu_ms_max": 3,
+        "target_additional_cpu_ms_max": 1
+      }
+    ],
+    "comfort": {
+      "motion_reduced": "摆幅降至标准的 35%；关闭飘叶、叶尖细颤和多余水花；雨量可进一步降低。",
+      "motion_static": "冻结树、草、水纹和云，关闭所有环境粒子；保留可读光照并允许固定白昼。",
+      "audio": "环境音量和静音独立；不影响英语读音与重要界面反馈。"
+    },
+    "measurement_rule": "固定同一 GPU、分辨率、窗口、镜头和存档，用静态基准与新增效果各采样 60 秒比较中位数和 P95 CPU/GPU 帧时；记录驱动、温度/限频条件、三档总内存与绘制调用。没有基线不足以认定性能改善。",
+    "no_fps_claim": "本轮未运行引擎或性能测量，不承诺任何设备帧率。",
+    "degradation_order": [
+      "关飘叶与雨后湿润",
+      "降雨滴/雨圈实际数量并减少透明重叠",
+      "关局部灯与细叶颤动",
+      "水面改单层、远海静态",
+      "关闭雾、保留固定晴天和最少树冠慢摆"
+    ],
+    "compatibility_rule": "基础不依赖体积雾、SSR、Compute、粒子 SDF 碰撞、粒子拖尾或 Decal 节点；不因需要效果自动切换渲染器。"
+  },
+  "assets": [
+    {
+      "id": "ENV001",
+      "name": "共享风场与环境表现时钟",
+      "category": "control",
+      "priority": "P0",
+      "scene_ids": [
+        "village",
+        "school",
+        "landmark_A",
+        "landmark_F",
+        "playground",
+        "football_field"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "game/scripts/world_builder.gd",
+          "role": "读取现有光照基准，后续以独立控制器接入",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "game/scripts/game_state.gd",
+          "role": "只读核对 day、next_day 与真实时间学习记录边界",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/scripts/environment/environment_controller.gd",
+          "role": "独立环境状态与暂停协调器",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/wind_profiles.json",
+          "role": "风向、强度、低频阵风与种子配置",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "一个共享水平风向、低频风强曲线；同一阵风按世界位置传播，各物件用稳定种子相位偏移。",
+        "blender_work": "仅登记可动网格、局部固定区、根部和稳定标识；建筑、树干、SG_* 与碰撞保持静态。",
+        "godot_work": "使用单一可暂停 env_motion_time 驱动材质/受限视觉节点；关闭面板可平滑恢复。不得直接把 Shader TIME 当作游戏日期。",
+        "initial_tuning_proposal": {
+          "wind_strength_0_to_1": {
+            "calm": 0.1,
+            "breeze": 0.25,
+            "soft_gust": 0.4
+          },
+          "gust_period_seconds": [
+            9,
+            17
+          ],
+          "direction_change_degrees_per_minute_max": 12
+        },
+        "not_measured": true
+      },
+      "states": [
+        "wind_calm",
+        "wind_breeze",
+        "wind_soft_gust",
+        "paused"
+      ],
+      "dependencies": [],
+      "acceptance": [
+        "相邻植物大方向一致但不整齐同步；固定录屏中不出现周期性全场点头。",
+        "面板暂停与存读档不造成瞬移；推进表现时钟不写入 day、harvested 或 learning.last_seen。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV002",
+      "name": "树冠柔摆",
+      "category": "foliage",
+      "priority": "P0",
+      "scene_ids": [
+        "village",
+        "school",
+        "landmark_A"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "ALPHA_V3_Tree_Canopy_*",
+            "ALPHA_ORCHARD_A_Tree_*_Crown_*"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/school/school_v03.blend",
+          "role": "现有可编辑场所源文件",
+          "selection": [
+            "Boundary_Tree_Crown*"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/landmark_A/landmark_A_v01.blend",
+          "role": "现有可编辑场所源文件",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/shaders/foliage_motion.gdshader",
+          "role": "保留原材质响应的树冠微动材质",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "分离树冠做低频小幅形变；树冠根部权重为零，顶部缓慢偏转。",
+        "blender_work": "按物件核对局部轴、根部、包围盒和原颜色/UV；不能以整张合并网格底端充当所有树的根。",
+        "godot_work": "先保真还原 albedo、贴图、粗糙度、COLOR_0，再加局部顶点偏移；不可动画含 SG 或碰撞的父节点。扩大可视包围盒覆盖最大位移。",
+        "initial_tuning_proposal": {
+          "canopy_tip_displacement_m": [
+            0.02,
+            0.08
+          ],
+          "period_seconds": [
+            4.5,
+            8
+          ]
+        },
+        "fallback": "无法保留材质或正确固定根部的物件保持静态。",
+        "not_measured": true
+      },
+      "states": [
+        "wind_calm",
+        "wind_breeze",
+        "wind_soft_gust",
+        "motion_reduced",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV001"
+      ],
+      "acceptance": [
+        "树干与根部无位移，枝叶不离开连接处；最大偏移不覆盖附近字母和交互提示。",
+        "关闭风动后同一灯光下颜色、纹理和高光与当前基准一致；材质共享不会连带移动建筑。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV003",
+      "name": "局部叶片轻颤",
+      "category": "foliage_detail",
+      "priority": "P1",
+      "scene_ids": [
+        "village",
+        "landmark_A",
+        "landmark_F"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "ALPHA_ORCHARD_A_Tree_*_Fruit_*_Leaf"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/landmark_F/landmark_F_v01.blend",
+          "role": "现有可编辑场所源文件",
+          "selection": [
+            "Back_Greenery_Leaf*",
+            "Bouquet_Leaf*"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/leaf_motion_bindings.json",
+          "role": "逐对象许可表，排除字母、果实主体和教学展示件",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "在树冠慢摆上叠加极小叶尖颤动；近景才启用，低频与高频不能同幅。",
+        "blender_work": "叶柄固定，果实、展示牌与花束底座不动；复核叶片不是代表图像的关键辨认边缘。",
+        "godot_work": "同风向、独立相位；中远景冻结细颤，保留树冠整体慢摆。",
+        "initial_tuning_proposal": {
+          "tip_displacement_m": [
+            0.003,
+            0.012
+          ],
+          "period_seconds": [
+            1.2,
+            2.8
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "wind_breeze",
+        "wind_soft_gust",
+        "motion_reduced",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV001",
+        "ENV002"
+      ],
+      "acceptance": [
+        "近景不抖屏、不出现锯齿闪烁；远景无细碎噪点。",
+        "Apple 等代表图像与果实主体的位置、颜色和读形保持稳定。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV004",
+      "name": "草丛与芦苇随风",
+      "category": "ground_foliage",
+      "priority": "P0",
+      "scene_ids": [
+        "village",
+        "school",
+        "playground",
+        "football_field"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "ALPHA_V3_Meadow_Grass_Clumps",
+            "ALPHA_V3_Lakeside_Reed_Clusters",
+            "ALPHA_River_Reed*"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/school/school_v03.blend",
+          "role": "现有可编辑场所源文件",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/football_field/football_field_v01.blend",
+          "role": "现有可编辑场所源文件",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/ground_foliage_bindings.json",
+          "role": "草簇分区与根部固定数据",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "草尖和芦苇上半部沿共享风方向弯曲；不同草簇错相。",
+        "blender_work": "大合并网格先核对每簇根区；必要时在新副本中分簇，不能以地图原点旋转整片草地。",
+        "godot_work": "地形底面、地坪、路面与球场草坪保持静态；仅许可表内装饰植株受风。",
+        "initial_tuning_proposal": {
+          "grass_tip_displacement_m": [
+            0.01,
+            0.035
+          ],
+          "reed_tip_displacement_m": [
+            0.02,
+            0.06
+          ],
+          "period_seconds": [
+            3,
+            6
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "wind_calm",
+        "wind_breeze",
+        "wind_soft_gust",
+        "motion_reduced",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV001"
+      ],
+      "acceptance": [
+        "根部贴地且无地面开缝；步行轮廓和既有静态碰撞完全不变。",
+        "足球白线与操场跑道不波动，记忆点提示不被高草遮住。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV005",
+      "name": "花茎与花头轻摆",
+      "category": "flowers",
+      "priority": "P1",
+      "scene_ids": [
+        "village",
+        "school",
+        "landmark_F"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "名称含 Flower 的装饰网格，需逐项排除牌匾与静态花坛底座"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/school/school_v03.blend",
+          "role": "现有可编辑场所源文件",
+          "selection": [
+            "Art_Window_Planter_Flower*"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/landmark_F/landmark_F_v01.blend",
+          "role": "现有可编辑场所源文件",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/flower_motion_bindings.json",
+          "role": "花茎根部、花头从属与教学静止白名单",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "花茎小幅弯曲，花头跟随；花盆、花坛、温室骨架静止。",
+        "blender_work": "整理花头与花茎视觉从属，现有紧密合并件不能拆出悬空花头。",
+        "godot_work": "正处于 Flower 展示、观察或识别任务时降低该组摆幅，使用全局风相位但保持异步。",
+        "initial_tuning_proposal": {
+          "flower_head_displacement_m": [
+            0.01,
+            0.04
+          ],
+          "period_seconds": [
+            4,
+            7
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "wind_breeze",
+        "learning_focus",
+        "motion_reduced",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV001"
+      ],
+      "acceptance": [
+        "花头不穿花盆、墙体和玻璃；花茎底部无浮动。",
+        "识别界面打开时关键花朵可稳定观察，任务完成与否不依赖风的时机。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV006",
+      "name": "角旗和柔性布面",
+      "category": "cloth",
+      "priority": "P1",
+      "scene_ids": [
+        "school",
+        "football_field"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/school/school_v03.blend",
+          "role": "现有可编辑场所源文件",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/football_field/football_field_v01.blend",
+          "role": "现有可编辑场所源文件",
+          "selection": [
+            "Football_CornerFlag_Cloth_00",
+            "Football_CornerFlag_Cloth_01",
+            "Football_CornerFlag_Cloth_02",
+            "Football_CornerFlag_Cloth_03"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/shaders/cloth_motion.gdshader",
+          "role": "固定杆侧、自由外缘的轻量布面微动",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "固定旗杆一侧，外缘延迟轻摆；与植物共享风方向。",
+        "blender_work": "杆与布面分离，记录固定边；少量均匀分段用于形变，避免为了模拟增加整场网格密度。",
+        "godot_work": "顶点形变或短循环动画；不启用实时软体/布料解算。",
+        "initial_tuning_proposal": {
+          "edge_displacement_m": [
+            0.015,
+            0.06
+          ],
+          "period_seconds": [
+            2,
+            4
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "wind_calm",
+        "wind_breeze",
+        "wind_soft_gust",
+        "motion_reduced",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV001"
+      ],
+      "acceptance": [
+        "四角旗不是同步翻折；布面不脱杆，不形成遮挡球门/足球的大片物体。",
+        "旗杆与球场碰撞、角旗位置不变。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV007",
+      "name": "偶发飘叶",
+      "category": "ambient_particles",
+      "priority": "P2",
+      "scene_ids": [
+        "village",
+        "school",
+        "landmark_A"
+      ],
+      "source_candidates": [
+        {
+          "status": "proposed_new",
+          "path": "assets/blender/environment/leaf_particle_v01.blend",
+          "role": "2 至 3 种柔和小叶形的独立源资产",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/leaf_particle.glb",
+          "role": "少量低面数飘叶",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "只复用叶片的颜色方向，不从现有树上删除叶片"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        }
+      ],
+      "motion": {
+        "method": "在树旁局部区域偶发飘落，沿风缓慢移动并淡出。",
+        "blender_work": "新建独立小叶，不改变树的可见叶量。",
+        "godot_work": "局部粒子系统、无碰撞、无任务拾取逻辑；学习界面和低档关闭。",
+        "initial_tuning_proposal": {
+          "simultaneous_near_camera_max": 8,
+          "burst_interval_seconds": [
+            12,
+            25
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_clear",
+        "weather_cloudy",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV001",
+        "ENV022",
+        "ENV023"
+      ],
+      "acceptance": [
+        "不持续下叶雨、不遮挡玩家脸与字母；无可拾取误导。",
+        "离开样区即停止发射，重复换场无遗留粒子。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV008",
+      "name": "湖面缓慢细纹",
+      "category": "water",
+      "priority": "P0",
+      "scene_ids": [
+        "village"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "ALPHA_V3_Lake_Deep_To_Shallow",
+            "ALPHA_V3_Lake_Ripple_Strokes"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "game/scripts/imported_world.gd",
+          "role": "只读保留湖泊水体体积与 sg_water 碰撞",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/shaders/lake_surface.gdshader",
+          "role": "温和颜色/法线流动；岸线锁定",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "保持现有深浅水配色，使用缓慢移动的低对比细纹；首版仅颜色/法线动画。",
+        "blender_work": "检查岸线轮廓、岛边、水面 UV 与原涟漪网格，避免重复叠两套高光。",
+        "godot_work": "不依赖 SSR、折射或 CPU 流体；不改变湖面高度、碰撞顶面和岸线。",
+        "initial_tuning_proposal": {
+          "visible_ripple_cycle_seconds": [
+            6,
+            10
+          ],
+          "geometry_vertical_displacement_m": 0
+        },
+        "not_measured": true
+      },
+      "states": [
+        "wind_calm",
+        "wind_breeze",
+        "weather_light_rain",
+        "day",
+        "night",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV001"
+      ],
+      "acceptance": [
+        "湖边、桥面、岛上人物的脚不因波纹穿水或误触返岸；水面明确不可通行。",
+        "远景无闪白点；暂停纹理后保留当前颜色与边界。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV009",
+      "name": "河道定向流纹",
+      "category": "water",
+      "priority": "P1",
+      "scene_ids": [
+        "village",
+        "landmark_B"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "ALPHA_River_Water",
+            "ALPHA_River_Glint*"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/landmark_B/landmark_B_v01.blend",
+          "role": "现有可编辑场所源文件",
+          "selection": [
+            "Harbour_Water"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/water_flow_regions.json",
+          "role": "河段方向与港湾缓流区，需由现有几何逐段标注",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "河道按连续水路方向缓慢移动表面纹理；港湾只做弱幅面纹，不强行套同一流向。",
+        "blender_work": "核对每段 UV 和河流转弯，不移动原水边与桥体。",
+        "godot_work": "统一水材质接口接受分区流向与流速；纹理平移沿局部流向，非整片水网平移。",
+        "initial_tuning_proposal": {
+          "texture_motion_world_m_per_second": [
+            0.02,
+            0.06
+          ],
+          "geometry_vertical_displacement_m": 0
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_clear",
+        "weather_cloudy",
+        "weather_light_rain",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV001",
+        "ENV008"
+      ],
+      "acceptance": [
+        "河纹不会跨岸、逆向跳变或穿过桥台；港湾地板与码头保持静止。",
+        "水层 9、地面层 4 与返岸判断不受材质动画影响。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV010",
+      "name": "远海柔和起伏",
+      "category": "water_distant",
+      "priority": "P2",
+      "scene_ids": [
+        "village"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "ALPHA_Ocean_Presentation"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/shaders/ocean_background.gdshader",
+          "role": "地图外围远海的低频明暗起伏",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "地图外围海面宽幅低频明暗变化，避免写实巨浪。",
+        "blender_work": "保持展示海平面范围与岛屿边缘，优先不新增几何。",
+        "godot_work": "先采用静态几何、双层慢纹；只有远离岸线并经复核区域才候选微小顶点起伏。",
+        "initial_tuning_proposal": {
+          "cycle_seconds": [
+            12,
+            20
+          ],
+          "default_geometry_displacement_m": 0
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_clear",
+        "weather_cloudy",
+        "weather_light_rain",
+        "night",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV008",
+        "ENV023"
+      ],
+      "acceptance": [
+        "不吞没岸线、不制造可游泳暗示；海面亮度低于字母与建筑。",
+        "低档完全静态仍保留柔和海色，远海透明叠层不铺满屏幕。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV011",
+      "name": "家门喷泉水流",
+      "category": "water_local",
+      "priority": "P1",
+      "scene_ids": [
+        "village"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "ALPHA_Home_Fountain_Base",
+            "ALPHA_Home_Fountain_Column",
+            "ALPHA_Home_Fountain_Water"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/fountain_flow.tscn",
+          "role": "盆内流纹与少量水珠的局部表现",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "在现有喷泉盆内加入轻微流纹及细短下落水线；不改变喷泉体积。",
+        "blender_work": "根据已有盆口和柱体确定水线起终点，保留雕塑与底座。",
+        "godot_work": "小范围循环动画或少量粒子，离开家门区域停止细节；无动态水碰撞。",
+        "initial_tuning_proposal": {
+          "simultaneous_droplets_max": 12,
+          "loop_seconds": [
+            2,
+            4
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_clear",
+        "weather_cloudy",
+        "day",
+        "dusk",
+        "night",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV008",
+        "ENV022"
+      ],
+      "acceptance": [
+        "水线全部落在盆内，出生点及回家路径不受阻；底座碰撞与当前相同。",
+        "声音不盖过字母读音，暂停粒子时不会积成水滴墙。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV012",
+      "name": "慢速云层与天空层次",
+      "category": "sky",
+      "priority": "P1",
+      "scene_ids": [
+        "village",
+        "school",
+        "playground",
+        "football_field"
+      ],
+      "source_candidates": [
+        {
+          "status": "proposed_new",
+          "path": "assets/blender/environment/soft_clouds_v01.blend",
+          "role": "少量柔和云团或薄片源资产，需先比较当前俯视视角",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/cloud_layer.tscn",
+          "role": "镜头外缘可见的轻量云层或天空渐变",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "根据俯视镜头可见天空范围选择天空渐变或很远的低密度云层，移动方向跟随大尺度风。",
+        "blender_work": "云形圆润、边缘柔和，避免厚实云块遮路；不把云放在角色与镜头之间。",
+        "godot_work": "远景循环平移与淡入淡出；基线不使用体积云和投影纹理。",
+        "initial_tuning_proposal": {
+          "visible_crossing_seconds": [
+            90,
+            180
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_clear",
+        "weather_cloudy",
+        "weather_light_rain",
+        "dawn",
+        "day",
+        "dusk",
+        "night",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV001",
+        "ENV022"
+      ],
+      "acceptance": [
+        "云不会经过文字、角色与任务物件前方；循环边界没有跳变。",
+        "云量变化不靠频繁闪烁太阳强度来表现。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV013",
+      "name": "晴天基准状态",
+      "category": "weather_profile",
+      "priority": "P0",
+      "scene_ids": [
+        "village",
+        "school",
+        "playground",
+        "football_field",
+        "landmark_A",
+        "landmark_B",
+        "landmark_F"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "game/scripts/world_builder.gd",
+          "role": "当前自然配色与光照参数",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "docs/美术风格与配色方向.md",
+          "role": "已采用的柔和自然美术方向",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/weather_profiles.json",
+          "role": "晴/多云/小雨/薄雾的表现参数",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "晴天作为所有天气比对与回退状态：暖米色路面、草木绿、柔和阴影与少量风。",
+        "blender_work": "不烘焙天气色进现有网格和贴图。",
+        "godot_work": "以当前光照为母版并用插值过渡；学习序章默认固定晴朗白天。",
+        "initial_tuning_proposal": {
+          "transition_seconds": [
+            20,
+            40
+          ],
+          "wind_strength": 0.2
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_clear",
+        "day"
+      ],
+      "dependencies": [
+        "ENV001",
+        "ENV022"
+      ],
+      "acceptance": [
+        "晴天可一键恢复原有自然配色；关闭环境动态后没有遗留暗化或湿润。",
+        "A–Z 地标与路面仍是画面主要信息。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV014",
+      "name": "多云柔光状态",
+      "category": "weather_profile",
+      "priority": "P1",
+      "scene_ids": [
+        "village",
+        "school",
+        "playground",
+        "football_field",
+        "landmark_A",
+        "landmark_B",
+        "landmark_F"
+      ],
+      "source_candidates": [
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/weather_profiles.json",
+          "role": "在晴天母版上添加多云参数",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "game/scripts/world_builder.gd",
+          "role": "现有主光、补光与背景参数基准",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        }
+      ],
+      "motion": {
+        "method": "降低阳光锐度与天空暖感，保持道路和植物的色彩层次。",
+        "blender_work": "无需重做几何或贴图。",
+        "godot_work": "平滑调整主光/环境光及云量；保留稳定补光，避免整屏灰白。",
+        "initial_tuning_proposal": {
+          "clear_sun_energy_multiplier": [
+            0.7,
+            0.9
+          ],
+          "transition_seconds": [
+            20,
+            40
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_cloudy"
+      ],
+      "dependencies": [
+        "ENV012",
+        "ENV013"
+      ],
+      "acceptance": [
+        "与晴天可辨且没有发灰失色；任务物件保持同等可识别性。",
+        "从雨后切换多云不会遗留雨点和室内降雨。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV015",
+      "name": "局部轻雨",
+      "category": "weather_particles",
+      "priority": "P1",
+      "scene_ids": [
+        "village",
+        "school",
+        "playground",
+        "football_field",
+        "landmark_A",
+        "landmark_B",
+        "landmark_F"
+      ],
+      "source_candidates": [
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/light_rain.tscn",
+          "role": "围绕相机可见区域的小雨粒子，不随角色贴面",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/textures/rain_streak.png",
+          "role": "透明低对比雨丝素材",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/rain_exclusion_regions.json",
+          "role": "门廊、雨棚、温室和教学焦点的避雨区域",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "细短、低对比、稍随风倾斜的小雨；无雷电、暴雨和镜头水滴。",
+        "blender_work": "只标注户外/遮蔽区与地面高度范围；不得改 SG 入口与地坪。",
+        "godot_work": "先验证当前 Compatibility 下 GPUParticles3D；采用发射区/遮蔽区裁剪和预设寿命，不依赖粒子 SDF 碰撞。必要时回退低数量 CPU 粒子或静态阴天。",
+        "initial_tuning_proposal": {
+          "transition_seconds": [
+            20,
+            40
+          ],
+          "visible_particle_lifetime_seconds": [
+            0.6,
+            1.1
+          ],
+          "wind_tilt_degrees": [
+            4,
+            12
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_light_rain",
+        "motion_reduced",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV001",
+        "ENV014",
+        "ENV022",
+        "ENV023"
+      ],
+      "acceptance": [
+        "室内、屋檐下与学习面板前没有穿屋雨丝；雨滴不附着镜头。",
+        "小雨不改变角色速度、地面摩擦、球场玩法和任一任务触发。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV016",
+      "name": "雨点水圈",
+      "category": "water_particles",
+      "priority": "P1",
+      "scene_ids": [
+        "village",
+        "landmark_B"
+      ],
+      "source_candidates": [
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/rain_ripple.tscn",
+          "role": "少量淡出水圈表现",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/textures/ripple_ring.png",
+          "role": "柔边水圈贴图",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "ALPHA_V3_Lake_Deep_To_Shallow",
+            "ALPHA_River_Water"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/landmark_B/landmark_B_v01.blend",
+          "role": "现有可编辑场所源文件",
+          "selection": [
+            "Harbour_Water"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        }
+      ],
+      "motion": {
+        "method": "只在许可水面区域散布稀疏小水圈；位置稳定，不逐滴物理追踪。",
+        "blender_work": "给出水域采样边界，排除岸、桥、码头和湖心岛。",
+        "godot_work": "少量平面网格或粒子做尺度/透明度动画；Compatibility 基线不用 Decal 节点。",
+        "initial_tuning_proposal": {
+          "diameter_m": [
+            0.08,
+            0.22
+          ],
+          "life_seconds": [
+            0.5,
+            1
+          ],
+          "simultaneous_max": 16
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_light_rain",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV008",
+        "ENV009",
+        "ENV015"
+      ],
+      "acceptance": [
+        "水圈不出现在草地、桥面、人物脚底和室内；与原湖纹无深度争夺。",
+        "雨停后自然收尾，不瞬间清空或无限残留。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV017",
+      "name": "远处薄雾",
+      "category": "weather_profile",
+      "priority": "P1",
+      "scene_ids": [
+        "village",
+        "school",
+        "playground",
+        "football_field"
+      ],
+      "source_candidates": [
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/weather_profiles.json",
+          "role": "低强度距离雾/高度雾参数",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "game/scripts/world_builder.gd",
+          "role": "现有 WorldEnvironment 基准",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        }
+      ],
+      "motion": {
+        "method": "远景稍收敛，近景路径、字母和入口清楚；不制作浓雾关卡。",
+        "blender_work": "无需改地图或增加雾墙。",
+        "godot_work": "优先使用 Compatibility 支持的普通距离/高度雾，雾起点置于当前主要交互视域之外；密度需按实际相机调试。",
+        "initial_tuning_proposal": {
+          "weather_transition_seconds": [
+            25,
+            45
+          ],
+          "near_interaction_visibility": "保持与晴天相同的可辨认距离"
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_mist",
+        "dawn",
+        "day"
+      ],
+      "dependencies": [
+        "ENV013",
+        "ENV019",
+        "ENV022",
+        "ENV023"
+      ],
+      "acceptance": [
+        "默认镜头下能持续看清目标地标、下一段路和出口；字母、门牌不被雾洗白。",
+        "无需 Forward+、体积雾或全屏遮挡贴片；低档可关闭雾而不改任务逻辑。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV018",
+      "name": "雨后轻微湿润",
+      "category": "surface_response",
+      "priority": "P2",
+      "scene_ids": [
+        "village",
+        "school",
+        "playground",
+        "football_field"
+      ],
+      "source_candidates": [
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/wettable_surface_bindings.json",
+          "role": "可湿润石路/屋顶许可表；字母与纸卡排除",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/assets/environment/shaders/wet_surface.gdshader",
+          "role": "保持基底配色的轻微粗糙度响应",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "雨后少量表面轻暗、反光略变化；不制造大片镜面水坑。",
+        "blender_work": "按材质核对可湿润区域，原纹理与顶点色只读保留。",
+        "godot_work": "渐变一个湿度参数；无需 SSR、动态积水或摩擦变化。",
+        "initial_tuning_proposal": {
+          "drying_seconds": [
+            60,
+            120
+          ],
+          "albedo_darkening_fraction_max": 0.08
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_light_rain",
+        "weather_cloudy",
+        "weather_clear",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV015",
+        "ENV023"
+      ],
+      "acceptance": [
+        "白线、字母牌和教学纸卡颜色不变；光照变化后不出现刺眼镜面。",
+        "湿度归零后材质严格回到原响应；物理摩擦与学习记录不变。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV019",
+      "name": "晨昼暮夜柔和调色",
+      "category": "lighting",
+      "priority": "P0",
+      "scene_ids": [
+        "village",
+        "school",
+        "playground",
+        "football_field",
+        "landmark_A",
+        "landmark_B",
+        "landmark_F",
+        "home",
+        "classroom",
+        "music_room",
+        "art_room",
+        "science_room",
+        "canteen"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "game/scripts/world_builder.gd",
+          "role": "现有 _lighting() 的光照与色调基准",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "game/scripts/game_state.gd",
+          "role": "现有 day 整数与学习 last_seen 使用不同语义",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/day_phase_profiles.json",
+          "role": "晨、昼、暮、夜的亮度下限与色调曲线",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "四个美术相位平滑插值；白天保留当前自然配色，黄昏仅微暖，夜间仍能清楚行走和学习。",
+        "blender_work": "保留现有材质与灯具外观；不把夜色永久烘焙进贴图。",
+        "godot_work": "环境表现时钟独立；样板试制与 26 字母首次引导固定晴天白昼；动态验收通过后的正式自由生活默认温和循环，仅前台自由行走累计。学习/记忆阅读、对话、暂停菜单与后台冻结全部环境表现。剧情相位可临时覆盖再平滑恢复，尊重固定晴天/固定白昼/减少动态偏好，且不调用 next_day()。",
+        "initial_tuning_proposal": {
+          "optional_cycle_real_minutes": 36,
+          "phase_minutes": {
+            "dawn": 4,
+            "day": 20,
+            "dusk": 4,
+            "night": 8
+          },
+          "night_ambient_energy_min_fraction_of_same_scene_day": 0.75
+        },
+        "not_measured": true
+      },
+      "states": [
+        "dawn",
+        "day",
+        "dusk",
+        "night",
+        "paused"
+      ],
+      "dependencies": [
+        "ENV001",
+        "ENV013",
+        "ENV022"
+      ],
+      "acceptance": [
+        "四个相位均能辨别路径、玩家、字母、门口和关键道具；夜景不是单纯调暗屏幕。",
+        "夜间不关闭课堂/商店/地标，不锁任务；NPC 若改变日程仍有可到达的服务替代。",
+        "加速、暂停与切换视觉相位不会影响真实学习间隔、day、果园成熟或任务奖励。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV020",
+      "name": "路灯与窗户暖光",
+      "category": "lighting_props",
+      "priority": "P1",
+      "scene_ids": [
+        "village",
+        "school",
+        "home",
+        "classroom",
+        "music_room",
+        "art_room",
+        "science_room",
+        "canteen"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend",
+          "role": "可编辑主岛工作副本；历史原版继续保留",
+          "selection": [
+            "ALPHA_Path_Lamp_*_Glow",
+            "ALPHA_Home_Lamp_East_Glow",
+            "ALPHA_Home_Lamp_West_Glow"
+          ],
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/school/school_v03.blend",
+          "role": "现有可编辑场所源文件",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/home/home_v01.blend",
+          "role": "现有可编辑场所源文件",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/lamp_bindings.json",
+          "role": "灯罩发光面与少量局部补光的许可表",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "黄昏渐亮、晨间渐暗；灯罩温暖发光，窗户有生活感但不闪烁。",
+        "blender_work": "核对发光面与实体灯杆分离；未存在的窗灯标为新建，不在未知网格上批量套材质。",
+        "godot_work": "先用发光材质，再加少量无阴影局部灯；避免全岛每盏灯都开实时阴影。",
+        "initial_tuning_proposal": {
+          "light_fade_seconds": [
+            15,
+            30
+          ],
+          "local_shadow_casting_lamps": 0
+        },
+        "not_measured": true
+      },
+      "states": [
+        "dawn",
+        "day",
+        "dusk",
+        "night",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV019",
+        "ENV023"
+      ],
+      "acceptance": [
+        "灯光不漂浮、不照透整栋房屋；相邻灯不把奶油墙烤成纯白。",
+        "低档保留发光灯罩和路面可读性；开启夜灯不改变任何入口开放状态。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV021",
+      "name": "风、水、雨环境声",
+      "category": "audio",
+      "priority": "P1",
+      "scene_ids": [
+        "village",
+        "school",
+        "landmark_A",
+        "landmark_B",
+        "landmark_F",
+        "playground",
+        "football_field",
+        "home"
+      ],
+      "source_candidates": [
+        {
+          "status": "proposed_new",
+          "path": "game/audio/environment/wind_soft.ogg",
+          "role": "待制作或取得明确许可的轻风循环",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/audio/environment/water_soft.ogg",
+          "role": "待制作或取得明确许可的柔水声循环",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/audio/environment/rain_soft.ogg",
+          "role": "待制作或取得明确许可的小雨循环",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/audio_profiles.json",
+          "role": "音量、场景覆盖、读音避让与静音配置",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "少层低音量循环；水声局部，雨声随户外暴露程度淡变。",
+        "blender_work": "无；场景音区仅依据现有范围登记。",
+        "godot_work": "单独环境音量控制；字母读音、单词读音与 NPC 关键对白播放时自动降低环境声；不可用音量变化承担唯一状态提示。",
+        "initial_tuning_proposal": {
+          "speech_duck_db": [
+            12,
+            18
+          ],
+          "transition_seconds": [
+            2,
+            4
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_clear",
+        "weather_cloudy",
+        "weather_light_rain",
+        "weather_mist",
+        "dawn",
+        "day",
+        "dusk",
+        "night",
+        "audio_muted"
+      ],
+      "dependencies": [
+        "ENV013",
+        "ENV015",
+        "ENV022"
+      ],
+      "acceptance": [
+        "音频循环首尾无突跳；雨停、进屋和重复换场不叠加多个循环。",
+        "关闭环境声仍可完成全部学习；所有来源补齐作者、许可、用途与本地原件记录后才能正式集成。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV022",
+      "name": "户外、遮蔽与室内配置",
+      "category": "scene_profile",
+      "priority": "P0",
+      "scene_ids": [
+        "village",
+        "school",
+        "playground",
+        "football_field",
+        "landmark_A",
+        "landmark_B",
+        "landmark_F",
+        "home",
+        "classroom",
+        "music_room",
+        "art_room",
+        "science_room",
+        "canteen"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "game/data/interiors_manifest.json",
+          "role": "35 个现有次级/三级场景 ID 与源文件",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "game/scripts/imported_interior.gd",
+          "role": "现有场景加载与 SG 入口关系",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/scene_exposure_profiles.json",
+          "role": "逐场景户外程度、局部遮蔽区与天气开关",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "以实际场景暴露配置决定效果；不因模型是开放式剖面展示就让室内下雨。",
+        "blender_work": "只提交局部遮蔽范围与候选音区；不移动门、窗、SG 或真实碰撞。",
+        "godot_work": "village/school/playground/football_field 默认 outdoor；A/B/F 为 mixed 待区域复核；home/课堂/餐厅默认 sheltered；其余字母场所在审查前不启用降雨。",
+        "initial_tuning_proposal": {
+          "room_change_blend_seconds": [
+            1.5,
+            3
+          ]
+        },
+        "not_measured": true
+      },
+      "states": [
+        "zone_outdoor",
+        "zone_mixed",
+        "zone_sheltered",
+        "paused"
+      ],
+      "dependencies": [],
+      "acceptance": [
+        "进出三层校园和回家后天气状态连续，雨声与雨丝在遮蔽区正确衰减。",
+        "未审查场景安全保持现有静态呈现；缺失配置不崩溃、不擅自复制全岛效果。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV023",
+      "name": "舒适模式与质量档",
+      "category": "accessibility_quality",
+      "priority": "P0",
+      "scene_ids": [
+        "village",
+        "school",
+        "playground",
+        "football_field",
+        "landmark_A",
+        "landmark_B",
+        "landmark_F",
+        "home",
+        "classroom",
+        "music_room",
+        "art_room",
+        "science_room",
+        "canteen"
+      ],
+      "source_candidates": [
+        {
+          "status": "proposed_new",
+          "path": "game/data/environment/quality_profiles.json",
+          "role": "低/标准/高与减弱动态/静态配置",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "game/project.godot",
+          "role": "当前 GL Compatibility、1440×900 默认视口",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "game/scripts/environment/environment_preferences.gd",
+          "role": "候选设置适配；具体存档迁移由主集成者设计",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "质量档控制细节数量，舒适开关独立控制动态强度。",
+        "blender_work": "新细节模型提供低面数与可关闭版本，保留主岛原外观。",
+        "godot_work": "复用现有 preferences.reduced_motion，并扩展它对环境的响应，不新增同义偏好。减弱动态降低摆幅与粒子密度；新增静态选项关粒子、冻结云/水/风；保留颜色、灯光可读性及全部玩法。低档少雨或回退阴天；切档重用或释放对象，不能只改发射比就宣称已省算力。",
+        "initial_tuning_proposal": {
+          "low_rain_particles_max": 120,
+          "standard_rain_particles_max": 300,
+          "high_rain_particles_max": 600
+        },
+        "not_measured": true
+      },
+      "states": [
+        "quality_low",
+        "quality_standard",
+        "quality_high",
+        "motion_full",
+        "motion_reduced",
+        "motion_static",
+        "audio_muted"
+      ],
+      "dependencies": [],
+      "acceptance": [
+        "所有档位主线与物理路径一致；设置切换无 shader 报错、卡死或粒子累积。",
+        "每档先取得相同场景基准，再测开启后的 GPU/CPU 帧时、透明叠画、内存与绘制调用；未测设备不标注达标。"
+      ],
+      "implementation_status": "planned"
+    },
+    {
+      "id": "ENV024",
+      "name": "环境样区与回归证据包",
+      "category": "validation_bundle",
+      "priority": "P0",
+      "scene_ids": [
+        "village",
+        "school",
+        "football_field",
+        "home",
+        "classroom"
+      ],
+      "source_candidates": [
+        {
+          "status": "existing_verified",
+          "path": "game/assets/world/island.glb",
+          "role": "只读实际主岛，用于选景与基线录屏",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/school/school_v03.blend",
+          "role": "现有可编辑场所源文件",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "existing_verified",
+          "path": "assets/blender/interiors/football_field/football_field_v01.blend",
+          "role": "现有可编辑场所源文件",
+          "verification": "2026-10-22 只读确认文件存在；命名选择器仍须在实施时逐物件复核。"
+        },
+        {
+          "status": "proposed_new",
+          "path": "docs/verification/environment-pilot/",
+          "role": "实施后的截图、录屏、性能和物理不变性证据目录，本轮不生成",
+          "verification": "新拟交付路径；本轮未创建，不能作为现有资产调用。"
+        }
+      ],
+      "motion": {
+        "method": "先在 A 果园入口、主岛湖岸/桥、校园树旁和足球角旗各做受控样区；通过后再扩大对象许可表。",
+        "blender_work": "仅工作副本生成新版本；记录每个候选源文件、材质、UV/颜色、对象/SG 变换和碰撞摘要。",
+        "godot_work": "固定相机、时间、随机种子对照无效果/有效果；记录四天气×四时段的可读性、场景切换与舒适档位。",
+        "initial_tuning_proposal": {
+          "first_pilot_tree_count_max": 8,
+          "first_pilot_grass_clusters_max": 12,
+          "first_pilot_water_regions": 1
+        },
+        "not_measured": true
+      },
+      "states": [
+        "weather_clear",
+        "weather_cloudy",
+        "weather_light_rain",
+        "weather_mist",
+        "dawn",
+        "day",
+        "dusk",
+        "night",
+        "motion_static"
+      ],
+      "dependencies": [
+        "ENV002",
+        "ENV004",
+        "ENV008",
+        "ENV013",
+        "ENV019",
+        "ENV022",
+        "ENV023"
+      ],
+      "acceptance": [
+        "先提交树冠/草叶/湖面三项的静止对照与短录屏，确认风格再铺开。",
+        "提交源文件保留审计、SG/碰撞不变性、既有路径和任务冒烟、性能实测与未测范围；仅退出码成功不算画面验收。"
+      ],
+      "implementation_status": "planned"
+    }
+  ],
+  "pilot": {
+    "status": "planned_not_run",
+    "phase_1": {
+      "scope": "A 果园入口选最多 8 个树冠、主岛湖岸选最多 12 簇草/芦苇与 1 个湖面区。",
+      "deliverable": "相机固定的静止对照与 20–30 秒短录屏；确认材质未改变、风向统一且不同步。",
+      "asset_ids": [
+        "ENV001",
+        "ENV002",
+        "ENV004",
+        "ENV008",
+        "ENV013",
+        "ENV022",
+        "ENV023"
+      ]
+    },
+    "phase_2": {
+      "scope": "校园树、足球角旗、家门喷泉与路灯，测试晴/多云/小雨/雾及四时段。",
+      "deliverable": "状态切换矩阵、室内外切换、主岛→学校→教室→学校→主岛→家 的流程记录。",
+      "asset_ids": [
+        "ENV003",
+        "ENV005",
+        "ENV006",
+        "ENV009",
+        "ENV011",
+        "ENV012",
+        "ENV014",
+        "ENV015",
+        "ENV016",
+        "ENV017",
+        "ENV019",
+        "ENV020",
+        "ENV021"
+      ]
+    },
+    "phase_3": {
+      "scope": "通过后扩展已审查物件；飘叶、远海与湿润列为可延期。",
+      "deliverable": "对象许可表、原版保留清单、场景覆盖表、未启用项列表和设备实测报告。",
+      "asset_ids": [
+        "ENV007",
+        "ENV010",
+        "ENV018"
+      ]
+    },
+    "acceptance": [
+      {
+        "id": "ENV-A01",
+        "criterion": "源文件与身份",
+        "evidence": "原版 .blend/.glb 哈希、SG 变换/语义、碰撞摘要前后对照；无未授权变化。"
+      },
+      {
+        "id": "ENV-A02",
+        "criterion": "材质保真",
+        "evidence": "冻结动态后固定日间截图，核对颜色、纹理、顶点色、法线/粗糙度和高光。"
+      },
+      {
+        "id": "ENV-A03",
+        "criterion": "动态自然",
+        "evidence": "短录屏看共享风向、独立相位、根部固定、叶尖/树冠差异与循环接缝。"
+      },
+      {
+        "id": "ENV-A04",
+        "criterion": "物理与主线",
+        "evidence": "既有关键行走/返岸/入口测试加天气切换冒烟；无碰撞移动，无任务入口关闭。"
+      },
+      {
+        "id": "ENV-A05",
+        "criterion": "四天气四时段",
+        "evidence": "默认相机及最低窗口尺寸下 4×4 状态截图；难读项按场景降强度。"
+      },
+      {
+        "id": "ENV-A06",
+        "criterion": "室内外与三层学校",
+        "evidence": "主岛—校园—教室—回家流程无穿屋雨、光照突变或残留音源。"
+      },
+      {
+        "id": "ENV-A07",
+        "criterion": "时间与无障碍",
+        "evidence": "推进/暂停视觉时钟前后比较 day、harvested、last_seen 和任务状态；减弱动态、静态、静音均可完成任务。"
+      },
+      {
+        "id": "ENV-A08",
+        "criterion": "性能边界",
+        "evidence": "三档实测中位数/P95 帧时、内存、绘制调用、粒子数及设备信息；标注尚未测试设备。"
+      }
+    ]
+  },
+  "handoff": {
+    "blender_owner": "维护可编辑副本、网格与材质、局部固定区、对象标识和导出审计。",
+    "godot_owner": "环境控制、材质适配、场景暴露、时钟/暂停、质量档、录屏与性能验证。",
+    "npc_owner": "只接收风雨/时段提示，不改本文件资产、不设置阻断主线的夜间关闭条件。",
+    "curriculum_owner": "关键学习焦点与声音避让需求；不得要求天气成为掌握度证据。",
+    "integration_rule": "先接入样区，再逐场景许可；未达视觉/材质/物理验收时回退该项为静态。"
+  },
+  "official_references": [
+    {
+      "title": "Godot Overview of renderers",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/rendering/renderers.html",
+      "accessed": "2026-10-22",
+      "supports": "Compatibility 支持普通雾；体积雾、SSR、Compute、Decals、粒子 SDF 碰撞/拖尾不作为本方案基础。"
+    },
+    {
+      "title": "Godot Spatial shaders",
+      "url": "https://docs.godotengine.org/en/stable/tutorials/shaders/shader_reference/spatial_shader.html",
+      "accessed": "2026-10-22",
+      "supports": "VERTEX 坐标、COLOR/UV 语义、TIME 与暂停的关系。"
+    },
+    {
+      "title": "Godot GPUParticles3D",
+      "url": "https://docs.godotengine.org/en/stable/classes/class_gpuparticles3d.html",
+      "accessed": "2026-10-22",
+      "supports": "粒子系统数量、发射比、可视包围盒；降低 amount_ratio 本身不是性能优化保证。"
+    }
+  ],
+  "validation_status": {
+    "document_schema": "PASS_static_check",
+    "source_paths": "PASS_static_check",
+    "static_check_scope": "24 个唯一资产 ID、全项 planned、36 个现有场景 ID、39 条现有来源引用、35 条明确新拟引用、依赖无环、状态枚举与 Markdown 本地链接；不含运行时验证。",
+    "engine_run": "not_run",
+    "blender_run": "not_run",
+    "performance": "not_measured",
+    "implementation": "not_started"
+  },
+  "mnemonic_semantic_context_contract": {
+    "world_clock": "paused during dialogue/memory/teaching, pause menus and application background",
+    "performance_clock": "necessary story actions and semantic weather may run during dialogue/memory; pause menu/background freeze it",
+    "semantic_weather": "local reviewed stage preset or static context panel, never wait for random global weather",
+    "user_preferences": "fixed daylight/clear weather and reduced motion retained; use readable local explanation/static keyframes when needed",
+    "learning_time": "real evidence timestamps unchanged; no offline catch-up"
+  },
+  "mnemonic_assets_ref": "docs/planning/art/mnemonic_story_assets.json"
+}

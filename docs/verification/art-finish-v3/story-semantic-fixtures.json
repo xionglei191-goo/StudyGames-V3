@@ -1,0 +1,40 @@
+{
+  "scope": "Independent source-grounded semantic fixtures. These are review expectations, not a completed runtime test report.",
+  "quantity_contract": "Quantity belongs to the pictured referent. A numbered actor, a part of an object, a grouping count and a total are different concepts. Repeated PNG instances should preserve the original source pixels.",
+  "counting_fixtures": [
+    {"story_id":"story-9e163cb266db","word":"two","position":1,"source_action":"载来两只杯子","expected_entity":"cup","expected_count":2},
+    {"story_id":"story-9e163cb266db","word":"two","position":3,"source_action":"抱起两只杯子","expected_entity":"cup","expected_count":2},
+    {"story_id":"story-1e67bcfeada3","word":"five","position":1,"source_action":"托出五枚贝壳","expected_entity":"seashell","expected_count":5},
+    {"story_id":"story-1e67bcfeada3","word":"five","position":2,"source_action":"将五枚排队","expected_entity":"seashell","expected_count":5,"reason":"The omitted noun refers to the previously introduced shells."},
+    {"story_id":"story-7a164b84bfdb","word":"nine","position":1,"source_action":"倒出九颗种子","expected_entity":"seed","expected_count":9},
+    {"story_id":"story-7a164b84bfdb","word":"nine","position":2,"source_action":"排成三排三颗","expected_entity":"seed","expected_count":9,"expected_rows":3,"expected_columns":3},
+    {"story_id":"story-1b9cff22a255","word":"eight","position":2,"source_action":"把八珠排成两排四颗","expected_entity":"counting bead","expected_count":8,"expected_rows":2,"expected_columns":4},
+    {"story_id":"story-1b9cff22a255","word":"eight","position":4,"source_action":"用帽檐接住八珠","expected_entity":"counting bead","expected_count":8,"forbid":"Eight hats; the hat is the mnemonic actor."},
+    {"story_id":"story-49168ef6daf9","word":"one","position":1,"source_action":"衔来一枚纽扣","expected_entity":"button","expected_count":1},
+    {"story_id":"story-553a356e44dd","word":"four","position":1,"source_action":"托出四枚按钮","expected_entity":"button","expected_count":4},
+    {"story_id":"story-1f9407765232","word":"seven","position":2,"source_action":"倒出七颗纽扣","expected_entity":"button","expected_count":7},
+    {"story_id":"story-ad871a1a75f1","word":"eleven","position":1,"source_action":"摆出十颗珠","expected_entity":"counting bead","expected_count":10},
+    {"story_id":"story-ad871a1a75f1","word":"eleven","position":6,"source_action":"数齐十一颗","expected_entity":"counting bead","expected_count":11},
+    {"story_id":"story-b81bfe6fa06b","word":"twenty","position":6,"source_action":"圈出二十格总数","expected_entity":"counting bead","expected_count":20,"reason":"Exercises the largest four-row bead layout after the two groups are combined."},
+    {"story_id":"story-dc59fa488d5f","word":"thirty","position":6,"source_action":"毛线将三捆与30连起","expected_entity":"counting stick","expected_groups":3,"expected_count_per_group":10,"expected_total":30},
+    {"story_id":"story-9b1c1183e648","word":"forty","position":5,"source_action":"毛线只圈这四捆并接数字40","expected_entity":"counting stick","expected_groups":4,"expected_count_per_group":10,"expected_total":40},
+    {"story_id":"story-e2a29b632353","word":"fifty","position":5,"source_action":"毛线把第五捆与前四捆圈起接数字50","expected_entity":"counting stick","expected_groups":5,"expected_count_per_group":10,"expected_total":50}
+  ],
+  "quantity_exclusions": [
+    {"story_id":"story-6a2c796a4de2","word":"afternoon","position":7,"source_action":"把午后书递给第二只猫头鹰","expected_book_count":1,"reason":"Second owl is an ordinal actor identity, not two books."},
+    {"story_id":"story-70e5640d1e8e","word":"table","position":1,"source_action":"火车运来四条桌腿","expected_table_count":1,"reason":"Four legs belong to one table; do not multiply the complete table sprite."},
+    {"story_id":"story-bb81df9e6eb6","word":"violin","position":3,"source_action":"睁眼看清四根弦","expected_violin_count":1,"reason":"Four strings belong to one violin."},
+    {"story_id":"story-ded558881ad3","word":"monster","position":2,"source_action":"看见长着三只眼的纸怪物","expected_monster_count":1,"reason":"Three eyes belong to one monster; the art's eye count also needs visual review."}
+  ],
+  "actor_priority_fixtures": [
+    {"story_id":"story-d5b8c8c13b95","word":"fruit","position":3,"source_action":"用伞面接香蕉","actor":"umbrella","expected_prop":"banana","reason":"The umbrella is already the actor; banana is the handled object."},
+    {"story_id":"story-8fb3b7baaa96","word":"chair","position":2,"source_action":"把帽檐变成椅背支撑","actor":"hat","expected_prop":"chair","reason":"Prefer the explicit chair/story object over duplicating the actor's brim."},
+    {"story_id":"story-9928bf494897","word":"film","position":1,"source_action":"打开幕布般的花瓣","actor":"flower","expected_extra_flower_count":0,"reason":"Petals are part of the existing flower actor; this is an actor action."},
+    {"story_id":"story-68620016474c","word":"office","position":1,"source_action":"第一只猫头鹰送来资料","actor":"owl","expected_extra_owl_count":0,"reason":"Leading ordinal plus actor must not be interpreted as another prop owl."}
+  ],
+  "limits": [
+    "The fixtures cover known failure modes, not every action in the 1096-story catalog.",
+    "Numeric captions alone do not prove that the visible repeated objects or groups are counted correctly.",
+    "Asset availability, hidden-help protection, sprite layout and final visible counts require separate runtime verification."
+  ]
+}

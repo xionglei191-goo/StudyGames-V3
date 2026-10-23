@@ -1,0 +1,237 @@
+{
+	"actual_window": [
+		1440,
+		900
+	],
+	"captures": [
+		{
+			"path": "F:/LoveStudy/game/../docs/screenshots/tripo-characters-v1/1440x900/gameplay/01-island-hud.png",
+			"sha256": "df26ff163a6e18695161d0c25a0ab35dc9dbf3068c1a99741a2023d0e79cd9a6",
+			"size": [
+				1440,
+				900
+			]
+		},
+		{
+			"path": "F:/LoveStudy/game/../docs/screenshots/tripo-characters-v1/1440x900/gameplay/02-island-map.png",
+			"sha256": "0af6bc82e10a12f29025e5ed5c5287709c68ea50697c9b2658d9b11c2fb64b72",
+			"size": [
+				1440,
+				900
+			]
+		},
+		{
+			"path": "F:/LoveStudy/game/../docs/screenshots/tripo-characters-v1/1440x900/gameplay/03-home.png",
+			"sha256": "2228feb8a6937af62eda1949202fb7b8c8771cffc9d4589ffa9b7197cccf7bf2",
+			"size": [
+				1440,
+				900
+			]
+		},
+		{
+			"path": "F:/LoveStudy/game/../docs/screenshots/tripo-characters-v1/1440x900/gameplay/04-wardrobe-pink.png",
+			"sha256": "3a86eb1f1429ca1baa859df9bdab43824831a8863d6bbb356bf8a12b61e9c321",
+			"size": [
+				1440,
+				900
+			]
+		},
+		{
+			"path": "F:/LoveStudy/game/../docs/screenshots/tripo-characters-v1/1440x900/gameplay/04-wardrobe-blue.png",
+			"sha256": "4a4b580842e5345bd636286e0ae2c2716404b7a5ac7f00310bd0e0746b1e505b",
+			"size": [
+				1440,
+				900
+			]
+		},
+		{
+			"path": "F:/LoveStudy/game/../docs/screenshots/tripo-characters-v1/1440x900/gameplay/04-wardrobe-yellow.png",
+			"sha256": "da16694baf6e35a63405dffd1cff361c2f2c3add6556a3b7d3de054e61c5e5cb",
+			"size": [
+				1440,
+				900
+			]
+		},
+		{
+			"path": "F:/LoveStudy/game/../docs/screenshots/tripo-characters-v1/1440x900/gameplay/05-wardrobe-rotated.png",
+			"sha256": "8c53727603dde33ac2a97db3ecd7e34316d67dc73f660d1441b9dd9796db82a8",
+			"size": [
+				1440,
+				900
+			]
+		},
+		{
+			"path": "F:/LoveStudy/game/../docs/screenshots/tripo-characters-v1/1440x900/gameplay/06-home-after-wardrobe.png",
+			"sha256": "e69c3deca100c649bc4b9c3ed295389e4bfd1349d81909f22dc81e27493531f4",
+			"size": [
+				1440,
+				900
+			]
+		}
+	],
+	"checks": [
+		{
+			"check": "production scene becomes ready",
+			"passed": true
+		},
+		{
+			"check": "production harness isolates save",
+			"passed": true
+		},
+		{
+			"check": "actual requested physical window",
+			"passed": true
+		},
+		{
+			"check": "actual world player uses real skin",
+			"passed": true
+		},
+		{
+			"check": "native gameplay frame saved: 01-island-hud.png",
+			"passed": true
+		},
+		{
+			"check": "map renders the actual current world",
+			"passed": true
+		},
+		{
+			"check": "native gameplay frame saved: 02-island-map.png",
+			"passed": true
+		},
+		{
+			"check": "native gameplay frame saved: 03-home.png",
+			"passed": true
+		},
+		{
+			"check": "real wardrobe preview uses skinned model",
+			"passed": true
+		},
+		{
+			"check": "enabled production button exists: outfit:pink",
+			"passed": true
+		},
+		{
+			"check": "production button is reachable: outfit:pink",
+			"passed": true
+		},
+		{
+			"check": "real wardrobe click persists selected outfit: pink",
+			"passed": true
+		},
+		{
+			"check": "world skin changes selected outfit: pink",
+			"passed": true
+		},
+		{
+			"check": "preview skin changes selected outfit: pink",
+			"passed": true
+		},
+		{
+			"check": "outfit override preserves shared authored materials: pink",
+			"passed": true
+		},
+		{
+			"check": "native gameplay frame saved: 04-wardrobe-pink.png",
+			"passed": true
+		},
+		{
+			"check": "enabled production button exists: outfit:blue",
+			"passed": true
+		},
+		{
+			"check": "production button is reachable: outfit:blue",
+			"passed": true
+		},
+		{
+			"check": "real wardrobe click persists selected outfit: blue",
+			"passed": true
+		},
+		{
+			"check": "world skin changes selected outfit: blue",
+			"passed": true
+		},
+		{
+			"check": "preview skin changes selected outfit: blue",
+			"passed": true
+		},
+		{
+			"check": "outfit override preserves shared authored materials: blue",
+			"passed": true
+		},
+		{
+			"check": "native gameplay frame saved: 04-wardrobe-blue.png",
+			"passed": true
+		},
+		{
+			"check": "enabled production button exists: outfit:yellow",
+			"passed": true
+		},
+		{
+			"check": "production button is reachable: outfit:yellow",
+			"passed": true
+		},
+		{
+			"check": "real wardrobe click persists selected outfit: yellow",
+			"passed": true
+		},
+		{
+			"check": "world skin changes selected outfit: yellow",
+			"passed": true
+		},
+		{
+			"check": "preview skin changes selected outfit: yellow",
+			"passed": true
+		},
+		{
+			"check": "outfit override preserves shared authored materials: yellow",
+			"passed": true
+		},
+		{
+			"check": "native gameplay frame saved: 04-wardrobe-yellow.png",
+			"passed": true
+		},
+		{
+			"check": "actual pointer drag rotates the wardrobe model",
+			"passed": true
+		},
+		{
+			"check": "pointer release ends wardrobe drag",
+			"passed": true
+		},
+		{
+			"check": "wardrobe drag leaves the world player intact",
+			"passed": true
+		},
+		{
+			"check": "native gameplay frame saved: 05-wardrobe-rotated.png",
+			"passed": true
+		},
+		{
+			"check": "closing wardrobe returns to the scene",
+			"passed": true
+		},
+		{
+			"check": "native gameplay frame saved: 06-home-after-wardrobe.png",
+			"passed": true
+		},
+		{
+			"check": "formal save unchanged: user://island-save-v1.json",
+			"passed": true
+		},
+		{
+			"check": "formal save unchanged: user://island-save-v1.json.bak",
+			"passed": true
+		}
+	],
+	"failures": [],
+	"logical_viewport": [
+		1440.0,
+		900.0
+	],
+	"requested_window": [
+		1440,
+		900
+	],
+	"scope": "Production main scene HUD, real world map, home, real wardrobe three-colour input and shared-material protection, pointer drag; separate movement/orchard tests cover navigation and action contacts.",
+	"status": "PASS"
+}

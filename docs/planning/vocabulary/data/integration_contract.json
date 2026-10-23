@@ -1,0 +1,560 @@
+{
+  "schema_version": "vocabulary-mainline-adapter-v1",
+  "status": "planning_only",
+  "content_revision": "vocabulary-30fd870dcb72ae38",
+  "codebook_revision": "codebook-7976c505db8c0ea5",
+  "source_catalog": "data/catalog.json",
+  "adapted_entries": "data/mainline_entries.json",
+  "id_mapping": {
+    "entry_id": "occurrences.id (book/spelling/meaning occurrence)",
+    "lexeme_id": "occurrences.lexeme_id -> lexemes.id",
+    "sense_id": "occurrences.story_id -> stories.id",
+    "story_id": "occurrences.story_id",
+    "unit_ids": "occurrences.unit_numbers -> validated source chapter IDs unit-N",
+    "spelling_display": "occurrences.spelling",
+    "sources": "occurrences.source_ids -> catalog.sources",
+    "letter_slots": "lexemes.letter_chain plus token-derived word indexes",
+    "story_beats": "stories.frames, role=encoding",
+    "supplemental_beats": "stories.sense_extensions, role=sense_extension; reference existing positions",
+    "memory_home": "stories.storage persistent index; no automatic SG scene binding"
+  },
+  "selected_unit_rule": "调用source_unit.book_id必须相同，source_unit.unit_id必须属于entry.source_unit.unit_ids；空数组禁止自动分配章节，且未选词不代表教材单元全覆盖。",
+  "source_location_rule": "sources.chapter_id是词表章节，不是教学单元；page是词表印刷页，file_page是文件页，listed_lesson_page是表内课文页，三者分开。",
+  "index_base": 1,
+  "raw_character_index_unit": "NFC-normalized Unicode code point, not byte offset",
+  "word_index_rule": "空格与连字符后开始下一可视词段；撇号、缩略点、重音符号不重置。此段号是书写定位，不宣称词源/音节切分。",
+  "reconstruction_rule": "按reconstruction_tokens.raw顺序拼接严格等于spelling_display；letter_slots不含标点，重音保留原字形并独立展示。",
+  "encoding_rule": "只展开role=encoding的letter_positions，严格等于1..letter_count一次；supplemental_beats只引用已有位置，不重复算拼写。",
+  "codebook": [
+    {
+      "letter": "A",
+      "asset_identity": "codebook_A",
+      "anchor_en": "Apple",
+      "legacy_anchor_zh": "苹果",
+      "canonical_word_zh": "苹果",
+      "representative_label_zh": "苹果",
+      "landmark_room_id": "landmark_A",
+      "prologue_learning_node": "SG_MEMORY_02",
+      "representative_image_ref": "planned:landmark_A_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "B",
+      "asset_identity": "codebook_B",
+      "anchor_en": "Boat",
+      "legacy_anchor_zh": "小船",
+      "canonical_word_zh": "小船",
+      "representative_label_zh": "小船",
+      "landmark_room_id": "landmark_B",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_B_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "C",
+      "asset_identity": "codebook_C",
+      "anchor_en": "Cake",
+      "legacy_anchor_zh": "蛋糕",
+      "canonical_word_zh": "蛋糕",
+      "representative_label_zh": "蛋糕",
+      "landmark_room_id": "landmark_C",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_C_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "D",
+      "asset_identity": "codebook_D",
+      "anchor_en": "Drum",
+      "legacy_anchor_zh": "鼓",
+      "canonical_word_zh": "鼓",
+      "representative_label_zh": "鼓",
+      "landmark_room_id": "landmark_D",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_D_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "E",
+      "asset_identity": "codebook_E",
+      "anchor_en": "Egg",
+      "legacy_anchor_zh": "蛋壳",
+      "canonical_word_zh": "鸡蛋",
+      "representative_label_zh": "蛋壳（完整蛋形）",
+      "landmark_room_id": "landmark_E",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_E_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "F",
+      "asset_identity": "codebook_F",
+      "anchor_en": "Flower",
+      "legacy_anchor_zh": "花朵",
+      "canonical_word_zh": "花朵",
+      "representative_label_zh": "花朵",
+      "landmark_room_id": "landmark_F",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_F_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "G",
+      "asset_identity": "codebook_G",
+      "anchor_en": "Globe",
+      "legacy_anchor_zh": "地球仪",
+      "canonical_word_zh": "地球仪",
+      "representative_label_zh": "地球仪",
+      "landmark_room_id": "landmark_G",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_G_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "H",
+      "asset_identity": "codebook_H",
+      "anchor_en": "Hat",
+      "legacy_anchor_zh": "帽子",
+      "canonical_word_zh": "帽子",
+      "representative_label_zh": "帽子",
+      "landmark_room_id": "landmark_H",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_H_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "I",
+      "asset_identity": "codebook_I",
+      "anchor_en": "Ice cream",
+      "legacy_anchor_zh": "冰淇淋",
+      "canonical_word_zh": "冰淇淋",
+      "representative_label_zh": "冰淇淋",
+      "landmark_room_id": "landmark_I",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_I_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "J",
+      "asset_identity": "codebook_J",
+      "anchor_en": "Jar",
+      "legacy_anchor_zh": "罐子",
+      "canonical_word_zh": "罐子",
+      "representative_label_zh": "罐子",
+      "landmark_room_id": "landmark_J",
+      "prologue_learning_node": "SG_MEMORY_05",
+      "representative_image_ref": "planned:landmark_J_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "K",
+      "asset_identity": "codebook_K",
+      "anchor_en": "Kite",
+      "legacy_anchor_zh": "风筝",
+      "canonical_word_zh": "风筝",
+      "representative_label_zh": "风筝",
+      "landmark_room_id": "landmark_K",
+      "prologue_learning_node": "SG_MEMORY_04",
+      "representative_image_ref": "planned:landmark_K_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "L",
+      "asset_identity": "codebook_L",
+      "anchor_en": "Lantern",
+      "legacy_anchor_zh": "灯笼",
+      "canonical_word_zh": "灯笼",
+      "representative_label_zh": "灯笼",
+      "landmark_room_id": "landmark_L",
+      "prologue_learning_node": "SG_MEMORY_05",
+      "representative_image_ref": "planned:landmark_L_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "M",
+      "asset_identity": "codebook_M",
+      "anchor_en": "Mushroom",
+      "legacy_anchor_zh": "蘑菇",
+      "canonical_word_zh": "蘑菇",
+      "representative_label_zh": "蘑菇",
+      "landmark_room_id": "landmark_M",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_M_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "N",
+      "asset_identity": "codebook_N",
+      "anchor_en": "Nest",
+      "legacy_anchor_zh": "鸟巢",
+      "canonical_word_zh": "鸟巢",
+      "representative_label_zh": "鸟巢",
+      "landmark_room_id": "landmark_N",
+      "prologue_learning_node": "SG_MEMORY_02",
+      "representative_image_ref": "planned:landmark_N_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "O",
+      "asset_identity": "codebook_O",
+      "anchor_en": "Owl",
+      "legacy_anchor_zh": "猫头鹰",
+      "canonical_word_zh": "猫头鹰",
+      "representative_label_zh": "猫头鹰",
+      "landmark_room_id": "landmark_O",
+      "prologue_learning_node": "SG_MEMORY_01",
+      "representative_image_ref": "planned:landmark_O_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "P",
+      "asset_identity": "codebook_P",
+      "anchor_en": "Pumpkin",
+      "legacy_anchor_zh": "南瓜",
+      "canonical_word_zh": "南瓜",
+      "representative_label_zh": "南瓜",
+      "landmark_room_id": "landmark_P",
+      "prologue_learning_node": "SG_MEMORY_04",
+      "representative_image_ref": "planned:landmark_P_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "Q",
+      "asset_identity": "codebook_Q",
+      "anchor_en": "Quilt",
+      "legacy_anchor_zh": "拼布被",
+      "canonical_word_zh": "拼布被",
+      "representative_label_zh": "拼布被",
+      "landmark_room_id": "landmark_Q",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_Q_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "R",
+      "asset_identity": "codebook_R",
+      "anchor_en": "Robot",
+      "legacy_anchor_zh": "机器人",
+      "canonical_word_zh": "机器人",
+      "representative_label_zh": "机器人",
+      "landmark_room_id": "landmark_R",
+      "prologue_learning_node": "SG_MEMORY_01",
+      "representative_image_ref": "planned:landmark_R_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "S",
+      "asset_identity": "codebook_S",
+      "anchor_en": "Star",
+      "legacy_anchor_zh": "星星",
+      "canonical_word_zh": "星星",
+      "representative_label_zh": "星星",
+      "landmark_room_id": "landmark_S",
+      "prologue_learning_node": "SG_MEMORY_02",
+      "representative_image_ref": "planned:landmark_S_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "T",
+      "asset_identity": "codebook_T",
+      "anchor_en": "Train",
+      "legacy_anchor_zh": "火车",
+      "canonical_word_zh": "火车",
+      "representative_label_zh": "火车",
+      "landmark_room_id": "landmark_T",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_T_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "U",
+      "asset_identity": "codebook_U",
+      "anchor_en": "Umbrella",
+      "legacy_anchor_zh": "雨伞",
+      "canonical_word_zh": "雨伞",
+      "representative_label_zh": "雨伞",
+      "landmark_room_id": "landmark_U",
+      "prologue_learning_node": "SG_MEMORY_01",
+      "representative_image_ref": "planned:landmark_U_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "V",
+      "asset_identity": "codebook_V",
+      "anchor_en": "Volcano",
+      "legacy_anchor_zh": "火山",
+      "canonical_word_zh": "火山",
+      "representative_label_zh": "火山",
+      "landmark_room_id": "landmark_V",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_V_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "W",
+      "asset_identity": "codebook_W",
+      "anchor_en": "Whale",
+      "legacy_anchor_zh": "鲸鱼",
+      "canonical_word_zh": "鲸鱼",
+      "representative_label_zh": "鲸鱼",
+      "landmark_room_id": "landmark_W",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_W_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "X",
+      "asset_identity": "codebook_X",
+      "anchor_en": "Xylophone",
+      "legacy_anchor_zh": "木琴",
+      "canonical_word_zh": "木琴",
+      "representative_label_zh": "木琴",
+      "landmark_room_id": "landmark_X",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_X_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "Y",
+      "asset_identity": "codebook_Y",
+      "anchor_en": "Yarn",
+      "legacy_anchor_zh": "毛线",
+      "canonical_word_zh": "毛线",
+      "representative_label_zh": "毛线",
+      "landmark_room_id": "landmark_Y",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_Y_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    },
+    {
+      "letter": "Z",
+      "asset_identity": "codebook_Z",
+      "anchor_en": "Zebra",
+      "legacy_anchor_zh": "斑马",
+      "canonical_word_zh": "斑马",
+      "representative_label_zh": "斑马",
+      "landmark_room_id": "landmark_Z",
+      "prologue_learning_node": "SG_MEMORY_03",
+      "representative_image_ref": "planned:landmark_Z_representative",
+      "node_binding_scope": "序章认识该固定形象的入口；不是每个词故事的存放位置。"
+    }
+  ],
+  "prompt_contract": {
+    "schema_version": "support-evidence-v1",
+    "levels": [
+      {
+        "level": 0,
+        "id": "H0",
+        "name": "自主",
+        "support_kind": "unassisted_attempt"
+      },
+      {
+        "level": 1,
+        "id": "H1",
+        "name": "位置与意义",
+        "support_kind": "location_and_meaning"
+      },
+      {
+        "level": 2,
+        "id": "H2",
+        "name": "第一步",
+        "support_kind": "first_step"
+      },
+      {
+        "level": 3,
+        "id": "H3",
+        "name": "缺口接续",
+        "support_kind": "gap_completion"
+      },
+      {
+        "level": 4,
+        "id": "H4",
+        "name": "逐步搭桥",
+        "support_kind": "step_bridge"
+      },
+      {
+        "level": 5,
+        "id": "H5",
+        "name": "完整示范",
+        "support_kind": "full_demonstration"
+      }
+    ],
+    "help_direction": "H0 -> H5",
+    "demonstration_fade_direction": "H5 -> H0",
+    "highest_level_is_mastery": false,
+    "level_zero_implies_independent": false,
+    "child_requested_replay_still_counts_as_cue": true,
+    "required_attempt_fields": [
+      "invocation_id",
+      "attempt_id",
+      "task_mode",
+      "target_dimension",
+      "declared_stimulus",
+      "answer_visible_at_start",
+      "cue_events",
+      "first_response",
+      "later_response",
+      "observation_status"
+    ],
+    "cue_event_fields": [
+      "event_id",
+      "shown_at",
+      "requested_by",
+      "support_level",
+      "support_kind",
+      "asset_or_content_ref",
+      "revealed_letter_positions",
+      "answer_revealing_dimensions"
+    ],
+    "task_modalities": [
+      {
+        "task_mode": "listen_and_select_meaning",
+        "target_dimension": "meaning",
+        "whole_word_audio_role": "declared_stimulus",
+        "independence_limit": "正确答案物体的高亮、中文义项或示范动作是答案线索；无合格音频不记听力通过。"
+      },
+      {
+        "task_mode": "dictation",
+        "target_dimension": "orthography",
+        "whole_word_audio_role": "declared_stimulus",
+        "independence_limit": "完整词音可作合法题干；字母、字母图链、故事答案或拼写显示会辅助本次拼写。"
+      },
+      {
+        "task_mode": "pronunciation_recall",
+        "target_dimension": "spoken_expression",
+        "whole_word_audio_role": "answer_support",
+        "independence_limit": "播放目标读音后属于跟读/有辅助表达；本项目无自动口语评分，不生成发音分数。"
+      },
+      {
+        "task_mode": "picture_to_spelling",
+        "target_dimension": "orthography",
+        "whole_word_audio_role": "additional_cue",
+        "independence_limit": "题干可含实义图；额外目标声音、字母链或故事回看都记录，不能悄悄改成听写。"
+      },
+      {
+        "task_mode": "written_word_recognition",
+        "target_dimension": "written_recognition",
+        "whole_word_audio_role": "additional_cue",
+        "independence_limit": "印出的目标词是题干；中文答案、高亮正确物体或先播目标声音须按任务标为辅助。"
+      },
+      {
+        "task_mode": "copy_visible_spelling",
+        "target_dimension": "orthography",
+        "whole_word_audio_role": "optional_exposure",
+        "independence_limit": "看范例抄写单独记录，不等于撤去范例后的拼写回忆。"
+      }
+    ],
+    "result_rule": "按任务模态与实际暴露线索判定每一维度；首次和帮助后响应分开。H0、主动求助、看过示范、退出重进均不能自动生成独立正确。",
+    "unobserved_rule": "未测维度为null/未尝试；不可从看完故事、人物动作或学习意愿推断正确。"
+  },
+  "requirement_permissions": {
+    "listen_speak_read_write": {
+      "curriculum_task_dimensions": [
+        "meaning",
+        "listening",
+        "spoken_expression",
+        "written_recognition",
+        "orthography"
+      ],
+      "formal_spelling_eligible": true,
+      "display_note": "本册听说读写；可提供书写练习，但不是章节通行条件。",
+      "spelling_required_for_story_progress": false,
+      "mnemonic_story_optional": true,
+      "extra_practice_is_not_curriculum_requirement": true,
+      "audio_task_requires_reviewed_available_whole_word_audio": true,
+      "automatic_pronunciation_score_available": false
+    },
+    "recognition": {
+      "curriculum_task_dimensions": [
+        "meaning",
+        "written_recognition"
+      ],
+      "formal_spelling_eligible": false,
+      "display_note": "本册仅认读；不自动安排拼写测验，故事与字母链仅作可选支持。",
+      "spelling_required_for_story_progress": false,
+      "mnemonic_story_optional": true,
+      "extra_practice_is_not_curriculum_requirement": true,
+      "audio_task_requires_reviewed_available_whole_word_audio": true,
+      "automatic_pronunciation_score_available": false
+    },
+    "listen_speak_read": {
+      "curriculum_task_dimensions": [
+        "meaning",
+        "listening",
+        "spoken_expression",
+        "written_recognition"
+      ],
+      "formal_spelling_eligible": false,
+      "display_note": "本册听说认读；不升级为四会或强制书写。",
+      "spelling_required_for_story_progress": false,
+      "mnemonic_story_optional": true,
+      "extra_practice_is_not_curriculum_requirement": true,
+      "audio_task_requires_reviewed_available_whole_word_audio": true,
+      "automatic_pronunciation_score_available": false
+    },
+    "listen_speak": {
+      "curriculum_task_dimensions": [
+        "meaning",
+        "listening",
+        "spoken_expression"
+      ],
+      "formal_spelling_eligible": false,
+      "display_note": "本册仅听说；文字和故事可选，不自动升级认读或拼写验收。",
+      "spelling_required_for_story_progress": false,
+      "mnemonic_story_optional": true,
+      "extra_practice_is_not_curriculum_requirement": true,
+      "audio_task_requires_reviewed_available_whole_word_audio": true,
+      "automatic_pronunciation_score_available": false
+    },
+    "not_distinguished": {
+      "curriculum_task_dimensions": [
+        "meaning"
+      ],
+      "formal_spelling_eligible": false,
+      "display_note": "原表要求未区分；先保留理解与支持，正式读写要求待编辑核定。",
+      "spelling_required_for_story_progress": false,
+      "mnemonic_story_optional": true,
+      "extra_practice_is_not_curriculum_requirement": true,
+      "audio_task_requires_reviewed_available_whole_word_audio": true,
+      "automatic_pronunciation_score_available": false
+    }
+  },
+  "asset_policy": {
+    "status": "planning_not_runtime_verified",
+    "representation_mode": "mnemonic_fantasy",
+    "default_renderer": "card_storyboard",
+    "optional_renderer": "small_tabletop_stage_after_prototype",
+    "shared_codebook_asset_count": 26,
+    "max_active_letter_instances_per_frame": 4,
+    "max_visible_story_pages_per_group": 5,
+    "full_chain_view": "可静态展开全部槽位；超过4个活动实例时不要求同屏播放全部动画。",
+    "repeated_letters": "同一图像资源的独立位置实例，不新增模型或去重槽位。",
+    "numeric_limits_status": "注意与制作预算草案，待设备和儿童试玩；不是性能或学习效果保证。",
+    "story_specific_rig_required": false,
+    "story_specific_film_required": false,
+    "physics_simulation_required": false,
+    "complex_action_fallback": "分镜定格/图层切换/简单节点移动。不能画清或含义有疑义则返回内容待制作，保留原故事位置及剧情继续路径。",
+    "environment_rule": "记忆阅读/听题期间冻结环境表现时钟与非必要NPC动作；故事内部当前镜头按玩家操作播放。",
+    "semantic_boundary": "先用准确实物/图示教义项；夸张动作只是助记想象，不作为动物解剖、物理、历史、地理、文化或NPC经历事实。",
+    "npc_identity_rule": "codebook_R机器人不等于textbook_robbie，恐龙模型不等于textbook_dino，O猫头鹰不自动成为教材鸟类人物；任何具名演员需显式character_id和来源审校。",
+    "proper_name_rule": "名称卡的地点/人物/文化事实素材另行核对；作者文字提到经核对的地图不证明该地图资产已经存在或已通过审校。"
+  },
+  "storage_contract": {
+    "authority": "lexeme_id/story_id/storage_slot",
+    "sg_memory_is_story_slot": false,
+    "default_host": "固定回忆册页（拟开发）",
+    "public_anchor_geometry_changes": false,
+    "child_override": "另存儿童自选位置/故事及版本；不覆盖系统原页，迁移保留旧位置指向。",
+    "revision_migration": "已有ID语义不静默变更；内容修订保存新版本。若词义/ID变更，提供显式迁移表，旧记录不能按新内容重解释。"
+  },
+  "npc_contract_ref": "../art/textbook_characters.json",
+  "sample_entry_ids": {
+    "nose": "occ-89a38b8a39c8",
+    "book": "occ-5605ac34c5f2",
+    "apple": "occ-f7669b9d7e86",
+    "school": "occ-b48037456b69",
+    "dinosaur": "occ-bd35ba4dbfdd",
+    "T-shirt": "occ-52a5c9558bb9",
+    "café": "occ-c78e37d13730"
+  }
+}

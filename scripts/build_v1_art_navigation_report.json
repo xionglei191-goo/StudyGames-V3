@@ -1,0 +1,1235 @@
+{
+  "collision_stats": {
+    "barriers": 441,
+    "buildings": 30,
+    "ground_meshes": 220,
+    "ground_triangles": 98820,
+    "ignored_decorative_meshes": 3112,
+    "marker_count": 33,
+    "props": 1,
+    "trunks": 168,
+    "visual_meshes": 3974,
+    "water_meshes": 2,
+    "water_shapes": 121
+  },
+  "failures": [],
+  "marker_transform_errors": [],
+  "player_collision_mask": 5,
+  "result": "PASS",
+  "routes": [
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-48.86707, 5.2394, 26.48192)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-48.88153, 5.2394, 26.49376)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-48.9171, 5.2394, 26.52287)"
+        }
+      ],
+      "distance": 1.64,
+      "goal": [
+        -50.0007705688477,
+        5.2993950843811,
+        27.7480716705322
+      ],
+      "id": "landmark_A",
+      "next_waypoint": [
+        -49.5,
+        5.23939514160156,
+        27.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -48.9171028137207,
+        5.19023990631104,
+        26.5228748321533
+      ],
+      "reached": true,
+      "ticks": 577
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-53.31372, 1.95, 48.74999)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-53.33047, 1.95, 48.74999)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-53.38024, 1.95, 48.74999)"
+        }
+      ],
+      "distance": 1.64,
+      "goal": [
+        -55.0,
+        2.01000618934631,
+        49.0
+      ],
+      "id": "landmark_B",
+      "next_waypoint": [
+        -54.0,
+        1.94931793212891,
+        48.75
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -53.380241394043,
+        1.90084028244019,
+        48.7499923706055
+      ],
+      "reached": true,
+      "ticks": 740
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.007332, 0.999757, 0.020781)",
+          "position": "(-31.59673, 4.485247, 38.4302)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.007332, 0.999757, 0.020781)",
+          "position": "(-31.615, 4.485054, 38.4459)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.007332, 0.999757, 0.020781)",
+          "position": "(-31.63809, 4.484812, 38.46572)"
+        }
+      ],
+      "distance": 1.65,
+      "goal": [
+        -32.9992485046387,
+        4.5365777015686,
+        39.3972816467285
+      ],
+      "id": "landmark_C",
+      "next_waypoint": [
+        -32.25,
+        4.48057556152344,
+        39.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -31.6355953216553,
+        4.43556928634644,
+        38.4728012084961
+      ],
+      "reached": true,
+      "ticks": 411
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.018988, 0.999556, -0.022959)",
+          "position": "(-22.35752, 5.560627, 22.50766)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.018988, 0.999556, -0.022959)",
+          "position": "(-22.39187, 5.559974, 22.50765)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.018988, 0.999556, -0.022959)",
+          "position": "(-22.40392, 5.559746, 22.50765)"
+        }
+      ],
+      "distance": 1.63,
+      "goal": [
+        -24.0000152587891,
+        5.61000299453735,
+        22.1616115570068
+      ],
+      "id": "landmark_D",
+      "next_waypoint": [
+        -23.25,
+        5.555908203125,
+        22.5
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -22.4103908538818,
+        5.51043510437012,
+        22.4998264312744
+      ],
+      "reached": true,
+      "ticks": 218
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.039476, 0.99778, 0.053642)",
+          "position": "(-37.93352, 5.552935, 12.22878)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.039476, 0.99778, 0.053642)",
+          "position": "(-37.94675, 5.552988, 12.21806)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.011798, 0.997139, 0.074665)",
+          "position": "(-37.9828, 5.554111, 12.18927)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.011798, 0.997139, 0.074665)",
+          "position": "(-37.99453, 5.554689, 12.1797)"
+        }
+      ],
+      "distance": 1.66,
+      "goal": [
+        -38.999641418457,
+        5.75236749649048,
+        10.8844366073608
+      ],
+      "id": "landmark_E",
+      "next_waypoint": [
+        -38.25,
+        5.56512451171875,
+        12.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -37.9985504150391,
+        5.50454998016357,
+        12.2051496505737
+      ],
+      "reached": true,
+      "ticks": 458
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.005008, 0.99871, 0.050534)",
+          "position": "(-53.53969, 5.751812, 10.18577)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.005008, 0.99871, 0.050534)",
+          "position": "(-53.54654, 5.752184, 10.17908)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.005008, 0.99871, 0.050534)",
+          "position": "(-53.59357, 5.754753, 10.13298)"
+        }
+      ],
+      "distance": 1.63,
+      "goal": [
+        -55.0005569458008,
+        5.94647455215454,
+        9.33775806427002
+      ],
+      "id": "landmark_F",
+      "next_waypoint": [
+        -54.0,
+        5.77751922607422,
+        9.75
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -53.5918655395508,
+        5.705153465271,
+        10.150200843811
+      ],
+      "reached": true,
+      "ticks": 667
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.078914, 0.854441, 0.513521)",
+          "position": "(-50.37587, 7.885708, -13.01871)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.078914, 0.854441, 0.513521)",
+          "position": "(-50.37691, 7.88625, -13.01945)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.506942, 0.610231, 0.608792)",
+          "position": "(-50.56929, 8.002, -13.09881)"
+        }
+      ],
+      "distance": 1.57,
+      "goal": [
+        -52.0003967285156,
+        8.21873760223389,
+        -14.111644744873
+      ],
+      "id": "landmark_G",
+      "next_waypoint": [
+        -51.0,
+        8.10533142089844,
+        -13.5
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -50.7135124206543,
+        8.06091976165771,
+        -13.2107267379761
+      ],
+      "reached": true,
+      "ticks": 745
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.006298, 0.997824, 0.065637)",
+          "position": "(-53.01737, 10.00204, -32.03543)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.006298, 0.997824, 0.065637)",
+          "position": "(-53.02311, 10.00246, -32.04119)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.006298, 0.997824, 0.065637)",
+          "position": "(-53.04064, 10.00373, -32.05887)"
+        }
+      ],
+      "distance": 1.62,
+      "goal": [
+        -53.9999656677246,
+        10.1429471969604,
+        -33.3393516540527
+      ],
+      "id": "landmark_H",
+      "next_waypoint": [
+        -53.25,
+        10.0569686889648,
+        -32.25
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -53.0384902954102,
+        9.95382595062256,
+        -32.0365028381348
+      ],
+      "reached": true,
+      "ticks": 933
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.01483, 0.999875, -0.005509)",
+          "position": "(-34.89744, 10.31133, -37.90041)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.01483, 0.999875, -0.005509)",
+          "position": "(-34.91952, 10.31088, -37.92249)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.01483, 0.999875, -0.005509)",
+          "position": "(-34.93336, 10.3106, -37.93633)"
+        }
+      ],
+      "distance": 1.65,
+      "goal": [
+        -35.999267578125,
+        10.3649778366089,
+        -39.2023696899414
+      ],
+      "id": "landmark_I",
+      "next_waypoint": [
+        -35.25,
+        10.3071899414063,
+        -38.25
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -34.9384155273438,
+        10.2613925933838,
+        -37.9382057189941
+      ],
+      "reached": true,
+      "ticks": 924
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.000666, 0.999897, -0.014313)",
+          "position": "(-20.24978, 10.57401, -32.07923)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.000666, 0.999897, -0.014313)",
+          "position": "(-20.24978, 10.57358, -32.10904)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.000666, 0.999897, -0.014313)",
+          "position": "(-20.24978, 10.57327, -32.13104)"
+        }
+      ],
+      "distance": 1.63,
+      "goal": [
+        -19.9998302459717,
+        10.6017789840698,
+        -33.7507476806641
+      ],
+      "id": "landmark_J",
+      "next_waypoint": [
+        -20.25,
+        10.5715637207031,
+        -32.25
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -20.2500038146973,
+        10.5240716934204,
+        -32.1359214782715
+      ],
+      "reached": true,
+      "ticks": 797
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 0.999982, 0.005992)",
+          "position": "(-29.26239, 8.536383, -14.99863)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 0.999982, 0.005992)",
+          "position": "(-29.28389, 8.536384, -14.99872)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 0.999982, 0.005992)",
+          "position": "(-29.32705, 8.536385, -14.99893)"
+        }
+      ],
+      "distance": 1.68,
+      "goal": [
+        -30.9997272491455,
+        8.59646892547607,
+        -15.1939506530762
+      ],
+      "id": "landmark_K",
+      "next_waypoint": [
+        -30.0,
+        8.53638458251953,
+        -15.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -29.3270530700684,
+        8.4873104095459,
+        -14.9968862533569
+      ],
+      "reached": true,
+      "ticks": 614
+    },
+    {
+      "collisions": [],
+      "distance": 1.62,
+      "goal": [
+        -7.99959468841553,
+        10.4811277389526,
+        -36.4172096252441
+      ],
+      "id": "landmark_L",
+      "next_waypoint": [
+        -9.0,
+        10.4278335571289,
+        -36.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -9.40145874023438,
+        10.402681350708,
+        -35.5985412597656
+      ],
+      "reached": true,
+      "ticks": 892
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.000333, 0.997833, 0.06579)",
+          "position": "(11.6177, 10.19453, -37.13932)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.000333, 0.997833, 0.06579)",
+          "position": "(11.62362, 10.19492, -37.14521)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.000333, 0.997833, 0.06579)",
+          "position": "(11.67168, 10.19811, -37.19335)"
+        }
+      ],
+      "distance": 1.67,
+      "goal": [
+        13.0005702972412,
+        10.3690977096558,
+        -38.1777648925781
+      ],
+      "id": "landmark_M",
+      "next_waypoint": [
+        12.0,
+        10.2098159790039,
+        -37.5
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        11.6715688705444,
+        10.1482086181641,
+        -37.1709251403809
+      ],
+      "reached": true,
+      "ticks": 1107
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.002834, 0.999996, 0.000665)",
+          "position": "(31.31237, 11.00832, -33.00032)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.002834, 0.999996, 0.000665)",
+          "position": "(31.33239, 11.00838, -33.00031)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.002834, 0.999996, 0.000665)",
+          "position": "(31.37838, 11.00851, -33.00028)"
+        }
+      ],
+      "distance": 1.64,
+      "goal": [
+        33.000373840332,
+        11.155047416687,
+        -32.7798843383789
+      ],
+      "id": "landmark_N",
+      "next_waypoint": [
+        31.5,
+        11.0088348388672,
+        -33.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        31.3774127960205,
+        10.9594402313232,
+        -33.0000534057617
+      ],
+      "reached": true,
+      "ticks": 1342
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.000501, 0.999984, 0.005675)",
+          "position": "(50.30826, 11.70615, -23.99998)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.000501, 1.0, 0.0)",
+          "position": "(50.33015, 11.70617, -23.99998)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.000501, 1.0, 0.0)",
+          "position": "(50.37258, 11.70619, -23.99998)"
+        }
+      ],
+      "distance": 1.64,
+      "goal": [
+        52.0004692077637,
+        11.7589139938354,
+        -23.7660980224609
+      ],
+      "id": "landmark_O",
+      "next_waypoint": [
+        51.0,
+        11.7064056396484,
+        -24.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        50.3724098205566,
+        11.6571216583252,
+        -23.9999809265137
+      ],
+      "reached": true,
+      "ticks": 1569
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.484513, 0.860093, 0.159645)",
+          "position": "(26.47145, 9.039048, -15.80536)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.482184, 0.861492, 0.159155)",
+          "position": "(26.47152, 9.039035, -15.80509)"
+        }
+      ],
+      "distance": 1.64,
+      "goal": [
+        27.999828338623,
+        9.19215679168701,
+        -15.5817699432373
+      ],
+      "id": "landmark_P",
+      "next_waypoint": [
+        27.0,
+        9.06004333496094,
+        -15.75
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        26.3648643493652,
+        8.97493743896484,
+        -15.750771522522
+      ],
+      "reached": true,
+      "ticks": 1284
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.0055, 0.999985, 0.000333)",
+          "position": "(47.28825, 7.068092, -3.013683)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.0055, 0.999985, 0.000333)",
+          "position": "(47.3054, 7.068186, -3.013361)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.0055, 0.999985, 0.000333)",
+          "position": "(47.35525, 7.06846, -3.012418)"
+        }
+      ],
+      "distance": 1.65,
+      "goal": [
+        49.0022506713867,
+        7.12506341934204,
+        -2.91441774368286
+      ],
+      "id": "landmark_Q",
+      "next_waypoint": [
+        48.0,
+        7.07183837890625,
+        -3.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        47.3533744812012,
+        7.01931810379028,
+        -3.01230454444885
+      ],
+      "reached": true,
+      "ticks": 1614
+    },
+    {
+      "collisions": [],
+      "distance": 1.65,
+      "goal": [
+        57.9993743896484,
+        6.68016290664673,
+        11.4299144744873
+      ],
+      "id": "landmark_R",
+      "next_waypoint": [
+        57.0,
+        6.62010192871094,
+        11.25
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        56.3626823425293,
+        6.53051090240479,
+        11.2328777313232
+      ],
+      "reached": true,
+      "ticks": 1799
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.004666, 0.999963, 0.007156)",
+          "position": "(37.32634, 6.551006, 20.96999)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.004666, 0.999963, 0.007156)",
+          "position": "(37.34284, 6.551079, 20.97049)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(-0.004666, 0.999963, 0.007156)",
+          "position": "(37.39282, 6.551302, 20.97198)"
+        }
+      ],
+      "distance": 1.62,
+      "goal": [
+        38.999382019043,
+        6.62118768692017,
+        21.2073764801025
+      ],
+      "id": "landmark_S",
+      "next_waypoint": [
+        38.25,
+        6.55496978759766,
+        21.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        37.3912315368652,
+        6.50213003158569,
+        20.9744205474854
+      ],
+      "reached": true,
+      "ticks": 1781
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(48.28451, 6.7667, 31.49822)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(48.3065, 6.7667, 31.49829)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(48.34916, 6.7667, 31.49846)"
+        }
+      ],
+      "distance": 1.67,
+      "goal": [
+        49.9996337890625,
+        6.82676935195923,
+        31.2218971252441
+      ],
+      "id": "landmark_T",
+      "next_waypoint": [
+        48.75,
+        6.76670074462891,
+        31.5
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        48.3491592407227,
+        6.71761417388916,
+        31.4984569549561
+      ],
+      "reached": true,
+      "ticks": 1976
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(36.66528, 5.0512, 41.2286)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(36.64659, 5.0512, 41.2292)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(36.60066, 5.0512, 41.23068)"
+        }
+      ],
+      "distance": 1.62,
+      "goal": [
+        35.0004539489746,
+        5.11129999160767,
+        41.4961853027344
+      ],
+      "id": "landmark_U",
+      "next_waypoint": [
+        36.0,
+        5.05120086669922,
+        41.25
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        36.600658416748,
+        5.00203990936279,
+        41.2306785583496
+      ],
+      "reached": true,
+      "ticks": 2075
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.000333)",
+          "position": "(14.72599, 3.712177, 43.26803)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.000333)",
+          "position": "(14.74046, 3.712173, 43.28027)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.000333)",
+          "position": "(14.77535, 3.712163, 43.3098)"
+        }
+      ],
+      "distance": 1.63,
+      "goal": [
+        16.0008239746094,
+        3.77206659317017,
+        44.3863525390625
+      ],
+      "id": "landmark_V",
+      "next_waypoint": [
+        15.0,
+        3.71218872070313,
+        43.5
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        14.7753524780273,
+        3.66300272941589,
+        43.3099098205566
+      ],
+      "reached": true,
+      "ticks": 407
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 0.992416, -0.122926)",
+          "position": "(10.68801, 3.379127, 58.835)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 0.994185, -0.107686)",
+          "position": "(10.69452, 3.379127, 58.835)"
+        }
+      ],
+      "distance": 1.65,
+      "goal": [
+        11.9989032745361,
+        3.35417413711548,
+        59.859733581543
+      ],
+      "id": "landmark_W",
+      "next_waypoint": [
+        11.25,
+        3.29400634765625,
+        59.25
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        10.7167453765869,
+        3.33003807067871,
+        58.816349029541
+      ],
+      "reached": true,
+      "ticks": 582
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-5.540843, 3.0105, 58.10316)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-5.5553, 3.0105, 58.11566)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-5.589509, 3.0105, 58.14523)"
+        }
+      ],
+      "distance": 1.67,
+      "goal": [
+        -6.99912929534912,
+        3.06115961074829,
+        59.0377311706543
+      ],
+      "id": "landmark_X",
+      "next_waypoint": [
+        -6.0,
+        3.0098876953125,
+        58.5
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -5.5895094871521,
+        2.96133828163147,
+        58.1452255249023
+      ],
+      "reached": true,
+      "ticks": 521
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-18.80869, 3.8125, 45.19232)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-18.82081, 3.8125, 45.2021)"
+        }
+      ],
+      "distance": 1.62,
+      "goal": [
+        -19.9996967315674,
+        3.86371088027954,
+        46.308536529541
+      ],
+      "id": "landmark_Y",
+      "next_waypoint": [
+        -19.5,
+        3.81156921386719,
+        45.75
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -18.8208065032959,
+        3.76272010803223,
+        45.2021026611328
+      ],
+      "reached": true,
+      "ticks": 377
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-31.81281, 3.0994, 52.89596)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-31.82856, 3.0994, 52.90871)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-31.86254, 3.0994, 52.93623)"
+        }
+      ],
+      "distance": 1.69,
+      "goal": [
+        -32.9990768432617,
+        3.15951776504517,
+        54.1885452270508
+      ],
+      "id": "landmark_Z",
+      "next_waypoint": [
+        -32.25,
+        3.09938812255859,
+        53.25
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -31.8625392913818,
+        3.05023741722107,
+        52.9362297058105
+      ],
+      "reached": true,
+      "ticks": 579
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-4.079266, 5.6, 19.82787)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-4.065516, 5.6, 19.81417)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-4.034165, 5.6, 19.78296)"
+        }
+      ],
+      "distance": 1.65,
+      "goal": [
+        -3.0,
+        5.77650690078735,
+        18.5
+      ],
+      "id": "home_gate",
+      "next_waypoint": [
+        -3.75,
+        5.60000610351563,
+        19.5
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -4.0341649055481,
+        5.55083560943604,
+        19.782958984375
+      ],
+      "reached": true,
+      "ticks": 37
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.023821, 0.999463, -0.022522)",
+          "position": "(-0.971092, 10.34103, -45.52416)"
+        }
+      ],
+      "distance": 1.64,
+      "goal": [
+        0.0,
+        10.4008665084839,
+        -46.8599967956543
+      ],
+      "id": "school_gate",
+      "next_waypoint": [
+        -0.75,
+        10.3337326049805,
+        -45.75
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -0.963030636310577,
+        10.2895889282227,
+        -45.5317840576172
+      ],
+      "reached": true,
+      "ticks": 1057
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-1.466082, 5.6, 19.32292)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-1.450102, 5.6, 19.31014)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-1.417433, 5.6, 19.284)"
+        }
+      ],
+      "distance": 1.68,
+      "goal": [
+        0.0999999046325684,
+        5.64002799987793,
+        20.0
+      ],
+      "id": "baker",
+      "next_waypoint": [
+        -0.75,
+        5.60001373291016,
+        18.75
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -1.41743326187134,
+        5.5508337020874,
+        19.2839984893799
+      ],
+      "reached": true,
+      "ticks": 73
+    },
+    {
+      "collisions": [],
+      "distance": 1.65,
+      "goal": [
+        -36.0992469787598,
+        3.98136043548584,
+        40.3972816467285
+      ],
+      "id": "gardener",
+      "next_waypoint": [
+        -35.25,
+        3.97975921630859,
+        40.5
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -34.5544357299805,
+        4.3017520904541,
+        39.8047714233398
+      ],
+      "reached": true,
+      "ticks": 454
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-44.06663, 5.2394, 28.5)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-44.08559, 5.2394, 28.5)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.0, 1.0, 0.0)",
+          "position": "(-44.13128, 5.2394, 28.5)"
+        }
+      ],
+      "distance": 1.68,
+      "goal": [
+        -45.8007698059082,
+        5.27936458587646,
+        28.348072052002
+      ],
+      "id": "orchard",
+      "next_waypoint": [
+        -44.25,
+        5.23940277099609,
+        28.5
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -44.1312828063965,
+        5.19028663635254,
+        28.5000038146973
+      ],
+      "reached": true,
+      "ticks": 527
+    },
+    {
+      "collisions": [
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.14634, 0.982678, 0.113704)",
+          "position": "(-28.93098, 4.240148, 38.59375)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.14634, 0.982678, 0.113704)",
+          "position": "(-28.94333, 4.240529, 38.60635)"
+        },
+        {
+          "body": "BlenderGroundCollision",
+          "normal": "(0.14634, 0.982678, 0.113704)",
+          "position": "(-28.98112, 4.241798, 38.64401)"
+        }
+      ],
+      "distance": 1.66,
+      "goal": [
+        -29.7992477416992,
+        4.10500240325928,
+        40.097282409668
+      ],
+      "id": "bakery",
+      "next_waypoint": [
+        -29.25,
+        4.22394561767578,
+        39.0
+      ],
+      "on_floor": true,
+      "planned": true,
+      "position": [
+        -28.931245803833,
+        4.18668508529663,
+        38.6827621459961
+      ],
+      "reached": true,
+      "ticks": 388
+    }
+  ],
+  "source": "res://assets/world/island.glb",
+  "start_id": ""
+}

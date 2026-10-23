@@ -1,0 +1,294 @@
+{
+  "room_id": "landmark_B",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "岸边路牌",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Directions_Face",
+      "memory_id": "memory_B_01",
+      "activity": "查看目的地"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧长凳",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Bench_Back",
+      "memory_id": "memory_B_02",
+      "activity": "找出长凳下的坐垫"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央系船柱",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Mooring_Bollard",
+      "memory_id": "memory_B_03",
+      "activity": "确认小船停靠位置"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧货架",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Cargo_Back",
+      "memory_id": "memory_B_04",
+      "activity": "按清单装好货箱"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "船舱门展示点",
+      "position_blender": [
+        6.8,
+        4.75,
+        0.0
+      ],
+      "position_godot": [
+        6.8,
+        0.0,
+        -4.75
+      ],
+      "associated_prop": "Locus_05_Cabin_Handle",
+      "memory_id": "memory_B_05",
+      "activity": "核对出行物件"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Boundary_Rear",
+      "aabb_blender": [
+        -8.199999809265137,
+        7.0,
+        0.0,
+        8.199999809265137,
+        7.300000190734863,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Left",
+      "aabb_blender": [
+        -8.299999237060547,
+        -7.0,
+        0.0,
+        -7.999999523162842,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Boundary_Right",
+      "aabb_blender": [
+        7.999999523162842,
+        -7.0,
+        0.0,
+        8.299999237060547,
+        7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Left",
+      "aabb_blender": [
+        -8.0,
+        -7.300000190734863,
+        0.0,
+        -1.3999998569488525,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Front_Right",
+      "aabb_blender": [
+        1.3999998569488525,
+        -7.300000190734863,
+        0.0,
+        8.0,
+        -7.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Harbour_Basin",
+      "aabb_blender": [
+        -6.0,
+        3.0500001907348633,
+        0.0,
+        6.0,
+        6.75,
+        1.100000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_01_Directions",
+      "aabb_blender": [
+        -5.5,
+        -4.925000190734863,
+        0.0,
+        -3.1000001430511475,
+        -4.675000190734863,
+        1.600000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_02_Bench",
+      "aabb_blender": [
+        -6.449999809265137,
+        0.7750000357627869,
+        -0.06000000238418579,
+        -3.75,
+        1.4249999523162842,
+        0.6399999856948853
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Bollard",
+      "aabb_blender": [
+        -0.4000000059604645,
+        1.3000000715255737,
+        0.0,
+        0.4000000059604645,
+        2.1000001430511475,
+        1.100000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Locus_04_Cargo",
+      "aabb_blender": [
+        3.5299999713897705,
+        0.824999988079071,
+        0.0,
+        6.470000267028809,
+        1.6749999523162842,
+        1.899999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Cabin_Back",
+      "aabb_blender": [
+        5.650000095367432,
+        5.349999904632568,
+        0.0,
+        7.950000286102295,
+        6.849999904632568,
+        3.0
+      ]
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "mesh_objects": 108,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_NPC_HOST",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05"
+  ],
+  "glb_bytes": 2413612,
+  "glb_node_count": 120,
+  "triangles_instanced": 79915,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "2ea13ca82b5608f87228d807ee2dc9aefa6d16c0b8c94047c54abdcd3672e666",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/landmark_B/landmark_B_v01.blend",
+  "source_blend_preserved": true
+}
