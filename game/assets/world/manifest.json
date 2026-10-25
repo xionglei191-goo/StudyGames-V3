@@ -1,12 +1,12 @@
 {
-  "version": 7,
-  "working_blend": "assets/blender/alphabet_island/alphabet_island_layout_v07_game.blend",
-  "working_blend_sha256": "388dbe208320902a2d4ff2ca98865f3f9439bfe0ac675fc133a5fee42900cf3f",
+  "version": 8,
+  "working_blend": "assets/blender/alphabet_island/alphabet_island_layout_v08_cloud.blend",
+  "working_blend_sha256": "46076b69b3d8a89e6870d03aae7dd4988046ccdbfce5da604540a64e609d6c15",
   "source_v05_sha256": "736c2ce93532e79c6569a0d8236d482539b8d836d24b916ff5aac025e0a10366",
   "source_v05_glb_sha256": "38bf86a5c984a66b04cc6706b5dc8ffcba4167105a42272a8a49df037276b92b",
   "source_preserved": true,
-  "glb_sha256": "3f572413e425127ae452c8cc62596205da802f9bfb47243f6e735f2a2896fee4",
-  "glb_bytes": 143444984,
+  "glb_sha256": "63fc94ce3162831e10948fe4218298570cea394f6fedd4132b6e5eb9a9acee8f",
+  "glb_bytes": 160741644,
   "marker_count": 33,
   "markers": [
     {
@@ -735,7 +735,7 @@
     }
   ],
   "collision_counts": {
-    "none": 3112,
+    "none": 3131,
     "ground": 220,
     "trunk": 168,
     "barrier": 441,
@@ -4717,7 +4717,26 @@
     "ALPHA_Z_Rear_Garden_Fence_Rail.006": "barrier",
     "ALPHA_Z_Rear_Garden_Fence_Rail.007": "barrier",
     "ALPHA_Z_Rear_Garden_Fence_Rail.008": "barrier",
-    "ALPHA_Z_Rear_Garden_Fence_Rail.009": "barrier"
+    "ALPHA_Z_Rear_Garden_Fence_Rail.009": "barrier",
+    "CF08_FacadeQuoins_cream": "none",
+    "CF08_EaveCorbels_oak": "none",
+    "CF08_RidgeCaps_teal": "none",
+    "CF08_WindowHerbs_leaf": "none",
+    "CF08_WindowHerbs_leaf_light": "none",
+    "CF08_WindowHerbs_leaf_dark": "none",
+    "CF08_WindowHerbs_flower_cream": "none",
+    "CF08_WindowHerbs_flower_gold": "none",
+    "CF08_WindowHerbs_flower_coral": "none",
+    "CF08_HomeCanopy_oak": "none",
+    "CF08_HomeCanopy_oak_light": "none",
+    "CF08_HomeCanopy_teal": "none",
+    "CF08_HomeShutters_teal": "none",
+    "CF08_HomeShutterLouvers_sage": "none",
+    "CF08_Understory_leaf": "none",
+    "CF08_Understory_leaf_light": "none",
+    "CF08_Understory_leaf_dark": "none",
+    "CF08_Understory_flower_gold": "none",
+    "CF08_Understory_flower_cream": "none"
   },
   "terrain_bounds_godot": [
     -71.91621398925781,
@@ -4727,7 +4746,10 @@
   ],
   "textures_relinked": [],
   "coordinate_contract": "Marker world_godot is audit only. Runtime reads imported node global transforms, never these stored coordinates.",
-  "refinement_revision": "world-refinement-v1",
+  "refinement_revision": "cloud-08",
   "source_v06_sha256": "2afe9626754cd93817e1c02bfd2a479d63bcf6c24e3563fe2c927cdfcba2cebc",
-  "source_v06_glb_sha256": "e734f01afb2474aaab15ec9cf98c1c61fc09bfec7e268134c2357d743de4d89d"
+  "source_v06_glb_sha256": "e734f01afb2474aaab15ec9cf98c1c61fc09bfec7e268134c2357d743de4d89d",
+  "source_v07_sha256": "388dbe208320902a2d4ff2ca98865f3f9439bfe0ac675fc133a5fee42900cf3f",
+  "source_v07_glb_sha256": "3f572413e425127ae452c8cc62596205da802f9bfb47243f6e735f2a2896fee4",
+  "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
 }

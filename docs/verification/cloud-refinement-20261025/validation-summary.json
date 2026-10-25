@@ -1,0 +1,82 @@
+{
+  "engine": "Godot 4.6.3 stable official",
+  "blender": "Blender 4.3.2 / Cycles CPU",
+  "project_declares_godot": "4.7",
+  "suites": [
+    {
+      "name": "letters",
+      "command": "godot --headless --path game --script res://tests/test_world_refinement.gd -- --letters=ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+      "exit_code": 0,
+      "passed": true,
+      "checks": 787,
+      "routes": 182,
+      "transitions": 52,
+      "production_save_unchanged": true
+    },
+    {
+      "name": "campus",
+      "command": "godot --headless --path game --script res://tests/test_school_hierarchy.gd",
+      "exit_code": 0,
+      "passed": true,
+      "checks": 352,
+      "routes": 56,
+      "transitions": 16,
+      "production_save_unchanged": true
+    },
+    {
+      "name": "household",
+      "command": "godot --headless --path game --script res://tests/test_home_indoor.gd",
+      "exit_code": 0,
+      "passed": true,
+      "checks": 942,
+      "routes": 62,
+      "transitions": 20,
+      "production_save_unchanged": true
+    }
+  ],
+  "import": {
+    "command": "godot --headless --path game --import",
+    "exit_code": 0,
+    "errors": 0
+  },
+  "baseline_failure": {
+    "command": "godot --headless --path game --script res://tests/test_state.gd",
+    "exit_code": 1,
+    "error": "Legacy save preserves field: reviews",
+    "phase": "Original assets before refinement integration"
+  },
+  "unrun": [
+    "Godot 4.7",
+    "Interactive gameplay and GPU frame-time acceptance",
+    "Direct edit of original Blender 5.2 authoring files"
+  ],
+  "notes": [
+    "ObjectDB instances leaked at exit warning observed in campus and household runs.",
+    "Review cameras and lighting match before/after; screenshots are Blender Cycles, not Godot screenshots."
+  ],
+  "runtime_asset_sha256": {
+    "game/assets/world/island.glb": "63fc94ce3162831e10948fe4218298570cea394f6fedd4132b6e5eb9a9acee8f",
+    "game/assets/interiors/school.glb": "9e4b8db1df56b812ed4cf7df7f613d09d7795a2ef423bc05b7b6963cd2274bd9",
+    "game/assets/interiors/classroom.glb": "ce3c69d0134791092dfe5327a33d047c74e94603c7cedf9d307558e9012db136",
+    "game/assets/interiors/music_room.glb": "ae4e7e4613e4fe1ef735b1bf48addaa621bba175794cdb85cd6a6bb04a239a6b",
+    "game/assets/interiors/art_room.glb": "e93065bbd966e7c68f591656c5cee24a21201f2b9caa68ffe622811e26baf71c",
+    "game/assets/interiors/science_room.glb": "0c6c4e6e621e6c3dc0ca22695f816a0d0a78e33a3bad7eaabbd728573fc5343f",
+    "game/assets/interiors/canteen.glb": "bf4d8dad2f019cf693081f960ed1120430956d6bd5f6c18b0f76c2e7df8b2aa0",
+    "game/assets/interiors/playground.glb": "553e93625d11fe5ab05c9e664df335cdf4c3658f4b7c1bbc8b2fb49460fcb7f9",
+    "game/assets/interiors/football_field.glb": "52b35a6d5966466d3fd42e90f8fc327526ced61b4c2d1428ed3b498b0bddb92f",
+    "game/assets/interiors/home.glb": "1c58e57c084a3dae4509bcd69104e1d8ecca9752ea606c76dfeec5ed996c4788",
+    "game/assets/interiors/home_balcony.glb": "ad63c7d5ce9d7a229183c0f0ff83f6b606e52b8e055f5e94886b014b7d189881",
+    "game/assets/interiors/home_bathroom.glb": "d28dca4dd206ebd5f15c830812f3d14b04d41d85a87c682e69e0af55c67ff173",
+    "game/assets/interiors/home_bedroom.glb": "35931315872710395e35f3b1ad40d387ff3b5a0ccc9d8354de431265245b3f4e",
+    "game/assets/interiors/home_dining.glb": "ae63bb051dcfe562d023529de7f74efb82243d7fcdc49005c71d405fd5a912ce",
+    "game/assets/interiors/home_estate.glb": "5fd4857be8898ef6f4b957a0f8026e1c715a34e2f3524d8e1229c45bb6a31dca",
+    "game/assets/interiors/home_hall.glb": "ecf32599d126f2816607a1446703a05b389c2f6f07e3ef8e8e64cf0e78d64928",
+    "game/assets/interiors/home_kitchen.glb": "3fbdf0e7be2a105fb89ab0df024f1758d40b0d92e3780a0118c281fdbde34879",
+    "game/assets/interiors/home_study.glb": "02d52a449eea91917f9dddbaf9088e884838072a934b8f4bb56499fba187794d"
+  },
+  "protected_nodes": 1738,
+  "original_triangles": 4914052,
+  "exported_triangles": 5243248,
+  "new_mesh_objects": 134,
+  "relocated_decorative_details": 276
+}
