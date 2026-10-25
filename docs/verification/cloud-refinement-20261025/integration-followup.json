@@ -1,0 +1,223 @@
+{
+  "starting_commit": "d007cf1926cdefcd6fad0526d4041f6259473e03",
+  "issue_reproduced": {
+    "room": "school",
+    "exit_code": 1,
+    "error": "Roundtrip geometry changed",
+    "command": "blender --background --threads 4 --python-exit-code 1 --python assets/blender/interiors/scripts/export_existing.py -- --room school --verify-only --no-render"
+  },
+  "after": {
+    "ordinary_export": {
+      "passed": true,
+      "exit_code": 0,
+      "rooms": 17,
+      "command": "blender --background --threads 4 --python-exit-code 1 --python assets/blender/interiors/scripts/export_existing.py -- --verify-only --no-render --room school --room classroom --room music_room --room art_room --room science_room --room canteen --room playground --room football_field --room home --room home_balcony --room home_bathroom --room home_bedroom --room home_dining --room home_estate --room home_hall --room home_kitchen --room home_study"
+    },
+    "interiors_sync": {
+      "exit_code": 0,
+      "rooms": 43,
+      "command": "python3 scripts/sync_blender_interiors.py --require-all --verify-only"
+    },
+    "island_sync": {
+      "exit_code": 0,
+      "command": "python3 scripts/sync_blender_world.py --verify-only"
+    },
+    "integration_second_run_manifests_byte_identical": true,
+    "all_18_delivered_blend_source_glb_and_runtime_glb_hashes_unchanged": true,
+    "all_original_uploaded_deliverables_unchanged": true
+  },
+  "rooms": [
+    {
+      "room_id": "school",
+      "previous_triangles": 262564,
+      "triangles": 332480,
+      "preview": "assets/blender/interiors/school/preview_v05_cloud.png",
+      "preview_sha256": "9e459278cc0992d8eb8aaaf98b461f705d5f490fc4245bac16b4e1381d39f594",
+      "model_version": "v05_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "classroom",
+      "previous_triangles": 203452,
+      "triangles": 205464,
+      "preview": "assets/blender/interiors/classroom/preview_v03_cloud.png",
+      "preview_sha256": "6e6ff22f10a25292c8cfad9728d90921f459cdd0e6152c6bd209d1b10ef571ee",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "music_room",
+      "previous_triangles": 180876,
+      "triangles": 183308,
+      "preview": "assets/blender/interiors/music_room/preview_v03_cloud.png",
+      "preview_sha256": "b92b8ef76d5715f66c2037a6fe8f509b5f5fb637be9fdacf3c7806937faea070",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "art_room",
+      "previous_triangles": 156968,
+      "triangles": 159564,
+      "preview": "assets/blender/interiors/art_room/preview_v03_cloud.png",
+      "preview_sha256": "fc5c5c9a4b84851c440ecd14310571657765ea75c3b1a70a8ecb1f5d3ccc59c9",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "science_room",
+      "previous_triangles": 219260,
+      "triangles": 222916,
+      "preview": "assets/blender/interiors/science_room/preview_v03_cloud.png",
+      "preview_sha256": "df074f88ce1d906edd4bef4b03886f71822a36f184140192d7560956e72b489e",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "canteen",
+      "previous_triangles": 174972,
+      "triangles": 181584,
+      "preview": "assets/blender/interiors/canteen/preview_v03_cloud.png",
+      "preview_sha256": "6eedab341024ec5f40a385b695f874b80bf3b8501333cf128be2123ddc02687b",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "playground",
+      "previous_triangles": 126036,
+      "triangles": 126804,
+      "preview": "assets/blender/interiors/playground/preview_v03_cloud.png",
+      "preview_sha256": "f00452d631ff82318c907edc21aead9f0f1c36a3dc7af8a15e7abe8867797094",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "football_field",
+      "previous_triangles": 182308,
+      "triangles": 182580,
+      "preview": "assets/blender/interiors/football_field/preview_v03_cloud.png",
+      "preview_sha256": "7051ff67f01106cbc4efdf87f1e6343b8e955118205fcb9f4b5d4ffc8464cf88",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "home",
+      "previous_triangles": 167672,
+      "triangles": 169160,
+      "preview": "assets/blender/interiors/home/preview_v05_cloud.png",
+      "preview_sha256": "74f55acf94f87b9b1bd097e190ee09ecbb1dc9aea6b5a03fadcba9317ac030c7",
+      "model_version": "v05_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "home_balcony",
+      "previous_triangles": 102572,
+      "triangles": 103116,
+      "preview": "assets/blender/interiors/home_balcony/preview_v03_cloud.png",
+      "preview_sha256": "e94d5221ee94f4b90a9d7f5060de2de882e57a035f63ea4ac9d338c69711b2d0",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "home_bathroom",
+      "previous_triangles": 108064,
+      "triangles": 110360,
+      "preview": "assets/blender/interiors/home_bathroom/preview_v03_cloud.png",
+      "preview_sha256": "b3b1d78ef20eea28fe31fa10d5d577c1539499fa42864df649b7dab77a04b9e2",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "home_bedroom",
+      "previous_triangles": 67792,
+      "triangles": 70600,
+      "preview": "assets/blender/interiors/home_bedroom/preview_v03_cloud.png",
+      "preview_sha256": "89a2116820b6bf8d2d57ad061aa66455d87f2378ffbb760277fbba0f83d1bce0",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "home_dining",
+      "previous_triangles": 97532,
+      "triangles": 99692,
+      "preview": "assets/blender/interiors/home_dining/preview_v03_cloud.png",
+      "preview_sha256": "781a4ffa0e5e761068cbc19ea08ad45a8e22fd735c4808f78b2d5d5bb36b56cd",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "home_estate",
+      "previous_triangles": 462228,
+      "triangles": 464280,
+      "preview": "assets/blender/interiors/home_estate/preview_v04_cloud.png",
+      "preview_sha256": "02c5c0baec6b13ad26bd1b2ce61456045fe0a00caa33044d817e0d6fa20ec406",
+      "model_version": "v04_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "home_hall",
+      "previous_triangles": 181628,
+      "triangles": 182436,
+      "preview": "assets/blender/interiors/home_hall/preview_v03_cloud.png",
+      "preview_sha256": "3b09aeec7a7936515a917e9af132773fce13841a5a146d508a8bab2999072c69",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "home_kitchen",
+      "previous_triangles": 121828,
+      "triangles": 125400,
+      "preview": "assets/blender/interiors/home_kitchen/preview_v03_cloud.png",
+      "preview_sha256": "fe93dcadcd5158ad870ac749e61e00c80ed88a4c075152de669390656244885a",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    },
+    {
+      "room_id": "home_study",
+      "previous_triangles": 71508,
+      "triangles": 73352,
+      "preview": "assets/blender/interiors/home_study/preview_v03_cloud.png",
+      "preview_sha256": "bd150732802fb089e51c1120ec5fb8d24cadebb2647bc3eecc969ffc527a8ca1",
+      "model_version": "v03_cloud",
+      "anchors_and_bounds_unchanged": true,
+      "preview_matches_actual_render": true
+    }
+  ],
+  "metadata_corrections": [
+    "triangles",
+    "versioned preview path and new PNG",
+    "model_version",
+    "football texture_count",
+    "football historical authoring/native visual acceptance moved under source_history; current GLB-derived provenance and unreviewed runtime-visual status explicit"
+  ],
+  "kept_intentionally": [
+    "All anchors and navigation bounds",
+    "Design style-reference images remain historical references",
+    "Existing source files and previews",
+    "Runtime gameplay assets, U1-U3 data and scripts"
+  ],
+  "state_test_comparison": {
+    "baseline_commit": "74fdcf79d39f5ce6d5dfc8723ae96e35a2da8c41",
+    "baseline_exit_code": 1,
+    "followup_exit_code": 1,
+    "error_in_both": "Legacy save preserves field: reviews",
+    "command": "godot --headless --path game --script res://tests/test_state.gd",
+    "game_state_and_test_script_bytes_unchanged": true,
+    "not_rerun_at_initial_delivery": true
+  }
+}

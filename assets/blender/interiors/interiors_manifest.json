@@ -4010,7 +4010,7 @@
       "name": "山丘学园",
       "blend": "assets/blender/interiors/school/school_v05_cloud.blend",
       "glb": "assets/blender/interiors/school/school_v05_cloud.glb",
-      "preview": "assets/blender/interiors/school/preview_v04.png",
+      "preview": "assets/blender/interiors/school/preview_v05_cloud.png",
       "anchors": [
         {
           "name": "SG_MEMORY_01",
@@ -4274,19 +4274,20 @@
         76.0,
         40.0
       ],
-      "triangles": 262564,
+      "triangles": 332480,
       "glb_sha256": "9e4b8db1df56b812ed4cf7df7f613d09d7795a2ef423bc05b7b6963cd2274bd9",
       "scene_level": 2,
       "parent_room": "village",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v05_cloud"
     },
     {
       "room_id": "classroom",
       "name": "教室",
       "blend": "assets/blender/interiors/classroom/classroom_v03_cloud.blend",
       "glb": "assets/blender/interiors/classroom/classroom_v03_cloud.glb",
-      "preview": "assets/blender/interiors/classroom/preview_v02.png",
+      "preview": "assets/blender/interiors/classroom/preview_v03_cloud.png",
       "anchors": [
         {
           "name": "SG_MEMORY_01",
@@ -4431,17 +4432,18 @@
         16.0,
         14.0
       ],
-      "triangles": 203452,
+      "triangles": 205464,
       "glb_sha256": "ce3c69d0134791092dfe5327a33d047c74e94603c7cedf9d307558e9012db136",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v03_cloud"
     },
     {
       "room_id": "music_room",
       "name": "音乐教室",
       "blend": "assets/blender/interiors/music_room/music_room_v03_cloud.blend",
       "glb": "assets/blender/interiors/music_room/music_room_v03_cloud.glb",
-      "preview": "assets/blender/interiors/music_room/preview_v02.png",
+      "preview": "assets/blender/interiors/music_room/preview_v03_cloud.png",
       "anchors": [
         {
           "name": "SG_SPAWN",
@@ -4586,25 +4588,30 @@
         18.0,
         16.0
       ],
-      "triangles": 180876,
+      "triangles": 183308,
       "glb_sha256": "ae4e7e4613e4fe1ef735b1bf48addaa621bba175794cdb85cd6a6bb04a239a6b",
       "scene_level": 3,
       "parent_room": "school",
-      "model_version": "v01",
+      "model_version": "v03_cloud",
       "dimensions_m": [
         18,
         16
       ],
       "specialist_room": true,
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "source_history": {
+        "blend": "assets/blender/interiors/music_room/music_room_v02.blend",
+        "glb": "assets/blender/interiors/music_room/music_room_v02.glb",
+        "model_version": "v01"
+      }
     },
     {
       "room_id": "art_room",
       "name": "美术教室",
       "blend": "assets/blender/interiors/art_room/art_room_v03_cloud.blend",
       "glb": "assets/blender/interiors/art_room/art_room_v03_cloud.glb",
-      "preview": "assets/blender/interiors/art_room/preview_v02.png",
+      "preview": "assets/blender/interiors/art_room/preview_v03_cloud.png",
       "anchors": [
         {
           "name": "SG_SPAWN",
@@ -4749,25 +4756,30 @@
         16.0,
         14.0
       ],
-      "triangles": 156968,
+      "triangles": 159564,
       "glb_sha256": "e93065bbd966e7c68f591656c5cee24a21201f2b9caa68ffe622811e26baf71c",
       "scene_level": 3,
       "parent_room": "school",
-      "model_version": "v01",
+      "model_version": "v03_cloud",
       "dimensions_m": [
         16,
         14
       ],
       "specialist_room": true,
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "source_history": {
+        "blend": "assets/blender/interiors/art_room/art_room_v02.blend",
+        "glb": "assets/blender/interiors/art_room/art_room_v02.glb",
+        "model_version": "v01"
+      }
     },
     {
       "room_id": "science_room",
       "name": "科学教室",
       "blend": "assets/blender/interiors/science_room/science_room_v03_cloud.blend",
       "glb": "assets/blender/interiors/science_room/science_room_v03_cloud.glb",
-      "preview": "assets/blender/interiors/science_room/preview_v02.png",
+      "preview": "assets/blender/interiors/science_room/preview_v03_cloud.png",
       "anchors": [
         {
           "name": "SG_SPAWN",
@@ -4912,25 +4924,30 @@
         18.0,
         16.0
       ],
-      "triangles": 219260,
+      "triangles": 222916,
       "glb_sha256": "0c6c4e6e621e6c3dc0ca22695f816a0d0a78e33a3bad7eaabbd728573fc5343f",
       "scene_level": 3,
       "parent_room": "school",
-      "model_version": "v01",
+      "model_version": "v03_cloud",
       "dimensions_m": [
         18,
         16
       ],
       "specialist_room": true,
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "source_history": {
+        "blend": "assets/blender/interiors/science_room/science_room_v02.blend",
+        "glb": "assets/blender/interiors/science_room/science_room_v02.glb",
+        "model_version": "v01"
+      }
     },
     {
       "room_id": "canteen",
       "name": "食堂",
       "blend": "assets/blender/interiors/canteen/canteen_v03_cloud.blend",
       "glb": "assets/blender/interiors/canteen/canteen_v03_cloud.glb",
-      "preview": "assets/blender/interiors/canteen/preview_v02.png",
+      "preview": "assets/blender/interiors/canteen/preview_v03_cloud.png",
       "anchors": [
         {
           "name": "SG_MEMORY_01",
@@ -5075,17 +5092,18 @@
         16.0,
         14.0
       ],
-      "triangles": 174972,
+      "triangles": 181584,
       "glb_sha256": "bf4d8dad2f019cf693081f960ed1120430956d6bd5f6c18b0f76c2e7df8b2aa0",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v03_cloud"
     },
     {
       "room_id": "playground",
       "name": "操场",
       "blend": "assets/blender/interiors/playground/playground_v03_cloud.blend",
       "glb": "assets/blender/interiors/playground/playground_v03_cloud.glb",
-      "preview": "assets/blender/interiors/playground/preview_v02.png",
+      "preview": "assets/blender/interiors/playground/preview_v03_cloud.png",
       "anchors": [
         {
           "name": "SG_MEMORY_01",
@@ -5230,17 +5248,18 @@
         16.0,
         14.0
       ],
-      "triangles": 126036,
+      "triangles": 126804,
       "glb_sha256": "553e93625d11fe5ab05c9e664df335cdf4c3658f4b7c1bbc8b2fb49460fcb7f9",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v03_cloud"
     },
     {
       "room_id": "football_field",
       "name": "校园足球场",
       "blend": "assets/blender/interiors/football_field/football_field_v03_cloud.blend",
       "glb": "assets/blender/interiors/football_field/football_field_v03_cloud.glb",
-      "preview": "assets/blender/interiors/football_field/preview_v02.png",
+      "preview": "assets/blender/interiors/football_field/preview_v03_cloud.png",
       "anchors": [
         {
           "name": "SG_SPAWN",
@@ -5385,11 +5404,11 @@
         34.0,
         28.0
       ],
-      "triangles": 182308,
+      "triangles": 182580,
       "glb_sha256": "52b35a6d5966466d3fd42e90f8fc327526ced61b4c2d1428ed3b498b0bddb92f",
       "scene_level": 3,
       "parent_room": "school",
-      "model_version": "v01",
+      "model_version": "v03_cloud",
       "dimensions_m": [
         34.0,
         28.0
@@ -5404,7 +5423,7 @@
         "door_node": "SG_DOOR_FOOTBALL_FIELD"
       },
       "technical_frame": {
-        "engine": "Godot 4.7.2",
+        "engine": "Godot 4.7 project target",
         "renderer": "GL Compatibility",
         "target": "Windows desktop with optional Web preview",
         "world_units": "metres",
@@ -5416,7 +5435,7 @@
         "runtime_camera_size_suggestion": 34,
         "floor_physics": "SG_FLOOR_Main closed mesh, top at zero with upward normals",
         "grass_and_line_max_height_m": 0.047,
-        "texture_count": 0,
+        "texture_count": 16,
         "materials": "shared warm matte PBR palette",
         "collision": "hidden simple proxy meshes; open goal mouths; goal nets block at sides/back",
         "animation": "none; balls and example scoreboard are static props",
@@ -5434,55 +5453,94 @@
         "visual_target_selection": "Use the existing warm toy-campus direction already accepted for neighbouring school scenes"
       },
       "provenance": {
-        "kind": "original procedural Blender mesh authoring",
-        "creator": "Codex for this project",
-        "tool": "Blender 5.2.2 LTS",
-        "source_script": "assets/blender/interiors/scripts/build_football_field.py",
-        "created_at_utc": "2026-10-22T06:26:28Z",
-        "external_downloads": [],
-        "external_textures": [],
-        "license_note": "New geometry and in-project primitive helpers; no third-party model or texture added. Existing project licensing remains applicable.",
-        "preservation": "All pre-existing room files and shared manifests remain untouched by this generator."
+        "kind": "Refinement of the original exported GLB in Blender",
+        "tool": "Blender 4.3.2",
+        "source_script": "scripts/cloud_scene_refine.py",
+        "original_metadata": "source_history.provenance",
+        "preservation": "Original blend and GLB retained byte-for-byte; original authoring history not reconstructed."
       },
       "verification": {
         "technical_checks_passed": true,
         "rendered_preview": true,
-        "native_scale_reviewed": true,
-        "in_engine_reviewed": true,
-        "approval_status": "runtime_integration_and_visual_review_passed",
-        "visual_review": {
-          "reviewed_at_utc": "2026-10-22T06:27:31+00:00",
-          "preview": "assets/blender/interiors/football_field/preview.png",
-          "preview_sha256": "0aa2702b5aee0ac684b5e83688e02999a2ddef3b468e41b870a5b1a17357dcf8",
-          "image_size_px": [
-            1700,
-            1343
-          ],
-          "result": "pass",
-          "observations": [
-            "Complete scene is in frame: both goals and nets, perimeter fence with entrance opening, pitch lines and four corner flags.",
-            "Five locus contexts read distinctly: equipment rack, centre circle, east goal, cone passing practice, and stand with example scoreboard.",
-            "Warm matte sage turf, ivory markings, teal signs and seating, oak framing match adjacent campus scenes.",
-            "No visible clipped geometry, missing materials, floating principal furniture, or blocked goal mouths in reviewed render."
-          ],
-          "scope": "Authoring render review only; no Godot runtime or target-device performance claim."
-        },
-        "runtime_review": {
-          "version": "0.3.1",
-          "reviewed_at": "2026-10-22T14:32:06.940579+08:00",
-          "image": "build/verification-v031-football/football_overview.png",
-          "image_sha256": "fb53135cce5d4bcfb33d5e6c4ee07f934aad75a7eec0f0b980e7723b187d5295",
-          "scope": "Actual Godot scene image reviewed; Windows export entered football field and returned to the corresponding campus door; all five field sites physically visited.",
-          "performance_scope": "No frame-rate or low-end-device claim"
-        }
+        "preview": "assets/blender/interiors/football_field/preview_v03_cloud.png",
+        "in_engine_reviewed": false,
+        "approval_status": "current_version_visual_runtime_review_pending",
+        "scope": "Source/GLB structural checks and Blender render only. Run engine acceptance separately; historical native visual approval is retained under source_history.verification."
       },
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "source_history": {
+        "blend": "assets/blender/interiors/football_field/football_field_v02.blend",
+        "glb": "assets/blender/interiors/football_field/football_field_v02.glb",
+        "model_version": "v01",
+        "technical_frame": {
+          "engine": "Godot 4.7.2",
+          "renderer": "GL Compatibility",
+          "target": "Windows desktop with optional Web preview",
+          "world_units": "metres",
+          "source_up": "Blender Z",
+          "runtime_up": "glTF/Godot Y",
+          "front": "Blender -Y",
+          "pivot": "pitch centre at ground height 0",
+          "camera": "orthographic 2.5D following camera",
+          "runtime_camera_size_suggestion": 34,
+          "floor_physics": "SG_FLOOR_Main closed mesh, top at zero with upward normals",
+          "grass_and_line_max_height_m": 0.047,
+          "texture_count": 0,
+          "materials": "shared warm matte PBR palette",
+          "collision": "hidden simple proxy meshes; open goal mouths; goal nets block at sides/back",
+          "animation": "none; balls and example scoreboard are static props",
+          "lod": "single authored LOD for this separately loaded field; no performance claim"
+        },
+        "provenance": {
+          "kind": "original procedural Blender mesh authoring",
+          "creator": "Codex for this project",
+          "tool": "Blender 5.2.2 LTS",
+          "source_script": "assets/blender/interiors/scripts/build_football_field.py",
+          "created_at_utc": "2026-10-22T06:26:28Z",
+          "external_downloads": [],
+          "external_textures": [],
+          "license_note": "New geometry and in-project primitive helpers; no third-party model or texture added. Existing project licensing remains applicable.",
+          "preservation": "All pre-existing room files and shared manifests remain untouched by this generator."
+        },
+        "verification": {
+          "technical_checks_passed": true,
+          "rendered_preview": true,
+          "native_scale_reviewed": true,
+          "in_engine_reviewed": true,
+          "approval_status": "runtime_integration_and_visual_review_passed",
+          "visual_review": {
+            "reviewed_at_utc": "2026-10-22T06:27:31+00:00",
+            "preview": "assets/blender/interiors/football_field/preview.png",
+            "preview_sha256": "0aa2702b5aee0ac684b5e83688e02999a2ddef3b468e41b870a5b1a17357dcf8",
+            "image_size_px": [
+              1700,
+              1343
+            ],
+            "result": "pass",
+            "observations": [
+              "Complete scene is in frame: both goals and nets, perimeter fence with entrance opening, pitch lines and four corner flags.",
+              "Five locus contexts read distinctly: equipment rack, centre circle, east goal, cone passing practice, and stand with example scoreboard.",
+              "Warm matte sage turf, ivory markings, teal signs and seating, oak framing match adjacent campus scenes.",
+              "No visible clipped geometry, missing materials, floating principal furniture, or blocked goal mouths in reviewed render."
+            ],
+            "scope": "Authoring render review only; no Godot runtime or target-device performance claim."
+          },
+          "runtime_review": {
+            "version": "0.3.1",
+            "reviewed_at": "2026-10-22T14:32:06.940579+08:00",
+            "image": "build/verification-v031-football/football_overview.png",
+            "image_sha256": "fb53135cce5d4bcfb33d5e6c4ee07f934aad75a7eec0f0b980e7723b187d5295",
+            "scope": "Actual Godot scene image reviewed; Windows export entered football field and returned to the corresponding campus door; all five field sites physically visited.",
+            "performance_scope": "No frame-rate or low-end-device claim"
+          }
+        }
+      }
     },
     {
       "blend": "assets/blender/interiors/home/home_v05_cloud.blend",
       "glb": "assets/blender/interiors/home/home_v05_cloud.glb",
-      "preview": "assets/blender/interiors/home/preview_v04.png",
+      "preview": "assets/blender/interiors/home/preview_v05_cloud.png",
       "refinement_revision": "cloud-08",
       "room_id": "home",
       "name": "客厅",
@@ -5715,14 +5773,15 @@
         16.2,
         14.2
       ],
-      "triangles": 167672,
+      "triangles": 169160,
       "glb_sha256": "1c58e57c084a3dae4509bcd69104e1d8ecca9752ea606c76dfeec5ed996c4788",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v05_cloud"
     },
     {
       "blend": "assets/blender/interiors/home_balcony/home_balcony_v03_cloud.blend",
       "glb": "assets/blender/interiors/home_balcony/home_balcony_v03_cloud.glb",
-      "preview": "assets/blender/interiors/home_balcony/preview_v02.png",
+      "preview": "assets/blender/interiors/home_balcony/preview_v03_cloud.png",
       "room_id": "home_balcony",
       "name": "家务阳台",
       "anchors": [
@@ -5869,15 +5928,16 @@
         16.0,
         14.0
       ],
-      "triangles": 102572,
+      "triangles": 103116,
       "glb_sha256": "ad63c7d5ce9d7a229183c0f0ff83f6b606e52b8e055f5e94886b014b7d189881",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v03_cloud"
     },
     {
       "blend": "assets/blender/interiors/home_bathroom/home_bathroom_v03_cloud.blend",
       "glb": "assets/blender/interiors/home_bathroom/home_bathroom_v03_cloud.glb",
-      "preview": "assets/blender/interiors/home_bathroom/preview_v02.png",
+      "preview": "assets/blender/interiors/home_bathroom/preview_v03_cloud.png",
       "room_id": "home_bathroom",
       "name": "清爽浴室",
       "anchors": [
@@ -6024,15 +6084,16 @@
         16.0,
         14.0
       ],
-      "triangles": 108064,
+      "triangles": 110360,
       "glb_sha256": "d28dca4dd206ebd5f15c830812f3d14b04d41d85a87c682e69e0af55c67ff173",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v03_cloud"
     },
     {
       "blend": "assets/blender/interiors/home_bedroom/home_bedroom_v03_cloud.blend",
       "glb": "assets/blender/interiors/home_bedroom/home_bedroom_v03_cloud.glb",
-      "preview": "assets/blender/interiors/home_bedroom/preview_v02.png",
+      "preview": "assets/blender/interiors/home_bedroom/preview_v03_cloud.png",
       "room_id": "home_bedroom",
       "name": "温暖卧室",
       "anchors": [
@@ -6179,15 +6240,16 @@
         16.0,
         14.0
       ],
-      "triangles": 67792,
+      "triangles": 70600,
       "glb_sha256": "35931315872710395e35f3b1ad40d387ff3b5a0ccc9d8354de431265245b3f4e",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v03_cloud"
     },
     {
       "blend": "assets/blender/interiors/home_dining/home_dining_v03_cloud.blend",
       "glb": "assets/blender/interiors/home_dining/home_dining_v03_cloud.glb",
-      "preview": "assets/blender/interiors/home_dining/preview_v02.png",
+      "preview": "assets/blender/interiors/home_dining/preview_v03_cloud.png",
       "room_id": "home_dining",
       "name": "家庭餐厅",
       "anchors": [
@@ -6334,15 +6396,16 @@
         16.0,
         14.0
       ],
-      "triangles": 97532,
+      "triangles": 99692,
       "glb_sha256": "ae63bb051dcfe562d023529de7f74efb82243d7fcdc49005c71d405fd5a912ce",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v03_cloud"
     },
     {
       "blend": "assets/blender/interiors/home_estate/home_estate_v04_cloud.blend",
       "glb": "assets/blender/interiors/home_estate/home_estate_v04_cloud.glb",
-      "preview": "assets/blender/interiors/home_estate/preview_v03.png",
+      "preview": "assets/blender/interiors/home_estate/preview_v04_cloud.png",
       "room_id": "home_estate",
       "name": "家园院落",
       "anchors": [
@@ -6506,15 +6569,16 @@
         34.0,
         32.0
       ],
-      "triangles": 462228,
+      "triangles": 464280,
       "glb_sha256": "5fd4857be8898ef6f4b957a0f8026e1c715a34e2f3524d8e1229c45bb6a31dca",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v04_cloud"
     },
     {
       "blend": "assets/blender/interiors/home_hall/home_hall_v03_cloud.blend",
       "glb": "assets/blender/interiors/home_hall/home_hall_v03_cloud.glb",
-      "preview": "assets/blender/interiors/home_hall/preview_v02.png",
+      "preview": "assets/blender/interiors/home_hall/preview_v03_cloud.png",
       "room_id": "home_hall",
       "name": "家里 · 门厅与走廊",
       "anchors": [
@@ -6678,15 +6742,16 @@
         28.0,
         20.0
       ],
-      "triangles": 181628,
+      "triangles": 182436,
       "glb_sha256": "ecf32599d126f2816607a1446703a05b389c2f6f07e3ef8e8e64cf0e78d64928",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v03_cloud"
     },
     {
       "blend": "assets/blender/interiors/home_kitchen/home_kitchen_v03_cloud.blend",
       "glb": "assets/blender/interiors/home_kitchen/home_kitchen_v03_cloud.glb",
-      "preview": "assets/blender/interiors/home_kitchen/preview_v02.png",
+      "preview": "assets/blender/interiors/home_kitchen/preview_v03_cloud.png",
       "room_id": "home_kitchen",
       "name": "明亮厨房",
       "anchors": [
@@ -6833,15 +6898,16 @@
         16.0,
         14.0
       ],
-      "triangles": 121828,
+      "triangles": 125400,
       "glb_sha256": "3fbdf0e7be2a105fb89ab0df024f1758d40b0d92e3780a0118c281fdbde34879",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v03_cloud"
     },
     {
       "blend": "assets/blender/interiors/home_study/home_study_v03_cloud.blend",
       "glb": "assets/blender/interiors/home_study/home_study_v03_cloud.glb",
-      "preview": "assets/blender/interiors/home_study/preview_v02.png",
+      "preview": "assets/blender/interiors/home_study/preview_v03_cloud.png",
       "room_id": "home_study",
       "name": "窗边书房",
       "anchors": [
@@ -6988,10 +7054,11 @@
         16.0,
         14.0
       ],
-      "triangles": 71508,
+      "triangles": 73352,
       "glb_sha256": "02d52a449eea91917f9dddbaf9088e884838072a934b8f4bb56499fba187794d",
       "refinement_revision": "cloud-08",
-      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+      "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+      "model_version": "v03_cloud"
     }
   ],
   "coordinate_system": "GLB/Godot Y up; bounds = xmin, zmin, width, depth; metres",
