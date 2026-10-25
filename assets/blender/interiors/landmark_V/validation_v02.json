@@ -1,0 +1,73 @@
+{
+  "room_id": "landmark_V",
+  "textured_objects": 74,
+  "surface_families": {
+    "floor": 1,
+    "wood": 42,
+    "earth": 3,
+    "metal": 2,
+    "stone": 25,
+    "ceramic": 1
+  },
+  "softened_edges": 6,
+  "tailored_details": [
+    "WR_Inlay_Locus_03_Volcano_Model_Top",
+    "WR_Geological_Strata_Dormant_Volcano_Backdrop_Mountain",
+    "WR_Geological_Strata_Volcano_Model_Mountain"
+  ],
+  "layered_crowns": [],
+  "glb_bytes": 4765108,
+  "glb_node_count": 128,
+  "triangles_instanced": 121644,
+  "embedded_images": 18,
+  "missing_nodes": [],
+  "sha256": "052282812d97f772b38d0c2427160e017363ad57392a47911989b808a12b10cc",
+  "new_detail_geometry": {
+    "new_objects": 3,
+    "new_vertices_evaluated": 3296,
+    "new_triangles_evaluated": 6592,
+    "closed_meshes": 3,
+    "open_detail_meshes": [],
+    "negative_closed_volumes": [],
+    "degenerate_meshes": []
+  },
+  "protected_objects": 20,
+  "protected_geometry_unchanged": true,
+  "protected_signature": {
+    "SG_FLOOR_Main": "f2fcceb7d5cf6d3d1ad28b5bc175f155fb0927e433af7c323548c4f6fbb1d938",
+    "SG_COLLIDER_Boundary_Rear": "6ca640cf1ce3a2ffc77ef1275f738ad63628f560da7839a1ff0f0db13dccebbc",
+    "SG_COLLIDER_Boundary_Left": "3b989d76e3644f2ec34cf7a068a37d0e75168bc2daa305b1ece20948f9f146e3",
+    "SG_COLLIDER_Boundary_Right": "e43b7cfa2a30fdaaf5749904a48e2e9c30ada27d5f74cba3ea0666518e064522",
+    "SG_COLLIDER_Front_Left": "6266421d76cab15cb110645f631ad63cd2dcbfc2d97bb08f0ad7c71dd3ffdbf8",
+    "SG_COLLIDER_Front_Right": "f2be25d4565fa9b54d9c5ad3e5f58c048b6a7cfd8dc017ce9f76d0d711785f0f",
+    "SG_COLLIDER_Volcanic_Rock_Ridge": "7268206177bc4cd04ced9578f00a63fbe681782a5833475d4b923da99ff2a537",
+    "SG_COLLIDER_Locus_01_Trail": "54b94bf655f895b8dfe93633ee4538810ee4d3235565f989f6ab905c0bade5cd",
+    "SG_COLLIDER_Locus_02_Specimens": "1c01664829a449d43704ce895f4002d8efb2bb2494da3f01f28bc1903f00da3d",
+    "SG_COLLIDER_Locus_03_Volcano_Model": "367a161a075ab550e81b2de4fc58b94ee32a36f8e96ab3a3f8195c365659f071",
+    "SG_COLLIDER_Locus_04_Rock_Section": "53aea6cc4234eaa1b0dc1d926b64b996a1308693e79c66d89025d83505c563e0",
+    "SG_COLLIDER_Locus_05_Field_Records": "968553f8f0ee980d17a42ff6dd1cf4b1c164bacb7af5708488142770997d9035",
+    "SG_MEMORY_01": "bedb4dc8516b3ceda44ac18d8483816d0037a099819c02c6b4a68e865e424725",
+    "SG_MEMORY_02": "6cadba4dd6c661eaf86d4ec1724011ec656d524b128e777051ad43ed9bf380d9",
+    "SG_MEMORY_03": "07ff581371a86a3ad0579468270397b47389d01aacb2c54b8bd3de48017ce538",
+    "SG_MEMORY_04": "c5d8a5c6d9be2c2c31385908f63f3c472375952fefb8b4af987fc4e47de17dae",
+    "SG_MEMORY_05": "1b22e798d37ffa14eefa095a19cc8238c3ef4f71d0343a6f363dc1e7556919c9",
+    "SG_SPAWN": "96420a832d9569d7de412688bb33a4d96d595e809393f205ebce371f70a1dcd0",
+    "SG_EXIT": "fd8f874ea5595acf49b9ce594cd99566d4f6c98cc373fa5a90a6c2758afa795f",
+    "SG_NPC_HOST": "3c63c14822870a943c0b2599d3e71f11dc92a1e0b836840197ed56790628a104"
+  },
+  "source_blend": "assets/blender/interiors/landmark_V/landmark_V_v01.blend",
+  "source_sha256": "4025ad9b7486cd598c6e3e12f3f73ce91f11781192e313626dc79cb3dce7f380",
+  "blend": "assets/blender/interiors/landmark_V/landmark_V_v02.blend",
+  "blend_sha256": "70ebfdf020b943832da791e81991be5c3ae05f205fe9c3e6d314b7dc6a85d555",
+  "glb": "assets/blender/interiors/landmark_V/landmark_V_v02.glb",
+  "textures": 18,
+  "engine_acceptance": {
+    "result": "PASS",
+    "scope": "44-scene native capture and physical circulation acceptance",
+    "static_report": "docs/verification/world-refinement/asset-report.json",
+    "routes_report": "docs/verification/world-refinement/route-report.json",
+    "gallery_report": "docs/verification/world-refinement/gallery-report.json",
+    "runtime_glb_sha256": "052282812d97f772b38d0c2427160e017363ad57392a47911989b808a12b10cc"
+  },
+  "source_materials_preserved": true
+}

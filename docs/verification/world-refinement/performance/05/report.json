@@ -1,0 +1,514 @@
+{
+  "batch": "05",
+  "captures": [
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.37952071428299,
+          0.7745321393013,
+          -0.506027638912201
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.9497890472412,
+          24.7199993133545
+        ],
+        "projection": 1,
+        "size": 18.0
+      },
+      "hud_visible": true,
+      "id": "home-production",
+      "image": "F:/LoveStudy/game/../docs/verification/world-refinement/performance/05/home-production.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "production_camera_default_spawn",
+      "panel": "",
+      "player_position": [
+        0.0,
+        -0.0502105578780174,
+        6.0
+      ],
+      "room": "home",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000437714285714253,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000437714285714253,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.437714285714253,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/animal_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "npc_bear_uncle",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "bear",
+            "moving": false,
+            "rig_family": "animal",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.788437714285713,
+            "walking_allowed": true,
+            "weighted_vertices": 20854
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 1.52272004761905,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "home",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 1.52272004761905
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.841178476810455,
+          0.0,
+          -0.540757596492767
+        ],
+        "basis_y": [
+          -0.362027823925018,
+          0.742827475070953,
+          -0.563154399394989
+        ],
+        "basis_z": [
+          0.401689678430557,
+          0.66948276758194,
+          0.624850571155548
+        ],
+        "position": [
+          18.0,
+          30.6000003814697,
+          28.0
+        ],
+        "projection": 1,
+        "size": 19.7640018463135
+      },
+      "hud_visible": false,
+      "id": "home-overview",
+      "image": "F:/LoveStudy/game/../docs/verification/world-refinement/performance/05/home-overview.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "fixed_overview_camera_hud_hidden",
+      "panel": "",
+      "player_position": [
+        0.0,
+        -0.0502105578780174,
+        6.0
+      ],
+      "room": "home",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000771047619047593,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000771047619047593,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.771047619047593,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/animal_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "npc_bear_uncle",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "bear",
+            "moving": false,
+            "rig_family": "animal",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.971771047619047,
+            "walking_allowed": true,
+            "weighted_vertices": 20854
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 1.70605338095238,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "home",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 1.70605338095238
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "detail": null,
+      "id": "native_display_server",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "isolated_save",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/home-production",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/home-production",
+      "passed": true
+    },
+    {
+      "detail": {
+        "after": {
+          "basis_x": [
+            0.800000011920929,
+            0.0,
+            -0.599999964237213
+          ],
+          "basis_y": [
+            -0.37952071428299,
+            0.7745321393013,
+            -0.506027638912201
+          ],
+          "basis_z": [
+            0.464719265699387,
+            0.632534563541412,
+            0.619625747203827
+          ],
+          "position": [
+            18.0,
+            24.9497890472412,
+            24.7199993133545
+          ],
+          "projection": 1,
+          "size": 18.0
+        },
+        "before": {
+          "basis_x": [
+            0.800000011920929,
+            0.0,
+            -0.599999964237213
+          ],
+          "basis_y": [
+            -0.379520654678345,
+            0.774532020092011,
+            -0.506027519702911
+          ],
+          "basis_z": [
+            0.464719265699387,
+            0.632534563541412,
+            0.619625747203827
+          ],
+          "position": [
+            18.0,
+            24.9497890472412,
+            24.7199993133545
+          ],
+          "projection": 1.0,
+          "size": 18.0
+        }
+      },
+      "id": "same_camera_as_before/home-production",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/home-overview",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/home-overview",
+      "passed": true
+    },
+    {
+      "detail": {
+        "after": {
+          "basis_x": [
+            0.841178476810455,
+            0.0,
+            -0.540757596492767
+          ],
+          "basis_y": [
+            -0.362027823925018,
+            0.742827475070953,
+            -0.563154399394989
+          ],
+          "basis_z": [
+            0.401689678430557,
+            0.66948276758194,
+            0.624850571155548
+          ],
+          "position": [
+            18.0,
+            30.6000003814697,
+            28.0
+          ],
+          "projection": 1,
+          "size": 19.7640018463135
+        },
+        "before": {
+          "basis_x": [
+            0.841178476810455,
+            0.0,
+            -0.540757596492767
+          ],
+          "basis_y": [
+            -0.362027823925018,
+            0.742827475070953,
+            -0.563154399394989
+          ],
+          "basis_z": [
+            0.401689678430557,
+            0.66948276758194,
+            0.624850571155548
+          ],
+          "position": [
+            18.0,
+            30.6000003814697,
+            28.0
+          ],
+          "projection": 1.0,
+          "size": 19.7640018463135
+        }
+      },
+      "id": "same_camera_as_before/home-overview",
+      "passed": true
+    },
+    {
+      "detail": 300,
+      "id": "native_frames_rendered/home",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "production_files_unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "capture_sources_stable_during_run",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "id": "all_views_captured",
+      "passed": true
+    }
+  ],
+  "display_server": "Windows",
+  "engine_arguments": [
+    "--script",
+    "res://tests/capture_world_refinement.gd"
+  ],
+  "isolated_save": "user://validation-26452.json",
+  "performance_samples": [
+    {
+      "additional_warmup_seconds": 3.0,
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.379520684480667,
+          0.774532079696655,
+          -0.506027579307556
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.9497890472412,
+          24.7199993133545
+        ],
+        "projection": 1,
+        "size": 18.0
+      },
+      "draw_calls_last_frame": 839.0,
+      "engine_physics_monitor_ms": {
+        "max": 0.373,
+        "mean": 0.36698,
+        "min": 0.366,
+        "p50": 0.366,
+        "p95": 0.373
+      },
+      "engine_process_monitor_ms": {
+        "max": 3.287,
+        "mean": 3.18036000000001,
+        "min": 3.163,
+        "p50": 3.163,
+        "p95": 3.287
+      },
+      "engine_smoothed_fps": {
+        "max": 420.0,
+        "mean": 419.58,
+        "min": 417.0,
+        "p50": 420.0,
+        "p95": 420.0
+      },
+      "render_video_memory_bytes": 341318733.0,
+      "rendered_objects_last_frame": 888.0,
+      "room": "home",
+      "sample_drawn_frames": 300,
+      "sample_process_frames": 300,
+      "scope": "One local native 1440x900 sample scene, fixed sunny daytime and reduced motion at default spawn. Not a device minimum, broad gameplay benchmark, or GPU-only timing. Wall frame intervals include presentation pacing. Godot process/physics monitors update coarsely and are not OS CPU-exclusive durations; simulation delta is separate.",
+      "simulation_delta_ms": {
+        "max": 2.77777777777778,
+        "mean": 2.39406746031747,
+        "min": 1.84458730158668,
+        "p50": 2.38095238095238,
+        "p95": 2.465
+      },
+      "static_memory_bytes": 217483727.0,
+      "wall_effective_fps": 416.195556418776,
+      "wall_elapsed_seconds": 0.720815,
+      "wall_frame_ms": {
+        "max": 4.551,
+        "mean": 2.40271,
+        "min": 2.188,
+        "p50": 2.328,
+        "p95": 2.871
+      },
+      "warmup_physics_frames": 60,
+      "window_focused": true,
+      "window_mode": 0
+    }
+  ],
+  "production_after": {
+    "island-save-v1.json": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "island-save-v1.json.bak": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "welcome-photo-44948-21463.png": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+    "welcome-photo-7100-20320.png": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585"
+  },
+  "production_before": {
+    "island-save-v1.json": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "island-save-v1.json.bak": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "welcome-photo-44948-21463.png": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+    "welcome-photo-7100-20320.png": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585"
+  },
+  "renderer": "gl_compatibility",
+  "result": "PASS",
+  "rooms": [
+    "home"
+  ],
+  "scope": "Native 1440x900 production and fixed overview cameras. Direct room entry proves visual loading only; independent physical-route tests cover gameplay.",
+  "source_sha256": {
+    "res://assets/interiors/home.glb": "6e902df0525ab40eff397b0866bd5d4b707697f8b9315d088d5393af5d98e13b",
+    "res://assets/interiors/home_estate.glb": "c0fb8452aca795da35a03e8e46668848db7c33ef0424dfa89146b0c854ea6195",
+    "res://project.godot": "a3c79c67946924c96acb1750aabfd29b383a3774f4976908f883e26f3bb38f72",
+    "res://scripts/home_visual_refinement.gd": "f5a65a70869c9c5a1c8b0ab3792b446c0b541cde1a48092655729f68def85180",
+    "res://scripts/living_world.gd": "aa21662d4fea5dff9105e4003b572f09e631b197119c85f0a5458f611aa8deab",
+    "res://scripts/world_art.gd": "b377d66dc743476bd8156105dcf7b7dec9c41fcf2ecb88d61c57e07a9761bbeb",
+    "res://scripts/world_builder.gd": "87a30f804faaf8e20a249d3f5e66827ea4a60443794a54933ab1b1f26d9c0f58"
+  },
+  "stage": "after"
+}

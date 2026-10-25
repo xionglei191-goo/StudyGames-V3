@@ -1,0 +1,1419 @@
+{
+  "captures": [
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.37952071428299,
+          0.7745321393013,
+          -0.506027638912201
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.9497890472412,
+          24.7199993133545
+        ],
+        "projection": 1,
+        "size": 18.0
+      },
+      "hud_visible": true,
+      "id": "home-production",
+      "image": "F:/LoveStudy/game/../docs/verification/home-display-layout/home-production.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "production_camera",
+      "panel": "",
+      "player_position": [
+        0.0,
+        -0.0502105578780174,
+        6.0
+      ],
+      "room": "home",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000333333333333291,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000333333333333291,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.333333333333291,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/animal_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "npc_bear_uncle",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "bear",
+            "moving": false,
+            "rig_family": "animal",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.633333333333334,
+            "walking_allowed": true,
+            "weighted_vertices": 20854
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 1.06666666666667,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "home",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 1.06666666666667
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.600000023841858
+        ],
+        "basis_y": [
+          -0.384110629558563,
+          0.768221199512482,
+          -0.512147486209869
+        ],
+        "basis_z": [
+          0.46093276143074,
+          0.64018440246582,
+          0.614576995372772
+        ],
+        "position": [
+          18.0,
+          25.5,
+          24.0
+        ],
+        "projection": 1,
+        "size": 25.0
+      },
+      "hud_visible": false,
+      "id": "home-overview",
+      "image": "F:/LoveStudy/game/../docs/verification/home-display-layout/home-overview.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "explicit_fixed_review_camera_overview_hud_hidden",
+      "panel": "",
+      "player_position": [
+        0.0,
+        -0.0502105578780174,
+        6.0
+      ],
+      "room": "home",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000333333333333284,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000333333333333284,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.333333333333284,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/animal_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "npc_bear_uncle",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "bear",
+            "moving": false,
+            "rig_family": "animal",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.733333333333334,
+            "walking_allowed": true,
+            "weighted_vertices": 20854
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 1.16666666666667,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "home",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 1.16666666666667
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.845488905906677,
+          0.0,
+          -0.533993005752563
+        ],
+        "basis_y": [
+          -0.322161912918091,
+          0.797508597373962,
+          -0.510089695453644
+        ],
+        "basis_z": [
+          0.425864070653915,
+          0.6033074259758,
+          0.674284756183624
+        ],
+        "position": [
+          12.0,
+          17.7999992370605,
+          19.2999992370605
+        ],
+        "projection": 1,
+        "size": 11.0
+      },
+      "hud_visible": false,
+      "id": "home-detail",
+      "image": "F:/LoveStudy/game/../docs/verification/home-display-layout/home-detail.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "explicit_fixed_review_camera_detail_hud_hidden",
+      "panel": "",
+      "player_position": [
+        0.0,
+        -0.0502105578780174,
+        6.0
+      ],
+      "room": "home",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000333333333333277,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000333333333333277,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.333333333333277,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/animal_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "npc_bear_uncle",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "bear",
+            "moving": false,
+            "rig_family": "animal",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.833333333333334,
+            "walking_allowed": true,
+            "weighted_vertices": 20854
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 1.26666666666667,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "home",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 1.26666666666667
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.379520684480667,
+          0.774532079696655,
+          -0.506027579307556
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          17.5153484344482,
+          24.9508304595947,
+          24.2353496551514
+        ],
+        "projection": 1,
+        "size": 18.0
+      },
+      "hud_visible": true,
+      "id": "approach-1-memory_02",
+      "image": "F:/LoveStudy/game/../docs/verification/home-display-layout/approach-1-memory_02.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "actual_follow_camera_after_walking",
+      "panel": "",
+      "player_position": [
+        -4.03875923156738,
+        -0.049169234931469,
+        1.96124088764191
+      ],
+      "room": "home",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000666666666666521,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000666666666666521,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.666666666666521,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/animal_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "npc_bear_uncle",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "bear",
+            "moving": false,
+            "rig_family": "animal",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 2.11666666666666,
+            "walking_allowed": true,
+            "weighted_vertices": 20854
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 2.55,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "home",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 2.55
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.379520684480667,
+          0.774532079696655,
+          -0.506027579307556
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          17.730001449585,
+          24.9508037567139,
+          23.6117267608643
+        ],
+        "projection": 1,
+        "size": 18.0
+      },
+      "hud_visible": true,
+      "id": "approach-2-journey_discoveries",
+      "image": "F:/LoveStudy/game/../docs/verification/home-display-layout/approach-2-journey_discoveries.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "actual_follow_camera_after_walking",
+      "panel": "",
+      "player_position": [
+        -2.2499828338623,
+        -0.0491962060332298,
+        -3.23560786247253
+      ],
+      "room": "home",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000999999999999748,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000999999999999748,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.999999999999748,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/animal_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "npc_bear_uncle",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "bear",
+            "moving": false,
+            "rig_family": "animal",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 3.64999999999999,
+            "walking_allowed": true,
+            "weighted_vertices": 20854
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 4.13333333333332,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "home",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 4.08333333333332
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.379520684480667,
+          0.774532079696655,
+          -0.506027579307556
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          17.730001449585,
+          24.9508037567139,
+          23.6117267608643
+        ],
+        "projection": 1,
+        "size": 11.0
+      },
+      "hud_visible": true,
+      "id": "display-close",
+      "image": "F:/LoveStudy/game/../docs/verification/home-display-layout/display-close.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "zoomed_follow_camera_at_display",
+      "panel": "",
+      "player_position": [
+        -2.2499828338623,
+        -0.0491962060332298,
+        -3.23560786247253
+      ],
+      "room": "home",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000999999999999741,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000999999999999741,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.999999999999741,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/animal_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "npc_bear_uncle",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "bear",
+            "moving": false,
+            "rig_family": "animal",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 3.74999999999999,
+            "walking_allowed": true,
+            "weighted_vertices": 20854
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 4.23333333333332,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "home",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 4.18333333333332
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.379520684480667,
+          0.774532079696655,
+          -0.506027579307556
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          17.5989513397217,
+          24.9508934020996,
+          24.0590038299561
+        ],
+        "projection": 1,
+        "size": 18.0
+      },
+      "hud_visible": true,
+      "id": "approach-3-memory_02",
+      "image": "F:/LoveStudy/game/../docs/verification/home-display-layout/approach-3-memory_02.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "actual_follow_camera_after_walking",
+      "panel": "",
+      "player_position": [
+        -3.34207272529602,
+        -0.0491067655384541,
+        0.491704493761063
+      ],
+      "room": "home",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000333333333333003,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000333333333333003,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.333333333333003,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/animal_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "npc_bear_uncle",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "bear",
+            "moving": false,
+            "rig_family": "animal",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 4.78333333333332,
+            "walking_allowed": true,
+            "weighted_vertices": 20854
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 5.31666666666665,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "home",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 5.21666666666665
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "detail": null,
+      "id": "isolated_save",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "living_room_ready",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "layout_nodes/default",
+      "passed": true
+    },
+    {
+      "detail": {
+        "display": "[P: (806.8798, 120.0132), S: (80.64008, 80.08051)]",
+        "wardrobe": "[P: (495.0999, 169.273), S: (151.0, 198.3318)]"
+      },
+      "id": "display_does_not_cover_wardrobe/default",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/default/Shop_Title_Beam",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/default/Shop_Title_Beam",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/default/SG_COLLIDER_Home_Pantry",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/default/SG_COLLIDER_Home_Pantry",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/default/Home_Window_Left_Frame",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/default/Home_Window_Left_Frame",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_inside_view/default",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/home-production",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/home-production",
+      "passed": true
+    },
+    {
+      "detail": {
+        "after": {
+          "basis_x": [
+            0.800000011920929,
+            0.0,
+            -0.599999964237213
+          ],
+          "basis_y": [
+            -0.37952071428299,
+            0.7745321393013,
+            -0.506027638912201
+          ],
+          "basis_z": [
+            0.464719265699387,
+            0.632534563541412,
+            0.619625747203827
+          ],
+          "position": [
+            18.0,
+            24.9497890472412,
+            24.7199993133545
+          ],
+          "projection": 1,
+          "size": 18.0
+        },
+        "before": {
+          "basis_x": [
+            0.800000011920929,
+            0.0,
+            -0.599999964237213
+          ],
+          "basis_y": [
+            -0.379520684480667,
+            0.774532079696655,
+            -0.506027579307556
+          ],
+          "basis_z": [
+            0.464719265699387,
+            0.632534563541412,
+            0.619625747203827
+          ],
+          "position": [
+            18.0,
+            24.9497985839844,
+            24.7199993133545
+          ],
+          "projection": 1.0,
+          "size": 18.0
+        }
+      },
+      "id": "same_camera_as_before/home-production",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/home-overview",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/home-overview",
+      "passed": true
+    },
+    {
+      "detail": {
+        "after": {
+          "basis_x": [
+            0.800000011920929,
+            0.0,
+            -0.600000023841858
+          ],
+          "basis_y": [
+            -0.384110629558563,
+            0.768221199512482,
+            -0.512147486209869
+          ],
+          "basis_z": [
+            0.46093276143074,
+            0.64018440246582,
+            0.614576995372772
+          ],
+          "position": [
+            18.0,
+            25.5,
+            24.0
+          ],
+          "projection": 1,
+          "size": 25.0
+        },
+        "before": {
+          "basis_x": [
+            0.800000011920929,
+            0.0,
+            -0.600000023841858
+          ],
+          "basis_y": [
+            -0.384110629558563,
+            0.768221199512482,
+            -0.512147486209869
+          ],
+          "basis_z": [
+            0.46093276143074,
+            0.64018440246582,
+            0.614576995372772
+          ],
+          "position": [
+            18.0,
+            25.5,
+            24.0
+          ],
+          "projection": 1.0,
+          "size": 25.0
+        }
+      },
+      "id": "same_camera_as_before/home-overview",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/home-detail",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/home-detail",
+      "passed": true
+    },
+    {
+      "detail": {
+        "after": {
+          "basis_x": [
+            0.845488905906677,
+            0.0,
+            -0.533993005752563
+          ],
+          "basis_y": [
+            -0.322161912918091,
+            0.797508597373962,
+            -0.510089695453644
+          ],
+          "basis_z": [
+            0.425864070653915,
+            0.6033074259758,
+            0.674284756183624
+          ],
+          "position": [
+            12.0,
+            17.7999992370605,
+            19.2999992370605
+          ],
+          "projection": 1,
+          "size": 11.0
+        },
+        "before": {
+          "basis_x": [
+            0.845488905906677,
+            0.0,
+            -0.533993005752563
+          ],
+          "basis_y": [
+            -0.322161912918091,
+            0.797508597373962,
+            -0.510089695453644
+          ],
+          "basis_z": [
+            0.425864070653915,
+            0.6033074259758,
+            0.674284756183624
+          ],
+          "position": [
+            12.0,
+            17.7999992370605,
+            19.2999992370605
+          ],
+          "projection": 1.0,
+          "size": 11.0
+        }
+      },
+      "id": "same_camera_as_before/home-detail",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "layout_nodes/zoom",
+      "passed": true
+    },
+    {
+      "detail": {
+        "display": "[P: (862.167, -89.97845), S: (131.9565, 131.0408)]",
+        "wardrobe": "[P: (351.9818, -9.371424), S: (247.0908, 324.5431)]"
+      },
+      "id": "display_does_not_cover_wardrobe/zoom",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/zoom/Shop_Title_Beam",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/zoom/Shop_Title_Beam",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/zoom/SG_COLLIDER_Home_Pantry",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/zoom/SG_COLLIDER_Home_Pantry",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/zoom/Home_Window_Left_Frame",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/zoom/Home_Window_Left_Frame",
+      "passed": true
+    },
+    {
+      "detail": {
+        "nearest": "memory_02",
+        "position": [
+          -4.03875923156738,
+          -0.049169234931469,
+          1.96124088764191
+        ]
+      },
+      "id": "walk_and_select/memory_02",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/approach-1-memory_02",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/approach-1-memory_02",
+      "passed": true
+    },
+    {
+      "detail": "memory",
+      "id": "correct_panel/memory_02",
+      "passed": true
+    },
+    {
+      "detail": {
+        "nearest": "journey_discoveries",
+        "position": [
+          -2.2499828338623,
+          -0.0491962060332298,
+          -3.23560786247253
+        ]
+      },
+      "id": "walk_and_select/journey_discoveries",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/approach-2-journey_discoveries",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/approach-2-journey_discoveries",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "layout_nodes/approach",
+      "passed": true
+    },
+    {
+      "detail": {
+        "display": "[P: (784.4316, 153.2171), S: (80.63995, 80.08041)]",
+        "wardrobe": "[P: (472.6517, 202.4768), S: (151.0, 198.3318)]"
+      },
+      "id": "display_does_not_cover_wardrobe/approach",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/approach/Shop_Title_Beam",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/approach/Shop_Title_Beam",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/approach/SG_COLLIDER_Home_Pantry",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/approach/SG_COLLIDER_Home_Pantry",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/approach/Home_Window_Left_Frame",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/approach/Home_Window_Left_Frame",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_inside_view/approach",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "layout_nodes/approach_zoom",
+      "passed": true
+    },
+    {
+      "detail": {
+        "display": "[P: (825.4337, -35.64473), S: (131.9562, 131.0407)]",
+        "wardrobe": "[P: (315.2483, 44.96209), S: (247.0909, 324.543)]"
+      },
+      "id": "display_does_not_cover_wardrobe/approach_zoom",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/approach_zoom/Shop_Title_Beam",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/approach_zoom/Shop_Title_Beam",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/approach_zoom/SG_COLLIDER_Home_Pantry",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/approach_zoom/SG_COLLIDER_Home_Pantry",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "furniture_bounds_found/approach_zoom/Home_Window_Left_Frame",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "display_clear_of/approach_zoom/Home_Window_Left_Frame",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/display-close",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/display-close",
+      "passed": true
+    },
+    {
+      "detail": "discovery",
+      "id": "correct_panel/journey_discoveries",
+      "passed": true
+    },
+    {
+      "detail": {
+        "nearest": "memory_02",
+        "position": [
+          -3.34207272529602,
+          -0.0491067655384541,
+          0.491704493761063
+        ]
+      },
+      "id": "walk_and_select/memory_02",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/approach-3-memory_02",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/approach-3-memory_02",
+      "passed": true
+    },
+    {
+      "detail": "memory",
+      "id": "correct_panel/memory_02",
+      "passed": true
+    },
+    {
+      "detail": {
+        "nearest": "home_exit",
+        "position": [
+          0.0103318598121405,
+          -0.050361342728138,
+          4.93080997467041
+        ]
+      },
+      "id": "walk_and_select/home_exit",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "formal_saves_unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "production_sources_unchanged_during_check",
+      "passed": true
+    }
+  ],
+  "formal_after": {
+    "island-save-v1.json": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "island-save-v1.json.bak": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "welcome-photo-44948-21463.png": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+    "welcome-photo-7100-20320.png": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585"
+  },
+  "formal_before": {
+    "island-save-v1.json": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "island-save-v1.json.bak": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "welcome-photo-44948-21463.png": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+    "welcome-photo-7100-20320.png": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585"
+  },
+  "passed": true,
+  "paths": [
+    {
+      "end": [
+        -4.03875923156738,
+        -0.049169234931469,
+        1.96124088764191
+      ],
+      "id": "memory_02",
+      "passed": true,
+      "start": [
+        0.0,
+        -0.0502105578780174,
+        6.0
+      ]
+    },
+    {
+      "end": [
+        -2.2499828338623,
+        -0.0491962060332298,
+        -3.23560786247253
+      ],
+      "id": "journey_discoveries",
+      "passed": true,
+      "start": [
+        -4.03875923156738,
+        -0.049169234931469,
+        1.96124088764191
+      ]
+    },
+    {
+      "end": [
+        -3.34207272529602,
+        -0.0491067655384541,
+        0.491704493761063
+      ],
+      "id": "memory_02",
+      "passed": true,
+      "start": [
+        -2.2499828338623,
+        -0.0491962060332298,
+        -3.23560786247253
+      ]
+    },
+    {
+      "end": [
+        0.0103318598121405,
+        -0.050361342728138,
+        4.93080997467041
+      ],
+      "id": "home_exit",
+      "passed": true,
+      "start": [
+        -3.34207272529602,
+        -0.0491067655384541,
+        0.491704493761063
+      ]
+    }
+  ],
+  "scope": "Native projection bounds, same-camera images and real CharacterBody walk-up/E-key interactions for the living-room wardrobe and discovery display only.",
+  "source_sha256": {
+    "res://assets/interiors/home.glb": "e0bdab99ed67b0745fc34e40bf4121d53416bccb21a70354604a3da2a3ecf25d",
+    "res://assets/interiors/home_estate.glb": "c0fb8452aca795da35a03e8e46668848db7c33ef0424dfa89146b0c854ea6195",
+    "res://project.godot": "a3c79c67946924c96acb1750aabfd29b383a3774f4976908f883e26f3bb38f72",
+    "res://scripts/discovery_controller.gd": "05d3467a7f757ff8b89f6a56e305c0be9fbf6d53aba9b97fd64049bc2af85383",
+    "res://scripts/home_visual_refinement.gd": "daf698b952473129cf5aac34e465d9046e46718348ae09a523d1d0478e6aeb9c",
+    "res://scripts/journey_controller.gd": "529cbae838402bb17d97cea51085c6b6c1a2f3ef21faa8083f8e4b7954b10f8d",
+    "res://scripts/living_world.gd": "aa21662d4fea5dff9105e4003b572f09e631b197119c85f0a5458f611aa8deab",
+    "res://scripts/world_art.gd": "b377d66dc743476bd8156105dcf7b7dec9c41fcf2ecb88d61c57e07a9761bbeb",
+    "res://scripts/world_builder.gd": "87a30f804faaf8e20a249d3f5e66827ea4a60443794a54933ab1b1f26d9c0f58"
+  }
+}

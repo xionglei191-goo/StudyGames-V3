@@ -1,0 +1,162 @@
+{
+  "room_id": "music_room",
+  "name": "音乐教室",
+  "blend": "assets/blender/interiors/music_room/music_room_v02.blend",
+  "glb": "assets/blender/interiors/music_room/music_room_v02.glb",
+  "preview": "assets/blender/interiors/music_room/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.9,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.9
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回完整校园",
+      "position_blender": [
+        0.0,
+        -6.95,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.95
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "音乐教室老师",
+      "position_blender": [
+        -1.25,
+        -2.1,
+        0.0
+      ],
+      "position_godot": [
+        -1.25,
+        0.0,
+        2.1
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口乐谱柜",
+      "position_blender": [
+        -6.35,
+        -4.4,
+        0.0
+      ],
+      "position_godot": [
+        -6.35,
+        0.0,
+        4.4
+      ],
+      "associated_prop": "Music_ScoreCabinet_Back",
+      "memory_id": "memory_MUSIC_ROOM_01",
+      "activity": "翻看示例乐谱并认识乐器图标"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "钢琴",
+      "position_blender": [
+        -5.0,
+        -0.1,
+        0.0
+      ],
+      "position_godot": [
+        -5.0,
+        0.0,
+        0.1
+      ],
+      "associated_prop": "Music_Piano_CurvedCase",
+      "memory_id": "memory_MUSIC_ROOM_02",
+      "activity": "观察琴键与钢琴外形"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "节奏鼓",
+      "position_blender": [
+        2.0,
+        -1.25,
+        0.0
+      ],
+      "position_godot": [
+        2.0,
+        0.0,
+        1.25
+      ],
+      "associated_prop": "Music_Rhythm_Drum_01_Shell",
+      "memory_id": "memory_MUSIC_ROOM_03",
+      "activity": "看鼓面和节奏图案"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "弦乐器架",
+      "position_blender": [
+        6.0,
+        -5.0,
+        0.0
+      ],
+      "position_godot": [
+        6.0,
+        0.0,
+        5.0
+      ],
+      "associated_prop": "Music_StringRack_Platform",
+      "memory_id": "memory_MUSIC_ROOM_04",
+      "activity": "比较弦乐器的形状"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "小舞台",
+      "position_blender": [
+        0.0,
+        4.1,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -4.1
+      ],
+      "associated_prop": "Music_Stage_Platform",
+      "memory_id": "memory_MUSIC_ROOM_05",
+      "activity": "在舞台前回顾见到的乐器"
+    }
+  ],
+  "bounds": [
+    -9.0,
+    -8.0,
+    18.0,
+    16.0
+  ],
+  "triangles": 180876,
+  "glb_sha256": "b0c4166ec249338ad77aa2bcafc466dfe91006251c4dabca992ff714e5ae6301",
+  "scene_level": 3,
+  "parent_room": "school",
+  "model_version": "v01",
+  "dimensions_m": [
+    18,
+    16
+  ],
+  "specialist_room": true,
+  "refinement_revision": "world-refinement-v1"
+}

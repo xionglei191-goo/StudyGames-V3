@@ -150,8 +150,13 @@ func _run() -> void:
 	var jim: Node3D = living.get_actor("jim")
 	var jim_before := jim.global_position
 	check(not jim.move_to(jim_before + Vector3.RIGHT) and not jim.set_path(PackedVector3Array([jim_before + Vector3.RIGHT])),"Jim cannot enter humanoid locomotion")
-	var wheelchair := jim.skeleton.get_node_or_null("Accessories") as MeshInstance3D
-	check(jim.play_action("wave") and wheelchair!=null and wheelchair.mesh!=null and wheelchair.get_aabb().size.x>0.7 and wheelchair.skin!=null,"Jim has authored wheelchair mesh and seated interaction")
+	# The active Tripo set exports a dedicated Wheelchair group, not the retired
+	# storybook Accessories mesh. Check real mesh bounds rather than custom culling bounds.
+	var wheelchair := jim.skeleton.get_node_or_null("Wheelchair") as MeshInstance3D
+	var wheelchair_bound := wheelchair != null and wheelchair.mesh != null and wheelchair.skin != null
+	if wheelchair_bound:
+		wheelchair_bound = wheelchair.mesh.get_aabb().size.x > 0.7 and wheelchair.skin.get_bind_count() > 0 and wheelchair.get_node_or_null(wheelchair.skeleton) == jim.skeleton
+	check(jim.play_action("wave") and wheelchair_bound,"Jim has authored wheelchair mesh and seated interaction")
 	for index in range(15):
 		jim.advance_visual(0.1)
 	check(jim.global_position == jim_before,"Jim remains seated at original support")

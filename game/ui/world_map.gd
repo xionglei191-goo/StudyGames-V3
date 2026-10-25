@@ -71,7 +71,7 @@ func _short_label(entry: Dictionary) -> String:
 		return str(int(id.trim_prefix("memory_")))
 	if id == "home_gate" and str(entry.get("destination", "")) == "home":
 		return "客厅"
-	var home_names := {"house_entry":"正门", "home_exit":"小院", "home_bedroom_gate":"卧室", "home_kitchen_gate":"厨房", "home_dining_gate":"餐厅", "home_bathroom_gate":"浴室", "home_study_gate":"书房", "home_balcony_gate":"阳台"}
+	var home_names := {"house_entry":"正门", "courtyard_exit":"小院", "home_exit":"走廊", "home_bedroom_gate":"卧室", "home_kitchen_gate":"厨房", "home_dining_gate":"餐厅", "home_bathroom_gate":"浴室", "home_study_gate":"书房", "home_balcony_gate":"阳台"}
 	if home_names.has(id): return str(home_names[id])
 	var names := {"school_gate":"学校", "home_gate":"家", "baker":"熊叔", "orchard":"果园", "gardener":"兔兔", "village_exit":"出口", "school_exit":"出口", "classroom_gate":"教室", "music_room_gate":"音乐", "art_room_gate":"美术", "science_room_gate":"科学", "canteen_gate":"餐厅", "playground_gate":"操场", "football_field_gate":"球场", "host":"邻居", "teacher":"老师", "decorate":"布置", "bed":"休息"}
 	return str(names.get(id, str(entry.label).left(3)))

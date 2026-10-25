@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_U",
+  "name": "雨伞气象屋",
+  "blend": "assets/blender/interiors/landmark_U/landmark_U_v02.blend",
+  "glb": "assets/blender/interiors/landmark_U/landmark_U_v02.glb",
+  "preview": "assets/blender/interiors/landmark_U/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口天气轮盘",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Weather_Wheel_Face",
+      "memory_id": "memory_U_01",
+      "activity": "说今日天气"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧衣帽架",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Rain_Gear_Back",
+      "memory_id": "memory_U_02",
+      "activity": "选合适衣物"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央雨量观察柱",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Weather_Lab_Leg",
+      "memory_id": "memory_U_03",
+      "activity": "看雨量和风带"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧活动计划桌",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Log_Leg",
+      "memory_id": "memory_U_04",
+      "activity": "选天气合适的活动"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口天气播报窗",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Weather_Window_Frame",
+      "memory_id": "memory_U_05",
+      "activity": "向邻居播报"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.65,
+    -7.65,
+    17.3,
+    15.3
+  ],
+  "triangles": 173624,
+  "glb_sha256": "7a5821e39e8703a603e05db21bbb793c2608c1a1f743c631877820ca8045ba2f",
+  "refinement_revision": "world-refinement-v1"
+}

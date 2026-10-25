@@ -14,7 +14,7 @@ TARGET = ROOT / "game/assets/interiors"
 MANIFEST = ROOT / "game/data/interiors_manifest.json"
 EXPECTED = {f"landmark_{chr(65+i)}" for i in range(26)} | {
     "school", "classroom", "music_room", "art_room", "science_room", "canteen", "playground", "football_field", "home",
-    "home_estate", "home_bedroom", "home_kitchen", "home_dining", "home_bathroom", "home_study", "home_balcony"
+    "home_estate", "home_hall", "home_bedroom", "home_kitchen", "home_dining", "home_bathroom", "home_study", "home_balcony"
 }
 REQUIRED = {"SG_SPAWN", "SG_EXIT", "SG_NPC_HOST"} | {
     f"SG_MEMORY_{i:02}" for i in range(1, 6)
@@ -53,6 +53,8 @@ def inspect_glb(path: Path, room_id: str) -> dict:
     if room_id == "home_estate":
         required.add("SG_HOUSE_ENTRY")
         required |= {"SG_DOOR_" + name.upper() for name in ("home", "home_bedroom", "home_kitchen", "home_dining", "home_bathroom", "home_study", "home_balcony")}
+    if room_id == "home_hall":
+        required = {"SG_SPAWN", "SG_EXIT"} | {"SG_DOOR_" + name.upper() for name in ("home", "home_bedroom", "home_kitchen", "home_dining", "home_bathroom", "home_study", "home_balcony")}
     if room_id == "home_bedroom":
         required |= {"SG_BED", "SG_WARDROBE"}
     missing = required - set(names)

@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_J",
+  "name": "玻璃罐收藏馆",
+  "blend": "assets/blender/interiors/landmark_J/landmark_J_v02.blend",
+  "glb": "assets/blender/interiors/landmark_J/landmark_J_v02.glb",
+  "preview": "assets/blender/interiors/landmark_J/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口寄存盘",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Deposit_Leg",
+      "memory_id": "memory_J_01",
+      "activity": "放下新收藏"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧分类格",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Jars_Back",
+      "memory_id": "memory_J_02",
+      "activity": "按材质分类"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央分拣转台",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Turntable_Foot",
+      "memory_id": "memory_J_03",
+      "activity": "比较并分组"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧清洁贴签台",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Clean_Label_Basin",
+      "memory_id": "memory_J_04",
+      "activity": "擦净物品并标主人"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口收藏展柜",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Display_Cabinet",
+      "memory_id": "memory_J_05",
+      "activity": "介绍一件收藏"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.65,
+    -7.65,
+    17.3,
+    15.3
+  ],
+  "triangles": 131824,
+  "glb_sha256": "c50de281a8ea03c2158ff1974846f03533b072c004fa7f85bfe8d0f7cd3e88e7",
+  "refinement_revision": "world-refinement-v1"
+}

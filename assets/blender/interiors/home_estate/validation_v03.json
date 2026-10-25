@@ -1,0 +1,2252 @@
+{
+  "room_id": "home_estate",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "门前信箱",
+      "position_blender": [
+        -10.0,
+        -10.2,
+        0.0
+      ],
+      "position_godot": [
+        -10.0,
+        0.0,
+        10.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_estate_01",
+      "activity": "读一张邀请卡，想想怎样欢迎来访的朋友。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "小院花圃",
+      "position_blender": [
+        8.0,
+        -10.2,
+        0.0
+      ],
+      "position_godot": [
+        8.0,
+        0.0,
+        10.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_estate_02",
+      "activity": "拿起水壶，为花圃浇水，再把水壶放回去。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "门廊随身篮",
+      "position_blender": [
+        -6.3,
+        -9.2,
+        0.0
+      ],
+      "position_godot": [
+        -6.3,
+        0.0,
+        9.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_estate_03",
+      "activity": "外出前整理随身物品，准备与家人一起散步。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "家庭日程板",
+      "position_blender": [
+        2.0,
+        -10.2,
+        0.0
+      ],
+      "position_godot": [
+        2.0,
+        0.0,
+        10.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_estate_04",
+      "activity": "看看日程板，选择今天先去哪个房间。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "门廊小树",
+      "position_blender": [
+        11.5,
+        -10.3,
+        0.0
+      ],
+      "position_godot": [
+        11.5,
+        0.0,
+        10.3
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_estate_05",
+      "activity": "观察小树怎样给门廊遮阴，照顾它慢慢长大。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -13.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        13.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回字母岛",
+      "position_blender": [
+        0.0,
+        -14.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        14.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人停留位置",
+      "position_blender": [
+        -2.0,
+        -10.0,
+        0.0
+      ],
+      "position_godot": [
+        -2.0,
+        0.0,
+        10.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_HOUSE_ENTRY",
+      "label": "正门 · 走进家里",
+      "position_blender": [
+        -3.5,
+        -8.7,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        8.7
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_West_House",
+      "aabb_blender": [
+        -14.0,
+        -6.099999904632568,
+        0.0,
+        -6.399999618530273,
+        9.600000381469727,
+        5.599999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Main_House",
+      "aabb_blender": [
+        -6.400000095367432,
+        -7.700000286102295,
+        0.0,
+        2.4000000953674316,
+        9.90000057220459,
+        5.599999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_East_House",
+      "aabb_blender": [
+        2.3999996185302734,
+        -5.599999904632568,
+        0.0,
+        14.0,
+        9.600000381469727,
+        5.599999904632568
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Porch_Post",
+      "aabb_blender": [
+        -5.894999980926514,
+        -8.52500057220459,
+        0.0,
+        -5.544999599456787,
+        -8.175000190734863,
+        2.799999952316284
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Porch_Post.001",
+      "aabb_blender": [
+        -1.4549999237060547,
+        -8.52500057220459,
+        0.0,
+        -1.1050000190734863,
+        -8.175000190734863,
+        2.799999952316284
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Side_Boundary_-1",
+      "aabb_blender": [
+        -16.440000534057617,
+        -15.600000381469727,
+        0.0,
+        -15.960000991821289,
+        15.600000381469727,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Side_Boundary_1",
+      "aabb_blender": [
+        15.960000991821289,
+        -15.600000381469727,
+        0.0,
+        16.440000534057617,
+        15.600000381469727,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Back_Boundary",
+      "aabb_blender": [
+        -16.399999618530273,
+        15.0600004196167,
+        0.0,
+        16.399999618530273,
+        15.539999961853027,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Front_Left",
+      "aabb_blender": [
+        -16.200000762939453,
+        -15.489999771118164,
+        0.0,
+        -2.2200002670288086,
+        -15.010000228881836,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Front_Right",
+      "aabb_blender": [
+        2.2200002670288086,
+        -15.489999771118164,
+        0.0,
+        16.200000762939453,
+        -15.010000228881836,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Gate_Pier_-1",
+      "aabb_blender": [
+        -2.200000047683716,
+        -15.600000381469727,
+        0.0,
+        -1.5,
+        -14.899999618530273,
+        1.7999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Open_Gate_-1",
+      "aabb_blender": [
+        -1.9200000762939453,
+        -15.0,
+        0.0,
+        -1.7799999713897705,
+        -13.600000381469727,
+        1.399999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Gate_Pier_1",
+      "aabb_blender": [
+        1.5,
+        -15.600000381469727,
+        0.0,
+        2.200000047683716,
+        -14.899999618530273,
+        1.7999999523162842
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Garden_Open_Gate_1",
+      "aabb_blender": [
+        1.7799999713897705,
+        -15.0,
+        0.0,
+        1.9200000762939453,
+        -13.600000381469727,
+        1.399999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Mailbox",
+      "aabb_blender": [
+        -12.140000343322754,
+        -12.260000228881836,
+        0.0,
+        -10.960000038146973,
+        -11.440000534057617,
+        1.899999976158142
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Welcome_Letter_Table",
+      "aabb_blender": [
+        -10.899999618530273,
+        -12.144999504089355,
+        -0.0599999725818634,
+        -9.100000381469727,
+        -11.3149995803833,
+        0.9700000286102295
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Family_Day_Board",
+      "aabb_blender": [
+        0.565000057220459,
+        -12.03499984741211,
+        0.0,
+        3.434999942779541,
+        -11.604999542236328,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Flower_Bed",
+      "aabb_blender": [
+        6.999999523162842,
+        -12.5,
+        0.0,
+        10.299999237060547,
+        -11.200000762939453,
+        0.8999999761581421
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Watering_Can_Stand",
+      "aabb_blender": [
+        6.139999866485596,
+        -12.15000057220459,
+        -0.06000000238418579,
+        6.860000133514404,
+        -11.449999809265137,
+        0.7699999809265137
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Porch_Rest_Bench",
+      "aabb_blender": [
+        10.020000457763672,
+        -9.210000038146973,
+        0.0,
+        12.979999542236328,
+        -8.390000343322754,
+        1.3600000143051147
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Porch_Tea_Table",
+      "aabb_blender": [
+        12.920000076293945,
+        -9.379999160766602,
+        0.0,
+        13.879999160766602,
+        -8.420000076293945,
+        0.800000011920929
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Tool_Crate",
+      "aabb_blender": [
+        -13.949999809265137,
+        -8.609999656677246,
+        0.0,
+        -12.84999942779541,
+        -7.889999866485596,
+        0.800000011920929
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_West_Apple_Tree_Trunk",
+      "aabb_blender": [
+        -14.312000274658203,
+        -12.41200065612793,
+        0.0,
+        -13.687999725341797,
+        -11.788000106811523,
+        2.5920000076293945
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_East_Shade_Tree_Trunk",
+      "aabb_blender": [
+        13.77500057220459,
+        -10.324999809265137,
+        0.0,
+        14.425000190734863,
+        -9.675000190734863,
+        2.700000047683716
+      ]
+    }
+  ],
+  "bounds": [
+    -17.0,
+    -16.0,
+    34.0,
+    32.0
+  ],
+  "mesh_objects": 2270,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "HOME_TASK_AFTER",
+    "HOME_TASK_BEFORE",
+    "HOME_TASK_MIDDLE",
+    "SG_COLLIDER_East_House",
+    "SG_COLLIDER_East_Shade_Tree_Trunk",
+    "SG_COLLIDER_Family_Day_Board",
+    "SG_COLLIDER_Flower_Bed",
+    "SG_COLLIDER_Garden_Back_Boundary",
+    "SG_COLLIDER_Garden_Front_Left",
+    "SG_COLLIDER_Garden_Front_Right",
+    "SG_COLLIDER_Garden_Gate_Pier_-1",
+    "SG_COLLIDER_Garden_Gate_Pier_1",
+    "SG_COLLIDER_Garden_Open_Gate_-1",
+    "SG_COLLIDER_Garden_Open_Gate_1",
+    "SG_COLLIDER_Garden_Side_Boundary_-1",
+    "SG_COLLIDER_Garden_Side_Boundary_1",
+    "SG_COLLIDER_Mailbox",
+    "SG_COLLIDER_Main_House",
+    "SG_COLLIDER_Porch_Post",
+    "SG_COLLIDER_Porch_Post.001",
+    "SG_COLLIDER_Porch_Rest_Bench",
+    "SG_COLLIDER_Porch_Tea_Table",
+    "SG_COLLIDER_Tool_Crate",
+    "SG_COLLIDER_Watering_Can_Stand",
+    "SG_COLLIDER_Welcome_Letter_Table",
+    "SG_COLLIDER_West_Apple_Tree_Trunk",
+    "SG_COLLIDER_West_House",
+    "SG_DOOR_HOME",
+    "SG_DOOR_HOME_BALCONY",
+    "SG_DOOR_HOME_BATHROOM",
+    "SG_DOOR_HOME_BEDROOM",
+    "SG_DOOR_HOME_DINING",
+    "SG_DOOR_HOME_KITCHEN",
+    "SG_DOOR_HOME_STUDY",
+    "SG_EXIT",
+    "SG_FLOOR_Main",
+    "SG_HOUSE_ENTRY",
+    "SG_MEMORY_01",
+    "SG_MEMORY_02",
+    "SG_MEMORY_03",
+    "SG_MEMORY_04",
+    "SG_MEMORY_05",
+    "SG_NPC_HOST",
+    "SG_SPAWN"
+  ],
+  "glb_bytes": 25127872,
+  "glb_node_count": 2310,
+  "triangles_instanced": 462228,
+  "embedded_images": 14,
+  "missing_nodes": [],
+  "sha256": "c0fb8452aca795da35a03e8e46668848db7c33ef0424dfa89146b0c854ea6195",
+  "source_blend": "assets/blender/interiors/home_estate/home_estate_v03.blend",
+  "source_v02_sha256": "d705cf7f7680562b616fd8475ab0cddb164f704652242727a5d50c86e1776010",
+  "source_v02_preserved": true,
+  "protected_nodes_unchanged": true,
+  "protected_node_count": 44,
+  "protected_snapshot": {
+    "SG_FLOOR_Main": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -0.23,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {},
+      "geometry_sha256": "788cf76477f417b9f9b36a6850a090bc1016b483421f6dc54b6262330df20c91"
+    },
+    "SG_COLLIDER_West_House": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -10.1999998,
+        0.0,
+        1.0,
+        0.0,
+        1.75,
+        0.0,
+        0.0,
+        1.0,
+        2.8,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "894bb9929a9e03bc6ce1bddd13a04a220f0e6c921ec9a43ae1d19c67bdd1f4a5"
+    },
+    "SG_COLLIDER_Main_House": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -2.0,
+        0.0,
+        1.0,
+        0.0,
+        1.1,
+        0.0,
+        0.0,
+        1.0,
+        2.8,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "e5f8df29d4cfcd09e722e8f923d07dc9c8482277377c6e006f17756983a3be7a"
+    },
+    "SG_COLLIDER_East_House": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        8.1999998,
+        0.0,
+        1.0,
+        0.0,
+        2.0,
+        0.0,
+        0.0,
+        1.0,
+        2.8,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "96e2814f8b0115fb0e87a7c72146b01fcb96aec6664f7db66fa78dbfdb83570d"
+    },
+    "SG_COLLIDER_Porch_Post": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -5.7199998,
+        0.0,
+        1.0,
+        0.0,
+        -8.3500004,
+        0.0,
+        0.0,
+        1.0,
+        1.4,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "e43aa6e955811605dc3361b60fb23edbf9599fdb869665766f7a8a3a773336a8"
+    },
+    "SG_COLLIDER_Porch_Post.001": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -1.28,
+        0.0,
+        1.0,
+        0.0,
+        -8.3500004,
+        0.0,
+        0.0,
+        1.0,
+        1.4,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "e43aa6e955811605dc3361b60fb23edbf9599fdb869665766f7a8a3a773336a8"
+    },
+    "SG_COLLIDER_Garden_Side_Boundary_-1": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -16.2000008,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "ad2a4100270c43e06c175ea053a4405fe525ede7129c5ca8dd95d2258b31ead7"
+    },
+    "SG_COLLIDER_Garden_Side_Boundary_1": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        16.2000008,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "ad2a4100270c43e06c175ea053a4405fe525ede7129c5ca8dd95d2258b31ead7"
+    },
+    "SG_COLLIDER_Garden_Back_Boundary": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        15.3000002,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "b065ee8e73cb852d01e8365945fe382830b7388dd329d5f2b85688df90637b05"
+    },
+    "SG_COLLIDER_Garden_Front_Left": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -9.21,
+        0.0,
+        1.0,
+        0.0,
+        -15.25,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "376ccfc994daf7f20fad781e7a4f84722eaffa42d95710e7e7bb00e274dcbf34"
+    },
+    "SG_COLLIDER_Garden_Front_Right": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        9.21,
+        0.0,
+        1.0,
+        0.0,
+        -15.25,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "376ccfc994daf7f20fad781e7a4f84722eaffa42d95710e7e7bb00e274dcbf34"
+    },
+    "SG_COLLIDER_Garden_Gate_Pier_-1": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -1.85,
+        0.0,
+        1.0,
+        0.0,
+        -15.25,
+        0.0,
+        0.0,
+        1.0,
+        0.9,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "b3914448ddbec63166f777fcd1332d6712a74c59d0efcbae5b57db066a729138"
+    },
+    "SG_COLLIDER_Garden_Open_Gate_-1": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -1.85,
+        0.0,
+        1.0,
+        0.0,
+        -14.3000002,
+        0.0,
+        0.0,
+        1.0,
+        0.7,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "631a16738bb38c323925b5bafcd41b82c415fc2c23a26034b728cdd815848878"
+    },
+    "SG_COLLIDER_Garden_Gate_Pier_1": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        1.85,
+        0.0,
+        1.0,
+        0.0,
+        -15.25,
+        0.0,
+        0.0,
+        1.0,
+        0.9,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "b3914448ddbec63166f777fcd1332d6712a74c59d0efcbae5b57db066a729138"
+    },
+    "SG_COLLIDER_Garden_Open_Gate_1": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        1.85,
+        0.0,
+        1.0,
+        0.0,
+        -14.3000002,
+        0.0,
+        0.0,
+        1.0,
+        0.7,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "631a16738bb38c323925b5bafcd41b82c415fc2c23a26034b728cdd815848878"
+    },
+    "SG_COLLIDER_Mailbox": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -11.5500002,
+        0.0,
+        1.0,
+        0.0,
+        -11.8500004,
+        0.0,
+        0.0,
+        1.0,
+        0.95,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "5a67472dca48980f78129861f68456ee45f65d3ce1d68ed7c0a2dbc17d8e1a3a"
+    },
+    "SG_COLLIDER_Welcome_Letter_Table": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -10.0,
+        0.0,
+        1.0,
+        0.0,
+        -11.7299995,
+        0.0,
+        0.0,
+        1.0,
+        0.455,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "3e4c2fe3c4a3194ddd457816e56c2242b6f2cd959a59b309a228dff32cb89059"
+    },
+    "SG_COLLIDER_Family_Day_Board": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        1.0,
+        0.0,
+        -11.8199997,
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "4d474e9b040c79af704d58fbb25a44d9b4bf909d92d2fcd657ee4fa53266b32f"
+    },
+    "SG_COLLIDER_Flower_Bed": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        8.6499996,
+        0.0,
+        1.0,
+        0.0,
+        -11.8500004,
+        0.0,
+        0.0,
+        1.0,
+        0.45,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "502e3c1e779d6d3c6728ad8c7e91cc9cdb40fb355c2d708f1f4840df091ebb32"
+    },
+    "SG_COLLIDER_Watering_Can_Stand": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        6.5,
+        0.0,
+        1.0,
+        0.0,
+        -11.8000002,
+        0.0,
+        0.0,
+        1.0,
+        0.355,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "c6a675e0518ade5e5f0f076788dfa2274fe19dd75e8ec712a8ac3ee0387d953a"
+    },
+    "SG_COLLIDER_Porch_Rest_Bench": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        11.5,
+        0.0,
+        1.0,
+        0.0,
+        -8.8000002,
+        0.0,
+        0.0,
+        1.0,
+        0.68,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "25c429e254468fcb8536a55d459aa6d884c4b43c50d230cd012af4cbf055456d"
+    },
+    "SG_COLLIDER_Porch_Tea_Table": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        13.3999996,
+        0.0,
+        1.0,
+        0.0,
+        -8.8999996,
+        0.0,
+        0.0,
+        1.0,
+        0.4,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "8db148524d544955b714f11017e2c0b95c67f567f59474bb517c3fa2b6a597f6"
+    },
+    "SG_COLLIDER_Tool_Crate": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -13.3999996,
+        0.0,
+        1.0,
+        0.0,
+        -8.25,
+        0.0,
+        0.0,
+        1.0,
+        0.4,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "431f440f892684b26b7efc56e7cfc8edd9c23ae9f909125f16aa85792a9a1878"
+    },
+    "SG_COLLIDER_West_Apple_Tree_Trunk": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -14.0,
+        0.0,
+        1.0,
+        0.0,
+        -12.1000004,
+        0.0,
+        0.0,
+        1.0,
+        1.296,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "4095ec48a3e0b35b6c0ba44cb7f8fd4259c7b8a83ff27e9b45ade71e5f66b48f"
+    },
+    "SG_COLLIDER_East_Shade_Tree_Trunk": {
+      "type": "MESH",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        14.1000004,
+        0.0,
+        1.0,
+        0.0,
+        -10.0,
+        0.0,
+        0.0,
+        1.0,
+        1.35,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "collision_proxy": true
+      },
+      "geometry_sha256": "658c803027d957b8e73e9cdd98b2c21f54228cec3b1de79d7848950e15ae30a9"
+    },
+    "SG_MEMORY_01": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -10.0,
+        0.0,
+        1.0,
+        0.0,
+        -10.1999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "门前信箱",
+        "interaction_anchor": true,
+        "memory_id": "memory_home_estate_01",
+        "activity": "读一张邀请卡，想想怎样欢迎来访的朋友。"
+      }
+    },
+    "SG_MEMORY_02": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        8.0,
+        0.0,
+        1.0,
+        0.0,
+        -10.1999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "小院花圃",
+        "interaction_anchor": true,
+        "memory_id": "memory_home_estate_02",
+        "activity": "拿起水壶，为花圃浇水，再把水壶放回去。"
+      }
+    },
+    "SG_MEMORY_03": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -6.3000002,
+        0.0,
+        1.0,
+        0.0,
+        -9.1999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "门廊随身篮",
+        "interaction_anchor": true,
+        "memory_id": "memory_home_estate_03",
+        "activity": "外出前整理随身物品，准备与家人一起散步。"
+      }
+    },
+    "SG_MEMORY_04": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        2.0,
+        0.0,
+        1.0,
+        0.0,
+        -10.1999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "家庭日程板",
+        "interaction_anchor": true,
+        "memory_id": "memory_home_estate_04",
+        "activity": "看看日程板，选择今天先去哪个房间。"
+      }
+    },
+    "SG_MEMORY_05": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        11.5,
+        0.0,
+        1.0,
+        0.0,
+        -10.3000002,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "门廊小树",
+        "interaction_anchor": true,
+        "memory_id": "memory_home_estate_05",
+        "activity": "观察小树怎样给门廊遮阴，照顾它慢慢长大。"
+      }
+    },
+    "SG_SPAWN": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -13.3999996,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "进入家园",
+        "interaction_anchor": true
+      }
+    },
+    "SG_EXIT": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        -14.5,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "返回字母岛",
+        "interaction_anchor": true
+      }
+    },
+    "SG_NPC_HOST": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -2.0,
+        0.0,
+        1.0,
+        0.0,
+        -10.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "家人停留位置",
+        "interaction_anchor": true
+      }
+    },
+    "SG_HOUSE_ENTRY": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -3.5,
+        0.0,
+        1.0,
+        0.0,
+        -8.6999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "正门 · 走进家里",
+        "interaction_anchor": true
+      }
+    },
+    "SG_DOOR_HOME_STUDY": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -3.5,
+        0.0,
+        1.0,
+        0.0,
+        -8.6999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "入户导览中的房间",
+        "interaction_anchor": true
+      }
+    },
+    "SG_DOOR_HOME_BEDROOM": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -3.5,
+        0.0,
+        1.0,
+        0.0,
+        -8.6999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "入户导览中的房间",
+        "interaction_anchor": true
+      }
+    },
+    "SG_DOOR_HOME_BATHROOM": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -3.5,
+        0.0,
+        1.0,
+        0.0,
+        -8.6999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "入户导览中的房间",
+        "interaction_anchor": true
+      }
+    },
+    "SG_DOOR_HOME_BALCONY": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -3.5,
+        0.0,
+        1.0,
+        0.0,
+        -8.6999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "入户导览中的房间",
+        "interaction_anchor": true
+      }
+    },
+    "SG_DOOR_HOME": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -3.5,
+        0.0,
+        1.0,
+        0.0,
+        -8.6999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "入户导览中的房间",
+        "interaction_anchor": true
+      }
+    },
+    "SG_DOOR_HOME_DINING": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -3.5,
+        0.0,
+        1.0,
+        0.0,
+        -8.6999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "入户导览中的房间",
+        "interaction_anchor": true
+      }
+    },
+    "SG_DOOR_HOME_KITCHEN": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        -3.5,
+        0.0,
+        1.0,
+        0.0,
+        -8.6999998,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "label": "入户导览中的房间",
+        "interaction_anchor": true
+      }
+    },
+    "HOME_TASK_BEFORE": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "household_state": "before"
+      }
+    },
+    "HOME_TASK_MIDDLE": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "household_state": "middle"
+      }
+    },
+    "HOME_TASK_AFTER": {
+      "type": "EMPTY",
+      "parent": null,
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "properties": {
+        "household_state": "after"
+      }
+    }
+  },
+  "new_geometry": [
+    {
+      "name": "West_Apple_Tree_Foliage_Boughs_0",
+      "vertices": 84,
+      "faces": 160,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.44391709
+    },
+    {
+      "name": "West_Apple_Tree_Foliage_Boughs_1",
+      "vertices": 420,
+      "faces": 800,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.61866941
+    },
+    {
+      "name": "West_Apple_Tree_Foliage_Boughs_2",
+      "vertices": 504,
+      "faces": 960,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 3.10395313
+    },
+    {
+      "name": "West_Apple_Tree_Foliage_Boughs_3",
+      "vertices": 504,
+      "faces": 960,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.83610652
+    },
+    {
+      "name": "West_Apple_Tree_Leaf_Sprays_0",
+      "vertices": 192,
+      "faces": 256,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00376545
+    },
+    {
+      "name": "West_Apple_Tree_Leaf_Sprays_1",
+      "vertices": 960,
+      "faces": 1280,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.01921993
+    },
+    {
+      "name": "West_Apple_Tree_Leaf_Sprays_2",
+      "vertices": 1152,
+      "faces": 1536,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.02296855
+    },
+    {
+      "name": "West_Apple_Tree_Leaf_Sprays_3",
+      "vertices": 1152,
+      "faces": 1536,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.0229653
+    },
+    {
+      "name": "West_Apple_Tree_Fine_Bough",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00175014
+    },
+    {
+      "name": "West_Apple_Tree_Fine_Bough.001",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00194838
+    },
+    {
+      "name": "West_Apple_Tree_Fine_Bough.002",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00177056
+    },
+    {
+      "name": "West_Apple_Tree_Fine_Bough.003",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00192972
+    },
+    {
+      "name": "East_Shade_Tree_Foliage_Boughs_0",
+      "vertices": 84,
+      "faces": 160,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.49536183
+    },
+    {
+      "name": "East_Shade_Tree_Foliage_Boughs_1",
+      "vertices": 420,
+      "faces": 800,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.76600823
+    },
+    {
+      "name": "East_Shade_Tree_Foliage_Boughs_2",
+      "vertices": 504,
+      "faces": 960,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 4.01341205
+    },
+    {
+      "name": "East_Shade_Tree_Foliage_Boughs_3",
+      "vertices": 504,
+      "faces": 960,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 3.42721304
+    },
+    {
+      "name": "East_Shade_Tree_Leaf_Sprays_0",
+      "vertices": 192,
+      "faces": 256,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00437913
+    },
+    {
+      "name": "East_Shade_Tree_Leaf_Sprays_1",
+      "vertices": 960,
+      "faces": 1280,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.02085011
+    },
+    {
+      "name": "East_Shade_Tree_Leaf_Sprays_2",
+      "vertices": 1152,
+      "faces": 1536,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.02520076
+    },
+    {
+      "name": "East_Shade_Tree_Leaf_Sprays_3",
+      "vertices": 1152,
+      "faces": 1536,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.02582235
+    },
+    {
+      "name": "East_Shade_Tree_Fine_Bough",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00162602
+    },
+    {
+      "name": "East_Shade_Tree_Fine_Bough.001",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00215827
+    },
+    {
+      "name": "East_Shade_Tree_Fine_Bough.002",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00192455
+    },
+    {
+      "name": "Garden_Grass_Edge_0",
+      "vertices": 1932,
+      "faces": 2576,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00151775
+    },
+    {
+      "name": "Garden_Grass_Edge_1",
+      "vertices": 1926,
+      "faces": 2568,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00149278
+    },
+    {
+      "name": "Garden_Grass_Edge_2",
+      "vertices": 1926,
+      "faces": 2568,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.0015122
+    },
+    {
+      "name": "Garden_Path_Scattered_Grains",
+      "vertices": 2898,
+      "faces": 5520,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00706323
+    },
+    {
+      "name": "Refined_Tree_Base_Herbs",
+      "vertices": 792,
+      "faces": 1056,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00759001
+    },
+    {
+      "name": "Refined_West_Apple_0",
+      "vertices": 222,
+      "faces": 240,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 4.05002986
+    },
+    {
+      "name": "Refined_West_Apple_0_Stem",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.605e-05
+    },
+    {
+      "name": "Refined_West_Apple_0_Leaf",
+      "vertices": 222,
+      "faces": 240,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 4.05002986
+    },
+    {
+      "name": "Refined_West_Apple_1",
+      "vertices": 222,
+      "faces": 240,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 4.05002986
+    },
+    {
+      "name": "Refined_West_Apple_1_Stem",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.605e-05
+    },
+    {
+      "name": "Refined_West_Apple_1_Leaf",
+      "vertices": 222,
+      "faces": 240,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 4.05002986
+    },
+    {
+      "name": "Refined_West_Apple_2",
+      "vertices": 222,
+      "faces": 240,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 4.05002986
+    },
+    {
+      "name": "Refined_West_Apple_2_Stem",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.605e-05
+    },
+    {
+      "name": "Refined_West_Apple_2_Leaf",
+      "vertices": 222,
+      "faces": 240,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 4.05002986
+    },
+    {
+      "name": "Refined_West_Apple_3",
+      "vertices": 222,
+      "faces": 240,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 4.05002986
+    },
+    {
+      "name": "Refined_West_Apple_3_Stem",
+      "vertices": 24,
+      "faces": 14,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.605e-05
+    },
+    {
+      "name": "Refined_West_Apple_3_Leaf",
+      "vertices": 222,
+      "faces": 240,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 4.05002986
+    },
+    {
+      "name": "Refined_Tea_Surface",
+      "vertices": 40,
+      "faces": 22,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 9.643e-05
+    },
+    {
+      "name": "Refined_Tea_Cup_Rim",
+      "vertices": 192,
+      "faces": 192,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.00020621
+    },
+    {
+      "name": "Refined_Bench_Bolt",
+      "vertices": 20,
+      "faces": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.98e-05
+    },
+    {
+      "name": "Refined_Bench_Bolt.001",
+      "vertices": 20,
+      "faces": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.98e-05
+    },
+    {
+      "name": "Refined_Bench_Bolt.002",
+      "vertices": 20,
+      "faces": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.98e-05
+    },
+    {
+      "name": "Refined_Bench_Bolt.003",
+      "vertices": 20,
+      "faces": 12,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 2.98e-05
+    },
+    {
+      "name": "Refined_Planter_Pin",
+      "vertices": 16,
+      "faces": 10,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 1.497e-05
+    },
+    {
+      "name": "Refined_Planter_Pin.001",
+      "vertices": 16,
+      "faces": 10,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 1.497e-05
+    },
+    {
+      "name": "Refined_Planter_Pin.002",
+      "vertices": 16,
+      "faces": 10,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 1.497e-05
+    },
+    {
+      "name": "Refined_Planter_Pin.003",
+      "vertices": 16,
+      "faces": 10,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 1.497e-05
+    },
+    {
+      "name": "Refined_Bench_Linen",
+      "vertices": 8,
+      "faces": 6,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 0.0058136
+    },
+    {
+      "name": "Refined_Linen_Woven_Stripe",
+      "vertices": 8,
+      "faces": 6,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 1.44e-05
+    },
+    {
+      "name": "Refined_Linen_Woven_Stripe.001",
+      "vertices": 8,
+      "faces": 6,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 1.44e-05
+    },
+    {
+      "name": "Refined_Linen_Woven_Stripe.002",
+      "vertices": 8,
+      "faces": 6,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 1.44e-05
+    },
+    {
+      "name": "Refined_Linen_Woven_Stripe.003",
+      "vertices": 8,
+      "faces": 6,
+      "boundary_edges": 0,
+      "nonmanifold_edges": 0,
+      "degenerate_faces": 0,
+      "signed_volume": 1.44e-05
+    }
+  ],
+  "new_geometry_checks_passed": true,
+  "new_grass_tufts": 241,
+  "textured_mesh_objects": 1092,
+  "blender_version": "5.2.2 LTS",
+  "texture_budget": {
+    "count": 14,
+    "source_png_bytes": 1200181,
+    "uncompressed_rgba8_bytes": 3670016,
+    "uncompressed_rgba8_with_mips_approx_bytes": 4893355,
+    "embedded_in_glb": true,
+    "textures": [
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/clay_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 89793,
+        "sha256": "7df1acaa6a39857ed593111874dff946aa71b58126686719f07ec57f8ec8a50f"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/garden_gravel_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 98652,
+        "sha256": "5807d41f809c876ca89150a9c864d368ea1e47e1fd1536fde7f44813bf01d209"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/garden_paver_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 93028,
+        "sha256": "6a3f8bdf07dd80a016fddcbd5e856c43193a6dcae474e75bd7c2a0b17f3deb00"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/garden_paver_light_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 91968,
+        "sha256": "6826d9df828cb7cc013d9e6d159ea0fa089d66cb985d2368f7fa7c48a97b5808"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/garden_stone_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 90394,
+        "sha256": "15bee36acc243d5355da4bd76db8f4769049d7e35779e6fd348d5f03e29301d4"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/grass_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 93717,
+        "sha256": "88d9f3a079587aed73a644df7556b745df6cc9a1ff6873a99b8ed6d42e62a633"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/lightwood_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 74933,
+        "sha256": "070a544ca2da35149b6a3013532d0ed2a217315d672929df24bb753bf1d9caeb"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/oak_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 74159,
+        "sha256": "81435a5ebec7d44f91ddf9b6a86ab58aa8784304cfb2515eb4f72965982f13d7"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/plaster_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 81270,
+        "sha256": "173e8afbbaf94a44875166697be7e8c088b7dff04ce58cc3119c3f236e0bacae"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/roof_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 82801,
+        "sha256": "927591ef26b82a96a2c33c64f522f20cbf4bb6d043b87c601643f6d843b52555"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/roof_dark_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 79203,
+        "sha256": "efe73c42647842f90a853b72ab685aafbc8186388fc3a57167eb57b0f911f798"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/roof_light_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 79634,
+        "sha256": "5aa17f9af7cbf01629e60f8ebd6f88e05bc480c0b8e14e1c4232bc5c2234d65e"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/soil_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 92981,
+        "sha256": "bcfee56c20c4c12c09017d77b5e648c4d678706f4416cec09fe04e11edc9067e"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/wood_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 77648,
+        "sha256": "5c9b14fa10fd97103876f3d7b156aa512e3f8db64d6da434a997624778fe05fd"
+      }
+    ]
+  },
+  "validation_scope": "Blender source geometry and GLB export; pending Godot runtime inspection"
+}

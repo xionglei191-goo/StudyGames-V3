@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_O",
+  "name": "猫头鹰图书馆",
+  "blend": "assets/blender/interiors/landmark_O/landmark_O_v02.blend",
+  "glb": "assets/blender/interiors/landmark_O/landmark_O_v02.glb",
+  "preview": "assets/blender/interiors/landmark_O/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口借阅台",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Borrow_Cabinet",
+      "memory_id": "memory_O_01",
+      "activity": "选择阅读卡"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧主题书架",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Wing_Books_Back",
+      "memory_id": "memory_O_02",
+      "activity": "找想看的主题"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央提问圆桌",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Question_Table_Foot",
+      "memory_id": "memory_O_03",
+      "activity": "围绕图片提问"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧眼窗阅读湾",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Story_Rug",
+      "memory_id": "memory_O_04",
+      "activity": "安静读短故事"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口还书车",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Return_Cart_Back",
+      "memory_id": "memory_O_05",
+      "activity": "把书归还到正确位置"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 120576,
+  "glb_sha256": "dc1805a2894d3da8a7284a53d7cb40c467222a388a54af32faebbfcce226fc48",
+  "refinement_revision": "world-refinement-v1"
+}

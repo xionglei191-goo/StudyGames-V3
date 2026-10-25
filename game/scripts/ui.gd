@@ -581,6 +581,9 @@ func _layout() -> void:
 	var height := minf(570,available.y-96)
 	if current_panel == "settings":
 		height = minf(650,available.y-72)
+	elif current_panel == "review_task":
+		width = minf(1020,available.x-64)
+		height = minf(580,available.y-96)
 	elif layout_kind == "wardrobe":
 		width = minf(1000,available.x-64)
 		height = minf(650,available.y-70)

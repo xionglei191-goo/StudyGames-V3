@@ -10,7 +10,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[4]
 OUT=ROOT/'assets/blender/interiors'
 HOME_CHILDREN=['home','home_bedroom','home_kitchen','home_dining','home_bathroom','home_study','home_balcony']
-EXPECTED=['landmark_'+chr(i) for i in range(65,91)]+['school','classroom','music_room','art_room','science_room','canteen','playground','football_field','home_estate']+HOME_CHILDREN
+EXPECTED=['landmark_'+chr(i) for i in range(65,91)]+['school','classroom','music_room','art_room','science_room','canteen','playground','football_field','home_estate','home_hall']+HOME_CHILDREN
 COMMON=['SG_SPAWN','SG_EXIT','SG_NPC_HOST']+[f'SG_MEMORY_{i:02}' for i in range(1,6)]
 
 def glb(path):
@@ -140,6 +140,7 @@ def check_room(entry):
     data,binary=glb(paths['glb']);nodes,world=world_nodes(data);named={n.get('name'):i for i,n in enumerate(nodes)}
     required=COMMON+(['SG_DOOR_CLASSROOM','SG_DOOR_MUSIC_ROOM','SG_DOOR_ART_ROOM','SG_DOOR_SCIENCE_ROOM','SG_DOOR_CANTEEN','SG_DOOR_PLAYGROUND','SG_DOOR_FOOTBALL_FIELD'] if room_id=='school' else ['SG_BED','SG_WARDROBE','SG_DECOR_FLOWER_BOX','SG_DECOR_PICNIC','SG_DECOR_LAMP'] if room_id=='home' else [])
     if room_id=='home_estate':required += ['SG_HOUSE_ENTRY'] + ['SG_DOOR_'+rid.upper() for rid in HOME_CHILDREN]
+    if room_id=='home_hall':required = ['SG_SPAWN','SG_EXIT'] + ['SG_DOOR_'+rid.upper() for rid in HOME_CHILDREN]
     if room_id=='home_bedroom':required += ['SG_BED','SG_WARDROBE']
     for name in required:
         if name not in named:errors.append('Missing anchor '+name)
@@ -182,7 +183,12 @@ def check_room(entry):
     actual={a['name']:a for a in entry['anchors']}
     for a in authored:
         if actual.get(a['node_name'],{}).get('label')!=a['label']:errors.append('Plan label mismatch '+a['node_name'])
-    if len(authored)!=5:errors.append('Plan does not contain five points')
+    if room_id=='home_hall':
+        if authored:errors.append('Navigation-only hall must not add memory points')
+        house=json.loads((ROOT/'game/data/home_hierarchy.json').read_text(encoding='utf-8'))
+        route=next((r for r in house.get('routes',[]) if r['room_id']==room_id),None)
+        if not route or route.get('space_role')!='household_indoor_navigation':errors.append('Hall navigation contract missing')
+    elif len(authored)!=5:errors.append('Plan does not contain five points')
     if room_id=='landmark_A':
         for old in ['A_LOCUS_01_Entrance_Basket','A_LOCUS_02_Left_Apple_Tree','A_LOCUS_03_Sorting_Table','A_LOCUS_04_Wash_Basin','A_LOCUS_05_Gift_Shelf','A_AppleHouse_Tripo','A_Creek_Surface']:
             if old not in named:errors.append('Orchard source object missing '+old)

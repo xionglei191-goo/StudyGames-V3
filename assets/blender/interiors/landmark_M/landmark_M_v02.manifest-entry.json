@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_M",
+  "name": "蘑菇邻居屋",
+  "blend": "assets/blender/interiors/landmark_M/landmark_M_v02.blend",
+  "glb": "assets/blender/interiors/landmark_M/landmark_M_v02.glb",
+  "preview": "assets/blender/interiors/landmark_M/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口拖鞋篮",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Slippers_Handle",
+      "memory_id": "memory_M_01",
+      "activity": "放好来访物品"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧邻居相册墙",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Neighbours_Face",
+      "memory_id": "memory_M_02",
+      "activity": "认识邻居与朋友"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央茶桌",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Dining_Leg",
+      "memory_id": "memory_M_03",
+      "activity": "摆好点心"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧沙发窗台",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Window_Sofa_Arm",
+      "memory_id": "memory_M_04",
+      "activity": "描述房间和日常活动"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口分享柜",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Albums_Back",
+      "memory_id": "memory_M_05",
+      "activity": "挑可借用的公共物品"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.65,
+    -7.65,
+    17.3,
+    15.3
+  ],
+  "triangles": 155688,
+  "glb_sha256": "0294a99d4d51790bd3dbeb2b68e4fc5d0047729ddac420731c4e88f241559f1a",
+  "refinement_revision": "world-refinement-v1"
+}

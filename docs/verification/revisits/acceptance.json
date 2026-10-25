@@ -1,0 +1,52 @@
+{
+  "result": "PASS",
+  "version": "0.12.0-dev",
+  "completed_utc": "2026-10-24T13:05:46.330737+00:00",
+  "targets": 62,
+  "letter_dimensions": 52,
+  "unit_situations": 10,
+  "context_variants": 186,
+  "state_checks": 379,
+  "native_checks": {
+    "1440x900": 263,
+    "960x640": 263
+  },
+  "screenshots": 32,
+  "regression_checks": {
+    "journey_state": 728,
+    "p2_state": 284,
+    "chapter_flow": 503,
+    "journey_flow": 189,
+    "state_persistence": "PASS"
+  },
+  "protected_original_files": 40,
+  "protected_production_saves": 2,
+  "runtime_sha256": {
+    "data/learning/revisits.json": "4ddbb99ec7fc1edecbeb51cd6d15480c948bde82863ebfc6e769a9bd317723a4",
+    "project.godot": "d3aa74f36ef6b1f82036855bd157af9b9999f0fa485a988b110a24f718460c4e",
+    "scripts/game_state.gd": "4c76373790b73a236f1562557b93dea5c80d9f63eaef9d32fe69214823cd4506",
+    "scripts/journey_controller.gd": "48dff73917076a62ee42c32a5b788e7b811bbf0fad78f2374dd0186dbbcf4b36",
+    "scripts/main.gd": "af6ecb3577647793cc4d16086322216d1a2b217436cadb3ae28cd720a3e304eb",
+    "scripts/p2_journey_controller.gd": "ced2884598e9049bdd5aafb8c1aaa30fcc6a9b0d5d2a3ce176dd1fccedc82f14",
+    "scripts/parent_observations.gd": "67774a105ef091c6a8d0eccd1cbde08fc88cd5330db13f4da1d4d3a923cb0871",
+    "scripts/review_controller.gd": "385fbcf6d6a2c2a9bab3199894a45c4a294e7104c699cf5a728c1e0887a813ff",
+    "scripts/review_progress.gd": "f3aecca7aa5edd3e3b819a723369b570a00587f200a0865043506142531432d8",
+    "scripts/ui.gd": "2641e1afb3d9038bfec6592ea951ca61a0037d1f910c23493087480f9365d47b",
+    "tests/test_revisits_game.gd": "d04a9b2edb8a5026aa57be2916de1743066d8b13397017d45889961a8507509d",
+    "ui/travel_book_view.gd": "3b8c2d95654a567c56c9f454c6b0277816510cb300a7b6404c8bb5c9bf742f90"
+  },
+  "content_source_sha256": {
+    "data/learning/prologue.json": "a24f07a2491d01dc00c52b8daa28fa566244a524384fc9b72d47196a61ed3a8f",
+    "data/learning/p2_journey.json": "4c1777618be97deec7c406e64e7f44bc3331d72beaf118aa821c7587e207f7d3",
+    "data/curriculum.json": "e02b76fc5fa121bfc337577a871d3c2607ffee4b3833202cab8f879b281df78c",
+    "data/learning/catalog.json": "c69c1dde30e9a73502a2e28418b257b753118d681f8ca1f080ab40e21be02af3",
+    "data/learning/revisits.json": "4ddbb99ec7fc1edecbeb51cd6d15480c948bde82863ebfc6e769a9bd317723a4"
+  },
+  "limits": [
+    "The schedule tests use synthetic clocks and fixtures, not an actual multi-day child study.",
+    "The offline local clock cannot verify clock edits while the app was closed.",
+    "Written choice and letter association do not establish listening, pronunciation or long-term mastery.",
+    "Independent teaching review, audio listening audit and child playtesting remain open.",
+    "This is an affected-scope check, not the complete project test suite or a new exported executable."
+  ]
+}

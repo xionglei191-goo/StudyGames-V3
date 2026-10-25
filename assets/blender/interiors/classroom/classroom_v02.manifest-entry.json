@@ -1,0 +1,154 @@
+{
+  "room_id": "classroom",
+  "name": "教室",
+  "blend": "assets/blender/interiors/classroom/classroom_v02.blend",
+  "glb": "assets/blender/interiors/classroom/classroom_v02.glb",
+  "preview": "assets/blender/interiors/classroom/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "门口姓名牌台",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Name_Plates_Leg",
+      "memory_id": "memory_CLASSROOM_01",
+      "activity": "认出示例人物的名牌"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左窗阅读角",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Book_Corner_Back",
+      "memory_id": "memory_CLASSROOM_02",
+      "activity": "看图并听一句示范"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央结伴桌",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Shared_Desk_Leg",
+      "memory_id": "memory_CLASSROOM_03",
+      "activity": "与伙伴问候和介绍名字"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧情境道具柜",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Props_Cabinet_Back",
+      "memory_id": "memory_CLASSROOM_04",
+      "activity": "取当前情境需要的道具"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口作品墙",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Art_Display_Face",
+      "memory_id": "memory_CLASSROOM_05",
+      "activity": "展示完成的图片或记录"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回学校",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 203452,
+  "glb_sha256": "aa41a200e802deff1f105220f93f0e92d426c3e3eab8475df8e011e8c5ea9c8c",
+  "refinement_revision": "world-refinement-v1"
+}

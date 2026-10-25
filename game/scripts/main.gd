@@ -6,6 +6,7 @@ const UIScript = preload("res://scripts/ui.gd")
 const FeedbackScript = preload("res://scripts/world_feedback.gd")
 const SoundScript = preload("res://scripts/feedback_audio.gd")
 const FootballScript = preload("res://activities/football_practice.gd")
+const HomeCatalog = preload("res://scripts/home_catalog.gd")
 var world: Node3D
 var player: CharacterBody3D
 var camera: Camera3D
@@ -34,7 +35,7 @@ var validation_mode := false
 var scene_ready := false
 var test_harness := false
 var camera_offset := Vector3(18, 25, 24)
-const ROOM_LABELS := {"village":"字母岛", "school":"山丘学园 · 校园", "classroom":"阳光教室", "music_room":"音乐教室", "art_room":"美术教室", "science_room":"科学教室", "canteen":"校园餐厅", "playground":"青草操场", "football_field":"绿茵足球场", "home":"家里的客厅", "home_estate":"我的家 · 小院与住宅"}
+const ROOM_LABELS := {"village":"字母岛", "school":"山丘学园 · 校园", "classroom":"阳光教室", "music_room":"音乐教室", "art_room":"美术教室", "science_room":"科学教室", "canteen":"校园餐厅", "playground":"青草操场", "football_field":"绿茵足球场", "home":"家里的客厅", "home_estate":"我的家 · 小院与住宅", "home_hall":"我的家 · 门厅与走廊"}
 const NAV_CELL := 0.75
 var nav_heights: Dictionary = {}
 var navigation_cache: Dictionary = {}
@@ -666,7 +667,6 @@ func interact_id(id: String) -> void:
 		"orchard": show_orchard()
 		"school_gate": await change_room("school")
 		"home_gate": await change_room("home_estate")
-		"house_entry": household.show_entry()
 		"village_exit":
 			var door := "school_gate" if room=="school" else (room if room.begins_with("landmark_") else "home_gate")
 			await change_room("village", door)
@@ -804,8 +804,8 @@ func show_map() -> void:
 	var points: Array = []
 	var extras: Array = []
 	for entry: Dictionary in interactions:
-		if room in ["school", "home_estate"]:
-			if entry.get("type","") in ["travel", "house_entry"]:
+		if room in ["school", "home_estate", "home_hall"]:
+			if entry.get("type","")=="travel":
 				points.append(entry)
 		elif room=="village":
 			if str(entry.id).begins_with("landmark_") or str(entry.id) in ["home_gate","school_gate","baker","orchard"]:
@@ -864,8 +864,14 @@ func _navigate_to_id(target_id: String, auto_interact: bool = false) -> void:
 		if str(entry.id)==target_id:
 			_request_interaction(entry,auto_interact)
 			return
-	if room!="village" and target_id in ["baker","orchard","school_gate","home_gate"]:
-		var exit_id: String = {"school":"school_exit", "home_estate":"home_exit"}.get(str(metadata.get("parent_room","")), "village_exit")
+	var exit_id := ""
+	if HomeCatalog.is_home_space(room) and target_id.ends_with("_gate") and target_id.trim_suffix("_gate") in HomeCatalog.CHILD_ROOMS:
+		# Continue through actual doors: a room -> corridor -> another room, or
+		# the courtyard -> front door -> corridor. Every leg is walked.
+		exit_id = "house_entry" if room == "home_estate" else ("home_exit" if room in HomeCatalog.CHILD_ROOMS else "")
+	elif room!="village" and target_id in ["baker","orchard","school_gate","home_gate"]:
+		exit_id = "courtyard_exit" if room == "home_hall" else str({"school":"school_exit", "home_hall":"home_exit"}.get(str(metadata.get("parent_room","")), "village_exit"))
+	if not exit_id.is_empty():
 		for entry: Dictionary in interactions:
 			if str(entry.id)==exit_id:
 				_request_interaction(entry,true)
@@ -884,6 +890,7 @@ func show_settings() -> void:
 		{"label":"减少动态："+("开" if ui.reduced_motion else "关"),"id":"toggle_motion"},
 		{"label":"固定白昼："+("开" if State.data.preferences.get("fixed_day",false) else "关"),"id":"toggle_day"},
 		{"label":"窗口 / 全屏","id":"fullscreen"},
+		{"label":"家长观察册","id":"journey:parent"},
 		{"label":"保存并继续","id":"save","primary":true},
 		{"label":"保存并退出","id":"quit"}
 	],"物品与任务会自动保存。画好的明信片需要点击保存。")

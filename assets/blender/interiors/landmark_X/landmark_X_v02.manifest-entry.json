@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_X",
+  "name": "木琴海边舞台",
+  "blend": "assets/blender/interiors/landmark_X/landmark_X_v02.blend",
+  "glb": "assets/blender/interiors/landmark_X/landmark_X_v02.glb",
+  "preview": "assets/blender/interiors/landmark_X/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口排练日程牌",
+      "position_blender": [
+        -4.13,
+        -2.992,
+        0.0
+      ],
+      "position_godot": [
+        -4.13,
+        0.0,
+        2.992
+      ],
+      "associated_prop": "Locus_01_Programme_Face",
+      "memory_id": "memory_X_01",
+      "activity": "选排练时段"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧琴槌架",
+      "position_blender": [
+        -5.664,
+        -0.616,
+        0.0
+      ],
+      "position_godot": [
+        -5.664,
+        0.0,
+        0.616
+      ],
+      "associated_prop": "Locus_02_Mallets_Back",
+      "memory_id": "memory_X_02",
+      "activity": "给伙伴取琴槌"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央木琴",
+      "position_blender": [
+        0.0,
+        -0.264,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.264
+      ],
+      "associated_prop": "Locus_03_Xylophone_Leg",
+      "memory_id": "memory_X_03",
+      "activity": "听并敲不同音条"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧合奏脚印位",
+      "position_blender": [
+        5.546,
+        -0.616,
+        0.0
+      ],
+      "position_godot": [
+        5.546,
+        0.0,
+        0.616
+      ],
+      "associated_prop": "Locus_04_Ensemble_Footprints",
+      "memory_id": "memory_X_04",
+      "activity": "按轮流提示合奏"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口演出照片架",
+      "position_blender": [
+        5.428,
+        -3.432,
+        0.0
+      ],
+      "position_godot": [
+        5.428,
+        0.0,
+        3.432
+      ],
+      "associated_prop": "Locus_05_Performances_Face",
+      "memory_id": "memory_X_05",
+      "activity": "回顾合作"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -4.972,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        4.972
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -5.676,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.676
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.596,
+        -1.232,
+        0.0
+      ],
+      "position_godot": [
+        -2.596,
+        0.0,
+        1.232
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -9.44,
+    -6.16,
+    18.88,
+    12.32
+  ],
+  "triangles": 174688,
+  "glb_sha256": "8ffa7abdc996950a78b57673e1b73177b37cd9c2a069431553462942595525a8",
+  "refinement_revision": "world-refinement-v1"
+}

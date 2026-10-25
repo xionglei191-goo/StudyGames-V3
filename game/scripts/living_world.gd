@@ -289,16 +289,26 @@ func _capture_visual_targets() -> void:
 		if mesh.mesh == null or not mesh.visible:
 			continue
 		var label := str(mesh.name)
-		var is_tree_crown := "Tree" in label and ("Canopy" in label or "Crown" in label)
+		var refined_foliage := "Tree_Foliage_Boughs_" in label or "Tree_Leaf_Sprays_" in label
+		var is_tree_crown := "Tree" in label and ("Canopy" in label or "Crown" in label or refined_foliage)
 		if is_tree_crown and not label.begins_with("SG_"):
 			var box := mesh.get_aabb()
 			var local_wind := mesh.global_basis.inverse() * Vector3(0.75, 0, 0.66)
 			var axis := Vector3(-local_wind.z, 0, local_wind.x).normalized()
 			if axis.length_squared() < 0.1:
 				axis = Vector3.RIGHT
+			var pivot := Vector3(box.get_center().x, box.position.y, box.get_center().z)
+			var wind_key := label
+			if refined_foliage:
+				# The new leaf and crown batches share one tree motion so they cannot separate.
+				wind_key = label.get_slice("_Foliage_Boughs_", 0).get_slice("_Leaf_Sprays_", 0)
+				var trunk := _world.find_child(wind_key + "_Curved_Trunk_Top", true, false) as MeshInstance3D
+				if trunk != null:
+					var trunk_bounds := trunk.get_aabb()
+					var trunk_base := Vector3(trunk_bounds.get_center().x, trunk_bounds.position.y, trunk_bounds.get_center().z)
+					pivot = mesh.to_local(trunk.to_global(trunk_base))
 			_foliage.append({"node":mesh, "transform":mesh.transform,
-				"pivot":Vector3(box.get_center().x, box.position.y, box.get_center().z),
-				"axis":axis, "phase":float(absi(label.hash()) % 6283) / 1000.0})
+				"pivot":pivot, "axis":axis, "phase":float(absi(wind_key.hash()) % 6283) / 1000.0})
 		if label in ["ALPHA_River_Water", "ALPHA_V3_Lake_Deep_To_Shallow", "ALPHA_Ocean_Presentation", "Harbour_Water", "A_Wash_Water"] and mesh.material_overlay == null:
 			var material := ShaderMaterial.new()
 			material.shader = WaterShader

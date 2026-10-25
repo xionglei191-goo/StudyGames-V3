@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_N",
+  "name": "鸟巢观察屋",
+  "blend": "assets/blender/interiors/landmark_N/landmark_N_v02.blend",
+  "glb": "assets/blender/interiors/landmark_N/landmark_N_v02.glb",
+  "preview": "assets/blender/interiors/landmark_N/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口观察守则枝牌",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Field_Notes_Face",
+      "memory_id": "memory_N_01",
+      "activity": "看安静观察图标"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧望远镜",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Birdwatch_Eyepiece",
+      "memory_id": "memory_N_02",
+      "activity": "寻找枝头小鸟"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央观察记录台",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Recording_Leg",
+      "memory_id": "memory_N_03",
+      "activity": "记录数量与动作"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧食水托架",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Feed_Water_Leg",
+      "memory_id": "memory_N_04",
+      "activity": "查看需补充的水"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口观察日记栏",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Bird_Diary_Face",
+      "memory_id": "memory_N_05",
+      "activity": "贴观察图片"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.65,
+    -7.65,
+    17.3,
+    15.3
+  ],
+  "triangles": 161760,
+  "glb_sha256": "96d3684d439eb115bfee24c2be7609bc6859b777e42a27f79213a208abc260f8",
+  "refinement_revision": "world-refinement-v1"
+}

@@ -4671,8 +4671,8 @@
       "english_word": "Home",
       "scene_level": 2,
       "parent_room": "village",
-      "theme": "穿过石径与花园，走到住宅正门；进门后选择七个房间，体验家里的日常生活。",
-      "composition": "完整的三体量住宅外观，坡屋顶、凹入门窗、石基座和木门廊面向小院；院门与唯一正门通过石径连接，正门打开七个房间的入户导览。",
+      "theme": "穿过石径与花园，走到住宅正门；进屋后沿门厅与走廊，走到各个房间。",
+      "composition": "完整的三体量住宅外观，坡屋顶、凹入门窗、石基座和木门廊面向小院；正门进入可行走的室内门厅，七扇房门连接各自生活空间。",
       "vocabulary_status": "home is textbook vocabulary; courtyard and floor plan are original spatial design",
       "camera_size": 40.0,
       "anchors": [
@@ -4829,7 +4829,7 @@
           "name": "家里的客厅",
           "english_word": "Living room",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "在沙发与茶几旁招待朋友，用家人相册和纪念架留住共同的生活。",
           "composition": "保留旧客厅的五个固定记忆位置、旅行册与朋友角；床角改为窗边阅读角，卧床移到独立卧室。",
           "vocabulary_status": "direct_room_name",
@@ -4976,8 +4976,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_gate"
           },
           "english_focus": [
             "Come in, please."
@@ -4989,7 +4989,7 @@
           "name": "温暖卧室",
           "english_word": "Bedroom",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "起床、整理床铺、挑选衣服、收拾书包与睡前阅读，各有固定位置。",
           "vocabulary_status": "direct_room_name",
           "camera_size": 23.0,
@@ -5135,8 +5135,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_bedroom_gate"
           },
           "english_focus": [
             "make the bed"
@@ -5148,7 +5148,7 @@
           "name": "明亮厨房",
           "english_word": "Kitchen",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "从食材柜到洗菜池、备餐台和灶台，体验准备一餐的顺序。",
           "vocabulary_status": "direct_room_name",
           "camera_size": 23.0,
@@ -5294,8 +5294,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_kitchen_gate"
           },
           "english_focus": [
             "I like rice, fish and vegetables."
@@ -5307,7 +5307,7 @@
           "name": "家庭餐厅",
           "english_word": "Dining area",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "围着一张家庭餐桌吃早餐、表达食物喜好、庆祝生日和节日。",
           "vocabulary_status": "authored_functional_space_for_textbook_meals",
           "camera_size": 23.0,
@@ -5453,8 +5453,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_dining_gate"
           },
           "english_focus": [
             "I have breakfast at half past seven."
@@ -5466,7 +5466,7 @@
           "name": "清爽浴室",
           "english_word": "Bathroom",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "洗手池、牙刷杯、浴缸、毛巾架与卫生间分区，练习日常清洁与节水。",
           "vocabulary_status": "direct_room_name",
           "camera_size": 23.0,
@@ -5612,8 +5612,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_bathroom_gate"
           },
           "english_focus": [
             "Dongdong, brush your teeth."
@@ -5625,7 +5625,7 @@
           "name": "窗边书房",
           "english_word": "Study area",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "阅读、收纳文具、使用电脑、做贺卡和安排计划，各有可辨认的物件。",
           "vocabulary_status": "authored_functional_space_for_textbook_reading_and_computer",
           "camera_size": 23.0,
@@ -5771,8 +5771,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_study_gate"
           },
           "english_focus": [
             "I can email my friends with the computer."
@@ -5784,7 +5784,7 @@
           "name": "家务阳台",
           "english_word": "Housework area",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "洗衣、晾晒、浇花、打扫与节水，共用一个明亮通风的家务区。",
           "vocabulary_status": "authored_functional_space_for_textbook_chores",
           "camera_size": 23.0,
@@ -5930,8 +5930,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_balcony_gate"
           },
           "english_focus": [
             "I'm washing my socks."
@@ -5941,7 +5941,8 @@
       ],
       "model_bindings": {
         "entry": "SG_HOUSE_ENTRY",
-        "entry_flow": "front_door_then_room_guide",
+        "entry_destination": "home_hall",
+        "entry_flow": "front_door_then_walkable_indoor_hall",
         "legacy_doors": {
           "home": "SG_DOOR_HOME",
           "home_bedroom": "SG_DOOR_HOME_BEDROOM",

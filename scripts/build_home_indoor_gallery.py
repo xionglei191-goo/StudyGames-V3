@@ -1,0 +1,47 @@
+"""Build the review page from verified native indoor-flow captures."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = "verification/home-indoor-v3/native/"
+VIEWS = [
+    ("02-hall-entry-play", "进门后的室内", "进入住宅正门后，人物站在玄关；点击地面或使用方向键可以继续走动。正常游玩镜头与界面。"),
+    ("01-yard-front-door", "小院里的正门", "沿小院石径走到住宅正门，按 E 进入门厅。正常游玩镜头与界面。"),
+    ("06-hall-bedroom-door", "走到卧室门口", "角色从客厅门前沿走廊走到卧室门前，按 E 进入卧室。正常游玩镜头与界面。"),
+    ("07-bedroom-entered", "进入卧室", "经过房门进入原有卧室，继续使用房间里的生活物件。正常游玩镜头与界面。"),
+    ("08-hall-return-from-bedroom", "从卧室出来", "从卧室出口回到室内对应房门前，可以继续沿走廊去其他房间。正常游玩镜头与界面。"),
+    ("09-hall-kitchen-door", "继续走到厨房", "从卧室门前走到厨房门口，路线经过室内中央通口。正常游玩镜头与界面。"),
+    ("03-hall-overview", "完整门厅总览", "Godot 原生检视画面：34 米正交镜头，隐藏界面，用于查看完整布局。此项单独使用检视镜头。"),
+]
+
+native = ROOT / "docs" / BASE
+for view, _, _ in VIEWS:
+    assert (native / f"{view}.png").is_file(), view
+report = json.loads((native / "report.json").read_text(encoding="utf-8"))
+assert report["passed"] and report["complete"] and len(report["captures"]) == 13
+buttons = "\n".join(
+    f'<button data-view="{view}" aria-pressed="{str(i == 0).lower()}">{label}</button>'
+    for i, (view, label, _) in enumerate(VIEWS)
+)
+captions = json.dumps({view: caption for view, _, caption in VIEWS}, ensure_ascii=False)
+
+template = '''<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>字母岛 · 进门以后，在家里走走</title>
+<style>
+:root{color-scheme:light;--ink:#31453d;--muted:#67786d;--green:#557c69;--line:#d6ddce;--paper:#fffdf5}*{box-sizing:border-box}body{margin:0;background:#f5f3e9;color:var(--ink);font:16px/1.7 "Microsoft YaHei",system-ui,sans-serif}main{max-width:1480px;margin:auto;padding:42px 4vw 60px}header{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:26px}.eyebrow{font-size:12px;letter-spacing:.16em;color:var(--green)}h1{font-size:clamp(30px,4vw,50px);line-height:1.3;margin:12px 0 18px}h2{font-size:26px;line-height:1.4;margin:0 0 14px}p{margin:0 0 16px}.intro{max-width:760px;color:#596e60}.tag{font-size:13px;white-space:nowrap;border:1px solid var(--line);border-radius:6px;padding:9px 13px}a{color:#3d7256}nav{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}button{border:1px solid #cbd6c6;background:var(--paper);color:var(--ink);border-radius:7px;padding:10px 15px;font:inherit;cursor:pointer}button[aria-pressed=true]{color:#fff;background:var(--green);border-color:var(--green)}button:focus-visible,a:focus-visible{outline:3px solid #bb8a3d;outline-offset:4px}.hero{width:100%;aspect-ratio:8/5;object-fit:contain;background:#dedccf;display:block;border-radius:8px}.caption{font-size:13px;color:var(--muted);margin:9px 0 30px}.steps{display:flex;gap:12px;align-items:center;flex-wrap:wrap;border-block:1px solid var(--line);padding:24px 0;margin:34px 0}.steps b{background:var(--paper);padding:9px 18px;border:1px solid var(--line);border-radius:6px}.details{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:center}.details img,.two img{width:100%;display:block;border-radius:7px;aspect-ratio:8/5;object-fit:contain;background:#dedccf}.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:34px 0}.two h3{font-size:17px;margin:0 0 10px}.notes{font-size:14px;color:#637264;max-width:780px}.links{display:flex;gap:20px;flex-wrap:wrap;font-size:14px;border-top:1px solid var(--line);padding-top:24px;margin-top:30px}@media(max-width:800px){header{display:block}.tag{display:inline-block}.two,.details{grid-template-columns:1fr}main{padding:24px 18px}button{font-size:14px;padding:8px 12px}.steps{gap:7px}.steps b{padding:6px 10px}}
+</style></head><body><main>
+<header><div><div class="eyebrow">ALPHABET ISLAND / HOME INDOOR V3</div><h1>进门以后，在家里走走。</h1><p class="intro">推开小院里的家门，来到铺着木地板的玄关。沿青绿色地毯走进走廊，找到客厅、卧室、厨房、餐厅、浴室、书房和阳台各自的房门。</p></div><span class="tag">已接入游戏 · 原生实拍</span></header>
+<nav aria-label="查看实际进屋过程">__BUTTONS__</nav>
+<a id="full" href="verification/home-indoor-v3/native/02-hall-entry-play.png" target="_blank"><img id="hero" class="hero" src="verification/home-indoor-v3/native/02-hall-entry-play.png" alt="进入家门后的室内门厅与走廊"></a><p class="caption" id="caption" aria-live="polite">进入住宅正门后，人物站在玄关，可以继续在屋内走动。</p>
+<div class="steps"><b>小院正门</b><span>→</span><b>室内玄关</b><span>→</span><b>沿走廊走动</b><span>→</span><b>房门前按 E</b><span>→</span><b>进入房间</b></div>
+<section class="details"><div><h2>每扇门，都能走过去。</h2><p>点击地面或使用方向键走动；到房门前按 <b>E</b>，也可以点击交互提示进入房间。地图上的房间名称会引导人物步行到对应房门。</p><p>从房间出来，回到同一扇门前。走到玄关出口，再返回小院正门；经过院门可以回字母岛。</p><p class="notes">右侧为 960×640 窗口中的实际室内地图，捕获的游戏画面为 960×600。七扇房门与小院出口都能看见并操作。</p></div><a href="verification/home-indoor-v3/native/11-hall-map-960.png" target="_blank"><img src="verification/home-indoor-v3/native/11-hall-map-960.png" alt="室内地图上的七个房门与小院出口" loading="lazy"></a></section>
+<section class="two"><div><h3>走到客厅门口</h3><a href="verification/home-indoor-v3/native/05-hall-living-door.png" target="_blank"><img src="verification/home-indoor-v3/native/05-hall-living-door.png" alt="人物实际走到客厅门前" loading="lazy"></a></div><div><h3>从卧室回到走廊</h3><a href="verification/home-indoor-v3/native/08-hall-return-from-bedroom.png" target="_blank"><img src="verification/home-indoor-v3/native/08-hall-return-from-bedroom.png" alt="人物离开卧室后站在对应房门前" loading="lazy"></a></div></section>
+<p class="notes">门厅包含鞋凳、挂衣、镜子、伞篮、家庭照片、长椅和植物。原有七个房间继续使用，家庭的 40 处生活位置和 8 项家务流程已经完成受影响范围回归。</p>
+<div class="links"><a href="verification/home-indoor-v3/README.md">验证记录</a><a href="verification/home-indoor-v3/home-indoor-report.json">七个房间往返与家务检查</a><a href="verification/home-indoor-v3/native/report.json">13 张原生截图记录</a><a href="verification/home-indoor-v3/asset-report.json">模型与文件保护</a><a href="../assets/blender/interiors/home_hall/preview_v01.png">Blender 门厅预览</a><a href="home-exterior-gallery.html">住宅外观历史图册</a><a href="home-hierarchy-gallery.html">原三级房间图册</a></div>
+<p class="caption">本页游戏画面来自 Godot 4.7.2 原生运行。门厅为原创 Blender 模型；“完整门厅总览”单独使用检视镜头，其余画面保留正常游玩镜头。验证覆盖本次改动，未运行整个游戏的全量测试。</p></main>
+<script>const base='verification/home-indoor-v3/native/';const captions=__CAPTIONS__;function show(view){const src=base+view+'.png';document.getElementById('hero').src=src;document.getElementById('hero').alt=captions[view];document.getElementById('full').href=src;document.getElementById('caption').textContent=captions[view];document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)))}document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>show(b.dataset.view));show('02-hall-entry-play');</script></body></html>'''
+
+output = ROOT / "docs/home-indoor-gallery.html"
+output.write_text(template.replace("__BUTTONS__", buttons).replace("__CAPTIONS__", captions), encoding="utf-8")
+print(output)

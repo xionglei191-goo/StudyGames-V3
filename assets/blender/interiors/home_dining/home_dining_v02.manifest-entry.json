@@ -1,0 +1,154 @@
+{
+  "blend": "assets/blender/interiors/home_dining/home_dining_v02.blend",
+  "glb": "assets/blender/interiors/home_dining/home_dining_v02.glb",
+  "preview": "assets/blender/interiors/home_dining/preview_v02.png",
+  "room_id": "home_dining",
+  "name": "家庭餐厅",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "早餐边柜",
+      "position_blender": [
+        -4.8,
+        2.6,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        -2.6
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_dining_01",
+      "activity": "看时钟准备早餐，讲讲自己的早餐时间。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "水果分享台",
+      "position_blender": [
+        3.2,
+        -4.8,
+        0.0
+      ],
+      "position_godot": [
+        3.2,
+        0.0,
+        4.8
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_dining_02",
+      "activity": "看看水果，说说自己喜欢哪一种。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "家庭餐桌",
+      "position_blender": [
+        0.0,
+        -1.1,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        1.1
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_dining_03",
+      "activity": "为家人摆好餐盘，再一起吃饭。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "生日点心桌",
+      "position_blender": [
+        -3.2,
+        -4.3,
+        0.0
+      ],
+      "position_godot": [
+        -3.2,
+        0.0,
+        4.3
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_dining_04",
+      "activity": "摆放生日蛋糕和贺卡，向家人送上祝福。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "节日餐边架",
+      "position_blender": [
+        4.8,
+        3.0,
+        0.0
+      ],
+      "position_godot": [
+        4.8,
+        0.0,
+        -3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_dining_05",
+      "activity": "观察节日餐具，聊聊一家人团聚的晚餐。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 97532,
+  "glb_sha256": "cd90402a311a162fb8079b2e52767de730877f056b5c0c1eca60723642d9b809",
+  "refinement_revision": "world-refinement-v1"
+}

@@ -1,0 +1,278 @@
+{
+  "captures": [
+    {
+      "camera": {
+        "basis_x": [
+          0.845488905906677,
+          0.0,
+          -0.533993005752563
+        ],
+        "basis_y": [
+          -0.322161912918091,
+          0.797508597373962,
+          -0.510089695453644
+        ],
+        "basis_z": [
+          0.425864070653915,
+          0.6033074259758,
+          0.674284756183624
+        ],
+        "position": [
+          12.0,
+          17.7999992370605,
+          19.2999992370605
+        ],
+        "projection": 1,
+        "size": 11.0
+      },
+      "enabled": true,
+      "id": "on-1.15-a",
+      "image": "F:\\LoveStudy\\docs\\verification\\visual-refinement\\ssao-probe-unfrozen\\home-detail-on-1.15-a.png",
+      "image_sha256": "50fc545c7e1aff7d45aa6348f83cf21f57aa439ddf155784e83339bd9684ffbf",
+      "intensity": 1.14999997615814,
+      "world_time": 1.26666666666667
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.845488905906677,
+          0.0,
+          -0.533993005752563
+        ],
+        "basis_y": [
+          -0.322161912918091,
+          0.797508597373962,
+          -0.510089695453644
+        ],
+        "basis_z": [
+          0.425864070653915,
+          0.6033074259758,
+          0.674284756183624
+        ],
+        "position": [
+          12.0,
+          17.7999992370605,
+          19.2999992370605
+        ],
+        "projection": 1,
+        "size": 11.0
+      },
+      "enabled": true,
+      "id": "on-1.15-b",
+      "image": "F:\\LoveStudy\\docs\\verification\\visual-refinement\\ssao-probe-unfrozen\\home-detail-on-1.15-b.png",
+      "image_sha256": "74567f5bf87a3b075fbaa082734b2459d4493b9c44fef507e8360fc8cfb142b2",
+      "intensity": 1.14999997615814,
+      "world_time": 1.46666666666667
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.845488905906677,
+          0.0,
+          -0.533993005752563
+        ],
+        "basis_y": [
+          -0.322161912918091,
+          0.797508597373962,
+          -0.510089695453644
+        ],
+        "basis_z": [
+          0.425864070653915,
+          0.6033074259758,
+          0.674284756183624
+        ],
+        "position": [
+          12.0,
+          17.7999992370605,
+          19.2999992370605
+        ],
+        "projection": 1,
+        "size": 11.0
+      },
+      "enabled": false,
+      "id": "off",
+      "image": "F:\\LoveStudy\\docs\\verification\\visual-refinement\\ssao-probe-unfrozen\\home-detail-off.png",
+      "image_sha256": "0131e34ca98bbbc4268bd4a1311fd6a18e51a03f4ed88bbcde0f4010528a8a1d",
+      "intensity": 1.14999997615814,
+      "world_time": 1.66666666666667
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.845488905906677,
+          0.0,
+          -0.533993005752563
+        ],
+        "basis_y": [
+          -0.322161912918091,
+          0.797508597373962,
+          -0.510089695453644
+        ],
+        "basis_z": [
+          0.425864070653915,
+          0.6033074259758,
+          0.674284756183624
+        ],
+        "position": [
+          12.0,
+          17.7999992370605,
+          19.2999992370605
+        ],
+        "projection": 1,
+        "size": 11.0
+      },
+      "enabled": true,
+      "id": "on-0.5",
+      "image": "F:\\LoveStudy\\docs\\verification\\visual-refinement\\ssao-probe-unfrozen\\home-detail-on-0.5.png",
+      "image_sha256": "0a18f0b25465e12e2a7327be29ee905e92682a1d0ecca895be2cf889ab6465d8",
+      "intensity": 0.5,
+      "world_time": 1.86666666666666
+    }
+  ],
+  "checks": [
+    {
+      "detail": "user://validation-41556.json",
+      "id": "isolated_save",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "home_ready",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "saved/on-1.15-a",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "camera_frozen/on-1.15-a",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "world_clock_frozen/on-1.15-a",
+      "passed": false
+    },
+    {
+      "detail": null,
+      "id": "saved/on-1.15-b",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "camera_frozen/on-1.15-b",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "world_clock_frozen/on-1.15-b",
+      "passed": false
+    },
+    {
+      "detail": null,
+      "id": "saved/off",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "camera_frozen/off",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "world_clock_frozen/off",
+      "passed": false
+    },
+    {
+      "detail": null,
+      "id": "saved/on-0.5",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "camera_frozen/on-0.5",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "world_clock_frozen/on-0.5",
+      "passed": false
+    },
+    {
+      "detail": null,
+      "id": "production_files_unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "production_sources_unchanged",
+      "passed": true
+    },
+    {
+      "detail": 4,
+      "id": "all_four_variants_captured",
+      "passed": true
+    }
+  ],
+  "display_server": "Windows",
+  "frozen_state": {
+    "camera": {
+      "basis_x": [
+        0.845488905906677,
+        0.0,
+        -0.533993005752563
+      ],
+      "basis_y": [
+        -0.322161912918091,
+        0.797508597373962,
+        -0.510089695453644
+      ],
+      "basis_z": [
+        0.425864070653915,
+        0.6033074259758,
+        0.674284756183624
+      ],
+      "position": [
+        12.0,
+        17.7999992370605,
+        19.2999992370605
+      ],
+      "projection": 1,
+      "size": 11.0
+    },
+    "detail": 0.5,
+    "frozen_scope": "Entire game node subtree processing disabled after fixed day, clear weather, reduced motion and recorded home-detail camera. SceneTree renderer remains active.",
+    "game_process_mode": 4,
+    "light_affect": 0.0799999982118607,
+    "power": 1.29999995231628,
+    "radius": 0.649999976158142,
+    "world_time": 1.05
+  },
+  "isolated_save": "user://validation-41556.json",
+  "production_after": {
+    "island-save-v1.json": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "island-save-v1.json.bak": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "welcome-photo-44948-21463.png": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+    "welcome-photo-7100-20320.png": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585"
+  },
+  "production_before": {
+    "island-save-v1.json": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "island-save-v1.json.bak": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "welcome-photo-44948-21463.png": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+    "welcome-photo-7100-20320.png": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585"
+  },
+  "renderer": "gl_compatibility",
+  "result": "FAIL",
+  "source_sha256": {
+    "res://assets/interiors/home.glb": "e0bdab99ed67b0745fc34e40bf4121d53416bccb21a70354604a3da2a3ecf25d",
+    "res://assets/interiors/home_estate.glb": "c0fb8452aca795da35a03e8e46668848db7c33ef0424dfa89146b0c854ea6195",
+    "res://project.godot": "a3c79c67946924c96acb1750aabfd29b383a3774f4976908f883e26f3bb38f72",
+    "res://scripts/home_visual_refinement.gd": "9863497311671d66a8f1350a0cc483cd9c1c2b9e2efa1c38bc8708166a731c7c",
+    "res://scripts/living_world.gd": "aa21662d4fea5dff9105e4003b572f09e631b197119c85f0a5458f611aa8deab",
+    "res://scripts/world_art.gd": "b377d66dc743476bd8156105dcf7b7dec9c41fcf2ecb88d61c57e07a9761bbeb",
+    "res://scripts/world_builder.gd": "87a30f804faaf8e20a249d3f5e66827ea4a60443794a54933ab1b1f26d9c0f58"
+  },
+  "archive_note": "First probe failed world-clock freeze checks because LivingWorld has PROCESS_MODE_ALWAYS. Retained for diagnosis; strict A/B evidence is in ssao-probe/."
+}

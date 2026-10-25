@@ -1,0 +1,154 @@
+{
+  "blend": "assets/blender/interiors/home_balcony/home_balcony_v02.blend",
+  "glb": "assets/blender/interiors/home_balcony/home_balcony_v02.glb",
+  "preview": "assets/blender/interiors/home_balcony/preview_v02.png",
+  "room_id": "home_balcony",
+  "name": "家务阳台",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "洗衣篮与晾衣架",
+      "position_blender": [
+        -4.8,
+        2.3,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        -2.3
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_balcony_01",
+      "activity": "将洗好的袜子挂好，再整理衣篮。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "盆栽照料台",
+      "position_blender": [
+        4.8,
+        2.8,
+        0.0
+      ],
+      "position_godot": [
+        4.8,
+        0.0,
+        -2.8
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_balcony_02",
+      "activity": "观察盆栽，学着给植物浇水。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "窗户清洁台",
+      "position_blender": [
+        0.0,
+        4.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -4.5
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_balcony_03",
+      "activity": "擦一擦窗户，看看家人在做什么。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "扫帚与簸箕",
+      "position_blender": [
+        -3.3,
+        -4.2,
+        0.0
+      ],
+      "position_godot": [
+        -3.3,
+        0.0,
+        4.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_balcony_04",
+      "activity": "找到扫帚，把地面的小纸屑扫起来。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "节水储物角",
+      "position_blender": [
+        3.2,
+        -3.8,
+        0.0
+      ],
+      "position_godot": [
+        3.2,
+        0.0,
+        3.8
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_balcony_05",
+      "activity": "洗衣后关好水，收起用品。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 102572,
+  "glb_sha256": "615f26d679f4dc869a545fa55340a3456484107a814368fc2518eb57e3768a1a",
+  "refinement_revision": "world-refinement-v1"
+}

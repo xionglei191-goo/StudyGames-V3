@@ -1,0 +1,466 @@
+{
+  "room_id": "home_hall",
+  "anchors": [
+    {
+      "name": "SG_DOOR_HOME_STUDY",
+      "label": "走进书房",
+      "position_blender": [
+        -10.5,
+        6.0,
+        0.0
+      ],
+      "position_godot": [
+        -10.5,
+        0.0,
+        -6.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME_BEDROOM",
+      "label": "走进卧室",
+      "position_blender": [
+        -3.5,
+        6.0,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        -6.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME_BATHROOM",
+      "label": "走进浴室",
+      "position_blender": [
+        3.5,
+        6.0,
+        0.0
+      ],
+      "position_godot": [
+        3.5,
+        0.0,
+        -6.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME_BALCONY",
+      "label": "走进家务阳台",
+      "position_blender": [
+        10.5,
+        6.0,
+        0.0
+      ],
+      "position_godot": [
+        10.5,
+        0.0,
+        -6.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME",
+      "label": "走进客厅",
+      "position_blender": [
+        -10.5,
+        -3.95,
+        0.0
+      ],
+      "position_godot": [
+        -10.5,
+        0.0,
+        3.95
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME_DINING",
+      "label": "走进餐厅",
+      "position_blender": [
+        3.5,
+        -3.95,
+        0.0
+      ],
+      "position_godot": [
+        3.5,
+        0.0,
+        3.95
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME_KITCHEN",
+      "label": "走进厨房",
+      "position_blender": [
+        10.5,
+        -3.95,
+        0.0
+      ],
+      "position_godot": [
+        10.5,
+        0.0,
+        3.95
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "从家门进入门厅",
+      "position_blender": [
+        -3.5,
+        -7.8,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        7.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回小院",
+      "position_blender": [
+        -3.5,
+        -8.8,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        8.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "colliders": [
+    {
+      "name": "SG_COLLIDER_Hall_Rear_Wall",
+      "aabb_blender": [
+        -14.0,
+        7.989999771118164,
+        0.0,
+        14.0,
+        8.329999923706055,
+        3.5999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Side_Boundary_-1",
+      "aabb_blender": [
+        -14.0600004196167,
+        -10.0,
+        0.0,
+        -13.779999732971191,
+        10.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Side_Boundary_1",
+      "aabb_blender": [
+        13.779999732971191,
+        -10.0,
+        0.0,
+        14.0600004196167,
+        10.0,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Front_Left",
+      "aabb_blender": [
+        -13.870000839233398,
+        -10.0,
+        0.0,
+        -5.070000171661377,
+        -9.719999313354492,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Front_Right",
+      "aabb_blender": [
+        -2.059999942779541,
+        -10.0,
+        0.0,
+        13.799999237060547,
+        -9.719999313354492,
+        2.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Front_Wing_Left",
+      "aabb_blender": [
+        -13.779999732971191,
+        -2.1700000762939453,
+        0.0,
+        -6.09999942779541,
+        -1.8700000047683716,
+        0.9599999785423279
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Wing_Return",
+      "aabb_blender": [
+        -13.889999389648438,
+        -2.0299999713897705,
+        0.0,
+        -13.670000076293945,
+        0.20999997854232788,
+        1.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Wing_Return.001",
+      "aabb_blender": [
+        -6.210000038146973,
+        -2.0299999713897705,
+        0.0,
+        -5.989999771118164,
+        0.20999997854232788,
+        1.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Front_Wing_Right",
+      "aabb_blender": [
+        -0.9000000953674316,
+        -2.1700000762939453,
+        0.0,
+        13.780000686645508,
+        -1.8700000047683716,
+        0.9599999785423279
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Wing_Return.002",
+      "aabb_blender": [
+        -1.0099999904632568,
+        -2.0299999713897705,
+        0.0,
+        -0.7899999618530273,
+        0.20999997854232788,
+        1.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Wing_Return.003",
+      "aabb_blender": [
+        13.670000076293945,
+        -2.0299999713897705,
+        0.0,
+        13.889999389648438,
+        0.20999997854232788,
+        1.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Door_home_study",
+      "aabb_blender": [
+        -11.800000190734863,
+        7.570000171661377,
+        0.0,
+        -9.199999809265137,
+        7.849999904632568,
+        3.0999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Door_home_bedroom",
+      "aabb_blender": [
+        -4.800000190734863,
+        7.570000171661377,
+        0.0,
+        -2.200000047683716,
+        7.849999904632568,
+        3.0999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Door_home_bathroom",
+      "aabb_blender": [
+        2.200000047683716,
+        7.570000171661377,
+        0.0,
+        4.800000190734863,
+        7.849999904632568,
+        3.0999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Door_home_balcony",
+      "aabb_blender": [
+        9.199999809265137,
+        7.570000171661377,
+        0.0,
+        11.800000190734863,
+        7.849999904632568,
+        3.0999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Door_home",
+      "aabb_blender": [
+        -11.800000190734863,
+        -2.380000114440918,
+        0.0,
+        -9.199999809265137,
+        -2.0999999046325684,
+        3.0999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Door_home_dining",
+      "aabb_blender": [
+        2.200000047683716,
+        -2.380000114440918,
+        0.0,
+        4.800000190734863,
+        -2.0999999046325684,
+        3.0999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Door_home_kitchen",
+      "aabb_blender": [
+        9.199999809265137,
+        -2.380000114440918,
+        0.0,
+        11.800000190734863,
+        -2.0999999046325684,
+        3.0999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Entry_Shoe_Bench",
+      "aabb_blender": [
+        -9.885000228881836,
+        -7.680000305175781,
+        0.0,
+        -6.715000152587891,
+        -6.619999885559082,
+        0.9800000190734863
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Entry_Coat_Backboard",
+      "aabb_blender": [
+        -9.880000114440918,
+        -6.829999923706055,
+        0.0,
+        -6.720000267028809,
+        -6.630000114440918,
+        2.5999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Entry_Full_Length_Mirror",
+      "aabb_blender": [
+        -12.225000381469727,
+        -7.619999885559082,
+        0.0,
+        -10.975000381469727,
+        -6.920000076293945,
+        2.5999999046325684
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Family_Console",
+      "aabb_blender": [
+        -1.1100000143051147,
+        6.690000057220459,
+        -0.0599999725818634,
+        1.1100000143051147,
+        7.429999828338623,
+        1.0
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Window_Seat",
+      "aabb_blender": [
+        5.375,
+        -7.524999618530273,
+        -0.06000000238418579,
+        8.725000381469727,
+        -6.875,
+        0.6399999856948853
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Window_End_Table",
+      "aabb_blender": [
+        9.140000343322754,
+        -7.574999809265137,
+        -0.06000000238418579,
+        9.960000038146973,
+        -6.824999809265137,
+        0.8100000023841858
+      ]
+    },
+    {
+      "name": "SG_COLLIDER_Hall_Family_Gallery",
+      "aabb_blender": [
+        1.2500001192092896,
+        -7.539999961853027,
+        0.0,
+        3.5500001907348633,
+        -7.260000228881836,
+        3.0
+      ]
+    }
+  ],
+  "bounds": [
+    -14.0,
+    -10.0,
+    28.0,
+    20.0
+  ],
+  "mesh_objects": 744,
+  "missing_external_textures": [],
+  "floor_nodes": [
+    "SG_FLOOR_Main"
+  ],
+  "required_nodes": [
+    "SG_SPAWN",
+    "SG_EXIT",
+    "SG_DOOR_HOME",
+    "SG_DOOR_HOME_BEDROOM",
+    "SG_DOOR_HOME_KITCHEN",
+    "SG_DOOR_HOME_DINING",
+    "SG_DOOR_HOME_BATHROOM",
+    "SG_DOOR_HOME_STUDY",
+    "SG_DOOR_HOME_BALCONY"
+  ],
+  "glb_bytes": 6798512,
+  "glb_node_count": 760,
+  "triangles_instanced": 172236,
+  "embedded_images": 0,
+  "missing_nodes": [],
+  "sha256": "2d14671f9248afcf43fa9090b142d737be77bbb90217ac7113c29b80593ab6b7",
+  "rendered": true,
+  "source_blend": "assets/blender/interiors/home_hall/home_hall_v01.blend",
+  "source_blend_preserved": false
+}

@@ -1,0 +1,359 @@
+{
+  "captures": [
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.37952071428299,
+          0.7745321393013,
+          -0.506027638912201
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.950080871582,
+          28.0499992370605
+        ],
+        "projection": 1,
+        "size": 31.2000007629395
+      },
+      "enabled": true,
+      "id": "current-cascades",
+      "image": "F:/LoveStudy/game/../docs/verification/visual-refinement/shadow-mode-probe/home_estate-production-current-cascades.png",
+      "image_sha256": "f895ad9bf10c5884ac3d5bb84d4387915ad617d349fba9eec64850b3b8d28fb1",
+      "intensity": 0.550000011920929,
+      "shadow_bias": 0.100000001490116,
+      "shadow_enabled": true,
+      "shadow_mode": 2,
+      "shadow_normal_bias": 1.0,
+      "world_time": 1.70425962962963
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.37952071428299,
+          0.7745321393013,
+          -0.506027638912201
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.950080871582,
+          28.0499992370605
+        ],
+        "projection": 1,
+        "size": 31.2000007629395
+      },
+      "enabled": true,
+      "id": "orthogonal",
+      "image": "F:/LoveStudy/game/../docs/verification/visual-refinement/shadow-mode-probe/home_estate-production-orthogonal.png",
+      "image_sha256": "6f7a883dea32b408c81aa95c129f944d8f05c4799117711470a84becd9f5a711",
+      "intensity": 0.550000011920929,
+      "shadow_bias": 0.100000001490116,
+      "shadow_enabled": true,
+      "shadow_mode": 0,
+      "shadow_normal_bias": 1.0,
+      "world_time": 1.70425962962963
+    }
+  ],
+  "checks": [
+    {
+      "detail": "user://validation-19412.json",
+      "id": "isolated_save",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "target_room_ready",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "camera_matches_original_baseline",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "saved/current-cascades",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "camera_frozen/current-cascades",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "world_clock_frozen/current-cascades",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "saved/orthogonal",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "camera_frozen/orthogonal",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "world_clock_frozen/orthogonal",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "production_files_unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "production_sources_unchanged",
+      "passed": true
+    },
+    {
+      "detail": 2,
+      "id": "all_variants_captured",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "performance_sampled_all_variants",
+      "passed": true
+    }
+  ],
+  "display_server": "Windows",
+  "engine_arguments": [
+    "--script",
+    "res://tests/probe_refinement_shadow_mode.gd"
+  ],
+  "frozen_state": {
+    "camera": {
+      "basis_x": [
+        0.800000011920929,
+        0.0,
+        -0.599999964237213
+      ],
+      "basis_y": [
+        -0.37952071428299,
+        0.7745321393013,
+        -0.506027638912201
+      ],
+      "basis_z": [
+        0.464719265699387,
+        0.632534563541412,
+        0.619625747203827
+      ],
+      "position": [
+        18.0,
+        24.950080871582,
+        28.0499992370605
+      ],
+      "projection": 1,
+      "size": 31.2000007629395
+    },
+    "camera_id": "home_estate-production",
+    "detail": 0.5,
+    "frozen_scope": "Entire game node subtree processing disabled after fixed day, clear weather and reduced motion at recorded camera. SceneTree renderer remains active.",
+    "game_process_mode": 4,
+    "light_affect": 0.0,
+    "power": 1.5,
+    "radius": 0.649999976158142,
+    "room": "home_estate",
+    "shadow_bias": 0.100000001490116,
+    "shadow_enabled": true,
+    "shadow_mode": 2,
+    "shadow_normal_bias": 1.0,
+    "world_time": 1.70425962962963
+  },
+  "isolated_save": "user://validation-19412.json",
+  "performance_samples": [
+    {
+      "additional_warmup_seconds": 3.0,
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.37952071428299,
+          0.7745321393013,
+          -0.506027638912201
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.950080871582,
+          28.0499992370605
+        ],
+        "projection": 1,
+        "size": 31.2000007629395
+      },
+      "draw_calls_last_frame": 5866.0,
+      "engine_physics_monitor_ms": {
+        "max": 0.058,
+        "mean": 0.0473266666666666,
+        "min": 0.042,
+        "p50": 0.047,
+        "p95": 0.058
+      },
+      "engine_process_monitor_ms": {
+        "max": 25.089,
+        "mean": 19.1627,
+        "min": 18.337,
+        "p50": 18.932,
+        "p95": 19.746
+      },
+      "engine_smoothed_fps": {
+        "max": 64.0,
+        "mean": 62.6966666666667,
+        "min": 61.0,
+        "p50": 63.0,
+        "p95": 64.0
+      },
+      "render_video_memory_bytes": 265600872.0,
+      "rendered_objects_last_frame": 5917.0,
+      "room": "home_estate",
+      "sample_process_frames": 300,
+      "scope": "One local native 1440x900 sample scene, fixed sunny daytime and reduced motion at default spawn. Not a device minimum, broad gameplay benchmark, or GPU-only timing. Wall frame intervals include presentation pacing. Godot process/physics monitors update coarsely and are not OS CPU-exclusive durations; simulation delta is separate.",
+      "simulation_delta_ms": {
+        "max": 25.2,
+        "mean": 16.1077163492064,
+        "min": 14.8947777777779,
+        "p50": 15.7964444444444,
+        "p95": 17.847
+      },
+      "static_memory_bytes": 238506170.0,
+      "variant": "current-cascades",
+      "wall_effective_fps": 62.1311223490203,
+      "wall_elapsed_seconds": 4.828498,
+      "wall_frame_ms": {
+        "max": 25.215,
+        "mean": 16.0949566666667,
+        "min": 13.863,
+        "p50": 15.602,
+        "p95": 19.115
+      },
+      "warmup_physics_frames": 60
+    },
+    {
+      "additional_warmup_seconds": 3.0,
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.37952071428299,
+          0.7745321393013,
+          -0.506027638912201
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.950080871582,
+          28.0499992370605
+        ],
+        "projection": 1,
+        "size": 31.2000007629395
+      },
+      "draw_calls_last_frame": 4512.0,
+      "engine_physics_monitor_ms": {
+        "max": 0.108,
+        "mean": 0.100396666666667,
+        "min": 0.09,
+        "p50": 0.099,
+        "p95": 0.108
+      },
+      "engine_process_monitor_ms": {
+        "max": 18.664,
+        "mean": 16.1643833333333,
+        "min": 14.761,
+        "p50": 16.614,
+        "p95": 16.951
+      },
+      "engine_smoothed_fps": {
+        "max": 75.0,
+        "mean": 74.37,
+        "min": 71.0,
+        "p50": 74.0,
+        "p95": 75.0
+      },
+      "render_video_memory_bytes": 265600872.0,
+      "rendered_objects_last_frame": 4563.0,
+      "room": "home_estate",
+      "sample_process_frames": 300,
+      "scope": "One local native 1440x900 sample scene, fixed sunny daytime and reduced motion at default spawn. Not a device minimum, broad gameplay benchmark, or GPU-only timing. Wall frame intervals include presentation pacing. Godot process/physics monitors update coarsely and are not OS CPU-exclusive durations; simulation delta is separate.",
+      "simulation_delta_ms": {
+        "max": 15.6275555555558,
+        "mean": 13.6275471604938,
+        "min": 12.425,
+        "p50": 13.3333333333333,
+        "p95": 14.8148148148148
+      },
+      "static_memory_bytes": 238519638.0,
+      "variant": "orthogonal",
+      "wall_effective_fps": 73.4386214689487,
+      "wall_elapsed_seconds": 4.085044,
+      "wall_frame_ms": {
+        "max": 18.78,
+        "mean": 13.6167833333333,
+        "min": 11.594,
+        "p50": 13.408,
+        "p95": 15.511
+      },
+      "warmup_physics_frames": 60
+    }
+  ],
+  "production_after": {
+    "island-save-v1.json": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "island-save-v1.json.bak": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "welcome-photo-44948-21463.png": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+    "welcome-photo-7100-20320.png": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585"
+  },
+  "production_before": {
+    "island-save-v1.json": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "island-save-v1.json.bak": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "welcome-photo-44948-21463.png": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+    "welcome-photo-7100-20320.png": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585"
+  },
+  "renderer": "gl_compatibility",
+  "result": "PASS",
+  "source_sha256": {
+    "res://assets/interiors/home.glb": "e0bdab99ed67b0745fc34e40bf4121d53416bccb21a70354604a3da2a3ecf25d",
+    "res://assets/interiors/home_estate.glb": "c0fb8452aca795da35a03e8e46668848db7c33ef0424dfa89146b0c854ea6195",
+    "res://project.godot": "a3c79c67946924c96acb1750aabfd29b383a3774f4976908f883e26f3bb38f72",
+    "res://scripts/home_visual_refinement.gd": "47cda0d076bb41213c647f6d20e7e8729783ebbea5b38b68f5d6992a03f1ab6a",
+    "res://scripts/living_world.gd": "aa21662d4fea5dff9105e4003b572f09e631b197119c85f0a5458f611aa8deab",
+    "res://scripts/world_art.gd": "b377d66dc743476bd8156105dcf7b7dec9c41fcf2ecb88d61c57e07a9761bbeb",
+    "res://scripts/world_builder.gd": "87a30f804faaf8e20a249d3f5e66827ea4a60443794a54933ab1b1f26d9c0f58"
+  }
+}

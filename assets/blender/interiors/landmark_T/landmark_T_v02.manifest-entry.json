@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_T",
+  "name": "火车车站",
+  "blend": "assets/blender/interiors/landmark_T/landmark_T_v02.blend",
+  "glb": "assets/blender/interiors/landmark_T/landmark_T_v02.glb",
+  "preview": "assets/blender/interiors/landmark_T/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口时刻牌",
+      "position_blender": [
+        -4.2,
+        -2.992,
+        0.0
+      ],
+      "position_godot": [
+        -4.2,
+        0.0,
+        2.992
+      ],
+      "associated_prop": "Locus_01_Timetable_Face",
+      "memory_id": "memory_T_01",
+      "activity": "看出发安排"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧售票窗",
+      "position_blender": [
+        -5.76,
+        -0.616,
+        0.0
+      ],
+      "position_godot": [
+        -5.76,
+        0.0,
+        0.616
+      ],
+      "associated_prop": "Locus_02_Ticket_Window_Cabinet",
+      "memory_id": "memory_T_02",
+      "activity": "说明目的地"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央候车站台",
+      "position_blender": [
+        0.0,
+        -0.264,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.264
+      ],
+      "associated_prop": "Locus_03_Waiting_Platform_Back",
+      "memory_id": "memory_T_03",
+      "activity": "找到候车位"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧行李架",
+      "position_blender": [
+        5.64,
+        -0.616,
+        0.0
+      ],
+      "position_godot": [
+        5.64,
+        0.0,
+        0.616
+      ],
+      "associated_prop": "Locus_04_Luggage_Back",
+      "memory_id": "memory_T_04",
+      "activity": "放好并辨认行李"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口到站屏",
+      "position_blender": [
+        5.52,
+        -3.432,
+        0.0
+      ],
+      "position_godot": [
+        5.52,
+        0.0,
+        3.432
+      ],
+      "associated_prop": "Locus_05_Arrivals_Face",
+      "memory_id": "memory_T_05",
+      "activity": "确认下一站"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -4.972,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        4.972
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -5.676,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.676
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.64,
+        -1.232,
+        0.0
+      ],
+      "position_godot": [
+        -2.64,
+        0.0,
+        1.232
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -9.6,
+    -6.16,
+    19.2,
+    12.32
+  ],
+  "triangles": 141164,
+  "glb_sha256": "b8b4cd0a30c1342af9d778138223647ce3e24cdf61f56d223ba6da42ed5a619f",
+  "refinement_revision": "world-refinement-v1"
+}

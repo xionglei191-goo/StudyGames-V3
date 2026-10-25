@@ -1,0 +1,243 @@
+{
+  "room_id": "football_field",
+  "name": "校园足球场",
+  "blend": "assets/blender/interiors/football_field/football_field_v02.blend",
+  "glb": "assets/blender/interiors/football_field/football_field_v02.glb",
+  "preview": "assets/blender/interiors/football_field/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_SPAWN",
+      "label": "进入足球场",
+      "position_blender": [
+        0.0,
+        -11.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        11.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回完整校园",
+      "position_blender": [
+        0.0,
+        -12.9,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        12.9
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "足球教练",
+      "position_blender": [
+        -3.7,
+        -10.8,
+        0.0
+      ],
+      "position_godot": [
+        -3.7,
+        0.0,
+        10.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_01",
+      "label": "装备区",
+      "position_blender": [
+        -10.6,
+        -12.6,
+        0.0
+      ],
+      "position_godot": [
+        -10.6,
+        0.0,
+        12.6
+      ],
+      "associated_prop": "Football_EquipmentRack_Back",
+      "memory_id": "memory_FOOTBALL_FIELD_01",
+      "activity": "观察足球、训练背心和装备收纳位置"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "开球中圈",
+      "position_blender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -0.0
+      ],
+      "associated_prop": "Football_CenterCircle",
+      "memory_id": "memory_FOOTBALL_FIELD_02",
+      "activity": "走到中圈认识开球位置与球场边线"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "射门球门",
+      "position_blender": [
+        10.6,
+        0.0,
+        0.0
+      ],
+      "position_godot": [
+        10.6,
+        0.0,
+        -0.0
+      ],
+      "associated_prop": "Football_EastGoal_GoalFrame",
+      "memory_id": "memory_FOOTBALL_FIELD_03",
+      "activity": "在球门前观察球门结构与射门方向"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "传球练习区",
+      "position_blender": [
+        -6.0,
+        4.5,
+        0.0
+      ],
+      "position_godot": [
+        -6.0,
+        0.0,
+        -4.5
+      ],
+      "associated_prop": "Football_PracticeMarker",
+      "memory_id": "memory_FOOTBALL_FIELD_04",
+      "activity": "看看锥桶标记和传球路线示意"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "看台计分牌",
+      "position_blender": [
+        10.2,
+        10.2,
+        0.0
+      ],
+      "position_godot": [
+        10.2,
+        0.0,
+        -10.2
+      ],
+      "associated_prop": "Football_Scoreboard_Face",
+      "memory_id": "memory_FOOTBALL_FIELD_05",
+      "activity": "在看台前观察计分牌与比赛信息示例"
+    }
+  ],
+  "bounds": [
+    -17.0,
+    -14.0,
+    34.0,
+    28.0
+  ],
+  "triangles": 182308,
+  "glb_sha256": "f4a82ba798a755cacf22e637b1f366b1651afc4a52a332a60b316476eed97ef2",
+  "scene_level": 3,
+  "parent_room": "school",
+  "model_version": "v01",
+  "dimensions_m": [
+    34.0,
+    28.0
+  ],
+  "pitch_dimensions_m": [
+    26.0,
+    18.0
+  ],
+  "return_to": {
+    "room_id": "school",
+    "interaction_id": "football_field_gate",
+    "door_node": "SG_DOOR_FOOTBALL_FIELD"
+  },
+  "technical_frame": {
+    "engine": "Godot 4.7.2",
+    "renderer": "GL Compatibility",
+    "target": "Windows desktop with optional Web preview",
+    "world_units": "metres",
+    "source_up": "Blender Z",
+    "runtime_up": "glTF/Godot Y",
+    "front": "Blender -Y",
+    "pivot": "pitch centre at ground height 0",
+    "camera": "orthographic 2.5D following camera",
+    "runtime_camera_size_suggestion": 34,
+    "floor_physics": "SG_FLOOR_Main closed mesh, top at zero with upward normals",
+    "grass_and_line_max_height_m": 0.047,
+    "texture_count": 0,
+    "materials": "shared warm matte PBR palette",
+    "collision": "hidden simple proxy meshes; open goal mouths; goal nets block at sides/back",
+    "animation": "none; balls and example scoreboard are static props",
+    "lod": "single authored LOD for this separately loaded field; no performance claim"
+  },
+  "design": {
+    "shape_language": "soft low-poly campus park, simple readable goals and field markings, warm wooden equipment and benches",
+    "palette_roles": "sage/leaf green turf, ivory painted markings, teal furniture and signs, light oak frames, yellow/orange training accents",
+    "style_references": [
+      "assets/blender/interiors/school/preview_v02.png",
+      "assets/blender/interiors/playground/preview.png",
+      "assets/blender/interiors/science_room/preview.png"
+    ],
+    "gameplay_scope": "five fixed exploration sites on a complete miniature football field; no implemented football match or scorekeeping",
+    "visual_target_selection": "Use the existing warm toy-campus direction already accepted for neighbouring school scenes"
+  },
+  "provenance": {
+    "kind": "original procedural Blender mesh authoring",
+    "creator": "Codex for this project",
+    "tool": "Blender 5.2.2 LTS",
+    "source_script": "assets/blender/interiors/scripts/build_football_field.py",
+    "created_at_utc": "2026-10-22T06:26:28Z",
+    "external_downloads": [],
+    "external_textures": [],
+    "license_note": "New geometry and in-project primitive helpers; no third-party model or texture added. Existing project licensing remains applicable.",
+    "preservation": "All pre-existing room files and shared manifests remain untouched by this generator."
+  },
+  "verification": {
+    "technical_checks_passed": true,
+    "rendered_preview": true,
+    "native_scale_reviewed": true,
+    "in_engine_reviewed": true,
+    "approval_status": "runtime_integration_and_visual_review_passed",
+    "visual_review": {
+      "reviewed_at_utc": "2026-10-22T06:27:31+00:00",
+      "preview": "assets/blender/interiors/football_field/preview.png",
+      "preview_sha256": "0aa2702b5aee0ac684b5e83688e02999a2ddef3b468e41b870a5b1a17357dcf8",
+      "image_size_px": [
+        1700,
+        1343
+      ],
+      "result": "pass",
+      "observations": [
+        "Complete scene is in frame: both goals and nets, perimeter fence with entrance opening, pitch lines and four corner flags.",
+        "Five locus contexts read distinctly: equipment rack, centre circle, east goal, cone passing practice, and stand with example scoreboard.",
+        "Warm matte sage turf, ivory markings, teal signs and seating, oak framing match adjacent campus scenes.",
+        "No visible clipped geometry, missing materials, floating principal furniture, or blocked goal mouths in reviewed render."
+      ],
+      "scope": "Authoring render review only; no Godot runtime or target-device performance claim."
+    },
+    "runtime_review": {
+      "version": "0.3.1",
+      "reviewed_at": "2026-10-22T14:32:06.940579+08:00",
+      "image": "build/verification-v031-football/football_overview.png",
+      "image_sha256": "fb53135cce5d4bcfb33d5e6c4ee07f934aad75a7eec0f0b980e7723b187d5295",
+      "scope": "Actual Godot scene image reviewed; Windows export entered football field and returned to the corresponding campus door; all five field sites physically visited.",
+      "performance_scope": "No frame-rate or low-end-device claim"
+    }
+  },
+  "refinement_revision": "world-refinement-v1"
+}

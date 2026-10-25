@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_Q",
+  "name": "拼布故事馆",
+  "blend": "assets/blender/interiors/landmark_Q/landmark_Q_v02.blend",
+  "glb": "assets/blender/interiors/landmark_Q/landmark_Q_v02.glb",
+  "preview": "assets/blender/interiors/landmark_Q/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口故事封面夹",
+      "position_blender": [
+        -3.22,
+        -3.808,
+        0.0
+      ],
+      "position_godot": [
+        -3.22,
+        0.0,
+        3.808
+      ],
+      "associated_prop": "Locus_01_Cover_Face",
+      "memory_id": "memory_Q_01",
+      "activity": "选故事主题"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧图片卡抽屉",
+      "position_blender": [
+        -4.416,
+        -0.784,
+        0.0
+      ],
+      "position_godot": [
+        -4.416,
+        0.0,
+        0.784
+      ],
+      "associated_prop": "Locus_02_Picture_Drawers_Back",
+      "memory_id": "memory_Q_02",
+      "activity": "找人物和场景图"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央拼布故事桌",
+      "position_blender": [
+        0.0,
+        -0.336,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.336
+      ],
+      "associated_prop": "Locus_03_Quilting_Leg",
+      "memory_id": "memory_Q_03",
+      "activity": "按顺序铺图片"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧讲述坐垫",
+      "position_blender": [
+        4.324,
+        -0.784,
+        0.0
+      ],
+      "position_godot": [
+        4.324,
+        0.0,
+        0.784
+      ],
+      "associated_prop": "Locus_04_Story_Circle",
+      "memory_id": "memory_Q_04",
+      "activity": "向朋友讲述"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口故事被展墙",
+      "position_blender": [
+        4.232,
+        -4.368,
+        0.0
+      ],
+      "position_godot": [
+        4.232,
+        0.0,
+        4.368
+      ],
+      "associated_prop": "Locus_05_Story_Quilt_Face",
+      "memory_id": "memory_Q_05",
+      "activity": "展示并回顾顺序"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -6.328,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.328
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -7.224,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        7.224
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.024,
+        -1.568,
+        0.0
+      ],
+      "position_godot": [
+        -2.024,
+        0.0,
+        1.568
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -7.958,
+    -8.568,
+    15.916,
+    17.136
+  ],
+  "triangles": 228534,
+  "glb_sha256": "2fa46127afea792bea71ff6d0b4bc5174f34f9a361dc9c1a0d1c02cc3c61c496",
+  "refinement_revision": "world-refinement-v1"
+}

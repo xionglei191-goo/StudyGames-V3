@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_L",
+  "name": "灯笼驿站",
+  "blend": "assets/blender/interiors/landmark_L/landmark_L_v02.blend",
+  "glb": "assets/blender/interiors/landmark_L/landmark_L_v02.glb",
+  "preview": "assets/blender/interiors/landmark_L/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口拜访时刻牌",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Welcome_Face",
+      "memory_id": "memory_L_01",
+      "activity": "查看约定时间"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧灯笼修整架",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Lantern_Shelf_Back",
+      "memory_id": "memory_L_02",
+      "activity": "修整灯纸和提手"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央暖光会客桌",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Tea_Leg",
+      "memory_id": "memory_L_03",
+      "activity": "招呼来访者"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧邀请卡桌",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Messages_Leg",
+      "memory_id": "memory_L_04",
+      "activity": "制作图片邀请卡"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口亮灯长廊",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Lantern_Gift_Leg",
+      "memory_id": "memory_L_05",
+      "activity": "带灯送客"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.65,
+    -7.65,
+    17.3,
+    15.3
+  ],
+  "triangles": 166212,
+  "glb_sha256": "4250888341ad2ceb4d611656ec272f25ac0d2832d3cae0b94be0e19ea933ee0b",
+  "refinement_revision": "world-refinement-v1"
+}

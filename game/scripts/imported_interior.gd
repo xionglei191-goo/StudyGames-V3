@@ -5,6 +5,7 @@ var _scene: Node3D
 var _decorations: Dictionary = {}
 var _markers: Dictionary = {}
 var _interactions: Array[Dictionary] = []
+const HomeCatalog = preload("res://scripts/home_catalog.gd")
 
 static func available(room_id: String) -> bool:
 	return ResourceLoader.exists("res://assets/interiors/%s.glb" % room_id)
@@ -49,13 +50,16 @@ func build(room_id: String, plan: Dictionary) -> Dictionary:
 				bounds = Rect2(float(b[0]), float(b[1]), float(b[2]), float(b[3]))
 	var return_to: Dictionary = plan.get("return_to", {})
 	var parent_room := str(return_to.get("room_id", "village"))
-	var exit_id := {"school":"school_exit", "home_estate":"home_exit"}.get(parent_room, "village_exit") as String
-	var return_id := room_id + "_gate" if parent_room in ["school", "home_estate"] else ("school_gate" if room_id == "school" else (room_id if room_id.begins_with("landmark_") else "home_gate"))
+	var exit_id := {"school":"school_exit", "home_hall":"home_exit"}.get(parent_room, "village_exit") as String
+	var return_id := room_id + "_gate" if parent_room in ["school", "home_hall"] else ("school_gate" if room_id == "school" else (room_id if room_id.begins_with("landmark_") else "home_gate"))
 	return_id = str(return_to.get("interaction_id", return_id))
-	if parent_room == "home_estate": return_id = "house_entry"
-	var exit_label: String = {"school":"回到校园", "home_estate":"回到家门前的小院"}.get(parent_room, "回到字母岛")
+	if room_id == "home_hall":
+		exit_id = "courtyard_exit"
+		return_id = "house_entry"
+	var exit_label: String = {"school":"回到校园", "home_hall":"回到家里的走廊", "home_estate":"走出家门 · 回到小院"}.get(parent_room, "回到字母岛")
 	_bind_travel(exit_id, exit_label, "SG_EXIT", parent_room, return_id)
-	for i in range(1, 6):
+	var memory_count := 0 if room_id in HomeCatalog.HOME_NAV_ROOMS else 5
+	for i in range(1, memory_count + 1):
 		var key := "SG_MEMORY_%02d" % i
 		var title := "探索这里"
 		var anchors: Array = plan.get("anchors", [])
@@ -107,12 +111,17 @@ func build(room_id: String, plan: Dictionary) -> Dictionary:
 				if _markers.has(model_key):
 					_decorations[id] = _markers[model_key]
 		"home_estate":
-			# The whole house has one real front door. Rooms are chosen only
-			# after arriving here; old exported room markers are not outdoor doors.
-			_bind("house_entry", "走到正门 · 进屋", "SG_HOUSE_ENTRY", "house_entry", 1.5)
+			_bind_travel("house_entry", "走进家门", "SG_HOUSE_ENTRY", "home_hall")
+			if _markers.has("SG_HOUSE_ENTRY"): _interactions.back()["radius"] = 1.5
+		"home_hall":
+			var doors: Dictionary = plan.get("model_bindings", {}).get("doors", {})
+			for area: Dictionary in plan.get("areas", []):
+				var destination := str(area.get("room_id", ""))
+				if destination in HomeCatalog.CHILD_ROOMS and area.get("separate_scene", false) and doors.has(destination):
+					_bind_travel(destination + "_gate", "走进" + str(area.get("name", destination)), str(doors[destination]), destination)
 		"home_bedroom":
 			_bind("bed", "休息，迎接新的一天", "SG_BED", "rest", 2.0)
-	var is_household := room_id in preload("res://scripts/home_catalog.gd").ROOMS
+	var is_household := HomeCatalog.is_home_space(room_id)
 	if not is_household and _markers.has("SG_NPC_HOST"):
 		_bind(host_id, "和%s聊一聊" % host_name, "SG_NPC_HOST", "npc", 2.3, "good_morning")
 		npcs.append({"kind":host_kind,"position":_position("SG_NPC_HOST"),"name":host_name,"angle":0.0})

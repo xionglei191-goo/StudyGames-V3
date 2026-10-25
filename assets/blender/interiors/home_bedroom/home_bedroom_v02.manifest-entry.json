@@ -1,0 +1,154 @@
+{
+  "blend": "assets/blender/interiors/home_bedroom/home_bedroom_v02.blend",
+  "glb": "assets/blender/interiors/home_bedroom/home_bedroom_v02.glb",
+  "preview": "assets/blender/interiors/home_bedroom/preview_v02.png",
+  "room_id": "home_bedroom",
+  "name": "温暖卧室",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "床边与被子",
+      "position_blender": [
+        -4.6,
+        1.2,
+        0.0
+      ],
+      "position_godot": [
+        -4.6,
+        0.0,
+        -1.2
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bedroom_01",
+      "activity": "把被子铺好，再摆正枕头。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "床头小闹钟",
+      "position_blender": [
+        -1.6,
+        3.4,
+        0.0
+      ],
+      "position_godot": [
+        -1.6,
+        0.0,
+        -3.4
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bedroom_02",
+      "activity": "看一看起床时间，讲讲自己的早晨。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "穿衣镜与衣柜",
+      "position_blender": [
+        4.8,
+        2.8,
+        0.0
+      ],
+      "position_godot": [
+        4.8,
+        0.0,
+        -2.8
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bedroom_03",
+      "activity": "选择今天喜欢的衣服，看看颜色。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "书包收纳凳",
+      "position_blender": [
+        -3.1,
+        -3.3,
+        0.0
+      ],
+      "position_godot": [
+        -3.1,
+        0.0,
+        3.3
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bedroom_04",
+      "activity": "找找铅笔盒，把物品放回书包里。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "床头阅读灯",
+      "position_blender": [
+        3.0,
+        -3.3,
+        0.0
+      ],
+      "position_godot": [
+        3.0,
+        0.0,
+        3.3
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bedroom_05",
+      "activity": "读一会儿书，再去休息；可以睡到游戏中的第二天。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 67792,
+  "glb_sha256": "f7d045556e4a5c49dc9be3c6ad54f01335e038d706c54fe0ddf14485c880ac49",
+  "refinement_revision": "world-refinement-v1"
+}

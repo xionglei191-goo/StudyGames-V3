@@ -7,6 +7,7 @@ signal notice(message: String)
 const SAVE_VERSION: int = 1
 const JOURNEY = preload("res://scripts/journey_progress.gd")
 const P2 = preload("res://scripts/p2_progress.gd")
+const Reviews = preload("res://scripts/review_progress.gd")
 const HOME = preload("res://scripts/home_catalog.gd")
 const DECORATION_PRICES: Dictionary = {"flower_box": 25, "picnic": 35, "lamp": 45}
 const OUTFITS: Array[String] = ["yellow", "pink", "blue"]
@@ -20,6 +21,7 @@ var save_path: String = "user://island-save-v1.json"
 var data: Dictionary = _default_state()
 var _active_question: String = ""
 var _active_assisted: bool = false
+var _review_last_ticks: int = -1
 
 
 func _default_state() -> Dictionary:
@@ -40,6 +42,7 @@ func _default_state() -> Dictionary:
 		"life": {"discoveries": {}, "activities": {"music":false,"art":false,"science":false,"football":false}, "scores":{"football":0}, "artwork":[], "home_tasks":{}},
 		"preferences": {"voice":true,"effects":true,"reduced_motion":false,"fixed_day":false},
 		"journey": JOURNEY.fresh(),
+		"reviews": Reviews.fresh(),
 	}
 
 
@@ -49,6 +52,51 @@ func snapshot() -> Dictionary:
 
 func journey_snapshot() -> Dictionary:
 	return JOURNEY.summary(data["journey"])
+
+
+func review_refresh() -> bool:
+	var before := snapshot()
+	_review_tick()
+	Reviews.sync(data,{},Time.get_unix_time_from_system())
+	Reviews.refresh(data.reviews,Time.get_unix_time_from_system())
+	return _commit(before)
+
+
+func review_event(event: Dictionary) -> bool:
+	var before := snapshot()
+	_review_tick()
+	var result := Reviews.apply(data.reviews,event,Time.get_unix_time_from_system())
+	if result.get("ok",false) and not result.get("changed",true):
+		data = before
+		_review_last_ticks = -1
+		return true
+	return _journey_commit(before,result)
+
+
+func review_expose(group: String) -> bool:
+	var ids: Array = []
+	for id: String in data.reviews.targets:
+		if id.begins_with(group): ids.append(id)
+	return review_expose_ids(ids)
+
+
+func review_expose_text(texts: Array) -> bool:
+	return review_expose_ids(Reviews.targets_in_text(texts))
+
+
+func review_expose_ids(ids: Array) -> bool:
+	ids = ids.filter(func(id: String): return data.reviews.targets.has(id))
+	if ids.is_empty(): return true
+	var before := snapshot()
+	_review_tick()
+	Reviews.expose(data.reviews,ids,Time.get_unix_time_from_system())
+	return _commit(before)
+
+
+func _review_tick() -> void:
+	var ticks := Time.get_ticks_msec()
+	Reviews.tick(data.reviews,Time.get_unix_time_from_system(),-1.0 if _review_last_ticks<0 else float(ticks-_review_last_ticks)/1000.0)
+	_review_last_ticks = ticks
 
 
 func journey_orchard_snapshot() -> Dictionary:
@@ -127,6 +175,7 @@ func _journey_commit(before: Dictionary, result: Dictionary) -> bool:
 
 
 func load_state() -> void:
+	_review_last_ticks = -1
 	_active_question = ""
 	_active_assisted = false
 	var main_result: Dictionary = _read_valid_file(save_path)
@@ -449,8 +498,11 @@ func finish_unit(unit_id: int) -> bool:
 
 
 func _commit(before: Dictionary, message: String = "") -> bool:
+	_review_tick()
+	Reviews.sync(data,before,Time.get_unix_time_from_system())
 	if not save_state():
 		data = before
+		_review_last_ticks = -1
 		return false
 	changed.emit()
 	if not message.is_empty():
@@ -501,7 +553,7 @@ func _normalize_state(value: Variant) -> Dictionary:
 	var normalized: Dictionary = _default_state()
 	# Required fields and exact scalar types prevent silent coercion of damaged data.
 	for key: String in normalized.keys():
-		if key in ["life","preferences","journey"]:
+		if key in ["life","preferences","journey","reviews"]:
 			continue # Optional additions migrate v0.1-v0.3 saves without changing their identity.
 		if not incoming.has(key):
 			return {"ok": false}
@@ -618,6 +670,10 @@ func _normalize_state(value: Variant) -> Dictionary:
 	else:
 		# Legacy discovery/course records remain untouched and grant no invented letter facts.
 		normalized.journey = JOURNEY.fresh(true)
+	if incoming.has("reviews"):
+		var reviews_result := Reviews.normalize(incoming.reviews)
+		if not reviews_result.ok: return {"ok":false}
+		normalized.reviews = reviews_result.value
 	return {"ok": true, "state": normalized}
 
 

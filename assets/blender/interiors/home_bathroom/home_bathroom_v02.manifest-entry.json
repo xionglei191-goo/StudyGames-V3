@@ -1,0 +1,154 @@
+{
+  "blend": "assets/blender/interiors/home_bathroom/home_bathroom_v02.blend",
+  "glb": "assets/blender/interiors/home_bathroom/home_bathroom_v02.glb",
+  "preview": "assets/blender/interiors/home_bathroom/preview_v02.png",
+  "room_id": "home_bathroom",
+  "name": "清爽浴室",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "牙刷杯与镜子",
+      "position_blender": [
+        -4.8,
+        2.1,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        -2.1
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bathroom_01",
+      "activity": "认识牙刷与牙齿，跟着句子做刷牙动作。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "洗手池",
+      "position_blender": [
+        0.0,
+        3.0,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        -3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bathroom_02",
+      "activity": "打开水龙头洗手，用完记得关好。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "浴缸与花洒",
+      "position_blender": [
+        3.3,
+        2.1,
+        0.0
+      ],
+      "position_godot": [
+        3.3,
+        0.0,
+        -2.1
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bathroom_03",
+      "activity": "认识浴室，想想每天怎样保持身体清洁。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "毛巾收纳架",
+      "position_blender": [
+        -3.4,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -3.4,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bathroom_04",
+      "activity": "洗过脸后，把毛巾挂回原位。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "节水提示与卫生间",
+      "position_blender": [
+        3.4,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        3.4,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_bathroom_05",
+      "activity": "检查水龙头已经关闭，养成节约用水的习惯。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 108064,
+  "glb_sha256": "4ded46cd9fc1ef9a8031f41c5c92d80319ab3bb580c60a03af7c4c20fd61eef5",
+  "refinement_revision": "world-refinement-v1"
+}

@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_V",
+  "name": "休眠火山观察站",
+  "blend": "assets/blender/interiors/landmark_V/landmark_V_v02.blend",
+  "glb": "assets/blender/interiors/landmark_V/landmark_V_v02.glb",
+  "preview": "assets/blender/interiors/landmark_V/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口观察路线牌",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Trail_Face",
+      "memory_id": "memory_V_01",
+      "activity": "选择观察路线"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧岩石样本台",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Specimens_Back",
+      "memory_id": "memory_V_02",
+      "activity": "辨认岩石外形"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央火山地形沙盘",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Volcano_Model_Leg",
+      "memory_id": "memory_V_03",
+      "activity": "比较山顶山脚"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧岩层观察窗",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Rock_Section_Frame",
+      "memory_id": "memory_V_04",
+      "activity": "观察岩层纹理"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口探险记录架",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Field_Records_Back",
+      "memory_id": "memory_V_05",
+      "activity": "回顾走过的路线"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 121644,
+  "glb_sha256": "052282812d97f772b38d0c2427160e017363ad57392a47911989b808a12b10cc",
+  "refinement_revision": "world-refinement-v1"
+}

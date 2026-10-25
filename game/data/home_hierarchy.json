@@ -19,8 +19,8 @@
       "english_word": "Home",
       "scene_level": 2,
       "parent_room": "village",
-      "theme": "穿过石径与花园，走到住宅正门；进门后选择七个房间，体验家里的日常生活。",
-      "composition": "完整的三体量住宅外观，坡屋顶、凹入门窗、石基座和木门廊面向小院；院门与唯一正门通过石径连接，正门打开七个房间的入户导览。",
+      "theme": "穿过石径与花园，走到住宅正门；进屋后沿门厅与走廊，走到各个房间。",
+      "composition": "完整的三体量住宅外观，坡屋顶、凹入门窗、石基座和木门廊面向小院；正门进入可行走的室内门厅，七扇房门连接各自生活空间。",
       "vocabulary_status": "home is textbook vocabulary; courtyard and floor plan are original spatial design",
       "camera_size": 40.0,
       "anchors": [
@@ -177,7 +177,7 @@
           "name": "家里的客厅",
           "english_word": "Living room",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "在沙发与茶几旁招待朋友，用家人相册和纪念架留住共同的生活。",
           "composition": "保留旧客厅的五个固定记忆位置、旅行册与朋友角；床角改为窗边阅读角，卧床移到独立卧室。",
           "vocabulary_status": "direct_room_name",
@@ -324,8 +324,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_gate"
           },
           "english_focus": [
             "Come in, please."
@@ -337,7 +337,7 @@
           "name": "温暖卧室",
           "english_word": "Bedroom",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "起床、整理床铺、挑选衣服、收拾书包与睡前阅读，各有固定位置。",
           "vocabulary_status": "direct_room_name",
           "camera_size": 23.0,
@@ -483,8 +483,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_bedroom_gate"
           },
           "english_focus": [
             "make the bed"
@@ -496,7 +496,7 @@
           "name": "明亮厨房",
           "english_word": "Kitchen",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "从食材柜到洗菜池、备餐台和灶台，体验准备一餐的顺序。",
           "vocabulary_status": "direct_room_name",
           "camera_size": 23.0,
@@ -642,8 +642,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_kitchen_gate"
           },
           "english_focus": [
             "I like rice, fish and vegetables."
@@ -655,7 +655,7 @@
           "name": "家庭餐厅",
           "english_word": "Dining area",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "围着一张家庭餐桌吃早餐、表达食物喜好、庆祝生日和节日。",
           "vocabulary_status": "authored_functional_space_for_textbook_meals",
           "camera_size": 23.0,
@@ -801,8 +801,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_dining_gate"
           },
           "english_focus": [
             "I have breakfast at half past seven."
@@ -814,7 +814,7 @@
           "name": "清爽浴室",
           "english_word": "Bathroom",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "洗手池、牙刷杯、浴缸、毛巾架与卫生间分区，练习日常清洁与节水。",
           "vocabulary_status": "direct_room_name",
           "camera_size": 23.0,
@@ -960,8 +960,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_bathroom_gate"
           },
           "english_focus": [
             "Dongdong, brush your teeth."
@@ -973,7 +973,7 @@
           "name": "窗边书房",
           "english_word": "Study area",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "阅读、收纳文具、使用电脑、做贺卡和安排计划，各有可辨认的物件。",
           "vocabulary_status": "authored_functional_space_for_textbook_reading_and_computer",
           "camera_size": 23.0,
@@ -1119,8 +1119,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_study_gate"
           },
           "english_focus": [
             "I can email my friends with the computer."
@@ -1132,7 +1132,7 @@
           "name": "家务阳台",
           "english_word": "Housework area",
           "scene_level": 3,
-          "parent_room": "home_estate",
+          "parent_room": "home_hall",
           "theme": "洗衣、晾晒、浇花、打扫与节水，共用一个明亮通风的家务区。",
           "vocabulary_status": "authored_functional_space_for_textbook_chores",
           "camera_size": 23.0,
@@ -1278,8 +1278,8 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_estate",
-            "interaction_id": "house_entry"
+            "room_id": "home_hall",
+            "interaction_id": "home_balcony_gate"
           },
           "english_focus": [
             "I'm washing my socks."
@@ -1289,7 +1289,8 @@
       ],
       "model_bindings": {
         "entry": "SG_HOUSE_ENTRY",
-        "entry_flow": "front_door_then_room_guide",
+        "entry_destination": "home_hall",
+        "entry_flow": "front_door_then_walkable_indoor_hall",
         "legacy_doors": {
           "home": "SG_DOOR_HOME",
           "home_bedroom": "SG_DOOR_HOME_BEDROOM",
@@ -1306,7 +1307,7 @@
       "name": "家里的客厅",
       "english_word": "Living room",
       "scene_level": 3,
-      "parent_room": "home_estate",
+      "parent_room": "home_hall",
       "theme": "在沙发与茶几旁招待朋友，用家人相册和纪念架留住共同的生活。",
       "composition": "保留旧客厅的五个固定记忆位置、旅行册与朋友角；床角改为窗边阅读角，卧床移到独立卧室。",
       "vocabulary_status": "direct_room_name",
@@ -1453,8 +1454,8 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_estate",
-        "interaction_id": "house_entry"
+        "room_id": "home_hall",
+        "interaction_id": "home_gate"
       },
       "english_focus": [
         "Come in, please."
@@ -1465,7 +1466,7 @@
       "name": "温暖卧室",
       "english_word": "Bedroom",
       "scene_level": 3,
-      "parent_room": "home_estate",
+      "parent_room": "home_hall",
       "theme": "起床、整理床铺、挑选衣服、收拾书包与睡前阅读，各有固定位置。",
       "vocabulary_status": "direct_room_name",
       "camera_size": 23.0,
@@ -1611,8 +1612,8 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_estate",
-        "interaction_id": "house_entry"
+        "room_id": "home_hall",
+        "interaction_id": "home_bedroom_gate"
       },
       "english_focus": [
         "make the bed"
@@ -1623,7 +1624,7 @@
       "name": "明亮厨房",
       "english_word": "Kitchen",
       "scene_level": 3,
-      "parent_room": "home_estate",
+      "parent_room": "home_hall",
       "theme": "从食材柜到洗菜池、备餐台和灶台，体验准备一餐的顺序。",
       "vocabulary_status": "direct_room_name",
       "camera_size": 23.0,
@@ -1769,8 +1770,8 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_estate",
-        "interaction_id": "house_entry"
+        "room_id": "home_hall",
+        "interaction_id": "home_kitchen_gate"
       },
       "english_focus": [
         "I like rice, fish and vegetables."
@@ -1781,7 +1782,7 @@
       "name": "家庭餐厅",
       "english_word": "Dining area",
       "scene_level": 3,
-      "parent_room": "home_estate",
+      "parent_room": "home_hall",
       "theme": "围着一张家庭餐桌吃早餐、表达食物喜好、庆祝生日和节日。",
       "vocabulary_status": "authored_functional_space_for_textbook_meals",
       "camera_size": 23.0,
@@ -1927,8 +1928,8 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_estate",
-        "interaction_id": "house_entry"
+        "room_id": "home_hall",
+        "interaction_id": "home_dining_gate"
       },
       "english_focus": [
         "I have breakfast at half past seven."
@@ -1939,7 +1940,7 @@
       "name": "清爽浴室",
       "english_word": "Bathroom",
       "scene_level": 3,
-      "parent_room": "home_estate",
+      "parent_room": "home_hall",
       "theme": "洗手池、牙刷杯、浴缸、毛巾架与卫生间分区，练习日常清洁与节水。",
       "vocabulary_status": "direct_room_name",
       "camera_size": 23.0,
@@ -2085,8 +2086,8 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_estate",
-        "interaction_id": "house_entry"
+        "room_id": "home_hall",
+        "interaction_id": "home_bathroom_gate"
       },
       "english_focus": [
         "Dongdong, brush your teeth."
@@ -2097,7 +2098,7 @@
       "name": "窗边书房",
       "english_word": "Study area",
       "scene_level": 3,
-      "parent_room": "home_estate",
+      "parent_room": "home_hall",
       "theme": "阅读、收纳文具、使用电脑、做贺卡和安排计划，各有可辨认的物件。",
       "vocabulary_status": "authored_functional_space_for_textbook_reading_and_computer",
       "camera_size": 23.0,
@@ -2243,8 +2244,8 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_estate",
-        "interaction_id": "house_entry"
+        "room_id": "home_hall",
+        "interaction_id": "home_study_gate"
       },
       "english_focus": [
         "I can email my friends with the computer."
@@ -2255,7 +2256,7 @@
       "name": "家务阳台",
       "english_word": "Housework area",
       "scene_level": 3,
-      "parent_room": "home_estate",
+      "parent_room": "home_hall",
       "theme": "洗衣、晾晒、浇花、打扫与节水，共用一个明亮通风的家务区。",
       "vocabulary_status": "authored_functional_space_for_textbook_chores",
       "camera_size": 23.0,
@@ -2401,17 +2402,1167 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_estate",
-        "interaction_id": "house_entry"
+        "room_id": "home_hall",
+        "interaction_id": "home_balcony_gate"
       },
       "english_focus": [
         "I'm washing my socks."
       ]
     }
   ],
+  "routes": [
+    {
+      "room_id": "home_hall",
+      "name": "家里 · 门厅与走廊",
+      "scene_level": 2,
+      "parent_room": "home_estate",
+      "space_role": "household_indoor_navigation",
+      "same_property_as": "home_estate",
+      "indoor": true,
+      "camera_size": 31.0,
+      "theme": "进门后在玄关收拾随身物品，沿地毯与走廊走到七个房间门前。",
+      "composition": "连续的玄关、中央通道与横向走廊，配有鞋凳、挂衣处、墙灯、收纳和七扇带用途标识的实体门。室内采用可见人物的剖视镜头。",
+      "return_to": {
+        "room_id": "home_estate",
+        "interaction_id": "house_entry"
+      },
+      "areas": [
+        {
+          "room_id": "home",
+          "name": "家里的客厅",
+          "english_word": "Living room",
+          "scene_level": 3,
+          "parent_room": "home_hall",
+          "theme": "在沙发与茶几旁招待朋友，用家人相册和纪念架留住共同的生活。",
+          "composition": "保留旧客厅的五个固定记忆位置、旅行册与朋友角；床角改为窗边阅读角，卧床移到独立卧室。",
+          "vocabulary_status": "direct_room_name",
+          "camera_size": 23.0,
+          "anchors": [
+            {
+              "label": "门厅随身篮",
+              "activity": "欢迎朋友进来，把带来的物品放在门厅。",
+              "source": {
+                "book_id": "xiangshao-g4-1",
+                "book_title": "英语 · 四年级上册",
+                "unit_id": "unit-9",
+                "unit_title": "Welcome to my home!",
+                "printed_page": 51,
+                "file_page": 58,
+                "region_id": "p58-r8",
+                "text": "Come in, please.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-1\\pages\\058.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": true,
+                "audio": "res://assets/audio/home/xiangshao-g4-1-p58-r8.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "4ad3ea2814d4afac345094af5f7bbc5cdcebb2805f03564b9a409e75f93806df"
+              },
+              "id": "memory_HOME_01",
+              "node_name": "SG_MEMORY_01",
+              "order": 1,
+              "room_id": "home",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "左侧衣柜",
+              "activity": "在进门处挂好外套，也可以继续布置客厅。",
+              "source": {
+                "book_id": "xiangshao-g3-2",
+                "book_title": "英语 · 三年级下册",
+                "unit_id": "unit-4",
+                "unit_title": "Do you like the dress?",
+                "printed_page": 22,
+                "file_page": 29,
+                "region_id": "p29-r16",
+                "text": "I like the red and white dress. It's beautiful.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g3-2\\pages\\029.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g3-2-p29-r16.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "cf13e8c29c830f22fddc297ffe5c0f1ceceb0735b05e633cbe4e53a1e49e4065"
+              },
+              "id": "memory_HOME_02",
+              "node_name": "SG_MEMORY_02",
+              "order": 2,
+              "room_id": "home",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "中央茶几",
+              "activity": "摆好茶杯与点心，和朋友介绍自己的家。",
+              "source": {
+                "book_id": "xiangshao-g4-1",
+                "book_title": "英语 · 四年级上册",
+                "unit_id": "unit-9",
+                "unit_title": "Welcome to my home!",
+                "printed_page": 52,
+                "file_page": 59,
+                "region_id": "p59-r8",
+                "text": "This is our living room.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-1\\pages\\059.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": true,
+                "audio": "res://assets/audio/home/xiangshao-g4-1-p59-r8.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "16db8fdfbe7a080d0d2fa58c1f6deeb05aa5041094b46ad271f134141c55c829"
+              },
+              "id": "memory_HOME_03",
+              "node_name": "SG_MEMORY_03",
+              "order": 3,
+              "room_id": "home",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "窗边家人相册",
+              "activity": "看看相册，用照片介绍家人；晚上去卧室休息。",
+              "source": {
+                "book_id": "xiangshao-g3-1",
+                "book_title": "英语 · 三年级上册",
+                "unit_id": "unit-4",
+                "unit_title": "This is my family",
+                "printed_page": 22,
+                "file_page": 29,
+                "region_id": "p29-r9",
+                "text": "She's my mother.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g3-1\\pages\\029.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g3-1-p29-r9.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "fe20ebdf16d28b899b2015299f1c2008ea33c3f76d0da9c0500df23c760406de"
+              },
+              "id": "memory_HOME_04",
+              "node_name": "SG_MEMORY_04",
+              "order": 4,
+              "room_id": "home",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "出口回忆展示架",
+              "activity": "把合照与礼物放回纪念架，回想家人和朋友相聚的日子。",
+              "source": {
+                "book_id": "xiangshao-g6-1",
+                "book_title": "英语 · 六年级上册",
+                "unit_id": "unit-10",
+                "unit_title": "Festivals bring families together",
+                "printed_page": 56,
+                "file_page": 63,
+                "region_id": "p63-r17",
+                "text": "Festivals bring families together.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g6-1\\pages\\063.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g6-1-p63-r17.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "830a1a094016060bb57f0258be8c19454c601269c2b2d989007ceb6e446e4cc0"
+              },
+              "id": "memory_HOME_05",
+              "node_name": "SG_MEMORY_05",
+              "order": 5,
+              "room_id": "home",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            }
+          ],
+          "task": {
+            "id": "welcome_table",
+            "anchor": 3,
+            "title": "为来访朋友摆好茶几",
+            "steps": [
+              "铺好小桌垫",
+              "摆好两个杯子",
+              "把果盘放到中间"
+            ],
+            "result": "茶几准备好了，可以邀请朋友坐下。",
+            "kind": "authored_household_action",
+            "records": "experience_only_no_language_grade"
+          },
+          "status": "runtime_spatial_content",
+          "return_to": {
+            "room_id": "home_hall",
+            "interaction_id": "home_gate"
+          },
+          "english_focus": [
+            "Come in, please."
+          ],
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_bedroom",
+          "name": "温暖卧室",
+          "english_word": "Bedroom",
+          "scene_level": 3,
+          "parent_room": "home_hall",
+          "theme": "起床、整理床铺、挑选衣服、收拾书包与睡前阅读，各有固定位置。",
+          "vocabulary_status": "direct_room_name",
+          "camera_size": 23.0,
+          "anchors": [
+            {
+              "label": "床边与被子",
+              "activity": "把被子铺好，再摆正枕头。",
+              "source": {
+                "book_id": "english-grade5-volume1-smartedu-2022",
+                "book_title": "英语 · 五年级上册",
+                "unit_id": "unit-7",
+                "unit_title": "What chores do you do at home?",
+                "printed_page": 42,
+                "file_page": 49,
+                "region_id": "p49-r4",
+                "text": "make the bed",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\smartedu-2022\\pages\\049.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": true,
+                "audio": "res://assets/audio/home/english-grade5-volume1-smartedu-2022-p49-r4.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "e79a30df444c9a85e5c3e538e2bb2d7931e3787af933456e2c850be1fb954f17"
+              },
+              "id": "memory_home_bedroom_01",
+              "node_name": "SG_MEMORY_01",
+              "order": 1,
+              "room_id": "home_bedroom",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "床头小闹钟",
+              "activity": "看一看起床时间，讲讲自己的早晨。",
+              "source": {
+                "book_id": "xiangshao-g4-1",
+                "book_title": "英语 · 四年级上册",
+                "unit_id": "unit-2",
+                "unit_title": "What time do you get up?",
+                "printed_page": 6,
+                "file_page": 13,
+                "region_id": "p13-r11",
+                "text": "Hmm... I get up at 7:00.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-1\\pages\\013.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g4-1-p13-r11.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "35d5728ad658ce3c639d8b90557e4079e38c6782f20634de4480ac1e056a010a"
+              },
+              "id": "memory_home_bedroom_02",
+              "node_name": "SG_MEMORY_02",
+              "order": 2,
+              "room_id": "home_bedroom",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "穿衣镜与衣柜",
+              "activity": "选择今天喜欢的衣服，看看颜色。",
+              "source": {
+                "book_id": "xiangshao-g3-2",
+                "book_title": "英语 · 三年级下册",
+                "unit_id": "unit-4",
+                "unit_title": "Do you like the dress?",
+                "printed_page": 22,
+                "file_page": 29,
+                "region_id": "p29-r2",
+                "text": "Do you like the dress?",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g3-2\\pages\\029.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g3-2-p29-r2.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "4a8e94e526993ce067ab1747b3812768f61b770b040f5ab9aff4495ee651154a"
+              },
+              "id": "memory_home_bedroom_03",
+              "node_name": "SG_MEMORY_03",
+              "order": 3,
+              "room_id": "home_bedroom",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "书包收纳凳",
+              "activity": "找找铅笔盒，把物品放回书包里。",
+              "source": {
+                "book_id": "xiangshao-g4-2",
+                "book_title": "英语 · 四年级下册",
+                "unit_id": "unit-1",
+                "unit_title": "It's on your head",
+                "printed_page": 1,
+                "file_page": 8,
+                "region_id": "p8-r10",
+                "text": "It's in your schoolbag.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-2\\pages\\008.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g4-2-p8-r10.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "23a61599b5dedf9cb272f2c22152b0292631b06db124d4623e3b37921f5f1385"
+              },
+              "id": "memory_home_bedroom_04",
+              "node_name": "SG_MEMORY_04",
+              "order": 4,
+              "room_id": "home_bedroom",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "床头阅读灯",
+              "activity": "读一会儿书，再去休息；可以睡到游戏中的第二天。",
+              "source": {
+                "book_id": "xiangshao-g4-1",
+                "book_title": "英语 · 四年级上册",
+                "unit_id": "unit-2",
+                "unit_title": "What time do you get up?",
+                "printed_page": 7,
+                "file_page": 14,
+                "region_id": "p14-r9",
+                "text": "go to bed",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-1\\pages\\014.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g4-1-p14-r9.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "3d6d724f872fb7491b0140b2ba1b547418275cf0d74cd7d3bd5566ca5965c9fd"
+              },
+              "id": "memory_home_bedroom_05",
+              "node_name": "SG_MEMORY_05",
+              "order": 5,
+              "room_id": "home_bedroom",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            }
+          ],
+          "task": {
+            "id": "make_bed",
+            "anchor": 1,
+            "title": "整理自己的床铺",
+            "steps": [
+              "把被子展开",
+              "把枕头摆整齐",
+              "轻轻抚平被角"
+            ],
+            "result": "床铺变得整齐了。",
+            "kind": "authored_household_action",
+            "records": "experience_only_no_language_grade"
+          },
+          "status": "runtime_spatial_content",
+          "return_to": {
+            "room_id": "home_hall",
+            "interaction_id": "home_bedroom_gate"
+          },
+          "english_focus": [
+            "make the bed"
+          ],
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_kitchen",
+          "name": "明亮厨房",
+          "english_word": "Kitchen",
+          "scene_level": 3,
+          "parent_room": "home_hall",
+          "theme": "从食材柜到洗菜池、备餐台和灶台，体验准备一餐的顺序。",
+          "vocabulary_status": "direct_room_name",
+          "camera_size": 23.0,
+          "anchors": [
+            {
+              "label": "食材储物柜",
+              "activity": "认识米饭、鱼和蔬菜，挑选今天的食材。",
+              "source": {
+                "book_id": "xiangshao-g4-1",
+                "book_title": "英语 · 四年级上册",
+                "unit_id": "unit-3",
+                "unit_title": "I like dumplings",
+                "printed_page": 11,
+                "file_page": 18,
+                "region_id": "p18-r12",
+                "text": "I like rice, fish and vegetables.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-1\\pages\\018.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g4-1-p18-r12.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "b6e25b600428874fb9a0e22da178d4894ffcb334ea7f35c751090d6f2fb0ac9b"
+              },
+              "id": "memory_home_kitchen_01",
+              "node_name": "SG_MEMORY_01",
+              "order": 1,
+              "room_id": "home_kitchen",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "洗菜池",
+              "activity": "将蔬菜放入水槽，洗净后放回篮子。",
+              "source": {
+                "book_id": "english-grade5-volume1-smartedu-2022",
+                "book_title": "英语 · 五年级上册",
+                "unit_id": "unit-7",
+                "unit_title": "What chores do you do at home?",
+                "printed_page": 42,
+                "file_page": 49,
+                "region_id": "p49-r5",
+                "text": "wash the vegetables",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\smartedu-2022\\pages\\049.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": true,
+                "audio": "res://assets/audio/home/english-grade5-volume1-smartedu-2022-p49-r5.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "64a075b0ad176112b19c2d4713fb7345c2c44ee7b9ad2d5a965ace9999bab113"
+              },
+              "id": "memory_home_kitchen_02",
+              "node_name": "SG_MEMORY_02",
+              "order": 2,
+              "room_id": "home_kitchen",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "灶台与汤锅",
+              "activity": "看一看做饭的工具，和家人一起准备一餐。",
+              "source": {
+                "book_id": "english-grade5-volume1-smartedu-2022",
+                "book_title": "英语 · 五年级上册",
+                "unit_id": "unit-7",
+                "unit_title": "What chores do you do at home?",
+                "printed_page": 42,
+                "file_page": 49,
+                "region_id": "p49-r6",
+                "text": "cook a meal",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\smartedu-2022\\pages\\049.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": true,
+                "audio": "res://assets/audio/home/english-grade5-volume1-smartedu-2022-p49-r6.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "48a6a9c84f0df4d978e04b7ec3fa9d066a697a02ae3861318f4a6d663fb660cf"
+              },
+              "id": "memory_home_kitchen_03",
+              "node_name": "SG_MEMORY_03",
+              "order": 3,
+              "room_id": "home_kitchen",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "备餐操作台",
+              "activity": "介绍厨房，观察台面上准备好的物品。",
+              "source": {
+                "book_id": "xiangshao-g4-1",
+                "book_title": "英语 · 四年级上册",
+                "unit_id": "unit-9",
+                "unit_title": "Welcome to my home!",
+                "printed_page": 51,
+                "file_page": 58,
+                "region_id": "p58-r13",
+                "text": "This is the kitchen.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-1\\pages\\058.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": true,
+                "audio": "res://assets/audio/home/xiangshao-g4-1-p58-r13.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "4365093d627e42d6d928f4543fea12bfc4c967be5e9c66dc358a3ca15cf4f03d"
+              },
+              "id": "memory_home_kitchen_04",
+              "node_name": "SG_MEMORY_04",
+              "order": 4,
+              "room_id": "home_kitchen",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "餐具收纳架",
+              "activity": "用过的餐具归位，保持厨房干净。",
+              "source": {
+                "book_id": "xiangshao-g4-1",
+                "book_title": "英语 · 四年级上册",
+                "unit_id": "unit-9",
+                "unit_title": "Welcome to my home!",
+                "printed_page": 51,
+                "file_page": 58,
+                "region_id": "p58-r15",
+                "text": "It's clean.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-1\\pages\\058.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": true,
+                "audio": "res://assets/audio/home/xiangshao-g4-1-p58-r15.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "2da793aeaf5fec5f0e73d2a209b248fd42b9cb8f6be46028e18c4dc1608f141f"
+              },
+              "id": "memory_home_kitchen_05",
+              "node_name": "SG_MEMORY_05",
+              "order": 5,
+              "room_id": "home_kitchen",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            }
+          ],
+          "task": {
+            "id": "wash_vegetables",
+            "anchor": 2,
+            "title": "帮忙洗好蔬菜",
+            "steps": [
+              "把蔬菜放进洗菜池",
+              "轻轻冲洗叶片",
+              "关水并装入菜篮"
+            ],
+            "result": "蔬菜洗好了，可以送到备餐台。",
+            "kind": "authored_household_action",
+            "records": "experience_only_no_language_grade"
+          },
+          "status": "runtime_spatial_content",
+          "return_to": {
+            "room_id": "home_hall",
+            "interaction_id": "home_kitchen_gate"
+          },
+          "english_focus": [
+            "I like rice, fish and vegetables."
+          ],
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_dining",
+          "name": "家庭餐厅",
+          "english_word": "Dining area",
+          "scene_level": 3,
+          "parent_room": "home_hall",
+          "theme": "围着一张家庭餐桌吃早餐、表达食物喜好、庆祝生日和节日。",
+          "vocabulary_status": "authored_functional_space_for_textbook_meals",
+          "camera_size": 23.0,
+          "anchors": [
+            {
+              "label": "早餐边柜",
+              "activity": "看时钟准备早餐，讲讲自己的早餐时间。",
+              "source": {
+                "book_id": "xiangshao-g4-1",
+                "book_title": "英语 · 四年级上册",
+                "unit_id": "unit-2",
+                "unit_title": "What time do you get up?",
+                "printed_page": 7,
+                "file_page": 14,
+                "region_id": "p14-r3",
+                "text": "I have breakfast at half past seven.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-1\\pages\\014.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g4-1-p14-r3.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "44a148e713018554065178eef5e80a60451e4d3ab8de4cc515ae555b0b5820c7"
+              },
+              "id": "memory_home_dining_01",
+              "node_name": "SG_MEMORY_01",
+              "order": 1,
+              "room_id": "home_dining",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "水果分享台",
+              "activity": "看看水果，说说自己喜欢哪一种。",
+              "source": {
+                "book_id": "xiangshao-g3-1",
+                "book_title": "英语 · 三年级上册",
+                "unit_id": "unit-9",
+                "unit_title": "I like apples",
+                "printed_page": 51,
+                "file_page": 58,
+                "region_id": "p58-r8",
+                "text": "Thanks! I like apples.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g3-1\\pages\\058.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g3-1-p58-r8.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "844d64d22b13cadd27a3a746194ab7cd5d0f30e6d43f2b50ad8005b0dfa6d932"
+              },
+              "id": "memory_home_dining_02",
+              "node_name": "SG_MEMORY_02",
+              "order": 2,
+              "room_id": "home_dining",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "家庭餐桌",
+              "activity": "为家人摆好餐盘，再一起吃饭。",
+              "source": {
+                "book_id": "xiangshao-g3-2",
+                "book_title": "英语 · 三年级下册",
+                "unit_id": "unit-7",
+                "unit_title": "Wash your hands",
+                "printed_page": 41,
+                "file_page": 48,
+                "region_id": "p48-r11",
+                "text": "Dinner is ready.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g3-2\\pages\\048.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g3-2-p48-r11.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "8914704ac5f65edfba285a95164d4f66e859c80fce7043aa828856e396198641"
+              },
+              "id": "memory_home_dining_03",
+              "node_name": "SG_MEMORY_03",
+              "order": 3,
+              "room_id": "home_dining",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "生日点心桌",
+              "activity": "摆放生日蛋糕和贺卡，向家人送上祝福。",
+              "source": {
+                "book_id": "xiangshao-g3-1",
+                "book_title": "英语 · 三年级上册",
+                "unit_id": "unit-10",
+                "unit_title": "Happy birthday！",
+                "printed_page": 57,
+                "file_page": 64,
+                "region_id": "p64-r2",
+                "text": "Happy birthday! Here is a gift for you.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g3-1\\pages\\064.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g3-1-p64-r2.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "5f86f16e1f8c3d4180d6c947466e7b0cc7d194dc5005844865cb423939f3ac0d"
+              },
+              "id": "memory_home_dining_04",
+              "node_name": "SG_MEMORY_04",
+              "order": 4,
+              "room_id": "home_dining",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "节日餐边架",
+              "activity": "观察节日餐具，聊聊一家人团聚的晚餐。",
+              "source": {
+                "book_id": "xiangshao-g6-1",
+                "book_title": "英语 · 六年级上册",
+                "unit_id": "unit-10",
+                "unit_title": "Festivals bring families together",
+                "printed_page": 56,
+                "file_page": 63,
+                "region_id": "p63-r15",
+                "text": "And we usually have a big family dinner.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g6-1\\pages\\063.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g6-1-p63-r15.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "442c25a89194380207112cf2186953a8db666ed9f35c43c2a8de8ec63fe6ec0c"
+              },
+              "id": "memory_home_dining_05",
+              "node_name": "SG_MEMORY_05",
+              "order": 5,
+              "room_id": "home_dining",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            }
+          ],
+          "task": {
+            "id": "set_dinner",
+            "anchor": 3,
+            "title": "一起摆好餐桌",
+            "steps": [
+              "把餐垫摆好",
+              "给每个座位放餐盘",
+              "把杯子放到餐盘旁"
+            ],
+            "result": "四个座位都摆好了，可以叫家人来吃饭。",
+            "kind": "authored_household_action",
+            "records": "experience_only_no_language_grade"
+          },
+          "status": "runtime_spatial_content",
+          "return_to": {
+            "room_id": "home_hall",
+            "interaction_id": "home_dining_gate"
+          },
+          "english_focus": [
+            "I have breakfast at half past seven."
+          ],
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_bathroom",
+          "name": "清爽浴室",
+          "english_word": "Bathroom",
+          "scene_level": 3,
+          "parent_room": "home_hall",
+          "theme": "洗手池、牙刷杯、浴缸、毛巾架与卫生间分区，练习日常清洁与节水。",
+          "vocabulary_status": "direct_room_name",
+          "camera_size": 23.0,
+          "anchors": [
+            {
+              "label": "牙刷杯与镜子",
+              "activity": "认识牙刷与牙齿，跟着句子做刷牙动作。",
+              "source": {
+                "book_id": "xiangshao-g3-2",
+                "book_title": "英语 · 三年级下册",
+                "unit_id": "unit-7",
+                "unit_title": "Wash your hands",
+                "printed_page": 41,
+                "file_page": 48,
+                "region_id": "p48-r18",
+                "text": "Dongdong, brush your teeth.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g3-2\\pages\\048.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g3-2-p48-r18.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "10f1daf9a1b412e3432b2a48230f17bda9f4992255e46fb56822f646e9ab31ce"
+              },
+              "id": "memory_home_bathroom_01",
+              "node_name": "SG_MEMORY_01",
+              "order": 1,
+              "room_id": "home_bathroom",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "洗手池",
+              "activity": "打开水龙头洗手，用完记得关好。",
+              "source": {
+                "book_id": "xiangshao-g3-2",
+                "book_title": "英语 · 三年级下册",
+                "unit_id": "unit-7",
+                "unit_title": "Wash your hands",
+                "printed_page": 41,
+                "file_page": 48,
+                "region_id": "p48-r8",
+                "text": "Dongdong, come and wash your hands.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g3-2\\pages\\048.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g3-2-p48-r8.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "80b07a8c3bf0d5f0641d3e35373346041965e2ed81baefefd50cae1e2ed77e86"
+              },
+              "id": "memory_home_bathroom_02",
+              "node_name": "SG_MEMORY_02",
+              "order": 2,
+              "room_id": "home_bathroom",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "浴缸与花洒",
+              "activity": "认识浴室，想想每天怎样保持身体清洁。",
+              "source": {
+                "book_id": "xiangshao-g6-2",
+                "book_title": "英语 · 六年级下册",
+                "unit_id": "unit-3",
+                "unit_title": "We should learn to take care of ourselves",
+                "printed_page": 10,
+                "file_page": 17,
+                "region_id": "p17-r2",
+                "text": "keep our body clean",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g6-2\\pages\\017.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g6-2-p17-r2.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "cb6ef2b17ab3a324bba7329f8c33a3f83ad1e2ea16ca14d19ab0fa0df38d9e48"
+              },
+              "id": "memory_home_bathroom_03",
+              "node_name": "SG_MEMORY_03",
+              "order": 3,
+              "room_id": "home_bathroom",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "毛巾收纳架",
+              "activity": "洗过脸后，把毛巾挂回原位。",
+              "source": {
+                "book_id": "xiangshao-g3-2",
+                "book_title": "英语 · 三年级下册",
+                "unit_id": "unit-7",
+                "unit_title": "Wash your hands",
+                "printed_page": 41,
+                "file_page": 48,
+                "region_id": "p48-r17",
+                "text": "Wash your face.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g3-2\\pages\\048.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g3-2-p48-r17.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "c2e9a92429d6febe32e913c0f8aba20385cc19f6518254f1ccc2f2e95cf7705b"
+              },
+              "id": "memory_home_bathroom_04",
+              "node_name": "SG_MEMORY_04",
+              "order": 4,
+              "room_id": "home_bathroom",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "节水提示与卫生间",
+              "activity": "检查水龙头已经关闭，养成节约用水的习惯。",
+              "source": {
+                "book_id": "xiangshao-g6-1",
+                "book_title": "英语 · 六年级上册",
+                "unit_id": "unit-7",
+                "unit_title": "We shouldn't waste water",
+                "printed_page": 41,
+                "file_page": 48,
+                "region_id": "p48-r9",
+                "text": "Turn off the tap please.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g6-1\\pages\\048.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g6-1-p48-r9.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "563b1f36c9c11a9041f02378cfec8ce79f1aca4690bab68f7080ccc8852f02a5"
+              },
+              "id": "memory_home_bathroom_05",
+              "node_name": "SG_MEMORY_05",
+              "order": 5,
+              "room_id": "home_bathroom",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            }
+          ],
+          "task": {
+            "id": "wash_hands",
+            "anchor": 2,
+            "title": "洗手后关好水龙头",
+            "steps": [
+              "打开水龙头",
+              "搓洗并冲净双手",
+              "关好水龙头"
+            ],
+            "result": "双手洗干净了，水龙头也关好了。",
+            "kind": "authored_household_action",
+            "records": "experience_only_no_language_grade"
+          },
+          "status": "runtime_spatial_content",
+          "return_to": {
+            "room_id": "home_hall",
+            "interaction_id": "home_bathroom_gate"
+          },
+          "english_focus": [
+            "Dongdong, brush your teeth."
+          ],
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_study",
+          "name": "窗边书房",
+          "english_word": "Study area",
+          "scene_level": 3,
+          "parent_room": "home_hall",
+          "theme": "阅读、收纳文具、使用电脑、做贺卡和安排计划，各有可辨认的物件。",
+          "vocabulary_status": "authored_functional_space_for_textbook_reading_and_computer",
+          "camera_size": 23.0,
+          "anchors": [
+            {
+              "label": "电脑书桌",
+              "activity": "看看电脑能帮我们做什么；这里的问候只发生在游戏里。",
+              "source": {
+                "book_id": "english-grade5-volume1-smartedu-2022",
+                "book_title": "英语 · 五年级上册",
+                "unit_id": "unit-3",
+                "unit_title": "I can email my friends with the computer",
+                "printed_page": 12,
+                "file_page": 19,
+                "region_id": "p19-r2",
+                "text": "I can email my friends with the computer.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\smartedu-2022\\pages\\019.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/english-grade5-volume1-smartedu-2022-p19-r2.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "e758aded9f12c4255da1e9f0eee07c8bc4ccfdfa15931859ca317112f57609f3"
+              },
+              "id": "memory_home_study_01",
+              "node_name": "SG_MEMORY_01",
+              "order": 1,
+              "room_id": "home_study",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "绘本书架",
+              "activity": "把读完的书放回书架，再挑一个故事。",
+              "source": {
+                "book_id": "xiangshao-g5-2",
+                "book_title": "英语 · 五年级下册",
+                "unit_id": "unit-1",
+                "unit_title": "We're going to read stories",
+                "printed_page": 1,
+                "file_page": 8,
+                "region_id": "p8-r8",
+                "text": "We're going to read them.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g5-2\\pages\\008.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g5-2-p8-r8.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "4e8303b38e7d15b1c8b290559af0b3fd351f82b0b17e163ff10284658d463677"
+              },
+              "id": "memory_home_study_02",
+              "node_name": "SG_MEMORY_02",
+              "order": 2,
+              "room_id": "home_study",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "靠窗阅读座",
+              "activity": "晚上坐下来读一会儿书。",
+              "source": {
+                "book_id": "xiangshao-g6-1",
+                "book_title": "英语 · 六年级上册",
+                "unit_id": "unit-2",
+                "unit_title": "Beibei always gets up early",
+                "printed_page": 7,
+                "file_page": 14,
+                "region_id": "p14-r10",
+                "text": "read a book",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g6-1\\pages\\014.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g6-1-p14-r10.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "3fedb6480edb200fc6ce715091d2c8dbe77bab08e347189cde23e3b34be047a5"
+              },
+              "id": "memory_home_study_03",
+              "node_name": "SG_MEMORY_03",
+              "order": 3,
+              "room_id": "home_study",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "文具整理桌",
+              "activity": "找一找铅笔盒，把文具放到合适的位置。",
+              "source": {
+                "book_id": "xiangshao-g4-2",
+                "book_title": "英语 · 四年级下册",
+                "unit_id": "unit-1",
+                "unit_title": "It's on your head",
+                "printed_page": 1,
+                "file_page": 8,
+                "region_id": "p8-r7",
+                "text": "Where's my pencil case?",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-2\\pages\\008.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g4-2-p8-r7.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "c91b453ae9b3166db7c809e8d086bc0fd0c6823d28c683733cc73b5ea5ffac09"
+              },
+              "id": "memory_home_study_04",
+              "node_name": "SG_MEMORY_04",
+              "order": 4,
+              "room_id": "home_study",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "贺卡手工台",
+              "activity": "画一张送给家人的卡片，表达自己的心意。",
+              "source": {
+                "book_id": "xiangshao-g5-2",
+                "book_title": "英语 · 五年级下册",
+                "unit_id": "unit-6",
+                "unit_title": "I'll make a beautiful card",
+                "printed_page": 26,
+                "file_page": 33,
+                "region_id": "p33-r8",
+                "text": "I'll make a beautiful card.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g5-2\\pages\\033.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g5-2-p33-r8.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "9998a7cb004a864857aaa79de4a1dd6b9b2f0414d9ae4f36a6cc764616a1fbe8"
+              },
+              "id": "memory_home_study_05",
+              "node_name": "SG_MEMORY_05",
+              "order": 5,
+              "room_id": "home_study",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            }
+          ],
+          "task": {
+            "id": "tidy_books",
+            "anchor": 2,
+            "title": "把读过的书放回去",
+            "steps": [
+              "收起散放的绘本",
+              "把绘本按大小排好",
+              "放回书架"
+            ],
+            "result": "绘本已经排整齐了，下次更容易找到。",
+            "kind": "authored_household_action",
+            "records": "experience_only_no_language_grade"
+          },
+          "status": "runtime_spatial_content",
+          "return_to": {
+            "room_id": "home_hall",
+            "interaction_id": "home_study_gate"
+          },
+          "english_focus": [
+            "I can email my friends with the computer."
+          ],
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_balcony",
+          "name": "家务阳台",
+          "english_word": "Housework area",
+          "scene_level": 3,
+          "parent_room": "home_hall",
+          "theme": "洗衣、晾晒、浇花、打扫与节水，共用一个明亮通风的家务区。",
+          "vocabulary_status": "authored_functional_space_for_textbook_chores",
+          "camera_size": 23.0,
+          "anchors": [
+            {
+              "label": "洗衣篮与晾衣架",
+              "activity": "将洗好的袜子挂好，再整理衣篮。",
+              "source": {
+                "book_id": "xiangshao-g6-1",
+                "book_title": "英语 · 六年级上册",
+                "unit_id": "unit-7",
+                "unit_title": "We shouldn't waste water",
+                "printed_page": 41,
+                "file_page": 48,
+                "region_id": "p48-r12",
+                "text": "I'm washing my socks.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g6-1\\pages\\048.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g6-1-p48-r12.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "4fe67e63e62869b2df3846150f2ed68e62585b6918baa1ae99857ecdff71d835"
+              },
+              "id": "memory_home_balcony_01",
+              "node_name": "SG_MEMORY_01",
+              "order": 1,
+              "room_id": "home_balcony",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "盆栽照料台",
+              "activity": "观察盆栽，学着给植物浇水。",
+              "source": {
+                "book_id": "english-grade5-volume1-smartedu-2022",
+                "book_title": "英语 · 五年级上册",
+                "unit_id": "unit-7",
+                "unit_title": "What chores do you do at home?",
+                "printed_page": 41,
+                "file_page": 48,
+                "region_id": "p48-r10",
+                "text": "I make the bed and water the plants.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\smartedu-2022\\pages\\048.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/english-grade5-volume1-smartedu-2022-p48-r10.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "1b49ec064f28f2d779c2573d3ec44e10b1e2ca43801415ec17d5668f0e1faab5"
+              },
+              "id": "memory_home_balcony_02",
+              "node_name": "SG_MEMORY_02",
+              "order": 2,
+              "room_id": "home_balcony",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "窗户清洁台",
+              "activity": "擦一擦窗户，看看家人在做什么。",
+              "source": {
+                "book_id": "xiangshao-g4-2",
+                "book_title": "英语 · 四年级下册",
+                "unit_id": "unit-8",
+                "unit_title": "He is cleaning the window",
+                "printed_page": 47,
+                "file_page": 54,
+                "region_id": "p54-r3",
+                "text": "He is cleaning the window.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g4-2\\pages\\054.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g4-2-p54-r3.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "f9bd9ef11b19d7a31d7a3f7a6b426dc2ea10ff13c3314573b0f234aad203307e"
+              },
+              "id": "memory_home_balcony_03",
+              "node_name": "SG_MEMORY_03",
+              "order": 3,
+              "room_id": "home_balcony",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "扫帚与簸箕",
+              "activity": "找到扫帚，把地面的小纸屑扫起来。",
+              "source": {
+                "book_id": "english-grade5-volume1-smartedu-2022",
+                "book_title": "英语 · 五年级上册",
+                "unit_id": "unit-7",
+                "unit_title": "What chores do you do at home?",
+                "printed_page": 42,
+                "file_page": 49,
+                "region_id": "p49-r3",
+                "text": "I sweep the floor.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\smartedu-2022\\pages\\049.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": true,
+                "audio": "res://assets/audio/home/english-grade5-volume1-smartedu-2022-p49-r3.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "278a22149d859e7e3b178882c31f0cf3c9b2b013e09b6944680ace7690f54ffb"
+              },
+              "id": "memory_home_balcony_04",
+              "node_name": "SG_MEMORY_04",
+              "order": 4,
+              "room_id": "home_balcony",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            },
+            {
+              "label": "节水储物角",
+              "activity": "洗衣后关好水，收起用品。",
+              "source": {
+                "book_id": "xiangshao-g6-1",
+                "book_title": "英语 · 六年级上册",
+                "unit_id": "unit-7",
+                "unit_title": "We shouldn't waste water",
+                "printed_page": 42,
+                "file_page": 49,
+                "region_id": "p49-r2",
+                "text": "We should save water.",
+                "image": "D:\\Project\\Englishbook\\public\\editions\\xiangshao-g6-1\\pages\\049.jpg",
+                "manifest_verified": true,
+                "page_visually_reviewed": false,
+                "audio": "res://assets/audio/home/xiangshao-g6-1-p49-r2.mp3",
+                "audio_kind": "existing_cached_synthetic_speech",
+                "audio_source_sha256": "01ecdf969fb69d40bdb10ad40e0a53627ad3c5fba78e7651f2f7bbf4f3795a5e"
+              },
+              "id": "memory_home_balcony_05",
+              "node_name": "SG_MEMORY_05",
+              "order": 5,
+              "room_id": "home_balcony",
+              "language_status": "exact_textbook_quote_with_authored_activity"
+            }
+          ],
+          "task": {
+            "id": "hang_laundry",
+            "anchor": 1,
+            "title": "晾好洗过的小袜子",
+            "steps": [
+              "从衣篮取出袜子",
+              "一双一双挂到晾衣架上",
+              "夹好夹子并收起衣篮"
+            ],
+            "result": "袜子已经挂好，衣篮也收整齐了。",
+            "kind": "authored_household_action",
+            "records": "experience_only_no_language_grade"
+          },
+          "status": "runtime_spatial_content",
+          "return_to": {
+            "room_id": "home_hall",
+            "interaction_id": "home_balcony_gate"
+          },
+          "english_focus": [
+            "I'm washing my socks."
+          ],
+          "separate_scene": true
+        }
+      ],
+      "model_bindings": {
+        "doors": {
+          "home": "SG_DOOR_HOME",
+          "home_bedroom": "SG_DOOR_HOME_BEDROOM",
+          "home_kitchen": "SG_DOOR_HOME_KITCHEN",
+          "home_dining": "SG_DOOR_HOME_DINING",
+          "home_bathroom": "SG_DOOR_HOME_BATHROOM",
+          "home_study": "SG_DOOR_HOME_STUDY",
+          "home_balcony": "SG_DOOR_HOME_BALCONY"
+        }
+      },
+      "anchors": [],
+      "status": "runtime_navigation_space",
+      "learning_role": "navigation_only_no_added_memory_points_or_tasks"
+    }
+  ],
   "coverage": {
     "referenced_books": 8,
     "spaces": 8,
+    "navigation_spaces": 1,
+    "loaded_household_scenes": 9,
     "child_rooms": 7,
     "anchors": 40,
     "complete_textbook_coverage": false,
@@ -2420,7 +3571,9 @@
   "space_design": "An original courtyard home; never a claim that every textbook family lives in this floor plan.",
   "save_compatibility": "home remains the existing living-room identifier, memory ids and story/friend records retain their identity.",
   "flow": [
-    "小院与玄关",
+    "小院",
+    "正门进入室内玄关",
+    "沿走廊走到房门",
     "卧室起床整理",
     "浴室洗手",
     "厨房备餐",
@@ -2428,7 +3581,7 @@
     "客厅迎客",
     "书房阅读",
     "阳台家务",
-    "回到小院"
+    "门厅正门回到小院"
   ],
   "sources": [
     {

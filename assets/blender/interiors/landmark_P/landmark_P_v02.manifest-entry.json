@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_P",
+  "name": "南瓜农场屋",
+  "blend": "assets/blender/interiors/landmark_P/landmark_P_v02.blend",
+  "glb": "assets/blender/interiors/landmark_P/landmark_P_v02.glb",
+  "preview": "assets/blender/interiors/landmark_P/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口季节牌",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Farm_Face",
+      "memory_id": "memory_P_01",
+      "activity": "查看种植时节"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧种子工具台",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Seeds_Back",
+      "memory_id": "memory_P_02",
+      "activity": "选种子和工具"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央瓜藤种植垄",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Growing_Bed",
+      "memory_id": "memory_P_03",
+      "activity": "照顾瓜藤"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧收成秤台",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Compare_Scale_Leg",
+      "memory_id": "memory_P_04",
+      "activity": "比较大小和数量"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口农产篮架",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Produce_Leg",
+      "memory_id": "memory_P_05",
+      "activity": "装篮送出收成"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.65,
+    -7.65,
+    17.3,
+    15.3
+  ],
+  "triangles": 170328,
+  "glb_sha256": "4ff2068a42406d6b0fdd7984a5e33785dcf209e565e467c1e43f54c71bca5019",
+  "refinement_revision": "world-refinement-v1"
+}

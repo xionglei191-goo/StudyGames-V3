@@ -1,0 +1,5656 @@
+{
+  "schema_version": 1,
+  "content_revision": "revisits-v1",
+  "scope": "26 letters in two separate dimensions and 10 written situations from U1-U3; authored adaptations; no speech or listening assessment",
+  "source_files": [
+    "prologue.json",
+    "p2_journey.json",
+    "curriculum.json"
+  ],
+  "targets": [
+    {
+      "id": "letter/A/case",
+      "group": "letters",
+      "letter": "A",
+      "title": "Aa · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/A",
+      "source_refs": [
+        "prologue.json#prologue_A"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "A",
+          "image_letter": "",
+          "correct": "A",
+          "options": [
+            {
+              "id": "A",
+              "text": "a"
+            },
+            {
+              "id": "F",
+              "text": "f"
+            },
+            {
+              "id": "N",
+              "text": "n"
+            }
+          ],
+          "hint": "回想苹果地标和它的字母伙伴。",
+          "demo": "A 的小写伙伴是 a。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "A",
+          "image_letter": "",
+          "correct": "A",
+          "options": [
+            {
+              "id": "G",
+              "text": "g"
+            },
+            {
+              "id": "O",
+              "text": "o"
+            },
+            {
+              "id": "A",
+              "text": "a"
+            }
+          ],
+          "hint": "回想苹果地标和它的字母伙伴。",
+          "demo": "A 的小写伙伴是 a。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "A",
+          "image_letter": "",
+          "correct": "A",
+          "options": [
+            {
+              "id": "P",
+              "text": "p"
+            },
+            {
+              "id": "A",
+              "text": "a"
+            },
+            {
+              "id": "H",
+              "text": "h"
+            }
+          ],
+          "hint": "回想苹果地标和它的字母伙伴。",
+          "demo": "A 的小写伙伴是 a。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/A/image",
+      "group": "letters",
+      "letter": "A",
+      "title": "Aa · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/A",
+      "source_refs": [
+        "prologue.json#prologue_A"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "A",
+          "correct": "A",
+          "options": [
+            {
+              "id": "A",
+              "text": "A"
+            },
+            {
+              "id": "F",
+              "text": "F"
+            },
+            {
+              "id": "N",
+              "text": "N"
+            }
+          ],
+          "hint": "想一想苹果地标里藏着的字形。",
+          "demo": "苹果的固定字母伙伴是 A。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "A",
+          "correct": "A",
+          "options": [
+            {
+              "id": "G",
+              "text": "G"
+            },
+            {
+              "id": "O",
+              "text": "O"
+            },
+            {
+              "id": "A",
+              "text": "A"
+            }
+          ],
+          "hint": "想一想苹果地标里藏着的字形。",
+          "demo": "苹果的固定字母伙伴是 A。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "A",
+          "correct": "A",
+          "options": [
+            {
+              "id": "P",
+              "text": "P"
+            },
+            {
+              "id": "A",
+              "text": "A"
+            },
+            {
+              "id": "H",
+              "text": "H"
+            }
+          ],
+          "hint": "想一想苹果地标里藏着的字形。",
+          "demo": "苹果的固定字母伙伴是 A。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/B/case",
+      "group": "letters",
+      "letter": "B",
+      "title": "Bb · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/B",
+      "source_refs": [
+        "prologue.json#prologue_B"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "B",
+          "image_letter": "",
+          "correct": "B",
+          "options": [
+            {
+              "id": "B",
+              "text": "b"
+            },
+            {
+              "id": "G",
+              "text": "g"
+            },
+            {
+              "id": "O",
+              "text": "o"
+            }
+          ],
+          "hint": "回想小船地标和它的字母伙伴。",
+          "demo": "B 的小写伙伴是 b。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "B",
+          "image_letter": "",
+          "correct": "B",
+          "options": [
+            {
+              "id": "H",
+              "text": "h"
+            },
+            {
+              "id": "P",
+              "text": "p"
+            },
+            {
+              "id": "B",
+              "text": "b"
+            }
+          ],
+          "hint": "回想小船地标和它的字母伙伴。",
+          "demo": "B 的小写伙伴是 b。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "B",
+          "image_letter": "",
+          "correct": "B",
+          "options": [
+            {
+              "id": "Q",
+              "text": "q"
+            },
+            {
+              "id": "B",
+              "text": "b"
+            },
+            {
+              "id": "I",
+              "text": "i"
+            }
+          ],
+          "hint": "回想小船地标和它的字母伙伴。",
+          "demo": "B 的小写伙伴是 b。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/B/image",
+      "group": "letters",
+      "letter": "B",
+      "title": "Bb · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/B",
+      "source_refs": [
+        "prologue.json#prologue_B"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "B",
+          "correct": "B",
+          "options": [
+            {
+              "id": "B",
+              "text": "B"
+            },
+            {
+              "id": "G",
+              "text": "G"
+            },
+            {
+              "id": "O",
+              "text": "O"
+            }
+          ],
+          "hint": "想一想小船地标里藏着的字形。",
+          "demo": "小船的固定字母伙伴是 B。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "B",
+          "correct": "B",
+          "options": [
+            {
+              "id": "H",
+              "text": "H"
+            },
+            {
+              "id": "P",
+              "text": "P"
+            },
+            {
+              "id": "B",
+              "text": "B"
+            }
+          ],
+          "hint": "想一想小船地标里藏着的字形。",
+          "demo": "小船的固定字母伙伴是 B。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "B",
+          "correct": "B",
+          "options": [
+            {
+              "id": "Q",
+              "text": "Q"
+            },
+            {
+              "id": "B",
+              "text": "B"
+            },
+            {
+              "id": "I",
+              "text": "I"
+            }
+          ],
+          "hint": "想一想小船地标里藏着的字形。",
+          "demo": "小船的固定字母伙伴是 B。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/C/case",
+      "group": "letters",
+      "letter": "C",
+      "title": "Cc · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/C",
+      "source_refs": [
+        "prologue.json#prologue_C"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "C",
+          "image_letter": "",
+          "correct": "C",
+          "options": [
+            {
+              "id": "C",
+              "text": "c"
+            },
+            {
+              "id": "H",
+              "text": "h"
+            },
+            {
+              "id": "P",
+              "text": "p"
+            }
+          ],
+          "hint": "回想蛋糕地标和它的字母伙伴。",
+          "demo": "C 的小写伙伴是 c。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "C",
+          "image_letter": "",
+          "correct": "C",
+          "options": [
+            {
+              "id": "I",
+              "text": "i"
+            },
+            {
+              "id": "Q",
+              "text": "q"
+            },
+            {
+              "id": "C",
+              "text": "c"
+            }
+          ],
+          "hint": "回想蛋糕地标和它的字母伙伴。",
+          "demo": "C 的小写伙伴是 c。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "C",
+          "image_letter": "",
+          "correct": "C",
+          "options": [
+            {
+              "id": "R",
+              "text": "r"
+            },
+            {
+              "id": "C",
+              "text": "c"
+            },
+            {
+              "id": "J",
+              "text": "j"
+            }
+          ],
+          "hint": "回想蛋糕地标和它的字母伙伴。",
+          "demo": "C 的小写伙伴是 c。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/C/image",
+      "group": "letters",
+      "letter": "C",
+      "title": "Cc · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/C",
+      "source_refs": [
+        "prologue.json#prologue_C"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "C",
+          "correct": "C",
+          "options": [
+            {
+              "id": "C",
+              "text": "C"
+            },
+            {
+              "id": "H",
+              "text": "H"
+            },
+            {
+              "id": "P",
+              "text": "P"
+            }
+          ],
+          "hint": "想一想蛋糕地标里藏着的字形。",
+          "demo": "蛋糕的固定字母伙伴是 C。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "C",
+          "correct": "C",
+          "options": [
+            {
+              "id": "I",
+              "text": "I"
+            },
+            {
+              "id": "Q",
+              "text": "Q"
+            },
+            {
+              "id": "C",
+              "text": "C"
+            }
+          ],
+          "hint": "想一想蛋糕地标里藏着的字形。",
+          "demo": "蛋糕的固定字母伙伴是 C。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "C",
+          "correct": "C",
+          "options": [
+            {
+              "id": "R",
+              "text": "R"
+            },
+            {
+              "id": "C",
+              "text": "C"
+            },
+            {
+              "id": "J",
+              "text": "J"
+            }
+          ],
+          "hint": "想一想蛋糕地标里藏着的字形。",
+          "demo": "蛋糕的固定字母伙伴是 C。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/D/case",
+      "group": "letters",
+      "letter": "D",
+      "title": "Dd · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/D",
+      "source_refs": [
+        "prologue.json#prologue_D"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "D",
+          "image_letter": "",
+          "correct": "D",
+          "options": [
+            {
+              "id": "D",
+              "text": "d"
+            },
+            {
+              "id": "I",
+              "text": "i"
+            },
+            {
+              "id": "Q",
+              "text": "q"
+            }
+          ],
+          "hint": "回想鼓地标和它的字母伙伴。",
+          "demo": "D 的小写伙伴是 d。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "D",
+          "image_letter": "",
+          "correct": "D",
+          "options": [
+            {
+              "id": "J",
+              "text": "j"
+            },
+            {
+              "id": "R",
+              "text": "r"
+            },
+            {
+              "id": "D",
+              "text": "d"
+            }
+          ],
+          "hint": "回想鼓地标和它的字母伙伴。",
+          "demo": "D 的小写伙伴是 d。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "D",
+          "image_letter": "",
+          "correct": "D",
+          "options": [
+            {
+              "id": "S",
+              "text": "s"
+            },
+            {
+              "id": "D",
+              "text": "d"
+            },
+            {
+              "id": "K",
+              "text": "k"
+            }
+          ],
+          "hint": "回想鼓地标和它的字母伙伴。",
+          "demo": "D 的小写伙伴是 d。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/D/image",
+      "group": "letters",
+      "letter": "D",
+      "title": "Dd · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/D",
+      "source_refs": [
+        "prologue.json#prologue_D"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "D",
+          "correct": "D",
+          "options": [
+            {
+              "id": "D",
+              "text": "D"
+            },
+            {
+              "id": "I",
+              "text": "I"
+            },
+            {
+              "id": "Q",
+              "text": "Q"
+            }
+          ],
+          "hint": "想一想鼓地标里藏着的字形。",
+          "demo": "鼓的固定字母伙伴是 D。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "D",
+          "correct": "D",
+          "options": [
+            {
+              "id": "J",
+              "text": "J"
+            },
+            {
+              "id": "R",
+              "text": "R"
+            },
+            {
+              "id": "D",
+              "text": "D"
+            }
+          ],
+          "hint": "想一想鼓地标里藏着的字形。",
+          "demo": "鼓的固定字母伙伴是 D。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "D",
+          "correct": "D",
+          "options": [
+            {
+              "id": "S",
+              "text": "S"
+            },
+            {
+              "id": "D",
+              "text": "D"
+            },
+            {
+              "id": "K",
+              "text": "K"
+            }
+          ],
+          "hint": "想一想鼓地标里藏着的字形。",
+          "demo": "鼓的固定字母伙伴是 D。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/E/case",
+      "group": "letters",
+      "letter": "E",
+      "title": "Ee · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/E",
+      "source_refs": [
+        "prologue.json#prologue_E"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "E",
+          "image_letter": "",
+          "correct": "E",
+          "options": [
+            {
+              "id": "E",
+              "text": "e"
+            },
+            {
+              "id": "J",
+              "text": "j"
+            },
+            {
+              "id": "R",
+              "text": "r"
+            }
+          ],
+          "hint": "回想蛋壳（完整蛋形）地标和它的字母伙伴。",
+          "demo": "E 的小写伙伴是 e。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "E",
+          "image_letter": "",
+          "correct": "E",
+          "options": [
+            {
+              "id": "K",
+              "text": "k"
+            },
+            {
+              "id": "S",
+              "text": "s"
+            },
+            {
+              "id": "E",
+              "text": "e"
+            }
+          ],
+          "hint": "回想蛋壳（完整蛋形）地标和它的字母伙伴。",
+          "demo": "E 的小写伙伴是 e。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "E",
+          "image_letter": "",
+          "correct": "E",
+          "options": [
+            {
+              "id": "T",
+              "text": "t"
+            },
+            {
+              "id": "E",
+              "text": "e"
+            },
+            {
+              "id": "L",
+              "text": "l"
+            }
+          ],
+          "hint": "回想蛋壳（完整蛋形）地标和它的字母伙伴。",
+          "demo": "E 的小写伙伴是 e。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/E/image",
+      "group": "letters",
+      "letter": "E",
+      "title": "Ee · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/E",
+      "source_refs": [
+        "prologue.json#prologue_E"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "E",
+          "correct": "E",
+          "options": [
+            {
+              "id": "E",
+              "text": "E"
+            },
+            {
+              "id": "J",
+              "text": "J"
+            },
+            {
+              "id": "R",
+              "text": "R"
+            }
+          ],
+          "hint": "想一想蛋壳（完整蛋形）地标里藏着的字形。",
+          "demo": "蛋壳（完整蛋形）的固定字母伙伴是 E。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "E",
+          "correct": "E",
+          "options": [
+            {
+              "id": "K",
+              "text": "K"
+            },
+            {
+              "id": "S",
+              "text": "S"
+            },
+            {
+              "id": "E",
+              "text": "E"
+            }
+          ],
+          "hint": "想一想蛋壳（完整蛋形）地标里藏着的字形。",
+          "demo": "蛋壳（完整蛋形）的固定字母伙伴是 E。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "E",
+          "correct": "E",
+          "options": [
+            {
+              "id": "T",
+              "text": "T"
+            },
+            {
+              "id": "E",
+              "text": "E"
+            },
+            {
+              "id": "L",
+              "text": "L"
+            }
+          ],
+          "hint": "想一想蛋壳（完整蛋形）地标里藏着的字形。",
+          "demo": "蛋壳（完整蛋形）的固定字母伙伴是 E。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/F/case",
+      "group": "letters",
+      "letter": "F",
+      "title": "Ff · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/F",
+      "source_refs": [
+        "prologue.json#prologue_F"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "F",
+          "image_letter": "",
+          "correct": "F",
+          "options": [
+            {
+              "id": "F",
+              "text": "f"
+            },
+            {
+              "id": "K",
+              "text": "k"
+            },
+            {
+              "id": "S",
+              "text": "s"
+            }
+          ],
+          "hint": "回想花朵地标和它的字母伙伴。",
+          "demo": "F 的小写伙伴是 f。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "F",
+          "image_letter": "",
+          "correct": "F",
+          "options": [
+            {
+              "id": "L",
+              "text": "l"
+            },
+            {
+              "id": "T",
+              "text": "t"
+            },
+            {
+              "id": "F",
+              "text": "f"
+            }
+          ],
+          "hint": "回想花朵地标和它的字母伙伴。",
+          "demo": "F 的小写伙伴是 f。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "F",
+          "image_letter": "",
+          "correct": "F",
+          "options": [
+            {
+              "id": "U",
+              "text": "u"
+            },
+            {
+              "id": "F",
+              "text": "f"
+            },
+            {
+              "id": "M",
+              "text": "m"
+            }
+          ],
+          "hint": "回想花朵地标和它的字母伙伴。",
+          "demo": "F 的小写伙伴是 f。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/F/image",
+      "group": "letters",
+      "letter": "F",
+      "title": "Ff · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/F",
+      "source_refs": [
+        "prologue.json#prologue_F"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "F",
+          "correct": "F",
+          "options": [
+            {
+              "id": "F",
+              "text": "F"
+            },
+            {
+              "id": "K",
+              "text": "K"
+            },
+            {
+              "id": "S",
+              "text": "S"
+            }
+          ],
+          "hint": "想一想花朵地标里藏着的字形。",
+          "demo": "花朵的固定字母伙伴是 F。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "F",
+          "correct": "F",
+          "options": [
+            {
+              "id": "L",
+              "text": "L"
+            },
+            {
+              "id": "T",
+              "text": "T"
+            },
+            {
+              "id": "F",
+              "text": "F"
+            }
+          ],
+          "hint": "想一想花朵地标里藏着的字形。",
+          "demo": "花朵的固定字母伙伴是 F。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "F",
+          "correct": "F",
+          "options": [
+            {
+              "id": "U",
+              "text": "U"
+            },
+            {
+              "id": "F",
+              "text": "F"
+            },
+            {
+              "id": "M",
+              "text": "M"
+            }
+          ],
+          "hint": "想一想花朵地标里藏着的字形。",
+          "demo": "花朵的固定字母伙伴是 F。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/G/case",
+      "group": "letters",
+      "letter": "G",
+      "title": "Gg · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/G",
+      "source_refs": [
+        "prologue.json#prologue_G"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "G",
+          "image_letter": "",
+          "correct": "G",
+          "options": [
+            {
+              "id": "G",
+              "text": "g"
+            },
+            {
+              "id": "L",
+              "text": "l"
+            },
+            {
+              "id": "T",
+              "text": "t"
+            }
+          ],
+          "hint": "回想地球仪地标和它的字母伙伴。",
+          "demo": "G 的小写伙伴是 g。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "G",
+          "image_letter": "",
+          "correct": "G",
+          "options": [
+            {
+              "id": "M",
+              "text": "m"
+            },
+            {
+              "id": "U",
+              "text": "u"
+            },
+            {
+              "id": "G",
+              "text": "g"
+            }
+          ],
+          "hint": "回想地球仪地标和它的字母伙伴。",
+          "demo": "G 的小写伙伴是 g。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "G",
+          "image_letter": "",
+          "correct": "G",
+          "options": [
+            {
+              "id": "V",
+              "text": "v"
+            },
+            {
+              "id": "G",
+              "text": "g"
+            },
+            {
+              "id": "N",
+              "text": "n"
+            }
+          ],
+          "hint": "回想地球仪地标和它的字母伙伴。",
+          "demo": "G 的小写伙伴是 g。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/G/image",
+      "group": "letters",
+      "letter": "G",
+      "title": "Gg · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/G",
+      "source_refs": [
+        "prologue.json#prologue_G"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "G",
+          "correct": "G",
+          "options": [
+            {
+              "id": "G",
+              "text": "G"
+            },
+            {
+              "id": "L",
+              "text": "L"
+            },
+            {
+              "id": "T",
+              "text": "T"
+            }
+          ],
+          "hint": "想一想地球仪地标里藏着的字形。",
+          "demo": "地球仪的固定字母伙伴是 G。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "G",
+          "correct": "G",
+          "options": [
+            {
+              "id": "M",
+              "text": "M"
+            },
+            {
+              "id": "U",
+              "text": "U"
+            },
+            {
+              "id": "G",
+              "text": "G"
+            }
+          ],
+          "hint": "想一想地球仪地标里藏着的字形。",
+          "demo": "地球仪的固定字母伙伴是 G。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "G",
+          "correct": "G",
+          "options": [
+            {
+              "id": "V",
+              "text": "V"
+            },
+            {
+              "id": "G",
+              "text": "G"
+            },
+            {
+              "id": "N",
+              "text": "N"
+            }
+          ],
+          "hint": "想一想地球仪地标里藏着的字形。",
+          "demo": "地球仪的固定字母伙伴是 G。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/H/case",
+      "group": "letters",
+      "letter": "H",
+      "title": "Hh · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/H",
+      "source_refs": [
+        "prologue.json#prologue_H"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "H",
+          "image_letter": "",
+          "correct": "H",
+          "options": [
+            {
+              "id": "H",
+              "text": "h"
+            },
+            {
+              "id": "M",
+              "text": "m"
+            },
+            {
+              "id": "U",
+              "text": "u"
+            }
+          ],
+          "hint": "回想帽子地标和它的字母伙伴。",
+          "demo": "H 的小写伙伴是 h。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "H",
+          "image_letter": "",
+          "correct": "H",
+          "options": [
+            {
+              "id": "N",
+              "text": "n"
+            },
+            {
+              "id": "V",
+              "text": "v"
+            },
+            {
+              "id": "H",
+              "text": "h"
+            }
+          ],
+          "hint": "回想帽子地标和它的字母伙伴。",
+          "demo": "H 的小写伙伴是 h。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "H",
+          "image_letter": "",
+          "correct": "H",
+          "options": [
+            {
+              "id": "W",
+              "text": "w"
+            },
+            {
+              "id": "H",
+              "text": "h"
+            },
+            {
+              "id": "O",
+              "text": "o"
+            }
+          ],
+          "hint": "回想帽子地标和它的字母伙伴。",
+          "demo": "H 的小写伙伴是 h。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/H/image",
+      "group": "letters",
+      "letter": "H",
+      "title": "Hh · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/H",
+      "source_refs": [
+        "prologue.json#prologue_H"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "H",
+          "correct": "H",
+          "options": [
+            {
+              "id": "H",
+              "text": "H"
+            },
+            {
+              "id": "M",
+              "text": "M"
+            },
+            {
+              "id": "U",
+              "text": "U"
+            }
+          ],
+          "hint": "想一想帽子地标里藏着的字形。",
+          "demo": "帽子的固定字母伙伴是 H。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "H",
+          "correct": "H",
+          "options": [
+            {
+              "id": "N",
+              "text": "N"
+            },
+            {
+              "id": "V",
+              "text": "V"
+            },
+            {
+              "id": "H",
+              "text": "H"
+            }
+          ],
+          "hint": "想一想帽子地标里藏着的字形。",
+          "demo": "帽子的固定字母伙伴是 H。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "H",
+          "correct": "H",
+          "options": [
+            {
+              "id": "W",
+              "text": "W"
+            },
+            {
+              "id": "H",
+              "text": "H"
+            },
+            {
+              "id": "O",
+              "text": "O"
+            }
+          ],
+          "hint": "想一想帽子地标里藏着的字形。",
+          "demo": "帽子的固定字母伙伴是 H。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/I/case",
+      "group": "letters",
+      "letter": "I",
+      "title": "Ii · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/I",
+      "source_refs": [
+        "prologue.json#prologue_I"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "I",
+          "image_letter": "",
+          "correct": "I",
+          "options": [
+            {
+              "id": "I",
+              "text": "i"
+            },
+            {
+              "id": "N",
+              "text": "n"
+            },
+            {
+              "id": "V",
+              "text": "v"
+            }
+          ],
+          "hint": "回想冰淇淋地标和它的字母伙伴。",
+          "demo": "I 的小写伙伴是 i。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "I",
+          "image_letter": "",
+          "correct": "I",
+          "options": [
+            {
+              "id": "O",
+              "text": "o"
+            },
+            {
+              "id": "W",
+              "text": "w"
+            },
+            {
+              "id": "I",
+              "text": "i"
+            }
+          ],
+          "hint": "回想冰淇淋地标和它的字母伙伴。",
+          "demo": "I 的小写伙伴是 i。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "I",
+          "image_letter": "",
+          "correct": "I",
+          "options": [
+            {
+              "id": "X",
+              "text": "x"
+            },
+            {
+              "id": "I",
+              "text": "i"
+            },
+            {
+              "id": "P",
+              "text": "p"
+            }
+          ],
+          "hint": "回想冰淇淋地标和它的字母伙伴。",
+          "demo": "I 的小写伙伴是 i。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/I/image",
+      "group": "letters",
+      "letter": "I",
+      "title": "Ii · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/I",
+      "source_refs": [
+        "prologue.json#prologue_I"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "I",
+          "correct": "I",
+          "options": [
+            {
+              "id": "I",
+              "text": "I"
+            },
+            {
+              "id": "N",
+              "text": "N"
+            },
+            {
+              "id": "V",
+              "text": "V"
+            }
+          ],
+          "hint": "想一想冰淇淋地标里藏着的字形。",
+          "demo": "冰淇淋的固定字母伙伴是 I。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "I",
+          "correct": "I",
+          "options": [
+            {
+              "id": "O",
+              "text": "O"
+            },
+            {
+              "id": "W",
+              "text": "W"
+            },
+            {
+              "id": "I",
+              "text": "I"
+            }
+          ],
+          "hint": "想一想冰淇淋地标里藏着的字形。",
+          "demo": "冰淇淋的固定字母伙伴是 I。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "I",
+          "correct": "I",
+          "options": [
+            {
+              "id": "X",
+              "text": "X"
+            },
+            {
+              "id": "I",
+              "text": "I"
+            },
+            {
+              "id": "P",
+              "text": "P"
+            }
+          ],
+          "hint": "想一想冰淇淋地标里藏着的字形。",
+          "demo": "冰淇淋的固定字母伙伴是 I。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/J/case",
+      "group": "letters",
+      "letter": "J",
+      "title": "Jj · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/J",
+      "source_refs": [
+        "prologue.json#prologue_J"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "J",
+          "image_letter": "",
+          "correct": "J",
+          "options": [
+            {
+              "id": "J",
+              "text": "j"
+            },
+            {
+              "id": "O",
+              "text": "o"
+            },
+            {
+              "id": "W",
+              "text": "w"
+            }
+          ],
+          "hint": "回想罐子地标和它的字母伙伴。",
+          "demo": "J 的小写伙伴是 j。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "J",
+          "image_letter": "",
+          "correct": "J",
+          "options": [
+            {
+              "id": "P",
+              "text": "p"
+            },
+            {
+              "id": "X",
+              "text": "x"
+            },
+            {
+              "id": "J",
+              "text": "j"
+            }
+          ],
+          "hint": "回想罐子地标和它的字母伙伴。",
+          "demo": "J 的小写伙伴是 j。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "J",
+          "image_letter": "",
+          "correct": "J",
+          "options": [
+            {
+              "id": "Y",
+              "text": "y"
+            },
+            {
+              "id": "J",
+              "text": "j"
+            },
+            {
+              "id": "Q",
+              "text": "q"
+            }
+          ],
+          "hint": "回想罐子地标和它的字母伙伴。",
+          "demo": "J 的小写伙伴是 j。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/J/image",
+      "group": "letters",
+      "letter": "J",
+      "title": "Jj · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/J",
+      "source_refs": [
+        "prologue.json#prologue_J"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "J",
+          "correct": "J",
+          "options": [
+            {
+              "id": "J",
+              "text": "J"
+            },
+            {
+              "id": "O",
+              "text": "O"
+            },
+            {
+              "id": "W",
+              "text": "W"
+            }
+          ],
+          "hint": "想一想罐子地标里藏着的字形。",
+          "demo": "罐子的固定字母伙伴是 J。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "J",
+          "correct": "J",
+          "options": [
+            {
+              "id": "P",
+              "text": "P"
+            },
+            {
+              "id": "X",
+              "text": "X"
+            },
+            {
+              "id": "J",
+              "text": "J"
+            }
+          ],
+          "hint": "想一想罐子地标里藏着的字形。",
+          "demo": "罐子的固定字母伙伴是 J。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "J",
+          "correct": "J",
+          "options": [
+            {
+              "id": "Y",
+              "text": "Y"
+            },
+            {
+              "id": "J",
+              "text": "J"
+            },
+            {
+              "id": "Q",
+              "text": "Q"
+            }
+          ],
+          "hint": "想一想罐子地标里藏着的字形。",
+          "demo": "罐子的固定字母伙伴是 J。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/K/case",
+      "group": "letters",
+      "letter": "K",
+      "title": "Kk · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/K",
+      "source_refs": [
+        "prologue.json#prologue_K"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "K",
+          "image_letter": "",
+          "correct": "K",
+          "options": [
+            {
+              "id": "K",
+              "text": "k"
+            },
+            {
+              "id": "P",
+              "text": "p"
+            },
+            {
+              "id": "X",
+              "text": "x"
+            }
+          ],
+          "hint": "回想风筝地标和它的字母伙伴。",
+          "demo": "K 的小写伙伴是 k。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "K",
+          "image_letter": "",
+          "correct": "K",
+          "options": [
+            {
+              "id": "Q",
+              "text": "q"
+            },
+            {
+              "id": "Y",
+              "text": "y"
+            },
+            {
+              "id": "K",
+              "text": "k"
+            }
+          ],
+          "hint": "回想风筝地标和它的字母伙伴。",
+          "demo": "K 的小写伙伴是 k。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "K",
+          "image_letter": "",
+          "correct": "K",
+          "options": [
+            {
+              "id": "Z",
+              "text": "z"
+            },
+            {
+              "id": "K",
+              "text": "k"
+            },
+            {
+              "id": "R",
+              "text": "r"
+            }
+          ],
+          "hint": "回想风筝地标和它的字母伙伴。",
+          "demo": "K 的小写伙伴是 k。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/K/image",
+      "group": "letters",
+      "letter": "K",
+      "title": "Kk · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/K",
+      "source_refs": [
+        "prologue.json#prologue_K"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "K",
+          "correct": "K",
+          "options": [
+            {
+              "id": "K",
+              "text": "K"
+            },
+            {
+              "id": "P",
+              "text": "P"
+            },
+            {
+              "id": "X",
+              "text": "X"
+            }
+          ],
+          "hint": "想一想风筝地标里藏着的字形。",
+          "demo": "风筝的固定字母伙伴是 K。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "K",
+          "correct": "K",
+          "options": [
+            {
+              "id": "Q",
+              "text": "Q"
+            },
+            {
+              "id": "Y",
+              "text": "Y"
+            },
+            {
+              "id": "K",
+              "text": "K"
+            }
+          ],
+          "hint": "想一想风筝地标里藏着的字形。",
+          "demo": "风筝的固定字母伙伴是 K。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "K",
+          "correct": "K",
+          "options": [
+            {
+              "id": "Z",
+              "text": "Z"
+            },
+            {
+              "id": "K",
+              "text": "K"
+            },
+            {
+              "id": "R",
+              "text": "R"
+            }
+          ],
+          "hint": "想一想风筝地标里藏着的字形。",
+          "demo": "风筝的固定字母伙伴是 K。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/L/case",
+      "group": "letters",
+      "letter": "L",
+      "title": "Ll · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/L",
+      "source_refs": [
+        "prologue.json#prologue_L"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "L",
+          "image_letter": "",
+          "correct": "L",
+          "options": [
+            {
+              "id": "L",
+              "text": "l"
+            },
+            {
+              "id": "Q",
+              "text": "q"
+            },
+            {
+              "id": "Y",
+              "text": "y"
+            }
+          ],
+          "hint": "回想灯笼地标和它的字母伙伴。",
+          "demo": "L 的小写伙伴是 l。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "L",
+          "image_letter": "",
+          "correct": "L",
+          "options": [
+            {
+              "id": "R",
+              "text": "r"
+            },
+            {
+              "id": "Z",
+              "text": "z"
+            },
+            {
+              "id": "L",
+              "text": "l"
+            }
+          ],
+          "hint": "回想灯笼地标和它的字母伙伴。",
+          "demo": "L 的小写伙伴是 l。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "L",
+          "image_letter": "",
+          "correct": "L",
+          "options": [
+            {
+              "id": "A",
+              "text": "a"
+            },
+            {
+              "id": "L",
+              "text": "l"
+            },
+            {
+              "id": "S",
+              "text": "s"
+            }
+          ],
+          "hint": "回想灯笼地标和它的字母伙伴。",
+          "demo": "L 的小写伙伴是 l。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/L/image",
+      "group": "letters",
+      "letter": "L",
+      "title": "Ll · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/L",
+      "source_refs": [
+        "prologue.json#prologue_L"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "L",
+          "correct": "L",
+          "options": [
+            {
+              "id": "L",
+              "text": "L"
+            },
+            {
+              "id": "Q",
+              "text": "Q"
+            },
+            {
+              "id": "Y",
+              "text": "Y"
+            }
+          ],
+          "hint": "想一想灯笼地标里藏着的字形。",
+          "demo": "灯笼的固定字母伙伴是 L。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "L",
+          "correct": "L",
+          "options": [
+            {
+              "id": "R",
+              "text": "R"
+            },
+            {
+              "id": "Z",
+              "text": "Z"
+            },
+            {
+              "id": "L",
+              "text": "L"
+            }
+          ],
+          "hint": "想一想灯笼地标里藏着的字形。",
+          "demo": "灯笼的固定字母伙伴是 L。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "L",
+          "correct": "L",
+          "options": [
+            {
+              "id": "A",
+              "text": "A"
+            },
+            {
+              "id": "L",
+              "text": "L"
+            },
+            {
+              "id": "S",
+              "text": "S"
+            }
+          ],
+          "hint": "想一想灯笼地标里藏着的字形。",
+          "demo": "灯笼的固定字母伙伴是 L。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/M/case",
+      "group": "letters",
+      "letter": "M",
+      "title": "Mm · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/M",
+      "source_refs": [
+        "prologue.json#prologue_M"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "M",
+          "image_letter": "",
+          "correct": "M",
+          "options": [
+            {
+              "id": "M",
+              "text": "m"
+            },
+            {
+              "id": "R",
+              "text": "r"
+            },
+            {
+              "id": "Z",
+              "text": "z"
+            }
+          ],
+          "hint": "回想蘑菇地标和它的字母伙伴。",
+          "demo": "M 的小写伙伴是 m。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "M",
+          "image_letter": "",
+          "correct": "M",
+          "options": [
+            {
+              "id": "S",
+              "text": "s"
+            },
+            {
+              "id": "A",
+              "text": "a"
+            },
+            {
+              "id": "M",
+              "text": "m"
+            }
+          ],
+          "hint": "回想蘑菇地标和它的字母伙伴。",
+          "demo": "M 的小写伙伴是 m。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "M",
+          "image_letter": "",
+          "correct": "M",
+          "options": [
+            {
+              "id": "B",
+              "text": "b"
+            },
+            {
+              "id": "M",
+              "text": "m"
+            },
+            {
+              "id": "T",
+              "text": "t"
+            }
+          ],
+          "hint": "回想蘑菇地标和它的字母伙伴。",
+          "demo": "M 的小写伙伴是 m。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/M/image",
+      "group": "letters",
+      "letter": "M",
+      "title": "Mm · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/M",
+      "source_refs": [
+        "prologue.json#prologue_M"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "M",
+          "correct": "M",
+          "options": [
+            {
+              "id": "M",
+              "text": "M"
+            },
+            {
+              "id": "R",
+              "text": "R"
+            },
+            {
+              "id": "Z",
+              "text": "Z"
+            }
+          ],
+          "hint": "想一想蘑菇地标里藏着的字形。",
+          "demo": "蘑菇的固定字母伙伴是 M。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "M",
+          "correct": "M",
+          "options": [
+            {
+              "id": "S",
+              "text": "S"
+            },
+            {
+              "id": "A",
+              "text": "A"
+            },
+            {
+              "id": "M",
+              "text": "M"
+            }
+          ],
+          "hint": "想一想蘑菇地标里藏着的字形。",
+          "demo": "蘑菇的固定字母伙伴是 M。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "M",
+          "correct": "M",
+          "options": [
+            {
+              "id": "B",
+              "text": "B"
+            },
+            {
+              "id": "M",
+              "text": "M"
+            },
+            {
+              "id": "T",
+              "text": "T"
+            }
+          ],
+          "hint": "想一想蘑菇地标里藏着的字形。",
+          "demo": "蘑菇的固定字母伙伴是 M。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/N/case",
+      "group": "letters",
+      "letter": "N",
+      "title": "Nn · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/N",
+      "source_refs": [
+        "prologue.json#prologue_N"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "N",
+          "image_letter": "",
+          "correct": "N",
+          "options": [
+            {
+              "id": "N",
+              "text": "n"
+            },
+            {
+              "id": "S",
+              "text": "s"
+            },
+            {
+              "id": "A",
+              "text": "a"
+            }
+          ],
+          "hint": "回想鸟巢地标和它的字母伙伴。",
+          "demo": "N 的小写伙伴是 n。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "N",
+          "image_letter": "",
+          "correct": "N",
+          "options": [
+            {
+              "id": "T",
+              "text": "t"
+            },
+            {
+              "id": "B",
+              "text": "b"
+            },
+            {
+              "id": "N",
+              "text": "n"
+            }
+          ],
+          "hint": "回想鸟巢地标和它的字母伙伴。",
+          "demo": "N 的小写伙伴是 n。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "N",
+          "image_letter": "",
+          "correct": "N",
+          "options": [
+            {
+              "id": "C",
+              "text": "c"
+            },
+            {
+              "id": "N",
+              "text": "n"
+            },
+            {
+              "id": "U",
+              "text": "u"
+            }
+          ],
+          "hint": "回想鸟巢地标和它的字母伙伴。",
+          "demo": "N 的小写伙伴是 n。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/N/image",
+      "group": "letters",
+      "letter": "N",
+      "title": "Nn · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/N",
+      "source_refs": [
+        "prologue.json#prologue_N"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "N",
+          "correct": "N",
+          "options": [
+            {
+              "id": "N",
+              "text": "N"
+            },
+            {
+              "id": "S",
+              "text": "S"
+            },
+            {
+              "id": "A",
+              "text": "A"
+            }
+          ],
+          "hint": "想一想鸟巢地标里藏着的字形。",
+          "demo": "鸟巢的固定字母伙伴是 N。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "N",
+          "correct": "N",
+          "options": [
+            {
+              "id": "T",
+              "text": "T"
+            },
+            {
+              "id": "B",
+              "text": "B"
+            },
+            {
+              "id": "N",
+              "text": "N"
+            }
+          ],
+          "hint": "想一想鸟巢地标里藏着的字形。",
+          "demo": "鸟巢的固定字母伙伴是 N。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "N",
+          "correct": "N",
+          "options": [
+            {
+              "id": "C",
+              "text": "C"
+            },
+            {
+              "id": "N",
+              "text": "N"
+            },
+            {
+              "id": "U",
+              "text": "U"
+            }
+          ],
+          "hint": "想一想鸟巢地标里藏着的字形。",
+          "demo": "鸟巢的固定字母伙伴是 N。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/O/case",
+      "group": "letters",
+      "letter": "O",
+      "title": "Oo · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/O",
+      "source_refs": [
+        "prologue.json#prologue_O"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "O",
+          "image_letter": "",
+          "correct": "O",
+          "options": [
+            {
+              "id": "O",
+              "text": "o"
+            },
+            {
+              "id": "T",
+              "text": "t"
+            },
+            {
+              "id": "B",
+              "text": "b"
+            }
+          ],
+          "hint": "回想猫头鹰地标和它的字母伙伴。",
+          "demo": "O 的小写伙伴是 o。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "O",
+          "image_letter": "",
+          "correct": "O",
+          "options": [
+            {
+              "id": "U",
+              "text": "u"
+            },
+            {
+              "id": "C",
+              "text": "c"
+            },
+            {
+              "id": "O",
+              "text": "o"
+            }
+          ],
+          "hint": "回想猫头鹰地标和它的字母伙伴。",
+          "demo": "O 的小写伙伴是 o。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "O",
+          "image_letter": "",
+          "correct": "O",
+          "options": [
+            {
+              "id": "D",
+              "text": "d"
+            },
+            {
+              "id": "O",
+              "text": "o"
+            },
+            {
+              "id": "V",
+              "text": "v"
+            }
+          ],
+          "hint": "回想猫头鹰地标和它的字母伙伴。",
+          "demo": "O 的小写伙伴是 o。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/O/image",
+      "group": "letters",
+      "letter": "O",
+      "title": "Oo · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/O",
+      "source_refs": [
+        "prologue.json#prologue_O"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "O",
+          "correct": "O",
+          "options": [
+            {
+              "id": "O",
+              "text": "O"
+            },
+            {
+              "id": "T",
+              "text": "T"
+            },
+            {
+              "id": "B",
+              "text": "B"
+            }
+          ],
+          "hint": "想一想猫头鹰地标里藏着的字形。",
+          "demo": "猫头鹰的固定字母伙伴是 O。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "O",
+          "correct": "O",
+          "options": [
+            {
+              "id": "U",
+              "text": "U"
+            },
+            {
+              "id": "C",
+              "text": "C"
+            },
+            {
+              "id": "O",
+              "text": "O"
+            }
+          ],
+          "hint": "想一想猫头鹰地标里藏着的字形。",
+          "demo": "猫头鹰的固定字母伙伴是 O。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "O",
+          "correct": "O",
+          "options": [
+            {
+              "id": "D",
+              "text": "D"
+            },
+            {
+              "id": "O",
+              "text": "O"
+            },
+            {
+              "id": "V",
+              "text": "V"
+            }
+          ],
+          "hint": "想一想猫头鹰地标里藏着的字形。",
+          "demo": "猫头鹰的固定字母伙伴是 O。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/P/case",
+      "group": "letters",
+      "letter": "P",
+      "title": "Pp · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/P",
+      "source_refs": [
+        "prologue.json#prologue_P"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "P",
+          "image_letter": "",
+          "correct": "P",
+          "options": [
+            {
+              "id": "P",
+              "text": "p"
+            },
+            {
+              "id": "U",
+              "text": "u"
+            },
+            {
+              "id": "C",
+              "text": "c"
+            }
+          ],
+          "hint": "回想南瓜地标和它的字母伙伴。",
+          "demo": "P 的小写伙伴是 p。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "P",
+          "image_letter": "",
+          "correct": "P",
+          "options": [
+            {
+              "id": "V",
+              "text": "v"
+            },
+            {
+              "id": "D",
+              "text": "d"
+            },
+            {
+              "id": "P",
+              "text": "p"
+            }
+          ],
+          "hint": "回想南瓜地标和它的字母伙伴。",
+          "demo": "P 的小写伙伴是 p。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "P",
+          "image_letter": "",
+          "correct": "P",
+          "options": [
+            {
+              "id": "E",
+              "text": "e"
+            },
+            {
+              "id": "P",
+              "text": "p"
+            },
+            {
+              "id": "W",
+              "text": "w"
+            }
+          ],
+          "hint": "回想南瓜地标和它的字母伙伴。",
+          "demo": "P 的小写伙伴是 p。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/P/image",
+      "group": "letters",
+      "letter": "P",
+      "title": "Pp · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/P",
+      "source_refs": [
+        "prologue.json#prologue_P"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "P",
+          "correct": "P",
+          "options": [
+            {
+              "id": "P",
+              "text": "P"
+            },
+            {
+              "id": "U",
+              "text": "U"
+            },
+            {
+              "id": "C",
+              "text": "C"
+            }
+          ],
+          "hint": "想一想南瓜地标里藏着的字形。",
+          "demo": "南瓜的固定字母伙伴是 P。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "P",
+          "correct": "P",
+          "options": [
+            {
+              "id": "V",
+              "text": "V"
+            },
+            {
+              "id": "D",
+              "text": "D"
+            },
+            {
+              "id": "P",
+              "text": "P"
+            }
+          ],
+          "hint": "想一想南瓜地标里藏着的字形。",
+          "demo": "南瓜的固定字母伙伴是 P。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "P",
+          "correct": "P",
+          "options": [
+            {
+              "id": "E",
+              "text": "E"
+            },
+            {
+              "id": "P",
+              "text": "P"
+            },
+            {
+              "id": "W",
+              "text": "W"
+            }
+          ],
+          "hint": "想一想南瓜地标里藏着的字形。",
+          "demo": "南瓜的固定字母伙伴是 P。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/Q/case",
+      "group": "letters",
+      "letter": "Q",
+      "title": "Qq · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/Q",
+      "source_refs": [
+        "prologue.json#prologue_Q"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "Q",
+          "image_letter": "",
+          "correct": "Q",
+          "options": [
+            {
+              "id": "Q",
+              "text": "q"
+            },
+            {
+              "id": "V",
+              "text": "v"
+            },
+            {
+              "id": "D",
+              "text": "d"
+            }
+          ],
+          "hint": "回想拼布被地标和它的字母伙伴。",
+          "demo": "Q 的小写伙伴是 q。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "Q",
+          "image_letter": "",
+          "correct": "Q",
+          "options": [
+            {
+              "id": "W",
+              "text": "w"
+            },
+            {
+              "id": "E",
+              "text": "e"
+            },
+            {
+              "id": "Q",
+              "text": "q"
+            }
+          ],
+          "hint": "回想拼布被地标和它的字母伙伴。",
+          "demo": "Q 的小写伙伴是 q。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "Q",
+          "image_letter": "",
+          "correct": "Q",
+          "options": [
+            {
+              "id": "F",
+              "text": "f"
+            },
+            {
+              "id": "Q",
+              "text": "q"
+            },
+            {
+              "id": "X",
+              "text": "x"
+            }
+          ],
+          "hint": "回想拼布被地标和它的字母伙伴。",
+          "demo": "Q 的小写伙伴是 q。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/Q/image",
+      "group": "letters",
+      "letter": "Q",
+      "title": "Qq · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/Q",
+      "source_refs": [
+        "prologue.json#prologue_Q"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "Q",
+          "correct": "Q",
+          "options": [
+            {
+              "id": "Q",
+              "text": "Q"
+            },
+            {
+              "id": "V",
+              "text": "V"
+            },
+            {
+              "id": "D",
+              "text": "D"
+            }
+          ],
+          "hint": "想一想拼布被地标里藏着的字形。",
+          "demo": "拼布被的固定字母伙伴是 Q。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "Q",
+          "correct": "Q",
+          "options": [
+            {
+              "id": "W",
+              "text": "W"
+            },
+            {
+              "id": "E",
+              "text": "E"
+            },
+            {
+              "id": "Q",
+              "text": "Q"
+            }
+          ],
+          "hint": "想一想拼布被地标里藏着的字形。",
+          "demo": "拼布被的固定字母伙伴是 Q。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "Q",
+          "correct": "Q",
+          "options": [
+            {
+              "id": "F",
+              "text": "F"
+            },
+            {
+              "id": "Q",
+              "text": "Q"
+            },
+            {
+              "id": "X",
+              "text": "X"
+            }
+          ],
+          "hint": "想一想拼布被地标里藏着的字形。",
+          "demo": "拼布被的固定字母伙伴是 Q。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/R/case",
+      "group": "letters",
+      "letter": "R",
+      "title": "Rr · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/R",
+      "source_refs": [
+        "prologue.json#prologue_R"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "R",
+          "image_letter": "",
+          "correct": "R",
+          "options": [
+            {
+              "id": "R",
+              "text": "r"
+            },
+            {
+              "id": "W",
+              "text": "w"
+            },
+            {
+              "id": "E",
+              "text": "e"
+            }
+          ],
+          "hint": "回想机器人地标和它的字母伙伴。",
+          "demo": "R 的小写伙伴是 r。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "R",
+          "image_letter": "",
+          "correct": "R",
+          "options": [
+            {
+              "id": "X",
+              "text": "x"
+            },
+            {
+              "id": "F",
+              "text": "f"
+            },
+            {
+              "id": "R",
+              "text": "r"
+            }
+          ],
+          "hint": "回想机器人地标和它的字母伙伴。",
+          "demo": "R 的小写伙伴是 r。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "R",
+          "image_letter": "",
+          "correct": "R",
+          "options": [
+            {
+              "id": "G",
+              "text": "g"
+            },
+            {
+              "id": "R",
+              "text": "r"
+            },
+            {
+              "id": "Y",
+              "text": "y"
+            }
+          ],
+          "hint": "回想机器人地标和它的字母伙伴。",
+          "demo": "R 的小写伙伴是 r。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/R/image",
+      "group": "letters",
+      "letter": "R",
+      "title": "Rr · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/R",
+      "source_refs": [
+        "prologue.json#prologue_R"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "R",
+          "correct": "R",
+          "options": [
+            {
+              "id": "R",
+              "text": "R"
+            },
+            {
+              "id": "W",
+              "text": "W"
+            },
+            {
+              "id": "E",
+              "text": "E"
+            }
+          ],
+          "hint": "想一想机器人地标里藏着的字形。",
+          "demo": "机器人的固定字母伙伴是 R。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "R",
+          "correct": "R",
+          "options": [
+            {
+              "id": "X",
+              "text": "X"
+            },
+            {
+              "id": "F",
+              "text": "F"
+            },
+            {
+              "id": "R",
+              "text": "R"
+            }
+          ],
+          "hint": "想一想机器人地标里藏着的字形。",
+          "demo": "机器人的固定字母伙伴是 R。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "R",
+          "correct": "R",
+          "options": [
+            {
+              "id": "G",
+              "text": "G"
+            },
+            {
+              "id": "R",
+              "text": "R"
+            },
+            {
+              "id": "Y",
+              "text": "Y"
+            }
+          ],
+          "hint": "想一想机器人地标里藏着的字形。",
+          "demo": "机器人的固定字母伙伴是 R。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/S/case",
+      "group": "letters",
+      "letter": "S",
+      "title": "Ss · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/S",
+      "source_refs": [
+        "prologue.json#prologue_S"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "S",
+          "image_letter": "",
+          "correct": "S",
+          "options": [
+            {
+              "id": "S",
+              "text": "s"
+            },
+            {
+              "id": "X",
+              "text": "x"
+            },
+            {
+              "id": "F",
+              "text": "f"
+            }
+          ],
+          "hint": "回想星星地标和它的字母伙伴。",
+          "demo": "S 的小写伙伴是 s。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "S",
+          "image_letter": "",
+          "correct": "S",
+          "options": [
+            {
+              "id": "Y",
+              "text": "y"
+            },
+            {
+              "id": "G",
+              "text": "g"
+            },
+            {
+              "id": "S",
+              "text": "s"
+            }
+          ],
+          "hint": "回想星星地标和它的字母伙伴。",
+          "demo": "S 的小写伙伴是 s。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "S",
+          "image_letter": "",
+          "correct": "S",
+          "options": [
+            {
+              "id": "H",
+              "text": "h"
+            },
+            {
+              "id": "S",
+              "text": "s"
+            },
+            {
+              "id": "Z",
+              "text": "z"
+            }
+          ],
+          "hint": "回想星星地标和它的字母伙伴。",
+          "demo": "S 的小写伙伴是 s。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/S/image",
+      "group": "letters",
+      "letter": "S",
+      "title": "Ss · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/S",
+      "source_refs": [
+        "prologue.json#prologue_S"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "S",
+          "correct": "S",
+          "options": [
+            {
+              "id": "S",
+              "text": "S"
+            },
+            {
+              "id": "X",
+              "text": "X"
+            },
+            {
+              "id": "F",
+              "text": "F"
+            }
+          ],
+          "hint": "想一想星星地标里藏着的字形。",
+          "demo": "星星的固定字母伙伴是 S。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "S",
+          "correct": "S",
+          "options": [
+            {
+              "id": "Y",
+              "text": "Y"
+            },
+            {
+              "id": "G",
+              "text": "G"
+            },
+            {
+              "id": "S",
+              "text": "S"
+            }
+          ],
+          "hint": "想一想星星地标里藏着的字形。",
+          "demo": "星星的固定字母伙伴是 S。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "S",
+          "correct": "S",
+          "options": [
+            {
+              "id": "H",
+              "text": "H"
+            },
+            {
+              "id": "S",
+              "text": "S"
+            },
+            {
+              "id": "Z",
+              "text": "Z"
+            }
+          ],
+          "hint": "想一想星星地标里藏着的字形。",
+          "demo": "星星的固定字母伙伴是 S。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/T/case",
+      "group": "letters",
+      "letter": "T",
+      "title": "Tt · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/T",
+      "source_refs": [
+        "prologue.json#prologue_T"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "T",
+          "image_letter": "",
+          "correct": "T",
+          "options": [
+            {
+              "id": "T",
+              "text": "t"
+            },
+            {
+              "id": "Y",
+              "text": "y"
+            },
+            {
+              "id": "G",
+              "text": "g"
+            }
+          ],
+          "hint": "回想火车地标和它的字母伙伴。",
+          "demo": "T 的小写伙伴是 t。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "T",
+          "image_letter": "",
+          "correct": "T",
+          "options": [
+            {
+              "id": "Z",
+              "text": "z"
+            },
+            {
+              "id": "H",
+              "text": "h"
+            },
+            {
+              "id": "T",
+              "text": "t"
+            }
+          ],
+          "hint": "回想火车地标和它的字母伙伴。",
+          "demo": "T 的小写伙伴是 t。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "T",
+          "image_letter": "",
+          "correct": "T",
+          "options": [
+            {
+              "id": "I",
+              "text": "i"
+            },
+            {
+              "id": "T",
+              "text": "t"
+            },
+            {
+              "id": "A",
+              "text": "a"
+            }
+          ],
+          "hint": "回想火车地标和它的字母伙伴。",
+          "demo": "T 的小写伙伴是 t。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/T/image",
+      "group": "letters",
+      "letter": "T",
+      "title": "Tt · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/T",
+      "source_refs": [
+        "prologue.json#prologue_T"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "T",
+          "correct": "T",
+          "options": [
+            {
+              "id": "T",
+              "text": "T"
+            },
+            {
+              "id": "Y",
+              "text": "Y"
+            },
+            {
+              "id": "G",
+              "text": "G"
+            }
+          ],
+          "hint": "想一想火车地标里藏着的字形。",
+          "demo": "火车的固定字母伙伴是 T。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "T",
+          "correct": "T",
+          "options": [
+            {
+              "id": "Z",
+              "text": "Z"
+            },
+            {
+              "id": "H",
+              "text": "H"
+            },
+            {
+              "id": "T",
+              "text": "T"
+            }
+          ],
+          "hint": "想一想火车地标里藏着的字形。",
+          "demo": "火车的固定字母伙伴是 T。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "T",
+          "correct": "T",
+          "options": [
+            {
+              "id": "I",
+              "text": "I"
+            },
+            {
+              "id": "T",
+              "text": "T"
+            },
+            {
+              "id": "A",
+              "text": "A"
+            }
+          ],
+          "hint": "想一想火车地标里藏着的字形。",
+          "demo": "火车的固定字母伙伴是 T。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/U/case",
+      "group": "letters",
+      "letter": "U",
+      "title": "Uu · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/U",
+      "source_refs": [
+        "prologue.json#prologue_U"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "U",
+          "image_letter": "",
+          "correct": "U",
+          "options": [
+            {
+              "id": "U",
+              "text": "u"
+            },
+            {
+              "id": "Z",
+              "text": "z"
+            },
+            {
+              "id": "H",
+              "text": "h"
+            }
+          ],
+          "hint": "回想雨伞地标和它的字母伙伴。",
+          "demo": "U 的小写伙伴是 u。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "U",
+          "image_letter": "",
+          "correct": "U",
+          "options": [
+            {
+              "id": "A",
+              "text": "a"
+            },
+            {
+              "id": "I",
+              "text": "i"
+            },
+            {
+              "id": "U",
+              "text": "u"
+            }
+          ],
+          "hint": "回想雨伞地标和它的字母伙伴。",
+          "demo": "U 的小写伙伴是 u。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "U",
+          "image_letter": "",
+          "correct": "U",
+          "options": [
+            {
+              "id": "J",
+              "text": "j"
+            },
+            {
+              "id": "U",
+              "text": "u"
+            },
+            {
+              "id": "B",
+              "text": "b"
+            }
+          ],
+          "hint": "回想雨伞地标和它的字母伙伴。",
+          "demo": "U 的小写伙伴是 u。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/U/image",
+      "group": "letters",
+      "letter": "U",
+      "title": "Uu · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/U",
+      "source_refs": [
+        "prologue.json#prologue_U"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "U",
+          "correct": "U",
+          "options": [
+            {
+              "id": "U",
+              "text": "U"
+            },
+            {
+              "id": "Z",
+              "text": "Z"
+            },
+            {
+              "id": "H",
+              "text": "H"
+            }
+          ],
+          "hint": "想一想雨伞地标里藏着的字形。",
+          "demo": "雨伞的固定字母伙伴是 U。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "U",
+          "correct": "U",
+          "options": [
+            {
+              "id": "A",
+              "text": "A"
+            },
+            {
+              "id": "I",
+              "text": "I"
+            },
+            {
+              "id": "U",
+              "text": "U"
+            }
+          ],
+          "hint": "想一想雨伞地标里藏着的字形。",
+          "demo": "雨伞的固定字母伙伴是 U。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "U",
+          "correct": "U",
+          "options": [
+            {
+              "id": "J",
+              "text": "J"
+            },
+            {
+              "id": "U",
+              "text": "U"
+            },
+            {
+              "id": "B",
+              "text": "B"
+            }
+          ],
+          "hint": "想一想雨伞地标里藏着的字形。",
+          "demo": "雨伞的固定字母伙伴是 U。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/V/case",
+      "group": "letters",
+      "letter": "V",
+      "title": "Vv · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/V",
+      "source_refs": [
+        "prologue.json#prologue_V"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "V",
+          "image_letter": "",
+          "correct": "V",
+          "options": [
+            {
+              "id": "V",
+              "text": "v"
+            },
+            {
+              "id": "A",
+              "text": "a"
+            },
+            {
+              "id": "I",
+              "text": "i"
+            }
+          ],
+          "hint": "回想火山地标和它的字母伙伴。",
+          "demo": "V 的小写伙伴是 v。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "V",
+          "image_letter": "",
+          "correct": "V",
+          "options": [
+            {
+              "id": "B",
+              "text": "b"
+            },
+            {
+              "id": "J",
+              "text": "j"
+            },
+            {
+              "id": "V",
+              "text": "v"
+            }
+          ],
+          "hint": "回想火山地标和它的字母伙伴。",
+          "demo": "V 的小写伙伴是 v。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "V",
+          "image_letter": "",
+          "correct": "V",
+          "options": [
+            {
+              "id": "K",
+              "text": "k"
+            },
+            {
+              "id": "V",
+              "text": "v"
+            },
+            {
+              "id": "C",
+              "text": "c"
+            }
+          ],
+          "hint": "回想火山地标和它的字母伙伴。",
+          "demo": "V 的小写伙伴是 v。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/V/image",
+      "group": "letters",
+      "letter": "V",
+      "title": "Vv · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/V",
+      "source_refs": [
+        "prologue.json#prologue_V"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "V",
+          "correct": "V",
+          "options": [
+            {
+              "id": "V",
+              "text": "V"
+            },
+            {
+              "id": "A",
+              "text": "A"
+            },
+            {
+              "id": "I",
+              "text": "I"
+            }
+          ],
+          "hint": "想一想火山地标里藏着的字形。",
+          "demo": "火山的固定字母伙伴是 V。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "V",
+          "correct": "V",
+          "options": [
+            {
+              "id": "B",
+              "text": "B"
+            },
+            {
+              "id": "J",
+              "text": "J"
+            },
+            {
+              "id": "V",
+              "text": "V"
+            }
+          ],
+          "hint": "想一想火山地标里藏着的字形。",
+          "demo": "火山的固定字母伙伴是 V。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "V",
+          "correct": "V",
+          "options": [
+            {
+              "id": "K",
+              "text": "K"
+            },
+            {
+              "id": "V",
+              "text": "V"
+            },
+            {
+              "id": "C",
+              "text": "C"
+            }
+          ],
+          "hint": "想一想火山地标里藏着的字形。",
+          "demo": "火山的固定字母伙伴是 V。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/W/case",
+      "group": "letters",
+      "letter": "W",
+      "title": "Ww · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/W",
+      "source_refs": [
+        "prologue.json#prologue_W"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "W",
+          "image_letter": "",
+          "correct": "W",
+          "options": [
+            {
+              "id": "W",
+              "text": "w"
+            },
+            {
+              "id": "B",
+              "text": "b"
+            },
+            {
+              "id": "J",
+              "text": "j"
+            }
+          ],
+          "hint": "回想鲸鱼地标和它的字母伙伴。",
+          "demo": "W 的小写伙伴是 w。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "W",
+          "image_letter": "",
+          "correct": "W",
+          "options": [
+            {
+              "id": "C",
+              "text": "c"
+            },
+            {
+              "id": "K",
+              "text": "k"
+            },
+            {
+              "id": "W",
+              "text": "w"
+            }
+          ],
+          "hint": "回想鲸鱼地标和它的字母伙伴。",
+          "demo": "W 的小写伙伴是 w。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "W",
+          "image_letter": "",
+          "correct": "W",
+          "options": [
+            {
+              "id": "L",
+              "text": "l"
+            },
+            {
+              "id": "W",
+              "text": "w"
+            },
+            {
+              "id": "D",
+              "text": "d"
+            }
+          ],
+          "hint": "回想鲸鱼地标和它的字母伙伴。",
+          "demo": "W 的小写伙伴是 w。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/W/image",
+      "group": "letters",
+      "letter": "W",
+      "title": "Ww · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/W",
+      "source_refs": [
+        "prologue.json#prologue_W"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "W",
+          "correct": "W",
+          "options": [
+            {
+              "id": "W",
+              "text": "W"
+            },
+            {
+              "id": "B",
+              "text": "B"
+            },
+            {
+              "id": "J",
+              "text": "J"
+            }
+          ],
+          "hint": "想一想鲸鱼地标里藏着的字形。",
+          "demo": "鲸鱼的固定字母伙伴是 W。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "W",
+          "correct": "W",
+          "options": [
+            {
+              "id": "C",
+              "text": "C"
+            },
+            {
+              "id": "K",
+              "text": "K"
+            },
+            {
+              "id": "W",
+              "text": "W"
+            }
+          ],
+          "hint": "想一想鲸鱼地标里藏着的字形。",
+          "demo": "鲸鱼的固定字母伙伴是 W。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "W",
+          "correct": "W",
+          "options": [
+            {
+              "id": "L",
+              "text": "L"
+            },
+            {
+              "id": "W",
+              "text": "W"
+            },
+            {
+              "id": "D",
+              "text": "D"
+            }
+          ],
+          "hint": "想一想鲸鱼地标里藏着的字形。",
+          "demo": "鲸鱼的固定字母伙伴是 W。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/X/case",
+      "group": "letters",
+      "letter": "X",
+      "title": "Xx · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/X",
+      "source_refs": [
+        "prologue.json#prologue_X"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "X",
+          "image_letter": "",
+          "correct": "X",
+          "options": [
+            {
+              "id": "X",
+              "text": "x"
+            },
+            {
+              "id": "C",
+              "text": "c"
+            },
+            {
+              "id": "K",
+              "text": "k"
+            }
+          ],
+          "hint": "回想木琴地标和它的字母伙伴。",
+          "demo": "X 的小写伙伴是 x。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "X",
+          "image_letter": "",
+          "correct": "X",
+          "options": [
+            {
+              "id": "D",
+              "text": "d"
+            },
+            {
+              "id": "L",
+              "text": "l"
+            },
+            {
+              "id": "X",
+              "text": "x"
+            }
+          ],
+          "hint": "回想木琴地标和它的字母伙伴。",
+          "demo": "X 的小写伙伴是 x。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "X",
+          "image_letter": "",
+          "correct": "X",
+          "options": [
+            {
+              "id": "M",
+              "text": "m"
+            },
+            {
+              "id": "X",
+              "text": "x"
+            },
+            {
+              "id": "E",
+              "text": "e"
+            }
+          ],
+          "hint": "回想木琴地标和它的字母伙伴。",
+          "demo": "X 的小写伙伴是 x。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/X/image",
+      "group": "letters",
+      "letter": "X",
+      "title": "Xx · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/X",
+      "source_refs": [
+        "prologue.json#prologue_X"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "X",
+          "correct": "X",
+          "options": [
+            {
+              "id": "X",
+              "text": "X"
+            },
+            {
+              "id": "C",
+              "text": "C"
+            },
+            {
+              "id": "K",
+              "text": "K"
+            }
+          ],
+          "hint": "想一想木琴地标里藏着的字形。",
+          "demo": "木琴的固定字母伙伴是 X。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "X",
+          "correct": "X",
+          "options": [
+            {
+              "id": "D",
+              "text": "D"
+            },
+            {
+              "id": "L",
+              "text": "L"
+            },
+            {
+              "id": "X",
+              "text": "X"
+            }
+          ],
+          "hint": "想一想木琴地标里藏着的字形。",
+          "demo": "木琴的固定字母伙伴是 X。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "X",
+          "correct": "X",
+          "options": [
+            {
+              "id": "M",
+              "text": "M"
+            },
+            {
+              "id": "X",
+              "text": "X"
+            },
+            {
+              "id": "E",
+              "text": "E"
+            }
+          ],
+          "hint": "想一想木琴地标里藏着的字形。",
+          "demo": "木琴的固定字母伙伴是 X。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/Y/case",
+      "group": "letters",
+      "letter": "Y",
+      "title": "Yy · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/Y",
+      "source_refs": [
+        "prologue.json#prologue_Y"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "Y",
+          "image_letter": "",
+          "correct": "Y",
+          "options": [
+            {
+              "id": "Y",
+              "text": "y"
+            },
+            {
+              "id": "D",
+              "text": "d"
+            },
+            {
+              "id": "L",
+              "text": "l"
+            }
+          ],
+          "hint": "回想毛线地标和它的字母伙伴。",
+          "demo": "Y 的小写伙伴是 y。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "Y",
+          "image_letter": "",
+          "correct": "Y",
+          "options": [
+            {
+              "id": "E",
+              "text": "e"
+            },
+            {
+              "id": "M",
+              "text": "m"
+            },
+            {
+              "id": "Y",
+              "text": "y"
+            }
+          ],
+          "hint": "回想毛线地标和它的字母伙伴。",
+          "demo": "Y 的小写伙伴是 y。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "Y",
+          "image_letter": "",
+          "correct": "Y",
+          "options": [
+            {
+              "id": "N",
+              "text": "n"
+            },
+            {
+              "id": "Y",
+              "text": "y"
+            },
+            {
+              "id": "F",
+              "text": "f"
+            }
+          ],
+          "hint": "回想毛线地标和它的字母伙伴。",
+          "demo": "Y 的小写伙伴是 y。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/Y/image",
+      "group": "letters",
+      "letter": "Y",
+      "title": "Yy · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/Y",
+      "source_refs": [
+        "prologue.json#prologue_Y"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "Y",
+          "correct": "Y",
+          "options": [
+            {
+              "id": "Y",
+              "text": "Y"
+            },
+            {
+              "id": "D",
+              "text": "D"
+            },
+            {
+              "id": "L",
+              "text": "L"
+            }
+          ],
+          "hint": "想一想毛线地标里藏着的字形。",
+          "demo": "毛线的固定字母伙伴是 Y。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "Y",
+          "correct": "Y",
+          "options": [
+            {
+              "id": "E",
+              "text": "E"
+            },
+            {
+              "id": "M",
+              "text": "M"
+            },
+            {
+              "id": "Y",
+              "text": "Y"
+            }
+          ],
+          "hint": "想一想毛线地标里藏着的字形。",
+          "demo": "毛线的固定字母伙伴是 Y。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "Y",
+          "correct": "Y",
+          "options": [
+            {
+              "id": "N",
+              "text": "N"
+            },
+            {
+              "id": "Y",
+              "text": "Y"
+            },
+            {
+              "id": "F",
+              "text": "F"
+            }
+          ],
+          "hint": "想一想毛线地标里藏着的字形。",
+          "demo": "毛线的固定字母伙伴是 Y。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/Z/case",
+      "group": "letters",
+      "letter": "Z",
+      "title": "Zz · 大小写配对",
+      "dimension": "letter_case_association",
+      "unlock": "letter/Z",
+      "source_refs": [
+        "prologue.json#prologue_Z"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "Z",
+          "image_letter": "",
+          "correct": "Z",
+          "options": [
+            {
+              "id": "Z",
+              "text": "z"
+            },
+            {
+              "id": "E",
+              "text": "e"
+            },
+            {
+              "id": "M",
+              "text": "m"
+            }
+          ],
+          "hint": "回想斑马地标和它的字母伙伴。",
+          "demo": "Z 的小写伙伴是 z。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "Z",
+          "image_letter": "",
+          "correct": "Z",
+          "options": [
+            {
+              "id": "F",
+              "text": "f"
+            },
+            {
+              "id": "N",
+              "text": "n"
+            },
+            {
+              "id": "Z",
+              "text": "z"
+            }
+          ],
+          "hint": "回想斑马地标和它的字母伙伴。",
+          "demo": "Z 的小写伙伴是 z。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个大写字母的小写伙伴是哪一个？",
+          "stimulus": "Z",
+          "image_letter": "",
+          "correct": "Z",
+          "options": [
+            {
+              "id": "O",
+              "text": "o"
+            },
+            {
+              "id": "Z",
+              "text": "z"
+            },
+            {
+              "id": "G",
+              "text": "g"
+            }
+          ],
+          "hint": "回想斑马地标和它的字母伙伴。",
+          "demo": "Z 的小写伙伴是 z。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "letter/Z/image",
+      "group": "letters",
+      "letter": "Z",
+      "title": "Zz · 形象与字母",
+      "dimension": "letter_landmark_association",
+      "unlock": "letter/Z",
+      "source_refs": [
+        "prologue.json#prologue_Z"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "一起给旅行卡配对。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "Z",
+          "correct": "Z",
+          "options": [
+            {
+              "id": "Z",
+              "text": "Z"
+            },
+            {
+              "id": "E",
+              "text": "E"
+            },
+            {
+              "id": "M",
+              "text": "M"
+            }
+          ],
+          "hint": "想一想斑马地标里藏着的字形。",
+          "demo": "斑马的固定字母伙伴是 Z。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "帮朋友整理桌上的发现卡。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "Z",
+          "correct": "Z",
+          "options": [
+            {
+              "id": "F",
+              "text": "F"
+            },
+            {
+              "id": "N",
+              "text": "N"
+            },
+            {
+              "id": "Z",
+              "text": "Z"
+            }
+          ],
+          "hint": "想一想斑马地标里藏着的字形。",
+          "demo": "斑马的固定字母伙伴是 Z。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "和朋友找一找卡片的伙伴。\n这个熟悉形象的字母伙伴是哪一个？",
+          "stimulus": "",
+          "image_letter": "Z",
+          "correct": "Z",
+          "options": [
+            {
+              "id": "O",
+              "text": "O"
+            },
+            {
+              "id": "Z",
+              "text": "Z"
+            },
+            {
+              "id": "G",
+              "text": "G"
+            }
+          ],
+          "hint": "想一想斑马地标里藏着的字形。",
+          "demo": "斑马的固定字母伙伴是 Z。",
+          "closing": "朋友把整理好的旅行卡收进了册子，想散步时还可以再来。"
+        }
+      ]
+    },
+    {
+      "id": "unit/hello",
+      "group": "u1",
+      "letter": "",
+      "title": "U1 · 打招呼",
+      "dimension": "written_situation_choice",
+      "unlock": "unit/1",
+      "source_refs": [
+        "U1-07",
+        "U1-10"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "花园里遇见刚来的朋友，你想和她打个招呼。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "hello",
+          "options": [
+            {
+              "id": "hello",
+              "text": "Hello!"
+            },
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            },
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            }
+          ],
+          "hint": "这次是见面时的问候。",
+          "demo": "Hello! 你好！",
+          "closing": "朋友邀请你看看花园里刚开的花。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "家里来了客人。打开门时，选一句见面的问候。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "hello",
+          "options": [
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            },
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            },
+            {
+              "id": "hello",
+              "text": "Hello!"
+            }
+          ],
+          "hint": "这次是见面时的问候。",
+          "demo": "Hello! 你好！",
+          "closing": "熊叔把今天的小卡片收好，邀请你坐一会儿。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "校园里遇见新同学，他向你挥手。选一句问候。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "hello",
+          "options": [
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            },
+            {
+              "id": "hello",
+              "text": "Hello!"
+            },
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            }
+          ],
+          "hint": "这次是见面时的问候。",
+          "demo": "Hello! 你好！",
+          "closing": "朋友说，下次还可以一起到校园散步。"
+        }
+      ]
+    },
+    {
+      "id": "unit/morning",
+      "group": "u1",
+      "letter": "",
+      "title": "U1 · 早晨问候",
+      "dimension": "written_situation_choice",
+      "unlock": "unit/1",
+      "source_refs": [
+        "U1-01"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "故事里的清晨，兔兔正在给花浇水。选一句早晨的问候。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "morning",
+          "options": [
+            {
+              "id": "morning",
+              "text": "Good morning."
+            },
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            },
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            }
+          ],
+          "hint": "留意故事中的清晨。",
+          "demo": "Good morning. 早上好。",
+          "closing": "朋友邀请你看看花园里刚开的花。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "故事里的清晨，熊叔打开了窗。选一句早晨的问候。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "morning",
+          "options": [
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            },
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            },
+            {
+              "id": "morning",
+              "text": "Good morning."
+            }
+          ],
+          "hint": "留意故事中的清晨。",
+          "demo": "Good morning. 早上好。",
+          "closing": "熊叔把今天的小卡片收好，邀请你坐一会儿。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "故事里的清晨，你来到校门口。选一句早晨的问候。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "morning",
+          "options": [
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            },
+            {
+              "id": "morning",
+              "text": "Good morning."
+            },
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            }
+          ],
+          "hint": "留意故事中的清晨。",
+          "demo": "Good morning. 早上好。",
+          "closing": "朋友说，下次还可以一起到校园散步。"
+        }
+      ]
+    },
+    {
+      "id": "unit/thanks",
+      "group": "u1",
+      "letter": "",
+      "title": "U1 · 表达感谢",
+      "dimension": "written_situation_choice",
+      "unlock": "unit/1",
+      "source_refs": [
+        "U1-05"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "朋友帮你扶好了花盆，你想向她表达感谢。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "thanks",
+          "options": [
+            {
+              "id": "hello",
+              "text": "Hello!"
+            },
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            },
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            }
+          ],
+          "hint": "这一次要谢谢朋友的帮助。",
+          "demo": "Thank you. 谢谢你。",
+          "closing": "朋友邀请你看看花园里刚开的花。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "熊叔借给你一块擦桌布，你想谢谢他的帮助。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "thanks",
+          "options": [
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            },
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            },
+            {
+              "id": "hello",
+              "text": "Hello!"
+            }
+          ],
+          "hint": "这一次要谢谢朋友的帮助。",
+          "demo": "Thank you. 谢谢你。",
+          "closing": "熊叔把今天的小卡片收好，邀请你坐一会儿。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "朋友帮你找到了掉在校园里的旅行卡，你想谢谢她。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "thanks",
+          "options": [
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            },
+            {
+              "id": "hello",
+              "text": "Hello!"
+            },
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            }
+          ],
+          "hint": "这一次要谢谢朋友的帮助。",
+          "demo": "Thank you. 谢谢你。",
+          "closing": "朋友说，下次还可以一起到校园散步。"
+        }
+      ]
+    },
+    {
+      "id": "unit/name",
+      "group": "u2",
+      "letter": "",
+      "title": "U2 · 询问名字",
+      "dimension": "written_situation_choice",
+      "unlock": "unit/2",
+      "source_refs": [
+        "U2-02",
+        "U2-03"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "给花园里新认识的朋友留卡片，先问清她的名字。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "name",
+          "options": [
+            {
+              "id": "name",
+              "text": "What's your name?"
+            },
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            },
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            }
+          ],
+          "hint": "卡片收件人一栏需要名字。",
+          "demo": "What's your name? 你叫什么名字？",
+          "closing": "朋友邀请你看看花园里刚开的花。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "家里的小聚会来了新朋友，先问名字，再写座位卡。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "name",
+          "options": [
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            },
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            },
+            {
+              "id": "name",
+              "text": "What's your name?"
+            }
+          ],
+          "hint": "卡片收件人一栏需要名字。",
+          "demo": "What's your name? 你叫什么名字？",
+          "closing": "熊叔把今天的小卡片收好，邀请你坐一会儿。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "帮新同学准备姓名贴，你想先问他叫什么名字。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "name",
+          "options": [
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            },
+            {
+              "id": "name",
+              "text": "What's your name?"
+            },
+            {
+              "id": "thanks",
+              "text": "Thank you."
+            }
+          ],
+          "hint": "卡片收件人一栏需要名字。",
+          "demo": "What's your name? 你叫什么名字？",
+          "closing": "朋友说，下次还可以一起到校园散步。"
+        }
+      ]
+    },
+    {
+      "id": "unit/goodbye",
+      "group": "u2",
+      "letter": "",
+      "title": "U2 · 道别",
+      "dimension": "written_situation_choice",
+      "unlock": "unit/2",
+      "source_refs": [
+        "U2-05"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "花园散步结束了，向朋友挥手告别时选哪一句？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "bye",
+          "options": [
+            {
+              "id": "name",
+              "text": "What's your name?"
+            },
+            {
+              "id": "hello",
+              "text": "Hello!"
+            },
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            }
+          ],
+          "hint": "这次是在离开时道别。",
+          "demo": "Goodbye! 再见！",
+          "closing": "朋友邀请你看看花园里刚开的花。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "在朋友家做客结束了，出门时选一句告别的话。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "bye",
+          "options": [
+            {
+              "id": "hello",
+              "text": "Hello!"
+            },
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            },
+            {
+              "id": "name",
+              "text": "What's your name?"
+            }
+          ],
+          "hint": "这次是在离开时道别。",
+          "demo": "Goodbye! 再见！",
+          "closing": "熊叔把今天的小卡片收好，邀请你坐一会儿。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "准备离开校园了，想向朋友道别时选哪一句？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "bye",
+          "options": [
+            {
+              "id": "bye",
+              "text": "Goodbye!"
+            },
+            {
+              "id": "name",
+              "text": "What's your name?"
+            },
+            {
+              "id": "hello",
+              "text": "Hello!"
+            }
+          ],
+          "hint": "这次是在离开时道别。",
+          "demo": "Goodbye! 再见！",
+          "closing": "朋友说，下次还可以一起到校园散步。"
+        }
+      ]
+    },
+    {
+      "id": "unit/age",
+      "group": "u3",
+      "letter": "",
+      "title": "U3 · 询问年龄",
+      "dimension": "written_situation_choice",
+      "unlock": "unit/3",
+      "source_refs": [
+        "U3-01"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "花园故事会要填写角色年龄卡，你想问角色几岁。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "age",
+          "options": [
+            {
+              "id": "age",
+              "text": "How old are you?"
+            },
+            {
+              "id": "name",
+              "text": "What's your name?"
+            },
+            {
+              "id": "hello",
+              "text": "Hello!"
+            }
+          ],
+          "hint": "年龄和名字是两件事。",
+          "demo": "How old are you? 你几岁？",
+          "closing": "朋友邀请你看看花园里刚开的花。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "熊叔的桌上有故事角色资料，你想先问角色的年龄。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "age",
+          "options": [
+            {
+              "id": "name",
+              "text": "What's your name?"
+            },
+            {
+              "id": "hello",
+              "text": "Hello!"
+            },
+            {
+              "id": "age",
+              "text": "How old are you?"
+            }
+          ],
+          "hint": "年龄和名字是两件事。",
+          "demo": "How old are you? 你几岁？",
+          "closing": "熊叔把今天的小卡片收好，邀请你坐一会儿。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "校园角色扮演要填写年龄卡，你想先问对方几岁。",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "age",
+          "options": [
+            {
+              "id": "hello",
+              "text": "Hello!"
+            },
+            {
+              "id": "age",
+              "text": "How old are you?"
+            },
+            {
+              "id": "name",
+              "text": "What's your name?"
+            }
+          ],
+          "hint": "年龄和名字是两件事。",
+          "demo": "How old are you? 你几岁？",
+          "closing": "朋友说，下次还可以一起到校园散步。"
+        }
+      ]
+    },
+    {
+      "id": "unit/7",
+      "group": "u3",
+      "letter": "",
+      "title": "U3 · 读角色年龄卡",
+      "dimension": "written_situation_choice",
+      "unlock": "unit/3",
+      "source_refs": [
+        "U3-04"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "花园故事会要整理角色牌。\n故事角色卡写着 “I'm seven.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "7",
+          "options": [
+            {
+              "id": "7",
+              "text": "7"
+            },
+            {
+              "id": "6",
+              "text": "6"
+            },
+            {
+              "id": "8",
+              "text": "8"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "seven 对应数字 7。",
+          "closing": "朋友邀请你看看花园里刚开的花。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "熊叔拿来一套新的故事角色卡。\n故事角色卡写着 “I'm seven.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "7",
+          "options": [
+            {
+              "id": "6",
+              "text": "6"
+            },
+            {
+              "id": "8",
+              "text": "8"
+            },
+            {
+              "id": "7",
+              "text": "7"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "seven 对应数字 7。",
+          "closing": "熊叔把今天的小卡片收好，邀请你坐一会儿。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "校园角色扮演要贴数字。\n故事角色卡写着 “I'm seven.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "7",
+          "options": [
+            {
+              "id": "8",
+              "text": "8"
+            },
+            {
+              "id": "7",
+              "text": "7"
+            },
+            {
+              "id": "6",
+              "text": "6"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "seven 对应数字 7。",
+          "closing": "朋友说，下次还可以一起到校园散步。"
+        }
+      ]
+    },
+    {
+      "id": "unit/8",
+      "group": "u3",
+      "letter": "",
+      "title": "U3 · 读角色年龄卡",
+      "dimension": "written_situation_choice",
+      "unlock": "unit/3",
+      "source_refs": [
+        "U3-02"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "花园故事会要整理角色牌。\n故事角色卡写着 “I'm eight.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "8",
+          "options": [
+            {
+              "id": "8",
+              "text": "8"
+            },
+            {
+              "id": "7",
+              "text": "7"
+            },
+            {
+              "id": "9",
+              "text": "9"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "eight 对应数字 8。",
+          "closing": "朋友邀请你看看花园里刚开的花。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "熊叔拿来一套新的故事角色卡。\n故事角色卡写着 “I'm eight.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "8",
+          "options": [
+            {
+              "id": "7",
+              "text": "7"
+            },
+            {
+              "id": "9",
+              "text": "9"
+            },
+            {
+              "id": "8",
+              "text": "8"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "eight 对应数字 8。",
+          "closing": "熊叔把今天的小卡片收好，邀请你坐一会儿。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "校园角色扮演要贴数字。\n故事角色卡写着 “I'm eight.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "8",
+          "options": [
+            {
+              "id": "9",
+              "text": "9"
+            },
+            {
+              "id": "8",
+              "text": "8"
+            },
+            {
+              "id": "7",
+              "text": "7"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "eight 对应数字 8。",
+          "closing": "朋友说，下次还可以一起到校园散步。"
+        }
+      ]
+    },
+    {
+      "id": "unit/9",
+      "group": "u3",
+      "letter": "",
+      "title": "U3 · 读角色年龄卡",
+      "dimension": "written_situation_choice",
+      "unlock": "unit/3",
+      "source_refs": [
+        "U3-03"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "花园故事会要整理角色牌。\n故事角色卡写着 “I'm nine.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "9",
+          "options": [
+            {
+              "id": "9",
+              "text": "9"
+            },
+            {
+              "id": "8",
+              "text": "8"
+            },
+            {
+              "id": "10",
+              "text": "10"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "nine 对应数字 9。",
+          "closing": "朋友邀请你看看花园里刚开的花。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "熊叔拿来一套新的故事角色卡。\n故事角色卡写着 “I'm nine.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "9",
+          "options": [
+            {
+              "id": "8",
+              "text": "8"
+            },
+            {
+              "id": "10",
+              "text": "10"
+            },
+            {
+              "id": "9",
+              "text": "9"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "nine 对应数字 9。",
+          "closing": "熊叔把今天的小卡片收好，邀请你坐一会儿。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "校园角色扮演要贴数字。\n故事角色卡写着 “I'm nine.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "9",
+          "options": [
+            {
+              "id": "10",
+              "text": "10"
+            },
+            {
+              "id": "9",
+              "text": "9"
+            },
+            {
+              "id": "8",
+              "text": "8"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "nine 对应数字 9。",
+          "closing": "朋友说，下次还可以一起到校园散步。"
+        }
+      ]
+    },
+    {
+      "id": "unit/10",
+      "group": "u3",
+      "letter": "",
+      "title": "U3 · 读角色年龄卡",
+      "dimension": "written_situation_choice",
+      "unlock": "unit/3",
+      "source_refs": [
+        "U3-06"
+      ],
+      "contexts": [
+        {
+          "room": "landmark_F",
+          "actor": "npc_rabbit_gardener",
+          "title": "花园里的小邀请",
+          "prompt": "花园故事会要整理角色牌。\n故事角色卡写着 “I'm ten.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "10",
+          "options": [
+            {
+              "id": "10",
+              "text": "10"
+            },
+            {
+              "id": "9",
+              "text": "9"
+            },
+            {
+              "id": "8",
+              "text": "8"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "ten 对应数字 10。",
+          "closing": "朋友邀请你看看花园里刚开的花。"
+        },
+        {
+          "room": "home",
+          "actor": "npc_bear_uncle",
+          "title": "回家整理旅行卡",
+          "prompt": "熊叔拿来一套新的故事角色卡。\n故事角色卡写着 “I'm ten.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "10",
+          "options": [
+            {
+              "id": "9",
+              "text": "9"
+            },
+            {
+              "id": "8",
+              "text": "8"
+            },
+            {
+              "id": "10",
+              "text": "10"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "ten 对应数字 10。",
+          "closing": "熊叔把今天的小卡片收好，邀请你坐一会儿。"
+        },
+        {
+          "room": "school",
+          "actor": "textbook_anne",
+          "title": "校园里的新相遇",
+          "prompt": "校园角色扮演要贴数字。\n故事角色卡写着 “I'm ten.”，应放哪个数字？",
+          "stimulus": "",
+          "image_letter": "",
+          "correct": "10",
+          "options": [
+            {
+              "id": "8",
+              "text": "8"
+            },
+            {
+              "id": "10",
+              "text": "10"
+            },
+            {
+              "id": "9",
+              "text": "9"
+            }
+          ],
+          "hint": "读清角色卡上的年龄词，和座位数分开。",
+          "demo": "ten 对应数字 10。",
+          "closing": "朋友说，下次还可以一起到校园散步。"
+        }
+      ]
+    }
+  ]
+}

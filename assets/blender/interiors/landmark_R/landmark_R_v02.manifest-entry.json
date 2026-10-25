@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_R",
+  "name": "机器人工坊",
+  "blend": "assets/blender/interiors/landmark_R/landmark_R_v02.blend",
+  "glb": "assets/blender/interiors/landmark_R/landmark_R_v02.glb",
+  "preview": "assets/blender/interiors/landmark_R/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口指令卡槽",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Command_Cards_Cabinet",
+      "memory_id": "memory_R_01",
+      "activity": "选择要做的动作"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧零件格",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Parts_Back",
+      "memory_id": "memory_R_02",
+      "activity": "找所需零件"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央动作测试台",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Robot_Workbench_Cabinet",
+      "memory_id": "memory_R_03",
+      "activity": "让机器人依序移动"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧维修臂桌",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Repair_Arm_Cabinet",
+      "memory_id": "memory_R_04",
+      "activity": "替换缺失部件"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口完成状态屏",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Status_Face",
+      "memory_id": "memory_R_05",
+      "activity": "核对任务结果"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 144964,
+  "glb_sha256": "03762861017c09d895a24017b24f081f3e607b62d1bfa7adb1b3dfc0f414df5b",
+  "refinement_revision": "world-refinement-v1"
+}

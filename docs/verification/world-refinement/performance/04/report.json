@@ -1,0 +1,1393 @@
+{
+  "batch": "04",
+  "captures": [
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.37952071428299,
+          0.7745321393013,
+          -0.506027638912201
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.9500904083252,
+          40.5
+        ],
+        "projection": 1,
+        "size": 24.1800003051758
+      },
+      "hud_visible": true,
+      "id": "school-production",
+      "image": "F:/LoveStudy/game/../docs/verification/world-refinement/performance/04/school-production.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "production_camera_default_spawn",
+      "panel": "",
+      "player_position": [
+        0.0,
+        -0.0499098598957062,
+        16.5
+      ],
+      "room": "school",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000394333333333313,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000394333333333313,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.394333333333313,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_lingling",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.916394333333331,
+            "walking_allowed": true,
+            "weighted_vertices": 22832
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.000394333333333313,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000394333333333313,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.394333333333313,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_peter",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.916394333333331,
+            "walking_allowed": true,
+            "weighted_vertices": 22333
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.000394333333333313,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000394333333333313,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.394333333333313,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_anne",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.916394333333331,
+            "walking_allowed": true,
+            "weighted_vertices": 22929
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 54,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 1.65414733333334,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "school",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 1.65414733333334
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.841178476810455,
+          0.0,
+          -0.540757596492767
+        ],
+        "basis_y": [
+          -0.362027823925018,
+          0.742827475070953,
+          -0.563154399394989
+        ],
+        "basis_z": [
+          0.401689678430557,
+          0.66948276758194,
+          0.624850571155548
+        ],
+        "position": [
+          66.6153869628906,
+          88.2923049926758,
+          81.8461532592773
+        ],
+        "projection": 1,
+        "size": 92.7200012207031
+      },
+      "hud_visible": false,
+      "id": "school-overview",
+      "image": "F:/LoveStudy/game/../docs/verification/world-refinement/performance/04/school-overview.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "fixed_overview_camera_hud_hidden",
+      "panel": "",
+      "player_position": [
+        0.0,
+        -0.0499098598957062,
+        16.5
+      ],
+      "room": "school",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.000884666666666655,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000884666666666655,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.884666666666655,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_lingling",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 1.09288466666666,
+            "walking_allowed": true,
+            "weighted_vertices": 22832
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.000884666666666655,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000884666666666655,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.884666666666655,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_peter",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 1.09288466666666,
+            "walking_allowed": true,
+            "weighted_vertices": 22333
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.000884666666666655,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.000884666666666655,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.884666666666655,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_anne",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 1.09288466666666,
+            "walking_allowed": true,
+            "weighted_vertices": 22929
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 54,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 1.83063766666668,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "school",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 1.83063766666668
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.379520684480667,
+          0.774532079696655,
+          -0.506027579307556
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.9499645233154,
+          25.7999992370605
+        ],
+        "projection": 1,
+        "size": 14.4300003051758
+      },
+      "hud_visible": true,
+      "id": "classroom-production",
+      "image": "F:/LoveStudy/game/../docs/verification/world-refinement/performance/04/classroom-production.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "production_camera_default_spawn",
+      "panel": "",
+      "player_position": [
+        0.0,
+        -0.0500356964766979,
+        6.0
+      ],
+      "room": "classroom",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.0000511904761904347,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0000511904761904347,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.0511904761904347,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_mingming",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.790051190476191,
+            "walking_allowed": true,
+            "weighted_vertices": 21367
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0000511904761904347,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0000511904761904347,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.0511904761904347,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_dongdong",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.790051190476191,
+            "walking_allowed": true,
+            "weighted_vertices": 21867
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0000511904761904347,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0000511904761904347,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.0511904761904347,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_tim",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.790051190476191,
+            "walking_allowed": true,
+            "weighted_vertices": 21543
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0000511904761904347,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0000511904761904347,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.0511904761904347,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/dino_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 22,
+            "carrying_pose": false,
+            "character_id": "textbook_dino",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "dino",
+            "moving": false,
+            "rig_family": "dino",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 22,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.790051190476191,
+            "walking_allowed": true,
+            "weighted_vertices": 29435
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 7.75419656084666,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "classroom",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 7.75419656084666
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    },
+    {
+      "camera": {
+        "basis_x": [
+          0.841178476810455,
+          0.0,
+          -0.540757596492767
+        ],
+        "basis_y": [
+          -0.362027823925018,
+          0.742827475070953,
+          -0.563154399394989
+        ],
+        "basis_z": [
+          0.401689678430557,
+          0.66948276758194,
+          0.624850571155548
+        ],
+        "position": [
+          18.0,
+          30.6000003814697,
+          28.0
+        ],
+        "projection": 1,
+        "size": 19.5200004577637
+      },
+      "hud_visible": false,
+      "id": "classroom-overview",
+      "image": "F:/LoveStudy/game/../docs/verification/world-refinement/performance/04/classroom-overview.png",
+      "image_size": [
+        1440,
+        900
+      ],
+      "kind": "fixed_overview_camera_hud_hidden",
+      "panel": "",
+      "player_position": [
+        0.0,
+        -0.0500356964766979,
+        6.0
+      ],
+      "room": "classroom",
+      "scene_source": "blender",
+      "weather": {
+        "actor_visual_status": "rigid_bone_prototypes_not_skinned",
+        "actors": [
+          {
+            "action": "idle",
+            "action_elapsed": 0.0000925238095237772,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0000925238095237772,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.0925238095237772,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_mingming",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.962092523809524,
+            "walking_allowed": true,
+            "weighted_vertices": 21367
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0000925238095237772,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0000925238095237772,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.0925238095237772,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_dongdong",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.962092523809524,
+            "walking_allowed": true,
+            "weighted_vertices": 21867
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0000925238095237772,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0000925238095237772,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.0925238095237772,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/humanoid_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 17,
+            "carrying_pose": false,
+            "character_id": "textbook_tim",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "human",
+            "moving": false,
+            "rig_family": "humanoid",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 17,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.962092523809524,
+            "walking_allowed": true,
+            "weighted_vertices": 21543
+          },
+          {
+            "action": "idle",
+            "action_elapsed": 0.0000925238095237772,
+            "action_phase": {
+              "action": "idle",
+              "active_clip": "idle",
+              "complete": false,
+              "contact_sent": false,
+              "duration": 0.0,
+              "elapsed": 0.0000925238095237772,
+              "event_key": "",
+              "invocation_id": 0,
+              "normalized": 0.0925238095237772,
+              "phase": "loop",
+              "reduced_motion": true
+            },
+            "animation_count": 28,
+            "animation_library": "res://actors/p1/dino_reduced.tres",
+            "animation_system": "saved_AnimationLibrary_manual_AnimationPlayer",
+            "art_revision": "tripo-character-v1",
+            "blend_shape_count": 3,
+            "blend_shape_names": [
+              "Blink",
+              "Smile",
+              "Talk"
+            ],
+            "bones": 22,
+            "carrying_pose": false,
+            "character_id": "textbook_dino",
+            "collision_layer": 16,
+            "held_prop": false,
+            "held_prop_id": "",
+            "kind": "dino",
+            "moving": false,
+            "rig_family": "dino",
+            "semantic_receipt_count": 0,
+            "skin_bind_count": 22,
+            "skinned_meshes": 1,
+            "visual_production_status": "authored_skinned_storybook_v3",
+            "visual_time": 0.962092523809524,
+            "walking_allowed": true,
+            "weighted_vertices": 29435
+          }
+        ],
+        "all_textbook_roster_produced": false,
+        "available_prototype_count": 11,
+        "day_phase": "day",
+        "environment_effects_enabled": true,
+        "foliage_count": 0,
+        "learning_or_day_state_written": false,
+        "performance_running": true,
+        "performance_time": 7.92623789417999,
+        "phase_label": "白昼",
+        "rain_instances": 96,
+        "rain_visible": false,
+        "registered_identity_count": 144,
+        "registered_textbook_identity_count": 142,
+        "room_id": "classroom",
+        "source_geometry_modified": false,
+        "spawn_failures": [],
+        "water_count": 0,
+        "weather": "clear",
+        "weather_label": "晴",
+        "weather_requested": "clear",
+        "world_running": true,
+        "world_time": 7.92623789417999
+      },
+      "window_size": [
+        1440,
+        900
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "detail": null,
+      "id": "native_display_server",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "isolated_save",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/school-production",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/school-production",
+      "passed": true
+    },
+    {
+      "detail": {
+        "after": {
+          "basis_x": [
+            0.800000011920929,
+            0.0,
+            -0.599999964237213
+          ],
+          "basis_y": [
+            -0.37952071428299,
+            0.7745321393013,
+            -0.506027638912201
+          ],
+          "basis_z": [
+            0.464719265699387,
+            0.632534563541412,
+            0.619625747203827
+          ],
+          "position": [
+            18.0,
+            24.9500904083252,
+            40.5
+          ],
+          "projection": 1,
+          "size": 24.1800003051758
+        },
+        "before": {
+          "basis_x": [
+            0.800000011920929,
+            0.0,
+            -0.599999964237213
+          ],
+          "basis_y": [
+            -0.379520654678345,
+            0.774532020092011,
+            -0.506027519702911
+          ],
+          "basis_z": [
+            0.464719265699387,
+            0.632534563541412,
+            0.619625747203827
+          ],
+          "position": [
+            18.0,
+            24.9500904083252,
+            40.5
+          ],
+          "projection": 1.0,
+          "size": 24.1800003051758
+        }
+      },
+      "id": "same_camera_as_before/school-production",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/school-overview",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/school-overview",
+      "passed": true
+    },
+    {
+      "detail": {
+        "after": {
+          "basis_x": [
+            0.841178476810455,
+            0.0,
+            -0.540757596492767
+          ],
+          "basis_y": [
+            -0.362027823925018,
+            0.742827475070953,
+            -0.563154399394989
+          ],
+          "basis_z": [
+            0.401689678430557,
+            0.66948276758194,
+            0.624850571155548
+          ],
+          "position": [
+            66.6153869628906,
+            88.2923049926758,
+            81.8461532592773
+          ],
+          "projection": 1,
+          "size": 92.7200012207031
+        },
+        "before": {
+          "basis_x": [
+            0.841178476810455,
+            0.0,
+            -0.540757596492767
+          ],
+          "basis_y": [
+            -0.362027823925018,
+            0.742827475070953,
+            -0.563154399394989
+          ],
+          "basis_z": [
+            0.401689678430557,
+            0.66948276758194,
+            0.624850571155548
+          ],
+          "position": [
+            66.6153869628906,
+            88.2923049926758,
+            81.8461532592773
+          ],
+          "projection": 1.0,
+          "size": 92.7200012207031
+        }
+      },
+      "id": "same_camera_as_before/school-overview",
+      "passed": true
+    },
+    {
+      "detail": 300,
+      "id": "native_frames_rendered/school",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/classroom-production",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/classroom-production",
+      "passed": true
+    },
+    {
+      "detail": {
+        "after": {
+          "basis_x": [
+            0.800000011920929,
+            0.0,
+            -0.599999964237213
+          ],
+          "basis_y": [
+            -0.379520684480667,
+            0.774532079696655,
+            -0.506027579307556
+          ],
+          "basis_z": [
+            0.464719265699387,
+            0.632534563541412,
+            0.619625747203827
+          ],
+          "position": [
+            18.0,
+            24.9499645233154,
+            25.7999992370605
+          ],
+          "projection": 1,
+          "size": 14.4300003051758
+        },
+        "before": {
+          "basis_x": [
+            0.800000011920929,
+            0.0,
+            -0.599999964237213
+          ],
+          "basis_y": [
+            -0.379520654678345,
+            0.774532020092011,
+            -0.506027519702911
+          ],
+          "basis_z": [
+            0.464719265699387,
+            0.632534563541412,
+            0.619625747203827
+          ],
+          "position": [
+            18.0,
+            24.9499645233154,
+            25.7999992370605
+          ],
+          "projection": 1.0,
+          "size": 14.4300003051758
+        }
+      },
+      "id": "same_camera_as_before/classroom-production",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "image_saved/classroom-overview",
+      "passed": true
+    },
+    {
+      "detail": [
+        1440,
+        900
+      ],
+      "id": "native_image_size/classroom-overview",
+      "passed": true
+    },
+    {
+      "detail": {
+        "after": {
+          "basis_x": [
+            0.841178476810455,
+            0.0,
+            -0.540757596492767
+          ],
+          "basis_y": [
+            -0.362027823925018,
+            0.742827475070953,
+            -0.563154399394989
+          ],
+          "basis_z": [
+            0.401689678430557,
+            0.66948276758194,
+            0.624850571155548
+          ],
+          "position": [
+            18.0,
+            30.6000003814697,
+            28.0
+          ],
+          "projection": 1,
+          "size": 19.5200004577637
+        },
+        "before": {
+          "basis_x": [
+            0.841178476810455,
+            0.0,
+            -0.540757596492767
+          ],
+          "basis_y": [
+            -0.362027823925018,
+            0.742827475070953,
+            -0.563154399394989
+          ],
+          "basis_z": [
+            0.401689678430557,
+            0.66948276758194,
+            0.624850571155548
+          ],
+          "position": [
+            18.0,
+            30.6000003814697,
+            28.0
+          ],
+          "projection": 1.0,
+          "size": 19.5200004577637
+        }
+      },
+      "id": "same_camera_as_before/classroom-overview",
+      "passed": true
+    },
+    {
+      "detail": 300,
+      "id": "native_frames_rendered/classroom",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "production_files_unchanged",
+      "passed": true
+    },
+    {
+      "detail": null,
+      "id": "capture_sources_stable_during_run",
+      "passed": true
+    },
+    {
+      "detail": 4,
+      "id": "all_views_captured",
+      "passed": true
+    }
+  ],
+  "display_server": "Windows",
+  "engine_arguments": [
+    "--script",
+    "res://tests/capture_world_refinement.gd"
+  ],
+  "isolated_save": "user://validation-22188.json",
+  "performance_samples": [
+    {
+      "additional_warmup_seconds": 3.0,
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.379520684480667,
+          0.774532079696655,
+          -0.506027579307556
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.9500904083252,
+          40.5
+        ],
+        "projection": 1,
+        "size": 24.1800003051758
+      },
+      "draw_calls_last_frame": 1438.0,
+      "engine_physics_monitor_ms": {
+        "max": 0.379,
+        "mean": 0.374166666666668,
+        "min": 0.35,
+        "p50": 0.379,
+        "p95": 0.379
+      },
+      "engine_process_monitor_ms": {
+        "max": 4.662,
+        "mean": 4.50533333333335,
+        "min": 4.474,
+        "p50": 4.474,
+        "p95": 4.662
+      },
+      "engine_smoothed_fps": {
+        "max": 280.0,
+        "mean": 280.0,
+        "min": 280.0,
+        "p50": 280.0,
+        "p95": 280.0
+      },
+      "render_video_memory_bytes": 489171502.0,
+      "rendered_objects_last_frame": 1481.0,
+      "room": "school",
+      "sample_drawn_frames": 300,
+      "sample_process_frames": 300,
+      "scope": "One local native 1440x900 sample scene, fixed sunny daytime and reduced motion at default spawn. Not a device minimum, broad gameplay benchmark, or GPU-only timing. Wall frame intervals include presentation pacing. Godot process/physics monitors update coarsely and are not OS CPU-exclusive durations; simulation delta is separate.",
+      "simulation_delta_ms": {
+        "max": 3.71888888888837,
+        "mean": 3.57443012345679,
+        "min": 3.33333333333333,
+        "p50": 3.637,
+        "p95": 3.7037037037037
+      },
+      "static_memory_bytes": 224020116.0,
+      "wall_effective_fps": 278.895425371303,
+      "wall_elapsed_seconds": 1.075672,
+      "wall_frame_ms": {
+        "max": 7.104,
+        "mean": 3.58555666666667,
+        "min": 3.202,
+        "p50": 3.522,
+        "p95": 4.025
+      },
+      "warmup_physics_frames": 60,
+      "window_focused": true,
+      "window_mode": 0
+    },
+    {
+      "additional_warmup_seconds": 3.0,
+      "camera": {
+        "basis_x": [
+          0.800000011920929,
+          0.0,
+          -0.599999964237213
+        ],
+        "basis_y": [
+          -0.379520654678345,
+          0.774532020092011,
+          -0.506027579307556
+        ],
+        "basis_z": [
+          0.464719265699387,
+          0.632534563541412,
+          0.619625747203827
+        ],
+        "position": [
+          18.0,
+          24.9499645233154,
+          25.7999992370605
+        ],
+        "projection": 1,
+        "size": 14.4300003051758
+      },
+      "draw_calls_last_frame": 703.0,
+      "engine_physics_monitor_ms": {
+        "max": 0.376,
+        "mean": 0.376000000000002,
+        "min": 0.376,
+        "p50": 0.376,
+        "p95": 0.376
+      },
+      "engine_process_monitor_ms": {
+        "max": 2.958,
+        "mean": 2.95799999999999,
+        "min": 2.958,
+        "p50": 2.958,
+        "p95": 2.958
+      },
+      "engine_smoothed_fps": {
+        "max": 403.0,
+        "mean": 403.0,
+        "min": 403.0,
+        "p50": 403.0,
+        "p95": 403.0
+      },
+      "render_video_memory_bytes": 536031621.0,
+      "rendered_objects_last_frame": 748.0,
+      "room": "classroom",
+      "sample_drawn_frames": 300,
+      "sample_process_frames": 300,
+      "scope": "One local native 1440x900 sample scene, fixed sunny daytime and reduced motion at default spawn. Not a device minimum, broad gameplay benchmark, or GPU-only timing. Wall frame intervals include presentation pacing. Godot process/physics monitors update coarsely and are not OS CPU-exclusive durations; simulation delta is separate.",
+      "simulation_delta_ms": {
+        "max": 2.77777777777778,
+        "mean": 2.42999873015874,
+        "min": 2.21880952380866,
+        "p50": 2.38095238095238,
+        "p95": 2.753
+      },
+      "static_memory_bytes": 214572680.0,
+      "wall_effective_fps": 410.920063720005,
+      "wall_elapsed_seconds": 0.730069,
+      "wall_frame_ms": {
+        "max": 4.793,
+        "mean": 2.43355666666667,
+        "min": 2.149,
+        "p50": 2.398,
+        "p95": 2.832
+      },
+      "warmup_physics_frames": 60,
+      "window_focused": true,
+      "window_mode": 0
+    }
+  ],
+  "production_after": {
+    "island-save-v1.json": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "island-save-v1.json.bak": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "welcome-photo-44948-21463.png": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+    "welcome-photo-7100-20320.png": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585"
+  },
+  "production_before": {
+    "island-save-v1.json": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "island-save-v1.json.bak": "a299814623dfbeab0ea9da5a254d3c47435c9b7b056244820c1f89c62930df77",
+    "welcome-photo-44948-21463.png": "b57f7b5d8f01cb002d3cb6a9af5a01951bedee214f6bb47b212e4fe64b762734",
+    "welcome-photo-7100-20320.png": "f526d1d9b9ba0c59764d56a3ec411a311e9153c70eb376a034dbdde116405585"
+  },
+  "renderer": "gl_compatibility",
+  "result": "PASS",
+  "rooms": [
+    "school",
+    "classroom"
+  ],
+  "scope": "Native 1440x900 production and fixed overview cameras. Direct room entry proves visual loading only; independent physical-route tests cover gameplay.",
+  "source_sha256": {
+    "res://assets/interiors/classroom.glb": "aa41a200e802deff1f105220f93f0e92d426c3e3eab8475df8e011e8c5ea9c8c",
+    "res://assets/interiors/home.glb": "6e902df0525ab40eff397b0866bd5d4b707697f8b9315d088d5393af5d98e13b",
+    "res://assets/interiors/home_estate.glb": "c0fb8452aca795da35a03e8e46668848db7c33ef0424dfa89146b0c854ea6195",
+    "res://assets/interiors/school.glb": "607954b34cda8296cb53237409f7d08e18f7055529ce053956e0f2b00a70e03a",
+    "res://project.godot": "a3c79c67946924c96acb1750aabfd29b383a3774f4976908f883e26f3bb38f72",
+    "res://scripts/home_visual_refinement.gd": "f5a65a70869c9c5a1c8b0ab3792b446c0b541cde1a48092655729f68def85180",
+    "res://scripts/living_world.gd": "aa21662d4fea5dff9105e4003b572f09e631b197119c85f0a5458f611aa8deab",
+    "res://scripts/world_art.gd": "b377d66dc743476bd8156105dcf7b7dec9c41fcf2ecb88d61c57e07a9761bbeb",
+    "res://scripts/world_builder.gd": "87a30f804faaf8e20a249d3f5e66827ea4a60443794a54933ab1b1f26d9c0f58"
+  },
+  "stage": "after"
+}

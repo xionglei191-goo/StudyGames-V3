@@ -1,0 +1,154 @@
+{
+  "room_id": "canteen",
+  "name": "食堂",
+  "blend": "assets/blender/interiors/canteen/canteen_v02.blend",
+  "glb": "assets/blender/interiors/canteen/canteen_v02.glb",
+  "preview": "assets/blender/interiors/canteen/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口菜单板",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Menu_Face",
+      "memory_id": "memory_CANTEEN_01",
+      "activity": "看今日食物"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧餐具台",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Cutlery_Cabinet",
+      "memory_id": "memory_CANTEEN_02",
+      "activity": "选择所需餐具"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央取餐窗口",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Serving_Window_Cabinet",
+      "memory_id": "memory_CANTEEN_03",
+      "activity": "礼貌说明想要的食物"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧用餐分享桌",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Shared_Dining_Leg",
+      "memory_id": "memory_CANTEEN_04",
+      "activity": "与同学描述口味并道谢"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口餐盘回收台",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Return_Cabinet",
+      "memory_id": "memory_CANTEEN_05",
+      "activity": "整理餐盘归位"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回学校",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 174972,
+  "glb_sha256": "50322070b3fcede741d85b88b5954637a0600e6dc9ca7a1f104f002310737a2c",
+  "refinement_revision": "world-refinement-v1"
+}

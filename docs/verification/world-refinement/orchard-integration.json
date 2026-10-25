@@ -1,0 +1,309 @@
+{
+  "actual_display_window": [
+    0,
+    0
+  ],
+  "actual_viewport": [
+    1440.0,
+    900.0
+  ],
+  "checks": [
+    {
+      "id": "scene_ready",
+      "passed": true
+    },
+    {
+      "id": "home_prerequisite/H01",
+      "passed": true
+    },
+    {
+      "id": "home_prerequisite/H02",
+      "passed": true
+    },
+    {
+      "id": "home_prerequisite/H03",
+      "passed": true
+    },
+    {
+      "id": "home_prerequisite/H04",
+      "passed": true
+    },
+    {
+      "id": "authored_rabbit_wrapper_keeps_original_identity_and_visibility",
+      "passed": true
+    },
+    {
+      "id": "actual_scene_setup",
+      "passed": true
+    },
+    {
+      "id": "activity_hides_original_rabbit_visual",
+      "passed": true
+    },
+    {
+      "id": "only_activity_rabbit_remains_visible",
+      "passed": true
+    },
+    {
+      "id": "new_round_ready",
+      "passed": true
+    },
+    {
+      "id": "apple_on_original_tree_branch",
+      "passed": true
+    },
+    {
+      "id": "uses_authored_basket",
+      "passed": true
+    },
+    {
+      "id": "click_actual_apple_starts_walk",
+      "passed": true
+    },
+    {
+      "id": "reached/picking",
+      "passed": true
+    },
+    {
+      "id": "pause_freezes_activity_and_prop",
+      "passed": true
+    },
+    {
+      "id": "pause_freezes_actor_animation",
+      "passed": true
+    },
+    {
+      "id": "reached/carrying",
+      "passed": true
+    },
+    {
+      "id": "apple_reparents_at_contact",
+      "passed": true
+    },
+    {
+      "id": "contact_saved_before_ownership_changes",
+      "passed": true
+    },
+    {
+      "id": "interruption_restores_original_rabbit_visual",
+      "passed": true
+    },
+    {
+      "id": "resumed_activity_hides_original_rabbit_again",
+      "passed": true
+    },
+    {
+      "id": "resume_carrying_same_round",
+      "passed": true
+    },
+    {
+      "id": "resume_prop_ownership",
+      "passed": true
+    },
+    {
+      "id": "click_actual_basket_starts_carry_walk",
+      "passed": true
+    },
+    {
+      "id": "reached/placing",
+      "passed": true
+    },
+    {
+      "id": "reached/save_place",
+      "passed": true
+    },
+    {
+      "id": "failed_save_keeps_apple_in_hand",
+      "passed": true
+    },
+    {
+      "id": "clickable/再试一次",
+      "passed": true
+    },
+    {
+      "id": "reached/deposited",
+      "passed": true
+    },
+    {
+      "id": "apple_released_only_on_saved_contact",
+      "passed": true
+    },
+    {
+      "id": "apple_settles_inside_authored_basket",
+      "passed": true
+    },
+    {
+      "id": "discovery_after_physical_action",
+      "passed": true
+    },
+    {
+      "id": "contact_distance/place",
+      "passed": true
+    },
+    {
+      "id": "contact_distance/place",
+      "passed": true
+    },
+    {
+      "id": "orchard_does_not_grant_economy_or_course_mastery",
+      "passed": true
+    },
+    {
+      "id": "replay_gets_new_round",
+      "passed": true
+    },
+    {
+      "id": "replay_restores_branch_orientation_and_position",
+      "passed": true
+    },
+    {
+      "id": "paused_replay_keeps_clear_resume_instruction",
+      "passed": true
+    },
+    {
+      "id": "replay_preserves_discoveries",
+      "passed": true
+    },
+    {
+      "id": "reached/deposited",
+      "passed": true
+    },
+    {
+      "id": "demonstration_recorded_separately",
+      "passed": true
+    },
+    {
+      "id": "clickable/收下这次发现",
+      "passed": true
+    },
+    {
+      "id": "receiving_physical_discovery_waits_for_glyph_observation",
+      "passed": true
+    },
+    {
+      "id": "clickable/看看建筑里的 A",
+      "passed": true
+    },
+    {
+      "id": "discover_A_after_receiving_and_real_model_observation",
+      "passed": true
+    },
+    {
+      "id": "orchard_exit_restores_player_while_discovery_panel_is_open",
+      "passed": true
+    },
+    {
+      "id": "discovery_panel_exposes_close_control",
+      "passed": true
+    },
+    {
+      "id": "clickable/×",
+      "passed": true
+    },
+    {
+      "id": "exit_restores_player_and_hud",
+      "passed": true
+    },
+    {
+      "id": "activity_actor_removed_on_exit",
+      "passed": true
+    },
+    {
+      "id": "discovery_exit_restores_original_rabbit_visual",
+      "passed": true
+    },
+    {
+      "id": "production_save_unchanged",
+      "passed": true
+    },
+    {
+      "id": "production_backup_unchanged",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "requested_window": [
+    1440,
+    900
+  ],
+  "status": "passed",
+  "trace": [
+    {
+      "actor_position": "(-5.983992, 0.02, 0.138231)",
+      "apple_position": "(-6.516176, 1.194485, 0.386904)",
+      "apple_target": "(-6.668367, 1.029915, 0.29757)",
+      "basket_target": "(-2.5, 0.6, 0.8)",
+      "contacts": [
+        {
+          "action": "pick",
+          "distance": 0.139514461159706,
+          "round_id": "orchard-1792835985.115-6471876"
+        }
+      ],
+      "mode": "independent_action",
+      "paused": false,
+      "phase": "carrying",
+      "pick_stand": "(-6.0, 0.030009, 0.0)",
+      "place_stand": "(-3.285011, 0.03, 1.159605)",
+      "round_id": "orchard-1792835985.115-6471876"
+    },
+    {
+      "actor_position": "(-3.399945, 0.02, 1.223394)",
+      "apple_position": "(-2.5, 0.45, 0.8)",
+      "apple_target": "(-6.668367, 1.029915, 0.29757)",
+      "basket_target": "(-2.5, 0.6, 0.8)",
+      "contacts": [
+        {
+          "action": "place",
+          "distance": 0.153010740876198,
+          "round_id": "orchard-1792835985.115-6471876"
+        },
+        {
+          "action": "place",
+          "distance": 0.153010740876198,
+          "round_id": "orchard-1792835985.115-6471876"
+        }
+      ],
+      "mode": "independent_action",
+      "paused": false,
+      "phase": "deposited",
+      "pick_stand": "(-6.0, 0.030009, 0.0)",
+      "place_stand": "(-3.285011, 0.03, 1.159605)",
+      "round_id": "orchard-1792835985.115-6471876"
+    },
+    {
+      "actor_position": "(-3.415745, 0.02, 1.232827)",
+      "apple_position": "(-2.5, 0.45, 0.8)",
+      "apple_target": "(-6.668367, 1.029915, 0.29757)",
+      "basket_target": "(-2.5, 0.6, 0.8)",
+      "contacts": [
+        {
+          "action": "place",
+          "distance": 0.153010740876198,
+          "round_id": "orchard-1792835985.115-6471876"
+        },
+        {
+          "action": "place",
+          "distance": 0.153010740876198,
+          "round_id": "orchard-1792835985.115-6471876"
+        },
+        {
+          "action": "pick",
+          "distance": 0.138406813144684,
+          "round_id": "orchard-1792835985.458-6815800"
+        },
+        {
+          "action": "place",
+          "distance": 0.169075399637222,
+          "round_id": "orchard-1792835985.458-6815800"
+        }
+      ],
+      "mode": "demonstration_viewed",
+      "paused": false,
+      "phase": "deposited",
+      "pick_stand": "(-6.0, 0.030009, 0.0)",
+      "place_stand": "(-3.285011, 0.03, 1.159605)",
+      "round_id": "orchard-1792835985.458-6815800"
+    }
+  ]
+}

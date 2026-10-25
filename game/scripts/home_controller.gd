@@ -12,7 +12,7 @@ func setup(host: Node3D) -> void:
 	game = host
 
 func handles_room() -> bool:
-	return game.room in Catalog.ROOMS
+	return Catalog.is_home_space(game.room)
 
 func cancel_task() -> void:
 	_task_room = ""
@@ -21,7 +21,7 @@ func cancel_task() -> void:
 	refresh_visuals()
 
 func refresh_visuals() -> void:
-	if not is_instance_valid(game.world) or not handles_room(): return
+	if not is_instance_valid(game.world) or game.room not in Catalog.ROOMS: return
 	var plan: Dictionary = Catalog.room(game.room)
 	var done := bool(State.data.life.get("home_tasks", {}).get(str(plan.task.id), false))
 	_set_visual("after" if done else "before")
@@ -31,7 +31,7 @@ func _set_visual(state: String) -> void:
 		(node as Node3D).visible = str(node.name) == "HOME_TASK_" + state.to_upper()
 
 func show_memory(sequence: int) -> void:
-	if not handles_room() or sequence < 1 or sequence > 5: return
+	if game.room not in Catalog.ROOMS or sequence < 1 or sequence > 5: return
 	cancel_task()
 	_sequence = sequence
 	var plan: Dictionary = Catalog.room(game.room)
@@ -69,48 +69,15 @@ func show_overview() -> void:
 	cancel_task()
 	var actions: Array = []
 	if game.room == "home_estate":
-		actions.append({"label":"走到正门 · 进屋", "id":"navigate:house_entry", "primary":true})
+		actions.append({"label":"走到家门前", "id":"navigate:house_entry", "primary":true})
+	elif game.room == "home_hall":
+		actions.append({"label":"看看室内地图", "id":"map", "primary":true})
+		actions.append({"label":"走到通往小院的门", "id":"navigate:courtyard_exit"})
 	else:
-		actions.append({"label":"回到家门前的小院", "id":"navigate:home_exit", "primary":true})
+		actions.append({"label":"走回家里的走廊", "id":"navigate:home_exit", "primary":true})
 	actions.append({"label":"看看今天能做什么", "id":"home:day"})
-	actions.append({"label":"打开家园地图", "id":"map"})
-	game.ui.show_panel("home_overview", "每个房间都有自己的生活", "我的家 · 小院与七个房间", "穿过小院，走到住宅正门。进门后再选择想去的房间。\n从房间出来，会回到家门前的小院。", actions)
-
-func _at_front_door() -> bool:
-	if game.room != "home_estate" or game.loading_room: return false
-	for entry: Dictionary in game.interactions:
-		if str(entry.id) == "house_entry":
-			var delta: Vector3 = game.player.position - entry.position
-			return Vector2(delta.x, delta.z).length() <= float(entry.radius)
-	return false
-
-func show_entry() -> void:
-	if not _at_front_door():
-		game.ui.notify("先走到住宅正门，再进屋看看。")
-		return
-	cancel_task()
-	var actions: Array = []
-	for child_id: String in Catalog.ROOMS:
-		if child_id == "home_estate": continue
-		var plan: Dictionary = Catalog.room(child_id)
-		actions.append({"label":str(plan.name) + "\n" + str(plan.task.title), "id":"home:enter:" + child_id, "primary":child_id == "home"})
-	actions.append({"label":"先回小院逛逛", "id":"close"})
-	game.ui.show_panel("home_entry", "欢迎回家", "住宅正门 · 想去哪个房间？", "客厅、卧室和厨房都在屋里。选一个房间，开始今天的小生活。", actions)
-	# Keep all seven rooms visible together while retaining the production theme.
-	for node: Node in game.ui.panel_box.find_children("*", "Button", true, false):
-		var button := node as Button
-		if not button.get_parent() is GridContainer: continue
-		button.custom_minimum_size.y = 74
-		for state: String in ["normal", "hover", "pressed", "disabled"]:
-			var style := button.get_theme_stylebox(state).duplicate() as StyleBox
-			style.content_margin_top = 7
-			style.content_margin_bottom = 7
-			button.add_theme_stylebox_override(state, style)
-
-func _enter_room(room_id: String) -> void:
-	if room_id == "home_estate" or room_id not in Catalog.ROOMS: return
-	if not _at_front_door() or game.ui.current_panel != "home_entry": return
-	await game.change_room(room_id)
+	if game.room != "home_hall": actions.append({"label":"打开家园地图", "id":"map"})
+	game.ui.show_panel("home_overview", "每个房间都有自己的生活", "我的家 · 小院与七个房间", "推开家门后，就能走进门厅和走廊。\n沿走廊走到各个房间门前，按 E 进入。离开房间会回到刚才的门边。", actions)
 
 func show_day() -> void:
 	cancel_task()
@@ -126,6 +93,7 @@ func _show_task() -> void:
 	game.ui.show_panel("home_task", str(task.title), "%s · %d / %d" % [plan.name, _step + 1, task.steps.size()], str(task.steps[_step]), [{"label":str(task.steps[_step]), "id":"home:step", "primary":true}, {"label":"先放下，等会儿再做", "id":"close"}])
 
 func _begin_task() -> void:
+	if game.room not in Catalog.ROOMS: return
 	var plan: Dictionary = Catalog.room(game.room)
 	if plan.is_empty() or _sequence != int(plan.task.anchor): return
 	var marker: Node3D = game.metadata.get("marker_nodes", {}).get("SG_MEMORY_%02d" % _sequence)
@@ -167,18 +135,15 @@ func handle_action(id: String) -> bool:
 		"begin": _begin_task()
 		"step": _advance_task()
 		"overview": show_overview()
-		"enter":
-			if parts.size() == 3: await _enter_room(parts[2])
 		"day": show_day()
 		"memory":
 			if parts.size() == 3: show_memory(int(parts[2]))
 		"outfit": game.ui.show_inventory(State.data)
 		"bedroom":
 			cancel_task()
-			if game.room == "home":
-				await game.change_room("home_estate", "house_entry")
-			show_entry()
+			game._navigate_to_id("home_bedroom_gate", true)
 		"audio", "source":
+			if game.room not in Catalog.ROOMS: return true
 			if parts.size() != 3: return true
 			var sequence := int(parts[2])
 			if sequence < 1 or sequence > 5: return true

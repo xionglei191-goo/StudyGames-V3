@@ -5,6 +5,10 @@ const Content = preload("res://ui/memory_story_content.gd")
 const MemorySink = preload("res://scripts/memory_event_sink.gd")
 const P2Progress = preload("res://scripts/p2_progress.gd")
 const DiscoveryProgress = preload("res://scripts/discovery_progress.gd")
+# The rear-wall gap between the pantry and sofa belongs to the discovery display.
+# Keep its walk-up point separate from the wardrobe's authored interaction anchor.
+const HOME_DISCOVERY_APPROACH := Vector3(-2.4, 0, -4.7)
+const HOME_DISCOVERY_MOUNT := Vector3(-2.4, 1.9, -6.72)
 var game: Node3D
 var ui: CanvasLayer
 var prologue: Dictionary = {}
@@ -36,6 +40,7 @@ var friend_corner: Node
 var party: Node
 var discovery: Node
 var memories: Node
+var reviews: Node
 var handoff_busy := false
 var handoff_contact := false
 var handoff_invocation := 0
@@ -60,6 +65,10 @@ func setup(owner_game: Node3D) -> void:
 	memories = load("res://scripts/friend_memories_controller.gd").new()
 	add_child(memories)
 	memories.setup(self)
+	reviews = load("res://scripts/review_controller.gd").new()
+	add_child(reviews)
+	reviews.setup(self)
+	State.review_refresh()
 
 func _read(path: String) -> Dictionary:
 	if not FileAccess.file_exists(path):
@@ -142,6 +151,8 @@ func show_hub() -> void:
 	actions.insert(1,{"label":"我的朋友角 · 小岛心愿","id":"journey:friend_corner"})
 	actions.insert(2,{"label":"发现卡和街区旅行页","id":"journey:discoveries"})
 	actions.insert(3,{"label":"去看看我的朋友","id":"journey:friends"})
+	actions.insert(1,{"label":"朋友捎来的小邀请","id":"journey:revisits"})
+	actions.append({"label":"家长观察册","id":"journey:parent"})
 	if state.p2.chapters["3"].completed:
 		actions.insert(1,{"label":"我们的欢迎桌 · 相聚回忆","id":"journey:party"})
 	if state.u1.photo.created:
@@ -177,6 +188,7 @@ func show_books() -> void:
 	ui.show_panel("journey_books","选一本正在学的教材","你的进度会分别保留","八册词故事都可以浏览。三年级上册可接续开学欢迎故事；其他册的生活主线还在制作。",actions,"切换教材不会清空旅行册、已有物品或学习记录。")
 
 func show_letters() -> void:
+	if not State.review_expose("letter/"): return
 	p2.show_trip()
 
 func show_letter_index() -> void:
@@ -234,6 +246,7 @@ func show_letter(letter: String) -> void:
 
 func show_letter_card(letter: String) -> void:
 	if game.room!="landmark_"+letter: return
+	if not State.review_expose("letter/"+letter+"/"): return
 	var record := _letter(letter)
 	if record.is_empty():
 		return
@@ -356,6 +369,10 @@ func show_u1() -> void:
 			title = "欢迎你，小岛的新朋友"
 			body = "合照已经摆在家里。下次见面，试着主动和朋友打招呼吧。\n熊叔还带来了邀请册，我们可以接着去认识朋友的名字。"
 			actions = [{"label":"接着给朋友送邀请","id":"journey:continue","primary":true},{"label":"看看合照","id":"journey:photo"},{"label":"在小岛上走走","id":"close"}]
+	var exposure_texts: Array = actions.map(func(action: Dictionary): return str(action.get("label","")))
+	exposure_texts.append(body)
+	exposure_texts.append("Hello!") # This expression is also printed in the U1 subtitle.
+	if not State.review_expose_text(exposure_texts): return
 	ui.show_panel("journey_u1",title,"Unit 1 · Hello!",body,actions)
 
 func _u1_commit(step: String, details: Dictionary = {}) -> void:
@@ -469,12 +486,10 @@ func _build_story_props() -> void:
 	var has_corner: bool = state.u1.steps.has("U1-04")
 	if game.room=="home": _build_home_decoration(str(state.p2.home_choice))
 	if game.room=="home":
-		var discovery_position: Vector3 = game.metadata.get("spawn",Vector3.ZERO)
-		var party_position: Vector3 = discovery_position
+		var party_position: Vector3 = game.metadata.get("spawn",Vector3.ZERO)
 		for entry: Dictionary in game.interactions:
-			if str(entry.id)=="memory_02": discovery_position = entry.position
 			if str(entry.id)=="memory_03": party_position = entry.position
-		discovery.build_world(story_room_root,discovery_position)
+		discovery.build_world(story_room_root,HOME_DISCOVERY_APPROACH,HOME_DISCOVERY_MOUNT)
 		party.build_world(story_room_root,party_position)
 	if game.room=="school" and has_corner:
 		var position: Vector3 = game.metadata.get("spawn",Vector3.ZERO)+Vector3(3,0,0)
@@ -535,6 +550,12 @@ func _visited_count(state: Dictionary) -> int:
 	return count
 
 func handle_action(id: String) -> bool:
+	if id=="journey:revisits":
+		reviews.show_invites()
+		return true
+	if id=="journey:parent":
+		reviews.show_parent(true)
+		return true
 	if not id.begins_with("journey:"): return false
 	var action := id.trim_prefix("journey:")
 	if action.begins_with("p2:"):
@@ -773,6 +794,13 @@ func open_story(entry_id: String, from_u1: bool = false) -> void:
 		ui.notify("词故事暂时无法打开，请先继续小岛生活。")
 		return
 	if not game._prepare_screen(): return
+	# Only the actual spelling/phrase shown by this story touches related revisit targets.
+	var exposed_ids: Array = preload("res://scripts/review_progress.gd").targets_in_text([entry.spelling_display])
+	for slot: Dictionary in entry.letter_slots:
+		for dimension: String in ["case","image"]:
+			var id := "letter/"+str(slot.letter).to_upper()+"/"+dimension
+			if not exposed_ids.has(id): exposed_ids.append(id)
+	if not State.review_expose_ids(exposed_ids): return
 	var unit_id := "unit-1" if from_u1 else library_unit
 	if unit_id.is_empty(): unit_id = str(entry.source_unit.unit_ids[0])
 	var context := {"book_id":str(entry.source_unit.book_id),"unit_id":unit_id,"story_step_id":"U1-06" if from_u1 else "library/"+str(entry.entry_id),"task_mode":"meaning_to_spelling","target_dimension":"orthography","declared_stimulus":"written_meaning: "+str(entry.meaning_zh),"answer_visible_at_start":true}

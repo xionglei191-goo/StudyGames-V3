@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_H",
+  "name": "帽子裁缝店",
+  "blend": "assets/blender/interiors/landmark_H/landmark_H_v02.blend",
+  "glb": "assets/blender/interiors/landmark_H/landmark_H_v02.glb",
+  "preview": "assets/blender/interiors/landmark_H/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口试戴牌",
+      "position_blender": [
+        -3.78,
+        -3.196,
+        0.0
+      ],
+      "position_godot": [
+        -3.78,
+        0.0,
+        3.196
+      ],
+      "associated_prop": "Locus_01_Try_Hats_Face",
+      "memory_id": "memory_H_01",
+      "activity": "选择来访者需求"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧布料架",
+      "position_blender": [
+        -5.184,
+        -0.658,
+        0.0
+      ],
+      "position_godot": [
+        -5.184,
+        0.0,
+        0.658
+      ],
+      "associated_prop": "Locus_02_Fabrics_Back",
+      "memory_id": "memory_H_02",
+      "activity": "找颜色和材质"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央试戴镜",
+      "position_blender": [
+        0.0,
+        -0.282,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.282
+      ],
+      "associated_prop": "Locus_03_Mirror_Table_Leg",
+      "memory_id": "memory_H_03",
+      "activity": "比较穿戴大小"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧修整桌",
+      "position_blender": [
+        5.076,
+        -0.658,
+        0.0
+      ],
+      "position_godot": [
+        5.076,
+        0.0,
+        0.658
+      ],
+      "associated_prop": "Locus_04_Sewing_Leg",
+      "memory_id": "memory_H_04",
+      "activity": "为帽子加缎带"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口帽架",
+      "position_blender": [
+        4.968,
+        -3.666,
+        0.0
+      ],
+      "position_godot": [
+        4.968,
+        0.0,
+        3.666
+      ],
+      "associated_prop": "Locus_05_Pickup_Leg",
+      "memory_id": "memory_H_05",
+      "activity": "展示选好的帽子"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.311,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.311
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.063,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.063
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.376,
+        -1.316,
+        0.0
+      ],
+      "position_godot": [
+        -2.376,
+        0.0,
+        1.316
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -9.342,
+    -7.191,
+    18.684,
+    14.382
+  ],
+  "triangles": 99180,
+  "glb_sha256": "498bae44cd018da99d4de94945ba4d64702ec2be5d03fb39d8f9982eb532a9db",
+  "refinement_revision": "world-refinement-v1"
+}

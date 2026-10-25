@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_W",
+  "name": "鲸鱼海洋馆",
+  "blend": "assets/blender/interiors/landmark_W/landmark_W_v02.blend",
+  "glb": "assets/blender/interiors/landmark_W/landmark_W_v02.glb",
+  "preview": "assets/blender/interiors/landmark_W/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口海洋旅程图",
+      "position_blender": [
+        -4.06,
+        -3.094,
+        0.0
+      ],
+      "position_godot": [
+        -4.06,
+        0.0,
+        3.094
+      ],
+      "associated_prop": "Locus_01_Ocean_Guide_Face",
+      "memory_id": "memory_W_01",
+      "activity": "选参观路线"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧海岸样本池",
+      "position_blender": [
+        -5.568,
+        -0.637,
+        0.0
+      ],
+      "position_godot": [
+        -5.568,
+        0.0,
+        0.637
+      ],
+      "associated_prop": "Locus_02_Shore_Pool_Cabinet",
+      "memory_id": "memory_W_02",
+      "activity": "看贝壳样本"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央鲸鱼比例地毯",
+      "position_blender": [
+        0.0,
+        -0.273,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.273
+      ],
+      "associated_prop": "Locus_03_Whale_Size_Rug",
+      "memory_id": "memory_W_03",
+      "activity": "比较动物大小"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧蓝色观察窗",
+      "position_blender": [
+        5.452,
+        -0.637,
+        0.0
+      ],
+      "position_godot": [
+        5.452,
+        0.0,
+        0.637
+      ],
+      "associated_prop": "Locus_04_Aquarium",
+      "memory_id": "memory_W_04",
+      "activity": "描述动物动作"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口尾鳍分享湾",
+      "position_blender": [
+        5.336,
+        -3.549,
+        0.0
+      ],
+      "position_godot": [
+        5.336,
+        0.0,
+        3.549
+      ],
+      "associated_prop": "Locus_05_Tail_Sharing_Bay_Back",
+      "memory_id": "memory_W_05",
+      "activity": "分享见闻"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.1415,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.1415
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -5.8695,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.8695
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.552,
+        -1.274,
+        0.0
+      ],
+      "position_godot": [
+        -2.552,
+        0.0,
+        1.274
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -10.034,
+    -6.9615,
+    20.068,
+    13.923
+  ],
+  "triangles": 94526,
+  "glb_sha256": "c2817d38a99eafb188da041b9628be5a85c486ee69325b1507154d372256bb06",
+  "refinement_revision": "world-refinement-v1"
+}

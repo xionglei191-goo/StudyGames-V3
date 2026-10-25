@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_I",
+  "name": "冰淇淋驿亭",
+  "blend": "assets/blender/interiors/landmark_I/landmark_I_v02.blend",
+  "glb": "assets/blender/interiors/landmark_I/landmark_I_v02.glb",
+  "preview": "assets/blender/interiors/landmark_I/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口点单图牌",
+      "position_blender": [
+        -3.01,
+        -3.808,
+        0.0
+      ],
+      "position_godot": [
+        -3.01,
+        0.0,
+        3.808
+      ],
+      "associated_prop": "Locus_01_Flavours_Face",
+      "memory_id": "memory_I_01",
+      "activity": "听清客人口味"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧口味柜",
+      "position_blender": [
+        -4.128,
+        -0.784,
+        0.0
+      ],
+      "position_godot": [
+        -4.128,
+        0.0,
+        0.784
+      ],
+      "associated_prop": "Locus_02_Flavour_Cabinet_Cabinet",
+      "memory_id": "memory_I_02",
+      "activity": "找相应口味"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央冰淇淋台",
+      "position_blender": [
+        0.0,
+        -0.336,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.336
+      ],
+      "associated_prop": "Locus_03_Gelato_Counter_Cabinet",
+      "memory_id": "memory_I_03",
+      "activity": "把冰淇淋装入蛋筒"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧配料槽",
+      "position_blender": [
+        4.042,
+        -0.784,
+        0.0
+      ],
+      "position_godot": [
+        4.042,
+        0.0,
+        0.784
+      ],
+      "associated_prop": "Locus_04_Toppings_Back",
+      "memory_id": "memory_I_04",
+      "activity": "添加选定配料"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口取餐台",
+      "position_blender": [
+        3.956,
+        -4.368,
+        0.0
+      ],
+      "position_godot": [
+        3.956,
+        0.0,
+        4.368
+      ],
+      "associated_prop": "Locus_05_Collect_Cabinet",
+      "memory_id": "memory_I_05",
+      "activity": "礼貌递出并道谢"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -6.328,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.328
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -7.224,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        7.224
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -1.892,
+        -1.568,
+        0.0
+      ],
+      "position_godot": [
+        -1.892,
+        0.0,
+        1.568
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -6.88,
+    -7.84,
+    13.76,
+    15.68
+  ],
+  "triangles": 92544,
+  "glb_sha256": "2ed770c44b32cbae36ba89187d53aac7689c5dc69488b5988e063009a66641f8",
+  "refinement_revision": "world-refinement-v1"
+}

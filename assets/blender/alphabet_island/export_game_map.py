@@ -1,7 +1,7 @@
 """Non-destructive game export. Run in a separate Blender background process.
 
-The first run opens v05 and saves a new v06_game working file. Later runs open
-v06_game, retain every existing object/marker edit, and only add missing markers.
+The first run opens v05 and saves a new v06_game working file. Later runs use
+the manifest's current version, retain object/marker edits, and add missing markers.
 No source geometry is regenerated and no v05 file is written.
 """
 from __future__ import annotations
@@ -24,6 +24,13 @@ SOURCE = BASE / "alphabet_island_layout_v05.blend"
 WORKING = BASE / "alphabet_island_layout_v06_game.blend"
 OUTPUT = BASE / "alphabet_island_layout_v06_game.glb"
 MANIFEST = BASE / "game_map_manifest.json"
+EXPORT_VERSION = 6
+if MANIFEST.is_file():
+    _current_manifest = json.loads(MANIFEST.read_text(encoding="utf-8-sig"))
+    WORKING = (PROJECT / _current_manifest.get("working_blend", str(WORKING.relative_to(PROJECT)))).resolve()
+    WORKING.relative_to(BASE.resolve())
+    OUTPUT = WORKING.with_suffix(".glb")
+    EXPORT_VERSION = int(_current_manifest.get("version", 6))
 EXCLUDED = ("editor_only", "presentation_only", "site_clearance_hidden", "superseded_by_v03", "superseded_by_v04", "superseded_by_v05", "school_site_clearance")
 
 
@@ -35,6 +42,17 @@ def eligible(obj):
     if obj.name == "ALPHA_Ocean_Presentation":
         return True
     return obj.type not in {"LIGHT", "CAMERA"} and not any(obj.get(key, False) for key in EXCLUDED)
+
+
+def prepare_export_geometry():
+    """Convert renderable curves in memory after saving the editable source."""
+    curves = [obj for obj in bpy.context.scene.objects if eligible(obj) and obj.type in {"CURVE", "FONT", "SURFACE"}]
+    if curves:
+        bpy.ops.object.select_all(action="DESELECT")
+        for obj in curves:
+            obj.select_set(True)
+        bpy.context.view_layer.objects.active = curves[0]
+        bpy.ops.object.convert(target="MESH")
 
 
 def collision_kind(obj):
@@ -190,10 +208,11 @@ def main():
                 image.filepath = str(matches[0])
                 image.reload()
                 relinked.append(image.name)
-    scene["sg_game_export_version"] = 6
+    scene["sg_game_export_version"] = EXPORT_VERSION
     scene["sg_source_v05_sha256"] = before_hash
-    scene["sg_editing_note"] = "Edit this v06 working file; sync preserves existing SG markers and all model edits."
+    scene["sg_editing_note"] = "Edit this current versioned working file; sync preserves existing SG markers and all model edits."
     bpy.ops.wm.save_as_mainfile(filepath=str(WORKING), compress=True)
+    prepare_export_geometry()
     bpy.ops.object.select_all(action="DESELECT")
     exported = [obj for obj in scene.objects if eligible(obj)]
     for obj in exported:
@@ -204,6 +223,10 @@ def main():
     mn, mx = world_bounds([o for o in exported if "continuous_terrain" in o.name.lower()])
     markers = [{"name": o.name, "parent": o.parent.name if o.parent else None, "world_blender": list(o.matrix_world.translation), "world_godot": [o.matrix_world.translation.x, o.matrix_world.translation.z, -o.matrix_world.translation.y], "properties": {key: o[key] for key in o.keys() if key.startswith("sg_")}} for o in exported if o.name.startswith("SG_")]
     report = {"version": 6, "working_blend": str(WORKING.relative_to(PROJECT)), "working_blend_sha256": sha256(WORKING), "source_v05_sha256": before_hash, "source_v05_glb_sha256": sha256(BASE / "alphabet_island_layout_v05.glb"), "source_preserved": before_hash == after_hash, "glb_sha256": sha256(OUTPUT), "glb_bytes": OUTPUT.stat().st_size, "marker_count": len(markers), "markers": markers, "collision_counts": dict(Counter(o.get("sg_collision", "none") for o in exported if o.type == "MESH")), "collision_by_node": {o.name: o.get("sg_collision", "none") for o in exported if o.type == "MESH"}, "terrain_bounds_godot": [mn.x, -mx.y, mx.x - mn.x, mx.y - mn.y], "textures_relinked": relinked, "coordinate_contract": "Marker world_godot is audit only. Runtime reads imported node global transforms, never these stored coordinates."}
+    report["version"] = EXPORT_VERSION
+    for key in ("refinement_revision", "source_v06_sha256", "source_v06_glb_sha256"):
+        if key in globals().get("_current_manifest", {}):
+            report[key] = _current_manifest[key]
     MANIFEST.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print("SG_EXPORT_OK", json.dumps({key: report[key] for key in ["marker_count", "collision_counts", "source_preserved", "glb_bytes"]}))
 

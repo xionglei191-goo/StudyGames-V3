@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_Y",
+  "name": "毛线手作屋",
+  "blend": "assets/blender/interiors/landmark_Y/landmark_Y_v02.blend",
+  "glb": "assets/blender/interiors/landmark_Y/landmark_Y_v02.glb",
+  "preview": "assets/blender/interiors/landmark_Y/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口手作样卡",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Patterns_Face",
+      "memory_id": "memory_Y_01",
+      "activity": "选制作小物"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧毛线轴架",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Yarn_Back",
+      "memory_id": "memory_Y_02",
+      "activity": "找颜色材质"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央绕线器",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Winder_Leg",
+      "memory_id": "memory_Y_03",
+      "activity": "绕好需要的线"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧织作桌",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Loom_Leg",
+      "memory_id": "memory_Y_04",
+      "activity": "按图组合编织片"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口礼盒台",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Gift_Wrapping_Leg",
+      "memory_id": "memory_Y_05",
+      "activity": "送出完成的小礼物"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.65,
+    -7.65,
+    17.3,
+    15.3
+  ],
+  "triangles": 333620,
+  "glb_sha256": "995f89f2375c4588f575cdaa5edd4040a4340055b42530408e00bfaaaf374f3f",
+  "refinement_revision": "world-refinement-v1"
+}

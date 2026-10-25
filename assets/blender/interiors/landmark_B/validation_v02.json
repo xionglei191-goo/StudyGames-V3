@@ -1,0 +1,77 @@
+{
+  "room_id": "landmark_B",
+  "textured_objects": 63,
+  "surface_families": {
+    "floor": 1,
+    "wood": 51,
+    "earth": 2,
+    "metal": 3,
+    "cloth": 1,
+    "paper": 4,
+    "plaster": 1
+  },
+  "softened_edges": 3,
+  "tailored_details": [
+    "WR_Inlay_Locus_02_Bench_Top",
+    "WR_Rounded_Gunwale_Boat_Wooden_Hull",
+    "WR_Sewn_Edge_Boat_Sail",
+    "WR_Coiled_Mooring_Rope_Locus_03_Mooring_Bollard"
+  ],
+  "layered_crowns": [],
+  "glb_bytes": 3717032,
+  "glb_node_count": 124,
+  "triangles_instanced": 83771,
+  "embedded_images": 18,
+  "missing_nodes": [],
+  "sha256": "d26ceedb16626d5b5c34e106ea397dacfbcdce177f2e4e01311a9ecc1300aafe",
+  "new_detail_geometry": {
+    "new_objects": 4,
+    "new_vertices_evaluated": 1762,
+    "new_triangles_evaluated": 3520,
+    "closed_meshes": 3,
+    "open_detail_meshes": [
+      "WR_Sewn_Edge_Boat_Sail"
+    ],
+    "negative_closed_volumes": [],
+    "degenerate_meshes": []
+  },
+  "protected_objects": 20,
+  "protected_geometry_unchanged": true,
+  "protected_signature": {
+    "SG_FLOOR_Main": "f2fcceb7d5cf6d3d1ad28b5bc175f155fb0927e433af7c323548c4f6fbb1d938",
+    "SG_COLLIDER_Boundary_Rear": "6ca640cf1ce3a2ffc77ef1275f738ad63628f560da7839a1ff0f0db13dccebbc",
+    "SG_COLLIDER_Boundary_Left": "3b989d76e3644f2ec34cf7a068a37d0e75168bc2daa305b1ece20948f9f146e3",
+    "SG_COLLIDER_Boundary_Right": "e43b7cfa2a30fdaaf5749904a48e2e9c30ada27d5f74cba3ea0666518e064522",
+    "SG_COLLIDER_Front_Left": "6266421d76cab15cb110645f631ad63cd2dcbfc2d97bb08f0ad7c71dd3ffdbf8",
+    "SG_COLLIDER_Front_Right": "f2be25d4565fa9b54d9c5ad3e5f58c048b6a7cfd8dc017ce9f76d0d711785f0f",
+    "SG_COLLIDER_Harbour_Basin": "0da24fe4ab96954c744c0d9194bdb9c05ace19d0cbd877eb21a4c983842d4d4f",
+    "SG_COLLIDER_Locus_01_Directions": "54b94bf655f895b8dfe93633ee4538810ee4d3235565f989f6ab905c0bade5cd",
+    "SG_COLLIDER_Locus_02_Bench": "f31290d78faba7596587c5e666eba275c673cc1cd9f9837bfdc2c0625a8946fb",
+    "SG_COLLIDER_Bollard": "dbdf5b01a4060a60f71b0bb6565fcc1413d0df06154804f6a2fd560184e45d50",
+    "SG_COLLIDER_Locus_04_Cargo": "a130ed288d5bd7867a1b21f28718f5da51ca1bc589b59c251aa415af9ea676d1",
+    "SG_COLLIDER_Cabin_Back": "79e71a0d0f30f131b2d7e11c731a82f27c5e05f26e3678e482b52ec76b16ee62",
+    "SG_MEMORY_01": "c503c84ce68e621cea13d1bec11f49a24e18e67d93426759868206479a41aa10",
+    "SG_MEMORY_02": "37d862f3daf19d206b5f8583b75e8667ddb3611fe439d26edb7436ef2467ca3e",
+    "SG_MEMORY_03": "688c37902de75296c8c218449f327f2ab4da98011a6155c85e2e9a8dca497b48",
+    "SG_MEMORY_04": "5e7a465598cc865bd2bf51242518037d8f2772428bd7bf8e08cbe65f3cbfcf7c",
+    "SG_MEMORY_05": "719b4a4384da61ed94366ed7f99508365460c2d90dcead8814478ec9ff70081d",
+    "SG_SPAWN": "96420a832d9569d7de412688bb33a4d96d595e809393f205ebce371f70a1dcd0",
+    "SG_EXIT": "fd8f874ea5595acf49b9ce594cd99566d4f6c98cc373fa5a90a6c2758afa795f",
+    "SG_NPC_HOST": "3c63c14822870a943c0b2599d3e71f11dc92a1e0b836840197ed56790628a104"
+  },
+  "source_blend": "assets/blender/interiors/landmark_B/landmark_B_v01.blend",
+  "source_sha256": "94e48f76e3516f8b33641eda7ebf83b63beac079e3e171dab320e345d78729fe",
+  "blend": "assets/blender/interiors/landmark_B/landmark_B_v02.blend",
+  "blend_sha256": "c2fc269a0f76f5957d7ead65543677c2ddd7c6a32f9c27c4b5d21046911efa2f",
+  "glb": "assets/blender/interiors/landmark_B/landmark_B_v02.glb",
+  "textures": 18,
+  "engine_acceptance": {
+    "result": "PASS",
+    "scope": "44-scene native capture and physical circulation acceptance",
+    "static_report": "docs/verification/world-refinement/asset-report.json",
+    "routes_report": "docs/verification/world-refinement/route-report.json",
+    "gallery_report": "docs/verification/world-refinement/gallery-report.json",
+    "runtime_glb_sha256": "d26ceedb16626d5b5c34e106ea397dacfbcdce177f2e4e01311a9ecc1300aafe"
+  },
+  "source_materials_preserved": true
+}

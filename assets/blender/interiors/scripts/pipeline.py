@@ -61,6 +61,8 @@ def collect_source(room_id):
     bpy.context.view_layer.update()
     sc=bpy.context.scene
     expected=REQUIRED+(SCHOOL if room_id=='school' else HOME if room_id=='home' else [])
+    if room_id=='home_hall':
+        expected=['SG_SPAWN','SG_EXIT']+['SG_DOOR_'+rid.upper() for rid in ['home','home_bedroom','home_kitchen','home_dining','home_bathroom','home_study','home_balcony']]
     missing=[n for n in expected if n not in sc.objects]
     if missing:raise ValueError(f'{room_id}: missing anchors {missing}')
     if room_id=='home' and any(n not in sc.objects for n in DECOR):raise ValueError('Missing home decoration roots')
@@ -107,6 +109,15 @@ def export_glb(output_path):
         for o in convert:o.select_set(True)
         bpy.context.view_layer.objects.active=convert[0]
         bpy.ops.object.convert(target='MESH')
+        # Refinement curves are closed decorative solids. Weld their coincident
+        # cap seams in the export copy, matching their original authored export.
+        import bmesh
+        for ob in bpy.context.selected_objects:
+            if not ob.name.startswith(('WR_','Living03_')): continue
+            bm=bmesh.new();bm.from_mesh(ob.data)
+            bmesh.ops.remove_doubles(bm,verts=list(bm.verts),dist=1e-6)
+            bmesh.ops.recalc_face_normals(bm,faces=list(bm.faces))
+            bm.to_mesh(ob.data);bm.free();ob.data.update()
     bpy.ops.object.select_all(action='DESELECT')
     for ob in bpy.context.scene.objects:
         if ob.type in ('MESH','EMPTY') and not ob.name.startswith('PREVIEW_'):

@@ -1,0 +1,238 @@
+{
+  "blend": "assets/blender/interiors/home/home_v03.blend",
+  "glb": "assets/blender/interiors/home/home_v03.glb",
+  "preview": "assets/blender/interiors/home/preview_v03_verified.png",
+  "room_id": "home",
+  "name": "客厅",
+  "anchors": [
+    {
+      "name": "SG_WARDROBE",
+      "label": "换装衣柜",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_BED",
+      "label": "休息床边",
+      "position_blender": [
+        3.15,
+        3.8,
+        0.0
+      ],
+      "position_godot": [
+        3.15,
+        0.0,
+        -3.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DECOR_FLOWER_BOX",
+      "label": "FLOWER_BOX",
+      "position_blender": [
+        -6.4,
+        -2.2,
+        0.0
+      ],
+      "position_godot": [
+        -6.4,
+        0.0,
+        2.2
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DECOR_PICNIC",
+      "label": "PICNIC",
+      "position_blender": [
+        1.0,
+        -3.25,
+        0.0
+      ],
+      "position_godot": [
+        1.0,
+        0.0,
+        3.25
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DECOR_LAMP",
+      "label": "LAMP",
+      "position_blender": [
+        2.5,
+        5.4,
+        0.0
+      ],
+      "position_godot": [
+        2.5,
+        0.0,
+        -5.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_01",
+      "label": "门厅随身篮",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Everyday_Basket_Handle",
+      "memory_id": "memory_HOME_01",
+      "activity": "欢迎朋友进来，把带来的物品放在门厅。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧衣柜",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Wardrobe",
+      "memory_id": "memory_HOME_02",
+      "activity": "在进门处挂好外套，也可以继续布置客厅。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央茶几",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Dining_Table_Leg",
+      "memory_id": "memory_HOME_03",
+      "activity": "摆好茶杯与点心，和朋友介绍自己的家。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "窗边家人相册",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Window_Desk_Top",
+      "memory_id": "memory_HOME_04",
+      "activity": "看看相册，用照片介绍家人；晚上去卧室休息。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口回忆展示架",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Keepsakes_Back",
+      "memory_id": "memory_HOME_05",
+      "activity": "把合照与礼物放回纪念架，回想家人和朋友相聚的日子。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.1,
+    -7.1,
+    16.2,
+    14.2
+  ],
+  "triangles": 167672,
+  "glb_sha256": "e0bdab99ed67b0745fc34e40bf4121d53416bccb21a70354604a3da2a3ecf25d"
+}

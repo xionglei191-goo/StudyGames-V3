@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_A",
+  "name": "苹果果园屋",
+  "blend": "assets/blender/interiors/landmark_A/landmark_A_v02.blend",
+  "glb": "assets/blender/interiors/landmark_A/landmark_A_v02.glb",
+  "preview": "assets/blender/interiors/landmark_A/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "门前篮子",
+      "position_blender": [
+        -2.5,
+        -1.6,
+        0.0
+      ],
+      "position_godot": [
+        -2.5,
+        0.0,
+        1.6
+      ],
+      "associated_prop": "A_Entrance_Basket",
+      "memory_id": "memory_A_01",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧果树",
+      "position_blender": [
+        -6.95,
+        0.5,
+        0.0
+      ],
+      "position_godot": [
+        -6.95,
+        0.0,
+        -0.5
+      ],
+      "associated_prop": "A_Tree_3_Trunk",
+      "memory_id": "memory_A_02",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央分拣台",
+      "position_blender": [
+        -2.8,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        -2.8,
+        0.0,
+        5.65
+      ],
+      "associated_prop": "A_SortTable_Top",
+      "memory_id": "memory_A_03",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧洗果池",
+      "position_blender": [
+        4.15,
+        -2.35,
+        0.0
+      ],
+      "position_godot": [
+        4.15,
+        0.0,
+        2.35
+      ],
+      "associated_prop": "A_Wash_Pedestal",
+      "memory_id": "memory_A_04",
+      "activity": ""
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口礼物架",
+      "position_blender": [
+        3.6,
+        -7.05,
+        0.0
+      ],
+      "position_godot": [
+        3.6,
+        0.0,
+        7.05
+      ],
+      "associated_prop": "A_GiftShelf_Board",
+      "memory_id": "memory_A_05",
+      "activity": ""
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "果园主路进入点",
+      "position_blender": [
+        -0.3,
+        -8.65,
+        0.0
+      ],
+      "position_godot": [
+        -0.3,
+        0.0,
+        8.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "沿原主路返回字母岛",
+      "position_blender": [
+        -0.15,
+        -9.7,
+        0.0
+      ],
+      "position_godot": [
+        -0.15,
+        0.0,
+        9.7
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "果园主人",
+      "position_blender": [
+        -0.8,
+        -2.4,
+        0.0
+      ],
+      "position_godot": [
+        -0.8,
+        0.0,
+        2.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -11.2786,
+    -10.186,
+    23.2591,
+    20.9502
+  ],
+  "triangles": 184145,
+  "glb_sha256": "f64923728bc7b20c4c7cc1c0632b54ae19756ec6445a0dbda8c0380626900482",
+  "refinement_revision": "world-refinement-v1"
+}

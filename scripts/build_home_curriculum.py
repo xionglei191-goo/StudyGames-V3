@@ -59,8 +59,8 @@ def task(id, anchor, title, steps, result):
 def main():
     rooms = [
         {'room_id': 'home_estate', 'name': '我的家 · 小院与住宅', 'english_word': 'Home', 'scene_level': 2,
-         'parent_room': 'village', 'theme': '穿过石径与花园，走到住宅正门；进门后选择七个房间，体验家里的日常生活。',
-         'composition': '完整的三体量住宅外观，坡屋顶、凹入门窗、石基座和木门廊面向小院；院门与唯一正门通过石径连接，正门打开七个房间的入户导览。',
+         'parent_room': 'village', 'theme': '穿过石径与花园，走到住宅正门；进屋后沿门厅与走廊，走到各个房间。',
+         'composition': '完整的三体量住宅外观，坡屋顶、凹入门窗、石基座和木门廊面向小院；正门进入可行走的室内门厅，七扇房门连接各自生活空间。',
          'vocabulary_status': 'home is textbook vocabulary; courtyard and floor plan are original spatial design',
          'camera_size': 40.0,
          'anchors': [
@@ -144,21 +144,32 @@ def main():
     ]
     for room in rooms:
         room['status'] = 'runtime_spatial_content'
-        room['return_to'] = {'room_id': room['parent_room'], 'interaction_id': 'home_gate' if room['scene_level'] == 2 else 'house_entry'}
+        if room['scene_level'] == 3:room['parent_room'] = 'home_hall'
+        room['return_to'] = {'room_id': room['parent_room'], 'interaction_id': 'home_gate' if room['scene_level'] == 2 else room['room_id'] + '_gate'}
         for i, anchor in enumerate(room['anchors'], 1):
             anchor.update({'id': f'memory_{"HOME" if room["room_id"] == "home" else room["room_id"]}_{i:02}', 'node_name': f'SG_MEMORY_{i:02}', 'order': i,
                            'room_id': room['room_id'], 'language_status': 'exact_textbook_quote_with_authored_activity'})
         room['english_focus'] = [room['anchors'][0]['source']['text']]
     estate = rooms[0]
     estate['areas'] = [{**r, 'separate_scene': True} for r in rooms[1:]]
-    estate['model_bindings'] = {'entry': 'SG_HOUSE_ENTRY', 'entry_flow': 'front_door_then_room_guide', 'legacy_doors': {r['room_id']: 'SG_DOOR_' + r['room_id'].upper() for r in rooms[1:]}}
+    estate['model_bindings'] = {'entry': 'SG_HOUSE_ENTRY', 'entry_destination': 'home_hall', 'entry_flow': 'front_door_then_walkable_indoor_hall', 'legacy_doors': {r['room_id']: 'SG_DOOR_' + r['room_id'].upper() for r in rooms[1:]}}
+    hall = {'room_id': 'home_hall', 'name': '家里 · 门厅与走廊', 'scene_level': 2,
+            'parent_room': 'home_estate', 'space_role': 'household_indoor_navigation',
+            'same_property_as': 'home_estate', 'indoor': True, 'camera_size': 31.0,
+            'theme': '进门后在玄关收拾随身物品，沿地毯与走廊走到七个房间门前。',
+            'composition': '连续的玄关、中央通道与横向走廊，配有鞋凳、挂衣处、墙灯、收纳和七扇带用途标识的实体门。室内采用可见人物的剖视镜头。',
+            'return_to': {'room_id': 'home_estate', 'interaction_id': 'house_entry'},
+            'areas': [{**r, 'separate_scene': True} for r in rooms[1:]],
+            'model_bindings': {'doors': {r['room_id']: 'SG_DOOR_' + r['room_id'].upper() for r in rooms[1:]}},
+            'anchors': [], 'status': 'runtime_navigation_space',
+            'learning_role': 'navigation_only_no_added_memory_points_or_tasks'}
     data = {'schema_version': 1, 'title': '家庭二级场景与七个三级空间', 'parent': 'home_estate',
-            'room_ids': [r['room_id'] for r in rooms], 'rooms': rooms,
-            'coverage': {'referenced_books': len(BOOKS), 'spaces': len(rooms), 'child_rooms': 7, 'anchors': 40,
+            'room_ids': [r['room_id'] for r in rooms], 'rooms': rooms, 'routes': [hall],
+            'coverage': {'referenced_books': len(BOOKS), 'spaces': len(rooms), 'navigation_spaces': 1, 'loaded_household_scenes': 9, 'child_rooms': 7, 'anchors': 40,
                          'complete_textbook_coverage': False, 'language_mastery_assessed': False},
             'space_design': 'An original courtyard home; never a claim that every textbook family lives in this floor plan.',
             'save_compatibility': 'home remains the existing living-room identifier, memory ids and story/friend records retain their identity.',
-            'flow': ['小院与玄关', '卧室起床整理', '浴室洗手', '厨房备餐', '餐厅用餐', '客厅迎客', '书房阅读', '阳台家务', '回到小院'],
+            'flow': ['小院', '正门进入室内玄关', '沿走廊走到房门', '卧室起床整理', '浴室洗手', '厨房备餐', '餐厅用餐', '客厅迎客', '书房阅读', '阳台家务', '门厅正门回到小院'],
             'sources': [{'book_id': bid, 'manifest': str(LIBRARY / 'books' / (bid + '.json')),
                          'sha256': hashlib.sha256((LIBRARY / 'books' / (bid + '.json')).read_bytes()).hexdigest()} for bid in BOOKS]}
     save(ROOT / 'game/data/home_hierarchy.json', data)
@@ -173,19 +184,19 @@ def main():
     plan['landmarks'] = [r for r in plan['landmarks'] if r['room_id'] not in ['home', 'home_estate']]
     plan['landmarks'].append(estate)
     save(plan_path, plan)
-    rows = ['# 家庭二级场景与三级空间', '', '采用用户确认的「带小院的完整住宅」。一级字母岛 → 二级家庭小院与住宅总览 → 七个独立三级空间。', '',
+    rows = ['# 家庭二级场景与三级空间', '', '采用用户确认的「带小院的完整住宅」。一级字母岛 → 二级家庭小院 → 住宅室内门厅与走廊 → 七个独立三级空间。门厅是同一住宅的室内状态，只有导航功能，不新增知识点或家务任务。', '',
             '课本是知识来源，住宅布局与动手流程是原创游戏设计。四上 Unit 9 直接出现 living room / bedroom / kitchen / bathroom；餐厅、书房、家务阳台按吃饭、阅读、电脑和家务活动划分，不声称是该课原有的房间词汇。', '',
             '## 空间与内容', '', '| 空间 | 层级 | 五处生活位置 | 课本依据 |', '|---|---:|---|---|']
     for r in rooms:
         refs = sorted({f"{a['source']['book_title']} {a['source']['unit_id']}" for a in r['anchors']})
         rows.append(f"| {r['name']} | {r['scene_level']} | {'、'.join(a['label'] for a in r['anchors'])} | {'；'.join(refs)} |")
-    rows += ['', '## 导航与保存', '', '- 二级场景呈现完整住宅外观和院落；沿石径走到唯一正门，再打开入户导览选择七个三级房间。',
-             '- 三级房间出口回到二级正门前；二级院门返回一级主岛的家门口。',
+    rows += ['', '## 导航与保存', '', '- 小院呈现完整住宅外观；正门直接进入可行走的室内门厅。沿中央通道和走廊走到七扇实体房门，再进入对应房间。',
+             '- 三级房间出口回到室内对应房门前；门厅正门返回小院，院门再返回一级主岛家门。',
              '- 保留旧 `home` 作为客厅的内部标识，既有朋友角、旅行册、装饰与固定五点记录继续有效。新增二级标识 `home_estate`。',
              '- 新活动保存为家务体验，不增加教材通关、独立回忆或语言掌握记录。取消未做完的活动恢复原道具状态。',
              '- 原 `.blend`、人物素材、教材源和生产存档有独立保护核验。', '', '## 来源检查边界', '',
              '所有引用逐条匹配八册本地教材 JSON 的原文、单元与页码。已人工查看四上印刷页 51/52、五上印刷页 42；其余本轮只做清单匹配，不冒称逐页人工复核。已有缓存合成语音按原文件复制，保留哈希。', '',
-             '这份空间内容不代表八册完整课程已实装，也不代表儿童学习效果已验证。住宅外观和新入口证据见 `docs/verification/home-exterior-v2/`；原三级房间证据见 `docs/verification/home-hierarchy-v1/`。', '']
+             '这份空间内容不代表八册完整课程已实装，也不代表儿童学习效果已验证。当前室内通行证据见 `docs/verification/home-indoor-v3/`；住宅外观历史证据见 `docs/verification/home-exterior-v2/`；原三级房间证据见 `docs/verification/home-hierarchy-v1/`。', '']
     (OUT / 'README.md').write_text('\n'.join(rows), encoding='utf-8')
     audit = {'status': 'PASS', 'books': len(BOOKS), 'rooms': len(rooms), 'anchors': sum(len(r['anchors']) for r in rooms),
              'quotes': [{'room': r['room_id'], 'anchor': i + 1, **a['source']} for r in rooms for i, a in enumerate(r['anchors'])],

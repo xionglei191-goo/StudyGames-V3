@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_E",
+  "name": "蛋壳孵化屋",
+  "blend": "assets/blender/interiors/landmark_E/landmark_E_v02.blend",
+  "glb": "assets/blender/interiors/landmark_E/landmark_E_v02.glb",
+  "preview": "assets/blender/interiors/landmark_E/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "门口照料板",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Care_Face",
+      "memory_id": "memory_E_01",
+      "activity": "查看照料安排"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧软垫",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Soft_Nest",
+      "memory_id": "memory_E_02",
+      "activity": "整理柔软垫子"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央孵化台",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Incubator_Cabinet",
+      "memory_id": "memory_E_03",
+      "activity": "观察蛋壳和小鸡"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧食水架",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Feed_Water_Cabinet",
+      "memory_id": "memory_E_04",
+      "activity": "匹配水与食物"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口观察窗",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Observation_Window_Frame",
+      "memory_id": "memory_E_05",
+      "activity": "画下观察到的变化"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.65,
+    -7.65,
+    17.3,
+    15.3
+  ],
+  "triangles": 135252,
+  "glb_sha256": "eae58a9c69f731bbcf0a1d54f40ae42b0f36afc7c053092070339be1f5879496",
+  "refinement_revision": "world-refinement-v1"
+}

@@ -1,0 +1,154 @@
+{
+  "blend": "assets/blender/interiors/home_kitchen/home_kitchen_v02.blend",
+  "glb": "assets/blender/interiors/home_kitchen/home_kitchen_v02.glb",
+  "preview": "assets/blender/interiors/home_kitchen/preview_v02.png",
+  "room_id": "home_kitchen",
+  "name": "明亮厨房",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "食材储物柜",
+      "position_blender": [
+        -5.0,
+        2.5,
+        0.0
+      ],
+      "position_godot": [
+        -5.0,
+        0.0,
+        -2.5
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_kitchen_01",
+      "activity": "认识米饭、鱼和蔬菜，挑选今天的食材。"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "洗菜池",
+      "position_blender": [
+        -1.4,
+        3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.4,
+        0.0,
+        -3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_kitchen_02",
+      "activity": "将蔬菜放入水槽，洗净后放回篮子。"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "灶台与汤锅",
+      "position_blender": [
+        4.5,
+        2.6,
+        0.0
+      ],
+      "position_godot": [
+        4.5,
+        0.0,
+        -2.6
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_kitchen_03",
+      "activity": "看一看做饭的工具，和家人一起准备一餐。"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "备餐操作台",
+      "position_blender": [
+        2.0,
+        -0.5,
+        0.0
+      ],
+      "position_godot": [
+        2.0,
+        0.0,
+        0.5
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_kitchen_04",
+      "activity": "介绍厨房，观察台面上准备好的物品。"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "餐具收纳架",
+      "position_blender": [
+        -3.2,
+        -3.8,
+        0.0
+      ],
+      "position_godot": [
+        -3.2,
+        0.0,
+        3.8
+      ],
+      "associated_prop": null,
+      "memory_id": "memory_home_kitchen_05",
+      "activity": "用过的餐具归位，保持厨房干净。"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入家园",
+      "position_blender": [
+        0.0,
+        -5.5,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.5
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回上一层",
+      "position_blender": [
+        0.0,
+        -6.4,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "家人或朋友停留位置",
+      "position_blender": [
+        -1.8,
+        -3.0,
+        0.0
+      ],
+      "position_godot": [
+        -1.8,
+        0.0,
+        3.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 121828,
+  "glb_sha256": "1eb551da1ac379099b493f83179578e1eb10fba5f4bb46500163ce325323e62c",
+  "refinement_revision": "world-refinement-v1"
+}

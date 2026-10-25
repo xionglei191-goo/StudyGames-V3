@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_B",
+  "name": "船屋码头",
+  "blend": "assets/blender/interiors/landmark_B/landmark_B_v02.blend",
+  "glb": "assets/blender/interiors/landmark_B/landmark_B_v02.glb",
+  "preview": "assets/blender/interiors/landmark_B/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "岸边路牌",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Directions_Face",
+      "memory_id": "memory_B_01",
+      "activity": "查看目的地"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧长凳",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Bench_Back",
+      "memory_id": "memory_B_02",
+      "activity": "找出长凳下的坐垫"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央系船柱",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Mooring_Bollard",
+      "memory_id": "memory_B_03",
+      "activity": "确认小船停靠位置"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧货架",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Cargo_Back",
+      "memory_id": "memory_B_04",
+      "activity": "按清单装好货箱"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "船舱门展示点",
+      "position_blender": [
+        6.8,
+        4.75,
+        0.0
+      ],
+      "position_godot": [
+        6.8,
+        0.0,
+        -4.75
+      ],
+      "associated_prop": "Locus_05_Cabin_Handle",
+      "memory_id": "memory_B_05",
+      "activity": "核对出行物件"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.0,
+    -7.0,
+    16.0,
+    14.0
+  ],
+  "triangles": 83771,
+  "glb_sha256": "d26ceedb16626d5b5c34e106ea397dacfbcdce177f2e4e01311a9ecc1300aafe",
+  "refinement_revision": "world-refinement-v1"
+}

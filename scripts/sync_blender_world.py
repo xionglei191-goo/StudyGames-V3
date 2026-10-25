@@ -22,6 +22,11 @@ SOURCE = ART / "alphabet_island_layout_v05.blend"
 WORKING = ART / "alphabet_island_layout_v06_game.blend"
 GLB = ART / "alphabet_island_layout_v06_game.glb"
 MANIFEST = ART / "game_map_manifest.json"
+if MANIFEST.is_file():
+    _current_manifest = json.loads(MANIFEST.read_text(encoding="utf-8-sig"))
+    WORKING = (ROOT / _current_manifest.get("working_blend", str(WORKING.relative_to(ROOT)))).resolve()
+    WORKING.relative_to(ART.resolve())
+    GLB = WORKING.with_suffix(".glb")
 RUNTIME = ROOT / "game/assets/world/island.glb"
 RUNTIME_MANIFEST = RUNTIME.with_name("manifest.json")
 REQUIRED = {*(f"SG_DOOR_{chr(65+i)}" for i in range(26)), "SG_DOOR_HOME", "SG_DOOR_SCHOOL", "SG_SPAWN", "SG_NPC_BEAR", "SG_NPC_RABBIT", "SG_APPLE_TREE", "SG_BAKERY_SHOP"}
@@ -55,7 +60,7 @@ def validate(*, check_runtime: bool) -> dict:
     if sha256(GLB) != report["glb_sha256"]:
         raise RuntimeError("Exported GLB hash differs from its manifest")
     if report.get("working_blend_sha256") and sha256(WORKING) != report["working_blend_sha256"]:
-        raise RuntimeError("The editable v06 blend changed after export; rerun with --export")
+        raise RuntimeError("The current editable blend changed after export; rerun with --export")
     with GLB.open("rb") as handle:
         header = handle.read(20)
         magic, version, total, length, chunk_type = struct.unpack("<4sIIII", header)
@@ -76,7 +81,7 @@ def validate(*, check_runtime: bool) -> dict:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--export", action="store_true", help="Export existing v06, or initialize it once from v05")
+    parser.add_argument("--export", action="store_true", help="Export the manifest's current editable version, or initialize v06 once from v05")
     parser.add_argument("--verify-only", action="store_true", help="Validate existing files without writes")
     parser.add_argument("--blender", help="Path to the Blender executable")
     options = parser.parse_args()

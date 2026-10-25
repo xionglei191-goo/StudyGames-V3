@@ -1,0 +1,171 @@
+{
+  "blend": "assets/blender/interiors/home_hall/home_hall_v02.blend",
+  "glb": "assets/blender/interiors/home_hall/home_hall_v02.glb",
+  "preview": "assets/blender/interiors/home_hall/preview_v02.png",
+  "room_id": "home_hall",
+  "name": "家里 · 门厅与走廊",
+  "anchors": [
+    {
+      "name": "SG_DOOR_HOME_STUDY",
+      "label": "走进书房",
+      "position_blender": [
+        -10.5,
+        6.0,
+        0.0
+      ],
+      "position_godot": [
+        -10.5,
+        0.0,
+        -6.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME_BEDROOM",
+      "label": "走进卧室",
+      "position_blender": [
+        -3.5,
+        6.0,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        -6.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME_BATHROOM",
+      "label": "走进浴室",
+      "position_blender": [
+        3.5,
+        6.0,
+        0.0
+      ],
+      "position_godot": [
+        3.5,
+        0.0,
+        -6.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME_BALCONY",
+      "label": "走进家务阳台",
+      "position_blender": [
+        10.5,
+        6.0,
+        0.0
+      ],
+      "position_godot": [
+        10.5,
+        0.0,
+        -6.0
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME",
+      "label": "走进客厅",
+      "position_blender": [
+        -10.5,
+        -3.95,
+        0.0
+      ],
+      "position_godot": [
+        -10.5,
+        0.0,
+        3.95
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME_DINING",
+      "label": "走进餐厅",
+      "position_blender": [
+        3.5,
+        -3.95,
+        0.0
+      ],
+      "position_godot": [
+        3.5,
+        0.0,
+        3.95
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_DOOR_HOME_KITCHEN",
+      "label": "走进厨房",
+      "position_blender": [
+        10.5,
+        -3.95,
+        0.0
+      ],
+      "position_godot": [
+        10.5,
+        0.0,
+        3.95
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "从家门进入门厅",
+      "position_blender": [
+        -3.5,
+        -7.8,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        7.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回小院",
+      "position_blender": [
+        -3.5,
+        -8.8,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        8.8
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -14.0,
+    -10.0,
+    28.0,
+    20.0
+  ],
+  "triangles": 181628,
+  "glb_sha256": "fa9ca44eb210de4390a378d3982d2bfdbb048c1a7e0d928cf8d7d2246e616369",
+  "refinement_revision": "world-refinement-v1"
+}

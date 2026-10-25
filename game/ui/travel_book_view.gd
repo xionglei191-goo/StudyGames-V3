@@ -2,14 +2,15 @@ extends RefCounted
 ## A quiet, open-book directory. Actions still belong to JourneyController.
 const Style = preload("res://ui/island_theme.gd")
 
-const SOCIAL_ORDER := ["journey:friend_corner", "journey:party", "journey:friends", "journey:orchard_play", "journey:p2:transfer"]
+const SOCIAL_ORDER := ["journey:revisits", "journey:friend_corner", "journey:party", "journey:friends", "journey:orchard_play", "journey:p2:transfer"]
 const MEMORY_ORDER := ["journey:discoveries", "journey:letters", "journey:photo", "journey:p2:keepsakes", "journey:home", "journey:p2:home", "journey:old_journal", "journey:old_quest"]
 const STORY_ORDER := ["journey:library", "journey:books"]
 const ICONS := {
 	"friend_corner":"home", "party":"picnic", "friends":"flower_box",
 	"orchard_play":"apple", "transfer":"flower_box", "discoveries":"map",
 	"letters":"map", "photo":"picnic", "keepsakes":"journal", "home":"home",
-	"old_journal":"journal", "old_quest":"leaf", "library":"journal", "books":"science"
+	"old_journal":"journal", "old_quest":"leaf", "library":"journal", "books":"science",
+	"revisits":"flower_box", "parent":"journal"
 }
 
 static func build(ui: Node, book_title: String, next_wish: String, visited: int, discoveries: int, entries: Array) -> void:

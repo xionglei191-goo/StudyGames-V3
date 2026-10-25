@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_K",
+  "name": "风筝工坊",
+  "blend": "assets/blender/interiors/landmark_K/landmark_K_v02.blend",
+  "glb": "assets/blender/interiors/landmark_K/landmark_K_v02.glb",
+  "preview": "assets/blender/interiors/landmark_K/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口制作图",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Plan_Face",
+      "memory_id": "memory_K_01",
+      "activity": "选择造型图"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧材料格",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Materials_Back",
+      "memory_id": "memory_K_02",
+      "activity": "取纸与细绳"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央风筝骨架桌",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Making_Leg",
+      "memory_id": "memory_K_03",
+      "activity": "拼合骨架并贴纸"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧风带测试口",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Test_Frame",
+      "memory_id": "memory_K_04",
+      "activity": "观察风向和飘带"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口风筝廊",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Kite_Gallery",
+      "memory_id": "memory_K_05",
+      "activity": "展示成品"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.6,
+    -7.5,
+    17.2,
+    15.0
+  ],
+  "triangles": 126748,
+  "glb_sha256": "f11a97eba7e2a90ca98e7c5d53b1055991dba748b00c52f7a4e024916eee4a40",
+  "refinement_revision": "world-refinement-v1"
+}

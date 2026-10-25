@@ -248,7 +248,7 @@ func handles_interaction(id: String) -> bool:
 	show_collection()
 	return true
 
-func build_world(parent: Node3D, position: Vector3) -> void:
+func build_world(parent: Node3D, position: Vector3, mount: Vector3) -> void:
 	var own := state()
 	var display_root := Node3D.new()
 	display_root.name = "DiscoveryKeepsakes"
@@ -278,24 +278,27 @@ func build_world(parent: Node3D, position: Vector3) -> void:
 	var sprite := Sprite3D.new()
 	sprite.name = "ConfirmedDiscoveries"
 	sprite.texture = viewport.get_texture()
-	sprite.pixel_size = 0.0030
-	sprite.position = position+Vector3(0,1.8,0)
-	sprite.billboard = BaseMaterial3D.BILLBOARD_ENABLED
+	sprite.pixel_size = 0.0018
+	sprite.position = mount
+	# A wall-mounted pair of keepsakes stays in the room's plane rather than
+	# rotating across nearby furniture as a full-camera-facing billboard.
+	sprite.billboard = BaseMaterial3D.BILLBOARD_DISABLED
 	display_root.add_child(sprite)
-	for offset: float in [-1.1,1.1]:
-		var leg := MeshInstance3D.new()
-		var shape := BoxMesh.new()
-		shape.size = Vector3(0.10,1.2,0.10)
-		leg.mesh = shape
-		var material := StandardMaterial3D.new()
-		material.albedo_color = Color("aa8053")
-		leg.material_override = material
-		leg.position = position+Vector3(offset,0.6,0)
-		display_root.add_child(leg)
+	var backing := MeshInstance3D.new()
+	backing.name = "DiscoveryWallFrame"
+	var shape := BoxMesh.new()
+	shape.size = Vector3(2.08,1.04,0.08)
+	backing.mesh = shape
+	var material := StandardMaterial3D.new()
+	material.albedo_color = Color("aa8053")
+	material.roughness = 0.9
+	backing.material_override = material
+	backing.position = mount + Vector3(0,0,-0.05)
+	display_root.add_child(backing)
 	var found := false
 	for interaction: Dictionary in game.interactions:
 		if interaction.id == "journey_discoveries": found = true; interaction.position = position
-	if not found: game.interactions.append({"id":"journey_discoveries","type":"memory","position":position,"radius":3.0,"label":"看看我的发现收藏"})
+	if not found: game.interactions.append({"id":"journey_discoveries","type":"memory","position":position,"radius":1.65,"label":"看看我的发现收藏"})
 	game.feedback.bind_interactions(game.interactions)
 
 func _finish(focus_name: String = "") -> void:

@@ -151,6 +151,11 @@ func show_recall_menu(letter: String) -> void:
 	_end()
 
 func start_trial(value: String, return_to: Callable, again: bool = false) -> void:
+	if value.begins_with("recall/"):
+		if not State.review_expose("letter/"+value.split("/")[1]+"/"): return
+	else:
+		var visible_texts: Array = Progress.trial_spec(value).options.map(func(option: Dictionary): return option.text)
+		if not State.review_expose_text(visible_texts): return
 	context = value
 	trial_return = return_to
 	if not commit({"kind":"trial_begin","context":context,"again":again}): return
@@ -246,6 +251,7 @@ func show_chapter() -> void:
 		journey.party.show_wish()
 		return
 	current_step = Progress.next_step(state(),chapter_number)
+	if not State.review_expose_text([current_step.get("text",""),Progress.content().chapters[str(chapter_number)].unit_title]): return
 	if game.room!=current_step.room:
 		if not game._prepare_screen(): return
 		ui.close_panel()

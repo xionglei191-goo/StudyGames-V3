@@ -1,0 +1,154 @@
+{
+  "room_id": "landmark_G",
+  "name": "地球仪旅行馆",
+  "blend": "assets/blender/interiors/landmark_G/landmark_G_v02.blend",
+  "glb": "assets/blender/interiors/landmark_G/landmark_G_v02.glb",
+  "preview": "assets/blender/interiors/landmark_G/preview_v02.png",
+  "anchors": [
+    {
+      "name": "SG_MEMORY_01",
+      "label": "入口旅行卡架",
+      "position_blender": [
+        -3.5,
+        -3.4,
+        0.0
+      ],
+      "position_godot": [
+        -3.5,
+        0.0,
+        3.4
+      ],
+      "associated_prop": "Locus_01_Travel_Cards_Leg",
+      "memory_id": "memory_G_01",
+      "activity": "领取旅行卡"
+    },
+    {
+      "name": "SG_MEMORY_02",
+      "label": "左侧明信片湾",
+      "position_blender": [
+        -4.8,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        -4.8,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_02_Postcards_Back",
+      "memory_id": "memory_G_02",
+      "activity": "辨认图片里的地方"
+    },
+    {
+      "name": "SG_MEMORY_03",
+      "label": "中央地球仪台",
+      "position_blender": [
+        0.0,
+        -0.3,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        0.3
+      ],
+      "associated_prop": "Locus_03_Globe_Base",
+      "memory_id": "memory_G_03",
+      "activity": "在地图上找位置"
+    },
+    {
+      "name": "SG_MEMORY_04",
+      "label": "右侧打包桌",
+      "position_blender": [
+        4.7,
+        -0.7,
+        0.0
+      ],
+      "position_godot": [
+        4.7,
+        0.0,
+        0.7
+      ],
+      "associated_prop": "Locus_04_Luggage_Leg",
+      "memory_id": "memory_G_04",
+      "activity": "按计划整理行李"
+    },
+    {
+      "name": "SG_MEMORY_05",
+      "label": "出口路线墙",
+      "position_blender": [
+        4.6,
+        -3.9,
+        0.0
+      ],
+      "position_godot": [
+        4.6,
+        0.0,
+        3.9
+      ],
+      "associated_prop": "Locus_05_Route_Wall_Face",
+      "memory_id": "memory_G_05",
+      "activity": "介绍下一站"
+    },
+    {
+      "name": "SG_SPAWN",
+      "label": "进入点",
+      "position_blender": [
+        0.0,
+        -5.65,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        5.65
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_EXIT",
+      "label": "返回主地图",
+      "position_blender": [
+        0.0,
+        -6.45,
+        0.0
+      ],
+      "position_godot": [
+        0.0,
+        0.0,
+        6.45
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    },
+    {
+      "name": "SG_NPC_HOST",
+      "label": "主人交谈点",
+      "position_blender": [
+        -2.2,
+        -1.4,
+        0.0
+      ],
+      "position_godot": [
+        -2.2,
+        0.0,
+        1.4
+      ],
+      "associated_prop": null,
+      "memory_id": "",
+      "activity": ""
+    }
+  ],
+  "bounds": [
+    -8.65,
+    -7.65,
+    17.3,
+    15.3
+  ],
+  "triangles": 122860,
+  "glb_sha256": "3729dcccf865bb4af455d53a087f40cdf2f90796e5f8dce23aaa53e91f75ef94",
+  "refinement_revision": "world-refinement-v1"
+}

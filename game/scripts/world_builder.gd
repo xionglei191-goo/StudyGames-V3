@@ -10,6 +10,7 @@ var _font: Font
 var _imported_scene: Node3D
 const InteriorScript = preload("res://scripts/imported_interior.gd")
 const BlenderMaterials = preload("res://scripts/blender_materials.gd")
+const HomeCatalog = preload("res://scripts/home_catalog.gd")
 
 func build(room: String) -> Dictionary:
 	for child: Node in get_children():
@@ -41,6 +42,8 @@ func _add_imported_npcs(info: Dictionary) -> void:
 		_npc(str(npc.kind), npc.position, float(npc.get("angle", 0.0)), str(npc.get("name", "邻居")))
 
 func room_plan(room_id: String) -> Dictionary:
+	var home_plan: Dictionary = HomeCatalog.room(room_id)
+	if not home_plan.is_empty(): return home_plan
 	var path := "res://data/landmark_interiors.json"
 	if FileAccess.file_exists(path):
 		var catalog: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(path))
@@ -85,6 +88,7 @@ func _lighting(room: String) -> void:
 	fill.light_color = Color("e0e9ec")
 	fill.light_energy = 0.12 if is_island else 0.08
 	add_child(fill)
+	preload("res://scripts/home_visual_refinement.gd").apply_lighting(room, env, sun, fill)
 
 func _mat(color: Color) -> StandardMaterial3D:
 	var key: String = color.to_html()

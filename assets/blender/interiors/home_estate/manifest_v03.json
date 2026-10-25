@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "room": {
+    "blend": "assets/blender/interiors/home_estate/home_estate_v03.blend",
+    "glb": "assets/blender/interiors/home_estate/home_estate_v03.glb",
+    "preview": "assets/blender/interiors/home_estate/preview_v03.png",
+    "room_id": "home_estate",
+    "name": "家园院落",
+    "anchors": [
+      {
+        "name": "SG_MEMORY_01",
+        "label": "门前信箱",
+        "position_blender": [
+          -10.0,
+          -10.2,
+          0.0
+        ],
+        "position_godot": [
+          -10.0,
+          0.0,
+          10.2
+        ],
+        "associated_prop": null,
+        "memory_id": "memory_home_estate_01",
+        "activity": "读一张邀请卡，想想怎样欢迎来访的朋友。"
+      },
+      {
+        "name": "SG_MEMORY_02",
+        "label": "小院花圃",
+        "position_blender": [
+          8.0,
+          -10.2,
+          0.0
+        ],
+        "position_godot": [
+          8.0,
+          0.0,
+          10.2
+        ],
+        "associated_prop": null,
+        "memory_id": "memory_home_estate_02",
+        "activity": "拿起水壶，为花圃浇水，再把水壶放回去。"
+      },
+      {
+        "name": "SG_MEMORY_03",
+        "label": "门廊随身篮",
+        "position_blender": [
+          -6.3,
+          -9.2,
+          0.0
+        ],
+        "position_godot": [
+          -6.3,
+          0.0,
+          9.2
+        ],
+        "associated_prop": null,
+        "memory_id": "memory_home_estate_03",
+        "activity": "外出前整理随身物品，准备与家人一起散步。"
+      },
+      {
+        "name": "SG_MEMORY_04",
+        "label": "家庭日程板",
+        "position_blender": [
+          2.0,
+          -10.2,
+          0.0
+        ],
+        "position_godot": [
+          2.0,
+          0.0,
+          10.2
+        ],
+        "associated_prop": null,
+        "memory_id": "memory_home_estate_04",
+        "activity": "看看日程板，选择今天先去哪个房间。"
+      },
+      {
+        "name": "SG_MEMORY_05",
+        "label": "门廊小树",
+        "position_blender": [
+          11.5,
+          -10.3,
+          0.0
+        ],
+        "position_godot": [
+          11.5,
+          0.0,
+          10.3
+        ],
+        "associated_prop": null,
+        "memory_id": "memory_home_estate_05",
+        "activity": "观察小树怎样给门廊遮阴，照顾它慢慢长大。"
+      },
+      {
+        "name": "SG_SPAWN",
+        "label": "进入家园",
+        "position_blender": [
+          0.0,
+          -13.4,
+          0.0
+        ],
+        "position_godot": [
+          0.0,
+          0.0,
+          13.4
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      },
+      {
+        "name": "SG_EXIT",
+        "label": "返回字母岛",
+        "position_blender": [
+          0.0,
+          -14.5,
+          0.0
+        ],
+        "position_godot": [
+          0.0,
+          0.0,
+          14.5
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      },
+      {
+        "name": "SG_NPC_HOST",
+        "label": "家人停留位置",
+        "position_blender": [
+          -2.0,
+          -10.0,
+          0.0
+        ],
+        "position_godot": [
+          -2.0,
+          0.0,
+          10.0
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      },
+      {
+        "name": "SG_HOUSE_ENTRY",
+        "label": "正门 · 走进家里",
+        "position_blender": [
+          -3.5,
+          -8.7,
+          0.0
+        ],
+        "position_godot": [
+          -3.5,
+          0.0,
+          8.7
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      }
+    ],
+    "bounds": [
+      -17.0,
+      -16.0,
+      34.0,
+      32.0
+    ],
+    "triangles": 462228,
+    "glb_sha256": "c0fb8452aca795da35a03e8e46668848db7c33ef0424dfa89146b0c854ea6195"
+  },
+  "status": "authored_pending_engine_validation",
+  "source_script": "scripts/refine_home_courtyard.py",
+  "seed": 2610243,
+  "source_script_sha256": "7b6881397084ebc4e436c4005b118db9ab4cfd5582607b4b4cf097d68715fa0e",
+  "texture_budget": {
+    "count": 14,
+    "source_png_bytes": 1200181,
+    "uncompressed_rgba8_bytes": 3670016,
+    "uncompressed_rgba8_with_mips_approx_bytes": 4893355,
+    "embedded_in_glb": true,
+    "textures": [
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/clay_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 89793,
+        "sha256": "7df1acaa6a39857ed593111874dff946aa71b58126686719f07ec57f8ec8a50f"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/garden_gravel_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 98652,
+        "sha256": "5807d41f809c876ca89150a9c864d368ea1e47e1fd1536fde7f44813bf01d209"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/garden_paver_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 93028,
+        "sha256": "6a3f8bdf07dd80a016fddcbd5e856c43193a6dcae474e75bd7c2a0b17f3deb00"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/garden_paver_light_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 91968,
+        "sha256": "6826d9df828cb7cc013d9e6d159ea0fa089d66cb985d2368f7fa7c48a97b5808"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/garden_stone_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 90394,
+        "sha256": "15bee36acc243d5355da4bd76db8f4769049d7e35779e6fd348d5f03e29301d4"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/grass_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 93717,
+        "sha256": "88d9f3a079587aed73a644df7556b745df6cc9a1ff6873a99b8ed6d42e62a633"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/lightwood_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 74933,
+        "sha256": "070a544ca2da35149b6a3013532d0ed2a217315d672929df24bb753bf1d9caeb"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/oak_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 74159,
+        "sha256": "81435a5ebec7d44f91ddf9b6a86ab58aa8784304cfb2515eb4f72965982f13d7"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/plaster_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 81270,
+        "sha256": "173e8afbbaf94a44875166697be7e8c088b7dff04ce58cc3119c3f236e0bacae"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/roof_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 82801,
+        "sha256": "927591ef26b82a96a2c33c64f522f20cbf4bb6d043b87c601643f6d843b52555"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/roof_dark_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 79203,
+        "sha256": "efe73c42647842f90a853b72ab685aafbc8186388fc3a57167eb57b0f911f798"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/roof_light_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 79634,
+        "sha256": "5aa17f9af7cbf01629e60f8ebd6f88e05bc480c0b8e14e1c4232bc5c2234d65e"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/soil_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 92981,
+        "sha256": "bcfee56c20c4c12c09017d77b5e648c4d678706f4416cec09fe04e11edc9067e"
+      },
+      {
+        "path": "assets/blender/interiors/home_estate/textures_v03/wood_albedo.png",
+        "width": 256,
+        "height": 256,
+        "bytes": 77648,
+        "sha256": "5c9b14fa10fd97103876f3d7b156aa512e3f8db64d6da434a997624778fe05fd"
+      }
+    ]
+  },
+  "provenance": "Original project-authored Blender geometry and mathematical surface textures; no external media",
+  "source_v02_sha256": "d705cf7f7680562b616fd8475ab0cddb164f704652242727a5d50c86e1776010",
+  "changes": [
+    "Replaced twelve coarse crown blocks with layered boughs and closed individual leaf sprays",
+    "Added sparse closed grass blades and small pebbles outside path",
+    "Authored fourteen packed 256px albedo textures with physical-scale UVs",
+    "Reduced roof slate color contrast and separated material roughness",
+    "Added bench joinery, folded linen and cup rim/tea detail"
+  ],
+  "locks": "All original SG_, COL_ and HOME_TASK_ transforms, parents, custom properties and collision/floor vertex geometry unchanged",
+  "technical": {
+    "glb_bytes": 25127872,
+    "glb_node_count": 2310,
+    "triangles_instanced": 462228,
+    "embedded_images": 14,
+    "missing_nodes": [],
+    "sha256": "c0fb8452aca795da35a03e8e46668848db7c33ef0424dfa89146b0c854ea6195"
+  }
+}
