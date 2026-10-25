@@ -811,10 +811,10 @@
     {
       "room_id": "school",
       "name": "山丘学园",
-      "source_glb": "assets/blender/interiors/school/school_v05_cloud.glb",
-      "source_blend": "assets/blender/interiors/school/school_v05_cloud.blend",
+      "source_glb": "assets/blender/interiors/school/school_v06_cloud.glb",
+      "source_blend": "assets/blender/interiors/school/school_v06_cloud.blend",
       "game_glb": "res://assets/interiors/school.glb",
-      "source_sha256": "9e4b8db1df56b812ed4cf7df7f613d09d7795a2ef423bc05b7b6963cd2274bd9",
+      "source_sha256": "a861414e78e47c2d401467c7618c4c0b1b3daf634e698f93ae6e42bb17f8e504",
       "bounds": [
         -24.0,
         -20.0,
@@ -822,7 +822,7 @@
         40.0
       ],
       "validation": {
-        "nodes": 1236,
+        "nodes": 1269,
         "floor_meshes": 1,
         "collision_proxies": 80,
         "required_markers": [
@@ -842,17 +842,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 19439844,
-        "images": 38
-      }
+        "bytes": 19892672,
+        "images": 43,
+        "triangles": 393506
+      },
+      "model_version": "v06_cloud",
+      "preview": "assets/blender/interiors/school/preview_v06_cloud.png",
+      "triangles": 393506,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "classroom",
       "name": "教室",
-      "source_glb": "assets/blender/interiors/classroom/classroom_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/classroom/classroom_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/classroom/classroom_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/classroom/classroom_v04_cloud.blend",
       "game_glb": "res://assets/interiors/classroom.glb",
-      "source_sha256": "ce3c69d0134791092dfe5327a33d047c74e94603c7cedf9d307558e9012db136",
+      "source_sha256": "5dfb50f714d4a38002f27438c72901f1bd15d5ca151e0430f00d397b03b05284",
       "bounds": [
         -8.0,
         -7.0,
@@ -860,7 +865,7 @@
         14.0
       ],
       "validation": {
-        "nodes": 333,
+        "nodes": 341,
         "floor_meshes": 1,
         "collision_proxies": 13,
         "required_markers": [
@@ -873,17 +878,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 7787196,
-        "images": 18
-      }
+        "bytes": 7769404,
+        "images": 19,
+        "triangles": 203728
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/classroom/preview_v04_cloud.png",
+      "triangles": 203728,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "music_room",
       "name": "音乐教室",
-      "source_glb": "assets/blender/interiors/music_room/music_room_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/music_room/music_room_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/music_room/music_room_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/music_room/music_room_v04_cloud.blend",
       "game_glb": "res://assets/interiors/music_room.glb",
-      "source_sha256": "ae4e7e4613e4fe1ef735b1bf48addaa621bba175794cdb85cd6a6bb04a239a6b",
+      "source_sha256": "37aace155e3a6134cb42e7d4399e6416ef266ddcf708f4551b12993d97d96097",
       "bounds": [
         -9.0,
         -8.0,
@@ -891,7 +901,7 @@
         16.0
       ],
       "validation": {
-        "nodes": 441,
+        "nodes": 445,
         "floor_meshes": 1,
         "collision_proxies": 11,
         "required_markers": [
@@ -904,17 +914,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 8236120,
-        "images": 26
-      }
+        "bytes": 8394268,
+        "images": 29,
+        "triangles": 184816
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/music_room/preview_v04_cloud.png",
+      "triangles": 184816,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "art_room",
       "name": "美术教室",
-      "source_glb": "assets/blender/interiors/art_room/art_room_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/art_room/art_room_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/art_room/art_room_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/art_room/art_room_v04_cloud.blend",
       "game_glb": "res://assets/interiors/art_room.glb",
-      "source_sha256": "e93065bbd966e7c68f591656c5cee24a21201f2b9caa68ffe622811e26baf71c",
+      "source_sha256": "35666c93b7c3a12954e262eee3844cdbbe8a5c28f335aa989c5c625890142e10",
       "bounds": [
         -8.0,
         -7.0,
@@ -922,7 +937,7 @@
         14.0
       ],
       "validation": {
-        "nodes": 358,
+        "nodes": 366,
         "floor_meshes": 1,
         "collision_proxies": 11,
         "required_markers": [
@@ -935,17 +950,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 6604996,
-        "images": 24
-      }
+        "bytes": 6785144,
+        "images": 27,
+        "triangles": 160708
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/art_room/preview_v04_cloud.png",
+      "triangles": 160708,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "science_room",
       "name": "科学教室",
-      "source_glb": "assets/blender/interiors/science_room/science_room_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/science_room/science_room_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/science_room/science_room_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/science_room/science_room_v04_cloud.blend",
       "game_glb": "res://assets/interiors/science_room.glb",
-      "source_sha256": "0c6c4e6e621e6c3dc0ca22695f816a0d0a78e33a3bad7eaabbd728573fc5343f",
+      "source_sha256": "0c13956cc5fb9b9df8c3ac8169029d47db3e6256b8eb4cda84f27b5f41ec5688",
       "bounds": [
         -9.0,
         -8.0,
@@ -953,7 +973,7 @@
         16.0
       ],
       "validation": {
-        "nodes": 399,
+        "nodes": 407,
         "floor_meshes": 1,
         "collision_proxies": 11,
         "required_markers": [
@@ -966,17 +986,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 8157000,
-        "images": 14
-      }
+        "bytes": 8312892,
+        "images": 19,
+        "triangles": 225664
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/science_room/preview_v04_cloud.png",
+      "triangles": 225664,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "canteen",
       "name": "食堂",
-      "source_glb": "assets/blender/interiors/canteen/canteen_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/canteen/canteen_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/canteen/canteen_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/canteen/canteen_v04_cloud.blend",
       "game_glb": "res://assets/interiors/canteen.glb",
-      "source_sha256": "bf4d8dad2f019cf693081f960ed1120430956d6bd5f6c18b0f76c2e7df8b2aa0",
+      "source_sha256": "30af575883e935605f781abb63f90c7e1c1ca4076c413f486e6c61287dbff04c",
       "bounds": [
         -8.0,
         -7.0,
@@ -984,7 +1009,7 @@
         14.0
       ],
       "validation": {
-        "nodes": 469,
+        "nodes": 471,
         "floor_meshes": 1,
         "collision_proxies": 12,
         "required_markers": [
@@ -997,17 +1022,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 7759928,
-        "images": 14
-      }
+        "bytes": 7748712,
+        "images": 14,
+        "triangles": 181792
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/canteen/preview_v04_cloud.png",
+      "triangles": 181792,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "playground",
       "name": "操场",
-      "source_glb": "assets/blender/interiors/playground/playground_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/playground/playground_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/playground/playground_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/playground/playground_v04_cloud.blend",
       "game_glb": "res://assets/interiors/playground.glb",
-      "source_sha256": "553e93625d11fe5ab05c9e664df335cdf4c3658f4b7c1bbc8b2fb49460fcb7f9",
+      "source_sha256": "0405f65fb400e9532a30478d50e0e907ca1345c289379ba04cd85882d7c85ea9",
       "bounds": [
         -8.0,
         -7.0,
@@ -1015,7 +1045,7 @@
         14.0
       ],
       "validation": {
-        "nodes": 97,
+        "nodes": 100,
         "floor_meshes": 2,
         "collision_proxies": 10,
         "required_markers": [
@@ -1028,17 +1058,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 4606980,
-        "images": 14
-      }
+        "bytes": 4655692,
+        "images": 19,
+        "triangles": 131172
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/playground/preview_v04_cloud.png",
+      "triangles": 131172,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "football_field",
       "name": "校园足球场",
-      "source_glb": "assets/blender/interiors/football_field/football_field_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/football_field/football_field_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/football_field/football_field_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/football_field/football_field_v04_cloud.blend",
       "game_glb": "res://assets/interiors/football_field.glb",
-      "source_sha256": "52b35a6d5966466d3fd42e90f8fc327526ced61b4c2d1428ed3b498b0bddb92f",
+      "source_sha256": "ccea2cf1ccf911669c8a16a2f6d9aca5ed1c9c6f16c602c664a89e6e77df18ba",
       "bounds": [
         -17.0,
         -14.0,
@@ -1046,7 +1081,7 @@
         28.0
       ],
       "validation": {
-        "nodes": 425,
+        "nodes": 428,
         "floor_meshes": 1,
         "collision_proxies": 28,
         "required_markers": [
@@ -1059,17 +1094,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 6785608,
-        "images": 16
-      }
+        "bytes": 6875908,
+        "images": 17,
+        "triangles": 183532
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/football_field/preview_v04_cloud.png",
+      "triangles": 183532,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "home",
       "name": "客厅",
-      "source_glb": "assets/blender/interiors/home/home_v05_cloud.glb",
-      "source_blend": "assets/blender/interiors/home/home_v05_cloud.blend",
+      "source_glb": "assets/blender/interiors/home/home_v06_cloud.glb",
+      "source_blend": "assets/blender/interiors/home/home_v06_cloud.blend",
       "game_glb": "res://assets/interiors/home.glb",
-      "source_sha256": "1c58e57c084a3dae4509bcd69104e1d8ecca9752ea606c76dfeec5ed996c4788",
+      "source_sha256": "104ec76d84573fdfb1f2f042161bcec70a84ddb5e5d89802ef915692f975cb8f",
       "bounds": [
         -8.1,
         -7.1,
@@ -1077,7 +1117,7 @@
         14.2
       ],
       "validation": {
-        "nodes": 613,
+        "nodes": 618,
         "floor_meshes": 1,
         "collision_proxies": 117,
         "required_markers": [
@@ -1095,17 +1135,22 @@
           "SG_SPAWN",
           "SG_WARDROBE"
         ],
-        "bytes": 7325652,
-        "images": 16
-      }
+        "bytes": 7301932,
+        "images": 15,
+        "triangles": 167536
+      },
+      "model_version": "v06_cloud",
+      "preview": "assets/blender/interiors/home/preview_v06_cloud.png",
+      "triangles": 167536,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "home_balcony",
       "name": "家务阳台",
-      "source_glb": "assets/blender/interiors/home_balcony/home_balcony_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/home_balcony/home_balcony_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/home_balcony/home_balcony_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/home_balcony/home_balcony_v04_cloud.blend",
       "game_glb": "res://assets/interiors/home_balcony.glb",
-      "source_sha256": "ad63c7d5ce9d7a229183c0f0ff83f6b606e52b8e055f5e94886b014b7d189881",
+      "source_sha256": "bd3bbf28ff679dc8ee265071124a50836462832681a1494fa42869cb84815d5a",
       "bounds": [
         -8.0,
         -7.0,
@@ -1113,7 +1158,7 @@
         14.0
       ],
       "validation": {
-        "nodes": 351,
+        "nodes": 354,
         "floor_meshes": 1,
         "collision_proxies": 10,
         "required_markers": [
@@ -1126,17 +1171,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 3854832,
-        "images": 16
-      }
+        "bytes": 4094744,
+        "images": 19,
+        "triangles": 105844
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/home_balcony/preview_v04_cloud.png",
+      "triangles": 105844,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "home_bathroom",
       "name": "清爽浴室",
-      "source_glb": "assets/blender/interiors/home_bathroom/home_bathroom_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/home_bathroom/home_bathroom_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/home_bathroom/home_bathroom_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/home_bathroom/home_bathroom_v04_cloud.blend",
       "game_glb": "res://assets/interiors/home_bathroom.glb",
-      "source_sha256": "d28dca4dd206ebd5f15c830812f3d14b04d41d85a87c682e69e0af55c67ff173",
+      "source_sha256": "eb8d3f8e94839a201344d9a325d2ae12c6936d83841eb1ea80e4f1c376b54d9b",
       "bounds": [
         -8.0,
         -7.0,
@@ -1144,7 +1194,7 @@
         14.0
       ],
       "validation": {
-        "nodes": 424,
+        "nodes": 429,
         "floor_meshes": 1,
         "collision_proxies": 10,
         "required_markers": [
@@ -1157,17 +1207,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 6320328,
-        "images": 22
-      }
+        "bytes": 6192016,
+        "images": 19,
+        "triangles": 111288
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/home_bathroom/preview_v04_cloud.png",
+      "triangles": 111288,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "home_bedroom",
       "name": "温暖卧室",
-      "source_glb": "assets/blender/interiors/home_bedroom/home_bedroom_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/home_bedroom/home_bedroom_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/home_bedroom/home_bedroom_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/home_bedroom/home_bedroom_v04_cloud.blend",
       "game_glb": "res://assets/interiors/home_bedroom.glb",
-      "source_sha256": "35931315872710395e35f3b1ad40d387ff3b5a0ccc9d8354de431265245b3f4e",
+      "source_sha256": "f0697ee412e546efd0665a10f8b87f4a87a434ed83671b2cb922fa79b816be6b",
       "bounds": [
         -8.0,
         -7.0,
@@ -1175,7 +1230,7 @@
         14.0
       ],
       "validation": {
-        "nodes": 217,
+        "nodes": 220,
         "floor_meshes": 1,
         "collision_proxies": 11,
         "required_markers": [
@@ -1190,17 +1245,22 @@
           "SG_SPAWN",
           "SG_WARDROBE"
         ],
-        "bytes": 4341760,
-        "images": 28
-      }
+        "bytes": 4222004,
+        "images": 25,
+        "triangles": 70880
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/home_bedroom/preview_v04_cloud.png",
+      "triangles": 70880,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "home_dining",
       "name": "家庭餐厅",
-      "source_glb": "assets/blender/interiors/home_dining/home_dining_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/home_dining/home_dining_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/home_dining/home_dining_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/home_dining/home_dining_v04_cloud.blend",
       "game_glb": "res://assets/interiors/home_dining.glb",
-      "source_sha256": "ae63bb051dcfe562d023529de7f74efb82243d7fcdc49005c71d405fd5a912ce",
+      "source_sha256": "2032dcfa0a4a6036ce8324b0400faaa9c85ad4b39d58de9993eea6cf68103702",
       "bounds": [
         -8.0,
         -7.0,
@@ -1208,7 +1268,7 @@
         14.0
       ],
       "validation": {
-        "nodes": 336,
+        "nodes": 341,
         "floor_meshes": 1,
         "collision_proxies": 10,
         "required_markers": [
@@ -1221,17 +1281,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 5275056,
-        "images": 20
-      }
+        "bytes": 5472548,
+        "images": 23,
+        "triangles": 100996
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/home_dining/preview_v04_cloud.png",
+      "triangles": 100996,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "home_estate",
       "name": "家园院落",
-      "source_glb": "assets/blender/interiors/home_estate/home_estate_v04_cloud.glb",
-      "source_blend": "assets/blender/interiors/home_estate/home_estate_v04_cloud.blend",
+      "source_glb": "assets/blender/interiors/home_estate/home_estate_v05_cloud.glb",
+      "source_blend": "assets/blender/interiors/home_estate/home_estate_v05_cloud.blend",
       "game_glb": "res://assets/interiors/home_estate.glb",
-      "source_sha256": "5fd4857be8898ef6f4b957a0f8026e1c715a34e2f3524d8e1229c45bb6a31dca",
+      "source_sha256": "15f6465786e6e44bdd98d2a713414cb9aef81350caa6dbe902f4e73690c941df",
       "bounds": [
         -17.0,
         -16.0,
@@ -1239,7 +1304,7 @@
         32.0
       ],
       "validation": {
-        "nodes": 2311,
+        "nodes": 2319,
         "floor_meshes": 1,
         "collision_proxies": 24,
         "required_markers": [
@@ -1260,17 +1325,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 26330972,
-        "images": 14
-      }
+        "bytes": 26439488,
+        "images": 15,
+        "triangles": 465452
+      },
+      "model_version": "v05_cloud",
+      "preview": "assets/blender/interiors/home_estate/preview_v05_cloud.png",
+      "triangles": 465452,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "home_hall",
       "name": "家里 · 门厅与走廊",
-      "source_glb": "assets/blender/interiors/home_hall/home_hall_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/home_hall/home_hall_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/home_hall/home_hall_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/home_hall/home_hall_v04_cloud.blend",
       "game_glb": "res://assets/interiors/home_hall.glb",
-      "source_sha256": "ecf32599d126f2816607a1446703a05b389c2f6f07e3ef8e8e64cf0e78d64928",
+      "source_sha256": "14f53e65187b80d40c9c5a59715c354485ef5194a7f17da1e5a49567e9ca81dd",
       "bounds": [
         -14.0,
         -10.0,
@@ -1278,7 +1348,7 @@
         20.0
       ],
       "validation": {
-        "nodes": 774,
+        "nodes": 778,
         "floor_meshes": 1,
         "collision_proxies": 25,
         "required_markers": [
@@ -1292,17 +1362,22 @@
           "SG_EXIT",
           "SG_SPAWN"
         ],
-        "bytes": 10966532,
-        "images": 38
-      }
+        "bytes": 11066604,
+        "images": 41,
+        "triangles": 182424
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/home_hall/preview_v04_cloud.png",
+      "triangles": 182424,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "home_kitchen",
       "name": "明亮厨房",
-      "source_glb": "assets/blender/interiors/home_kitchen/home_kitchen_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/home_kitchen/home_kitchen_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/home_kitchen/home_kitchen_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/home_kitchen/home_kitchen_v04_cloud.blend",
       "game_glb": "res://assets/interiors/home_kitchen.glb",
-      "source_sha256": "3fbdf0e7be2a105fb89ab0df024f1758d40b0d92e3780a0118c281fdbde34879",
+      "source_sha256": "dcf82b02c0f4fa872d1033b49c79fe7807b1787f5ef3883b3ec88d7a4125ac5e",
       "bounds": [
         -8.0,
         -7.0,
@@ -1310,7 +1385,7 @@
         14.0
       ],
       "validation": {
-        "nodes": 472,
+        "nodes": 490,
         "floor_meshes": 1,
         "collision_proxies": 10,
         "required_markers": [
@@ -1323,17 +1398,22 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 6692892,
-        "images": 16
-      }
+        "bytes": 7365428,
+        "images": 23,
+        "triangles": 133564
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/home_kitchen/preview_v04_cloud.png",
+      "triangles": 133564,
+      "refinement_revision": "cloud-09"
     },
     {
       "room_id": "home_study",
       "name": "窗边书房",
-      "source_glb": "assets/blender/interiors/home_study/home_study_v03_cloud.glb",
-      "source_blend": "assets/blender/interiors/home_study/home_study_v03_cloud.blend",
+      "source_glb": "assets/blender/interiors/home_study/home_study_v04_cloud.glb",
+      "source_blend": "assets/blender/interiors/home_study/home_study_v04_cloud.blend",
       "game_glb": "res://assets/interiors/home_study.glb",
-      "source_sha256": "02d52a449eea91917f9dddbaf9088e884838072a934b8f4bb56499fba187794d",
+      "source_sha256": "dbb124ea33137b37631e4b192aef8584d7e4c1aa3cda1d296fd2be7a8d1f0aa9",
       "bounds": [
         -8.0,
         -7.0,
@@ -1341,7 +1421,7 @@
         14.0
       ],
       "validation": {
-        "nodes": 247,
+        "nodes": 255,
         "floor_meshes": 1,
         "collision_proxies": 10,
         "required_markers": [
@@ -1354,9 +1434,14 @@
           "SG_NPC_HOST",
           "SG_SPAWN"
         ],
-        "bytes": 4601164,
-        "images": 26
-      }
+        "bytes": 4377752,
+        "images": 21,
+        "triangles": 73692
+      },
+      "model_version": "v04_cloud",
+      "preview": "assets/blender/interiors/home_study/preview_v04_cloud.png",
+      "triangles": 73692,
+      "refinement_revision": "cloud-09"
     }
   ]
 }

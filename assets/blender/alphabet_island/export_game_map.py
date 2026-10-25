@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import math
+import struct
 import sys
 from collections import Counter
 from pathlib import Path
@@ -223,10 +224,15 @@ def main():
     mn, mx = world_bounds([o for o in exported if "continuous_terrain" in o.name.lower()])
     markers = [{"name": o.name, "parent": o.parent.name if o.parent else None, "world_blender": list(o.matrix_world.translation), "world_godot": [o.matrix_world.translation.x, o.matrix_world.translation.z, -o.matrix_world.translation.y], "properties": {key: o[key] for key in o.keys() if key.startswith("sg_")}} for o in exported if o.name.startswith("SG_")]
     report = {"version": 6, "working_blend": str(WORKING.relative_to(PROJECT)), "working_blend_sha256": sha256(WORKING), "source_v05_sha256": before_hash, "source_v05_glb_sha256": sha256(BASE / "alphabet_island_layout_v05.glb"), "source_preserved": before_hash == after_hash, "glb_sha256": sha256(OUTPUT), "glb_bytes": OUTPUT.stat().st_size, "marker_count": len(markers), "markers": markers, "collision_counts": dict(Counter(o.get("sg_collision", "none") for o in exported if o.type == "MESH")), "collision_by_node": {o.name: o.get("sg_collision", "none") for o in exported if o.type == "MESH"}, "terrain_bounds_godot": [mn.x, -mx.y, mx.x - mn.x, mx.y - mn.y], "textures_relinked": relinked, "coordinate_contract": "Marker world_godot is audit only. Runtime reads imported node global transforms, never these stored coordinates."}
+    # Preserve versioned preview/provenance fields through the ordinary export path.
+    report = {**globals().get("_current_manifest", {}), **report}
     report["version"] = EXPORT_VERSION
-    for key in ("refinement_revision", "source_v06_sha256", "source_v06_glb_sha256"):
-        if key in globals().get("_current_manifest", {}):
-            report[key] = _current_manifest[key]
+    report["working_glb"] = str(OUTPUT.relative_to(PROJECT))
+    with OUTPUT.open("rb") as stream:
+        header = stream.read(20)
+        data = json.loads(stream.read(struct.unpack_from("<I", header, 12)[0]))
+    report["triangles"] = sum(data["accessors"][p["indices"] if "indices" in p else p["attributes"]["POSITION"]]["count"] // 3
+                              for node in data.get("nodes", []) if "mesh" in node for p in data["meshes"][node["mesh"]].get("primitives", []) if p.get("mode",4)==4)
     MANIFEST.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
     print("SG_EXPORT_OK", json.dumps({key: report[key] for key in ["marker_count", "collision_counts", "source_preserved", "glb_bytes"]}))
 

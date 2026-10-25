@@ -4,7 +4,7 @@
 
 沿用 v0.11.0-dev 的小岛界面：位置与心愿收在左上，地图、背包和旅行册合在底部；旅行册采用当前旅程与分类目录两页，地图、对话和其他面板统一标题、间距与按钮样式。此前验证见 [主界面更新记录](docs/verification/main-ui/README.md)。
 
-当前本地美术精修已扩展到 **44 个现有可游玩场景**：主岛、26 个字母场所、校园及 7 个功能区、家园及各房间。树冠分枝、木材和布料纹理、家具收边、主题道具与室内外光照已经同步到游戏；[全场景同机位前后对比](docs/world-refinement.html) 提供 88 组原生画面，[专项验收记录](docs/verification/world-refinement/README.md) 记录实际通行、交互和源文件保护。双击「启动字母岛.cmd」运行当前工程即可查看。上一批小院和客厅的[样板对照](docs/visual-refinement.html)继续保留。
+此前本地美术精修已覆盖 **44 个现有可游玩场景**：主岛、26 个字母场所、校园及 7 个功能区、家园及各房间。树冠分枝、木材和布料纹理、家具收边、主题道具与室内外光照已经同步到游戏；[全场景同机位前后对比](docs/world-refinement.html) 提供 88 组原生画面，[专项验收记录](docs/verification/world-refinement/README.md) 记录实际通行、交互和源文件保护。双击「启动字母岛.cmd」运行当前工程即可查看。上一批小院和客厅的[样板对照](docs/visual-refinement.html)继续保留。
 
 保留 v0.10.0 的可编辑字母发现卡、五街区旅行页、U3 欢迎桌与四幕小聚会，以及八位朋友基于已保存经历的回应。第一站实际体验完成后就能做发现卡；作品确认后可带回小屋，之后继续改样式。功能范围见 [生活纪念记录](docs/verification/life-keepsakes/README.md)。
 
@@ -74,6 +74,8 @@ v0.9.0 的场景采用暖色环境填光、较轻的阴影和区分室内外的�
 
 所有地标可以进入探索；策划中的各行各业经营流程还需后续开发。原课程保留前三单元的部分核心表达；八册新增词故事浏览不等于 81 章完整课程已经制作。语音为合成缓存，不是原版教材录音；不包含口语识别、评分或开放式 AI 对话。
 
+本分支最新的云端精修覆盖主岛、校园与主要生活空间共 **18 个场景**，以首轮 `d30c4f57` 为对照。真实 Blender 模型、GLB、同机位图及 Godot 4.6.3 原生截图见[第二轮交付与验证](docs/verification/cloud-refinement-round2-20261025/README.md)。原件和第一轮文件均保留；地图布局、A—Z 地标、学习点和碰撞约定不变。
+
 ## 校园的三个层级
 
 从字母岛校门进入完整校园，在校园道路上找到七处入口，点击入口即可走近并进入，也可走近按 E。离开各场所会回到校园相应门前，离开校园才回到字母岛。普通教室保留原有三单元课程；音乐、美术和科学教室保留各自的真实陈设、五个探索位置，并提供可操作的小体验。
@@ -86,13 +88,15 @@ v0.9.0 的场景采用暖色环境填光、较轻的阴影和区分室内外的�
 
 ## 修改地图
 
-主地图编辑 `assets/blender/alphabet_island/alphabet_island_layout_v06_game.blend`；校园编辑 `assets/blender/interiors/school/school_v03.blend`；其他场景编辑 `assets/blender/interiors/<room_id>/<room_id>_v01.blend`。本地修改保存后运行 `./sync-blender-game.ps1 -SkipBuild`，导出并同步地图，再直接启动工程；已导出 GLB 时可加 `-SyncOnly`。原 [更新Blender地图.cmd](更新Blender地图.cmd)包含 Windows 构建步骤，保留供明确需要完整构建时使用。旧校园 v01、v02 保留作历史素材，日常导出以资产清单登记的版本为准。
+主地图当前编辑 `assets/blender/alphabet_island/alphabet_island_layout_v09_cloud.blend`；校园编辑 `assets/blender/interiors/school/school_v06_cloud.blend`。其他房间必须读取 `assets/blender/interiors/interiors_manifest.json` 的 `blend` 字段，不根据旧版本号猜文件。主岛版本以 `game_map_manifest.json` 为准。当前 18 个云端工作文件可用 Blender 4.3.2 打开，未改动的原 Blender 5.2 文件仍需相应版本。
+
+本地修改后可运行 `./sync-blender-game.ps1 -SkipBuild`；仅同步已导出的 GLB 时使用 `-SyncOnly`。逐房间导出、验证与本轮可复现脚本见[本轮记录](docs/verification/cloud-refinement-round2-20261025/README.md)。原 Windows 完整构建入口仍保留，不属于本次云端交付。
 
 保持 `SG_*` 入口和交互标记名称稳定，移动家具时同步移动对应标记与碰撞代理。更新脚本导出已保存工程，保留人工编辑。详见 [接入约定](docs/Blender游戏接入约定.md) 和 [二级地图制作策划](docs/二级地图制作策划.md)。
 
 ## 原有全岛素材
 
-![字母岛当前地图](assets/blender/alphabet_island/alphabet_island_overview_v05.png)
+![字母岛 v05 历史地图](assets/blender/alphabet_island/alphabet_island_overview_v05.png)
 
 下述 Blender 全岛地图为原始 v05：统一环境与地标的材质，细化家园、烘焙坊、图书馆和校门，并提供第三人称及 1.35 米眼高的静态检查预览。v0.2 从它另存 v06 游戏编辑版，保留完整岛屿与原始文件。
 
@@ -117,6 +121,6 @@ cd StudyGames-V3
 git lfs pull
 ```
 
-游戏地图日常编辑使用 v06_game，v05 保留作原始版本。二级地图各自包含 Blender 工程、GLB、预览与导出检查；原始素材的完整从零重建流程尚未验证。
+游戏地图日常编辑使用清单登记的 v09_cloud；v05、v07 与首轮 v08 均保留作历史版本。二级地图各自包含 Blender 工程、GLB、预览与导出检查；原始素材的完整从零重建流程尚未验证。
 
 历史地图版本和原始模型一并保留。Blender 自动备份、Python 缓存和本机临时文件不纳入版本控制。

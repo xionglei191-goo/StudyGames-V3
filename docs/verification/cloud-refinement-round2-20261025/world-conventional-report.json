@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "exporter": "assets/blender/alphabet_island/export_game_map.py",
+  "checks": {
+    "same_nodes_and_transforms": true,
+    "same_triangle_count": true,
+    "manifest_triangles_match_actual": true,
+    "preview_preserved": true,
+    "protected_geometry_and_metadata": true,
+    "delivered_files_unchanged": true
+  },
+  "errors": [],
+  "triangles": 2389466,
+  "roundtrip_glb_sha256": "8df08c9d12a881b8761770408b1d39fc2747c075774f85127626085e9da368be",
+  "delivered_before": {
+    "/workspace/studygames-refinement/repo/assets/blender/alphabet_island/alphabet_island_layout_v09_cloud.blend": "16d94ecf14e500f2564e0ec566d812185908056e84b0c12ac0ea63e1be5b6867",
+    "/workspace/studygames-refinement/repo/assets/blender/alphabet_island/alphabet_island_layout_v09_cloud.glb": "4703bb83c54bbb5f698900a445220201391b9b399ebf9b1f2c712524105ad6d7",
+    "/workspace/studygames-refinement/repo/assets/blender/alphabet_island/game_map_manifest.json": "5c3172cf956c834160a81c065c7a91946e30de300cc3b56c6b9fed70b551116e"
+  },
+  "scope": "Original exporter main() executed against the saved source, with only output destinations redirected to .local. Source geometry and manifest delivery not modified."
+}

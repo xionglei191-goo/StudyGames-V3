@@ -1,0 +1,117 @@
+{
+  "phase": "runtime",
+  "results": [
+    {
+      "name": "godot-import",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "game",
+        "--import"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "expected_exit_code": 0,
+      "seconds": 181.91,
+      "log": "docs/verification/cloud-refinement-round2-20261025/godot-import.log"
+    },
+    {
+      "name": "campus",
+      "command": [
+        "godot",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--path",
+        "game",
+        "--script",
+        "res://tests/test_school_hierarchy.gd",
+        "--",
+        "--test-harness"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "expected_exit_code": 0,
+      "seconds": 27.99,
+      "log": "docs/verification/cloud-refinement-round2-20261025/campus.log",
+      "report": "docs/verification/cloud-refinement-round2-20261025/campus-report.json",
+      "reported_passed": true,
+      "checks": 352,
+      "routes": 56,
+      "transitions": 16,
+      "production_save_unchanged": true
+    },
+    {
+      "name": "household",
+      "command": [
+        "godot",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--path",
+        "game",
+        "--script",
+        "res://tests/test_home_indoor.gd",
+        "--",
+        "--test-harness"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "expected_exit_code": 0,
+      "seconds": 25.61,
+      "log": "docs/verification/cloud-refinement-round2-20261025/household.log",
+      "report": "docs/verification/cloud-refinement-round2-20261025/household-report.json",
+      "reported_passed": true,
+      "checks": 942,
+      "routes": 62,
+      "transitions": 20,
+      "production_save_unchanged": true
+    },
+    {
+      "name": "letters",
+      "command": [
+        "godot",
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--path",
+        "game",
+        "--script",
+        "res://tests/test_world_refinement.gd",
+        "--",
+        "--test-harness",
+        "--letters=ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "expected_exit_code": 0,
+      "seconds": 111.96,
+      "log": "docs/verification/cloud-refinement-round2-20261025/letters.log",
+      "report": "docs/verification/cloud-refinement-round2-20261025/letters-report.json",
+      "reported_passed": true,
+      "checks": 787,
+      "routes": 182,
+      "transitions": 52,
+      "production_save_unchanged": true
+    },
+    {
+      "name": "state-after",
+      "command": [
+        "godot",
+        "--headless",
+        "--path",
+        "game",
+        "--script",
+        "res://tests/test_state.gd"
+      ],
+      "exit_code": 1,
+      "passed": false,
+      "expected_exit_code": 1,
+      "seconds": 0.55,
+      "log": "docs/verification/cloud-refinement-round2-20261025/state-after.log",
+      "known_baseline_failure_expected": true
+    }
+  ],
+  "scope": "Actual current files; existing repository tools; no historical PASS substituted."
+}

@@ -68,6 +68,14 @@ def validate(*, check_runtime: bool) -> dict:
             raise RuntimeError("Invalid GLB header")
         payload = json.loads(handle.read(length))
     names = {node.get("name", "") for node in payload.get("nodes", [])}
+    triangles = sum(payload["accessors"][p["indices"] if "indices" in p else p["attributes"]["POSITION"]]["count"] // 3
+                    for node in payload.get("nodes", []) if "mesh" in node for p in payload["meshes"][node["mesh"]].get("primitives", []) if p.get("mode",4)==4)
+    if "triangles" in report and report["triangles"] != triangles:
+        raise RuntimeError("Island triangle count differs from the export record")
+    if report.get("model_version") and report["model_version"] != WORKING.stem.removeprefix("alphabet_island_layout_"):
+        raise RuntimeError("Island model version differs from the working source")
+    if report.get("preview") and not (ROOT / report["preview"]).is_file():
+        raise RuntimeError("Island preview is missing")
     missing = REQUIRED - names
     if missing:
         raise RuntimeError(f"GLB missing required gameplay markers: {sorted(missing)}")

@@ -1,12 +1,12 @@
 {
-  "version": 8,
-  "working_blend": "assets/blender/alphabet_island/alphabet_island_layout_v08_cloud.blend",
-  "working_blend_sha256": "46076b69b3d8a89e6870d03aae7dd4988046ccdbfce5da604540a64e609d6c15",
+  "version": 9,
+  "working_blend": "assets/blender/alphabet_island/alphabet_island_layout_v09_cloud.blend",
+  "working_blend_sha256": "16d94ecf14e500f2564e0ec566d812185908056e84b0c12ac0ea63e1be5b6867",
   "source_v05_sha256": "736c2ce93532e79c6569a0d8236d482539b8d836d24b916ff5aac025e0a10366",
   "source_v05_glb_sha256": "38bf86a5c984a66b04cc6706b5dc8ffcba4167105a42272a8a49df037276b92b",
   "source_preserved": true,
-  "glb_sha256": "63fc94ce3162831e10948fe4218298570cea394f6fedd4132b6e5eb9a9acee8f",
-  "glb_bytes": 160741644,
+  "glb_sha256": "4703bb83c54bbb5f698900a445220201391b9b399ebf9b1f2c712524105ad6d7",
+  "glb_bytes": 160680168,
   "marker_count": 33,
   "markers": [
     {
@@ -735,7 +735,7 @@
     }
   ],
   "collision_counts": {
-    "none": 3131,
+    "none": 3149,
     "ground": 220,
     "trunk": 168,
     "barrier": 441,
@@ -4736,7 +4736,25 @@
     "CF08_Understory_leaf_light": "none",
     "CF08_Understory_leaf_dark": "none",
     "CF08_Understory_flower_gold": "none",
-    "CF08_Understory_flower_cream": "none"
+    "CF08_Understory_flower_cream": "none",
+    "CF09_LakeShore_sand": "none",
+    "CF09_HomePorchFascia_ivory": "none",
+    "CF09_HomePorchRidge_teal": "none",
+    "CF09_HomePorchSeams_teal": "none",
+    "CF09_HomeDormer_teal": "none",
+    "CF09_HomeDormerFascia_ivory": "none",
+    "CF09_HomeDormerRidge_teal": "none",
+    "CF09_HomeDormerSeams_teal": "none",
+    "CF09_HomeDormerBody_ivory": "none",
+    "CF09_HomeDormerGlass_glass": "none",
+    "CF09_HomeDormerFrame_honey": "none",
+    "CF09_HomeDormerFrame_ivory": "none",
+    "CF09_ChimneyCrown_ivory": "none",
+    "CF09_TerrainSlopeSkin_earth": "none",
+    "CF09_TerrainSlopeSkin_sand": "none",
+    "CF09_WindowJamb_ivory": "none",
+    "CF09_WindowSill_honey": "none",
+    "CF09_WindowLintel_ivory": "none"
   },
   "terrain_bounds_godot": [
     -71.91621398925781,
@@ -4746,10 +4764,16 @@
   ],
   "textures_relinked": [],
   "coordinate_contract": "Marker world_godot is audit only. Runtime reads imported node global transforms, never these stored coordinates.",
-  "refinement_revision": "cloud-08",
+  "refinement_revision": "cloud-09",
   "source_v06_sha256": "2afe9626754cd93817e1c02bfd2a479d63bcf6c24e3563fe2c927cdfcba2cebc",
   "source_v06_glb_sha256": "e734f01afb2474aaab15ec9cf98c1c61fc09bfec7e268134c2357d743de4d89d",
   "source_v07_sha256": "388dbe208320902a2d4ff2ca98865f3f9439bfe0ac675fc133a5fee42900cf3f",
   "source_v07_glb_sha256": "3f572413e425127ae452c8cc62596205da802f9bfb47243f6e735f2a2896fee4",
-  "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed."
+  "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
+  "working_glb": "assets/blender/alphabet_island/alphabet_island_layout_v09_cloud.glb",
+  "triangles": 2389466,
+  "preview": "assets/blender/alphabet_island/preview_alphabet_island_layout_v09_cloud.png",
+  "model_version": "v09_cloud",
+  "first_round_blend": "assets/blender/alphabet_island/alphabet_island_layout_v08_cloud.blend",
+  "first_round_glb": "assets/blender/alphabet_island/alphabet_island_layout_v08_cloud.glb"
 }

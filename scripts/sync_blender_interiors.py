@@ -68,8 +68,10 @@ def inspect_glb(path: Path, room_id: str) -> dict:
     external = [image["uri"] for image in data.get("images", []) if image.get("uri") and not image["uri"].startswith("data:")]
     if external:
         raise ValueError(f"{room_id}: images are not embedded: {external}")
+    triangles = sum(data["accessors"][p["indices"] if "indices" in p else p["attributes"]["POSITION"]]["count"] // 3
+                    for node in data.get("nodes", []) if "mesh" in node for p in data["meshes"][node["mesh"]].get("primitives", []) if p.get("mode",4)==4)
     return {"nodes":len(names),"floor_meshes":len(floors),"collision_proxies":len(colliders),
-            "required_markers":sorted(required),"bytes":length,"images":len(data.get("images", []))}
+            "required_markers":sorted(required),"bytes":length,"images":len(data.get("images", [])),"triangles":triangles}
 
 
 def main() -> None:
@@ -102,6 +104,15 @@ def main() -> None:
                           "source_blend":str(blend.relative_to(ROOT)).replace("\\","/"),
                           "game_glb":f"res://assets/interiors/{room_id}.glb",
                           "source_sha256":sha,"bounds":entry.get("bounds",[]),"validation":check})
+        if entry.get("model_version"):
+            if entry.get("triangles") != check["triangles"]:
+                raise SystemExit("Source triangle count is stale: " + room_id)
+            if entry["model_version"] != blend.stem.removeprefix(room_id + "_"):
+                raise SystemExit("Source model version is stale: " + room_id)
+            source_path(entry["preview"])
+            for key in ("model_version", "preview", "triangles", "refinement_revision"):
+                if key in entry:
+                    validated[-1][key] = entry[key]
     if not args.verify_only:
         TARGET.mkdir(parents=True,exist_ok=True)
         for entry in validated:
@@ -126,6 +137,12 @@ def main() -> None:
         actual = {(v["room_id"],v["source_sha256"]) for v in current["rooms"]}
         if expected != actual:
             raise SystemExit("Game interiors manifest is not synchronized")
+        current_by_id = {entry["room_id"]:entry for entry in current["rooms"]}
+        for expected_entry in validated:
+            actual_entry = current_by_id[expected_entry["room_id"]]
+            for key in ("source_blend", "source_glb", "model_version", "preview", "triangles", "refinement_revision"):
+                if key in expected_entry and expected_entry[key] != actual_entry.get(key):
+                    raise SystemExit("Game interiors metadata is stale: " + expected_entry["room_id"] + "/" + key)
     print(json.dumps({"status":"verified" if args.verify_only else "synchronized",
                       "rooms":len(validated),"expected":len(EXPECTED),
                       "missing":sorted(EXPECTED-set(ids))},ensure_ascii=False))
