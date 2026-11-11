@@ -9,8 +9,9 @@ const JOURNEY = preload("res://scripts/journey_progress.gd")
 const P2 = preload("res://scripts/p2_progress.gd")
 const Reviews = preload("res://scripts/review_progress.gd")
 const HOME = preload("res://scripts/home_catalog.gd")
+const WARDROBE = preload("res://actors/modular_wardrobe.gd")
 const DECORATION_PRICES: Dictionary = {"flower_box": 25, "picnic": 35, "lamp": 45}
-const OUTFITS: Array[String] = ["yellow", "pink", "blue"]
+const OUTFITS: Array[String] = ["yellow", "pink", "blue", "mint", "lavender", "caramel"]
 const UNIT_QUESTIONS: Dictionary = {
 	1: ["u1_greeting", "u1_morning", "u1_goodbye"],
 	2: ["u2_name", "u2_intro", "u2_polite"],
@@ -42,6 +43,8 @@ func _default_state() -> Dictionary:
 		"learning": {},
 		"life": {"discoveries": {}, "activities": {"music":false,"art":false,"science":false,"football":false}, "scores":{"football":0}, "artwork":[], "home_tasks":{}},
 		"preferences": {"voice":true,"effects":true,"reduced_motion":false,"fixed_day":false},
+		"wardrobe": {"hat": "none", "bag": "none"},
+		"v4": {"active_unit_id": "unit-1", "stealth_events": [], "completed_commissions": []},
 		"journey": JOURNEY.fresh(),
 		"reviews": Reviews.fresh(),
 	}
@@ -348,6 +351,72 @@ func set_outfit(id: String) -> bool:
 	return _commit(before, "新衣服已换好。")
 
 
+func set_hat(id: String) -> bool:
+	if not WARDROBE.valid_hat(id):
+		return _reject("暂时没有这顶头饰。")
+	if not data.has("wardrobe") or not data["wardrobe"] is Dictionary:
+		data["wardrobe"] = {"hat": "none", "bag": "none"}
+	if str(data["wardrobe"].get("hat", "none")) == id:
+		return true
+	var before: Dictionary = snapshot()
+	data["wardrobe"]["hat"] = id
+	return _commit(before, "头饰已搭配好。")
+
+
+func set_bag(id: String) -> bool:
+	if not WARDROBE.valid_bag(id):
+		return _reject("暂时没有这件随身配饰。")
+	if not data.has("wardrobe") or not data["wardrobe"] is Dictionary:
+		data["wardrobe"] = {"hat": "none", "bag": "none"}
+	if str(data["wardrobe"].get("bag", "none")) == id:
+		return true
+	var before: Dictionary = snapshot()
+	data["wardrobe"]["bag"] = id
+	return _commit(before, "小背包已搭配好。")
+
+
+func set_active_unit(unit_id: String) -> bool:
+	if unit_id.is_empty() or not unit_id.begins_with("unit-"):
+		return false
+	if not data.has("v4") or not data["v4"] is Dictionary:
+		data["v4"] = {"active_unit_id": "unit-1", "stealth_events": [], "completed_commissions": []}
+	if str(data["v4"].get("active_unit_id", "unit-1")) == unit_id:
+		return true
+	var before: Dictionary = snapshot()
+	data["v4"]["active_unit_id"] = unit_id
+	return _commit(before)
+
+
+func record_stealth_evidence(payload: Dictionary) -> bool:
+	var word := str(payload.get("word", "")).strip_edges().to_lower()
+	if word.is_empty():
+		return false
+	if not data.has("v4") or not data["v4"] is Dictionary:
+		data["v4"] = {"active_unit_id": "unit-1", "stealth_events": [], "completed_commissions": []}
+	var before: Dictionary = snapshot()
+	var events: Array = data["v4"].get("stealth_events", [])
+	events.append({
+		"word": word,
+		"support_level": clampi(int(payload.get("support_level", 0)), 0, 5),
+		"correct": bool(payload.get("correct", true)),
+		"context": str(payload.get("context", "island_play")).left(48),
+		"timestamp": int(Time.get_unix_time_from_system())
+	})
+	while events.size() > 300:
+		events.pop_front()
+	data["v4"]["stealth_events"] = events
+	var commission_id := str(payload.get("commission_id", "")).strip_edges()
+	if not commission_id.is_empty():
+		var done: Array = data["v4"].get("completed_commissions", [])
+		if not done.has(commission_id):
+			done.append(commission_id)
+			while done.size() > 160:
+				done.pop_front()
+			data["v4"]["completed_commissions"] = done
+			data["coins"] = mini(1_000_000, int(data["coins"]) + int(payload.get("coin_bonus", 6)))
+	return _commit(before)
+
+
 func next_day() -> bool:
 	var before: Dictionary = snapshot()
 	data["day"] += 1
@@ -561,7 +630,7 @@ func _normalize_state(value: Variant) -> Dictionary:
 	var normalized: Dictionary = _default_state()
 	# Required fields and exact scalar types prevent silent coercion of damaged data.
 	for key: String in normalized.keys():
-		if key in ["life","preferences","journey","reviews"]:
+		if key in ["life","preferences","journey","reviews","wardrobe","v4"]:
 			continue # Optional additions migrate v0.1-v0.3 saves without changing their identity.
 		if not incoming.has(key):
 			return {"ok": false}
@@ -682,6 +751,42 @@ func _normalize_state(value: Variant) -> Dictionary:
 		var reviews_result := Reviews.normalize(incoming.reviews)
 		if not reviews_result.ok: return {"ok":false}
 		normalized.reviews = reviews_result.value
+	if incoming.has("wardrobe"):
+		if not incoming.wardrobe is Dictionary:
+			return {"ok": false}
+		var raw_hat := str(incoming.wardrobe.get("hat", "none"))
+		var raw_bag := str(incoming.wardrobe.get("bag", "none"))
+		if not WARDROBE.valid_hat(raw_hat) or not WARDROBE.valid_bag(raw_bag):
+			return {"ok": false}
+		normalized.wardrobe = {"hat": raw_hat, "bag": raw_bag}
+	if incoming.has("v4"):
+		if not incoming.v4 is Dictionary:
+			return {"ok": false}
+		var v4_in: Dictionary = incoming.v4
+		var unit_val := str(v4_in.get("active_unit_id", "unit-1"))
+		if not unit_val.begins_with("unit-"):
+			unit_val = "unit-1"
+		var clean_events: Array = []
+		if v4_in.get("stealth_events", []) is Array:
+			for ev: Variant in (v4_in.get("stealth_events", []) as Array).slice(-300):
+				if ev is Dictionary and str(ev.get("word", "")) != "":
+					clean_events.append({
+						"word": str(ev.get("word", "")).left(48),
+						"support_level": clampi(int(ev.get("support_level", 0)), 0, 5),
+						"correct": bool(ev.get("correct", true)),
+						"context": str(ev.get("context", "island_play")).left(48),
+						"timestamp": int(ev.get("timestamp", 0))
+					})
+		var clean_commissions: Array = []
+		if v4_in.get("completed_commissions", []) is Array:
+			for cid: Variant in (v4_in.get("completed_commissions", []) as Array).slice(-160):
+				if cid is String and not str(cid).is_empty():
+					clean_commissions.append(str(cid))
+		normalized.v4 = {
+			"active_unit_id": unit_val,
+			"stealth_events": clean_events,
+			"completed_commissions": clean_commissions
+		}
 	return {"ok": true, "state": normalized}
 
 

@@ -36,6 +36,8 @@ var avatar_preview: Node
 var nav_controls: HBoxContainer
 var controls_hint: Label
 var speaker_provider: Callable
+var diegetic: Control
+var active_wardrobe_tab := "outfit"
 
 func _ready() -> void:
 	layer = 10
@@ -51,6 +53,9 @@ func _ready() -> void:
 	hud.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	root.add_child(hud)
 	_build_hud()
+	diegetic = preload("res://ui_v4/diegetic_dialogue.gd").new()
+	diegetic.action_triggered.connect(func(id: String): action.emit(id))
+	root.add_child(diegetic)
 	modal = ColorRect.new()
 	modal.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	modal.hide()
@@ -145,6 +150,8 @@ func _begin(id: String, mode: String = "center") -> void:
 	prompt.hide()
 	navigation_label.hide()
 	bubble_panel.hide()
+	if is_instance_valid(diegetic):
+		diegetic.hide()
 	for node: Node in hud.find_children("*","Button",true,false):
 		node.focus_mode = Control.FOCUS_NONE
 	_layout()
@@ -230,51 +237,10 @@ func show_panel(id: String, title: String, kicker: String, body: String, actions
 func show_travel_book(book_title: String, next_wish: String, visited: int, discoveries: int, entries: Array) -> void:
 	preload("res://ui/travel_book_view.gd").build(self,book_title,next_wish,visited,discoveries,entries)
 
-func show_inventory(data: Dictionary) -> void:
-	_begin("bag","wardrobe")
-	_heading("今天，穿哪一种心情？","我的衣橱 / 随身物品")
-	var body := HBoxContainer.new()
-	body.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	body.add_theme_constant_override("separation",28)
-	panel_box.add_child(body)
-	var stage := card(Color("e8eddf"),22)
-	stage.custom_minimum_size.x = 300
-	stage.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	body.add_child(stage)
-	var preview_box := VBoxContainer.new()
-	stage.add_child(preview_box)
-	wardrobe_preview = Preview.instantiate()
-	preview_box.add_child(wardrobe_preview)
-	wardrobe_preview.setup("player",str(data.outfit))
-	var hint := label("拖动角色，可以看看另一面",15,muted_ink)
-	hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	preview_box.add_child(hint)
-	var items := VBoxContainer.new()
-	items.custom_minimum_size.x = 370
-	items.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	items.add_theme_constant_override("separation",16)
-	body.add_child(items)
-	items.add_child(label("随身带着",18,muted_ink))
-	var supplies := HBoxContainer.new()
-	supplies.add_theme_constant_override("separation",10)
-	items.add_child(supplies)
-	for supply: Array in [["apple","苹果",data.apples],["cake","蛋糕",data.cakes],["leaf","叶币",data.coins]]:
-		var tile := card(Color("f0f1e5"),16)
-		tile.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		supplies.add_child(tile)
-		var box := VBoxContainer.new()
-		tile.add_child(box)
-		box.add_child(icon_view(str(supply[0]),40))
-		var count := label("%s × %s" % [supply[1],supply[2]],16)
-		count.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-		box.add_child(count)
-	items.add_child(label("换上喜欢的颜色",20))
-	for entry: Array in [["yellow","向日葵黄"],["pink","草莓粉"],["blue","晴空蓝"]]:
-		var item := button(str(entry[1]),"outfit:"+str(entry[0]),str(data.outfit)==str(entry[0]),Vector2(0,54))
-		item.icon = Style.icon("check") if str(data.outfit)==str(entry[0]) else Style.icon("outfit")
-		items.add_child(item)
-	items.add_child(button("看看我的装饰","decorate",false,Vector2(0,52)))
-	_layout.call_deferred()
+func show_inventory(data: Dictionary, tab: String = "") -> void:
+	if not tab.is_empty():
+		active_wardrobe_tab = tab
+	preload("res://ui_v4/cozy_wardrobe_studio.gd").build(self, data, active_wardrobe_tab)
 
 func update_outfit(id: String) -> void:
 	if is_instance_valid(avatar_preview):
@@ -286,7 +252,20 @@ func update_outfit(id: String) -> void:
 		if key.begins_with("outfit:"):
 			var selected := key == "outfit:"+id
 			node.theme_type_variation = "PrimaryButton" if selected else "Button"
-			node.icon = Style.icon("check" if selected else "outfit")
+
+func update_wardrobe(data: Dictionary) -> void:
+	var outfit_id := str(data.get("outfit", "yellow"))
+	var w: Dictionary = data.get("wardrobe", {}) if data.get("wardrobe") is Dictionary else {}
+	var hat_id := str(w.get("hat", "none"))
+	var bag_id := str(w.get("bag", "none"))
+	if is_instance_valid(avatar_preview) and avatar_preview.has_method("set_wardrobe"):
+		avatar_preview.set_wardrobe(outfit_id, hat_id, bag_id)
+	elif is_instance_valid(avatar_preview):
+		avatar_preview.set_outfit(outfit_id)
+	if is_instance_valid(wardrobe_preview) and wardrobe_preview.has_method("set_wardrobe"):
+		wardrobe_preview.set_wardrobe(outfit_id, hat_id, bag_id)
+	elif is_instance_valid(wardrobe_preview):
+		wardrobe_preview.set_outfit(outfit_id)
 
 func show_shop(data: Dictionary) -> void:
 	_begin("shop")

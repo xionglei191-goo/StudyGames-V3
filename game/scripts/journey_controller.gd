@@ -811,12 +811,10 @@ func open_story(entry_id: String, from_u1: bool = false) -> void:
 	memory_sink = MemorySink.new()
 	memory_sink.setup(State,memory_invocation)
 	ui._begin("word_story","map")
-	var host := Control.new()
-	host.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	host.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	ui.panel_box.add_child(host)
-	current_memory = load("res://ui/memory_story.gd").new()
-	host.add_child(current_memory)
+	current_memory = load("res://theater/popup_book_theater.gd").new()
+	current_memory.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	current_memory.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	ui.panel_box.add_child(current_memory)
 	current_memory.help_shown.connect(func(cue: Dictionary): _queue_memory("cue",cue))
 	current_memory.response_submitted.connect(func(response: Dictionary): _queue_memory("response",response))
 	current_memory.progress_changed.connect(func(progress: Dictionary): _queue_memory("progress",progress))

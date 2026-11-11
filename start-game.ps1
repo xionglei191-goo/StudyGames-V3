@@ -75,6 +75,15 @@ if (-not (Test-Path -LiteralPath $pythonPath -PathType Leaf)) {
     if (-not $pythonCommand) { throw 'Python 3 is required for shared profile locking. Install Python or run start-web-online.ps1 once.' }
     $pythonPath = $pythonCommand.Source
 }
+$aiCompanionScript = Join-Path $PSScriptRoot 'start-ai-companion.ps1'
+if (Test-Path -LiteralPath $aiCompanionScript -PathType Leaf) {
+    try {
+        & $aiCompanionScript | Out-Host
+    } catch {
+        Write-Warning "AI Companion startup warning: $_"
+    }
+}
+
 $statusDirectory = Join-Path $PSScriptRoot '.local\native-launches'
 New-Item -ItemType Directory -Path $statusDirectory -Force | Out-Null
 $statusPath = Join-Path $statusDirectory (([guid]::NewGuid().ToString('N')) + '.json')

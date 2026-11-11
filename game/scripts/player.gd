@@ -18,6 +18,8 @@ var safe_position_ready := false
 var gesture_time := 0.0
 var gesture_kind := ""
 var reduced_motion := false
+var _dust_particles: GPUParticles3D
+var look_target := Vector3.INF
 
 func _ready() -> void:
 	var shape := CollisionShape3D.new()
@@ -32,6 +34,39 @@ func _ready() -> void:
 	floor_snap_length = 0.65
 	# The authored island has short road facets around 47 degrees near hill joins.
 	floor_max_angle = deg_to_rad(52.0)
+	_build_footstep_puffs()
+
+func _build_footstep_puffs() -> void:
+	if DisplayServer.get_name() == "headless":
+		return
+	_dust_particles = GPUParticles3D.new()
+	_dust_particles.name = "FootstepPuffs"
+	_dust_particles.amount = 14
+	_dust_particles.lifetime = 0.55
+	_dust_particles.emitting = false
+	_dust_particles.position = Vector3(0.0, 0.08, 0.0)
+	_dust_particles.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	var proc := ParticleProcessMaterial.new()
+	proc.direction = Vector3(0.0, 1.0, 0.0)
+	proc.spread = 55.0
+	proc.initial_velocity_min = 0.25
+	proc.initial_velocity_max = 0.65
+	proc.gravity = Vector3(0.0, -0.6, 0.0)
+	proc.scale_min = 0.65
+	proc.scale_max = 1.25
+	_dust_particles.process_material = proc
+	var puff_mesh := SphereMesh.new()
+	puff_mesh.radius = 0.065
+	puff_mesh.height = 0.11
+	puff_mesh.radial_segments = 8
+	puff_mesh.rings = 6
+	var pmat := StandardMaterial3D.new()
+	pmat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	pmat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	pmat.albedo_color = Color(0.98, 0.95, 0.88, 0.52)
+	puff_mesh.material = pmat
+	_dust_particles.draw_pass_1 = puff_mesh
+	add_child(_dust_particles)
 
 func _physics_process(delta: float) -> void:
 	var axis := Vector2.ZERO
@@ -107,13 +142,33 @@ func _physics_process(delta: float) -> void:
 		var moving := movement.length() > 0.002 and not water_contact
 		if moving:
 			walk_time += movement.length() * 2.3
-			visual.rotation.y = lerp_angle(visual.rotation.y, atan2(movement.x, movement.y), minf(delta * 14,1.0))
-			visual.position.y = 0.0 if reduced_motion else absf(sin(walk_time))*0.065
-			visual.rotation.z = 0.0 if reduced_motion else sin(walk_time)*0.025
+			var target_yaw := atan2(movement.x, movement.y)
+			var yaw_diff := wrapf(target_yaw - visual.rotation.y, -PI, PI)
+			visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, minf(delta * 14, 1.0))
+			visual.position.y = 0.0 if reduced_motion else absf(sin(walk_time)) * 0.058
+			var bank := clampf(-yaw_diff * 0.16, -0.11, 0.11)
+			visual.rotation.z = 0.0 if reduced_motion else lerpf(visual.rotation.z, bank + sin(walk_time) * 0.02, minf(delta * 10.0, 1.0))
+			visual.rotation.x = 0.0 if reduced_motion else lerpf(visual.rotation.x, 0.045, minf(delta * 8.0, 1.0))
 		else:
 			idle_time += delta
-			visual.position.y = 0.0 if reduced_motion else sin(idle_time*2.0)*0.015
-			visual.rotation.z = lerpf(visual.rotation.z, 0, delta * 8)
+			visual.position.y = 0.0 if reduced_motion else sin(idle_time * 2.0) * 0.014
+			visual.rotation.z = lerpf(visual.rotation.z, 0.0, delta * 8.0)
+			visual.rotation.x = lerpf(visual.rotation.x, 0.0, delta * 8.0)
+		if is_instance_valid(_dust_particles):
+			_dust_particles.emitting = moving and not reduced_motion and is_on_floor()
+		if visual.has_method("set_head_interest"):
+			if look_target != Vector3.INF and not reduced_motion:
+				var to_target := look_target - global_position
+				if Vector2(to_target.x, to_target.z).length() < 4.5:
+					var desired_yaw := wrapf(atan2(to_target.x, to_target.z) - visual.rotation.y, -PI, PI)
+					if absf(desired_yaw) < 1.15:
+						visual.set_head_interest(desired_yaw * 0.48, -0.04)
+					else:
+						visual.set_head_interest(0.0, 0.0)
+				else:
+					visual.set_head_interest(0.0, 0.0)
+			else:
+				visual.set_head_interest(0.0, 0.0)
 		_animate_limbs(moving,delta)
 
 func face(point: Vector3) -> void:
@@ -200,3 +255,19 @@ func set_outfit(color_name: String) -> void:
 			material.albedo_color = colors.get(color_name, colors.yellow)
 			material.roughness = 0.85
 			mesh.material_override = material
+
+func apply_wardrobe(state_data: Dictionary) -> void:
+	if not visual:
+		return
+	var outfit_id := str(state_data.get("outfit", "yellow"))
+	var w: Dictionary = state_data.get("wardrobe", {}) if state_data.get("wardrobe") is Dictionary else {}
+	var hat_id := str(w.get("hat", "none"))
+	var bag_id := str(w.get("bag", "none"))
+	if visual.has_method("set_wardrobe"):
+		visual.set_wardrobe(outfit_id, hat_id, bag_id)
+	else:
+		set_outfit(outfit_id)
+
+func set_carried_item(prop_id: String) -> void:
+	if visual and visual.has_method("set_carried_item"):
+		visual.set_carried_item(prop_id)

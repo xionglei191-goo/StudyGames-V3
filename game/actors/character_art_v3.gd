@@ -186,7 +186,14 @@ static func statistics(root: Node) -> Dictionary:
 	return result
 
 static func set_outfit(root: Node, id: String) -> void:
-	var colors := {"yellow":Color("e6b946"),"pink":Color("d87e93"),"blue":Color("79aeca")}
+	var colors := {
+		"yellow": Color("e6b946"),
+		"pink": Color("e2859b"),
+		"blue": Color("6da9cb"),
+		"mint": Color("72bf9a"),
+		"lavender": Color("9d8cd9"),
+		"caramel": Color("cc9162")
+	}
 	for node: Node in root.find_children("*","MeshInstance3D",true,false):
 		var instance := node as MeshInstance3D
 		if str(instance.get_meta("source_asset","")) != "player":

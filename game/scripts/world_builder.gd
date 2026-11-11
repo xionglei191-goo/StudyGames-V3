@@ -11,12 +11,22 @@ var _imported_scene: Node3D
 const InteriorScript = preload("res://scripts/imported_interior.gd")
 const BlenderMaterials = preload("res://scripts/blender_materials.gd")
 const HomeCatalog = preload("res://scripts/home_catalog.gd")
+const DioramaEnvironment = preload("res://world/diorama_environment.gd")
+const DioramaBackdrop = preload("res://world/diorama_backdrop.gd")
+const ToySurfacePolisher = preload("res://world/toy_surface_polisher.gd")
+const HeroSceneDressing = preload("res://world/hero_scene_dressing.gd")
+var _backdrop: Node3D
+var _polisher: Node3D
+var _hero_dressing: Node3D
 
 func build(room: String) -> Dictionary:
 	for child: Node in get_children():
 		remove_child(child)
 		child.queue_free()
 	_imported_scene = null
+	_backdrop = null
+	_polisher = null
+	_hero_dressing = null
 	_lighting(room)
 	if room == "village":
 		_imported_scene = load("res://scripts/imported_world.gd").new()
@@ -24,6 +34,7 @@ func build(room: String) -> Dictionary:
 		add_child(_imported_scene)
 		var imported: Dictionary = _imported_scene.build()
 		imported["material_stats"] = BlenderMaterials.restore_vertex_colors(_imported_scene)
+		_attach_diorama_layers(room, imported)
 		_add_imported_npcs(imported)
 		return imported
 	if InteriorScript.available(room):
@@ -32,10 +43,34 @@ func build(room: String) -> Dictionary:
 		add_child(_imported_scene)
 		var imported: Dictionary = _imported_scene.build(room, room_plan(room))
 		imported["material_stats"] = BlenderMaterials.restore_vertex_colors(_imported_scene)
+		_attach_diorama_layers(room, imported)
 		_add_imported_npcs(imported)
 		return imported
 	push_error("Missing Blender scene: " + room)
 	return {}
+
+func _attach_diorama_layers(room: String, imported: Dictionary) -> void:
+	_backdrop = DioramaBackdrop.new()
+	add_child(_backdrop)
+	_backdrop.setup(room, imported)
+
+	_polisher = ToySurfacePolisher.new()
+	add_child(_polisher)
+	imported["toy_polish"] = _polisher.polish_scene(_imported_scene, room, imported)
+
+	_hero_dressing = HeroSceneDressing.new()
+	add_child(_hero_dressing)
+	_hero_dressing.dress_scene(room, imported)
+
+func set_comfort_mode(reduced: bool) -> void:
+	if is_instance_valid(_backdrop) and "reduced_motion" in _backdrop:
+		_backdrop.reduced_motion = reduced
+	if is_instance_valid(_polisher) and "reduced_motion" in _polisher:
+		_polisher.reduced_motion = reduced
+
+func set_day_phase(phase: String) -> void:
+	if is_instance_valid(_polisher) and _polisher.has_method("set_day_phase"):
+		_polisher.set_day_phase(phase)
 
 func _add_imported_npcs(info: Dictionary) -> void:
 	for npc in info.get("npcs", []):
@@ -56,39 +91,7 @@ func room_plan(room_id: String) -> Dictionary:
 	return {"room_id":room_id,"name":room_id}
 
 func _lighting(room: String) -> void:
-	# Warm storybook daylight keeps dark foliage readable and pale interiors soft.
-	# Distinct indoor/outdoor fill leaves the authored Blender materials editable.
-	var is_island := room == "village"
-	var env_node := WorldEnvironment.new()
-	var env := Environment.new()
-	env.background_mode = Environment.BG_COLOR
-	env.background_color = Color("d5e2d6") if is_island else Color("e7dfca")
-	env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	env.ambient_light_color = Color("fff3dd")
-	env.ambient_light_energy = 0.80 if is_island else 0.40
-	env.tonemap_mode = Environment.TONE_MAPPER_LINEAR
-	env.adjustment_enabled = true
-	env.adjustment_saturation = 0.78 if is_island else 0.90
-	env.adjustment_contrast = 0.92 if is_island else 0.98
-	env_node.environment = env
-	add_child(env_node)
-	var sun := DirectionalLight3D.new()
-	sun.rotation_degrees = Vector3(-52, -32, 0)
-	sun.light_color = Color("fff3dd")
-	sun.light_energy = 0.25 if is_island else 0.23
-	sun.shadow_enabled = true
-	sun.shadow_opacity = 0.32
-	sun.directional_shadow_max_distance = 65
-	sun.directional_shadow_mode = DirectionalLight3D.SHADOW_PARALLEL_4_SPLITS
-	sun.shadow_bias = 0.03
-	sun.shadow_normal_bias = 1.2
-	add_child(sun)
-	var fill := DirectionalLight3D.new()
-	fill.rotation_degrees = Vector3(-40, 140, 0)
-	fill.light_color = Color("e0e9ec")
-	fill.light_energy = 0.12 if is_island else 0.08
-	add_child(fill)
-	preload("res://scripts/home_visual_refinement.gd").apply_lighting(room, env, sun, fill)
+	DioramaEnvironment.build_lighting(self, room)
 
 func _mat(color: Color) -> StandardMaterial3D:
 	var key: String = color.to_html()

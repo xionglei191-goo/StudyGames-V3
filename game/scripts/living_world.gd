@@ -247,39 +247,13 @@ func _apply_lighting(blend: float) -> void:
 		return
 	var weather := _effective_weather()
 	var phase := _effective_phase()
-	var outdoor := room_id in OUTDOOR_ROOMS
-	var phase_colors := {"dawn":Color("e6d8bf"), "day":Color("e8eee6"), "dusk":Color("dbc9c3"), "night":Color("b5c4d2")}
-	var sky_colors := {"dawn":Color("e3ddc9"), "day":Color("d5e2d6"), "dusk":Color("d8c7bc"), "night":Color("8c9fb4")}
-	var ambient: Color = phase_colors[phase]
-	var sky: Color = sky_colors[phase]
-	var direct_scale := float({"dawn":0.78, "day":1.0, "dusk":0.72, "night":0.34}[phase])
-	var ambient_scale := float({"dawn":0.94, "day":1.0, "dusk":0.92, "night":0.80}[phase])
-	if weather in ["cloudy", "light_rain", "mist"]:
-		ambient = ambient.lerp(Color("c9d5d4"), 0.30)
-		sky = sky.lerp(Color("b4c5c6"), 0.45)
-		direct_scale *= 0.65 if weather == "cloudy" else 0.48
-	# Interior teaching surfaces keep a neutral, readable fill even at night.
-	if not outdoor:
-		ambient = (_baseline.ambient_color as Color).lerp(ambient, 0.25)
-		sky = (_baseline.background as Color).lerp(sky,0.16)
-		ambient_scale = maxf(ambient_scale, 0.92)
-	_environment.background_color = _environment.background_color.lerp(sky, blend)
-	_environment.ambient_light_color = _environment.ambient_light_color.lerp(ambient, blend)
-	_environment.ambient_light_energy = lerpf(_environment.ambient_light_energy, float(_baseline.ambient_energy) * ambient_scale, blend)
-	var fog_target := 0.006 if weather == "mist" and outdoor else 0.0015 if weather == "light_rain" and outdoor else 0.0
-	_environment.fog_density = lerpf(_environment.fog_density if _environment.fog_enabled else 0.0, fog_target, blend)
-	_environment.fog_enabled = _environment.fog_density > 0.00005
-	_environment.fog_light_color = _environment.fog_light_color.lerp(sky, blend)
-	_environment.fog_sky_affect = 0.18
-	if is_instance_valid(_sun):
-		var sunlight := Color("fff8e9") if phase == "day" else Color("efc6a1") if phase in ["dawn", "dusk"] else Color("c0cfe1")
-		_sun.light_color = _sun.light_color.lerp(sunlight, blend)
-		_sun.light_energy = lerpf(_sun.light_energy, float(_baseline.get("sun_energy", 0.25)) * direct_scale, blend)
-		var pitch := -27.0 if phase == "dawn" else -52.0 if phase == "day" else -23.0 if phase == "dusk" else -42.0
-		_sun.rotation_degrees.x = lerpf(_sun.rotation_degrees.x, pitch, blend)
-	if is_instance_valid(_fill):
-		_fill.light_color = _fill.light_color.lerp(Color("dbe5e7") if phase != "night" else Color("bdcadb"), blend)
-		_fill.light_energy = float(_baseline.get("fill_energy", 0.10))
+	preload("res://world/diorama_environment.gd").apply_dynamic_mood(
+		_environment, _sun, _fill, room_id, weather, phase, blend
+	)
+	if is_instance_valid(_world) and _world.has_method("set_day_phase"):
+		_world.set_day_phase(phase)
+	if is_instance_valid(_world) and _world.has_method("set_comfort_mode"):
+		_world.set_comfort_mode(bool(context.get("reduced_motion", false)))
 
 func _capture_visual_targets() -> void:
 	if not is_instance_valid(_world):
@@ -309,7 +283,7 @@ func _capture_visual_targets() -> void:
 					pivot = mesh.to_local(trunk.to_global(trunk_base))
 			_foliage.append({"node":mesh, "transform":mesh.transform,
 				"pivot":pivot, "axis":axis, "phase":float(absi(wind_key.hash()) % 6283) / 1000.0})
-		if label in ["ALPHA_River_Water", "ALPHA_V3_Lake_Deep_To_Shallow", "ALPHA_Ocean_Presentation", "Harbour_Water", "A_Wash_Water"] and mesh.material_overlay == null:
+		if label in ["ALPHA_River_Water", "ALPHA_V3_Lake_Deep_To_Shallow", "ALPHA_Ocean_Presentation", "Harbour_Water", "A_Wash_Water"] and mesh.material_overlay == null and not (mesh.material_override is ShaderMaterial):
 			var material := ShaderMaterial.new()
 			material.shader = WaterShader
 			material.set_shader_parameter("flow_direction", Vector2(0.18, 1.0) if "River" in label else Vector2(0.66, 0.45))

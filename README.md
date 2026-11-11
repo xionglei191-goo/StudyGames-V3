@@ -1,6 +1,24 @@
-# StudyGames V3 · 字母岛
+# StudyGames V4 · 字母岛（精致微缩童话岛全量重构版）
 
-当前 **v0.13.0-dev · 角色与进度互通** 已把本机网页和电脑单机接入同一份角色存档。双击 **[启动网页联机.cmd](启动网页联机.cmd)**，或打开已启动的 [本机字母岛](http://127.0.0.1:4189/)，选角色后点「在网页继续」或「在电脑端继续」；网页还可邀请朋友或输入邀请码加入，最多 4 人。物品、服装、生活任务与学习记录跟随角色；同一角色一次只由一端保存。原单机存档复制导入并保留原件，旧网页角色可首次进入时导入，断线草稿与冲突副本有恢复入口。操作与验证见 [进度互通记录](docs/verification/shared-save/README.md)，多人同行的既有范围见 [网页联机记录](docs/verification/web-online/README.md)。当前只监听本机，公网域名和服务器部署留到后续。
+当前 **v4.0.0-v4 · 微缩童话岛全量重构** 已完成渲染管线、高颜值 3D 换装、去弹窗化世界生活交互、3D 立体翻翻书剧场、全八册 81 单元委托系统与本地 AI 安全伴学轻服务的端到端升级：
+
+- **Forward+ 微缩模型岛美学（Toy Diorama）**：全面升级至 Godot 4.7 `forward_plus` 渲染管线，开启 `ProceduralSky` 天光漫反射、`AgX` 胶片色调映射、`SSAO` / `SSIL` 接触光影、柔和阴影、双层岸边泡沫果冻水体（`game/shaders/toy_water.gdshader`）与微风树冠摇曳（`game/shaders/toy_foliage_wind.gdshader`）。全岛 **44 个场景**统一配备胡桃木微缩底座托盘与室外草坡/云朵或室内暖阳窗景（`game/world/diorama_backdrop.gd`），彻底告别空洞的纯色虚空背景。
+- **高颜值模块化 3D 换装镜台（`CozyWardrobeStudio`）**：支持 **6 套治愈穿搭**（柠檬黄、蜜桃粉、晴空蓝、薄荷森系、星光薰衣草、奶油焦糖）× **5 款 3D 头饰**（自然发型、丝带草帽、蝴蝶结、摘星贝雷帽、暖绒兔耳）× **4 款 3D 背饰**（向日葵书包、野餐花篮、星光小翅膀）自由混搭，并配备双手持物挂点（`CarrySocket`）与阳光镜台 3D 旋转预览。
+- **去考卷化情境气泡与亲手生活委托**：日常探索以世界锚定的圆润绘本对话气泡（`game/ui_v4/diegetic_dialogue.gd`）取代突兀的全屏三选一做题弹窗；在 `landmark_A` 苹果果园可亲手捧起草地上的 3D 红苹果/金苹果放入发光藤篮（`game/gameplay/tactile_life_quests.gd`）；全 **8 册教材、81 个单元、1,314 条词表记录**均已通过 `game/gameplay/curriculum_quest_director.gd` 动态桥接至每日邻居手账贴纸委托与立体书架。
+- **3D 微缩立体翻翻书剧场（`PopupBookTheater`）**：在真实 3D 胡桃木书桌上展开精装立体书，26 个字母插画立体纸偶随折页弹起跳跃演绎助记故事，支持亲手点击木块拼装立起纸偶，并与原有 `MemorySink` 存档进度无缝兼容。
+- **AI 安全伴学轻服务与隐性素养追踪（`services/ai_companion/`）**：内置双层儿童隐私与安全护栏（`KidRails`）、感知穿搭与手持物品的受控词域 `i+1` 伙伴轻聊、自然语音合成及 SHA-256 缓存、以及基于 **3PL IRT + H0–H5 支架分级**的隐性能力估算与家长温暖成长周报（`game/ui_v4/parent_ai_portal.gd`）。双击 `启动字母岛.cmd` 或运行 `./start-game.ps1` 将自动拉起本地伴学服务与 Forward+ 客户端；未配置云端 API Key 时自动启用零密钥本地引擎与离线语音。
+
+![V4 主岛微缩景观与高颜值草帽穿搭](docs/screenshots/v4-showcase/01_village_diorama.png)
+
+![V4 苹果果园亲手捧果与世界锚定绘本气泡](docs/screenshots/v4-showcase/04_landmark_A_tactile_orchard.png)
+
+![V4 3D 立体翻翻书剧场](docs/screenshots/v4-showcase/06_popup_book_theater_3d.png)
+
+---
+
+## 历史版本与互通说明（V3 基线保留）
+
+**v0.13.0-dev · 角色与进度互通** 已把本机网页和电脑单机接入同一份角色存档。双击 **[启动网页联机.cmd](启动网页联机.cmd)**，或打开已启动的 [本机字母岛](http://127.0.0.1:4189/)，选角色后点「在网页继续」或「在电脑端继续」；网页还可邀请朋友或输入邀请码加入，最多 4 人。物品、服装、生活任务与学习记录跟随角色；同一角色一次只由一端保存。原单机存档复制导入并保留原件，旧网页角色可首次进入时导入，断线草稿与冲突副本有恢复入口。操作与验证见 [进度互通记录](docs/verification/shared-save/README.md)，多人同行的既有范围见 [网页联机记录](docs/verification/web-online/README.md)。当前只监听本机，公网域名和服务器部署留到后续。
 
 面向小学生的生活模拟与英语学习项目。沿用 **v0.12.0-dev · 朋友回访与家长观察** 将已有 26 个字母和 U1–U3 接入可选的现实时间回访：旅行册里打开「朋友捎来的小邀请」，到花园、家里或校园和朋友再遇见熟悉内容；提示、首次作答、暂停与真实时间分别保留。「家长观察册」统一查看生活体验、原活动、词故事与回访记录。入口、实拍与受测范围见 [回访验收记录](docs/verification/revisits/README.md)和[操作画面](docs/revisits.html)。
 

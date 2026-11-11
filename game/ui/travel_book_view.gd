@@ -35,6 +35,15 @@ static func build(ui: Node, book_title: String, next_wish: String, visited: int,
 	pages.add_child(right_page)
 	var intro := ui.label("翻一翻，今天还想做什么？", 23) as Label
 	right_page.add_child(intro)
+	var v4_bar := HBoxContainer.new()
+	v4_bar.name = "V4CozyQuickBar"
+	v4_bar.add_theme_constant_override("separation", 10)
+	right_page.add_child(v4_bar)
+	for quick: Array in [["👗 阳光换装镜台", "bag"], ["📖 3D 立体翻翻书", "journey:library"], ["🌱 家长 AI 观察室", "v4_parent_ai"]]:
+		var qbtn := ui.button(str(quick[0]), str(quick[1]), str(quick[1]) == "journey:library", Vector2(0, 44)) as Button
+		qbtn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		qbtn.add_theme_font_size_override("font_size", 16)
+		v4_bar.add_child(qbtn)
 	var scroll := ScrollContainer.new()
 	scroll.name = "TravelBookScroll"
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED

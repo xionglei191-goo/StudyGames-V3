@@ -23,7 +23,7 @@ MAX_SAVE_BYTES = 8 * 1024 * 1024
 LEASE_SECONDS = 180
 EMPTY_REVISION = "empty"
 ID_PATTERN = re.compile(r"^[a-f0-9]{24}$")
-OUTFITS = {"yellow", "pink", "blue"}
+OUTFITS = {"yellow", "pink", "blue", "mint", "lavender", "caramel"}
 UNIT_QUESTIONS = {
     "1": {"u1_greeting", "u1_morning", "u1_goodbye"},
     "2": {"u2_name", "u2_intro", "u2_polite"},
@@ -141,7 +141,7 @@ def validate_state(raw: object) -> dict:
         valid &= not value["quests"]["delivery_done"] or value["quests"]["greet_done"]
         valid &= all(not placed or value["decorations_owned"][key] for key, placed in value["decorations_placed"].items())
         valid &= isinstance(value.get("learning"), dict)
-        valid &= all(isinstance(value[key], dict) for key in ("life", "preferences", "journey", "reviews") if key in value)
+        valid &= all(isinstance(value[key], dict) for key in ("life", "preferences", "journey", "reviews", "wardrobe", "v4") if key in value)
     if valid:
         known_questions = set().union(*UNIT_QUESTIONS.values())
         record_keys = {"exposed", "assisted", "independent", "attempts", "last_seen"}

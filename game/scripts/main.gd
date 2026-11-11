@@ -10,7 +10,16 @@ const HomeCatalog = preload("res://scripts/home_catalog.gd")
 const OnlineClient = preload("res://scripts/online_client.gd")
 const WebRooms = preload("res://scripts/web_rooms.gd")
 const SharedProfile = preload("res://scripts/shared_profile.gd")
+const AudioDirectorScript = preload("res://core/audio_director.gd")
+const AICompanionBridgeScript = preload("res://core/ai_companion_bridge.gd")
+const TactileQuestsScript = preload("res://gameplay/tactile_life_quests.gd")
+const CurriculumDirector = preload("res://gameplay/curriculum_quest_director.gd")
+const ParentAIPortal = preload("res://ui_v4/parent_ai_portal.gd")
 var online: Node
+var audio_director: Node
+var ai_bridge: Node
+var tactile_quests: Node3D
+var _commission_hint_used := false
 var online_config: Dictionary = {}
 var world: Node3D
 var player: CharacterBody3D
@@ -118,6 +127,23 @@ func _ready() -> void:
 	sounds = SoundScript.new()
 	add_child(sounds)
 	sounds.enabled = bool(State.data.preferences.effects) and not test_harness
+	audio_director = AudioDirectorScript.new()
+	add_child(audio_director)
+	audio_director.set_enabled(bool(State.data.preferences.effects) and not validation_mode)
+	ai_bridge = AICompanionBridgeScript.new()
+	add_child(ai_bridge)
+	ai_bridge.muted = muted or validation_mode
+	ai_bridge.chat_reply_ready.connect(func(_npc_id: String, reply: Dictionary):
+		if is_instance_valid(ui) and is_instance_valid(ui.diegetic) and ui.diegetic.visible:
+			ui.diegetic.show_ai_reply(reply)
+	)
+	var bus := get_node_or_null("/root/EventBus")
+	if bus != null:
+		bus.stealth_evidence_observed.connect(func(payload: Dictionary): State.record_stealth_evidence(payload))
+		bus.tts_speak_requested.connect(func(t: String, l: String, vh: String):
+			if is_instance_valid(ai_bridge):
+				ai_bridge.speak_text(t, l, vh)
+		)
 	feedback = FeedbackScript.new()
 	add_child(feedback)
 	feedback.reduced_motion = ui.reduced_motion
@@ -148,6 +174,42 @@ func _ready() -> void:
 	household = preload("res://scripts/home_controller.gd").new()
 	add_child(household)
 	household.setup(self)
+	tactile_quests = TactileQuestsScript.new()
+	tactile_quests.name = "TactileLifeQuests"
+	add_child(tactile_quests)
+	tactile_quests.apple_picked.connect(func(_kind: String, word_en: String):
+		if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
+		if is_instance_valid(ai_bridge): ai_bridge.speak_text(word_en, "en", "warm")
+		ui.notify("双手捧起了香甜的 %s！快走到果篮边放进去吧 ✨" % word_en)
+	)
+	tactile_quests.basket_delivered.connect(func(total_deliv: int, word_en: String):
+		State.collect_apple()
+		State.record_stealth_evidence({"word": word_en.split(" ")[-1], "support_level": 0, "correct": true, "context": "tactile_orchard_basket"})
+		if is_instance_valid(audio_director): audio_director.play_foley("wardrobe_sparkle")
+		feedback.pickup(player.position, player.position, "apple", "+1 鲜果入篮")
+		ui.notify("太棒啦！亲手把第 %d 颗果实放进了藤编果篮！" % total_deliv)
+	)
+	if is_instance_valid(ui.diegetic):
+		ui.diegetic.camera = camera
+		ui.diegetic.speak_requested.connect(func(t: String, l: String):
+			if is_instance_valid(ai_bridge): ai_bridge.speak_text(t, l, "warm")
+		)
+		ui.diegetic.hint_toggled.connect(func(_npc: String, shown: bool):
+			if shown: _commission_hint_used = true
+		)
+		ui.diegetic.ai_chat_submitted.connect(func(npc_id: String, msg: String):
+			var w_dict: Dictionary = State.data.get("wardrobe", {}) if State.data.get("wardrobe") is Dictionary else {}
+			var comm := CurriculumDirector.build_daily_commission(State, npc_id)
+			ai_bridge.request_npc_chat(npc_id, msg, {
+				"outfit": str(State.data.get("outfit", "yellow")),
+				"hat": str(w_dict.get("hat", "none")),
+				"bag": str(w_dict.get("bag", "none")),
+				"held_item": tactile_quests.held_kind if is_instance_valid(tactile_quests) else "",
+				"room": room,
+				"target_word": str(comm.get("target_word", "apple")),
+				"target_meaning_zh": str(comm.get("target_meaning_zh", "苹果"))
+			})
+		)
 	ui.speaker_provider = _dialogue_speaker
 	var start_room := "village" if validation_mode or not online_config.is_empty() or State.journey_snapshot().legacy_compatible else "home"
 	await change_room(start_room)
@@ -225,6 +287,7 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	voice.stop()
 	ui.close_panel()
 	ui.bubble_panel.hide()
+	if is_instance_valid(ui.diegetic): ui.diegetic.dismiss()
 	if next_room != room:
 		visit_return[room] = player.position
 	room = next_room
@@ -265,6 +328,10 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	camera.look_at(player.position + Vector3(0,0.5,0), Vector3.UP)
 	loading_room = false
 	player.locked = false
+	if is_instance_valid(tactile_quests):
+		tactile_quests.attach_to_room(self, room)
+	if is_instance_valid(audio_director):
+		audio_director.apply_room_soundscape(room)
 	if is_instance_valid(journey):
 		journey.on_room_ready()
 	_refresh()
@@ -464,7 +531,9 @@ func _process(delta: float) -> void:
 				ui.say(phrase.en,phrase.zh,camera.unproject_position(bubble_world_position))
 				greetings[greeting_id] = Time.get_ticks_msec()
 				greeting_clock = 8
-	if not ui.modal.visible and not is_instance_valid(football):
+	player.look_target = nearest.position if not nearest.is_empty() else Vector3.INF
+	var diegetic_open: bool = is_instance_valid(ui.diegetic) and bool(ui.diegetic.visible)
+	if not ui.modal.visible and not diegetic_open and not is_instance_valid(football):
 		var selected: Dictionary = hover_interaction if not hover_interaction.is_empty() else nearest
 		feedback.highlight(selected)
 		if not selected.is_empty() and not camera.is_position_behind(selected.position):
@@ -489,7 +558,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		get_viewport().set_input_as_handled()
 		return
 	if event.is_action_pressed("ui_cancel"):
-		if ui.modal.visible:
+		if is_instance_valid(ui.diegetic) and ui.diegetic.visible:
+			ui.diegetic.dismiss()
+		elif ui.modal.visible:
 			_request_close()
 		elif not player.path.is_empty():
 			_cancel_navigation()
@@ -575,8 +646,8 @@ func _refresh() -> void:
 		var wish: String = journey.objective()
 		ui.objective.text = wish.split(" · ",true,1)[-1]
 	if is_instance_valid(player):
-		player.set_outfit(d.outfit)
-		ui.update_outfit(str(d.outfit))
+		player.apply_wardrobe(d)
+		ui.update_wardrobe(d)
 	if is_instance_valid(world) and world.has_method("set_decoration"):
 		for id in ["flower_box","picnic","lamp"]:
 			if decor_preview and decor_selected==id:
@@ -587,6 +658,8 @@ func _refresh() -> void:
 func _close() -> void:
 	if is_instance_valid(journey) and not journey.close_memory(): return
 	if is_instance_valid(household): household.cancel_task()
+	if is_instance_valid(ui) and is_instance_valid(ui.diegetic):
+		ui.diegetic.dismiss()
 	_stop_orchard_activity()
 	_rollback_decoration()
 	_stop_football()
@@ -708,7 +781,24 @@ func interact_id(id: String) -> void:
 		"baker", "bakery": show_baker()
 		"gardener":
 			play_phrase("hello")
-			ui.show_panel("gardener","兔兔的果园","邻居   /   苹果屋","Hello!  欢迎你来果园。\n树上的苹果今天熟了，采三颗送给熊叔吧。\n累了也可以来我的花园坐一会儿。",[{"label":"听听 apple 的读音","id":"audio:apple","primary":true},{"label":"去采苹果","id":"navigate:orchard"}])
+			if not validation_mode and is_instance_valid(ui.diegetic):
+				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
+				ui.diegetic.open_conversation({
+					"npc_id": "npc_rabbit_gardener",
+					"speaker": "兔兔园丁 · A 苹果果园",
+					"en": "Hello! Sweet apples are ripe on the grass — pick one in your hands and bring it to my basket!",
+					"zh": "你好呀！香甜的 3D 红苹果已经掉落在草地上了，走过去双手捧起来放进发光藤篮，或者接一个今日单元小委托吧！",
+					"world_pos": conversation_position,
+					"auto_speak": false,
+					"actions": [
+						{"label": "🌟 今日单元小委托", "id": "v4_commission:npc_rabbit_gardener", "primary": true},
+						{"label": "🔊 听听 apple", "id": "audio:apple"},
+						{"label": "🍎 摘一颗苹果", "id": "navigate:orchard"},
+						{"label": "继续逛果园", "id": "close"}
+					]
+				})
+			else:
+				ui.show_panel("gardener","兔兔的果园","邻居   /   苹果屋","Hello!  欢迎你来果园。\n树上的苹果今天熟了，采三颗送给熊叔吧。\n累了也可以来我的花园坐一会儿。",[{"label":"听听 apple 的读音","id":"audio:apple","primary":true},{"label":"去采苹果","id":"navigate:orchard"}])
 		"orchard": show_orchard()
 		"school_gate": await change_room("school")
 		"home_gate": await change_room("home_estate")
@@ -736,6 +826,55 @@ func show_baker(play_greeting: bool = true) -> void:
 	var d: Dictionary = State.data
 	if play_greeting:
 		play_phrase("good_morning")
+	if not validation_mode and is_instance_valid(ui.diegetic):
+		if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
+		if not d.quests.greet_done:
+			ui.diegetic.open_conversation({
+				"npc_id": "npc_bear_uncle",
+				"speaker": "熊叔 · 暖香蛋糕坊",
+				"en": "Good morning! Welcome to Alphabet Island! Would you like to help me bake an apple cake today?",
+				"zh": "早上好！欢迎搬来晨光村！今天愿意帮熊叔一起烤一份香喷喷的苹果蛋糕吗？",
+				"world_pos": conversation_position,
+				"auto_speak": false,
+				"actions": [
+					{"label": "👋 Hello! 很高兴认识你", "id": "greet", "primary": true},
+					{"label": "🌟 今日单元小委托", "id": "v4_commission:npc_bear_uncle"},
+					{"label": "🔊 再听一遍", "id": "audio:good_morning"},
+					{"label": "先逛一逛", "id": "close"}
+				]
+			})
+		elif not d.quests.delivery_done:
+			ui.diegetic.open_conversation({
+				"npc_id": "npc_bear_uncle",
+				"speaker": "熊叔 · 暖香蛋糕坊",
+				"en": "Could you bring 3 sweet apples from the orchard? Let's bake our first cake together! (%d / 3)" % int(d.apples),
+				"zh": "帮我从果园带回 3 颗红苹果吧，送到后我们一起烤第一份蛋糕！（当前背包：%d 颗）" % int(d.apples),
+				"world_pos": conversation_position,
+				"auto_speak": false,
+				"actions": [
+					{"label": "🍎 交给熊叔 3 颗苹果", "id": "deliver", "primary": true, "disabled": d.apples < 3},
+					{"label": "🌿 带我去苹果树", "id": "navigate:orchard"},
+					{"label": "🌟 今日单元小委托", "id": "v4_commission:npc_bear_uncle"},
+					{"label": "先聊到这里", "id": "close"}
+				]
+			})
+		else:
+			ui.diegetic.open_conversation({
+				"npc_id": "npc_bear_uncle",
+				"speaker": "熊叔 · 暖香蛋糕坊",
+				"en": "Our bakery is open and warm! Bake an apple cake or pick a cozy storybook sticker with me! (Apples: %d · Cakes: %d)" % [int(d.apples), int(d.cakes)],
+				"zh": "蛋糕坊热气腾腾开张啦！3 颗苹果烤 1 份蛋糕，售出可得 15 叶币；也可以接今日教材手账小委托！",
+				"world_pos": conversation_position,
+				"auto_speak": false,
+				"actions": [
+					{"label": "🎂 制作苹果蛋糕", "id": "craft", "primary": true, "disabled": d.apples < 3},
+					{"label": "🪙 售出一份蛋糕", "id": "sell", "disabled": d.cakes < 1},
+					{"label": "🌟 今日单元小委托", "id": "v4_commission:npc_bear_uncle", "primary": d.apples < 3},
+					{"label": "🏡 挑选家园装饰", "id": "shop"},
+					{"label": "先聊到这里", "id": "close"}
+				]
+			})
+		return
 	if not d.quests.greet_done:
 		ui.show_panel("baker","Good morning!","熊叔   /   蛋糕烘焙坊","早上好！我是熊叔，欢迎你搬来晨光村。\n我正在准备苹果蛋糕，你愿意来帮忙吗？",[{"label":"Hello! 很高兴认识你","id":"greet","primary":true},{"label":"再听一遍","id":"audio:good_morning"}],"先和邻居熟悉起来。听到问候不计为学习过关。")
 	elif not d.quests.delivery_done:
@@ -935,12 +1074,93 @@ func show_settings() -> void:
 		{"label":"减少动态："+("开" if ui.reduced_motion else "关"),"id":"toggle_motion"},
 		{"label":"固定白昼："+("开" if State.data.preferences.get("fixed_day",false) else "关"),"id":"toggle_day"},
 		{"label":"窗口 / 全屏","id":"fullscreen"},
+		{"label":"家长 AI 成长观察室 & 八册同步","id":"v4_parent_ai","primary":true},
 		{"label":"家长观察册","id":"journey:parent"},
 		{"label":"保存并继续","id":"save","primary":true},
 		{"label":"保存并退出","id":"quit"}
 	],"物品与任务会自动保存。画好的明信片需要点击保存。")
 
 
+
+func _open_v4_commission(npc_id: String) -> void:
+	if not is_instance_valid(ui.diegetic):
+		return
+	_commission_hint_used = false
+	var comm := CurriculumDirector.build_daily_commission(State, npc_id)
+	if comm.is_empty():
+		return
+	var actions: Array = []
+	for opt: Dictionary in comm.get("options", []):
+		var ok_flag := "1" if bool(opt.get("correct", false)) else "0"
+		var act_id := "v4_comm_pick:%s:%s:%s:%s:%s" % [
+			ok_flag,
+			str(opt.get("word", "")),
+			str(comm.get("commission_id", "")),
+			npc_id,
+			str(comm.get("target_entry_id", ""))
+		]
+		actions.append({"label": str(opt.get("label", "")), "id": act_id, "primary": true})
+	var target_eid := str(comm.get("target_entry_id", ""))
+	if not target_eid.is_empty():
+		actions.append({"label": "📖 打开 3D 立体翻翻书", "id": "open_popup_story:" + target_eid})
+	actions.append({"label": "先逛一逛", "id": "close"})
+	if is_instance_valid(audio_director):
+		audio_director.play_foley("bubble_pop")
+	ui.diegetic.open_conversation({
+		"npc_id": npc_id,
+		"speaker": str(comm.get("speaker", "小岛邻居")),
+		"en": str(comm.get("prompt_en", "")),
+		"zh": str(comm.get("prompt_zh", "")),
+		"world_pos": conversation_position,
+		"show_zh_immediately": false,
+		"auto_speak": true,
+		"actions": actions
+	})
+
+func _handle_v4_commission_pick(payload: String) -> void:
+	var parts := payload.split(":", true, 4)
+	if parts.size() < 5:
+		return
+	var is_ok := parts[0] == "1"
+	var chosen_word := parts[1]
+	var commission_id := parts[2]
+	var npc_id := parts[3]
+	var target_eid := parts[4]
+	var support_lv := 1 if _commission_hint_used else 0
+	State.record_stealth_evidence({
+		"word": chosen_word,
+		"support_level": support_lv,
+		"correct": is_ok,
+		"context": "diegetic_commission:" + npc_id
+	})
+	if is_instance_valid(ai_bridge):
+		ai_bridge.observe_stealth_mastery(chosen_word, support_lv, is_ok, 1800, npc_id)
+	if is_ok:
+		State.complete_v4_commission(commission_id, 6)
+		if is_instance_valid(audio_director):
+			audio_director.play_foley("wardrobe_sparkle")
+		player.gesture("wave")
+		feedback.pickup(player.position, player.position, "leaf", "+6 叶币")
+		if is_instance_valid(ui.diegetic):
+			ui.diegetic.open_conversation({
+				"npc_id": npc_id,
+				"speaker": "小岛邻居 · 暖心回礼",
+				"en": "Wonderful! \"%s\" fits our cozy card! Here are 6 leaf coins for you!" % chosen_word,
+				"zh": "太棒啦！「%s」正好贴进小岛手账里，送你 6 枚叶币作为感谢！还想再试一张或翻开 3D 立体书吗？" % chosen_word,
+				"world_pos": conversation_position,
+				"show_zh_immediately": true,
+				"auto_speak": true,
+				"actions": [
+					{"label": "🌟 再接一张单元贴纸", "id": "v4_commission:" + npc_id, "primary": true},
+					{"label": "📖 翻开 3D 立体翻翻书", "id": "open_popup_story:" + target_eid},
+					{"label": "开心收下", "id": "close"}
+				]
+			})
+	else:
+		_commission_hint_used = true
+		if is_instance_valid(audio_director):
+			audio_director.play_foley("bubble_pop")
+		ui.notify("差一点点！点一下气泡右上角的「💡 中文贴士」或打开 3D 立体翻翻书看看吧 ✨")
 
 func _on_action(id: String) -> void:
 	if is_instance_valid(sounds) and not id.begins_with("note:"):
@@ -958,8 +1178,46 @@ func _on_action(id: String) -> void:
 	elif id.begins_with("outfit:"):
 		var outfit := id.trim_prefix("outfit:")
 		if State.set_outfit(outfit):
-			ui.update_outfit(outfit)
+			player.apply_wardrobe(State.data)
+			ui.update_wardrobe(State.data)
 			sounds.play("place")
+			if is_instance_valid(audio_director): audio_director.play_foley("wardrobe_sparkle")
+			if ui.current_panel == "bag":
+				ui.show_inventory(State.data, "outfit")
+	elif id.begins_with("hat:"):
+		var hat_id := id.trim_prefix("hat:")
+		if State.set_hat(hat_id):
+			player.apply_wardrobe(State.data)
+			ui.update_wardrobe(State.data)
+			if is_instance_valid(audio_director): audio_director.play_foley("wardrobe_sparkle")
+			if ui.current_panel == "bag":
+				ui.show_inventory(State.data, "hat")
+	elif id.begins_with("bag:"):
+		var bag_id := id.trim_prefix("bag:")
+		if State.set_bag(bag_id):
+			player.apply_wardrobe(State.data)
+			ui.update_wardrobe(State.data)
+			if is_instance_valid(audio_director): audio_director.play_foley("wardrobe_sparkle")
+			if ui.current_panel == "bag":
+				ui.show_inventory(State.data, "bag")
+	elif id.begins_with("wardrobe_tab:"):
+		ui.show_inventory(State.data, id.trim_prefix("wardrobe_tab:"))
+	elif id.begins_with("wardrobe_speak:"):
+		if is_instance_valid(ai_bridge):
+			ai_bridge.speak_text(id.trim_prefix("wardrobe_speak:"), "en", "warm")
+	elif id == "v4_parent_ai":
+		if _prepare_screen():
+			ParentAIPortal.build(ui, State, ai_bridge)
+	elif id.begins_with("open_popup_story:"):
+		var entry_id := id.trim_prefix("open_popup_story:")
+		if is_instance_valid(ui.diegetic):
+			ui.diegetic.dismiss()
+		if is_instance_valid(journey) and not entry_id.is_empty():
+			journey.open_story(entry_id, false)
+	elif id.begins_with("v4_commission:"):
+		_open_v4_commission(id.trim_prefix("v4_commission:"))
+	elif id.begins_with("v4_comm_pick:"):
+		_handle_v4_commission_pick(id.trim_prefix("v4_comm_pick:"))
 	elif id.begins_with("preview_buy:"):
 		await _preview_purchase(id.trim_prefix("preview_buy:"))
 	elif id.begins_with("buy:"):
@@ -1078,11 +1336,15 @@ func _on_action(id: String) -> void:
 			"toggle_audio":
 				if State.set_preference("voice",muted):
 					muted = not muted
+					if is_instance_valid(ai_bridge):
+						ai_bridge.muted = muted or validation_mode
 					voice.stop()
 				show_settings()
 			"toggle_effects":
 				if State.set_preference("effects",not State.data.preferences.effects):
 					sounds.enabled = bool(State.data.preferences.effects) and not test_harness
+					if is_instance_valid(audio_director):
+						audio_director.set_enabled(bool(State.data.preferences.effects) and not validation_mode)
 				show_settings()
 			"toggle_motion":
 				if State.set_preference("reduced_motion",not ui.reduced_motion):
