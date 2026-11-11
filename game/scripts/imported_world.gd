@@ -43,6 +43,9 @@ func build(_room: String = "village") -> Dictionary:
 			var mesh_node := node as MeshInstance3D
 			if mesh_node.mesh == null:
 				continue
+			# Per-source render visibility; collision metadata independently governs physics.
+			if node_name in _manifest.get("render_hidden_nodes", []):
+				mesh_node.visible = false
 			var kind: String = _collision_kind(mesh_node)
 			match kind:
 				"ground":

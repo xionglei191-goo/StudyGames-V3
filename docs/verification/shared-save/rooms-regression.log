@@ -1,0 +1,17 @@
+test_duplicate_session_cannot_displace_first_tab (__main__.NetworkRoutes.test_duplicate_session_cannot_displace_first_tab) ... ok
+test_full_room_unknown_code_and_bad_protocol (__main__.NetworkRoutes.test_full_room_unknown_code_and_bad_protocol) ... Executing <Task pending name='Task-21' coro=<NetworkRoutes.test_full_room_unknown_code_and_bad_protocol() running at F:\LoveStudy\web\test_server.py:188> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:459> cb=[_run_until_complete_cb() at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:181] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py:109> took 0.233 seconds
+Executing <Task pending name='Task-21' coro=<NetworkRoutes.test_full_room_unknown_code_and_bad_protocol() running at F:\LoveStudy\web\test_server.py:190> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:459> cb=[_run_until_complete_cb() at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:181] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py:109> took 0.104 seconds
+ok
+test_http_and_same_origin (__main__.NetworkRoutes.test_http_and_same_origin) ... ok
+test_two_players_pose_wave_and_separate_room (__main__.NetworkRoutes.test_two_players_pose_wave_and_separate_room) ... Executing <Task pending name='Task-72' coro=<NetworkRoutes.test_two_players_pose_wave_and_separate_room() running at F:\LoveStudy\web\test_server.py:149> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:459> cb=[_run_until_complete_cb() at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:181] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py:109> took 0.152 seconds
+ok
+test_capacity_identity_and_private_records (__main__.RoomRules.test_capacity_identity_and_private_records) ... ok
+test_loading_reservation_is_bounded (__main__.RoomRules.test_loading_reservation_is_bounded) ... ok
+test_names_and_input_types (__main__.RoomRules.test_names_and_input_types) ... ok
+test_pose_validation_order_and_no_foreign_mutations (__main__.RoomRules.test_pose_validation_order_and_no_foreign_mutations) ... ok
+test_reconnect_grace_and_host_transfer (__main__.RoomRules.test_reconnect_grace_and_host_transfer) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 6.274s
+
+OK

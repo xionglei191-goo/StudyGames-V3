@@ -1,0 +1,288 @@
+{
+  "schema_version": 1,
+  "scope": "Independent read-only review of village and eight campus scenes, play and overview screenshots only.",
+  "created_at": "2026-10-27T19:46:35.285160+08:00",
+  "review_method": "All 18 original PNGs were opened individually at original 1440x900 resolution; three derived contact sheets also viewed for cross-scene comparison.",
+  "summary": {
+    "scenes": 9,
+    "images": 18,
+    "no_visible_blocking_issue_scenes": 9,
+    "visible_missing_materials": 0,
+    "empty_scenes": 0,
+    "obvious_player_or_primary_area_occlusion": 0
+  },
+  "rows": [
+    {
+      "scene": "village",
+      "status": "NO_VISIBLE_BLOCKING_ISSUE",
+      "observation_zh": "主岛全景完整，建筑、树木、水域和道路材质可见；游玩镜头中的角色、喷泉广场和家门无遮挡。",
+      "images": [
+        {
+          "path": "native/village-play.png",
+          "view": "play",
+          "width": 1440,
+          "height": 900,
+          "sha256": "48bbee452181c674b5afaabcb0314ff0fbcf2d8778049266c2e9f97d7014baa4",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        },
+        {
+          "path": "native/village-overview.png",
+          "view": "overview",
+          "width": 1440,
+          "height": 900,
+          "sha256": "75ead7b2707575198789e92d5e2becef5781763e859c23301c678d98fa64fc95",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        }
+      ]
+    },
+    {
+      "scene": "school",
+      "status": "NO_VISIBLE_BLOCKING_ISSUE",
+      "observation_zh": "校园建筑群、道路、绿地与运动区完整；入口人物及校园通路清楚，没有大片材质丢失或空画面。",
+      "images": [
+        {
+          "path": "native/school-play.png",
+          "view": "play",
+          "width": 1440,
+          "height": 900,
+          "sha256": "777310b53a987cd3a71e715967d9c1dafcec44b9c0fbd83a8cf7ff0cbbb50e44",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        },
+        {
+          "path": "native/school-overview.png",
+          "view": "overview",
+          "width": 1440,
+          "height": 900,
+          "sha256": "16d961831b3f94b1ecbc70ccbf751c88fa19606caeac77a89bc59bc9617e24d5",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        }
+      ]
+    },
+    {
+      "scene": "classroom",
+      "status": "NO_VISIBLE_BLOCKING_ISSUE",
+      "observation_zh": "木地板、课桌、书柜和黑板正常显示；玩家及室内人物可辨认，入口区域未被前墙或家具遮住。",
+      "images": [
+        {
+          "path": "native/classroom-play.png",
+          "view": "play",
+          "width": 1440,
+          "height": 900,
+          "sha256": "e4cbe118c6a433bacb6f76dd1135383052791a6ca69de2062ecb4bd7f2771e00",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        },
+        {
+          "path": "native/classroom-overview.png",
+          "view": "overview",
+          "width": 1440,
+          "height": 900,
+          "sha256": "caef7a50335fdb73e0509478f9382bdecc56e20f970c265300db12d692b1d87d",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        }
+      ]
+    },
+    {
+      "scene": "music_room",
+      "status": "NO_VISIBLE_BLOCKING_ISSUE",
+      "observation_zh": "钢琴、鼓组、舞台、吉他和地板材质正常；玩家和教师无遮挡，整体场景完整。",
+      "images": [
+        {
+          "path": "native/music_room-play.png",
+          "view": "play",
+          "width": 1440,
+          "height": 900,
+          "sha256": "611b978978fad8b42bbdeba0551f8444ce50b73e2bbb2a35e5daf0f762ba0f98",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        },
+        {
+          "path": "native/music_room-overview.png",
+          "view": "overview",
+          "width": 1440,
+          "height": 900,
+          "sha256": "1f37a52698430a33a03bc7d76074b285b27c27c148d4fe9e31f589db96812546",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        }
+      ]
+    },
+    {
+      "scene": "art_room",
+      "status": "NO_VISIBLE_BLOCKING_ISSUE",
+      "observation_zh": "画架、作品墙、画材台、围裙架和陶艺桌正常显示；入口角色及中央区域无遮挡。",
+      "images": [
+        {
+          "path": "native/art_room-play.png",
+          "view": "play",
+          "width": 1440,
+          "height": 900,
+          "sha256": "507717a96708f0d7bd2b548dd7ce10235a662662cadc5d113384ad77403f0802",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        },
+        {
+          "path": "native/art_room-overview.png",
+          "view": "overview",
+          "width": 1440,
+          "height": 900,
+          "sha256": "1954bd5f7230b056dce0037c7e4ab1e1fc5878cdfdf37b39cf047aa56436b23f",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        }
+      ]
+    },
+    {
+      "scene": "science_room",
+      "status": "NO_VISIBLE_BLOCKING_ISSUE",
+      "observation_zh": "显微镜、实验台、磁铁和展示柜正常显示；玩家、教师与中间走道可见，无大片异常材质。",
+      "images": [
+        {
+          "path": "native/science_room-play.png",
+          "view": "play",
+          "width": 1440,
+          "height": 900,
+          "sha256": "14dfb4cfa55ca201808973f9833a0a51b5cdbcf53786ddfad4af4df07cf5fa0d",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        },
+        {
+          "path": "native/science_room-overview.png",
+          "view": "overview",
+          "width": 1440,
+          "height": 900,
+          "sha256": "6ed716d0a85be0f19435e202dff83998f117718edeeabb38a62ff9d99ec41f00",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        }
+      ]
+    },
+    {
+      "scene": "canteen",
+      "status": "NO_VISIBLE_BLOCKING_ISSUE",
+      "observation_zh": "格纹地面、餐柜、餐盘和汤锅正常显示；玩家与食堂角色可见，前方入口清楚。",
+      "images": [
+        {
+          "path": "native/canteen-play.png",
+          "view": "play",
+          "width": 1440,
+          "height": 900,
+          "sha256": "eaa7d7272539e9ea04b1665143cd3ef340ae8f011638a33b0b2508065e3af9a7",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        },
+        {
+          "path": "native/canteen-overview.png",
+          "view": "overview",
+          "width": 1440,
+          "height": 900,
+          "sha256": "8f34e428f68ab855625b215627c18e25b9326539c238825e1e0f3240a126a99a",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        }
+      ]
+    },
+    {
+      "scene": "playground",
+      "status": "NO_VISIBLE_BLOCKING_ISSUE",
+      "observation_zh": "草坪、环形跑道、球架、篮筐和围栏正常显示；人物与入口无遮挡，全景未缺失。",
+      "images": [
+        {
+          "path": "native/playground-play.png",
+          "view": "play",
+          "width": 1440,
+          "height": 900,
+          "sha256": "27a1e75909643be8254f3d6226b14de64b9e7be2a7276ec46f5d025c9536acd1",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        },
+        {
+          "path": "native/playground-overview.png",
+          "view": "overview",
+          "width": 1440,
+          "height": 900,
+          "sha256": "74895c316d33a295db93f016ef2a1f7251187a0d4c7bdbbbab9a7cdb6482cdf7",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        }
+      ]
+    },
+    {
+      "scene": "football_field",
+      "status": "NO_VISIBLE_BLOCKING_ISSUE",
+      "observation_zh": "条纹草地、球门、球网、场线和替补席正常显示；玩家与教练可见，无空画面或明显遮挡。",
+      "images": [
+        {
+          "path": "native/football_field-play.png",
+          "view": "play",
+          "width": 1440,
+          "height": 900,
+          "sha256": "6712fc0e84da9d05ad7cd5ff28db23121abd361d5d6bb1cff8f9f5bc47052752",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        },
+        {
+          "path": "native/football_field-overview.png",
+          "view": "overview",
+          "width": 1440,
+          "height": 900,
+          "sha256": "dc615e883a0f0f9e4c7de901d588a9f31cf3d72d6206ae5103c6e75a0445edb6",
+          "reviewed_at_original_resolution": true,
+          "visible_missing_material": false,
+          "empty_scene": false,
+          "obvious_player_or_primary_area_occlusion": false
+        }
+      ]
+    }
+  ],
+  "contact_sheets": [
+    "native/review/campus-contact-1.jpg",
+    "native/review/campus-contact-2.jpg",
+    "native/review/campus-contact-3.jpg"
+  ],
+  "original_images_modified": false,
+  "models_modified": false,
+  "limitations": [
+    "Static screenshots do not prove collision, navigation, interactions, animation or performance.",
+    "The review reports visible missing materials, empty images and obvious occlusion only; it is not a full art-direction or mesh-quality audit."
+  ]
+}

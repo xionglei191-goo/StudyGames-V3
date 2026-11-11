@@ -18,6 +18,7 @@ const UNIT_QUESTIONS: Dictionary = {
 }
 
 var save_path: String = "user://island-save-v1.json"
+var shared_web_save: bool = false
 var data: Dictionary = _default_state()
 var _active_question: String = ""
 var _active_assisted: bool = false
@@ -217,7 +218,8 @@ func save_state() -> bool:
 	if file == null:
 		notice.emit("无法写入存档，请检查磁盘空间。")
 		return false
-	file.store_string(JSON.stringify(validation["state"], "\t", true, true))
+	var save_text := JSON.stringify(validation["state"], "\t", true, true)
+	file.store_string(save_text)
 	file.flush()
 	var write_error: Error = file.get_error()
 	file.close()
@@ -248,6 +250,12 @@ func save_state() -> bool:
 	if not FileAccess.file_exists(absolute_path + ".bak"):
 		DirAccess.copy_absolute(absolute_path, absolute_path + ".bak")
 	data = validation["state"]
+	if shared_web_save and OS.has_feature("web"):
+		# This synchronous acknowledgement covers the local recovery draft only.
+		# The shell serializes network updates and separately displays shared-save status.
+		var retained: Variant = JavaScriptBridge.eval("window.AlphabetIslandOnline.saveProgress(" + JSON.stringify(save_text) + ")", true)
+		if retained != true:
+			notice.emit("本页进度已写入，恢复副本暂时未保存；请保留页面并等待存档状态恢复。")
 	return true
 
 

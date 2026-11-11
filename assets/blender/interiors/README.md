@@ -1,23 +1,81 @@
 # 字母岛场所、校园与家庭房间
 
-43 个可独立加载的场景：`landmark_A`—`landmark_Z`、`school`、`home_estate` 为 28 个二级场所；另有七个校园三级场景、七个家庭三级房间，以及住宅室内通行空间 `home_hall`。门厅不新增学习层级或固定记忆点。家庭房间包括 `home` 客厅、`home_bedroom`、`home_kitchen`、`home_dining`、`home_bathroom`、`home_study`、`home_balcony`。当前精修源文件为校园 `school/school_v04.blend`、客厅 `home/home_v04.blend`、门厅 `home_hall/home_hall_v02.blend`；其他场景路径以总清单为准。
+43 个可独立加载的场景：`landmark_A`—`landmark_Z`、`school`、`home_estate` 为 28 个二级场所；另有七个校园三级场景、七个家庭三级房间，以及住宅室内通行空间 `home_hall`。门厅不新增学习层级或固定记忆点。家庭房间包括 `home` 客厅、`home_bedroom`、`home_kitchen`、`home_dining`、`home_bathroom`、`home_study`、`home_balcony`。
 
-校园 v03 在已完成的 v02 校园东侧增加足球运动区与连通道路，七处三级入口在相应功能区。旧 school_v01 房间和 school_v02 校园保留为历史素材。新增音乐、美术、科学房间拥有分别建模的专业陈设和五个固定探索位置。
+## 当前模型与源预览（2026-10-27，own16 同步批次）
 
-总入口：[interiors_manifest.json](interiors_manifest.json)。当前住宅外观编辑 `home_estate/home_estate_v03.blend`，旧 v01/v02 原稿保留。[全场景画质对照](../../../docs/world-refinement.html) 和 [本轮精修验收](../../../docs/verification/world-refinement/README.md) 覆盖本目录全部 43 个场景及主岛，旧源文件保留。历史证据：[室内行走与七房门](../../../docs/verification/home-indoor-v3/README.md) · [小院客厅样板](../../../docs/verification/visual-refinement/README.md) · [外观v2](../../../docs/verification/home-exterior-v2/README.md) · [家庭层级v1](../../../docs/verification/home-hierarchy-v1/README.md)。此前35场景资产检查：[validation_report.json](reports/validation_report.json)；此前同步记录：[production_status.json](reports/production_status.json)。原31场景回环记录：[roundtrip_report.json](reports/roundtrip_report.json)；校园 v03 与足球场保存后导出记录见 [v0.3.1 证据](../../../docs/verification/v0.3.1/saved-blend-export.log)。历史报告保留其原验证范围。
+总入口：[interiors_manifest.json](interiors_manifest.json)。当前使用 Drive own16 批次的全部 43 个场景，加上主岛 v13，共 44 个运行时模型。`own16` 是同步批次名；各场景源文件有各自版本号，下表依据当前清单列出实际路径。
 
-## 看图
+主岛源：[alphabet_island_layout_v13_own.blend](../alphabet_island/alphabet_island_layout_v13_own.blend)；运行时模型为 `game/assets/world/island.glb`，岛屿版本与来源见 [岛屿清单](../../../game/assets/world/manifest.json)。本次新增 132 个版本化源文件，替换了对应 44 个运行时 GLB；原有 206 个 Blender 源模型及备份的哈希保持不变。同步与验证记录见 [own16 本地同步验收](../../../docs/verification/drive-model-sync-own16-20261027/README.md)，当前图片入口见 [最新模型画廊](../../../docs/models-latest-gallery.html)。
 
-- [本轮全部实机前后对比](../../../docs/world-refinement.html) · [进屋与室内行走](../../../docs/home-indoor-gallery.html) · [小院住宅 Blender 预览](home_estate/preview_v03.png) · [客厅](home/preview_v04.png) · [门厅](home_hall/preview_v02.png)
+部分远端 `.blend` 由已导出的 GLB 恢复为可编辑网格。它们可用于网格级编辑，但原始修改器、程序化构建过程和编辑历史没有随之恢复；旧版原始工程继续保留，不能把恢复网格称为完整原始工程。
+
+当前 403 个玩法 marker 的名称、层级与元数据保留；其中六个家庭房间共有 41 个位置调整，不能沿用“所有坐标不变”的历史结论。布局与场景元数据已随模型匹配，四套定向回归覆盖全部 44 场景，共通过 2325 项检查、341 段行走与 116 次转场。当前清单链接的源预览尺寸混合，常见 960 × 840；`classroom`、`playground`、`football_field` 为 960 × 666，另有 800 × 700、960 × 700/900、1000 × 900、1100 × 900、1280 × 889 等。本轮另完成 97 张 Godot 原生 1440 × 900 截图与 3511 项检查，包含 44 场景正常游玩/总览各一张及 9 张住宅实走截图；逐图复核未见空场景、明显缺材质或代理块遮挡。详见本轮验收记录，未进行全仓库测试或新版 Blender 保存后再导出的回环验证。
+
+| 场景 | 当前可编辑源 | 导出模型 | 源预览 |
+|---|---|---|---|
+| `landmark_A` | [landmark_A_v05_own.blend](landmark_A/landmark_A_v05_own.blend) | [GLB](landmark_A/landmark_A_v05_own.glb) | [预览](landmark_A/preview_v05_own.png) |
+| `landmark_B` | [landmark_B_v04_own.blend](landmark_B/landmark_B_v04_own.blend) | [GLB](landmark_B/landmark_B_v04_own.glb) | [预览](landmark_B/preview_v04_own.png) |
+| `landmark_C` | [landmark_C_v16_own.blend](landmark_C/landmark_C_v16_own.blend) | [GLB](landmark_C/landmark_C_v16_own.glb) | [预览](landmark_C/preview_v16_own.png) |
+| `landmark_D` | [landmark_D_v15_own.blend](landmark_D/landmark_D_v15_own.blend) | [GLB](landmark_D/landmark_D_v15_own.glb) | [预览](landmark_D/preview_v15_own.png) |
+| `landmark_E` | [landmark_E_v04_own.blend](landmark_E/landmark_E_v04_own.blend) | [GLB](landmark_E/landmark_E_v04_own.glb) | [预览](landmark_E/preview_v04_own.png) |
+| `landmark_F` | [landmark_F_v04_own.blend](landmark_F/landmark_F_v04_own.blend) | [GLB](landmark_F/landmark_F_v04_own.glb) | [预览](landmark_F/preview_v04_own.png) |
+| `landmark_G` | [landmark_G_v03_own.blend](landmark_G/landmark_G_v03_own.blend) | [GLB](landmark_G/landmark_G_v03_own.glb) | [预览](../../../docs/verification/own-science-detail-20261025/landmark_G/blender-source-after.png) |
+| `landmark_H` | [landmark_H_v04_own.blend](landmark_H/landmark_H_v04_own.blend) | [GLB](landmark_H/landmark_H_v04_own.glb) | [预览](landmark_H/preview_v04_own.png) |
+| `landmark_I` | [landmark_I_v18_own.blend](landmark_I/landmark_I_v18_own.blend) | [GLB](landmark_I/landmark_I_v18_own.glb) | [预览](landmark_I/preview_v18_own.png) |
+| `landmark_J` | [landmark_J_v04_own.blend](landmark_J/landmark_J_v04_own.blend) | [GLB](landmark_J/landmark_J_v04_own.glb) | [预览](../../../docs/verification/own-craft-detail-20261025/landmark_J/blender-source-after.png) |
+| `landmark_K` | [landmark_K_v04.blend](landmark_K/landmark_K_v04.blend) | [GLB](landmark_K/landmark_K_v04.glb) | [预览](landmark_K/preview_v04.png) |
+| `landmark_L` | [landmark_L_v04.blend](landmark_L/landmark_L_v04.blend) | [GLB](landmark_L/landmark_L_v04.glb) | [预览](landmark_L/preview_v04.png) |
+| `landmark_M` | [landmark_M_v04_own.blend](landmark_M/landmark_M_v04_own.blend) | [GLB](landmark_M/landmark_M_v04_own.glb) | [预览](landmark_M/preview_v04_own.png) |
+| `landmark_N` | [landmark_N_v07_own.blend](landmark_N/landmark_N_v07_own.blend) | [GLB](landmark_N/landmark_N_v07_own.glb) | [预览](landmark_N/preview_v07_own.png) |
+| `landmark_O` | [landmark_O_v03_own.blend](landmark_O/landmark_O_v03_own.blend) | [GLB](landmark_O/landmark_O_v03_own.glb) | [预览](../../../docs/verification/own-craft-detail-20261025/landmark_O/blender-source-after.png) |
+| `landmark_P` | [landmark_P_v05_own.blend](landmark_P/landmark_P_v05_own.blend) | [GLB](landmark_P/landmark_P_v05_own.glb) | [预览](landmark_P/preview_v05_own.png) |
+| `landmark_Q` | [landmark_Q_v04_own.blend](landmark_Q/landmark_Q_v04_own.blend) | [GLB](landmark_Q/landmark_Q_v04_own.glb) | [预览](landmark_Q/preview_v04_own.png) |
+| `landmark_R` | [landmark_R_v03_own.blend](landmark_R/landmark_R_v03_own.blend) | [GLB](landmark_R/landmark_R_v03_own.glb) | [预览](../../../docs/verification/own-science-detail-20261025/landmark_R/blender-source-after.png) |
+| `landmark_S` | [landmark_S_v03_own.blend](landmark_S/landmark_S_v03_own.blend) | [GLB](landmark_S/landmark_S_v03_own.glb) | [预览](../../../docs/verification/own-science-detail-20261025/landmark_S/blender-source-after.png) |
+| `landmark_T` | [landmark_T_v03.blend](landmark_T/landmark_T_v03.blend) | [GLB](landmark_T/landmark_T_v03.glb) | [预览](landmark_T/preview_v03.png) |
+| `landmark_U` | [landmark_U_v05_own.blend](landmark_U/landmark_U_v05_own.blend) | [GLB](landmark_U/landmark_U_v05_own.glb) | [预览](landmark_U/preview_v05_own.png) |
+| `landmark_V` | [landmark_V_v04_own.blend](landmark_V/landmark_V_v04_own.blend) | [GLB](landmark_V/landmark_V_v04_own.glb) | [预览](landmark_V/preview_v04_own.png) |
+| `landmark_W` | [landmark_W_v04_own.blend](landmark_W/landmark_W_v04_own.blend) | [GLB](landmark_W/landmark_W_v04_own.glb) | [预览](landmark_W/preview_v04_own.png) |
+| `landmark_X` | [landmark_X_v15_own.blend](landmark_X/landmark_X_v15_own.blend) | [GLB](landmark_X/landmark_X_v15_own.glb) | [预览](landmark_X/preview_v15_own.png) |
+| `landmark_Y` | [landmark_Y_v03_own.blend](landmark_Y/landmark_Y_v03_own.blend) | [GLB](landmark_Y/landmark_Y_v03_own.glb) | [预览](../../../docs/verification/own-yarn-post-home-recovery-20261025/landmark_Y/blender-source-after.png) |
+| `landmark_Z` | [landmark_Z_v03_own.blend](landmark_Z/landmark_Z_v03_own.blend) | [GLB](landmark_Z/landmark_Z_v03_own.glb) | [预览](../../../docs/verification/own-yarn-post-home-recovery-20261025/landmark_Z/blender-source-after.png) |
+| `school` | [school_v10_own.blend](school/school_v10_own.blend) | [GLB](school/school_v10_own.glb) | [预览](school/preview_v10_own.png) |
+| `classroom` | [classroom_v05_detail.blend](classroom/classroom_v05_detail.blend) | [GLB](classroom/classroom_v05_detail.glb) | [预览](classroom/preview_v05_detail.png) |
+| `music_room` | [music_room_v06_own.blend](music_room/music_room_v06_own.blend) | [GLB](music_room/music_room_v06_own.glb) | [预览](music_room/preview_v06_own.png) |
+| `art_room` | [art_room_v06_own.blend](art_room/art_room_v06_own.blend) | [GLB](art_room/art_room_v06_own.glb) | [预览](art_room/preview_v06_own.png) |
+| `science_room` | [science_room_v05_own.blend](science_room/science_room_v05_own.blend) | [GLB](science_room/science_room_v05_own.glb) | [预览](science_room/preview_v05_own.png) |
+| `canteen` | [canteen_v05_own.blend](canteen/canteen_v05_own.blend) | [GLB](canteen/canteen_v05_own.glb) | [预览](canteen/preview_v05_own.png) |
+| `playground` | [playground_v05_detail.blend](playground/playground_v05_detail.blend) | [GLB](playground/playground_v05_detail.glb) | [预览](playground/preview_v05_detail.png) |
+| `football_field` | [football_field_v05_detail.blend](football_field/football_field_v05_detail.blend) | [GLB](football_field/football_field_v05_detail.glb) | [预览](football_field/preview_v05_detail.png) |
+| `home` | [home_v07_own.blend](home/home_v07_own.blend) | [GLB](home/home_v07_own.glb) | [预览](../../../docs/verification/own-yarn-post-home-recovery-20261025/home/blender-source-after.png) |
+| `home_balcony` | [home_balcony_v08_own.blend](home_balcony/home_balcony_v08_own.blend) | [GLB](home_balcony/home_balcony_v08_own.glb) | [预览](home_balcony/preview_v08_own.png) |
+| `home_bathroom` | [home_bathroom_v08_own.blend](home_bathroom/home_bathroom_v08_own.blend) | [GLB](home_bathroom/home_bathroom_v08_own.glb) | [预览](home_bathroom/preview_v08_own.png) |
+| `home_bedroom` | [home_bedroom_v10_own.blend](home_bedroom/home_bedroom_v10_own.blend) | [GLB](home_bedroom/home_bedroom_v10_own.glb) | [预览](home_bedroom/preview_v10_own.png) |
+| `home_dining` | [home_dining_v09_own.blend](home_dining/home_dining_v09_own.blend) | [GLB](home_dining/home_dining_v09_own.glb) | [预览](home_dining/preview_v09_own.png) |
+| `home_estate` | [home_estate_v09_own.blend](home_estate/home_estate_v09_own.blend) | [GLB](home_estate/home_estate_v09_own.glb) | [预览](home_estate/preview_v09_own.png) |
+| `home_hall` | [home_hall_v05_own.blend](home_hall/home_hall_v05_own.blend) | [GLB](home_hall/home_hall_v05_own.glb) | [预览](../../../docs/verification/own-yarn-post-home-recovery-20261025/home_hall/blender-source-after.png) |
+| `home_kitchen` | [home_kitchen_v10_own.blend](home_kitchen/home_kitchen_v10_own.blend) | [GLB](home_kitchen/home_kitchen_v10_own.glb) | [预览](home_kitchen/preview_v10_own.png) |
+| `home_study` | [home_study_v07_own.blend](home_study/home_study_v07_own.blend) | [GLB](home_study/home_study_v07_own.glb) | [预览](home_study/preview_v07_own.png) |
+
+## 历史版本与证据
+
+历史校园 v03 在已完成的 v02 校园东侧增加足球运动区与连通道路，七处三级入口在相应功能区。旧 school_v01 房间和 school_v02 校园保留为历史素材。新增音乐、美术、科学房间拥有分别建模的专业陈设和五个固定探索位置。
+
+历史精修源包括 [校园 v04](school/school_v04.blend)、[客厅 v04](home/home_v04.blend)、[门厅 v02](home_hall/home_hall_v02.blend) 和 [住宅外观 v03](home_estate/home_estate_v03.blend)，更早的 v01/v02 原稿同样保留。[历史全场景画质对照](../../../docs/world-refinement.html) 和 [历史精修验收](../../../docs/verification/world-refinement/README.md) 覆盖当时的 43 个场景及主岛，不代表 own16 新模型已完成同样验收。历史证据：[室内行走与七房门](../../../docs/verification/home-indoor-v3/README.md) · [小院客厅样板](../../../docs/verification/visual-refinement/README.md) · [外观v2](../../../docs/verification/home-exterior-v2/README.md) · [家庭层级v1](../../../docs/verification/home-hierarchy-v1/README.md)。此前35场景资产检查：[validation_report.json](reports/validation_report.json)；此前同步记录：[production_status.json](reports/production_status.json)。原31场景回环记录：[roundtrip_report.json](reports/roundtrip_report.json)；校园 v03 与足球场保存后导出记录见 [v0.3.1 证据](../../../docs/verification/v0.3.1/saved-blend-export.log)。历史报告保留其原验证范围。
+
+## 历史预览
+
+- [历史全部实机前后对比](../../../docs/world-refinement.html) · [进屋与室内行走](../../../docs/home-indoor-gallery.html) · [小院住宅 Blender 预览](home_estate/preview_v03.png) · [客厅](home/preview_v04.png) · [门厅](home_hall/preview_v02.png)
 - [完整校园 v04](school/preview_v04.png) · [独立足球场](football_field/preview_v02.png) · [音乐教室](music_room/preview_v02.png) · [美术教室](art_room/preview_v02.png) · [科学教室](science_room/preview_v02.png)
 - [原 v01：A— I 接触表](reports/contact_sheet_01.jpg)
 - [原 v01：J— R 接触表](reports/contact_sheet_02.jpg)
 - [原 v01：S—Z 与旧学校接触表](reports/contact_sheet_03.jpg)
 - [原 v01：教室、食堂、操场、家园接触表](reports/contact_sheet_04.jpg)
 
-每张单图为 Blender 实际渲染；原 v01 图为 1100 × 968，新教室为 1400 × 1232，校园 v03 为 1920 × 1280。室内前墙和顶面保持开放，便于俯视观察。预览灯光、相机、背景不导入游戏；游戏光照由 Godot 配置。
+本节为历史 Blender 源预览与实机记录。原 v01 图为 1100 × 968，当时的新教室为 1400 × 1232，校园 v03 为 1920 × 1280；这些尺寸不是 own16 全部预览的统一规格。历史室内多采用开放前墙和顶面的剖视方式。预览灯光、相机、背景不导入游戏；游戏光照由 Godot 配置。
 
-## A 果园继承
+## A 果园继承（历史初始适配）
 
 A 从 `assets/blender/A_orchard/A_orchard_with_apple_house_v02.blend` 复制，不规则岛台、原环路、真实 Tripo 苹果屋、五棵果树、溪流、小桥与 `A_LOCUS_01...05` 均保留。整场统一下移 0.65 米，使原草地基准成为 Blender Z=0，X/Y 布局没有重排。
 
@@ -27,9 +85,11 @@ A 从 `assets/blender/A_orchard/A_orchard_with_apple_house_v02.blend` 复制，�
 
 固定五点含义以 `game/data/landmark_interiors.json` 为依据，共210点。家庭40点的课本来源与活动另见 `game/data/home_hierarchy.json`。建模采用各场所的生活道具：船和码头、料理岛和烤箱、鼓台、蛋壳照料湾、花床温室、旅行地球仪、穿戴镜、收藏转台、风筝骨架、蘑菇暖炉、枝巢、双翼书架、瓜藤与比较秤、拼布桌、机器人维修臂、天球仪与望远镜、车厢、气象庭院、岩层窗、鲸鱼比例地毯、木琴、绕线器与织机、邮袋与邮戳墙。
 
-整体包含不规则果园、圆角厅、开放庭院、菱形构架工坊、星形地坪、横长站台与舞台、窄长服务亭、学校枢纽与住宅。它们共享温暖的材质和家具工艺；每图的实物用途不同。本轮在版本化源文件中细化木材、布料、石材、树冠、家具边缘及主题陈设；已有纹理保留，固定标记和碰撞网格维持原坐标。预览使用 Blender 灯光，最终画面以 Godot 实拍为准。
+整体包含不规则果园、圆角厅、开放庭院、菱形构架工坊、星形地坪、横长站台与舞台、窄长服务亭、学校枢纽与住宅。它们共享温暖的材质和家具工艺；每图的实物用途不同。历史精修在版本化源文件中细化木材、布料、石材、树冠、家具边缘及主题陈设。own16 已同步新的模型、布局与材质；玩法 marker 保留情况及六个家庭房间的位置变化见本页当前版本说明，不能据历史段落推断碰撞或站位坐标全部不变。最终画面与通行结论以本轮 Godot 实拍及实际测试为准。
 
 ## 保存 Blender 后导出
+
+以下保留现有“保存 Blender → 导出”工作流。本轮 own16 同步采用远端已提供的 GLB 与源预览，尚未对这批 `.blend` 在本地执行保存后再导出回环；历史回环报告不能作为新版已通过回环的证据。
 
 正常更新只运行 [export_existing.py](scripts/export_existing.py)。它读取已保存的工程，导出并刷新预览与清单，不导入生成器，也不重新保存或覆盖 `.blend`。
 
@@ -55,9 +115,11 @@ $blenderExe = 'F:\Tools\Blender\blender-5.2.2-windows-x64\blender.exe'
 - `SG_FLOOR_*` 和 `SG_COLLIDER_*` 都是真实网格。代理材质透明、Blender 渲染隐藏，但会导出；引擎按名称生成简化碰撞并隐藏它们。
 - `SG_DECOR_MODEL_FLOWER_BOX`、`SG_DECOR_MODEL_PICNIC`、`SG_DECOR_MODEL_LAMP` 分别是独立父节点，可整体显隐。装饰不是同一个盆栽的占位替身。
 - 移动物件时同时检查对应交互 Empty 和简化碰撞代理。交互点是旁侧站位，不应放到桌子、柜子或墙内部。重新导出后运行校验器。
-- A 的苹果屋及小院/客厅 v03 的材质贴图随 GLB 内嵌；其他场景使用 glTF 基础颜色与粗糙度，不依赖外部贴图或仅 Blender 可用的程序材质。
+- 历史 A 苹果屋及小院/客厅 v03 的材质贴图随 GLB 内嵌。当前 own16 的材质与纹理以各 GLB 及验收记录为准；编辑恢复网格源时需检查纹理、材质和隐藏状态，不应假定它保留原工程的程序材质或修改器。
 
 ## 校验与边界
+
+以下是现有校验入口及其检查范围说明，不表示 own16 已完成全部检查；本轮结果以同步验收记录为准。
 
 ```powershell
 & 'C:\Users\Administrator\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe' 'F:\LoveStudy\assets\blender\interiors\scripts\validate_interiors.py' --contact-sheets

@@ -1,0 +1,17 @@
+{
+  "after_outfit": "yellow",
+  "before_outfit": "pink",
+  "coins": 83,
+  "completed_units": {
+    "1": true,
+    "2": false,
+    "3": false
+  },
+  "day": 4,
+  "learning_record_count": 3,
+  "ok": true,
+  "unit": 2,
+  "expected_before_outfit": "pink",
+  "result": "PASS",
+  "scope": "Real HTTP shared-save module writes pink, then a real headless Godot process under the native supervisor reads pink and saves yellow. This checks transport/storage continuity; it does not re-test the browser outfit UI."
+}

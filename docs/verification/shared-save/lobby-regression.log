@@ -1,0 +1,15 @@
+✔ solo launch loads canonical JSON without applying an unchanged stale catalogue outfit (8.4236ms)
+✔ input captures pink once; delayed blue presence and blur/change cannot enqueue blue (3.6684ms)
+✔ change-only selection remains supported and matching acknowledgement permits the next real selection (2.1406ms)
+✔ finishSession waits for IDB and shared save, releases once, and does not requeue stale presence (2.89ms)
+✔ startupFailed releases the acquired lease and browser lock without writing canonical progress (1.7151ms)
+Legacy source SHA256: ff1146c1339c52e158daade40f04bf6cb70d637207be4bf846b8214539d21001 | fake API persisted outfits: pink -> blue
+✔ incident evidence: previous exported shell can enqueue blue after pink on a delayed report/change sequence (5.2061ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33.2765

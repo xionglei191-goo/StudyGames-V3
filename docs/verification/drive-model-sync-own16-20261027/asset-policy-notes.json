@@ -1,0 +1,60 @@
+{
+  "raw_asset_report": "asset-validation.json",
+  "legacy_policy_warning_count": 10,
+  "unclassified_structural_errors": 0,
+  "warnings": [
+    {
+      "room": "classroom",
+      "warning": "Preview too small",
+      "reason": "Cloud source preview is 960x666; old validator requires height >=700. Original delivered pixels are preserved. Fresh native capture is separate."
+    },
+    {
+      "room": "playground",
+      "warning": "Preview too small",
+      "reason": "Cloud source preview is 960x666; old validator requires height >=700. Original delivered pixels are preserved. Fresh native capture is separate."
+    },
+    {
+      "room": "football_field",
+      "warning": "Preview too small",
+      "reason": "Cloud source preview is 960x666; old validator requires height >=700. Original delivered pixels are preserved. Fresh native capture is separate."
+    },
+    {
+      "room": "home_bathroom",
+      "warning": "Opaque proxy SG_COLLIDER_OWN_Bath_Counter_Bridge",
+      "reason": "Existing importer hides every SG_COLLIDER mesh after creating physics. Native hidden-node assertions are required before acceptance."
+    },
+    {
+      "room": "home_bathroom",
+      "warning": "Opaque proxy SG_COLLIDER_OWN_Bath_Toilet_Alcove_Back",
+      "reason": "Existing importer hides every SG_COLLIDER mesh after creating physics. Native hidden-node assertions are required before acceptance."
+    },
+    {
+      "room": "home_bathroom",
+      "warning": "Opaque proxy SG_COLLIDER_OWN_Bath_Toilet_Screen",
+      "reason": "Existing importer hides every SG_COLLIDER mesh after creating physics. Native hidden-node assertions are required before acceptance."
+    },
+    {
+      "room": "home_kitchen",
+      "warning": "Opaque proxy SG_COLLIDER_OWN10_FridgeSinkBridge",
+      "reason": "Existing importer hides every SG_COLLIDER mesh after creating physics. Native hidden-node assertions are required before acceptance."
+    },
+    {
+      "room": "home_kitchen",
+      "warning": "Opaque proxy SG_COLLIDER_OWN10_MainPreparationRun",
+      "reason": "Existing importer hides every SG_COLLIDER mesh after creating physics. Native hidden-node assertions are required before acceptance."
+    },
+    {
+      "room": "home_kitchen",
+      "warning": "Opaque proxy SG_COLLIDER_OWN10_StoveLanding",
+      "reason": "Existing importer hides every SG_COLLIDER mesh after creating physics. Native hidden-node assertions are required before acceptance."
+    },
+    {
+      "room": "home_kitchen",
+      "warning": "Opaque proxy SG_COLLIDER_OWN10_RearCounterFill",
+      "reason": "Existing importer hides every SG_COLLIDER mesh after creating physics. Native hidden-node assertions are required before acceptance."
+    }
+  ],
+  "native_visibility_verified": true,
+  "note": "This classifies only known legacy validator policy differences; it does not convert the raw result to a pass.",
+  "native_evidence": "native/report.json"
+}

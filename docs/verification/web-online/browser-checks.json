@@ -1,0 +1,26 @@
+{
+  "date": "2026-10-25",
+  "browser": "Chrome on Windows, two local tabs",
+  "result": "PASS",
+  "scope": [
+    "create and join by invite link",
+    "independent movement and outfit synchronization",
+    "home_estate lazy resource pack",
+    "physical door into home_hall lazy resource pack",
+    "follow friend across scenes",
+    "visitor refresh restored saved blue outfit",
+    "host refresh restored saved pink outfit",
+    "visitor leave returned to lobby and count dropped to one",
+    "duplicate local profile refused",
+    "rejoin same room from lobby after leaving"
+  ],
+  "not_tested": [
+    "public deployment",
+    "other devices",
+    "mobile controls",
+    "load testing",
+    "learning efficacy"
+  ],
+  "protected_file_count": 69,
+  "changed_protected_files": []
+}

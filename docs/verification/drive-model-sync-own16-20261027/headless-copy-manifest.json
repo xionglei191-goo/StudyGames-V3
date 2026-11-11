@@ -1,0 +1,68 @@
+{
+  "purpose": "Isolated own16 asset-sync validation copies. Assertions, routes, inputs, save protection, cleanup and exit logic retained byte for byte except documented path replacements.",
+  "prepared_only": true,
+  "tests_started": false,
+  "report_directory": "docs/verification/drive-model-sync-own16-20261027/headless",
+  "copies": [
+    {
+      "source": "game/tests/test_movement.gd",
+      "copy": "game/tests/drive_model_sync/test_movement.gd",
+      "source_sha256": "8021220b0eaa211baf9fb4ae44a7df29a1c5d90f8ee829c84bd7cfdbdb3899f9",
+      "copy_sha256": "3c0f613450ec8f7f9f00c4113f742aeab7ae9bbfbdf982a4fc528a3a04e350f1",
+      "replacement_count": 1,
+      "only_documented_path_replacements": true,
+      "replacements": [
+        {
+          "from": "res://../.local/validation",
+          "to": "res://../docs/verification/drive-model-sync-own16-20261027/headless"
+        }
+      ]
+    },
+    {
+      "source": "game/tests/test_school_hierarchy.gd",
+      "copy": "game/tests/drive_model_sync/test_school_hierarchy.gd",
+      "source_sha256": "e6f60c06b1a936eff077695d9a032bf1e78064a6cbc3c4d28c7ea5d396eb3150",
+      "copy_sha256": "7ca377e366096001ea66e592ebd2812a67b62bde4d80dfb2ad67293fe655f285",
+      "replacement_count": 1,
+      "only_documented_path_replacements": true,
+      "replacements": [
+        {
+          "from": "extends \"res://tests/test_movement.gd\"",
+          "to": "extends \"res://tests/drive_model_sync/test_movement.gd\""
+        }
+      ]
+    },
+    {
+      "source": "game/tests/test_world_refinement.gd",
+      "copy": "game/tests/drive_model_sync/test_world_refinement.gd",
+      "source_sha256": "485724417bea9f5df427803d11cc43599497668803103a28252e2d15544c1418",
+      "copy_sha256": "5a7754951274dcf6241d828d142b52d610523e10b3fdacc943aec1d0760e0812",
+      "replacement_count": 2,
+      "only_documented_path_replacements": true,
+      "replacements": [
+        {
+          "from": "extends \"res://tests/test_school_hierarchy.gd\"",
+          "to": "extends \"res://tests/drive_model_sync/test_school_hierarchy.gd\""
+        },
+        {
+          "from": "res://../docs/verification/world-refinement",
+          "to": "res://../docs/verification/drive-model-sync-own16-20261027/headless"
+        }
+      ]
+    },
+    {
+      "source": "game/tests/test_home_indoor.gd",
+      "copy": "game/tests/drive_model_sync/test_home_indoor.gd",
+      "source_sha256": "49b4b791c954168ab36d903a92b6f4d65017df6c545d935c401360f3e9438248",
+      "copy_sha256": "b6c835d3be644418f3529af44cd06abcf8ee025407bb740585db03d662f07c65",
+      "replacement_count": 1,
+      "only_documented_path_replacements": true,
+      "replacements": [
+        {
+          "from": "res://../docs/verification/home-indoor-v3",
+          "to": "res://../docs/verification/drive-model-sync-own16-20261027/headless"
+        }
+      ]
+    }
+  ]
+}

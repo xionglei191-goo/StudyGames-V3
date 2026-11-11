@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "purpose": "Supplement to unchanged baseline.json/before.zip: source island manifest and imported_world adaptation file before approved three-line change",
+  "created_at": "2026-10-27T19:29:54.945014+08:00",
+  "workspace_root": "F:\\LoveStudy",
+  "archive": "supplemental-before.zip",
+  "archive_sha256": "61610e78f1bc695e047297d18a62e2b587875bda03c01b1d35a9bd6ce6546d16",
+  "archive_bytes": 25806,
+  "files": [
+    {
+      "path": "F:\\LoveStudy\\assets\\blender\\alphabet_island\\game_map_manifest.json",
+      "relative_path": "assets/blender/alphabet_island/game_map_manifest.json",
+      "category": "source_island_manifest",
+      "zip_entry": "workspace/assets/blender/alphabet_island/game_map_manifest.json",
+      "size": 201794,
+      "mtime_ns": 1792835318126637000,
+      "sha256": "c4ddc08ae4b288ffaf8a9357e9dc592c9c3f7d5cc33bf7cf19b70bfc9c8bdbf4"
+    },
+    {
+      "path": "F:\\LoveStudy\\game\\scripts\\imported_world.gd",
+      "relative_path": "game/scripts/imported_world.gd",
+      "category": "model_adaptation_code",
+      "zip_entry": "workspace/game/scripts/imported_world.gd",
+      "size": 10228,
+      "mtime_ns": 1792769747429295700,
+      "sha256": "03d9f4825aeeadf1c8eca757fac09a1154ef94b8ef7ecca2cb72f8bd8d29d47f"
+    }
+  ],
+  "validation": "All ZIP entries read back and SHA-256 verified; original files rehashed unchanged",
+  "production_mutations": [],
+  "godot_launched": false
+}

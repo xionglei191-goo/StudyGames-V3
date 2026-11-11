@@ -1,0 +1,3066 @@
+{
+  "passed": false,
+  "room_count": 43,
+  "scope": "GLB structure, required gameplay markers, embedded images, finite accessors, preview images, conservative 2D walking connectivity; runtime tested separately",
+  "rooms": [
+    {
+      "room_id": "landmark_A",
+      "name": "苹果果园屋",
+      "errors": [],
+      "nodes": 731,
+      "mesh_nodes": 711,
+      "collision_proxies": 125,
+      "floor_meshes": 19,
+      "textures": 27,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 19944016,
+      "triangles": 186065,
+      "sha256": "1ff0a16bef05e2a777bef2bfa9ed8e911bc09f924c3a24e24374a00ae051e379",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4626,
+        "free_cells": 6470,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_B",
+      "name": "船屋码头",
+      "errors": [],
+      "nodes": 154,
+      "mesh_nodes": 146,
+      "collision_proxies": 11,
+      "floor_meshes": 1,
+      "textures": 18,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 4094748,
+      "triangles": 93141,
+      "sha256": "fc2f540925d7997d9570b18b78af7e83e378b539de4da12ea0dde03ca5ab0fab",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 3492,
+        "free_cells": 3492,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_C",
+      "name": "蛋糕烘焙坊",
+      "errors": [],
+      "nodes": 821,
+      "mesh_nodes": 813,
+      "collision_proxies": 141,
+      "floor_meshes": 1,
+      "textures": 16,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 7868568,
+      "triangles": 170676,
+      "sha256": "a5b56aaaeb6113254b31cc5a2c672c430d2f33197273a01d617a2fb18b6f70b0",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4212,
+        "free_cells": 4300,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_D",
+      "name": "鼓屋音乐厅",
+      "errors": [],
+      "nodes": 562,
+      "mesh_nodes": 554,
+      "collision_proxies": 131,
+      "floor_meshes": 1,
+      "textures": 16,
+      "preview_dimensions": [
+        960,
+        900
+      ],
+      "glb_bytes": 8050872,
+      "triangles": 221164,
+      "sha256": "8d0aa5f1d96931b6d3c387ad74375376c594bfe1cedb779306806eab6177f6ae",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4713,
+        "free_cells": 4852,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_E",
+      "name": "蛋壳孵化屋",
+      "errors": [],
+      "nodes": 520,
+      "mesh_nodes": 512,
+      "collision_proxies": 134,
+      "floor_meshes": 1,
+      "textures": 14,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 7889964,
+      "triangles": 187760,
+      "sha256": "76831ea32b41e9062f81a657a7562d05b1898191501a4dd870931f35bb78dd93",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4841,
+        "free_cells": 4937,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_F",
+      "name": "巨花温室",
+      "errors": [],
+      "nodes": 1375,
+      "mesh_nodes": 1367,
+      "collision_proxies": 151,
+      "floor_meshes": 1,
+      "textures": 12,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 7830604,
+      "triangles": 259400,
+      "sha256": "db954d95e0dc1f757779560c156dd0b863f971405cdbde9b20f810d949533aa4",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4218,
+        "free_cells": 4274,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_G",
+      "name": "地球仪旅行馆",
+      "errors": [],
+      "nodes": 427,
+      "mesh_nodes": 419,
+      "collision_proxies": 135,
+      "floor_meshes": 1,
+      "textures": 16,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 5320540,
+      "triangles": 124660,
+      "sha256": "adbe0150e4141f7638353965266d0182818d3148192a273003eaebb7d09ca3fc",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4675,
+        "free_cells": 4771,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_H",
+      "name": "帽子裁缝店",
+      "errors": [],
+      "nodes": 415,
+      "mesh_nodes": 407,
+      "collision_proxies": 135,
+      "floor_meshes": 1,
+      "textures": 28,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 5245236,
+      "triangles": 108608,
+      "sha256": "cbc0939fda77c2d399ec6da446bdd4b5905d10e7161d4ae4755d35cfb1d686b1",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4790,
+        "free_cells": 4898,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_I",
+      "name": "冰淇淋驿亭",
+      "errors": [],
+      "nodes": 274,
+      "mesh_nodes": 266,
+      "collision_proxies": 10,
+      "floor_meshes": 1,
+      "textures": 14,
+      "preview_dimensions": [
+        1100,
+        900
+      ],
+      "glb_bytes": 4377340,
+      "triangles": 120632,
+      "sha256": "680356f7bf67e411c3b6b6efb31ba838e00f0d5f37135417c1b5bf8085722ddf",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4272,
+        "free_cells": 4272,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_J",
+      "name": "玻璃罐收藏馆",
+      "errors": [],
+      "nodes": 789,
+      "mesh_nodes": 781,
+      "collision_proxies": 138,
+      "floor_meshes": 1,
+      "textures": 16,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 8768148,
+      "triangles": 165344,
+      "sha256": "0aa4f79498e731e8e7d1b7dd10f1b231fac096da6c1aed4ace8446e7103266c2",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4158,
+        "free_cells": 4254,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_K",
+      "name": "风筝工坊",
+      "errors": [],
+      "nodes": 370,
+      "mesh_nodes": 362,
+      "collision_proxies": 104,
+      "floor_meshes": 1,
+      "textures": 22,
+      "preview_dimensions": [
+        1000,
+        900
+      ],
+      "glb_bytes": 4948756,
+      "triangles": 139440,
+      "sha256": "5e25e2bb5cf118ab8ef238a594842f2f9d6032ffb70674c4ecb24233ef1e356a",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4458,
+        "free_cells": 4784,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_L",
+      "name": "灯笼驿站",
+      "errors": [],
+      "nodes": 765,
+      "mesh_nodes": 757,
+      "collision_proxies": 143,
+      "floor_meshes": 1,
+      "textures": 22,
+      "preview_dimensions": [
+        1000,
+        900
+      ],
+      "glb_bytes": 10811344,
+      "triangles": 242312,
+      "sha256": "aeacd18f982e2cccf04863fe3b76ae78c6c34e42d1e95fed33da62f577e65872",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4862,
+        "free_cells": 4918,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_M",
+      "name": "蘑菇邻居屋",
+      "errors": [],
+      "nodes": 514,
+      "mesh_nodes": 506,
+      "collision_proxies": 136,
+      "floor_meshes": 1,
+      "textures": 18,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 6397552,
+      "triangles": 154488,
+      "sha256": "08e3db4700563ad5c3aa77c27783aece9ed6207acf7fddaeee6b7a586ee7cd37",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4530,
+        "free_cells": 4644,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_N",
+      "name": "鸟巢观察屋",
+      "errors": [],
+      "nodes": 373,
+      "mesh_nodes": 365,
+      "collision_proxies": 138,
+      "floor_meshes": 1,
+      "textures": 14,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 8300764,
+      "triangles": 194802,
+      "sha256": "f334a161c628b814a44ad4f637d19c96edb804972892607496ddc9b008dcda78",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4455,
+        "free_cells": 4608,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_O",
+      "name": "猫头鹰图书馆",
+      "errors": [],
+      "nodes": 660,
+      "mesh_nodes": 652,
+      "collision_proxies": 14,
+      "floor_meshes": 1,
+      "textures": 28,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 7261308,
+      "triangles": 122640,
+      "sha256": "eafc66a421ca02b05f5c31dbe6cd4a51b04215a69bed353a494c25c4032b7813",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 3892,
+        "free_cells": 3892,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_P",
+      "name": "南瓜农场屋",
+      "errors": [],
+      "nodes": 540,
+      "mesh_nodes": 532,
+      "collision_proxies": 138,
+      "floor_meshes": 1,
+      "textures": 16,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 6632156,
+      "triangles": 138892,
+      "sha256": "4aa00ad7fb235a959067723939715e541936ee4041d77395c4480e5a8a59a939",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 3652,
+        "free_cells": 3748,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_Q",
+      "name": "拼布故事馆",
+      "errors": [],
+      "nodes": 590,
+      "mesh_nodes": 582,
+      "collision_proxies": 142,
+      "floor_meshes": 1,
+      "textures": 34,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 10394212,
+      "triangles": 238402,
+      "sha256": "ef5527e54330451090e803d70cad4e4fdabf37f3f3720c3cb1501c86b864b02a",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 5171,
+        "free_cells": 5241,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_R",
+      "name": "机器人工坊",
+      "errors": [],
+      "nodes": 340,
+      "mesh_nodes": 332,
+      "collision_proxies": 10,
+      "floor_meshes": 1,
+      "textures": 18,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 5874356,
+      "triangles": 136632,
+      "sha256": "b0a54b350c70372b1179983c48b3b09afc0ccd4d3510d87b0c748ac7008c739b",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4431,
+        "free_cells": 4431,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_S",
+      "name": "星形天文台",
+      "errors": [],
+      "nodes": 362,
+      "mesh_nodes": 354,
+      "collision_proxies": 127,
+      "floor_meshes": 1,
+      "textures": 8,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 3533036,
+      "triangles": 83696,
+      "sha256": "5fbc38227e7bb54e952e45b59de540f54381f88cc8f2b3292590586e404fcff7",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 7000,
+        "free_cells": 8208,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      },
+      "floor_orientation": {
+        "passed": true,
+        "errors": [],
+        "mesh": "SG_FLOOR_Main",
+        "indexed_triangles": 316,
+        "top_y": 0.0,
+        "bottom_y": -0.46,
+        "top_triangles": 8,
+        "bottom_triangles": 8,
+        "top_normal_y": [
+          1.0
+        ],
+        "bottom_normal_y": [
+          -1.0
+        ],
+        "downward_front_face_rays": {
+          "SG_SPAWN": {
+            "ray_origin": [
+              0.0,
+              2.0,
+              5.65
+            ],
+            "front_face_ground_y": 0.0,
+            "supported_at_y_zero": true
+          },
+          "SG_EXIT": {
+            "ray_origin": [
+              0.0,
+              2.0,
+              6.45
+            ],
+            "front_face_ground_y": 0.0,
+            "supported_at_y_zero": true
+          },
+          "SG_NPC_HOST": {
+            "ray_origin": [
+              -2.2,
+              2.0,
+              1.4
+            ],
+            "front_face_ground_y": 0.0,
+            "supported_at_y_zero": true
+          },
+          "SG_MEMORY_01": {
+            "ray_origin": [
+              -3.5,
+              2.0,
+              3.4
+            ],
+            "front_face_ground_y": 0.0,
+            "supported_at_y_zero": true
+          },
+          "SG_MEMORY_02": {
+            "ray_origin": [
+              -4.8,
+              2.0,
+              0.7
+            ],
+            "front_face_ground_y": 0.0,
+            "supported_at_y_zero": true
+          },
+          "SG_MEMORY_03": {
+            "ray_origin": [
+              0.0,
+              2.0,
+              0.3
+            ],
+            "front_face_ground_y": 0.0,
+            "supported_at_y_zero": true
+          },
+          "SG_MEMORY_04": {
+            "ray_origin": [
+              4.7,
+              2.0,
+              0.7
+            ],
+            "front_face_ground_y": 0.0,
+            "supported_at_y_zero": true
+          },
+          "SG_MEMORY_05": {
+            "ray_origin": [
+              4.6,
+              2.0,
+              3.9
+            ],
+            "front_face_ground_y": 0.0,
+            "supported_at_y_zero": true
+          }
+        },
+        "scope": "Indexed GLB winding and vertical front-face triangle intersections; Godot physics retest remains separate"
+      }
+    },
+    {
+      "room_id": "landmark_T",
+      "name": "火车车站",
+      "errors": [],
+      "nodes": 280,
+      "mesh_nodes": 272,
+      "collision_proxies": 12,
+      "floor_meshes": 1,
+      "textures": 14,
+      "preview_dimensions": [
+        1000,
+        900
+      ],
+      "glb_bytes": 5617992,
+      "triangles": 146940,
+      "sha256": "59e79b9636480d2ad6f7838ed78c8f47cc6bfd1acd7b2cce51c5e8fb02939af9",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4058,
+        "free_cells": 4058,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_U",
+      "name": "雨伞气象屋",
+      "errors": [],
+      "nodes": 784,
+      "mesh_nodes": 776,
+      "collision_proxies": 138,
+      "floor_meshes": 1,
+      "textures": 14,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 6008164,
+      "triangles": 140633,
+      "sha256": "68ba0b8a67d5eefd9702bbea9dda27bbe3664181a2183e120fd1062a6a0d151d",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4373,
+        "free_cells": 4469,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_V",
+      "name": "休眠火山观察站",
+      "errors": [],
+      "nodes": 131,
+      "mesh_nodes": 123,
+      "collision_proxies": 11,
+      "floor_meshes": 1,
+      "textures": 18,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 4703828,
+      "triangles": 109840,
+      "sha256": "a740cd82661eb66fe35aab53b4f5b4a607c670f5936177f65a70d6b2b68aac2b",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 3860,
+        "free_cells": 3860,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_W",
+      "name": "鲸鱼海洋馆",
+      "errors": [],
+      "nodes": 347,
+      "mesh_nodes": 339,
+      "collision_proxies": 143,
+      "floor_meshes": 1,
+      "textures": 16,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 4325256,
+      "triangles": 94146,
+      "sha256": "2c08de483bf801db8d28cf3ed677d9ae6ab7c33a3c51df8f0f464efdcbcdc936",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 3959,
+        "free_cells": 4173,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_X",
+      "name": "木琴海边舞台",
+      "errors": [],
+      "nodes": 258,
+      "mesh_nodes": 250,
+      "collision_proxies": 10,
+      "floor_meshes": 1,
+      "textures": 26,
+      "preview_dimensions": [
+        960,
+        900
+      ],
+      "glb_bytes": 6564796,
+      "triangles": 175772,
+      "sha256": "d40b3d9892f83b17a11bbe62beebcd30edb597bab7536ac7c5046362ea010bb9",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 3629,
+        "free_cells": 3629,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_Y",
+      "name": "毛线手作屋",
+      "errors": [],
+      "nodes": 1121,
+      "mesh_nodes": 1113,
+      "collision_proxies": 138,
+      "floor_meshes": 1,
+      "textures": 26,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 18206340,
+      "triangles": 480596,
+      "sha256": "ce3aa964d506140bf10a7178daf3385af2dd305193ae57b754f06d77c8dacd28",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4260,
+        "free_cells": 4356,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "landmark_Z",
+      "name": "斑马邮局",
+      "errors": [],
+      "nodes": 515,
+      "mesh_nodes": 507,
+      "collision_proxies": 13,
+      "floor_meshes": 1,
+      "textures": 24,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 8341720,
+      "triangles": 167100,
+      "sha256": "2c889ab474247f453db365b4299d3a99286500cd25124bc26f9fdc7a52a80497",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4226,
+        "free_cells": 4226,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "school",
+      "name": "山丘学园",
+      "errors": [],
+      "nodes": 1278,
+      "mesh_nodes": 1255,
+      "collision_proxies": 80,
+      "floor_meshes": 1,
+      "textures": 39,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 22434436,
+      "triangles": 490462,
+      "sha256": "399f18e47a3d7ea73a18d650e45cb60bf70aeb7068627803d8e14f615f54514d",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 57045,
+        "free_cells": 57045,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_CLASSROOM": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_MUSIC_ROOM": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_ART_ROOM": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_SCIENCE_ROOM": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_CANTEEN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_PLAYGROUND": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_FOOTBALL_FIELD": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "classroom",
+      "name": "教室",
+      "errors": [
+        "Preview too small"
+      ],
+      "nodes": 348,
+      "mesh_nodes": 340,
+      "collision_proxies": 13,
+      "floor_meshes": 1,
+      "textures": 19,
+      "preview_dimensions": [
+        960,
+        666
+      ],
+      "glb_bytes": 7955392,
+      "triangles": 206968,
+      "sha256": "76e337a7013fc4936ce17cb4cb9afae64b6eec8d271bc69275cdafb9e614b210",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4190,
+        "free_cells": 4190,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "music_room",
+      "name": "音乐教室",
+      "errors": [],
+      "nodes": 464,
+      "mesh_nodes": 456,
+      "collision_proxies": 11,
+      "floor_meshes": 1,
+      "textures": 29,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 8649064,
+      "triangles": 187892,
+      "sha256": "1631a5c064b56db5fab51a7c04407de4d7a05d70b7f6a3a57a3df716a2e26281",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 5145,
+        "free_cells": 5145,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "art_room",
+      "name": "美术教室",
+      "errors": [],
+      "nodes": 415,
+      "mesh_nodes": 407,
+      "collision_proxies": 11,
+      "floor_meshes": 1,
+      "textures": 27,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 7130428,
+      "triangles": 161536,
+      "sha256": "23d7a32eb6b3739b7fcc789849c4621be4199f6bc649016d1ffa64099b32b4d6",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 3981,
+        "free_cells": 3981,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "science_room",
+      "name": "科学教室",
+      "errors": [],
+      "nodes": 492,
+      "mesh_nodes": 484,
+      "collision_proxies": 11,
+      "floor_meshes": 1,
+      "textures": 19,
+      "preview_dimensions": [
+        960,
+        700
+      ],
+      "glb_bytes": 8728088,
+      "triangles": 231400,
+      "sha256": "9a972ed1c9a475451522bb8ff81b878f6bc6d09698d19d0b221b851615afba18",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 5295,
+        "free_cells": 5295,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "canteen",
+      "name": "食堂",
+      "errors": [],
+      "nodes": 551,
+      "mesh_nodes": 543,
+      "collision_proxies": 12,
+      "floor_meshes": 1,
+      "textures": 14,
+      "preview_dimensions": [
+        960,
+        700
+      ],
+      "glb_bytes": 8794860,
+      "triangles": 199312,
+      "sha256": "aaa93a233bd5e7de5b14d21007494b0368800861e37c93114c44302951e20a80",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 3713,
+        "free_cells": 3713,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "playground",
+      "name": "操场",
+      "errors": [
+        "Preview too small"
+      ],
+      "nodes": 108,
+      "mesh_nodes": 100,
+      "collision_proxies": 10,
+      "floor_meshes": 2,
+      "textures": 15,
+      "preview_dimensions": [
+        960,
+        666
+      ],
+      "glb_bytes": 4941108,
+      "triangles": 131984,
+      "sha256": "642d016e9e54f306de8c192487e8f5290565bfcfec19b93c6ce3b2f88aee9b7a",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 4848,
+        "free_cells": 4848,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "football_field",
+      "name": "校园足球场",
+      "errors": [
+        "Preview too small"
+      ],
+      "nodes": 446,
+      "mesh_nodes": 438,
+      "collision_proxies": 28,
+      "floor_meshes": 1,
+      "textures": 17,
+      "preview_dimensions": [
+        960,
+        666
+      ],
+      "glb_bytes": 7307016,
+      "triangles": 192420,
+      "sha256": "9b68ed1cf80778aae38c5637427ebc7afa41b5c20870a6ad3328969cb794dc27",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 20162,
+        "free_cells": 20162,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "home",
+      "name": "客厅",
+      "errors": [],
+      "nodes": 624,
+      "mesh_nodes": 605,
+      "collision_proxies": 117,
+      "floor_meshes": 1,
+      "textures": 15,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 7730556,
+      "triangles": 186972,
+      "sha256": "8672b8a0f07d8c949468b629909a6e6aa96d2c28706dc19939889fe4a04ed94f",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 3964,
+        "free_cells": 3964,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_BED": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_WARDROBE": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DECOR_FLOWER_BOX": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DECOR_PICNIC": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DECOR_LAMP": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "home_balcony",
+      "name": "家务阳台",
+      "errors": [],
+      "nodes": 464,
+      "mesh_nodes": 453,
+      "collision_proxies": 10,
+      "floor_meshes": 1,
+      "textures": 17,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 5046128,
+      "triangles": 122984,
+      "sha256": "4a888b105011076aa869e4b30d21306e6654d6856dcfdb845d747177111f099d",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 2621,
+        "free_cells": 2621,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "home_bathroom",
+      "name": "清爽浴室",
+      "errors": [
+        "Opaque proxy SG_COLLIDER_OWN_Bath_Counter_Bridge",
+        "Opaque proxy SG_COLLIDER_OWN_Bath_Toilet_Alcove_Back",
+        "Opaque proxy SG_COLLIDER_OWN_Bath_Toilet_Screen"
+      ],
+      "nodes": 527,
+      "mesh_nodes": 516,
+      "collision_proxies": 13,
+      "floor_meshes": 1,
+      "textures": 19,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 7002732,
+      "triangles": 129584,
+      "sha256": "1f3c1579293ee2a6555db5012d43696816bb962675d3e6d729eada5af36eb480",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 1975,
+        "free_cells": 1975,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "home_bedroom",
+      "name": "温暖卧室",
+      "errors": [],
+      "nodes": 262,
+      "mesh_nodes": 249,
+      "collision_proxies": 11,
+      "floor_meshes": 1,
+      "textures": 25,
+      "preview_dimensions": [
+        1280,
+        889
+      ],
+      "glb_bytes": 6879436,
+      "triangles": 189608,
+      "sha256": "abe65d52941c0bf4a8a0000446a8ac960368c2e5ee912eca1b58811dcdf1799b",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 2269,
+        "free_cells": 2269,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_BED": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_WARDROBE": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "home_dining",
+      "name": "家庭餐厅",
+      "errors": [],
+      "nodes": 423,
+      "mesh_nodes": 412,
+      "collision_proxies": 10,
+      "floor_meshes": 1,
+      "textures": 23,
+      "preview_dimensions": [
+        800,
+        700
+      ],
+      "glb_bytes": 6115012,
+      "triangles": 117036,
+      "sha256": "28fa531f9db0a7b79e4e0aa084ccc7dcaa0617dc4b3b87fbf44050b243d4e355",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 2346,
+        "free_cells": 2346,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "home_estate",
+      "name": "家园院落",
+      "errors": [],
+      "nodes": 1822,
+      "mesh_nodes": 1788,
+      "collision_proxies": 24,
+      "floor_meshes": 1,
+      "textures": 22,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 21032244,
+      "triangles": 361380,
+      "sha256": "65ae8c769fb1a1f704bd29e4c7b98570a7997ec9b61b95023996dea4b269ccc5",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 8542,
+        "free_cells": 8542,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_HOUSE_ENTRY": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_BEDROOM": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_KITCHEN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_DINING": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_BATHROOM": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_STUDY": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_BALCONY": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "home_hall",
+      "name": "家里 · 门厅与走廊",
+      "errors": [],
+      "nodes": 811,
+      "mesh_nodes": 802,
+      "collision_proxies": 25,
+      "floor_meshes": 1,
+      "textures": 41,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 11314364,
+      "triangles": 186284,
+      "sha256": "a983fb12926aaad3fe553c8811f0a168d277ed74666ece8a35152d2da0ff6321",
+      "plan_labels_checked": 0,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 10053,
+        "free_cells": 10728,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_BEDROOM": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_KITCHEN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_DINING": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_BATHROOM": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_STUDY": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_DOOR_HOME_BALCONY": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "home_kitchen",
+      "name": "明亮厨房",
+      "errors": [
+        "Opaque proxy SG_COLLIDER_OWN10_FridgeSinkBridge",
+        "Opaque proxy SG_COLLIDER_OWN10_MainPreparationRun",
+        "Opaque proxy SG_COLLIDER_OWN10_StoveLanding",
+        "Opaque proxy SG_COLLIDER_OWN10_RearCounterFill"
+      ],
+      "nodes": 563,
+      "mesh_nodes": 552,
+      "collision_proxies": 14,
+      "floor_meshes": 1,
+      "textures": 23,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 8244164,
+      "triangles": 154180,
+      "sha256": "8dd13e1413c94db383288bccd68ec5ab8cc260429def03f18a5912de024a298d",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 3909,
+        "free_cells": 3909,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    },
+    {
+      "room_id": "home_study",
+      "name": "窗边书房",
+      "errors": [],
+      "nodes": 341,
+      "mesh_nodes": 330,
+      "collision_proxies": 10,
+      "floor_meshes": 1,
+      "textures": 21,
+      "preview_dimensions": [
+        1280,
+        889
+      ],
+      "glb_bytes": 4794196,
+      "triangles": 81784,
+      "sha256": "f0050d168c7dda64970a72a8cca01dd7466ae6fb7437d41f15edf8b47c69303d",
+      "plan_labels_checked": 5,
+      "walkability": {
+        "player_radius_m": 0.32,
+        "grid_step_m": 0.2,
+        "reachable_cells": 2432,
+        "free_cells": 2432,
+        "anchors": {
+          "SG_SPAWN": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_EXIT": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_NPC_HOST": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_01": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_02": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_03": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_04": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          },
+          "SG_MEMORY_05": {
+            "inside_obstacle": false,
+            "reachable": true,
+            "ground_height": 0.0
+          }
+        }
+      }
+    }
+  ]
+}

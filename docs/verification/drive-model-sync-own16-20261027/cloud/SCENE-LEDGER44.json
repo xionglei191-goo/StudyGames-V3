@@ -1,0 +1,1513 @@
+{
+  "revision": "own16",
+  "counts": {
+    "total": 44,
+    "refined": 20,
+    "retained": 24
+  },
+  "rows": [
+    {
+      "room_id": "home_balcony",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP_WITH_NOTES",
+      "finding": "Rounded recessed basin and drain clear at production; state basket swaps to solid cylinder exactly as baseline middle state, not a new regression.",
+      "accepted_source_sha256": "4a888b105011076aa869e4b30d21306e6654d6856dcfdb845d747177111f099d",
+      "source_glb": "assets/blender/interiors/home_balcony/home_balcony_v08_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch02-review.json",
+      "receipt_sha256": "b18ca76d0ec82539cd80f06a4283d04c8d20f53133cc57d7d91a1587ac1ead0d",
+      "runtime_path": "game/assets/interiors/home_balcony.glb",
+      "runtime_sha256": "4a888b105011076aa869e4b30d21306e6654d6856dcfdb845d747177111f099d",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/home_balcony/home_balcony_v08_own.blend",
+          "bytes": 1911417,
+          "sha256": "284dcaf19d7c89715f547c174b656c9151523fa1fc4d188666ab750aac1782b3"
+        },
+        {
+          "path": "assets/blender/interiors/home_balcony/home_balcony_v08_own.glb",
+          "bytes": 5046128,
+          "sha256": "4a888b105011076aa869e4b30d21306e6654d6856dcfdb845d747177111f099d"
+        },
+        {
+          "path": "assets/blender/interiors/home_balcony/preview_v08_own.png",
+          "bytes": 1697963,
+          "sha256": "c6eafcbe112c1549bf189b3f08bb15e6aa8a3b96ac42502224511b5b53e7bfec"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch02-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "home_kitchen",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Rounded basin interior, rolled rim and drain readable around produce; after-state basket retained; recess visible at production.",
+      "accepted_source_sha256": "8dd13e1413c94db383288bccd68ec5ab8cc260429def03f18a5912de024a298d",
+      "source_glb": "assets/blender/interiors/home_kitchen/home_kitchen_v10_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch02-review.json",
+      "receipt_sha256": "b18ca76d0ec82539cd80f06a4283d04c8d20f53133cc57d7d91a1587ac1ead0d",
+      "runtime_path": "game/assets/interiors/home_kitchen.glb",
+      "runtime_sha256": "8dd13e1413c94db383288bccd68ec5ab8cc260429def03f18a5912de024a298d",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/home_kitchen/home_kitchen_v10_own.blend",
+          "bytes": 2178318,
+          "sha256": "7bc22da2e30fd0e2240634e945b33560d64f8febdef8d8022561211fdc706c45"
+        },
+        {
+          "path": "assets/blender/interiors/home_kitchen/home_kitchen_v10_own.glb",
+          "bytes": 8244164,
+          "sha256": "8dd13e1413c94db383288bccd68ec5ab8cc260429def03f18a5912de024a298d"
+        },
+        {
+          "path": "assets/blender/interiors/home_kitchen/preview_v10_own.png",
+          "bytes": 1844235,
+          "sha256": "6dd12de496939d770520e96d95c7659f6f746e4d75153bb1441769ccafc848ec"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch02-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "school",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Individual rounded leaves and layered flowering shrubs read at production, central hero and overview; architecture/path clearance preserved.",
+      "accepted_source_sha256": "399f18e47a3d7ea73a18d650e45cb60bf70aeb7068627803d8e14f615f54514d",
+      "source_glb": "assets/blender/interiors/school/school_v10_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "receipt_sha256": "e11cb7aca4254cba6df6428e86f28b43d8565b726f339e68a2c1506698205c7a",
+      "runtime_path": "game/assets/interiors/school.glb",
+      "runtime_sha256": "399f18e47a3d7ea73a18d650e45cb60bf70aeb7068627803d8e14f615f54514d",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/school/school_v10_own.blend",
+          "bytes": 7076679,
+          "sha256": "aedd27ba6b06ec0199e5e0035245e7e5ae6176e975c44850357fffb1f2497ee0"
+        },
+        {
+          "path": "assets/blender/interiors/school/school_v10_own.glb",
+          "bytes": 22434436,
+          "sha256": "399f18e47a3d7ea73a18d650e45cb60bf70aeb7068627803d8e14f615f54514d"
+        },
+        {
+          "path": "assets/blender/interiors/school/preview_v10_own.png",
+          "bytes": 1462138,
+          "sha256": "7cd5ecb2d3f2dbbb8b42b00bbac1216d47c4cb850bb79a4fa8d970ef3380574b"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "home_bedroom",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Quilt stitching and drop, clock, chair cushions/throw, rug and cabinetry already give clear functional material hierarchy; extra clutter unnecessary.",
+      "accepted_source_sha256": "abe65d52941c0bf4a8a0000446a8ac960368c2e5ee912eca1b58811dcdf1799b",
+      "source_glb": "assets/blender/interiors/home_bedroom/home_bedroom_v10_own.glb",
+      "baseline_image": "docs/verification/own-refinement-native/current/own12-final-all9/home_bedroom-production.png",
+      "baseline_image_sha256": "f71597f803c22e1ece304443d3d21d5c9ccb5d9d4af56d181dcf7f07596ebdc6",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/home_bedroom.glb",
+      "runtime_sha256": "abe65d52941c0bf4a8a0000446a8ac960368c2e5ee912eca1b58811dcdf1799b",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/home_bedroom/home_bedroom_v10_own.blend",
+          "bytes": 3214783,
+          "sha256": "66fa4e5cc3a5d8cdbabcdb90359cc76e4375d6ea37b0ff0bde6228d9f9975054"
+        },
+        {
+          "path": "assets/blender/interiors/home_bedroom/home_bedroom_v10_own.glb",
+          "bytes": 6879436,
+          "sha256": "abe65d52941c0bf4a8a0000446a8ac960368c2e5ee912eca1b58811dcdf1799b"
+        },
+        {
+          "path": "assets/blender/interiors/home_bedroom/preview_v10_own.png",
+          "bytes": 1439808,
+          "sha256": "4a992dd07cfb5cbeefbaea0a612a7432239ec173af23fd5679622fb03cb42ae5"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "home_estate",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Both crowns now read as layered rounded individual leaves with full coverage at production and both hero views; fruit and architectural silhouette preserved.",
+      "accepted_source_sha256": "65ae8c769fb1a1f704bd29e4c7b98570a7997ec9b61b95023996dea4b269ccc5",
+      "source_glb": "assets/blender/interiors/home_estate/home_estate_v09_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch02-review.json",
+      "receipt_sha256": "b18ca76d0ec82539cd80f06a4283d04c8d20f53133cc57d7d91a1587ac1ead0d",
+      "runtime_path": "game/assets/interiors/home_estate.glb",
+      "runtime_sha256": "65ae8c769fb1a1f704bd29e4c7b98570a7997ec9b61b95023996dea4b269ccc5",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/home_estate/home_estate_v09_own.blend",
+          "bytes": 6262773,
+          "sha256": "abef4eaab3e64ca6d3da2b541b69a519205412a03a49742626890cca4f9afb15"
+        },
+        {
+          "path": "assets/blender/interiors/home_estate/home_estate_v09_own.glb",
+          "bytes": 21032244,
+          "sha256": "65ae8c769fb1a1f704bd29e4c7b98570a7997ec9b61b95023996dea4b269ccc5"
+        },
+        {
+          "path": "assets/blender/interiors/home_estate/preview_v09_own.png",
+          "bytes": 1120574,
+          "sha256": "e33060c7dd43bc321e2e68a5c054ef36dd4ffb04bb5c45afea30da9d340cc194"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch02-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "island",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP_WITH_DISCLOSED_BASELINE_LIMITATIONS",
+      "accepted_source_sha256": "8062e0e10b7d19d8a0f465cd7507a2e4e2756ae34acfa8f5d75ba140b6a08e82",
+      "source_glb": "assets/blender/alphabet_island/alphabet_island_layout_v13_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/island-v13-full-review.json",
+      "receipt_sha256": "0def951c6140a17dea4c9b37909ed5f14ec0be195cd9c0f7ec9bb3e5dec1acbf",
+      "runtime_path": "game/assets/world/island.glb",
+      "runtime_sha256": "8062e0e10b7d19d8a0f465cd7507a2e4e2756ae34acfa8f5d75ba140b6a08e82",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v13_own.blend",
+          "bytes": 140820141,
+          "sha256": "f04daef1b1cb5b7790182540f69a25e9b6d5f2e93ac07c0aafe7ecdf63987896"
+        },
+        {
+          "path": "assets/blender/alphabet_island/alphabet_island_layout_v13_own.glb",
+          "bytes": 183973496,
+          "sha256": "8062e0e10b7d19d8a0f465cd7507a2e4e2756ae34acfa8f5d75ba140b6a08e82"
+        },
+        {
+          "path": "assets/blender/alphabet_island/preview_v13_own.png",
+          "bytes": 1719753,
+          "sha256": "8698186d4f1e66e0cb4dd83720856367f946555a7837f2f4e82c1f8f14c72a3f"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/island-v13-full-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "home_study",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Books, computer controls, writing implements, chair/throw and curtains clear at gameplay distance; preserve generous workspace.",
+      "accepted_source_sha256": "f0050d168c7dda64970a72a8cca01dd7466ae6fb7437d41f15edf8b47c69303d",
+      "source_glb": "assets/blender/interiors/home_study/home_study_v07_own.glb",
+      "baseline_image": "docs/verification/own-refinement-native/current/own12-final-all9/home_study-production.png",
+      "baseline_image_sha256": "e6bded264e5a566f02d781a5121354b231a0fbdefa24a0b96879cc5dcb419630",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/home_study.glb",
+      "runtime_sha256": "f0050d168c7dda64970a72a8cca01dd7466ae6fb7437d41f15edf8b47c69303d",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/home_study/home_study_v07_own.blend",
+          "bytes": 1743789,
+          "sha256": "e8ab156ffc3a18c84e2854e69338eb6e2567e79774eae6b50235078c8c206840"
+        },
+        {
+          "path": "assets/blender/interiors/home_study/home_study_v07_own.glb",
+          "bytes": 4794196,
+          "sha256": "f0050d168c7dda64970a72a8cca01dd7466ae6fb7437d41f15edf8b47c69303d"
+        },
+        {
+          "path": "assets/blender/interiors/home_study/preview_v07_own.png",
+          "bytes": 1497327,
+          "sha256": "8cdad77849dd765529b510aa0b8f58c9be5e48d1bf02f646dff2ca43bbc90ad1"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "home_dining",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "White stacked dishes now have distinct shallow interiors and nested rims; modest but visible at production.",
+      "accepted_source_sha256": "28fa531f9db0a7b79e4e0aa084ccc7dcaa0617dc4b3b87fbf44050b243d4e355",
+      "source_glb": "assets/blender/interiors/home_dining/home_dining_v09_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch02-review.json",
+      "receipt_sha256": "b18ca76d0ec82539cd80f06a4283d04c8d20f53133cc57d7d91a1587ac1ead0d",
+      "runtime_path": "game/assets/interiors/home_dining.glb",
+      "runtime_sha256": "28fa531f9db0a7b79e4e0aa084ccc7dcaa0617dc4b3b87fbf44050b243d4e355",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/home_dining/home_dining_v09_own.blend",
+          "bytes": 2058090,
+          "sha256": "9f686a010d7fa0ba6be910907d27faf179d8861888201ac7a5c3ecea4c38e901"
+        },
+        {
+          "path": "assets/blender/interiors/home_dining/home_dining_v09_own.glb",
+          "bytes": 6115012,
+          "sha256": "28fa531f9db0a7b79e4e0aa084ccc7dcaa0617dc4b3b87fbf44050b243d4e355"
+        },
+        {
+          "path": "assets/blender/interiors/home_dining/preview_v09_own.png",
+          "bytes": 735982,
+          "sha256": "c5d0b60983d8150844a3a3f3693956c84289b2896e876f55363565b2fc29ef5d"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch02-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "home_bathroom",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Rear white ledge now clean and continuous in all three state views; inherited turquoise coplanar flecks removed. Rounded basin recess, drain, water/bubble/cloth states and room readability retained. Supersedes v07 visual acceptance and subsequent supersession hold.",
+      "accepted_source_sha256": "1f3c1579293ee2a6555db5012d43696816bb962675d3e6d729eada5af36eb480",
+      "source_glb": "assets/blender/interiors/home_bathroom/home_bathroom_v08_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-bath08-review.json",
+      "receipt_sha256": "445381f2f7bf5dc9b5ab30307c8731d0c0f9c47f9de312a12e54a83e65ef083d",
+      "runtime_path": "game/assets/interiors/home_bathroom.glb",
+      "runtime_sha256": "1f3c1579293ee2a6555db5012d43696816bb962675d3e6d729eada5af36eb480",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/home_bathroom/home_bathroom_v08_own.blend",
+          "bytes": 1872172,
+          "sha256": "81300c6e47f59e561369355f2b6a68de38298a9280372756ed4f699c149922c6"
+        },
+        {
+          "path": "assets/blender/interiors/home_bathroom/home_bathroom_v08_own.glb",
+          "bytes": 7002732,
+          "sha256": "1f3c1579293ee2a6555db5012d43696816bb962675d3e6d729eada5af36eb480"
+        },
+        {
+          "path": "assets/blender/interiors/home_bathroom/preview_v08_own.png",
+          "bytes": 1802376,
+          "sha256": "4dad67496fa84c57561366158d2398eabf19f9937d7faca09ddceaf1259ee735"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-bath08-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_A",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Ground shrubs now have full layered rounded leaf coverage instead of smooth lobed masses, visible at production and hero; original blade apple trees, flowers, architecture and paths preserved.",
+      "accepted_source_sha256": "1ff0a16bef05e2a777bef2bfa9ed8e911bc09f924c3a24e24374a00ae051e379",
+      "source_glb": "assets/blender/interiors/landmark_A/landmark_A_v05_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-A05-review.json",
+      "receipt_sha256": "b3ca5235042bf3ca7247b9871140d0e6113e064f56085e1d40a214b6ee817219",
+      "runtime_path": "game/assets/interiors/landmark_A.glb",
+      "runtime_sha256": "1ff0a16bef05e2a777bef2bfa9ed8e911bc09f924c3a24e24374a00ae051e379",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_A/landmark_A_v05_own.blend",
+          "bytes": 14621697,
+          "sha256": "0bdaa075d5f1d8cb5d3cf97f47d4213e82809d550bbeeb5378ba797dc052a6d2"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_A/landmark_A_v05_own.glb",
+          "bytes": 19944016,
+          "sha256": "1ff0a16bef05e2a777bef2bfa9ed8e911bc09f924c3a24e24374a00ae051e379"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_A/preview_v05_own.png",
+          "bytes": 1279949,
+          "sha256": "be5a0e020d62fff9e428181acbd490db0196b52e152c45b96a5171e2badec58f"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-AN-policy-preserved-review.json",
+      "prior_policy_note": "Prior candidate pixel review retained as history only; new28-crown LOD0 importer proof and four refreshed views supersede equivalence judgment.",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_F",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Own15 cupped petals, staggered blooms, stems and leaf blades visible; greenhouse panels are architectural. Retain accepted botanical hierarchy.",
+      "accepted_source_sha256": "db954d95e0dc1f757779560c156dd0b863f971405cdbde9b20f810d949533aa4",
+      "source_glb": "assets/blender/interiors/landmark_F/landmark_F_v04_own.glb",
+      "baseline_image": "docs/verification/own15-native/canonical-final/landmark_F-production.png",
+      "baseline_image_sha256": "02fcb3a6483ff87b9a16d5384a82998f659959e34d6a406b15c086b730004fa7",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_F.glb",
+      "runtime_sha256": "db954d95e0dc1f757779560c156dd0b863f971405cdbde9b20f810d949533aa4",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_F/landmark_F_v04_own.blend",
+          "bytes": 2278049,
+          "sha256": "f49cdac52a384b9a061a90a01413a6e59883bb86505f9889a05878101ca5a82f"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_F/landmark_F_v04_own.glb",
+          "bytes": 7830604,
+          "sha256": "db954d95e0dc1f757779560c156dd0b863f971405cdbde9b20f810d949533aa4"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_F/preview_v04_own.png",
+          "bytes": 1070347,
+          "sha256": "9bb694da759b697c02e0429938d94f265005f2a768c251fc5649ad95ed4284f3"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_N",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Right dishes have visible recessed interior walls and seated colored contents; leaves, woven nest and title support remain readable.",
+      "accepted_source_sha256": "f334a161c628b814a44ad4f637d19c96edb804972892607496ddc9b008dcda78",
+      "source_glb": "assets/blender/interiors/landmark_N/landmark_N_v07_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch02-review.json",
+      "receipt_sha256": "b18ca76d0ec82539cd80f06a4283d04c8d20f53133cc57d7d91a1587ac1ead0d",
+      "runtime_path": "game/assets/interiors/landmark_N.glb",
+      "runtime_sha256": "f334a161c628b814a44ad4f637d19c96edb804972892607496ddc9b008dcda78",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_N/landmark_N_v07_own.blend",
+          "bytes": 3683875,
+          "sha256": "d068aff6d239f9ba22cd4a2cc3ddfcd95da9dffa2838b2ea30ed0f64db654b1a"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_N/landmark_N_v07_own.glb",
+          "bytes": 8300764,
+          "sha256": "f334a161c628b814a44ad4f637d19c96edb804972892607496ddc9b008dcda78"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_N/preview_v07_own.png",
+          "bytes": 766043,
+          "sha256": "65eabd514f46cb4b4de0ec2468907e164a48f01198a68c2f69202bcdedcfb457"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-AN-policy-preserved-review.json",
+      "prior_policy_note": "Prior candidate pixel review retained as history only; new28-crown LOD0 importer proof and four refreshed views supersede equivalence judgment.",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_P",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Curved tapered stalk sits in recessed lobed pumpkin top; small production-scale improvement without distracting added detail.",
+      "accepted_source_sha256": "4aa00ad7fb235a959067723939715e541936ee4041d77395c4480e5a8a59a939",
+      "source_glb": "assets/blender/interiors/landmark_P/landmark_P_v05_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "receipt_sha256": "e11cb7aca4254cba6df6428e86f28b43d8565b726f339e68a2c1506698205c7a",
+      "runtime_path": "game/assets/interiors/landmark_P.glb",
+      "runtime_sha256": "4aa00ad7fb235a959067723939715e541936ee4041d77395c4480e5a8a59a939",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_P/landmark_P_v05_own.blend",
+          "bytes": 2587903,
+          "sha256": "39695e3dee6b030e199ebcfea52dd41f8df926b06e6d1b3191e38e4f350e43b2"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_P/landmark_P_v05_own.glb",
+          "bytes": 6632156,
+          "sha256": "4aa00ad7fb235a959067723939715e541936ee4041d77395c4480e5a8a59a939"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_P/preview_v05_own.png",
+          "bytes": 753024,
+          "sha256": "e36c0f3687399a48634086e28dc474d1216a1f04da19cce711d8f57a3787ead9"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_B",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Curved hollow hull, gunwale and exterior plank courses now read as boat; benches, mast, rigging and dock retained.",
+      "accepted_source_sha256": "fc2f540925d7997d9570b18b78af7e83e378b539de4da12ea0dde03ca5ab0fab",
+      "source_glb": "assets/blender/interiors/landmark_B/landmark_B_v04_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "receipt_sha256": "e11cb7aca4254cba6df6428e86f28b43d8565b726f339e68a2c1506698205c7a",
+      "runtime_path": "game/assets/interiors/landmark_B.glb",
+      "runtime_sha256": "fc2f540925d7997d9570b18b78af7e83e378b539de4da12ea0dde03ca5ab0fab",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_B/landmark_B_v04_own.blend",
+          "bytes": 2354678,
+          "sha256": "9a3d1bd47b2d9dc0adae8239bdb1d937a08b52372d2f8125364bde9a52ce0e4a"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_B/landmark_B_v04_own.glb",
+          "bytes": 4094748,
+          "sha256": "fc2f540925d7997d9570b18b78af7e83e378b539de4da12ea0dde03ca5ab0fab"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_B/preview_v04_own.png",
+          "bytes": 746568,
+          "sha256": "b235eb9244e162d07c960f5913bce91673cd032b5d483d1e1d243c043145da3a"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_K",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Kite frames, cords, tails, spool profiles and supported display clear; preserve.",
+      "accepted_source_sha256": "5e25e2bb5cf118ab8ef238a594842f2f9d6032ffb70674c4ecb24233ef1e356a",
+      "source_glb": "assets/blender/interiors/landmark_K/landmark_K_v04.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-02/landmark_K-production.png",
+      "baseline_image_sha256": "f86ea8216e48b2e43cd445bca2f299e4266da1c10a5426af7b463f594a476065",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_K.glb",
+      "runtime_sha256": "5e25e2bb5cf118ab8ef238a594842f2f9d6032ffb70674c4ecb24233ef1e356a",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_K/landmark_K_v04.blend",
+          "bytes": 2329663,
+          "sha256": "4ae015169f1d07befae93269a5d5c8b80732f8adea97f4da5f6621aa4835e4c4"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_K/landmark_K_v04.glb",
+          "bytes": 4948756,
+          "sha256": "5e25e2bb5cf118ab8ef238a594842f2f9d6032ffb70674c4ecb24233ef1e356a"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_K/preview_v04.png",
+          "bytes": 1060234,
+          "sha256": "35b46542415dd6256889ff3f512784c102772444d66cd5e7191b7fa6a3605870"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_J",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Hero glass shoulder/neck, contents void and reflections visible; preserve colored labels and sorting hierarchy. Background cans need not all gain expensive transparency.",
+      "accepted_source_sha256": "0aa4f79498e731e8e7d1b7dd10f1b231fac096da6c1aed4ace8446e7103266c2",
+      "source_glb": "assets/blender/interiors/landmark_J/landmark_J_v04_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-01/landmark_J-sorting_jar_body-close.png",
+      "baseline_image_sha256": "3b354d58012d6337ef8c8fa9598e4e8e0e24af49722e7a28ac6804dc6d8ea241",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_J.glb",
+      "runtime_sha256": "0aa4f79498e731e8e7d1b7dd10f1b231fac096da6c1aed4ace8446e7103266c2",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_J/landmark_J_v04_own.blend",
+          "bytes": 1822524,
+          "sha256": "8cc07969841e4957ae28e58861a4e5634d1ce601b3cfdc06cd1e245ad6e37787"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_J/landmark_J_v04_own.glb",
+          "bytes": 8768148,
+          "sha256": "0aa4f79498e731e8e7d1b7dd10f1b231fac096da6c1aed4ace8446e7103266c2"
+        },
+        {
+          "path": "docs/verification/own-craft-detail-20261025/landmark_J/blender-source-after.png",
+          "bytes": 1095880,
+          "sha256": "191bb823719eab4b04f7100154de6f782c1d6190c65b4a825dec30a533e7b6f3"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_L",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Lantern cages, suspension arms, headers and title readability clear. Front clock contact previously numerically verified; not floating.",
+      "accepted_source_sha256": "aeacd18f982e2cccf04863fe3b76ae78c6c34e42d1e95fed33da62f577e65872",
+      "source_glb": "assets/blender/interiors/landmark_L/landmark_L_v04.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-02/landmark_L-production.png",
+      "baseline_image_sha256": "9021b13bfbbc569665301f624451b7aff3915ae1e73c95330f3954bd266d9dc5",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_L.glb",
+      "runtime_sha256": "aeacd18f982e2cccf04863fe3b76ae78c6c34e42d1e95fed33da62f577e65872",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_L/landmark_L_v04.blend",
+          "bytes": 2934741,
+          "sha256": "97f6b78e3ac06f4f297926a8fc3934ae47d578bc3510bac01f1bcb35eb3224d9"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_L/landmark_L_v04.glb",
+          "bytes": 10811344,
+          "sha256": "aeacd18f982e2cccf04863fe3b76ae78c6c34e42d1e95fed33da62f577e65872"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_L/preview_v04.png",
+          "bytes": 1150632,
+          "sha256": "37c4d0936671d088f86ad1f4c2413276a25be1e71c3f9cbe9b2a7a9599f4606c"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_T",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Carriage windows, roof seams, wheel hubs/coupler and rails establish function; retain toy-train styling.",
+      "accepted_source_sha256": "59e79b9636480d2ad6f7838ed78c8f47cc6bfd1acd7b2cce51c5e8fb02939af9",
+      "source_glb": "assets/blender/interiors/landmark_T/landmark_T_v03.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-02/landmark_T-production.png",
+      "baseline_image_sha256": "9eb1391de56fab8a41a31baf5bf24557b0955cf20426343e8bf09657bcc91f3f",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_T.glb",
+      "runtime_sha256": "59e79b9636480d2ad6f7838ed78c8f47cc6bfd1acd7b2cce51c5e8fb02939af9",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_T/landmark_T_v03.blend",
+          "bytes": 2894950,
+          "sha256": "27464214cce4c5d21383e474a54cbc82a030e2f41b798867992c856370674b54"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_T/landmark_T_v03.glb",
+          "bytes": 5617992,
+          "sha256": "59e79b9636480d2ad6f7838ed78c8f47cc6bfd1acd7b2cce51c5e8fb02939af9"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_T/preview_v03.png",
+          "bytes": 1133301,
+          "sha256": "457761fe84f936e67007a96dd85276909ed5d39623e068d65fcaaa59bdefcb2d"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_H",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP_WITH_NOTES",
+      "finding": "Tapered pinched crown and curved thin brim materially improve hat shape at production. White band now reads rounded cord rather than flat ribbon; acceptable stylized cord hatband, not a geometry failure. Small knot readable. Sewing machine/supports preserved. No further ribbon-only constraint was requested.",
+      "accepted_source_sha256": "cbc0939fda77c2d399ec6da446bdd4b5905d10e7161d4ae4755d35cfb1d686b1",
+      "source_glb": "assets/blender/interiors/landmark_H/landmark_H_v04_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch01-review.json",
+      "receipt_sha256": "1372853df9267cfee7744bf97f099afec6139c6f28354124d2703c9d0dcc747b",
+      "runtime_path": "game/assets/interiors/landmark_H.glb",
+      "runtime_sha256": "cbc0939fda77c2d399ec6da446bdd4b5905d10e7161d4ae4755d35cfb1d686b1",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_H/landmark_H_v04_own.blend",
+          "bytes": 2379832,
+          "sha256": "7364f8d7edfd3ed3f59e1dd897d79c7c81baa85a0ebbb39ff8d58cade8599a0d"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_H/landmark_H_v04_own.glb",
+          "bytes": 5245236,
+          "sha256": "cbc0939fda77c2d399ec6da446bdd4b5905d10e7161d4ae4755d35cfb1d686b1"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_H/preview_v04_own.png",
+          "bytes": 783989,
+          "sha256": "3eb41877b869c4e850c44bcc2548aae5083551b944ba26c866f37d875f9cce2c"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch01-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_O",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Open books now have coherent curved pages, shelf books readable. Cushions secondary and not enough value to rework whole room.",
+      "accepted_source_sha256": "eafc66a421ca02b05f5c31dbe6cd4a51b04215a69bed353a494c25c4032b7813",
+      "source_glb": "assets/blender/interiors/landmark_O/landmark_O_v03_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-02/landmark_O-production.png",
+      "baseline_image_sha256": "328efd0369c791fdd3fd6a1d3f02d520c5103f465f3ab7a92f26ade57dd14095",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_O.glb",
+      "runtime_sha256": "eafc66a421ca02b05f5c31dbe6cd4a51b04215a69bed353a494c25c4032b7813",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_O/landmark_O_v03_own.blend",
+          "bytes": 1894636,
+          "sha256": "c3f489bd27547eecb26609d3db8c9fe8b48ecdea5bd20b43aa08dc69a6b24e92"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_O/landmark_O_v03_own.glb",
+          "bytes": 7261308,
+          "sha256": "eafc66a421ca02b05f5c31dbe6cd4a51b04215a69bed353a494c25c4032b7813"
+        },
+        {
+          "path": "docs/verification/own-craft-detail-20261025/landmark_O/blender-source-after.png",
+          "bytes": 1137760,
+          "sha256": "765b5e5458005f11bf4b89d9721d1815b9199059218c89102829f8c6d4f34041"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_Q",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Contiguous padded patchwork with draped front edge and stitch crosses now reads textile instead of hard tiles; softened floor cushions visible, curtain and supports retained.",
+      "accepted_source_sha256": "ef5527e54330451090e803d70cad4e4fdabf37f3f3720c3cb1501c86b864b02a",
+      "source_glb": "assets/blender/interiors/landmark_Q/landmark_Q_v04_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch01-review.json",
+      "receipt_sha256": "1372853df9267cfee7744bf97f099afec6139c6f28354124d2703c9d0dcc747b",
+      "runtime_path": "game/assets/interiors/landmark_Q.glb",
+      "runtime_sha256": "ef5527e54330451090e803d70cad4e4fdabf37f3f3720c3cb1501c86b864b02a",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_Q/landmark_Q_v04_own.blend",
+          "bytes": 4023773,
+          "sha256": "02e9ad3613c9a87439c4958c35cc7b95eafb5e2cb1c79831b595b2be971b1f2e"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_Q/landmark_Q_v04_own.glb",
+          "bytes": 10394212,
+          "sha256": "ef5527e54330451090e803d70cad4e4fdabf37f3f3720c3cb1501c86b864b02a"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_Q/preview_v04_own.png",
+          "bytes": 799004,
+          "sha256": "1411bf3fdb8eb76ee56940ac19f50d610d0a30a4e6c2eac79c3d2269e34585f8"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch01-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "playground",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Actual separate angular blades, hoop net and ball seams readable. Thin diagonal rectangle is known protected raised SG_FLOOR_Court side edge (3cm), not top triangulation defect; retain.",
+      "accepted_source_sha256": "642d016e9e54f306de8c192487e8f5290565bfcfec19b93c6ce3b2f88aee9b7a",
+      "source_glb": "assets/blender/interiors/playground/playground_v05_detail.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-03/playground-overview.png",
+      "baseline_image_sha256": "3d5d1bd16d8f7a0cb5030cb22e01f6dd4d550e29b01ea8ce21ae4f9eee0a66a0",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/playground.glb",
+      "runtime_sha256": "642d016e9e54f306de8c192487e8f5290565bfcfec19b93c6ce3b2f88aee9b7a",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/playground/playground_v05_detail.blend",
+          "bytes": 3154203,
+          "sha256": "8bdceb8d6526e26f121d25ca0d8a13de46ab48b24114db96a9cec2b1844a2f98"
+        },
+        {
+          "path": "assets/blender/interiors/playground/playground_v05_detail.glb",
+          "bytes": 4941108,
+          "sha256": "642d016e9e54f306de8c192487e8f5290565bfcfec19b93c6ce3b2f88aee9b7a"
+        },
+        {
+          "path": "assets/blender/interiors/playground/preview_v05_detail.png",
+          "bytes": 863444,
+          "sha256": "c457ec37e5f2dd3dc8585a4dae3d3b8a7d025422863ee9b75ba322abbf2ebd62"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "football_field",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Goal nets/braces, ball paneling, bench canopy and field markings readable; preserve open play field.",
+      "accepted_source_sha256": "9b68ed1cf80778aae38c5637427ebc7afa41b5c20870a6ad3328969cb794dc27",
+      "source_glb": "assets/blender/interiors/football_field/football_field_v05_detail.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-03/football_field-production.png",
+      "baseline_image_sha256": "3011b254dfe2cc5630c3f69d5a9e850ce9cde15ea2c58ce1ca3cfc094aa7b438",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/football_field.glb",
+      "runtime_sha256": "9b68ed1cf80778aae38c5637427ebc7afa41b5c20870a6ad3328969cb794dc27",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/football_field/football_field_v05_detail.blend",
+          "bytes": 3443706,
+          "sha256": "6035a402125ae74829b00ffdf1d07c65566b77eba2e561c95c03cb539cfeac49"
+        },
+        {
+          "path": "assets/blender/interiors/football_field/football_field_v05_detail.glb",
+          "bytes": 7307016,
+          "sha256": "9b68ed1cf80778aae38c5637427ebc7afa41b5c20870a6ad3328969cb794dc27"
+        },
+        {
+          "path": "assets/blender/interiors/football_field/preview_v05_detail.png",
+          "bytes": 843905,
+          "sha256": "091b92d32837f08da11e2af35c010b9a0db369dac788c7b119b1711ccc5e41aa"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "classroom",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Books, chalk ledge, clock, desks and learning props readable, clear floor for multiple actors. No need to fill empty space.",
+      "accepted_source_sha256": "76e337a7013fc4936ce17cb4cb9afae64b6eec8d271bc69275cdafb9e614b210",
+      "source_glb": "assets/blender/interiors/classroom/classroom_v05_detail.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-03/classroom-production.png",
+      "baseline_image_sha256": "9ad12ec2e13dc8c9f4b45fd76c6051d9485fd82912d8130df4faba65eb95045e",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/classroom.glb",
+      "runtime_sha256": "76e337a7013fc4936ce17cb4cb9afae64b6eec8d271bc69275cdafb9e614b210",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/classroom/classroom_v05_detail.blend",
+          "bytes": 4026111,
+          "sha256": "58bbf5a442bb5199332ce972b079db089849c599a3854162b3d98e7ae0ec1901"
+        },
+        {
+          "path": "assets/blender/interiors/classroom/classroom_v05_detail.glb",
+          "bytes": 7955392,
+          "sha256": "76e337a7013fc4936ce17cb4cb9afae64b6eec8d271bc69275cdafb9e614b210"
+        },
+        {
+          "path": "assets/blender/interiors/classroom/preview_v05_detail.png",
+          "bytes": 953157,
+          "sha256": "3ffeb10c81d74c11d74aa3782bcb7e6574c07fe9e95e06d33c3c4edab5f81144"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "music_room",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Curved piano case/lid contour and layered rim replace polygonal slab; keys, score, pedals and other instruments readable.",
+      "accepted_source_sha256": "1631a5c064b56db5fab51a7c04407de4d7a05d70b7f6a3a57a3df716a2e26281",
+      "source_glb": "assets/blender/interiors/music_room/music_room_v06_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "receipt_sha256": "e11cb7aca4254cba6df6428e86f28b43d8565b726f339e68a2c1506698205c7a",
+      "runtime_path": "game/assets/interiors/music_room.glb",
+      "runtime_sha256": "1631a5c064b56db5fab51a7c04407de4d7a05d70b7f6a3a57a3df716a2e26281",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/music_room/music_room_v06_own.blend",
+          "bytes": 3619841,
+          "sha256": "650e8ed89cca06cdb880cc9f269499502becf6a37d205facc41631629790f9cf"
+        },
+        {
+          "path": "assets/blender/interiors/music_room/music_room_v06_own.glb",
+          "bytes": 8649064,
+          "sha256": "1631a5c064b56db5fab51a7c04407de4d7a05d70b7f6a3a57a3df716a2e26281"
+        },
+        {
+          "path": "assets/blender/interiors/music_room/preview_v06_own.png",
+          "bytes": 878776,
+          "sha256": "2ebbb8175151bbc5ef126485142de454aaa6ae7a1f0974738f8f8fc04ce9f5cc"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "art_room",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Aprons now have soft draped hems, dimensional pockets and curved loops; legible at production, pottery and easels retained.",
+      "accepted_source_sha256": "23d7a32eb6b3739b7fcc789849c4621be4199f6bc649016d1ffa64099b32b4d6",
+      "source_glb": "assets/blender/interiors/art_room/art_room_v06_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "receipt_sha256": "e11cb7aca4254cba6df6428e86f28b43d8565b726f339e68a2c1506698205c7a",
+      "runtime_path": "game/assets/interiors/art_room.glb",
+      "runtime_sha256": "23d7a32eb6b3739b7fcc789849c4621be4199f6bc649016d1ffa64099b32b4d6",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/art_room/art_room_v06_own.blend",
+          "bytes": 3450386,
+          "sha256": "5e7d1cd292155feb22ad63c8b6f4ba97b5e2a2415bcef5384043e4b9ee3e9dcf"
+        },
+        {
+          "path": "assets/blender/interiors/art_room/art_room_v06_own.glb",
+          "bytes": 7130428,
+          "sha256": "23d7a32eb6b3739b7fcc789849c4621be4199f6bc649016d1ffa64099b32b4d6"
+        },
+        {
+          "path": "assets/blender/interiors/art_room/preview_v06_own.png",
+          "bytes": 825948,
+          "sha256": "ba98d0385fff4167e12f81f36421b78b71aa0afa03980cf24cd1360f34f23740"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "science_room",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Microscope stage/focus parts, magnet model, magnifier and observation setup readable; no missing functional contacts visible.",
+      "accepted_source_sha256": "9a972ed1c9a475451522bb8ff81b878f6bc6d09698d19d0b221b851615afba18",
+      "source_glb": "assets/blender/interiors/science_room/science_room_v05_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-03/science_room-production.png",
+      "baseline_image_sha256": "31a7667a0be95b02730ed94adfc4bf680008c3178f5c5f24cbe610e7cf692c9b",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/science_room.glb",
+      "runtime_sha256": "9a972ed1c9a475451522bb8ff81b878f6bc6d09698d19d0b221b851615afba18",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/science_room/science_room_v05_own.blend",
+          "bytes": 4349796,
+          "sha256": "e8f18115ea0634a741f9ec56af85c0498a221aad5973d7d8409d665786befc98"
+        },
+        {
+          "path": "assets/blender/interiors/science_room/science_room_v05_own.glb",
+          "bytes": 8728088,
+          "sha256": "9a972ed1c9a475451522bb8ff81b878f6bc6d09698d19d0b221b851615afba18"
+        },
+        {
+          "path": "assets/blender/interiors/science_room/preview_v05_own.png",
+          "bytes": 992650,
+          "sha256": "6ce449b8b402d2d07549f1e1dfd0cce9453b575911aac00158c88e1db00a136a"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "canteen",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Cookware lids/handles, plate stacks, counter joinery and serving station clear. Preserve roomy circulation.",
+      "accepted_source_sha256": "aaa93a233bd5e7de5b14d21007494b0368800861e37c93114c44302951e20a80",
+      "source_glb": "assets/blender/interiors/canteen/canteen_v05_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-03/canteen-production.png",
+      "baseline_image_sha256": "85f02a6195461e8c518882c388a2fdef834bee783081e37f265ffb3e56742b09",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/canteen.glb",
+      "runtime_sha256": "aaa93a233bd5e7de5b14d21007494b0368800861e37c93114c44302951e20a80",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/canteen/canteen_v05_own.blend",
+          "bytes": 2884542,
+          "sha256": "249fcd4d3bb5b3e6dd5d69b2772ff2dcd72a7c95d5b1f22f4e8a1ff811964202"
+        },
+        {
+          "path": "assets/blender/interiors/canteen/canteen_v05_own.glb",
+          "bytes": 8794860,
+          "sha256": "aaa93a233bd5e7de5b14d21007494b0368800861e37c93114c44302951e20a80"
+        },
+        {
+          "path": "assets/blender/interiors/canteen/preview_v05_own.png",
+          "bytes": 1022211,
+          "sha256": "076e22a6f8da9a0f1d51eafd908cdcc593268ddf447c37d434c6029f8fb6d9ab"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_G",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Stylized continent silhouettes, globe bearings/stand and luggage details establish intended theme; no cartographic-accuracy claim.",
+      "accepted_source_sha256": "adbe0150e4141f7638353965266d0182818d3148192a273003eaebb7d09ca3fc",
+      "source_glb": "assets/blender/interiors/landmark_G/landmark_G_v03_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-04/landmark_G-production.png",
+      "baseline_image_sha256": "1a113be883760346f665418763181926689d958a118608d9908c4b04119dd036",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_G.glb",
+      "runtime_sha256": "adbe0150e4141f7638353965266d0182818d3148192a273003eaebb7d09ca3fc",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_G/landmark_G_v03_own.blend",
+          "bytes": 2306100,
+          "sha256": "20fc5c7a0f67fc93cb9b9be4320763397b89e9255ee351420f4cc8091e54c07a"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_G/landmark_G_v03_own.glb",
+          "bytes": 5320540,
+          "sha256": "adbe0150e4141f7638353965266d0182818d3148192a273003eaebb7d09ca3fc"
+        },
+        {
+          "path": "docs/verification/own-science-detail-20261025/landmark_G/blender-source-after.png",
+          "bytes": 1071414,
+          "sha256": "c845c8809c839770fbf3c8a66236e397869065ddbae0dd37c19d9d3d8c0ee2b9"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_R",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Robot joint/limb hierarchy, articulated tool arm and varied pegboard tools readable. No need to add arbitrary machinery.",
+      "accepted_source_sha256": "b0a54b350c70372b1179983c48b3b09afc0ccd4d3510d87b0c748ac7008c739b",
+      "source_glb": "assets/blender/interiors/landmark_R/landmark_R_v03_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-04/landmark_R-production.png",
+      "baseline_image_sha256": "bc77631cdba64ba9faafca39294cd6dba79b914a182b05ec6c3bdf63ecedc61e",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_R.glb",
+      "runtime_sha256": "b0a54b350c70372b1179983c48b3b09afc0ccd4d3510d87b0c748ac7008c739b",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_R/landmark_R_v03_own.blend",
+          "bytes": 2511861,
+          "sha256": "1c3dcbb99ff08a92c11f464275d93dda2708f62c7157ce1b83cdc3b87078c494"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_R/landmark_R_v03_own.glb",
+          "bytes": 5874356,
+          "sha256": "b0a54b350c70372b1179983c48b3b09afc0ccd4d3510d87b0c748ac7008c739b"
+        },
+        {
+          "path": "docs/verification/own-science-detail-20261025/landmark_R/blender-source-after.png",
+          "bytes": 1111122,
+          "sha256": "3a274b9907f39a72358c612d2cf47b29ae0435fc91a19ca921235d609b520ee1"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_S",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Dome feet/ribs and telescope optics/tripod distinct; celestial globe intentionally abstract, not a missing Earth map.",
+      "accepted_source_sha256": "5fbc38227e7bb54e952e45b59de540f54381f88cc8f2b3292590586e404fcff7",
+      "source_glb": "assets/blender/interiors/landmark_S/landmark_S_v03_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-04/landmark_S-production.png",
+      "baseline_image_sha256": "72e24b2644f700210439e9f21c1a8921d54dfc4fab97f2d96711954b2260c1b6",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_S.glb",
+      "runtime_sha256": "5fbc38227e7bb54e952e45b59de540f54381f88cc8f2b3292590586e404fcff7",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_S/landmark_S_v03_own.blend",
+          "bytes": 1456546,
+          "sha256": "394bcc4c71ed27219e744538d007f2aec85fc974cbb1d600c5c99f3b29137da0"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_S/landmark_S_v03_own.glb",
+          "bytes": 3533036,
+          "sha256": "5fbc38227e7bb54e952e45b59de540f54381f88cc8f2b3292590586e404fcff7"
+        },
+        {
+          "path": "docs/verification/own-science-detail-20261025/landmark_S/blender-source-after.png",
+          "bytes": 1043922,
+          "sha256": "908315d65e2dc003f6f36502e44c9f77559a3993dc064634333191d42cf55537"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_V",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Irregular stone crater rim and strata replace uniform dough-ring; deep dormant interior maintained with no lava.",
+      "accepted_source_sha256": "a740cd82661eb66fe35aab53b4f5b4a607c670f5936177f65a70d6b2b68aac2b",
+      "source_glb": "assets/blender/interiors/landmark_V/landmark_V_v04_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "receipt_sha256": "e11cb7aca4254cba6df6428e86f28b43d8565b726f339e68a2c1506698205c7a",
+      "runtime_path": "game/assets/interiors/landmark_V.glb",
+      "runtime_sha256": "a740cd82661eb66fe35aab53b4f5b4a607c670f5936177f65a70d6b2b68aac2b",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_V/landmark_V_v04_own.blend",
+          "bytes": 2812980,
+          "sha256": "1f8f705eb26a10ba08ebb5ace707a047afdf38de28705843f3c99e7fe2877066"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_V/landmark_V_v04_own.glb",
+          "bytes": 4703828,
+          "sha256": "a740cd82661eb66fe35aab53b4f5b4a607c670f5936177f65a70d6b2b68aac2b"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_V/preview_v04_own.png",
+          "bytes": 735095,
+          "sha256": "dfad03804fe1cab11de27d61e77882fb771e16c0abe8351df61a28adb43353a5"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_E",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Distinct bowl rims/inner walls with recessed food/water replace solid pucks; softened nursery cushions read cloth. Woven nests and eggs remain unobscured.",
+      "accepted_source_sha256": "76831ea32b41e9062f81a657a7562d05b1898191501a4dd870931f35bb78dd93",
+      "source_glb": "assets/blender/interiors/landmark_E/landmark_E_v04_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch01-review.json",
+      "receipt_sha256": "1372853df9267cfee7744bf97f099afec6139c6f28354124d2703c9d0dcc747b",
+      "runtime_path": "game/assets/interiors/landmark_E.glb",
+      "runtime_sha256": "76831ea32b41e9062f81a657a7562d05b1898191501a4dd870931f35bb78dd93",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_E/landmark_E_v04_own.blend",
+          "bytes": 2989059,
+          "sha256": "73d20ff7f132a90485d062256cbb26232ca9f3a938e1f2a327f84fef5404f907"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_E/landmark_E_v04_own.glb",
+          "bytes": 7889964,
+          "sha256": "76831ea32b41e9062f81a657a7562d05b1898191501a4dd870931f35bb78dd93"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_E/preview_v04_own.png",
+          "bytes": 751105,
+          "sha256": "6417f1b61254999b2a4a0ab72a2f3e4f077b90cad3b91d50a8f4412c41c37581"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch01-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_M",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Own15 domed cap/fitted varied spots/soft stem and door hardware readable; strong maroon lower rim minor accepted tone note.",
+      "accepted_source_sha256": "08e3db4700563ad5c3aa77c27783aece9ed6207acf7fddaeee6b7a586ee7cd37",
+      "source_glb": "assets/blender/interiors/landmark_M/landmark_M_v04_own.glb",
+      "baseline_image": "docs/verification/own15-native/canonical-final/landmark_M-production.png",
+      "baseline_image_sha256": "127e67a90d7c46c98d6a2e0d2b5ad51399101d9ee79aad3ad7fec461ca55d43b",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_M.glb",
+      "runtime_sha256": "08e3db4700563ad5c3aa77c27783aece9ed6207acf7fddaeee6b7a586ee7cd37",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_M/landmark_M_v04_own.blend",
+          "bytes": 2877252,
+          "sha256": "d2d70da90b6a3ac3db52ba8159c9f787f4eedc95236c6b30729e1773575e41fc"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_M/landmark_M_v04_own.glb",
+          "bytes": 6397552,
+          "sha256": "08e3db4700563ad5c3aa77c27783aece9ed6207acf7fddaeee6b7a586ee7cd37"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_M/preview_v04_own.png",
+          "bytes": 1058146,
+          "sha256": "97959f452886a02baa12990a4cb383ed8712edefc2d9d273a6dd03f17070a119"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_U",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP_WITH_NOTES",
+      "finding": "Title no longer slices through canopy; curved cloth panels, scalloped hem and ribs remain readable. Hero title legible with slight perspective occlusion at lower A; production framing crops upper-left title portion at screen top, but readable improvement over former mostly hidden slicing title. Supports occluded by canopy, not independently inferred absent; coordinator reports exact numeric contact validation. Supersedes U04 inherited-contact hold. Parent authorized narrowed rear board and title/support relocation.",
+      "accepted_source_sha256": "68ba0b8a67d5eefd9702bbea9dda27bbe3664181a2183e120fd1062a6a0d151d",
+      "source_glb": "assets/blender/interiors/landmark_U/landmark_U_v05_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-U05-review.json",
+      "receipt_sha256": "59158144716b2ffb68bf982c765bc27052abe621f2874154b5f537de6ba20483",
+      "runtime_path": "game/assets/interiors/landmark_U.glb",
+      "runtime_sha256": "68ba0b8a67d5eefd9702bbea9dda27bbe3664181a2183e120fd1062a6a0d151d",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_U/landmark_U_v05_own.blend",
+          "bytes": 2071513,
+          "sha256": "fd83923be2665391db9e5e56a76a39bbb1e607e6309ae799821f358015242e0e"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_U/landmark_U_v05_own.glb",
+          "bytes": 6008164,
+          "sha256": "68ba0b8a67d5eefd9702bbea9dda27bbe3664181a2183e120fd1062a6a0d151d"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_U/preview_v05_own.png",
+          "bytes": 762631,
+          "sha256": "1421f73f80b2928d8b57f059ea4febd0bd24373013feb41152ef09805b9cf67b"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-U05-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_W",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Tapered flipper and notched cambered flukes improve whale silhouette; friendly face/body and exhibit remain unchanged.",
+      "accepted_source_sha256": "2c08de483bf801db8d28cf3ed677d9ae6ab7c33a3c51df8f0f464efdcbcdc936",
+      "source_glb": "assets/blender/interiors/landmark_W/landmark_W_v04_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "receipt_sha256": "e11cb7aca4254cba6df6428e86f28b43d8565b726f339e68a2c1506698205c7a",
+      "runtime_path": "game/assets/interiors/landmark_W.glb",
+      "runtime_sha256": "2c08de483bf801db8d28cf3ed677d9ae6ab7c33a3c51df8f0f464efdcbcdc936",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_W/landmark_W_v04_own.blend",
+          "bytes": 2179217,
+          "sha256": "867064b0b61ec0af2fcd551a7a2b090b9ab1a622744ea85661d6f2ea84d43fb0"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_W/landmark_W_v04_own.glb",
+          "bytes": 4325256,
+          "sha256": "2c08de483bf801db8d28cf3ed677d9ae6ab7c33a3c51df8f0f464efdcbcdc936"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_W/preview_v04_own.png",
+          "bytes": 774779,
+          "sha256": "aeae248330b7b9210c7e2b7a0e3752640bcf68cb35a13a0313d50fa08f5f35fe"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch03-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_C",
+      "action": "CHANGED_ACCEPTED",
+      "decision": "SHIP",
+      "finding": "Deep teal mixing bowl with visible inner wall/thick rim and contrasting batter, plus recessed white bowl, materially clearer at default camera. Stirrer appears seated; cakes/oven and circulation retained.",
+      "accepted_source_sha256": "a5b56aaaeb6113254b31cc5a2c672c430d2f33197273a01d617a2fb18b6f70b0",
+      "source_glb": "assets/blender/interiors/landmark_C/landmark_C_v16_own.glb",
+      "receipt": "docs/verification/own16-independent-audit/candidate-batch01-review.json",
+      "receipt_sha256": "1372853df9267cfee7744bf97f099afec6139c6f28354124d2703c9d0dcc747b",
+      "runtime_path": "game/assets/interiors/landmark_C.glb",
+      "runtime_sha256": "a5b56aaaeb6113254b31cc5a2c672c430d2f33197273a01d617a2fb18b6f70b0",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_C/landmark_C_v16_own.blend",
+          "bytes": 2437001,
+          "sha256": "ee09c0b10a089e003374a92401baa7697d2b277858f5d0a90840cf59bf797068"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_C/landmark_C_v16_own.glb",
+          "bytes": 7868568,
+          "sha256": "a5b56aaaeb6113254b31cc5a2c672c430d2f33197273a01d617a2fb18b6f70b0"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_C/preview_v16_own.png",
+          "bytes": 790993,
+          "sha256": "e4672c11bb8bf4bfa0585a52cd24ba9730db3d0003d848da84f666e999963eca"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/candidate-batch01-review.json",
+      "evidence_classification": "Fresh accepted candidate pixels plus exact canonical imported payload equivalence; selected canonical views independently reviewed separately."
+    },
+    {
+      "room_id": "landmark_D",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Drum rims/lugs/feet and tension lines visible at gameplay scale; retain performance space and clear hierarchy.",
+      "accepted_source_sha256": "8d0aa5f1d96931b6d3c387ad74375376c594bfe1cedb779306806eab6177f6ae",
+      "source_glb": "assets/blender/interiors/landmark_D/landmark_D_v15_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-05/landmark_D-production.png",
+      "baseline_image_sha256": "ba14a6141b120bfd491e3b827ff145d0a86a37e4e808553763d7a4b2f752b46b",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_D.glb",
+      "runtime_sha256": "8d0aa5f1d96931b6d3c387ad74375376c594bfe1cedb779306806eab6177f6ae",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_D/landmark_D_v15_own.blend",
+          "bytes": 3684686,
+          "sha256": "6af90cfb36de67f9db41f293e7bec0ee287da07e4cdf302c07c7f987a269d192"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_D/landmark_D_v15_own.glb",
+          "bytes": 8050872,
+          "sha256": "8d0aa5f1d96931b6d3c387ad74375376c594bfe1cedb779306806eab6177f6ae"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_D/preview_v15_own.png",
+          "bytes": 998823,
+          "sha256": "d2085da23b5755f24f27cb6cc0376392ad58158081ddb9f66d2d6ad8653a04b7"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_I",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Own15 filled gelato tubs/rolled rims/folded volume readable at production; crisp creases remain minor style note, not demonstrated holes.",
+      "accepted_source_sha256": "680356f7bf67e411c3b6b6efb31ba838e00f0d5f37135417c1b5bf8085722ddf",
+      "source_glb": "assets/blender/interiors/landmark_I/landmark_I_v18_own.glb",
+      "baseline_image": "docs/verification/own15-native/canonical-final/landmark_I-production.png",
+      "baseline_image_sha256": "6f5e631c5f5774c6b351ec756bc455bf215d6d0e6bcdc78638ee65d70123944b",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_I.glb",
+      "runtime_sha256": "680356f7bf67e411c3b6b6efb31ba838e00f0d5f37135417c1b5bf8085722ddf",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_I/landmark_I_v18_own.blend",
+          "bytes": 2079820,
+          "sha256": "e8d7616b27c247db819897ba22d35f8271e1412ae6eb4a02c60ed07b71342bdc"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_I/landmark_I_v18_own.glb",
+          "bytes": 4377340,
+          "sha256": "680356f7bf67e411c3b6b6efb31ba838e00f0d5f37135417c1b5bf8085722ddf"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_I/preview_v18_own.png",
+          "bytes": 1067535,
+          "sha256": "e535b80505465088d2f60bdf9b4428bd95130062aca244faaef939c37d48ae47"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_X",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Separated bars, fastening pins and stand framing clear; preserve musical stage.",
+      "accepted_source_sha256": "d40b3d9892f83b17a11bbe62beebcd30edb597bab7536ac7c5046362ea010bb9",
+      "source_glb": "assets/blender/interiors/landmark_X/landmark_X_v15_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-05/landmark_X-production.png",
+      "baseline_image_sha256": "ad5f140574409568ad3cafdc2c79fa5d134d206737d9702748ad920dfc0d904d",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_X.glb",
+      "runtime_sha256": "d40b3d9892f83b17a11bbe62beebcd30edb597bab7536ac7c5046362ea010bb9",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_X/landmark_X_v15_own.blend",
+          "bytes": 3556632,
+          "sha256": "32698ad30fa71ff4d01b126b810db427a7f859aaa8239c7e3d622c60609fc64f"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_X/landmark_X_v15_own.glb",
+          "bytes": 6564796,
+          "sha256": "d40b3d9892f83b17a11bbe62beebcd30edb597bab7536ac7c5046362ea010bb9"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_X/preview_v15_own.png",
+          "bytes": 934043,
+          "sha256": "219acb7133e48cc2d257793901d17981de1f88dd9bd751aff3b945a0859ce6f5"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_Y",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Wound yarn, loom threads and supported winder readable. Shaft/collar attachment established previously; not floating.",
+      "accepted_source_sha256": "ce3aa964d506140bf10a7178daf3385af2dd305193ae57b754f06d77c8dacd28",
+      "source_glb": "assets/blender/interiors/landmark_Y/landmark_Y_v03_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-06/landmark_Y-production.png",
+      "baseline_image_sha256": "38b4e15cf3e9c92cfd4cf56210279f8d93b9887533618ec4ddca365502b78a21",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_Y.glb",
+      "runtime_sha256": "ce3aa964d506140bf10a7178daf3385af2dd305193ae57b754f06d77c8dacd28",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_Y/landmark_Y_v03_own.blend",
+          "bytes": 3487035,
+          "sha256": "58cbf91200a22f30ddbe79c25e37a32edec37c0d1f20eec2e833e5f9700f4fe3"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_Y/landmark_Y_v03_own.glb",
+          "bytes": 18206340,
+          "sha256": "ce3aa964d506140bf10a7178daf3385af2dd305193ae57b754f06d77c8dacd28"
+        },
+        {
+          "path": "docs/verification/own-yarn-post-home-recovery-20261025/landmark_Y/blender-source-after.png",
+          "bytes": 1178575,
+          "sha256": "6ab5cb57a8bc9387116bad31a1e0da6dcc3a7497a5617e481415f561aa4f2d88"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "landmark_Z",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Mailbox hinges/slot, envelopes and gathered sack folds readable. Preserve clean sorting space.",
+      "accepted_source_sha256": "2c889ab474247f453db365b4299d3a99286500cd25124bc26f9fdc7a52a80497",
+      "source_glb": "assets/blender/interiors/landmark_Z/landmark_Z_v03_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-06/landmark_Z-production.png",
+      "baseline_image_sha256": "c186a571d8e1d805b7e4811702f9dbe188e1d52b9c8fbd29da8b8f6f926af3f4",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/landmark_Z.glb",
+      "runtime_sha256": "2c889ab474247f453db365b4299d3a99286500cd25124bc26f9fdc7a52a80497",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/landmark_Z/landmark_Z_v03_own.blend",
+          "bytes": 2891081,
+          "sha256": "c2f6e1dcf7318b6f839828be0a5547ac79b6cd2e4a7aeaa8484bb37d91f85fb4"
+        },
+        {
+          "path": "assets/blender/interiors/landmark_Z/landmark_Z_v03_own.glb",
+          "bytes": 8341720,
+          "sha256": "2c889ab474247f453db365b4299d3a99286500cd25124bc26f9fdc7a52a80497"
+        },
+        {
+          "path": "docs/verification/own-yarn-post-home-recovery-20261025/landmark_Z/blender-source-after.png",
+          "bytes": 1244155,
+          "sha256": "57c2b70ff1c77c209f7d8472b6b061a3a6e8d7ec70d1a436b9344b042953020a"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "home",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Sofa cushions/piping, rug edging, curtains, tea service and woven basket coherent and readable; retain without microdetail sprawl.",
+      "accepted_source_sha256": "8672b8a0f07d8c949468b629909a6e6aa96d2c28706dc19939889fe4a04ed94f",
+      "source_glb": "assets/blender/interiors/home/home_v07_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-06/home-production.png",
+      "baseline_image_sha256": "93eedcf6ee7eb733e793ec216d99ac3c5e37f1fce496328055df294c66bdc6a7",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/home.glb",
+      "runtime_sha256": "8672b8a0f07d8c949468b629909a6e6aa96d2c28706dc19939889fe4a04ed94f",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/home/home_v07_own.blend",
+          "bytes": 4383562,
+          "sha256": "0696560656638bf64433a4491d76a8568c1379ec4add22ee658ec03f341705f2"
+        },
+        {
+          "path": "assets/blender/interiors/home/home_v07_own.glb",
+          "bytes": 7730556,
+          "sha256": "8672b8a0f07d8c949468b629909a6e6aa96d2c28706dc19939889fe4a04ed94f"
+        },
+        {
+          "path": "docs/verification/own-yarn-post-home-recovery-20261025/home/blender-source-after.png",
+          "bytes": 1230089,
+          "sha256": "f55e26dbe3a2214d5273d72370effebb950aceb1d86e7c411787f897b3ecdaaf"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    },
+    {
+      "room_id": "home_hall",
+      "action": "JUSTIFIED_RETAIN",
+      "decision": "RETAIN",
+      "finding": "Distinct framed/labeled doors, hooks/shoes/umbrella basket, carpet hierarchy and clear circulation already strong.",
+      "accepted_source_sha256": "a983fb12926aaad3fe553c8811f0a168d277ed74666ece8a35152d2da0ff6321",
+      "source_glb": "assets/blender/interiors/home_hall/home_hall_v05_own.glb",
+      "baseline_image": "docs/verification/own14-recovered-native/recovered-candidate-06/home_hall-production.png",
+      "baseline_image_sha256": "5b9a8362dfca5e824a8cc004ed347902aa5fc74f11a8f1268ea9027798452837",
+      "receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "receipt_sha256": "c0d75e6aaaaa3edef0ce62a1ef273e2854684fd3c2a74ffd679afc902d12aa4f",
+      "runtime_path": "game/assets/interiors/home_hall.glb",
+      "runtime_sha256": "a983fb12926aaad3fe553c8811f0a168d277ed74666ece8a35152d2da0ff6321",
+      "editable_source_files": [
+        {
+          "path": "assets/blender/interiors/home_hall/home_hall_v05_own.blend",
+          "bytes": 3686791,
+          "sha256": "da53589e67ccb497fb3b16a777720a33ba31d708803505ee71d747daf62ed81d"
+        },
+        {
+          "path": "assets/blender/interiors/home_hall/home_hall_v05_own.glb",
+          "bytes": 11314364,
+          "sha256": "a983fb12926aaad3fe553c8811f0a168d277ed74666ece8a35152d2da0ff6321"
+        },
+        {
+          "path": "docs/verification/own-yarn-post-home-recovery-20261025/home_hall/blender-source-after.png",
+          "bytes": 1200160,
+          "sha256": "6a6a343ea10394cd55685a85942b1ea68e857377a7a94ae7af937e57dfe1dedd"
+        }
+      ],
+      "canonical_import_receipt": "docs/verification/own16/canonical44-imported-payloads.json",
+      "canonical_import_receipt_sha256": "fa319d45d888ae4fd8d2199157d0417bf209fedab74774f5906417ab6e7022e9",
+      "current_visual_receipt": "docs/verification/own16-independent-audit/initial-scene-review.json",
+      "evidence_classification": "Retained exact own15 source/runtime, individually inspected current-hash-bound native reference; no forced remodeling."
+    }
+  ],
+  "qa_receipt": "docs/verification/own16-runtime-qa/final-regression-report.json",
+  "qa_sha256": "f6b3dbd8f4112e609a2fbbb53521c5379ed5ee3ab7ee855402d6dcbe3a3906c9"
+}

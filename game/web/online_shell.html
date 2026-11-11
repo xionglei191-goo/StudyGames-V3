@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#55775e">
+  <title>字母岛 · 我的角色与小岛</title>
+  <link rel="stylesheet" href="lobby.css">
+  $GODOT_HEAD_INCLUDE
+</head>
+<body>
+  <main id="entry">
+    <header class="entry-header"><a class="brand" href="/" aria-label="字母岛首页"><span class="leaf" aria-hidden="true">✦</span> 字母岛 <small>ALPHABET ISLAND</small></a><span class="edition">我的角色 · 一起生活</span></header>
+    <div class="landing">
+      <section class="welcome">
+        <p class="eyebrow">一座小岛，一起慢慢逛。</p>
+        <h1>回到小岛，<br>接着昨天的故事。</h1>
+        <p class="intro">选好自己的角色，一个人慢慢逛，<br>或者邀请朋友，去熟悉的地方碰个面。</p>
+        <form id="entry-form">
+          <label for="profile">这次用哪个角色？</label>
+          <select id="profile"><option value="new">＋ 新建自己的角色</option></select>
+          <div class="identity-row"><div><label for="nickname">朋友怎么称呼你</label><input id="nickname" name="nickname" maxlength="12" autocomplete="off" placeholder="写一个昵称" required></div><fieldset class="outfits"><legend>今天穿什么颜色</legend><label title="暖黄色"><input type="radio" name="outfit" value="yellow" checked><span class="swatch yellow">黄</span></label><label title="玫瑰粉"><input type="radio" name="outfit" value="pink"><span class="swatch pink">粉</span></label><label title="天空蓝"><input type="radio" name="outfit" value="blue"><span class="swatch blue">蓝</span></label></fieldset></div>
+          <p id="profile-detail" class="fineprint" role="status">正在读取这台电脑的角色…</p>
+          <div class="mode-tabs" role="tablist" aria-label="进入方式"><button id="solo-tab" type="button" role="tab" aria-selected="true">自己逛逛</button><button id="create-tab" type="button" role="tab" aria-selected="false">邀请朋友</button><button id="join-tab" type="button" role="tab" aria-selected="false">我有邀请码</button></div>
+          <div id="code-field" hidden><label for="room-code">朋友给你的邀请码</label><input id="room-code" name="room" maxlength="12" autocomplete="off" placeholder="例如 ABCD EFGH" spellcheck="false"></div>
+          <button id="enter" class="primary" type="submit" disabled>在网页继续 <span aria-hidden="true">→</span></button>
+          <div class="entry-actions"><button id="native-launch" type="button" class="secondary" disabled>在电脑端继续</button><button id="show-recoveries" type="button" class="text-button">恢复记录</button></div>
+          <p id="entry-error" class="error" role="alert" hidden></p>
+          <p class="fineprint">这台电脑的单机版和网页共用角色进度。同一角色一次只在一处游玩；朋友请使用自己的角色。联机房间最多 4 人。</p>
+        </form>
+        <section id="recovery-panel" class="recovery-panel" hidden aria-label="存档恢复"><h2>保留下来的进度</h2><p id="recovery-message"></p><div id="recovery-list"></div><div id="conflict-actions" hidden><button id="keep-synced" class="secondary">使用已同步进度</button><button id="restore-draft" class="secondary">恢复未同步副本</button><button id="download-draft" class="text-button">下载副本</button></div><button id="close-recoveries" class="text-button">收起</button></section>
+      </section>
+      <figure class="island-card"><img src="island-preview.png" alt="字母岛上的小路、房子与校园"><figcaption><span>我们的字母岛</span><span>散步 · 挥手 · 一起探索</span></figcaption><div class="postmark" aria-hidden="true">来岛上<br>碰个面</div></figure>
+    </div>
+    <footer class="entry-footer"><span>不着急，随时可以停下来。</span><span id="local-hint">网页联机 · 本机体验</span></footer>
+  </main>
+  <section id="play" hidden aria-label="字母岛游戏">
+    <header id="online-bar"><a class="small-brand" href="/">✦ 字母岛</a><span id="connection" role="status">正在连接…</span><button id="copy-code" title="复制邀请链接"><span>邀请码</span> <strong id="invite-code">—</strong></button><span class="bar-space"></span><span id="save-status" role="status">准备存档…</span><button id="retry-save" hidden>重试同步</button><button id="download-save" hidden>下载进度副本</button><button id="wave">挥挥手</button><button id="friends-toggle" aria-expanded="false" aria-controls="friends-panel">角色 <span id="friend-count">1 / 4</span></button><button id="leave" class="quiet">保存并返回</button></header>
+    <div id="canvas-frame"><canvas id="canvas" tabindex="0" aria-label="字母岛，使用方向键或 WASD 行走，E 互动，M 地图" oncontextmenu="return false"></canvas></div>
+    <aside id="friends-panel" hidden><div class="panel-heading"><h2>同行的朋友</h2><button id="friends-close" aria-label="收起朋友列表">×</button></div><p class="panel-note">点“去找朋友”，一起到同一个地方。</p><div id="friends-list"></div><label for="playing-outfit">我的衣服</label><select id="playing-outfit"><option value="yellow">暖黄色</option><option value="pink">玫瑰粉</option><option value="blue">天空蓝</option></select><p class="panel-note">这里共享同行位置；物品、生活任务和学习记录由各自保存。</p></aside>
+    <div id="game-message" role="status" hidden></div>
+    <div id="ended" hidden><div><h2>暂时和朋友走散了</h2><p id="ended-message"></p><button id="return-entry" class="primary">返回入口</button></div></div>
+  </section>
+  <section id="loading" hidden aria-live="polite"><div class="loading-card"><span class="leaf" aria-hidden="true">✦</span><h2>把小岛准备好…</h2><p id="loading-label">正在领取邀请</p><progress id="progress" max="1" value="0"></progress><p class="fineprint">第一次进入需要加载场景和人物，请稍等一会儿。</p></div></section>
+  <script src="$GODOT_URL"></script>
+  <script>window.ALPHABET_ENGINE_CONFIG = $GODOT_CONFIG;</script>
+  <script src="shared_save.js"></script>
+  <script src="lobby.js"></script>
+</body>
+</html>

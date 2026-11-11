@@ -1,0 +1,5721 @@
+{
+	"actual_door_key_dispatch": true,
+	"actual_mouse_dispatch": true,
+	"actual_physics_movement": true,
+	"checks": [
+		{
+			"name": "save_isolation",
+			"passed": true
+		},
+		{
+			"name": "walk_village/enter_residence/home_gate",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_village/enter_residence/home_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_village/home_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/village/home_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/village/home_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_estate",
+			"passed": true
+		},
+		{
+			"name": "transition_village/home_gate->home_estate",
+			"passed": true
+		},
+		{
+			"name": "residence_level_two",
+			"passed": true
+		},
+		{
+			"name": "front_door_is_physical_hall_transition",
+			"passed": true
+		},
+		{
+			"name": "courtyard_has_seven_existing_interactions",
+			"passed": true
+		},
+		{
+			"name": "no_outdoor_room_door/home",
+			"passed": true
+		},
+		{
+			"name": "no_outdoor_room_door/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "no_outdoor_room_door/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "no_outdoor_room_door/home_dining",
+			"passed": true
+		},
+		{
+			"name": "no_outdoor_room_door/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "no_outdoor_room_door/home_study",
+			"passed": true
+		},
+		{
+			"name": "no_outdoor_room_door/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "all_prop_states_exist/home_estate",
+			"passed": true
+		},
+		{
+			"name": "walk_home_estate/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_estate/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_estate/1",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "source_page/home_estate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "source_returns_to_object/home_estate",
+			"passed": true
+		},
+		{
+			"name": "walk_home_estate/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_estate/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_estate/2",
+			"passed": true
+		},
+		{
+			"name": "initial_prop_state/home_estate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/照顾小院花圃",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/照顾小院花圃",
+			"passed": true
+		},
+		{
+			"name": "task_opened/home_estate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/拿起小水壶",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/拿起小水壶",
+			"passed": true
+		},
+		{
+			"name": "middle_prop_state/home_estate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_restores_props/home_estate",
+			"passed": true
+		},
+		{
+			"name": "cancel_does_not_complete/home_estate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/照顾小院花圃",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/照顾小院花圃",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/拿起小水壶",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/拿起小水壶",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/沿花盆慢慢浇水",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/沿花盆慢慢浇水",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把水壶放回架上",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把水壶放回架上",
+			"passed": true
+		},
+		{
+			"name": "all_steps_recorded/home_estate",
+			"passed": true
+		},
+		{
+			"name": "finished_prop_state/home_estate",
+			"passed": true
+		},
+		{
+			"name": "completion_returns_to_object/home_estate",
+			"passed": true
+		},
+		{
+			"name": "extra_step_is_idempotent/home_estate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/照顾小院花圃",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/照顾小院花圃",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/拿起小水壶",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/拿起小水壶",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_replay_restores_saved_result/home_estate",
+			"passed": true
+		},
+		{
+			"name": "walk_home_estate/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_estate/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_estate/3",
+			"passed": true
+		},
+		{
+			"name": "walk_home_estate/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_estate/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_estate/4",
+			"passed": true
+		},
+		{
+			"name": "walk_home_estate/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_estate/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_estate/5",
+			"passed": true
+		},
+		{
+			"name": "courtyard_map_has_front_door_exit_and_existing_pages",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/house_entry",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进家门",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进家门",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/house_entry",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/home_estate/house_entry",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_estate/house_entry",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_estate/house_entry",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_estate/house_entry",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_hall",
+			"passed": true
+		},
+		{
+			"name": "transition_home_estate/house_entry->home_hall",
+			"passed": true
+		},
+		{
+			"name": "hall_is_real_second_level_scene/initial_entry",
+			"passed": true
+		},
+		{
+			"name": "hall_has_no_room_menu/initial_entry",
+			"passed": true
+		},
+		{
+			"name": "hall_has_eight_physical_destinations/initial_entry",
+			"passed": true
+		},
+		{
+			"name": "hall_not_added_as_household_task_room/initial_entry",
+			"passed": true
+		},
+		{
+			"name": "player_inside_hall_floor_bounds/initial_entry",
+			"passed": true
+		},
+		{
+			"name": "player_on_indoor_floor/initial_entry",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/initial_entry/home",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/initial_entry/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_bedroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/initial_entry/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_kitchen/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_kitchen/1",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/initial_entry/home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_dining/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_dining/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_dining/2",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/initial_entry/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_bathroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_bathroom/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_bathroom/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_bathroom/3",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/initial_entry/home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_study/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_study/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_study/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_study/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_study/4",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/initial_entry/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_balcony/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_balcony/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_balcony/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_balcony/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_balcony/4",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/initial_entry/home_balcony/5",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/initial_entry/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/initial_entry/home_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/initial_entry/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/initial_entry/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/initial_entry/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/initial_entry/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/initial_entry/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/initial_entry/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_exit_returns_to_courtyard_front_door/initial_entry",
+			"passed": true
+		},
+		{
+			"name": "hall_map_has_seven_room_doors_and_courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "hall_map_is_navigation_not_room_menu",
+			"passed": true
+		},
+		{
+			"name": "hall_map_panel_fits_small_window",
+			"passed": true
+		},
+		{
+			"name": "small_window_hall_is_walkable",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/home_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进家里的客厅",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进家里的客厅",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/home_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/home_hall/home_gate",
+			"passed": true
+		},
+		{
+			"name": "room_map_only_walks_to_door/home",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_hall/home_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_hall/home_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_hall/home_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home",
+			"passed": true
+		},
+		{
+			"name": "transition_home_hall/home_gate->home",
+			"passed": true
+		},
+		{
+			"name": "child_scene_hierarchy/home",
+			"passed": true
+		},
+		{
+			"name": "child_exit_to_own_hall_door/home",
+			"passed": true
+		},
+		{
+			"name": "all_prop_states_exist/home",
+			"passed": true
+		},
+		{
+			"name": "walk_home/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home/1",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "source_page/home",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "source_returns_to_object/home",
+			"passed": true
+		},
+		{
+			"name": "walk_home/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home/2",
+			"passed": true
+		},
+		{
+			"name": "walk_home/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home/3",
+			"passed": true
+		},
+		{
+			"name": "initial_prop_state/home",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/为来访朋友摆好茶几",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/为来访朋友摆好茶几",
+			"passed": true
+		},
+		{
+			"name": "task_opened/home",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/铺好小桌垫",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/铺好小桌垫",
+			"passed": true
+		},
+		{
+			"name": "middle_prop_state/home",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_restores_props/home",
+			"passed": true
+		},
+		{
+			"name": "cancel_does_not_complete/home",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/为来访朋友摆好茶几",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/为来访朋友摆好茶几",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/铺好小桌垫",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/铺好小桌垫",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/摆好两个杯子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/摆好两个杯子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把果盘放到中间",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把果盘放到中间",
+			"passed": true
+		},
+		{
+			"name": "all_steps_recorded/home",
+			"passed": true
+		},
+		{
+			"name": "finished_prop_state/home",
+			"passed": true
+		},
+		{
+			"name": "completion_returns_to_object/home",
+			"passed": true
+		},
+		{
+			"name": "extra_step_is_idempotent/home",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/为来访朋友摆好茶几",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/为来访朋友摆好茶几",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/铺好小桌垫",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/铺好小桌垫",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_replay_restores_saved_result/home",
+			"passed": true
+		},
+		{
+			"name": "walk_home/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home/4",
+			"passed": true
+		},
+		{
+			"name": "walk_home/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home/5",
+			"passed": true
+		},
+		{
+			"name": "walk_home/living_room_rest_shortcut/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home/living_room_rest_shortcut/memory_04",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/去卧室休息",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/去卧室休息",
+			"passed": true
+		},
+		{
+			"name": "bedroom_shortcut_starts_walking_in_living_room",
+			"passed": true
+		},
+		{
+			"name": "rest_shortcut_exits_beside_living_room_door",
+			"passed": true
+		},
+		{
+			"name": "rest_shortcut_visits_actual_hall_before_bedroom",
+			"passed": true
+		},
+		{
+			"name": "rest_shortcut_walks_inside_both_scenes",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bedroom/return_after_bedroom_shortcut/home_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bedroom/return_after_bedroom_shortcut/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_bedroom/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_bedroom/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_bedroom/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_hall",
+			"passed": true
+		},
+		{
+			"name": "return_at_corresponding_door/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "transition_home_bedroom/home_exit->home_hall",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进温暖卧室",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进温暖卧室",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/home_hall/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "room_map_only_walks_to_door/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_hall/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_hall/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_hall/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "transition_home_hall/home_bedroom_gate->home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "child_scene_hierarchy/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "child_exit_to_own_hall_door/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "all_prop_states_exist/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bedroom/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bedroom/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_bedroom/1",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "source_page/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "source_returns_to_object/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "initial_prop_state/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/整理自己的床铺",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/整理自己的床铺",
+			"passed": true
+		},
+		{
+			"name": "task_opened/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把被子展开",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把被子展开",
+			"passed": true
+		},
+		{
+			"name": "middle_prop_state/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_restores_props/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "cancel_does_not_complete/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/整理自己的床铺",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/整理自己的床铺",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把被子展开",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把被子展开",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把枕头摆整齐",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把枕头摆整齐",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/轻轻抚平被角",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/轻轻抚平被角",
+			"passed": true
+		},
+		{
+			"name": "all_steps_recorded/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "finished_prop_state/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "completion_returns_to_object/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "extra_step_is_idempotent/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/整理自己的床铺",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/整理自己的床铺",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把被子展开",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把被子展开",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_replay_restores_saved_result/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bedroom/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bedroom/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_bedroom/2",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bedroom/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bedroom/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_bedroom/3",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bedroom/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bedroom/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_bedroom/4",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bedroom/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bedroom/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_bedroom/5",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bedroom/bedroom_wardrobe/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bedroom/bedroom_wardrobe/memory_03",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/挑选今天的穿搭",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/挑选今天的穿搭",
+			"passed": true
+		},
+		{
+			"name": "wardrobe_opens_inside_bedroom",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bedroom/bedroom_rest/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bedroom/bedroom_rest/memory_05",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/睡到明天",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/睡到明天",
+			"passed": true
+		},
+		{
+			"name": "sleep_stays_in_bedroom",
+			"passed": true
+		},
+		{
+			"name": "sleep_advances_one_day",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bedroom/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bedroom/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_bedroom/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_bedroom/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_bedroom/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_hall",
+			"passed": true
+		},
+		{
+			"name": "return_at_corresponding_door/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "transition_home_bedroom/home_exit->home_hall",
+			"passed": true
+		},
+		{
+			"name": "hall_is_real_second_level_scene/return_home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_has_no_room_menu/return_home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_has_eight_physical_destinations/return_home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_not_added_as_household_task_room/return_home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "player_inside_hall_floor_bounds/return_home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "player_on_indoor_floor/return_home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bedroom/home",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bedroom/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_bedroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bedroom/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_kitchen/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_kitchen/1",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bedroom/home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_dining/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_dining/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_dining/2",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bedroom/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_bathroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_bathroom/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_bathroom/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_bathroom/3",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bedroom/home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_study/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_study/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_study/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_study/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_study/4",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bedroom/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_balcony/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_balcony/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_balcony/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_balcony/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_balcony/4",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bedroom/home_balcony/5",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bedroom/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bedroom/home_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bedroom/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bedroom/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bedroom/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bedroom/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bedroom/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bedroom/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_exit_returns_to_courtyard_front_door/return_home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进明亮厨房",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进明亮厨房",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/home_hall/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "room_map_only_walks_to_door/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_hall/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_hall/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_hall/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "transition_home_hall/home_kitchen_gate->home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "child_scene_hierarchy/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "child_exit_to_own_hall_door/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "all_prop_states_exist/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "walk_home_kitchen/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_kitchen/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_kitchen/1",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "source_page/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "source_returns_to_object/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "walk_home_kitchen/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_kitchen/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_kitchen/2",
+			"passed": true
+		},
+		{
+			"name": "initial_prop_state/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/帮忙洗好蔬菜",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/帮忙洗好蔬菜",
+			"passed": true
+		},
+		{
+			"name": "task_opened/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把蔬菜放进洗菜池",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把蔬菜放进洗菜池",
+			"passed": true
+		},
+		{
+			"name": "middle_prop_state/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_restores_props/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "cancel_does_not_complete/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/帮忙洗好蔬菜",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/帮忙洗好蔬菜",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把蔬菜放进洗菜池",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把蔬菜放进洗菜池",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/轻轻冲洗叶片",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/轻轻冲洗叶片",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/关水并装入菜篮",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/关水并装入菜篮",
+			"passed": true
+		},
+		{
+			"name": "all_steps_recorded/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "finished_prop_state/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "completion_returns_to_object/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "extra_step_is_idempotent/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/帮忙洗好蔬菜",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/帮忙洗好蔬菜",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把蔬菜放进洗菜池",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把蔬菜放进洗菜池",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_replay_restores_saved_result/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "walk_home_kitchen/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_kitchen/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_kitchen/3",
+			"passed": true
+		},
+		{
+			"name": "walk_home_kitchen/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_kitchen/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_kitchen/4",
+			"passed": true
+		},
+		{
+			"name": "walk_home_kitchen/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_kitchen/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_kitchen/5",
+			"passed": true
+		},
+		{
+			"name": "walk_home_kitchen/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_kitchen/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_kitchen/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_kitchen/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_kitchen/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_hall",
+			"passed": true
+		},
+		{
+			"name": "return_at_corresponding_door/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "transition_home_kitchen/home_exit->home_hall",
+			"passed": true
+		},
+		{
+			"name": "hall_is_real_second_level_scene/return_home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_has_no_room_menu/return_home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_has_eight_physical_destinations/return_home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_not_added_as_household_task_room/return_home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "player_inside_hall_floor_bounds/return_home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "player_on_indoor_floor/return_home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_kitchen/home",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_kitchen/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_bedroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_kitchen/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_kitchen/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_kitchen/1",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_kitchen/home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_dining/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_dining/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_dining/2",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_kitchen/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_bathroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_bathroom/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_bathroom/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_bathroom/3",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_kitchen/home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_study/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_study/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_study/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_study/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_study/4",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_kitchen/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_balcony/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_balcony/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_balcony/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_balcony/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_balcony/4",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_kitchen/home_balcony/5",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_kitchen/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_kitchen/home_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_kitchen/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_kitchen/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_kitchen/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_kitchen/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_kitchen/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_kitchen/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_exit_returns_to_courtyard_front_door/return_home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进家庭餐厅",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进家庭餐厅",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/home_hall/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "room_map_only_walks_to_door/home_dining",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_hall/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_hall/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_hall/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_dining",
+			"passed": true
+		},
+		{
+			"name": "transition_home_hall/home_dining_gate->home_dining",
+			"passed": true
+		},
+		{
+			"name": "child_scene_hierarchy/home_dining",
+			"passed": true
+		},
+		{
+			"name": "child_exit_to_own_hall_door/home_dining",
+			"passed": true
+		},
+		{
+			"name": "all_prop_states_exist/home_dining",
+			"passed": true
+		},
+		{
+			"name": "walk_home_dining/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_dining/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_dining/1",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "source_page/home_dining",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "source_returns_to_object/home_dining",
+			"passed": true
+		},
+		{
+			"name": "walk_home_dining/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_dining/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_dining/2",
+			"passed": true
+		},
+		{
+			"name": "walk_home_dining/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_dining/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_dining/3",
+			"passed": true
+		},
+		{
+			"name": "initial_prop_state/home_dining",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/一起摆好餐桌",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/一起摆好餐桌",
+			"passed": true
+		},
+		{
+			"name": "task_opened/home_dining",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把餐垫摆好",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把餐垫摆好",
+			"passed": true
+		},
+		{
+			"name": "middle_prop_state/home_dining",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_restores_props/home_dining",
+			"passed": true
+		},
+		{
+			"name": "cancel_does_not_complete/home_dining",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/一起摆好餐桌",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/一起摆好餐桌",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把餐垫摆好",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把餐垫摆好",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/给每个座位放餐盘",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/给每个座位放餐盘",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把杯子放到餐盘旁",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把杯子放到餐盘旁",
+			"passed": true
+		},
+		{
+			"name": "all_steps_recorded/home_dining",
+			"passed": true
+		},
+		{
+			"name": "finished_prop_state/home_dining",
+			"passed": true
+		},
+		{
+			"name": "completion_returns_to_object/home_dining",
+			"passed": true
+		},
+		{
+			"name": "extra_step_is_idempotent/home_dining",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/一起摆好餐桌",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/一起摆好餐桌",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把餐垫摆好",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把餐垫摆好",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_replay_restores_saved_result/home_dining",
+			"passed": true
+		},
+		{
+			"name": "walk_home_dining/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_dining/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_dining/4",
+			"passed": true
+		},
+		{
+			"name": "walk_home_dining/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_dining/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_dining/5",
+			"passed": true
+		},
+		{
+			"name": "walk_home_dining/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_dining/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_dining/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_dining/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_dining/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_hall",
+			"passed": true
+		},
+		{
+			"name": "return_at_corresponding_door/home_dining",
+			"passed": true
+		},
+		{
+			"name": "transition_home_dining/home_exit->home_hall",
+			"passed": true
+		},
+		{
+			"name": "hall_is_real_second_level_scene/return_home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_has_no_room_menu/return_home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_has_eight_physical_destinations/return_home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_not_added_as_household_task_room/return_home_dining",
+			"passed": true
+		},
+		{
+			"name": "player_inside_hall_floor_bounds/return_home_dining",
+			"passed": true
+		},
+		{
+			"name": "player_on_indoor_floor/return_home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_dining/home",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_dining/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_bedroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_dining/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_kitchen/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_kitchen/1",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_dining/home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_dining/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_dining/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_dining/2",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_dining/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_bathroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_bathroom/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_bathroom/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_bathroom/3",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_dining/home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_study/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_study/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_study/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_study/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_study/4",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_dining/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_balcony/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_balcony/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_balcony/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_balcony/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_balcony/4",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_dining/home_balcony/5",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_dining/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_dining/home_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_dining/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_dining/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_dining/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_dining/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_dining/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_dining/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_exit_returns_to_courtyard_front_door/return_home_dining",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进清爽浴室",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进清爽浴室",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/home_hall/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "room_map_only_walks_to_door/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_hall/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_hall/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_hall/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "transition_home_hall/home_bathroom_gate->home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "child_scene_hierarchy/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "child_exit_to_own_hall_door/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "all_prop_states_exist/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bathroom/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bathroom/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_bathroom/1",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "source_page/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "source_returns_to_object/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bathroom/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bathroom/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_bathroom/2",
+			"passed": true
+		},
+		{
+			"name": "initial_prop_state/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/洗手后关好水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/洗手后关好水龙头",
+			"passed": true
+		},
+		{
+			"name": "task_opened/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/打开水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/打开水龙头",
+			"passed": true
+		},
+		{
+			"name": "middle_prop_state/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_restores_props/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "cancel_does_not_complete/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/洗手后关好水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/洗手后关好水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/打开水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/打开水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/搓洗并冲净双手",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/搓洗并冲净双手",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/关好水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/关好水龙头",
+			"passed": true
+		},
+		{
+			"name": "all_steps_recorded/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "finished_prop_state/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "completion_returns_to_object/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "extra_step_is_idempotent/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/洗手后关好水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/洗手后关好水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/打开水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/打开水龙头",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_replay_restores_saved_result/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bathroom/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bathroom/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_bathroom/3",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bathroom/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bathroom/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_bathroom/4",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bathroom/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bathroom/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_bathroom/5",
+			"passed": true
+		},
+		{
+			"name": "walk_home_bathroom/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_bathroom/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_bathroom/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_bathroom/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_bathroom/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_hall",
+			"passed": true
+		},
+		{
+			"name": "return_at_corresponding_door/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "transition_home_bathroom/home_exit->home_hall",
+			"passed": true
+		},
+		{
+			"name": "hall_is_real_second_level_scene/return_home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_has_no_room_menu/return_home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_has_eight_physical_destinations/return_home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_not_added_as_household_task_room/return_home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "player_inside_hall_floor_bounds/return_home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "player_on_indoor_floor/return_home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bathroom/home",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bathroom/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_bedroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bathroom/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_kitchen/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_kitchen/1",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bathroom/home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_dining/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_dining/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_dining/2",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bathroom/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_bathroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_bathroom/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_bathroom/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_bathroom/3",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bathroom/home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_study/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_study/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_study/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_study/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_study/4",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_bathroom/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_balcony/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_balcony/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_balcony/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_balcony/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_balcony/4",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_bathroom/home_balcony/5",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bathroom/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bathroom/home_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bathroom/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bathroom/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bathroom/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bathroom/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bathroom/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_bathroom/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_exit_returns_to_courtyard_front_door/return_home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进窗边书房",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进窗边书房",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/home_hall/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "room_map_only_walks_to_door/home_study",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_hall/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_hall/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_hall/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_study",
+			"passed": true
+		},
+		{
+			"name": "transition_home_hall/home_study_gate->home_study",
+			"passed": true
+		},
+		{
+			"name": "child_scene_hierarchy/home_study",
+			"passed": true
+		},
+		{
+			"name": "child_exit_to_own_hall_door/home_study",
+			"passed": true
+		},
+		{
+			"name": "all_prop_states_exist/home_study",
+			"passed": true
+		},
+		{
+			"name": "walk_home_study/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_study/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_study/1",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "source_page/home_study",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "source_returns_to_object/home_study",
+			"passed": true
+		},
+		{
+			"name": "walk_home_study/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_study/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_study/2",
+			"passed": true
+		},
+		{
+			"name": "initial_prop_state/home_study",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把读过的书放回去",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把读过的书放回去",
+			"passed": true
+		},
+		{
+			"name": "task_opened/home_study",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/收起散放的绘本",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/收起散放的绘本",
+			"passed": true
+		},
+		{
+			"name": "middle_prop_state/home_study",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_restores_props/home_study",
+			"passed": true
+		},
+		{
+			"name": "cancel_does_not_complete/home_study",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把读过的书放回去",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把读过的书放回去",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/收起散放的绘本",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/收起散放的绘本",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把绘本按大小排好",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把绘本按大小排好",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/放回书架",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/放回书架",
+			"passed": true
+		},
+		{
+			"name": "all_steps_recorded/home_study",
+			"passed": true
+		},
+		{
+			"name": "finished_prop_state/home_study",
+			"passed": true
+		},
+		{
+			"name": "completion_returns_to_object/home_study",
+			"passed": true
+		},
+		{
+			"name": "extra_step_is_idempotent/home_study",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/把读过的书放回去",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/把读过的书放回去",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/收起散放的绘本",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/收起散放的绘本",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_replay_restores_saved_result/home_study",
+			"passed": true
+		},
+		{
+			"name": "walk_home_study/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_study/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_study/3",
+			"passed": true
+		},
+		{
+			"name": "walk_home_study/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_study/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_study/4",
+			"passed": true
+		},
+		{
+			"name": "walk_home_study/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_study/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_study/5",
+			"passed": true
+		},
+		{
+			"name": "walk_home_study/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_study/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_study/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_study/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_study/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_hall",
+			"passed": true
+		},
+		{
+			"name": "return_at_corresponding_door/home_study",
+			"passed": true
+		},
+		{
+			"name": "transition_home_study/home_exit->home_hall",
+			"passed": true
+		},
+		{
+			"name": "hall_is_real_second_level_scene/return_home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_has_no_room_menu/return_home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_has_eight_physical_destinations/return_home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_not_added_as_household_task_room/return_home_study",
+			"passed": true
+		},
+		{
+			"name": "player_inside_hall_floor_bounds/return_home_study",
+			"passed": true
+		},
+		{
+			"name": "player_on_indoor_floor/return_home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_study/home",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_study/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_bedroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_study/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_kitchen/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_kitchen/1",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_study/home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_dining/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_dining/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_dining/2",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_study/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_bathroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_bathroom/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_bathroom/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_bathroom/3",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_study/home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_study/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_study/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_study/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_study/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_study/4",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_study/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_balcony/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_balcony/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_balcony/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_balcony/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_balcony/4",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_study/home_balcony/5",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_study/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_study/home_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_study/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_study/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_study/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_study/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_study/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_study/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_exit_returns_to_courtyard_front_door/return_home_study",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走进家务阳台",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走进家务阳台",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/home_hall/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "room_map_only_walks_to_door/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_hall/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_hall/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_hall/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "transition_home_hall/home_balcony_gate->home_balcony",
+			"passed": true
+		},
+		{
+			"name": "child_scene_hierarchy/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "child_exit_to_own_hall_door/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "all_prop_states_exist/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "walk_home_balcony/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_balcony/household_objects/memory_01",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_balcony/1",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/看看课本出处",
+			"passed": true
+		},
+		{
+			"name": "source_page/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/回到生活物品",
+			"passed": true
+		},
+		{
+			"name": "source_returns_to_object/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "initial_prop_state/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/晾好洗过的小袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/晾好洗过的小袜子",
+			"passed": true
+		},
+		{
+			"name": "task_opened/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/从衣篮取出袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/从衣篮取出袜子",
+			"passed": true
+		},
+		{
+			"name": "middle_prop_state/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_restores_props/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "cancel_does_not_complete/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/晾好洗过的小袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/晾好洗过的小袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/从衣篮取出袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/从衣篮取出袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/一双一双挂到晾衣架上",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/一双一双挂到晾衣架上",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/夹好夹子并收起衣篮",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/夹好夹子并收起衣篮",
+			"passed": true
+		},
+		{
+			"name": "all_steps_recorded/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "finished_prop_state/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "completion_returns_to_object/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "extra_step_is_idempotent/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/晾好洗过的小袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/晾好洗过的小袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/从衣篮取出袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/从衣篮取出袜子",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/先放下，等会儿再做",
+			"passed": true
+		},
+		{
+			"name": "cancel_replay_restores_saved_result/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "walk_home_balcony/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_balcony/household_objects/memory_02",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_balcony/2",
+			"passed": true
+		},
+		{
+			"name": "walk_home_balcony/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_balcony/household_objects/memory_03",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_balcony/3",
+			"passed": true
+		},
+		{
+			"name": "walk_home_balcony/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_balcony/household_objects/memory_04",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_balcony/4",
+			"passed": true
+		},
+		{
+			"name": "walk_home_balcony/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_balcony/household_objects/memory_05",
+			"passed": true
+		},
+		{
+			"name": "memory_opened/home_balcony/5",
+			"passed": true
+		},
+		{
+			"name": "walk_home_balcony/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_balcony/leave_room/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_balcony/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_balcony/home_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_balcony/home_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_hall",
+			"passed": true
+		},
+		{
+			"name": "return_at_corresponding_door/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "transition_home_balcony/home_exit->home_hall",
+			"passed": true
+		},
+		{
+			"name": "hall_is_real_second_level_scene/return_home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_has_no_room_menu/return_home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_has_eight_physical_destinations/return_home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_not_added_as_household_task_room/return_home_balcony",
+			"passed": true
+		},
+		{
+			"name": "player_inside_hall_floor_bounds/return_home_balcony",
+			"passed": true
+		},
+		{
+			"name": "player_on_indoor_floor/return_home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_balcony/home",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_balcony/home_bedroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_bedroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_balcony/home_kitchen",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_kitchen/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_kitchen/1",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_balcony/home_dining",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_dining/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_dining/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_dining/2",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_balcony/home_bathroom",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_bathroom/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_bathroom/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_bathroom/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_bathroom/3",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_balcony/home_study",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_study/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_study/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_study/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_study/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_study/4",
+			"passed": true
+		},
+		{
+			"name": "hall_room_door_binding/return_home_balcony/home_balcony",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_balcony/0",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_balcony/1",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_balcony/2",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_balcony/3",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_balcony/4",
+			"passed": true
+		},
+		{
+			"name": "hall_doors_spatially_separate/return_home_balcony/home_balcony/5",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_balcony/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_balcony/home_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_balcony/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_balcony/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_balcony/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_balcony/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_balcony/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_navigation_only/return_home_balcony/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "hall_exit_returns_to_courtyard_front_door/return_home_balcony",
+			"passed": true
+		},
+		{
+			"name": "map_destination_exists/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_available/走出家门 · 回到小院",
+			"passed": true
+		},
+		{
+			"name": "mouse_button_inside_viewport/走出家门 · 回到小院",
+			"passed": true
+		},
+		{
+			"name": "map_button_started_walk/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "actual_map_walk/home_hall/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_hall/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_hall/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_hall/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_blender_source/home_estate",
+			"passed": true
+		},
+		{
+			"name": "return_at_corresponding_door/home_hall",
+			"passed": true
+		},
+		{
+			"name": "transition_home_hall/courtyard_exit->home_estate",
+			"passed": true
+		},
+		{
+			"name": "walk_home_estate/leave_residence/village_exit",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_home_estate/leave_residence/village_exit",
+			"passed": true
+		},
+		{
+			"name": "transition_selected_home_estate/village_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_before_transition/home_estate/village_exit",
+			"passed": true
+		},
+		{
+			"name": "no_room_menu_after_transition/home_estate/village_exit",
+			"passed": true
+		},
+		{
+			"name": "return_at_corresponding_door/home_estate",
+			"passed": true
+		},
+		{
+			"name": "transition_home_estate/village_exit->village",
+			"passed": true
+		},
+		{
+			"name": "complete_journey_returns_to_island",
+			"passed": true
+		},
+		{
+			"name": "all_eight_household_tasks_persisted",
+			"passed": true
+		},
+		{
+			"name": "all_forty_household_points_discovered",
+			"passed": true
+		},
+		{
+			"name": "no_language_grade_from_housework",
+			"passed": true
+		},
+		{
+			"name": "no_extra_economy_rewards",
+			"passed": true
+		},
+		{
+			"name": "tasks_survive_reload",
+			"passed": true
+		},
+		{
+			"name": "no_room_selection_menu_seen_during_transitions",
+			"passed": true
+		},
+		{
+			"name": "production_save_unchanged",
+			"passed": true
+		}
+	],
+	"collisions": [],
+	"complete": true,
+	"coverage": "Physical village gate, courtyard front door, walkable hall, seven physical room doors, forty existing memory points and eight household tasks, corresponding indoor return doors, courtyard and island exits.",
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"forbidden_room_menu_frames": 0,
+	"map_pages": [
+		{
+			"labels": [
+				"走出家门 · 回到小院",
+				"走进家里的客厅",
+				"走进温暖卧室",
+				"走进明亮厨房",
+				"走进家庭餐厅",
+				"走进清爽浴室",
+				"走进窗边书房",
+				"走进家务阳台"
+			],
+			"passed": true,
+			"room": "home_hall"
+		}
+	],
+	"passed": true,
+	"planned_routes": [],
+	"production_save_unchanged": true,
+	"routes": [
+		{
+			"accepted": true,
+			"allowed_distance": 2.6,
+			"destination": [
+				-3.0,
+				5.77650690078735,
+				18.5
+			],
+			"distance_walked": 4.06330791302025,
+			"finish": [
+				-3.12266731262207,
+				5.59199333190918,
+				18.8775577545166
+			],
+			"interaction_available": true,
+			"label": "enter_residence/home_gate",
+			"nearest_interaction": "home_gate",
+			"passed": true,
+			"physics_frames": 55,
+			"remaining_distance": 0.396985054016113,
+			"remaining_waypoints": 0,
+			"room": "village",
+			"start": [
+				-6.0,
+				5.55009698867798,
+				21.75
+			],
+			"target_interaction": "home_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-10.0,
+				0.0,
+				10.1999998092651
+			],
+			"distance_walked": 10.8847298491746,
+			"finish": [
+				-9.58755111694336,
+				-0.0491668581962585,
+				10.4999942779541
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 135,
+			"remaining_distance": 0.510010540485382,
+			"remaining_waypoints": 0,
+			"room": "home_estate",
+			"start": [
+				0.0,
+				-0.0499575734138489,
+				13.5
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				8.0,
+				0.0,
+				10.1999998092651
+			],
+			"distance_walked": 17.6666622161865,
+			"finish": [
+				8.08444690704346,
+				-0.0491666980087757,
+				10.4999980926514
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 211,
+			"remaining_distance": 0.311657249927521,
+			"remaining_waypoints": 0,
+			"room": "home_estate",
+			"start": [
+				-9.58755111694336,
+				-0.0491668581962585,
+				10.4999942779541
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-6.30000019073486,
+				0.0,
+				9.19999980926514
+			],
+			"distance_walked": 14.5830090614036,
+			"finish": [
+				-5.83633232116699,
+				-0.0505557432770729,
+				8.99999809265137
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 176,
+			"remaining_distance": 0.504963934421539,
+			"remaining_waypoints": 0,
+			"room": "home_estate",
+			"start": [
+				8.08444690704346,
+				-0.0491666980087757,
+				10.4999980926514
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				2.0,
+				0.0,
+				10.1999998092651
+			],
+			"distance_walked": 8.61973006371409,
+			"finish": [
+				2.08957862854004,
+				-0.049166165292263,
+				10.5000057220459
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 109,
+			"remaining_distance": 0.313094049692154,
+			"remaining_waypoints": 0,
+			"room": "home_estate",
+			"start": [
+				-5.83633232116699,
+				-0.0505557432770729,
+				8.99999809265137
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				11.5,
+				0.0,
+				10.3000001907349
+			],
+			"distance_walked": 8.9905252456665,
+			"finish": [
+				11.0852394104004,
+				-0.0491667166352272,
+				10.5000019073486
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 111,
+			"remaining_distance": 0.46046394109726,
+			"remaining_waypoints": 0,
+			"room": "home_estate",
+			"start": [
+				2.08957862854004,
+				-0.049166165292263,
+				10.5000057220459
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"allowed_distance": 1.5,
+			"destination": [
+				-3.5,
+				0.0,
+				8.69999980926514
+			],
+			"distance_walked": 13.9493512324989,
+			"finish": [
+				-2.16553330421448,
+				-0.0491657853126526,
+				8.99999809265137
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "house_entry",
+			"passed": true,
+			"physics_frames": 165,
+			"remaining_distance": 1.36777210235596,
+			"room": "home_estate",
+			"start": [
+				11.0852394104004,
+				-0.0491667166352272,
+				10.5000019073486
+			],
+			"target_interaction": "house_entry"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				-10.5,
+				0.0,
+				3.95000004768372
+			],
+			"distance_walked": 6.8096122071147,
+			"finish": [
+				-9.01603984832764,
+				-0.0491637997329235,
+				3.74665927886963
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "home_gate",
+			"passed": true,
+			"physics_frames": 81,
+			"remaining_distance": 1.49782681465149,
+			"room": "home_hall",
+			"start": [
+				-3.75,
+				-0.0499629639089108,
+				7.5
+			],
+			"target_interaction": "home_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-3.5,
+				0.0,
+				3.40000009536743
+			],
+			"distance_walked": 4.51933612115681,
+			"finish": [
+				-3.58733320236206,
+				-0.0491900220513344,
+				3.74365377426147
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 60,
+			"remaining_distance": 0.354577124118805,
+			"remaining_waypoints": 0,
+			"room": "home",
+			"start": [
+				0.0,
+				-0.0502105578780174,
+				6.0
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-4.80000019073486,
+				0.0,
+				0.699999988079071
+			],
+			"distance_walked": 3.27938807290047,
+			"finish": [
+				-4.50255346298218,
+				-0.0491841472685337,
+				0.913728475570679
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 46,
+			"remaining_distance": 0.366270959377289,
+			"remaining_waypoints": 0,
+			"room": "home",
+			"start": [
+				-3.58733320236206,
+				-0.0491900220513344,
+				3.74365377426147
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.0,
+				0.0,
+				0.300000011920929
+			],
+			"distance_walked": 4.77624350041151,
+			"finish": [
+				-0.164517313241959,
+				-0.0516674630343914,
+				-0.0000464833356090821
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 63,
+			"remaining_distance": 0.342189788818359,
+			"remaining_waypoints": 0,
+			"room": "home",
+			"start": [
+				-4.50255346298218,
+				-0.0491841472685337,
+				0.913728475570679
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.69999980926514,
+				0.0,
+				0.699999988079071
+			],
+			"distance_walked": 4.76954349968582,
+			"finish": [
+				4.3418116569519,
+				-0.0491753630340099,
+				0.750018358230591
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 63,
+			"remaining_distance": 0.361663639545441,
+			"remaining_waypoints": 0,
+			"room": "home",
+			"start": [
+				-0.164517313241959,
+				-0.0516674630343914,
+				-0.0000464833356090821
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.59999990463257,
+				0.0,
+				3.90000009536743
+			],
+			"distance_walked": 2.8430936569348,
+			"finish": [
+				4.49983644485474,
+				-0.0491925217211246,
+				3.5847225189209
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 40,
+			"remaining_distance": 0.330806076526642,
+			"remaining_waypoints": 0,
+			"room": "home",
+			"start": [
+				4.3418116569519,
+				-0.0491753630340099,
+				0.750018358230591
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.69999980926514,
+				0.0,
+				0.699999988079071
+			],
+			"distance_walked": 2.66473408415914,
+			"finish": [
+				4.49999809265137,
+				-0.04918123036623,
+				0.914834558963776
+			],
+			"interaction_available": true,
+			"label": "living_room_rest_shortcut/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 38,
+			"remaining_distance": 0.293521016836166,
+			"remaining_waypoints": 0,
+			"room": "home",
+			"start": [
+				4.49983644485474,
+				-0.0491925217211246,
+				3.5847225189209
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"distance_walked_by_room": {
+				"home": 5.79831915721297,
+				"home_bedroom": 0.150000095367432,
+				"home_hall": 13.8590120114386
+			},
+			"label": "actual_living_room_rest_shortcut",
+			"navigation_source": "actual_memory_panel_button",
+			"passed": true,
+			"physics_frames": 250,
+			"rooms": [
+				"home",
+				"home_hall",
+				"home_bedroom"
+			]
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				4.80000019073486
+			],
+			"distance_walked": 0.578699111938477,
+			"finish": [
+				0.0,
+				-0.049175463616848,
+				4.33411931991577
+			],
+			"interaction_available": true,
+			"label": "return_after_bedroom_shortcut/home_exit",
+			"nearest_interaction": "home_exit",
+			"passed": true,
+			"physics_frames": 14,
+			"remaining_distance": 0.465880870819092,
+			"remaining_waypoints": 0,
+			"room": "home_bedroom",
+			"start": [
+				0.0,
+				-0.0500487200915813,
+				3.75
+			],
+			"target_interaction": "home_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				-3.5,
+				0.0,
+				-6.0
+			],
+			"distance_walked": 0.0,
+			"finish": [
+				-3.75,
+				-0.0499629639089108,
+				-6.0
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "home_bedroom_gate",
+			"passed": true,
+			"physics_frames": 0,
+			"remaining_distance": 0.25,
+			"room": "home_hall",
+			"start": [
+				-3.75,
+				-0.0499629639089108,
+				-6.0
+			],
+			"target_interaction": "home_bedroom_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-4.19999980926514,
+				0.0,
+				0.0999999046325684
+			],
+			"distance_walked": 5.88732229918242,
+			"finish": [
+				-4.35302448272705,
+				-0.0491887032985687,
+				-0.0254618693143129
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 75,
+			"remaining_distance": 0.197881788015366,
+			"remaining_waypoints": 0,
+			"room": "home_bedroom",
+			"start": [
+				0.0,
+				-0.0500487200915813,
+				3.75
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-1.20000004768372,
+				0.0,
+				-2.10000014305115
+			],
+			"distance_walked": 4.50330257322639,
+			"finish": [
+				-1.49976015090942,
+				-0.0492041669785976,
+				-2.08789300918579
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 60,
+			"remaining_distance": 0.30000451207161,
+			"remaining_waypoints": 0,
+			"room": "home_bedroom",
+			"start": [
+				-4.35302448272705,
+				-0.0491887032985687,
+				-0.0254618693143129
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.30000019073486,
+				0.0,
+				-2.0
+			],
+			"distance_walked": 5.84820919204503,
+			"finish": [
+				4.3384256362915,
+				-0.0491878427565098,
+				-2.25000071525574
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 75,
+			"remaining_distance": 0.252936482429504,
+			"remaining_waypoints": 0,
+			"room": "home_bedroom",
+			"start": [
+				-1.49976015090942,
+				-0.0492041669785976,
+				-2.08789300918579
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-2.69999980926514,
+				0.0,
+				2.19999980926514
+			],
+			"distance_walked": 9.11213946714997,
+			"finish": [
+				-2.8851044178009,
+				-0.0504323169589043,
+				2.13504910469055
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 115,
+			"remaining_distance": 0.196169078350067,
+			"remaining_waypoints": 0,
+			"room": "home_bedroom",
+			"start": [
+				4.3384256362915,
+				-0.0491878427565098,
+				-2.25000071525574
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				2.0,
+				0.0,
+				1.89999997615814
+			],
+			"distance_walked": 4.97841784078628,
+			"finish": [
+				2.08895063400269,
+				-0.0491648092865944,
+				2.24999833106995
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 65,
+			"remaining_distance": 0.361124724149704,
+			"remaining_waypoints": 0,
+			"room": "home_bedroom",
+			"start": [
+				-2.8851044178009,
+				-0.0504323169589043,
+				2.13504910469055
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.30000019073486,
+				0.0,
+				-2.0
+			],
+			"distance_walked": 5.32619998045266,
+			"finish": [
+				4.38408851623535,
+				-0.0491811595857143,
+				-2.13654661178589
+			],
+			"interaction_available": true,
+			"label": "bedroom_wardrobe/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 71,
+			"remaining_distance": 0.160361543297768,
+			"remaining_waypoints": 0,
+			"room": "home_bedroom",
+			"start": [
+				2.08895063400269,
+				-0.0491648092865944,
+				2.24999833106995
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				2.0,
+				0.0,
+				1.89999997615814
+			],
+			"distance_walked": 5.21478944271803,
+			"finish": [
+				2.24136829376221,
+				-0.0491698905825615,
+				2.08818435668945
+			],
+			"interaction_available": true,
+			"label": "bedroom_rest/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 69,
+			"remaining_distance": 0.30605885386467,
+			"remaining_waypoints": 0,
+			"room": "home_bedroom",
+			"start": [
+				4.38408851623535,
+				-0.0491811595857143,
+				-2.13654661178589
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				4.80000019073486
+			],
+			"distance_walked": 3.13747079111636,
+			"finish": [
+				0.109815888106823,
+				-0.0491815358400345,
+				4.38982439041138
+			],
+			"interaction_available": true,
+			"label": "leave_room/home_exit",
+			"nearest_interaction": "home_exit",
+			"passed": true,
+			"physics_frames": 44,
+			"remaining_distance": 0.424621850252151,
+			"remaining_waypoints": 0,
+			"room": "home_bedroom",
+			"start": [
+				2.24136829376221,
+				-0.0491698905825615,
+				2.08818435668945
+			],
+			"target_interaction": "home_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				10.5,
+				0.0,
+				3.95000004768372
+			],
+			"distance_walked": 20.7813594415784,
+			"finish": [
+				8.98270130157471,
+				-0.0491669028997421,
+				3.75000047683716
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "home_kitchen_gate",
+			"passed": true,
+			"physics_frames": 244,
+			"remaining_distance": 1.53042316436768,
+			"room": "home_hall",
+			"start": [
+				-3.75,
+				-0.0499629639089108,
+				-6.0
+			],
+			"target_interaction": "home_kitchen_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-5.0,
+				0.0,
+				-2.5
+			],
+			"distance_walked": 9.5199483865872,
+			"finish": [
+				-5.13336658477783,
+				-0.0491822399199009,
+				-2.13336634635925
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 118,
+			"remaining_distance": 0.390137016773224,
+			"remaining_waypoints": 0,
+			"room": "home_kitchen",
+			"start": [
+				0.0,
+				-0.0500617399811745,
+				5.25
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-1.39999997615814,
+				0.0,
+				-3.0
+			],
+			"distance_walked": 3.94255709834397,
+			"finish": [
+				-1.66213119029999,
+				-0.0491675809025764,
+				-3.00078129768372
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 54,
+			"remaining_distance": 0.262132376432419,
+			"remaining_waypoints": 0,
+			"room": "home_kitchen",
+			"start": [
+				-5.13336658477783,
+				-0.0491822399199009,
+				-2.13336634635925
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.5,
+				0.0,
+				-2.59999990463257
+			],
+			"distance_walked": 6.26372777856886,
+			"finish": [
+				4.33787488937378,
+				-0.0491845160722733,
+				-2.24999833106995
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 80,
+			"remaining_distance": 0.385727435350418,
+			"remaining_waypoints": 0,
+			"room": "home_kitchen",
+			"start": [
+				-1.66213119029999,
+				-0.0491675809025764,
+				-3.00078129768372
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				2.0,
+				0.0,
+				-1.84999990463257
+			],
+			"distance_walked": 2.29983233567327,
+			"finish": [
+				2.40729904174805,
+				-0.049209151417017,
+				-1.48964321613312
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 35,
+			"remaining_distance": 0.54382848739624,
+			"remaining_waypoints": 0,
+			"room": "home_kitchen",
+			"start": [
+				4.33787488937378,
+				-0.0491845160722733,
+				-2.24999833106995
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-3.20000004768372,
+				0.0,
+				1.14999985694885
+			],
+			"distance_walked": 6.94756630808115,
+			"finish": [
+				-2.88410758972168,
+				-0.049196969717741,
+				1.38910031318665
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 89,
+			"remaining_distance": 0.396178096532822,
+			"remaining_waypoints": 0,
+			"room": "home_kitchen",
+			"start": [
+				2.40729904174805,
+				-0.049209151417017,
+				-1.48964321613312
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				6.40000009536743
+			],
+			"distance_walked": 5.59770264383405,
+			"finish": [
+				-0.108867816627026,
+				-0.0491780117154121,
+				5.89148378372192
+			],
+			"interaction_available": true,
+			"label": "leave_room/home_exit",
+			"nearest_interaction": "home_exit",
+			"passed": true,
+			"physics_frames": 73,
+			"remaining_distance": 0.520039498806,
+			"remaining_waypoints": 0,
+			"room": "home_kitchen",
+			"start": [
+				-2.88410758972168,
+				-0.049196969717741,
+				1.38910031318665
+			],
+			"target_interaction": "home_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				3.5,
+				0.0,
+				3.95000004768372
+			],
+			"distance_walked": 5.45166301727295,
+			"finish": [
+				5.04833698272705,
+				-0.0491703525185585,
+				3.75
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "home_dining_gate",
+			"passed": true,
+			"physics_frames": 65,
+			"remaining_distance": 1.5612006187439,
+			"room": "home_hall",
+			"start": [
+				10.5,
+				-0.0499499440193176,
+				3.75
+			],
+			"target_interaction": "home_dining_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-4.40000009536743,
+				0.0,
+				-1.69999992847443
+			],
+			"distance_walked": 8.12522877752781,
+			"finish": [
+				-4.34535694122314,
+				-0.049181129783392,
+				-1.49086892604828
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 107,
+			"remaining_distance": 0.216151922941208,
+			"remaining_waypoints": 0,
+			"room": "home_dining",
+			"start": [
+				0.0,
+				-0.0500487200915813,
+				3.75
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				2.79999995231628,
+				0.0,
+				-0.0999999046325684
+			],
+			"distance_walked": 9.55094632692635,
+			"finish": [
+				2.89857387542725,
+				-0.0491798259317875,
+				0.1259695738554
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 124,
+			"remaining_distance": 0.246534019708633,
+			"remaining_waypoints": 0,
+			"room": "home_dining",
+			"start": [
+				-4.34535694122314,
+				-0.049181129783392,
+				-1.49086892604828
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.0,
+				0.0,
+				1.60000002384186
+			],
+			"distance_walked": 3.30113303754479,
+			"finish": [
+				0.16210862994194,
+				-0.0506052263081074,
+				1.50707590579987
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 46,
+			"remaining_distance": 0.186853140592575,
+			"remaining_waypoints": 0,
+			"room": "home_dining",
+			"start": [
+				2.89857387542725,
+				-0.0491798259317875,
+				0.1259695738554
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-2.79999995231628,
+				0.0,
+				-0.0999999046325684
+			],
+			"distance_walked": 3.60626871418208,
+			"finish": [
+				-2.91024136543274,
+				-0.0491663999855518,
+				0.131594523787498
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 50,
+			"remaining_distance": 0.256493955850601,
+			"remaining_waypoints": 0,
+			"room": "home_dining",
+			"start": [
+				0.16210862994194,
+				-0.0506052263081074,
+				1.50707590579987
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.40000009536743,
+				0.0,
+				-1.89999997615814
+			],
+			"distance_walked": 9.87663744948804,
+			"finish": [
+				4.34531688690186,
+				-0.0491883717477322,
+				-2.25811791419983
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 133,
+			"remaining_distance": 0.362268835306168,
+			"remaining_waypoints": 0,
+			"room": "home_dining",
+			"start": [
+				-2.91024136543274,
+				-0.0491663999855518,
+				0.131594523787498
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				4.80000019073486
+			],
+			"distance_walked": 8.83518210146576,
+			"finish": [
+				-0.00712571991607547,
+				-0.0491872392594814,
+				4.33750343322754
+			],
+			"interaction_available": true,
+			"label": "leave_room/home_exit",
+			"nearest_interaction": "home_exit",
+			"passed": true,
+			"physics_frames": 112,
+			"remaining_distance": 0.462551653385162,
+			"remaining_waypoints": 0,
+			"room": "home_dining",
+			"start": [
+				4.34531688690186,
+				-0.0491883717477322,
+				-2.25811791419983
+			],
+			"target_interaction": "home_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				3.5,
+				0.0,
+				-6.0
+			],
+			"distance_walked": 15.1898483522236,
+			"finish": [
+				2.51659107208252,
+				-0.0491746179759502,
+				-4.76659393310547
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "home_bathroom_gate",
+			"passed": true,
+			"physics_frames": 183,
+			"remaining_distance": 1.57746112346649,
+			"room": "home_hall",
+			"start": [
+				3.75,
+				-0.0499890074133873,
+				3.75
+			],
+			"target_interaction": "home_bathroom_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-3.70000028610229,
+				0.0,
+				-2.39999985694885
+			],
+			"distance_walked": 7.37802973855287,
+			"finish": [
+				-3.7507336139679,
+				-0.0491819083690643,
+				-2.08871006965637
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 93,
+			"remaining_distance": 0.315396904945374,
+			"remaining_waypoints": 0,
+			"room": "home_bathroom",
+			"start": [
+				0.0,
+				-0.0500096566975117,
+				3.75
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-0.5,
+				0.0,
+				-2.40000009536743
+			],
+			"distance_walked": 2.84423830639571,
+			"finish": [
+				-0.91537481546402,
+				-0.0504139326512814,
+				-2.249831199646
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 40,
+			"remaining_distance": 0.441686481237412,
+			"remaining_waypoints": 0,
+			"room": "home_bathroom",
+			"start": [
+				-3.7507336139679,
+				-0.0491819083690643,
+				-2.08871006965637
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				2.69999980926514,
+				0.0,
+				-0.599999904632568
+			],
+			"distance_walked": 4.32919235527515,
+			"finish": [
+				2.84109711647034,
+				-0.0492089651525021,
+				-0.749233961105347
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 58,
+			"remaining_distance": 0.205375894904137,
+			"remaining_waypoints": 0,
+			"room": "home_bathroom",
+			"start": [
+				-0.91537481546402,
+				-0.0504139326512814,
+				-2.249831199646
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-4.20000028610229,
+				0.0,
+				1.10000002384186
+			],
+			"distance_walked": 7.91547350026667,
+			"finish": [
+				-4.33902072906494,
+				-0.0491854846477509,
+				0.750003755092621
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 102,
+			"remaining_distance": 0.376595348119736,
+			"remaining_waypoints": 0,
+			"room": "home_bathroom",
+			"start": [
+				2.84109711647034,
+				-0.0492089651525021,
+				-0.749233961105347
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.5,
+				0.0,
+				3.34999990463257
+			],
+			"distance_walked": 10.3079898124561,
+			"finish": [
+				4.39370727539063,
+				-0.049188781529665,
+				3.13370037078857
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 128,
+			"remaining_distance": 0.241005465388298,
+			"remaining_waypoints": 0,
+			"room": "home_bathroom",
+			"start": [
+				-4.33902072906494,
+				-0.0491854846477509,
+				0.750003755092621
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				4.65000009536743
+			],
+			"distance_walked": 4.79167161788791,
+			"finish": [
+				0.16491211950779,
+				-0.0491829328238964,
+				4.50024604797363
+			],
+			"interaction_available": true,
+			"label": "leave_room/home_exit",
+			"nearest_interaction": "home_exit",
+			"passed": true,
+			"physics_frames": 63,
+			"remaining_distance": 0.222760587930679,
+			"remaining_waypoints": 0,
+			"room": "home_bathroom",
+			"start": [
+				4.39370727539063,
+				-0.049188781529665,
+				3.13370037078857
+			],
+			"target_interaction": "home_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				-10.5,
+				0.0,
+				-6.0
+			],
+			"distance_walked": 12.73166847229,
+			"finish": [
+				-8.98166847229004,
+				-0.0491694286465645,
+				-6.0
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "home_study_gate",
+			"passed": true,
+			"physics_frames": 149,
+			"remaining_distance": 1.51833152770996,
+			"room": "home_hall",
+			"start": [
+				3.75,
+				-0.0499890074133873,
+				-6.0
+			],
+			"target_interaction": "home_study_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-4.40000009536743,
+				0.0,
+				-0.950000047683716
+			],
+			"distance_walked": 7.68441490083933,
+			"finish": [
+				-4.33519840240479,
+				-0.0491721853613853,
+				-0.753667414188385
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 101,
+			"remaining_distance": 0.206750482320786,
+			"remaining_waypoints": 0,
+			"room": "home_study",
+			"start": [
+				0.0,
+				-0.0500487200915813,
+				3.75
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.5,
+				0.0,
+				-2.5
+			],
+			"distance_walked": 5.61323392670602,
+			"finish": [
+				0.585269927978516,
+				-0.0504272878170013,
+				-2.25257921218872
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 74,
+			"remaining_distance": 0.26170215010643,
+			"remaining_waypoints": 0,
+			"room": "home_study",
+			"start": [
+				-4.33519840240479,
+				-0.0491721853613853,
+				-0.753667414188385
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.0,
+				0.0,
+				-1.10000014305115
+			],
+			"distance_walked": 3.57460228074342,
+			"finish": [
+				3.58679342269897,
+				-0.049179770052433,
+				-0.74507749080658
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 49,
+			"remaining_distance": 0.544710755348206,
+			"remaining_waypoints": 0,
+			"room": "home_study",
+			"start": [
+				0.585269927978516,
+				-0.0504272878170013,
+				-2.25257921218872
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-2.40000009536743,
+				0.0,
+				0.200000047683716
+			],
+			"distance_walked": 6.04243190586567,
+			"finish": [
+				-2.08898019790649,
+				-0.0502553842961788,
+				0.00000196154292098072
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 78,
+			"remaining_distance": 0.369773715734482,
+			"remaining_waypoints": 0,
+			"room": "home_study",
+			"start": [
+				3.58679342269897,
+				-0.049179770052433,
+				-0.74507749080658
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-2.14999985694885,
+				0.0,
+				2.79999995231628
+			],
+			"distance_walked": 2.84355215169489,
+			"finish": [
+				-2.24983286857605,
+				-0.0503346435725689,
+				2.83468341827393
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 40,
+			"remaining_distance": 0.105686202645302,
+			"remaining_waypoints": 0,
+			"room": "home_study",
+			"start": [
+				-2.08898019790649,
+				-0.0502553842961788,
+				0.00000196154292098072
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				4.80000019073486
+			],
+			"distance_walked": 2.71437512896955,
+			"finish": [
+				-0.113619238138199,
+				-0.0491901896893978,
+				4.38609600067139
+			],
+			"interaction_available": true,
+			"label": "leave_room/home_exit",
+			"nearest_interaction": "home_exit",
+			"passed": true,
+			"physics_frames": 39,
+			"remaining_distance": 0.429215580224991,
+			"remaining_waypoints": 0,
+			"room": "home_study",
+			"start": [
+				-2.24983286857605,
+				-0.0503346435725689,
+				2.83468341827393
+			],
+			"target_interaction": "home_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				10.5,
+				0.0,
+				-6.0
+			],
+			"distance_walked": 19.4916658401489,
+			"finish": [
+				8.99166584014893,
+				-0.0491705238819122,
+				-6.00000286102295
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "home_balcony_gate",
+			"passed": true,
+			"physics_frames": 227,
+			"remaining_distance": 1.50833415985107,
+			"room": "home_hall",
+			"start": [
+				-10.5,
+				-0.0499629639089108,
+				-6.0
+			],
+			"target_interaction": "home_balcony_gate"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-3.70000028610229,
+				0.0,
+				-1.59999990463257
+			],
+			"distance_walked": 7.98446919769049,
+			"finish": [
+				-3.592533826828,
+				-0.0491959303617477,
+				-1.50003814697266
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_01",
+			"nearest_interaction": "memory_01",
+			"passed": true,
+			"physics_frames": 101,
+			"remaining_distance": 0.146769866347313,
+			"remaining_waypoints": 0,
+			"room": "home_balcony",
+			"start": [
+				0.0,
+				-0.0500487200915813,
+				3.75
+			],
+			"target_interaction": "memory_01"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				4.40000009536743,
+				0.0,
+				-1.59999990463257
+			],
+			"distance_walked": 7.92695356160402,
+			"finish": [
+				4.33867835998535,
+				-0.0491871647536755,
+				-1.50000035762787
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_02",
+			"nearest_interaction": "memory_02",
+			"passed": true,
+			"physics_frames": 99,
+			"remaining_distance": 0.117304153740406,
+			"remaining_waypoints": 0,
+			"room": "home_balcony",
+			"start": [
+				-3.592533826828,
+				-0.0491959303617477,
+				-1.50003814697266
+			],
+			"target_interaction": "memory_02"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				0.0,
+				0.0,
+				-2.90000009536743
+			],
+			"distance_walked": 4.8771373257041,
+			"finish": [
+				0.155056834220886,
+				-0.0492092631757259,
+				-3.01193380355835
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 66,
+			"remaining_distance": 0.19123749434948,
+			"remaining_waypoints": 0,
+			"room": "home_balcony",
+			"start": [
+				4.33867835998535,
+				-0.0491871647536755,
+				-1.50000035762787
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				3.00000023841858,
+				0.0,
+				2.79999971389771
+			],
+			"distance_walked": 6.97440996859223,
+			"finish": [
+				3.00011849403381,
+				-0.0491771250963211,
+				2.83241367340088
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_04",
+			"nearest_interaction": "memory_04",
+			"passed": true,
+			"physics_frames": 88,
+			"remaining_distance": 0.0324141755700111,
+			"remaining_waypoints": 0,
+			"room": "home_balcony",
+			"start": [
+				0.155056834220886,
+				-0.0492092631757259,
+				-3.01193380355835
+			],
+			"target_interaction": "memory_04"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-2.59999990463257,
+				0.0,
+				2.30000019073486
+			],
+			"distance_walked": 5.2613401832059,
+			"finish": [
+				-2.0782458782196,
+				-0.0505202449858189,
+				2.24999833106995
+			],
+			"interaction_available": true,
+			"label": "household_objects/memory_05",
+			"nearest_interaction": "memory_05",
+			"passed": true,
+			"physics_frames": 68,
+			"remaining_distance": 0.524144470691681,
+			"remaining_waypoints": 0,
+			"room": "home_balcony",
+			"start": [
+				3.00011849403381,
+				-0.0491771250963211,
+				2.83241367340088
+			],
+			"target_interaction": "memory_05"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				4.80000019073486
+			],
+			"distance_walked": 2.9012978291139,
+			"finish": [
+				-0.113865867257118,
+				-0.0491900779306889,
+				4.38549280166626
+			],
+			"interaction_available": true,
+			"label": "leave_room/home_exit",
+			"nearest_interaction": "home_exit",
+			"passed": true,
+			"physics_frames": 41,
+			"remaining_distance": 0.429862558841705,
+			"remaining_waypoints": 0,
+			"room": "home_balcony",
+			"start": [
+				-2.0782458782196,
+				-0.0505202449858189,
+				2.24999833106995
+			],
+			"target_interaction": "home_exit"
+		},
+		{
+			"allowed_distance": 1.7,
+			"destination": [
+				-3.5,
+				0.0,
+				8.80000019073486
+			],
+			"distance_walked": 23.2165275923908,
+			"finish": [
+				-3.75000071525574,
+				-0.0491703525185585,
+				7.27328491210938
+			],
+			"navigation_source": "actual_map_button",
+			"nearest_interaction": "courtyard_exit",
+			"passed": true,
+			"physics_frames": 274,
+			"remaining_distance": 1.54704880714417,
+			"room": "home_hall",
+			"start": [
+				10.5,
+				-0.0499369241297245,
+				-6.0
+			],
+			"target_interaction": "courtyard_exit"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 1.7,
+			"destination": [
+				0.0,
+				0.0,
+				14.5
+			],
+			"distance_walked": 6.62353818304837,
+			"finish": [
+				0.00432637427002192,
+				-0.0491667166352272,
+				14.0851497650146
+			],
+			"interaction_available": true,
+			"label": "leave_residence/village_exit",
+			"nearest_interaction": "village_exit",
+			"passed": true,
+			"physics_frames": 84,
+			"remaining_distance": 0.414872795343399,
+			"remaining_waypoints": 0,
+			"room": "home_estate",
+			"start": [
+				-3.75,
+				-0.0500096566975117,
+				9.0
+			],
+			"target_interaction": "village_exit"
+		}
+	],
+	"timestamp_utc": "2026-10-27T11:37:09",
+	"transitions": [
+		{
+			"from": "village",
+			"input": "physical_E_key",
+			"interaction": "home_gate",
+			"passed": true,
+			"to": "home_estate"
+		},
+		{
+			"from": "home_estate",
+			"input": "physical_E_key",
+			"interaction": "house_entry",
+			"passed": true,
+			"to": "home_hall"
+		},
+		{
+			"from": "home_hall",
+			"input": "physical_E_key",
+			"interaction": "home_gate",
+			"passed": true,
+			"to": "home"
+		},
+		{
+			"from": "home",
+			"input": "actual_rest_button_continued_physical_walk",
+			"passed": true,
+			"return_distance": 0.200000047683716,
+			"return_door": "home_gate",
+			"to": "home_hall"
+		},
+		{
+			"from": "home_hall",
+			"input": "actual_rest_button_continued_physical_walk",
+			"passed": true,
+			"to": "home_bedroom"
+		},
+		{
+			"from": "home_bedroom",
+			"input": "physical_E_key",
+			"interaction": "home_exit",
+			"passed": true,
+			"return_distance": 0.25,
+			"return_door": "home_bedroom_gate",
+			"to": "home_hall"
+		},
+		{
+			"from": "home_hall",
+			"input": "physical_E_key",
+			"interaction": "home_bedroom_gate",
+			"passed": true,
+			"to": "home_bedroom"
+		},
+		{
+			"from": "home_bedroom",
+			"input": "physical_E_key",
+			"interaction": "home_exit",
+			"passed": true,
+			"return_distance": 0.25,
+			"return_door": "home_bedroom_gate",
+			"to": "home_hall"
+		},
+		{
+			"from": "home_hall",
+			"input": "physical_E_key",
+			"interaction": "home_kitchen_gate",
+			"passed": true,
+			"to": "home_kitchen"
+		},
+		{
+			"from": "home_kitchen",
+			"input": "physical_E_key",
+			"interaction": "home_exit",
+			"passed": true,
+			"return_distance": 0.200000047683716,
+			"return_door": "home_kitchen_gate",
+			"to": "home_hall"
+		},
+		{
+			"from": "home_hall",
+			"input": "physical_E_key",
+			"interaction": "home_dining_gate",
+			"passed": true,
+			"to": "home_dining"
+		},
+		{
+			"from": "home_dining",
+			"input": "physical_E_key",
+			"interaction": "home_exit",
+			"passed": true,
+			"return_distance": 0.320156246423721,
+			"return_door": "home_dining_gate",
+			"to": "home_hall"
+		},
+		{
+			"from": "home_hall",
+			"input": "physical_E_key",
+			"interaction": "home_bathroom_gate",
+			"passed": true,
+			"to": "home_bathroom"
+		},
+		{
+			"from": "home_bathroom",
+			"input": "physical_E_key",
+			"interaction": "home_exit",
+			"passed": true,
+			"return_distance": 0.25,
+			"return_door": "home_bathroom_gate",
+			"to": "home_hall"
+		},
+		{
+			"from": "home_hall",
+			"input": "physical_E_key",
+			"interaction": "home_study_gate",
+			"passed": true,
+			"to": "home_study"
+		},
+		{
+			"from": "home_study",
+			"input": "physical_E_key",
+			"interaction": "home_exit",
+			"passed": true,
+			"return_distance": 0.0,
+			"return_door": "home_study_gate",
+			"to": "home_hall"
+		},
+		{
+			"from": "home_hall",
+			"input": "physical_E_key",
+			"interaction": "home_balcony_gate",
+			"passed": true,
+			"to": "home_balcony"
+		},
+		{
+			"from": "home_balcony",
+			"input": "physical_E_key",
+			"interaction": "home_exit",
+			"passed": true,
+			"return_distance": 0.0,
+			"return_door": "home_balcony_gate",
+			"to": "home_hall"
+		},
+		{
+			"from": "home_hall",
+			"input": "physical_E_key",
+			"interaction": "courtyard_exit",
+			"passed": true,
+			"return_distance": 0.390512645244598,
+			"return_door": "house_entry",
+			"to": "home_estate"
+		},
+		{
+			"from": "home_estate",
+			"input": "physical_E_key",
+			"interaction": "village_exit",
+			"passed": true,
+			"return_distance": 0.25,
+			"return_door": "home_gate",
+			"to": "village"
+		}
+	]
+}

@@ -7,6 +7,11 @@ const FeedbackScript = preload("res://scripts/world_feedback.gd")
 const SoundScript = preload("res://scripts/feedback_audio.gd")
 const FootballScript = preload("res://activities/football_practice.gd")
 const HomeCatalog = preload("res://scripts/home_catalog.gd")
+const OnlineClient = preload("res://scripts/online_client.gd")
+const WebRooms = preload("res://scripts/web_rooms.gd")
+const SharedProfile = preload("res://scripts/shared_profile.gd")
+var online: Node
+var online_config: Dictionary = {}
 var world: Node3D
 var player: CharacterBody3D
 var camera: Camera3D
@@ -68,20 +73,46 @@ var household: Node
 
 func _ready() -> void:
 	_configure_input()
+	online_config = OnlineClient.configuration()
 	for arg in OS.get_cmdline_user_args():
 		if arg == "--validate" or arg.begins_with("--capture-dir="):
 			validation_mode = true
 		if arg == "--test-harness":
 			validation_mode = true
 			test_harness = true
-	if validation_mode:
-		State.save_path = "user://validation-%s.json" % OS.get_process_id()
+	var profile_result := SharedProfile.prepare(State, online_config, OS.get_cmdline_user_args(), validation_mode)
+	if not profile_result.ok:
+		push_error(str(profile_result.message))
+		if OS.has_feature("web"):
+			get_tree().paused = true
+			JavaScriptBridge.eval("window.AlphabetIslandOnline.startupFailed(" + JSON.stringify(str(profile_result.message)) + ");", true)
+		else:
+			if DisplayServer.get_name() != "headless":
+				OS.alert(str(profile_result.message), "字母岛 · 无法读取角色")
+			get_tree().quit(1)
+		return
+	if profile_result.has("nickname") and not OS.has_feature("web"):
+		DisplayServer.window_set_title("字母岛 · " + str(profile_result.nickname))
 	ui = UIScript.new()
 	add_child(ui)
 	ui.action.connect(_on_action)
 	State.notice.connect(ui.notify)
 	State.changed.connect(_refresh)
 	State.load_state()
+	if bool(profile_result.get("fresh", false)):
+		State.set_outfit(str(profile_result.get("outfit", "yellow")))
+		if not State.save_state():
+			if DisplayServer.get_name() != "headless":
+				OS.alert("新角色暂时无法保存，请检查磁盘空间后重新进入。", "字母岛 · 保存失败")
+			get_tree().quit(1)
+			return
+	if OS.has_feature("web_online"):
+		print("WEB_PROFILE_STORAGE mounted=", DirAccess.dir_exists_absolute(State.save_path.get_base_dir()), " restored=", FileAccess.file_exists(State.save_path))
+	if not online_config.is_empty() and bool(online_config.get("apply_outfit", false)) and str(online_config.get("outfit", "")) in ["yellow", "pink", "blue"]:
+		State.set_outfit(str(online_config.outfit))
+	if State.shared_web_save:
+		# New profiles and one-time browser imports must also reach the canonical store.
+		State.save_state()
 	muted = not bool(State.data.preferences.voice)
 	ui.reduced_motion = bool(State.data.preferences.reduced_motion)
 	sounds = SoundScript.new()
@@ -118,17 +149,22 @@ func _ready() -> void:
 	add_child(household)
 	household.setup(self)
 	ui.speaker_provider = _dialogue_speaker
-	var start_room := "village" if validation_mode or State.journey_snapshot().legacy_compatible else "home"
+	var start_room := "village" if validation_mode or not online_config.is_empty() or State.journey_snapshot().legacy_compatible else "home"
 	await change_room(start_room)
 	_refresh()
 	scene_ready = true
+	if not online_config.is_empty():
+		online = OnlineClient.new()
+		online.name = "OnlineClient"
+		add_child(online)
+		online.setup(self, online_config)
 	if test_harness and OS.get_cmdline_user_args().has("--release-smoke"):
 		var smoke: Node = load("res://scripts/release_smoke.gd").new()
 		smoke.game = self
 		add_child(smoke)
 	elif validation_mode and not test_harness:
 		_run_validation.call_deferred()
-	elif not test_harness:
+	elif not test_harness and online_config.is_empty():
 		if not State.journey_snapshot().legacy_compatible:
 			journey.continue_journey()
 		else:
@@ -162,6 +198,15 @@ func _configure_input() -> void:
 func change_room(next_room: String, return_id: String = "") -> void:
 	if loading_room:
 		return
+	if OS.has_feature("web_online") and next_room != "village":
+		loading_room = true
+		player.locked = true
+		var ready := await WebRooms.ensure_room(self, next_room)
+		loading_room = false
+		player.locked = false
+		if not ready:
+			ui.notify("这个场景暂时没有加载好，仍留在原处；稍后可以再试。")
+			return
 	if next_room != "village" and not WorldScript.InteriorScript.available(next_room):
 		ui.notify("这个场景暂时无法打开，请检查游戏文件是否完整。")
 		return
@@ -1365,7 +1410,13 @@ func _request_quit() -> void:
 	elif ui.current_panel=="art_unsaved":
 		_closing_for_quit = true
 	elif State.save_state():
-		get_tree().quit()
+		if OS.has_feature("web_online") and is_instance_valid(online):
+			# Pause writes while the shell commits this profile's IDBFS transaction.
+			# Browser navigation avoids the web runtime's shutdown allocator stall.
+			get_tree().paused = true
+			JavaScriptBridge.eval("window.AlphabetIslandOnline.finishSession();", true)
+		else:
+			get_tree().quit()
 
 func _notification(what: int) -> void:
 	if what==NOTIFICATION_APPLICATION_FOCUS_OUT:

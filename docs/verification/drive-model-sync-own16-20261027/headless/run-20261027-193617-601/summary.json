@@ -1,0 +1,112 @@
+{
+  "started_utc": "2026-10-27T11:36:17.6239338Z",
+  "updated_utc": "2026-10-27T11:38:21.0917081Z",
+  "max_processes": 2,
+  "requested_suites": [
+    "world",
+    "school",
+    "home",
+    "movement"
+  ],
+  "complete": true,
+  "passed": true,
+  "running": [],
+  "results": [
+    {
+      "suite": "school",
+      "pid": 42220,
+      "started_utc": "2026-10-27T11:36:17.6715835Z",
+      "finished_utc": "2026-10-27T11:36:48.5000647Z",
+      "exit_code": 0,
+      "timed_out": false,
+      "report_fresh": true,
+      "report_parse_error": null,
+      "passed": true,
+      "report": "school-hierarchy-report.json",
+      "engine_errors": [],
+      "command_arguments": [
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--script",
+        "res://tests/drive_model_sync/test_school_hierarchy.gd",
+        "--",
+        "--test-harness"
+      ]
+    },
+    {
+      "suite": "home",
+      "pid": 65276,
+      "started_utc": "2026-10-27T11:36:49.0179090Z",
+      "finished_utc": "2026-10-27T11:37:10.1892679Z",
+      "exit_code": 0,
+      "timed_out": false,
+      "report_fresh": true,
+      "report_parse_error": null,
+      "passed": true,
+      "report": "home-indoor-report.json",
+      "engine_errors": [],
+      "command_arguments": [
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--script",
+        "res://tests/drive_model_sync/test_home_indoor.gd",
+        "--",
+        "--test-harness"
+      ]
+    },
+    {
+      "suite": "movement",
+      "pid": 51776,
+      "started_utc": "2026-10-27T11:37:10.6921395Z",
+      "finished_utc": "2026-10-27T11:37:53.4460546Z",
+      "exit_code": 0,
+      "timed_out": false,
+      "report_fresh": true,
+      "report_parse_error": null,
+      "passed": true,
+      "report": "movement-report.json",
+      "engine_errors": [],
+      "command_arguments": [
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--script",
+        "res://tests/drive_model_sync/test_movement.gd",
+        "--",
+        "--test-harness"
+      ]
+    },
+    {
+      "suite": "world",
+      "pid": 56664,
+      "started_utc": "2026-10-27T11:36:17.6351050Z",
+      "finished_utc": "2026-10-27T11:38:21.0914759Z",
+      "exit_code": 0,
+      "timed_out": false,
+      "report_fresh": true,
+      "report_parse_error": null,
+      "passed": true,
+      "report": "world-refinement-ABCDEFGHIJKLMNOPQRSTUVWXYZ.json",
+      "engine_errors": [],
+      "command_arguments": [
+        "--headless",
+        "--fixed-fps",
+        "60",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--script",
+        "res://tests/drive_model_sync/test_world_refinement.gd",
+        "--",
+        "--test-harness"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+✔ queue is durable before returning; uploads are serialized and preserve the latest snapshot (7.4778ms)
+✔ a lost successful response retains the draft and explicit retry acknowledges identical canonical state (2.6878ms)
+✔ offline queue stays durable and flush/close reject until a successful retry (3.2973ms)
+✔ same-revision refresh resumes the local draft and dispose retains the lease and draft (4.1712ms)
+✔ changed canonical revision archives a recovery and blocks launch/uploads without deleting local data (2.4761ms)
+✔ failed recovery upload leaves a downloadable local draft and a blocked result (2.4583ms)
+✔ storage quota failure is synchronous and never uploads the unpersisted action (2.9059ms)
+✔ unreadable or malformed local storage cannot be silently replaced (1.7874ms)
+✔ failure to clear an acknowledged draft remains visible and is recoverable (2.0328ms)
+✔ lease expiry stops uploads, preserves later local actions and retries with a fresh token (2.9485ms)
+✔ retry discovers restart itself; if canonical changed, it returns a conflict without overwriting (2.144ms)
+✔ a CAS conflict during play blocks uploads and keeps the original draft base (1.9074ms)
+✔ equivalent JSON after response loss clears only this profile draft (2.173ms)
+✔ empty canonical allows the existing browser legacy snapshot to be queued (2.7284ms)
+✔ failed release never reports successful close or discards the active session (1.8265ms)
+✔ an old heartbeat response cannot expire a newly acquired session (2.1808ms)
+✔ retry cannot rebase a running stale game over a newer canonical save when no draft exists (1.8397ms)
+✔ restart with unchanged canonical progress can retry without reloading the game (3.0273ms)
+✔ retry persists the newest quota-failed candidate before acquiring and cannot falsely report synced (4.4614ms)
+✔ an older in-flight acknowledgement cannot discard a newer quota-failed candidate (1.9334ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 73.2649

@@ -1,0 +1,23 @@
+test_http_roundtrip_save_recovery_and_origin (__main__.SharedRoutes.test_http_roundtrip_save_recovery_and_origin) ... Executing <Task pending name='Task-6' coro=<RequestHandler.start() running at F:\LoveStudy\.local\web-online-venv\Lib\site-packages\aiohttp\web_protocol.py:632> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:459> created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py:395> took 0.108 seconds
+Executing <Task pending name='Task-4' coro=<SharedRoutes.test_http_roundtrip_save_recovery_and_origin() running at F:\LoveStudy\web\test_shared_profiles.py:234> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:459> cb=[_run_until_complete_cb() at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:181] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py:109> took 0.134 seconds
+Executing <Task pending name='Task-6' coro=<RequestHandler.start() running at F:\LoveStudy\.local\web-online-venv\Lib\site-packages\aiohttp\web_protocol.py:632> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:459> created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py:395> took 0.108 seconds
+Executing <Task pending name='Task-4' coro=<SharedRoutes.test_http_roundtrip_save_recovery_and_origin() running at F:\LoveStudy\web\test_shared_profiles.py:244> wait_for=<Future pending cb=[Task.task_wakeup()] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:459> cb=[_run_until_complete_cb() at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\base_events.py:181] created at C:\Users\Administrator\AppData\Local\Programs\Python\Python314\Lib\asyncio\runners.py:109> took 0.169 seconds
+ok
+test_interrupted_legacy_import_cannot_launch_empty_native_role (__main__.SharedRoutes.test_interrupted_legacy_import_cannot_launch_empty_native_role) ... ok
+test_large_save_allowed_but_room_body_stays_small (__main__.SharedRoutes.test_large_save_allowed_but_room_body_stays_small) ... ok
+test_cas_native_change_backup_and_lost_response_retry (__main__.StoreRules.test_cas_native_change_backup_and_lost_response_retry) ... ok
+test_crashed_process_releases_lock (__main__.StoreRules.test_crashed_process_releases_lock) ... ok
+test_expiry_and_restart_reject_old_tokens (__main__.StoreRules.test_expiry_and_restart_reject_old_tokens) ... ok
+test_import_copies_original_bytes_once_and_preserves_provenance (__main__.StoreRules.test_import_copies_original_bytes_once_and_preserves_provenance) ... ok
+test_invalid_save_does_not_touch_primary_or_backup (__main__.StoreRules.test_invalid_save_does_not_touch_primary_or_backup) ... ok
+test_legacy_backup_fallback_and_both_corrupt_are_not_empty (__main__.StoreRules.test_legacy_backup_fallback_and_both_corrupt_are_not_empty) ... ok
+test_legacy_profile_import_identity_cannot_overwrite_existing (__main__.StoreRules.test_legacy_profile_import_identity_cannot_overwrite_existing) ... ok
+test_list_marks_busy_without_loading_private_progress (__main__.StoreRules.test_list_marks_busy_without_loading_private_progress) ... ok
+test_primary_corruption_recovers_backup_without_discarding_bad_file (__main__.StoreRules.test_primary_corruption_recovers_backup_without_discarding_bad_file) ... ok
+test_recovery_is_explicit_and_cas_guarded_preserves_replaced_version (__main__.StoreRules.test_recovery_is_explicit_and_cas_guarded_preserves_replaced_version) ... ok
+test_same_and_cross_process_lock_excludes_native_and_web (__main__.StoreRules.test_same_and_cross_process_lock_excludes_native_and_web) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 6.210s
+
+OK

@@ -1,0 +1,1258 @@
+{
+  "mode": "applied",
+  "revision": "own16",
+  "folder_url": "https://drive.google.com/drive/folders/1bqluU1N8p1e_igYxvX7enMd_YrlbvydR",
+  "runtime_models": 44,
+  "source_files": 132,
+  "models_changed": 44,
+  "source_policy": "Versioned source paths added; all different pre-existing source files are preserved.",
+  "import_policy_merged": [
+    "game/assets/world/island.glb.import",
+    "game/assets/interiors/landmark_A.glb.import",
+    "game/assets/interiors/landmark_N.glb.import",
+    "game/assets/interiors/playground.glb.import"
+  ],
+  "models": [
+    {
+      "room_id": "home_balcony",
+      "runtime_path": "game/assets/interiors/home_balcony.glb",
+      "previous_sha256": "615f26d679f4dc869a545fa55340a3456484107a814368fc2518eb57e3768a1a",
+      "incoming_sha256": "4a888b105011076aa869e4b30d21306e6654d6856dcfdb845d747177111f099d",
+      "source_blend": "assets/blender/interiors/home_balcony/home_balcony_v08_own.blend",
+      "source_glb": "assets/blender/interiors/home_balcony/home_balcony_v08_own.glb",
+      "preview": "assets/blender/interiors/home_balcony/preview_v08_own.png",
+      "bytes_before": 3781936,
+      "bytes_after": 5046128,
+      "structure": {
+        "nodes": 464,
+        "floor_meshes": 1,
+        "collision_proxies": 10,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 5046128,
+        "images": 17
+      }
+    },
+    {
+      "room_id": "home_kitchen",
+      "runtime_path": "game/assets/interiors/home_kitchen.glb",
+      "previous_sha256": "1eb551da1ac379099b493f83179578e1eb10fba5f4bb46500163ce325323e62c",
+      "incoming_sha256": "8dd13e1413c94db383288bccd68ec5ab8cc260429def03f18a5912de024a298d",
+      "source_blend": "assets/blender/interiors/home_kitchen/home_kitchen_v10_own.blend",
+      "source_glb": "assets/blender/interiors/home_kitchen/home_kitchen_v10_own.glb",
+      "preview": "assets/blender/interiors/home_kitchen/preview_v10_own.png",
+      "bytes_before": 6352192,
+      "bytes_after": 8244164,
+      "structure": {
+        "nodes": 563,
+        "floor_meshes": 1,
+        "collision_proxies": 14,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 8244164,
+        "images": 23
+      }
+    },
+    {
+      "room_id": "school",
+      "runtime_path": "game/assets/interiors/school.glb",
+      "previous_sha256": "607954b34cda8296cb53237409f7d08e18f7055529ce053956e0f2b00a70e03a",
+      "incoming_sha256": "399f18e47a3d7ea73a18d650e45cb60bf70aeb7068627803d8e14f615f54514d",
+      "source_blend": "assets/blender/interiors/school/school_v10_own.blend",
+      "source_glb": "assets/blender/interiors/school/school_v10_own.glb",
+      "preview": "assets/blender/interiors/school/preview_v10_own.png",
+      "bytes_before": 15241316,
+      "bytes_after": 22434436,
+      "structure": {
+        "nodes": 1278,
+        "floor_meshes": 1,
+        "collision_proxies": 80,
+        "required_markers": [
+          "SG_DOOR_ART_ROOM",
+          "SG_DOOR_CANTEEN",
+          "SG_DOOR_CLASSROOM",
+          "SG_DOOR_FOOTBALL_FIELD",
+          "SG_DOOR_MUSIC_ROOM",
+          "SG_DOOR_PLAYGROUND",
+          "SG_DOOR_SCIENCE_ROOM",
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 22434436,
+        "images": 39
+      }
+    },
+    {
+      "room_id": "home_bedroom",
+      "runtime_path": "game/assets/interiors/home_bedroom.glb",
+      "previous_sha256": "f7d045556e4a5c49dc9be3c6ad54f01335e038d706c54fe0ddf14485c880ac49",
+      "incoming_sha256": "abe65d52941c0bf4a8a0000446a8ac960368c2e5ee912eca1b58811dcdf1799b",
+      "source_blend": "assets/blender/interiors/home_bedroom/home_bedroom_v10_own.blend",
+      "source_glb": "assets/blender/interiors/home_bedroom/home_bedroom_v10_own.glb",
+      "preview": "assets/blender/interiors/home_bedroom/preview_v10_own.png",
+      "bytes_before": 4140416,
+      "bytes_after": 6879436,
+      "structure": {
+        "nodes": 262,
+        "floor_meshes": 1,
+        "collision_proxies": 11,
+        "required_markers": [
+          "SG_BED",
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN",
+          "SG_WARDROBE"
+        ],
+        "bytes": 6879436,
+        "images": 25
+      }
+    },
+    {
+      "room_id": "home_estate",
+      "runtime_path": "game/assets/interiors/home_estate.glb",
+      "previous_sha256": "c0fb8452aca795da35a03e8e46668848db7c33ef0424dfa89146b0c854ea6195",
+      "incoming_sha256": "65ae8c769fb1a1f704bd29e4c7b98570a7997ec9b61b95023996dea4b269ccc5",
+      "source_blend": "assets/blender/interiors/home_estate/home_estate_v09_own.blend",
+      "source_glb": "assets/blender/interiors/home_estate/home_estate_v09_own.glb",
+      "preview": "assets/blender/interiors/home_estate/preview_v09_own.png",
+      "bytes_before": 25127872,
+      "bytes_after": 21032244,
+      "structure": {
+        "nodes": 1822,
+        "floor_meshes": 1,
+        "collision_proxies": 24,
+        "required_markers": [
+          "SG_DOOR_HOME",
+          "SG_DOOR_HOME_BALCONY",
+          "SG_DOOR_HOME_BATHROOM",
+          "SG_DOOR_HOME_BEDROOM",
+          "SG_DOOR_HOME_DINING",
+          "SG_DOOR_HOME_KITCHEN",
+          "SG_DOOR_HOME_STUDY",
+          "SG_EXIT",
+          "SG_HOUSE_ENTRY",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 21032244,
+        "images": 22
+      }
+    },
+    {
+      "room_id": "island",
+      "runtime_path": "game/assets/world/island.glb",
+      "previous_sha256": "3f572413e425127ae452c8cc62596205da802f9bfb47243f6e735f2a2896fee4",
+      "incoming_sha256": "8062e0e10b7d19d8a0f465cd7507a2e4e2756ae34acfa8f5d75ba140b6a08e82",
+      "source_blend": "assets/blender/alphabet_island/alphabet_island_layout_v13_own.blend",
+      "source_glb": "assets/blender/alphabet_island/alphabet_island_layout_v13_own.glb",
+      "preview": "assets/blender/alphabet_island/preview_v13_own.png",
+      "bytes_before": 143444984,
+      "bytes_after": 183973496
+    },
+    {
+      "room_id": "home_study",
+      "runtime_path": "game/assets/interiors/home_study.glb",
+      "previous_sha256": "4e120f4d5285d9715e25c8b44f310e9e4457d4c446c8817c5bdbdc32cca6dc0c",
+      "incoming_sha256": "f0050d168c7dda64970a72a8cca01dd7466ae6fb7437d41f15edf8b47c69303d",
+      "source_blend": "assets/blender/interiors/home_study/home_study_v07_own.blend",
+      "source_glb": "assets/blender/interiors/home_study/home_study_v07_own.glb",
+      "preview": "assets/blender/interiors/home_study/preview_v07_own.png",
+      "bytes_before": 4394572,
+      "bytes_after": 4794196,
+      "structure": {
+        "nodes": 341,
+        "floor_meshes": 1,
+        "collision_proxies": 10,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 4794196,
+        "images": 21
+      }
+    },
+    {
+      "room_id": "home_dining",
+      "runtime_path": "game/assets/interiors/home_dining.glb",
+      "previous_sha256": "cd90402a311a162fb8079b2e52767de730877f056b5c0c1eca60723642d9b809",
+      "incoming_sha256": "28fa531f9db0a7b79e4e0aa084ccc7dcaa0617dc4b3b87fbf44050b243d4e355",
+      "source_blend": "assets/blender/interiors/home_dining/home_dining_v09_own.blend",
+      "source_glb": "assets/blender/interiors/home_dining/home_dining_v09_own.glb",
+      "preview": "assets/blender/interiors/home_dining/preview_v09_own.png",
+      "bytes_before": 5088424,
+      "bytes_after": 6115012,
+      "structure": {
+        "nodes": 423,
+        "floor_meshes": 1,
+        "collision_proxies": 10,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 6115012,
+        "images": 23
+      }
+    },
+    {
+      "room_id": "home_bathroom",
+      "runtime_path": "game/assets/interiors/home_bathroom.glb",
+      "previous_sha256": "4ded46cd9fc1ef9a8031f41c5c92d80319ab3bb580c60a03af7c4c20fd61eef5",
+      "incoming_sha256": "1f3c1579293ee2a6555db5012d43696816bb962675d3e6d729eada5af36eb480",
+      "source_blend": "assets/blender/interiors/home_bathroom/home_bathroom_v08_own.blend",
+      "source_glb": "assets/blender/interiors/home_bathroom/home_bathroom_v08_own.glb",
+      "preview": "assets/blender/interiors/home_bathroom/preview_v08_own.png",
+      "bytes_before": 5982756,
+      "bytes_after": 7002732,
+      "structure": {
+        "nodes": 527,
+        "floor_meshes": 1,
+        "collision_proxies": 13,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 7002732,
+        "images": 19
+      }
+    },
+    {
+      "room_id": "landmark_A",
+      "runtime_path": "game/assets/interiors/landmark_A.glb",
+      "previous_sha256": "f64923728bc7b20c4c7cc1c0632b54ae19756ec6445a0dbda8c0380626900482",
+      "incoming_sha256": "1ff0a16bef05e2a777bef2bfa9ed8e911bc09f924c3a24e24374a00ae051e379",
+      "source_blend": "assets/blender/interiors/landmark_A/landmark_A_v05_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_A/landmark_A_v05_own.glb",
+      "preview": "assets/blender/interiors/landmark_A/preview_v05_own.png",
+      "bytes_before": 19169432,
+      "bytes_after": 19944016,
+      "structure": {
+        "nodes": 731,
+        "floor_meshes": 19,
+        "collision_proxies": 125,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 19944016,
+        "images": 27
+      }
+    },
+    {
+      "room_id": "landmark_F",
+      "runtime_path": "game/assets/interiors/landmark_F.glb",
+      "previous_sha256": "5b81faca4ba0ea197cd931d21608df5e1fa6444a0710f30a39805dda467cea28",
+      "incoming_sha256": "db954d95e0dc1f757779560c156dd0b863f971405cdbde9b20f810d949533aa4",
+      "source_blend": "assets/blender/interiors/landmark_F/landmark_F_v04_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_F/landmark_F_v04_own.glb",
+      "preview": "assets/blender/interiors/landmark_F/preview_v04_own.png",
+      "bytes_before": 7273816,
+      "bytes_after": 7830604,
+      "structure": {
+        "nodes": 1375,
+        "floor_meshes": 1,
+        "collision_proxies": 151,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 7830604,
+        "images": 12
+      }
+    },
+    {
+      "room_id": "landmark_N",
+      "runtime_path": "game/assets/interiors/landmark_N.glb",
+      "previous_sha256": "96d3684d439eb115bfee24c2be7609bc6859b777e42a27f79213a208abc260f8",
+      "incoming_sha256": "f334a161c628b814a44ad4f637d19c96edb804972892607496ddc9b008dcda78",
+      "source_blend": "assets/blender/interiors/landmark_N/landmark_N_v07_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_N/landmark_N_v07_own.glb",
+      "preview": "assets/blender/interiors/landmark_N/preview_v07_own.png",
+      "bytes_before": 6552524,
+      "bytes_after": 8300764,
+      "structure": {
+        "nodes": 373,
+        "floor_meshes": 1,
+        "collision_proxies": 138,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 8300764,
+        "images": 14
+      }
+    },
+    {
+      "room_id": "landmark_P",
+      "runtime_path": "game/assets/interiors/landmark_P.glb",
+      "previous_sha256": "4ff2068a42406d6b0fdd7984a5e33785dcf209e565e467c1e43f54c71bca5019",
+      "incoming_sha256": "4aa00ad7fb235a959067723939715e541936ee4041d77395c4480e5a8a59a939",
+      "source_blend": "assets/blender/interiors/landmark_P/landmark_P_v05_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_P/landmark_P_v05_own.glb",
+      "preview": "assets/blender/interiors/landmark_P/preview_v05_own.png",
+      "bytes_before": 5107268,
+      "bytes_after": 6632156,
+      "structure": {
+        "nodes": 540,
+        "floor_meshes": 1,
+        "collision_proxies": 138,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 6632156,
+        "images": 16
+      }
+    },
+    {
+      "room_id": "landmark_B",
+      "runtime_path": "game/assets/interiors/landmark_B.glb",
+      "previous_sha256": "d26ceedb16626d5b5c34e106ea397dacfbcdce177f2e4e01311a9ecc1300aafe",
+      "incoming_sha256": "fc2f540925d7997d9570b18b78af7e83e378b539de4da12ea0dde03ca5ab0fab",
+      "source_blend": "assets/blender/interiors/landmark_B/landmark_B_v04_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_B/landmark_B_v04_own.glb",
+      "preview": "assets/blender/interiors/landmark_B/preview_v04_own.png",
+      "bytes_before": 3717032,
+      "bytes_after": 4094748,
+      "structure": {
+        "nodes": 154,
+        "floor_meshes": 1,
+        "collision_proxies": 11,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 4094748,
+        "images": 18
+      }
+    },
+    {
+      "room_id": "landmark_K",
+      "runtime_path": "game/assets/interiors/landmark_K.glb",
+      "previous_sha256": "f11a97eba7e2a90ca98e7c5d53b1055991dba748b00c52f7a4e024916eee4a40",
+      "incoming_sha256": "5e25e2bb5cf118ab8ef238a594842f2f9d6032ffb70674c4ecb24233ef1e356a",
+      "source_blend": "assets/blender/interiors/landmark_K/landmark_K_v04.blend",
+      "source_glb": "assets/blender/interiors/landmark_K/landmark_K_v04.glb",
+      "preview": "assets/blender/interiors/landmark_K/preview_v04.png",
+      "bytes_before": 4229820,
+      "bytes_after": 4948756,
+      "structure": {
+        "nodes": 370,
+        "floor_meshes": 1,
+        "collision_proxies": 104,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 4948756,
+        "images": 22
+      }
+    },
+    {
+      "room_id": "landmark_J",
+      "runtime_path": "game/assets/interiors/landmark_J.glb",
+      "previous_sha256": "c50de281a8ea03c2158ff1974846f03533b072c004fa7f85bfe8d0f7cd3e88e7",
+      "incoming_sha256": "0aa4f79498e731e8e7d1b7dd10f1b231fac096da6c1aed4ace8446e7103266c2",
+      "source_blend": "assets/blender/interiors/landmark_J/landmark_J_v04_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_J/landmark_J_v04_own.glb",
+      "preview": "docs/verification/own-craft-detail-20261025/landmark_J/blender-source-after.png",
+      "bytes_before": 6580820,
+      "bytes_after": 8768148,
+      "structure": {
+        "nodes": 789,
+        "floor_meshes": 1,
+        "collision_proxies": 138,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 8768148,
+        "images": 16
+      }
+    },
+    {
+      "room_id": "landmark_L",
+      "runtime_path": "game/assets/interiors/landmark_L.glb",
+      "previous_sha256": "4250888341ad2ceb4d611656ec272f25ac0d2832d3cae0b94be0e19ea933ee0b",
+      "incoming_sha256": "aeacd18f982e2cccf04863fe3b76ae78c6c34e42d1e95fed33da62f577e65872",
+      "source_blend": "assets/blender/interiors/landmark_L/landmark_L_v04.blend",
+      "source_glb": "assets/blender/interiors/landmark_L/landmark_L_v04.glb",
+      "preview": "assets/blender/interiors/landmark_L/preview_v04.png",
+      "bytes_before": 6865612,
+      "bytes_after": 10811344,
+      "structure": {
+        "nodes": 765,
+        "floor_meshes": 1,
+        "collision_proxies": 143,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 10811344,
+        "images": 22
+      }
+    },
+    {
+      "room_id": "landmark_T",
+      "runtime_path": "game/assets/interiors/landmark_T.glb",
+      "previous_sha256": "b8b4cd0a30c1342af9d778138223647ce3e24cdf61f56d223ba6da42ed5a619f",
+      "incoming_sha256": "59e79b9636480d2ad6f7838ed78c8f47cc6bfd1acd7b2cce51c5e8fb02939af9",
+      "source_blend": "assets/blender/interiors/landmark_T/landmark_T_v03.blend",
+      "source_glb": "assets/blender/interiors/landmark_T/landmark_T_v03.glb",
+      "preview": "assets/blender/interiors/landmark_T/preview_v03.png",
+      "bytes_before": 5237196,
+      "bytes_after": 5617992,
+      "structure": {
+        "nodes": 280,
+        "floor_meshes": 1,
+        "collision_proxies": 12,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 5617992,
+        "images": 14
+      }
+    },
+    {
+      "room_id": "landmark_H",
+      "runtime_path": "game/assets/interiors/landmark_H.glb",
+      "previous_sha256": "498bae44cd018da99d4de94945ba4d64702ec2be5d03fb39d8f9982eb532a9db",
+      "incoming_sha256": "cbc0939fda77c2d399ec6da446bdd4b5905d10e7161d4ae4755d35cfb1d686b1",
+      "source_blend": "assets/blender/interiors/landmark_H/landmark_H_v04_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_H/landmark_H_v04_own.glb",
+      "preview": "assets/blender/interiors/landmark_H/preview_v04_own.png",
+      "bytes_before": 5076864,
+      "bytes_after": 5245236,
+      "structure": {
+        "nodes": 415,
+        "floor_meshes": 1,
+        "collision_proxies": 135,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 5245236,
+        "images": 28
+      }
+    },
+    {
+      "room_id": "landmark_O",
+      "runtime_path": "game/assets/interiors/landmark_O.glb",
+      "previous_sha256": "dc1805a2894d3da8a7284a53d7cb40c467222a388a54af32faebbfcce226fc48",
+      "incoming_sha256": "eafc66a421ca02b05f5c31dbe6cd4a51b04215a69bed353a494c25c4032b7813",
+      "source_blend": "assets/blender/interiors/landmark_O/landmark_O_v03_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_O/landmark_O_v03_own.glb",
+      "preview": "docs/verification/own-craft-detail-20261025/landmark_O/blender-source-after.png",
+      "bytes_before": 6951332,
+      "bytes_after": 7261308,
+      "structure": {
+        "nodes": 660,
+        "floor_meshes": 1,
+        "collision_proxies": 14,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 7261308,
+        "images": 28
+      }
+    },
+    {
+      "room_id": "landmark_Q",
+      "runtime_path": "game/assets/interiors/landmark_Q.glb",
+      "previous_sha256": "2fa46127afea792bea71ff6d0b4bc5174f34f9a361dc9c1a0d1c02cc3c61c496",
+      "incoming_sha256": "ef5527e54330451090e803d70cad4e4fdabf37f3f3720c3cb1501c86b864b02a",
+      "source_blend": "assets/blender/interiors/landmark_Q/landmark_Q_v04_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_Q/landmark_Q_v04_own.glb",
+      "preview": "assets/blender/interiors/landmark_Q/preview_v04_own.png",
+      "bytes_before": 9587920,
+      "bytes_after": 10394212,
+      "structure": {
+        "nodes": 590,
+        "floor_meshes": 1,
+        "collision_proxies": 142,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 10394212,
+        "images": 34
+      }
+    },
+    {
+      "room_id": "playground",
+      "runtime_path": "game/assets/interiors/playground.glb",
+      "previous_sha256": "bf8282aeba071c61f07abc8791b7362a62907083526e458d2865993bac0369d2",
+      "incoming_sha256": "642d016e9e54f306de8c192487e8f5290565bfcfec19b93c6ce3b2f88aee9b7a",
+      "source_blend": "assets/blender/interiors/playground/playground_v05_detail.blend",
+      "source_glb": "assets/blender/interiors/playground/playground_v05_detail.glb",
+      "preview": "assets/blender/interiors/playground/preview_v05_detail.png",
+      "bytes_before": 4555948,
+      "bytes_after": 4941108,
+      "structure": {
+        "nodes": 108,
+        "floor_meshes": 2,
+        "collision_proxies": 10,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 4941108,
+        "images": 15
+      }
+    },
+    {
+      "room_id": "football_field",
+      "runtime_path": "game/assets/interiors/football_field.glb",
+      "previous_sha256": "f4a82ba798a755cacf22e637b1f366b1651afc4a52a332a60b316476eed97ef2",
+      "incoming_sha256": "9b68ed1cf80778aae38c5637427ebc7afa41b5c20870a6ad3328969cb794dc27",
+      "source_blend": "assets/blender/interiors/football_field/football_field_v05_detail.blend",
+      "source_glb": "assets/blender/interiors/football_field/football_field_v05_detail.glb",
+      "preview": "assets/blender/interiors/football_field/preview_v05_detail.png",
+      "bytes_before": 6663728,
+      "bytes_after": 7307016,
+      "structure": {
+        "nodes": 446,
+        "floor_meshes": 1,
+        "collision_proxies": 28,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 7307016,
+        "images": 17
+      }
+    },
+    {
+      "room_id": "classroom",
+      "runtime_path": "game/assets/interiors/classroom.glb",
+      "previous_sha256": "aa41a200e802deff1f105220f93f0e92d426c3e3eab8475df8e011e8c5ea9c8c",
+      "incoming_sha256": "76e337a7013fc4936ce17cb4cb9afae64b6eec8d271bc69275cdafb9e614b210",
+      "source_blend": "assets/blender/interiors/classroom/classroom_v05_detail.blend",
+      "source_glb": "assets/blender/interiors/classroom/classroom_v05_detail.glb",
+      "preview": "assets/blender/interiors/classroom/preview_v05_detail.png",
+      "bytes_before": 7591492,
+      "bytes_after": 7955392,
+      "structure": {
+        "nodes": 348,
+        "floor_meshes": 1,
+        "collision_proxies": 13,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 7955392,
+        "images": 19
+      }
+    },
+    {
+      "room_id": "music_room",
+      "runtime_path": "game/assets/interiors/music_room.glb",
+      "previous_sha256": "b0c4166ec249338ad77aa2bcafc466dfe91006251c4dabca992ff714e5ae6301",
+      "incoming_sha256": "1631a5c064b56db5fab51a7c04407de4d7a05d70b7f6a3a57a3df716a2e26281",
+      "source_blend": "assets/blender/interiors/music_room/music_room_v06_own.blend",
+      "source_glb": "assets/blender/interiors/music_room/music_room_v06_own.glb",
+      "preview": "assets/blender/interiors/music_room/preview_v06_own.png",
+      "bytes_before": 7888564,
+      "bytes_after": 8649064,
+      "structure": {
+        "nodes": 464,
+        "floor_meshes": 1,
+        "collision_proxies": 11,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 8649064,
+        "images": 29
+      }
+    },
+    {
+      "room_id": "art_room",
+      "runtime_path": "game/assets/interiors/art_room.glb",
+      "previous_sha256": "8b17dc138a7e118769d51bb4ea2eca7714d8202fe517c4310f3ec5d249329f65",
+      "incoming_sha256": "23d7a32eb6b3739b7fcc789849c4621be4199f6bc649016d1ffa64099b32b4d6",
+      "source_blend": "assets/blender/interiors/art_room/art_room_v06_own.blend",
+      "source_glb": "assets/blender/interiors/art_room/art_room_v06_own.glb",
+      "preview": "assets/blender/interiors/art_room/preview_v06_own.png",
+      "bytes_before": 6357388,
+      "bytes_after": 7130428,
+      "structure": {
+        "nodes": 415,
+        "floor_meshes": 1,
+        "collision_proxies": 11,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 7130428,
+        "images": 27
+      }
+    },
+    {
+      "room_id": "science_room",
+      "runtime_path": "game/assets/interiors/science_room.glb",
+      "previous_sha256": "15c9326aa9fb8aae9ae35990a1d57d4a82ed47ca9d7c6ab8e40da99f7b12d1db",
+      "incoming_sha256": "9a972ed1c9a475451522bb8ff81b878f6bc6d09698d19d0b221b851615afba18",
+      "source_blend": "assets/blender/interiors/science_room/science_room_v05_own.blend",
+      "source_glb": "assets/blender/interiors/science_room/science_room_v05_own.glb",
+      "preview": "assets/blender/interiors/science_room/preview_v05_own.png",
+      "bytes_before": 7874996,
+      "bytes_after": 8728088,
+      "structure": {
+        "nodes": 492,
+        "floor_meshes": 1,
+        "collision_proxies": 11,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 8728088,
+        "images": 19
+      }
+    },
+    {
+      "room_id": "canteen",
+      "runtime_path": "game/assets/interiors/canteen.glb",
+      "previous_sha256": "50322070b3fcede741d85b88b5954637a0600e6dc9ca7a1f104f002310737a2c",
+      "incoming_sha256": "aaa93a233bd5e7de5b14d21007494b0368800861e37c93114c44302951e20a80",
+      "source_blend": "assets/blender/interiors/canteen/canteen_v05_own.blend",
+      "source_glb": "assets/blender/interiors/canteen/canteen_v05_own.glb",
+      "preview": "assets/blender/interiors/canteen/preview_v05_own.png",
+      "bytes_before": 7299180,
+      "bytes_after": 8794860,
+      "structure": {
+        "nodes": 551,
+        "floor_meshes": 1,
+        "collision_proxies": 12,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 8794860,
+        "images": 14
+      }
+    },
+    {
+      "room_id": "landmark_G",
+      "runtime_path": "game/assets/interiors/landmark_G.glb",
+      "previous_sha256": "3729dcccf865bb4af455d53a087f40cdf2f90796e5f8dce23aaa53e91f75ef94",
+      "incoming_sha256": "adbe0150e4141f7638353965266d0182818d3148192a273003eaebb7d09ca3fc",
+      "source_blend": "assets/blender/interiors/landmark_G/landmark_G_v03_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_G/landmark_G_v03_own.glb",
+      "preview": "docs/verification/own-science-detail-20261025/landmark_G/blender-source-after.png",
+      "bytes_before": 5012192,
+      "bytes_after": 5320540,
+      "structure": {
+        "nodes": 427,
+        "floor_meshes": 1,
+        "collision_proxies": 135,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 5320540,
+        "images": 16
+      }
+    },
+    {
+      "room_id": "landmark_R",
+      "runtime_path": "game/assets/interiors/landmark_R.glb",
+      "previous_sha256": "03762861017c09d895a24017b24f081f3e607b62d1bfa7adb1b3dfc0f414df5b",
+      "incoming_sha256": "b0a54b350c70372b1179983c48b3b09afc0ccd4d3510d87b0c748ac7008c739b",
+      "source_blend": "assets/blender/interiors/landmark_R/landmark_R_v03_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_R/landmark_R_v03_own.glb",
+      "preview": "docs/verification/own-science-detail-20261025/landmark_R/blender-source-after.png",
+      "bytes_before": 5942560,
+      "bytes_after": 5874356,
+      "structure": {
+        "nodes": 340,
+        "floor_meshes": 1,
+        "collision_proxies": 10,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 5874356,
+        "images": 18
+      }
+    },
+    {
+      "room_id": "landmark_S",
+      "runtime_path": "game/assets/interiors/landmark_S.glb",
+      "previous_sha256": "a3f3c18ae88a1f8b1264f7b2ccbd6e39306da7a8959928e308b621f03ec41d16",
+      "incoming_sha256": "5fbc38227e7bb54e952e45b59de540f54381f88cc8f2b3292590586e404fcff7",
+      "source_blend": "assets/blender/interiors/landmark_S/landmark_S_v03_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_S/landmark_S_v03_own.glb",
+      "preview": "docs/verification/own-science-detail-20261025/landmark_S/blender-source-after.png",
+      "bytes_before": 3453412,
+      "bytes_after": 3533036,
+      "structure": {
+        "nodes": 362,
+        "floor_meshes": 1,
+        "collision_proxies": 127,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 3533036,
+        "images": 8
+      }
+    },
+    {
+      "room_id": "landmark_V",
+      "runtime_path": "game/assets/interiors/landmark_V.glb",
+      "previous_sha256": "052282812d97f772b38d0c2427160e017363ad57392a47911989b808a12b10cc",
+      "incoming_sha256": "a740cd82661eb66fe35aab53b4f5b4a607c670f5936177f65a70d6b2b68aac2b",
+      "source_blend": "assets/blender/interiors/landmark_V/landmark_V_v04_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_V/landmark_V_v04_own.glb",
+      "preview": "assets/blender/interiors/landmark_V/preview_v04_own.png",
+      "bytes_before": 4765108,
+      "bytes_after": 4703828,
+      "structure": {
+        "nodes": 131,
+        "floor_meshes": 1,
+        "collision_proxies": 11,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 4703828,
+        "images": 18
+      }
+    },
+    {
+      "room_id": "landmark_E",
+      "runtime_path": "game/assets/interiors/landmark_E.glb",
+      "previous_sha256": "eae58a9c69f731bbcf0a1d54f40ae42b0f36afc7c053092070339be1f5879496",
+      "incoming_sha256": "76831ea32b41e9062f81a657a7562d05b1898191501a4dd870931f35bb78dd93",
+      "source_blend": "assets/blender/interiors/landmark_E/landmark_E_v04_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_E/landmark_E_v04_own.glb",
+      "preview": "assets/blender/interiors/landmark_E/preview_v04_own.png",
+      "bytes_before": 5266732,
+      "bytes_after": 7889964,
+      "structure": {
+        "nodes": 520,
+        "floor_meshes": 1,
+        "collision_proxies": 134,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 7889964,
+        "images": 14
+      }
+    },
+    {
+      "room_id": "landmark_M",
+      "runtime_path": "game/assets/interiors/landmark_M.glb",
+      "previous_sha256": "0294a99d4d51790bd3dbeb2b68e4fc5d0047729ddac420731c4e88f241559f1a",
+      "incoming_sha256": "08e3db4700563ad5c3aa77c27783aece9ed6207acf7fddaeee6b7a586ee7cd37",
+      "source_blend": "assets/blender/interiors/landmark_M/landmark_M_v04_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_M/landmark_M_v04_own.glb",
+      "preview": "assets/blender/interiors/landmark_M/preview_v04_own.png",
+      "bytes_before": 6089888,
+      "bytes_after": 6397552,
+      "structure": {
+        "nodes": 514,
+        "floor_meshes": 1,
+        "collision_proxies": 136,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 6397552,
+        "images": 18
+      }
+    },
+    {
+      "room_id": "landmark_U",
+      "runtime_path": "game/assets/interiors/landmark_U.glb",
+      "previous_sha256": "7a5821e39e8703a603e05db21bbb793c2608c1a1f743c631877820ca8045ba2f",
+      "incoming_sha256": "68ba0b8a67d5eefd9702bbea9dda27bbe3664181a2183e120fd1062a6a0d151d",
+      "source_blend": "assets/blender/interiors/landmark_U/landmark_U_v05_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_U/landmark_U_v05_own.glb",
+      "preview": "assets/blender/interiors/landmark_U/preview_v05_own.png",
+      "bytes_before": 5586932,
+      "bytes_after": 6008164,
+      "structure": {
+        "nodes": 784,
+        "floor_meshes": 1,
+        "collision_proxies": 138,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 6008164,
+        "images": 14
+      }
+    },
+    {
+      "room_id": "landmark_W",
+      "runtime_path": "game/assets/interiors/landmark_W.glb",
+      "previous_sha256": "c2817d38a99eafb188da041b9628be5a85c486ee69325b1507154d372256bb06",
+      "incoming_sha256": "2c08de483bf801db8d28cf3ed677d9ae6ab7c33a3c51df8f0f464efdcbcdc936",
+      "source_blend": "assets/blender/interiors/landmark_W/landmark_W_v04_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_W/landmark_W_v04_own.glb",
+      "preview": "assets/blender/interiors/landmark_W/preview_v04_own.png",
+      "bytes_before": 4064840,
+      "bytes_after": 4325256,
+      "structure": {
+        "nodes": 347,
+        "floor_meshes": 1,
+        "collision_proxies": 143,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 4325256,
+        "images": 16
+      }
+    },
+    {
+      "room_id": "landmark_C",
+      "runtime_path": "game/assets/interiors/landmark_C.glb",
+      "previous_sha256": "5c5af768ca6d50e5c726b4502e84177a2e99b96227a275828f86d7873a67cc93",
+      "incoming_sha256": "a5b56aaaeb6113254b31cc5a2c672c430d2f33197273a01d617a2fb18b6f70b0",
+      "source_blend": "assets/blender/interiors/landmark_C/landmark_C_v16_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_C/landmark_C_v16_own.glb",
+      "preview": "assets/blender/interiors/landmark_C/preview_v16_own.png",
+      "bytes_before": 7580616,
+      "bytes_after": 7868568,
+      "structure": {
+        "nodes": 821,
+        "floor_meshes": 1,
+        "collision_proxies": 141,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 7868568,
+        "images": 16
+      }
+    },
+    {
+      "room_id": "landmark_D",
+      "runtime_path": "game/assets/interiors/landmark_D.glb",
+      "previous_sha256": "88561e0f376b7e7f91298820ef12c1fd8a270e7402cd77360f6172a5f40725ea",
+      "incoming_sha256": "8d0aa5f1d96931b6d3c387ad74375376c594bfe1cedb779306806eab6177f6ae",
+      "source_blend": "assets/blender/interiors/landmark_D/landmark_D_v15_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_D/landmark_D_v15_own.glb",
+      "preview": "assets/blender/interiors/landmark_D/preview_v15_own.png",
+      "bytes_before": 7843492,
+      "bytes_after": 8050872,
+      "structure": {
+        "nodes": 562,
+        "floor_meshes": 1,
+        "collision_proxies": 131,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 8050872,
+        "images": 16
+      }
+    },
+    {
+      "room_id": "landmark_I",
+      "runtime_path": "game/assets/interiors/landmark_I.glb",
+      "previous_sha256": "2ed770c44b32cbae36ba89187d53aac7689c5dc69488b5988e063009a66641f8",
+      "incoming_sha256": "680356f7bf67e411c3b6b6efb31ba838e00f0d5f37135417c1b5bf8085722ddf",
+      "source_blend": "assets/blender/interiors/landmark_I/landmark_I_v18_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_I/landmark_I_v18_own.glb",
+      "preview": "assets/blender/interiors/landmark_I/preview_v18_own.png",
+      "bytes_before": 3753976,
+      "bytes_after": 4377340,
+      "structure": {
+        "nodes": 274,
+        "floor_meshes": 1,
+        "collision_proxies": 10,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 4377340,
+        "images": 14
+      }
+    },
+    {
+      "room_id": "landmark_X",
+      "runtime_path": "game/assets/interiors/landmark_X.glb",
+      "previous_sha256": "8ffa7abdc996950a78b57673e1b73177b37cd9c2a069431553462942595525a8",
+      "incoming_sha256": "d40b3d9892f83b17a11bbe62beebcd30edb597bab7536ac7c5046362ea010bb9",
+      "source_blend": "assets/blender/interiors/landmark_X/landmark_X_v15_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_X/landmark_X_v15_own.glb",
+      "preview": "assets/blender/interiors/landmark_X/preview_v15_own.png",
+      "bytes_before": 6441380,
+      "bytes_after": 6564796,
+      "structure": {
+        "nodes": 258,
+        "floor_meshes": 1,
+        "collision_proxies": 10,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 6564796,
+        "images": 26
+      }
+    },
+    {
+      "room_id": "landmark_Y",
+      "runtime_path": "game/assets/interiors/landmark_Y.glb",
+      "previous_sha256": "995f89f2375c4588f575cdaa5edd4040a4340055b42530408e00bfaaaf374f3f",
+      "incoming_sha256": "ce3aa964d506140bf10a7178daf3385af2dd305193ae57b754f06d77c8dacd28",
+      "source_blend": "assets/blender/interiors/landmark_Y/landmark_Y_v03_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_Y/landmark_Y_v03_own.glb",
+      "preview": "docs/verification/own-yarn-post-home-recovery-20261025/landmark_Y/blender-source-after.png",
+      "bytes_before": 10735412,
+      "bytes_after": 18206340,
+      "structure": {
+        "nodes": 1121,
+        "floor_meshes": 1,
+        "collision_proxies": 138,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 18206340,
+        "images": 26
+      }
+    },
+    {
+      "room_id": "landmark_Z",
+      "runtime_path": "game/assets/interiors/landmark_Z.glb",
+      "previous_sha256": "5467fdb00159dd251a40c61bb5ff832c9d3fa396963931d007d076404952e376",
+      "incoming_sha256": "2c889ab474247f453db365b4299d3a99286500cd25124bc26f9fdc7a52a80497",
+      "source_blend": "assets/blender/interiors/landmark_Z/landmark_Z_v03_own.blend",
+      "source_glb": "assets/blender/interiors/landmark_Z/landmark_Z_v03_own.glb",
+      "preview": "docs/verification/own-yarn-post-home-recovery-20261025/landmark_Z/blender-source-after.png",
+      "bytes_before": 7921032,
+      "bytes_after": 8341720,
+      "structure": {
+        "nodes": 515,
+        "floor_meshes": 1,
+        "collision_proxies": 13,
+        "required_markers": [
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN"
+        ],
+        "bytes": 8341720,
+        "images": 24
+      }
+    },
+    {
+      "room_id": "home",
+      "runtime_path": "game/assets/interiors/home.glb",
+      "previous_sha256": "6e902df0525ab40eff397b0866bd5d4b707697f8b9315d088d5393af5d98e13b",
+      "incoming_sha256": "8672b8a0f07d8c949468b629909a6e6aa96d2c28706dc19939889fe4a04ed94f",
+      "source_blend": "assets/blender/interiors/home/home_v07_own.blend",
+      "source_glb": "assets/blender/interiors/home/home_v07_own.glb",
+      "preview": "docs/verification/own-yarn-post-home-recovery-20261025/home/blender-source-after.png",
+      "bytes_before": 7103916,
+      "bytes_after": 7730556,
+      "structure": {
+        "nodes": 624,
+        "floor_meshes": 1,
+        "collision_proxies": 117,
+        "required_markers": [
+          "SG_BED",
+          "SG_DECOR_MODEL_FLOWER_BOX",
+          "SG_DECOR_MODEL_LAMP",
+          "SG_DECOR_MODEL_PICNIC",
+          "SG_EXIT",
+          "SG_MEMORY_01",
+          "SG_MEMORY_02",
+          "SG_MEMORY_03",
+          "SG_MEMORY_04",
+          "SG_MEMORY_05",
+          "SG_NPC_HOST",
+          "SG_SPAWN",
+          "SG_WARDROBE"
+        ],
+        "bytes": 7730556,
+        "images": 15
+      }
+    },
+    {
+      "room_id": "home_hall",
+      "runtime_path": "game/assets/interiors/home_hall.glb",
+      "previous_sha256": "fa9ca44eb210de4390a378d3982d2bfdbb048c1a7e0d928cf8d7d2246e616369",
+      "incoming_sha256": "a983fb12926aaad3fe553c8811f0a168d277ed74666ece8a35152d2da0ff6321",
+      "source_blend": "assets/blender/interiors/home_hall/home_hall_v05_own.blend",
+      "source_glb": "assets/blender/interiors/home_hall/home_hall_v05_own.glb",
+      "preview": "docs/verification/own-yarn-post-home-recovery-20261025/home_hall/blender-source-after.png",
+      "bytes_before": 10590424,
+      "bytes_after": 11314364,
+      "structure": {
+        "nodes": 811,
+        "floor_meshes": 1,
+        "collision_proxies": 25,
+        "required_markers": [
+          "SG_DOOR_HOME",
+          "SG_DOOR_HOME_BALCONY",
+          "SG_DOOR_HOME_BATHROOM",
+          "SG_DOOR_HOME_BEDROOM",
+          "SG_DOOR_HOME_DINING",
+          "SG_DOOR_HOME_KITCHEN",
+          "SG_DOOR_HOME_STUDY",
+          "SG_EXIT",
+          "SG_SPAWN"
+        ],
+        "bytes": 11314364,
+        "images": 41
+      }
+    }
+  ],
+  "protected_persistent_and_dirty_files": 17,
+  "old_source_files_preserved": 206,
+  "runtime_hashes_verified_after_copy": true
+}

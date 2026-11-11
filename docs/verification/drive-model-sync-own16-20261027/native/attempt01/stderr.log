@@ -1,0 +1,12 @@
+ERROR: Couldn't open directory at path "res://../.local/shared-profiles".
+   at: get_files_at (core/io/dir_access.cpp:578)
+   GDScript backtrace (most recent call first):
+       [0] _hash_tree (res://tests/drive_model_sync/capture_own16.gd:202)
+       [1] _production_signature (res://tests/drive_model_sync/capture_own16.gd:197)
+       [2] _run (res://tests/drive_model_sync/capture_own16.gd:24)
+ERROR: Couldn't open directory at path "res://../.local/shared-profiles".
+   at: get_directories_at (core/io/dir_access.cpp:588)
+   GDScript backtrace (most recent call first):
+       [0] _hash_tree (res://tests/drive_model_sync/capture_own16.gd:204)
+       [1] _production_signature (res://tests/drive_model_sync/capture_own16.gd:197)
+       [2] _run (res://tests/drive_model_sync/capture_own16.gd:24)
