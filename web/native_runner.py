@@ -108,8 +108,11 @@ class WindowsChild:
                 raise ctypes.WinError(ctypes.get_last_error())
             startup, info = StartupInfo(), ProcessInfo()
             startup.cb = ctypes.sizeof(startup)
-            # CREATE_NO_WINDOW hides only console children; graphical Godot still opens normally.
-            flags = 0x00000004 | 0x08000000 | 0x00000400  # SUSPENDED | NO_WINDOW | UNICODE_ENVIRONMENT
+            startup.dwFlags = 0x00000001  # STARTF_USESHOWWINDOW
+            startup.wShowWindow = 1       # SW_SHOWNORMAL
+            # Only pass CREATE_NO_WINDOW for *_console.exe builds; GUI Godot opens a visible window.
+            no_win_flag = 0x08000000 if str(command[0]).lower().endswith("_console.exe") else 0
+            flags = 0x00000004 | no_win_flag | 0x00000400  # SUSPENDED | UNICODE_ENVIRONMENT
             command_line = ctypes.create_unicode_buffer(subprocess.list2cmdline(command))
             environment_block = None
             if environment is not None:

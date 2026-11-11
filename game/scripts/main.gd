@@ -102,6 +102,9 @@ func _ready() -> void:
 		return
 	if profile_result.has("nickname") and not OS.has_feature("web"):
 		DisplayServer.window_set_title("字母岛 · " + str(profile_result.nickname))
+	if not validation_mode and not OS.has_feature("web") and DisplayServer.get_name() != "headless":
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		DisplayServer.window_move_to_foreground()
 	ui = UIScript.new()
 	add_child(ui)
 	ui.action.connect(_on_action)
