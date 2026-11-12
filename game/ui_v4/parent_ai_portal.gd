@@ -96,9 +96,10 @@ static func build(ui: Node, state: Node, bridge: Node) -> void:
 	var bottom := HBoxContainer.new()
 	bottom.add_theme_constant_override("separation", 12)
 	ui.panel_box.add_child(bottom)
-	bottom.add_child(ui.button("📚 浏览全八册 1,314 词立体书架", "journey:library", true, Vector2(260, 46)))
-	bottom.add_child(ui.button("📜 查看原始明细档案", "journey:parent", false, Vector2(200, 46)))
-	bottom.add_child(ui.button("返回旅行手账", "journey:hub", false, Vector2(170, 46)))
+	bottom.add_child(ui.button("🗺️ 八册 81 章故事画册", "v4_chapter_atlas", true, Vector2(220, 46)))
+	bottom.add_child(ui.button("📚 1,314 词立体书架", "journey:library", false, Vector2(210, 46)))
+	bottom.add_child(ui.button("📜 原始明细档案", "journey:parent", false, Vector2(180, 46)))
+	bottom.add_child(ui.button("返回旅行手账", "journey:hub", false, Vector2(160, 46)))
 
 	book_select.item_selected.connect(func(idx: int):
 		var bid := str(book_select.get_item_metadata(idx))

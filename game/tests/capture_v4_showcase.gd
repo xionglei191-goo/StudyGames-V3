@@ -167,6 +167,69 @@ func _run() -> void:
 	await _save_shot("07_parent_ai_observatory.png")
 	_main._close()
 
+	# Shot 08: 8-Book × 81-Unit Illustrated Cozy Chapter Atlas (`ChapterAtlasView`)
+	state.advance_v4_chapter("xiangshao-g3-1/unit-1", 3, 0)
+	state.advance_v4_chapter("xiangshao-g3-1/unit-2", 3, 0)
+	state.advance_v4_chapter("xiangshao-g3-1/unit-4", 2, 0)
+	state.journey_select_book("xiangshao-g3-1")
+	state.set_active_unit("unit-4")
+	_main._on_action("v4_chapter_atlas")
+	await _wait_seconds(0.65)
+	await _save_shot("08_chapter_atlas_81_units.png")
+	_main._close()
+
+	# Shot 09: Landmark B Boat Tactile Workshop + Two-Hand Carried 3D Wooden Boat + CozyCraftStation + Chapter Plaque!
+	state.set_outfit("blue")
+	state.set_hat("straw_hat")
+	state.set_bag("picnic_basket")
+	state.record_landmark_craft("landmark_B", 0)
+	await _main.change_room("landmark_B")
+	await _wait_room("landmark_B")
+	_main.player.apply_wardrobe(state.data)
+	_main.player.set_carried_item("boat")
+	var station_pos: Vector3 = _main.tactile_quests._basket_pos
+	_main.player.global_position = station_pos + Vector3(-1.35, 0.0, 1.15)
+	_main.player.face(station_pos)
+	await _snap_camera((station_pos + _main.player.global_position) * 0.5, 15.0)
+	_main.ui.diegetic.open_conversation({
+		"npc_id": "npc_bear_uncle",
+		"speaker": "B 馆主理人 · 小船拼装台",
+		"en": "Welcome to Landmark B! \"Boat\" starts with B! Place your handcrafted boat on our dock table!",
+		"zh": "欢迎来到 B 字母船坞工坊！双手捧着 3D 小木船走近发光拼装台，就能留下永久小岛手作纪念哦！",
+		"world_pos": station_pos,
+		"show_zh_immediately": true,
+		"auto_speak": false,
+		"actions": [
+			{"label": "🃏 收集 B 字母发现卡", "id": "close", "primary": true},
+			{"label": "🚀 本章三幕共创", "id": "close"},
+			{"label": "去安放 3D 小木船", "id": "close"}
+		]
+	})
+	await _wait_seconds(0.55)
+	await _save_shot("09_landmark_B_boat_tactile_workshop.png")
+	_main.ui.diegetic.dismiss()
+	_main.player.set_carried_item("")
+
+	# Shot 10: Sunlit Classroom Diegetic Story Circle (Zero Exam Modals + Tolerant Voice Follow-Along Pills!)
+	state.set_outfit("mint")
+	state.set_hat("star_beret")
+	state.set_bag("school_pack")
+	await _main.change_room("classroom")
+	await _wait_room("classroom")
+	_main.player.apply_wardrobe(state.data)
+	_main.validation_mode = false
+	for entry: Dictionary in _main.interactions:
+		if str(entry.id) == "teacher":
+			_main.player.global_position = entry.position + Vector3(-1.5, 0.0, 1.4)
+			_main.player.face(entry.position)
+			await _snap_camera((entry.position + _main.player.global_position) * 0.5, 15.5)
+			break
+	await _main.interact_id("teacher")
+	await _wait_seconds(0.55)
+	await _save_shot("10_classroom_diegetic_story_circle.png")
+	_main._close()
+	_main.validation_mode = true
+
 	# Clean up isolated validation save files
 	var abs_save := ProjectSettings.globalize_path(str(state.save_path))
 	for suffix: String in ["", ".bak", ".tmp"]:

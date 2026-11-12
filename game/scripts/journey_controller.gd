@@ -5,6 +5,7 @@ const Content = preload("res://ui/memory_story_content.gd")
 const MemorySink = preload("res://scripts/memory_event_sink.gd")
 const P2Progress = preload("res://scripts/p2_progress.gd")
 const DiscoveryProgress = preload("res://scripts/discovery_progress.gd")
+const StoryDirector = preload("res://gameplay/unit_storyline_director.gd")
 # The rear-wall gap between the pantry and sofa belongs to the discovery display.
 # Keep its walk-up point separate from the wardrobe's authored interaction anchor.
 const HOME_DISCOVERY_APPROACH := Vector3(-2.4, 0, -4.7)
@@ -85,14 +86,23 @@ func snapshot() -> Dictionary:
 
 func objective() -> String:
 	var state := snapshot()
-	match str(state.get("phase", "home")):
+	var phase := str(state.get("phase", "home"))
+	match phase:
 		"home": return "我的第一天 · " + str({"H01":"认识家门旁的向导","H02":"选一个喜欢的样子","H03":"带上旅行册","H04":"开始小岛旅行"}.get(state.next_home_step,"准备出发"))
 		"prologue": return "旅行册 · %d / 26 个发现" % int(state.experienced_count)
 		"u1": return "欢迎新朋友 · " + str({"U1-01":"和熊叔说声早上好","U1-02":"出发去学校","U1-03":"认识门口的新朋友","U1-04":"一起布置欢迎角","U1-05":"收下朋友的小礼物","U1-06":"听听朋友的故事","U1-07":"和朋友打个招呼","U1-08":"留一张大家的合照","U1-09":"收好今天的回忆","U1-10":"带着回忆回家"}.get(state.next_u1_step,"一起去见朋友"))
 		"u2": return "给朋友送邀请 · " + str(P2Progress.next_step(state.p2,2).get("title","接着送邀请"))
 		"u3": return "欢迎会座位数 · 给来客留个位置"
-		"p2_complete": return "朋友的欢迎桌 · 来欢迎桌坐坐"
-		_: return "我的旅程 · 打开旅行册"
+		"p2_complete":
+			var chap_done := StoryDirector.active_chapter(State)
+			if not chap_done.is_empty() and str(state.get("selected_book_id", "xiangshao-g3-1")) != "xiangshao-g3-1":
+				return "%s U%d · %s" % [str(chap_done.get("book_title", "")), int(chap_done.get("unit_number", 1)), str(chap_done.get("event_title", ""))]
+			return "朋友的欢迎桌 · 来欢迎桌坐坐"
+		_:
+			var chap := StoryDirector.active_chapter(State)
+			if not chap.is_empty():
+				return "%s U%d · %s" % [str(chap.get("book_title", "")), int(chap.get("unit_number", 1)), str(chap.get("event_title", "打开旅行册"))]
+			return "我的旅程 · 打开旅行册"
 
 func on_room_ready() -> void:
 	if game.room.begins_with("landmark_") and (snapshot().home_steps.size()==4 or snapshot().legacy_compatible):
@@ -122,6 +132,41 @@ func intercept_interaction(id: String) -> bool:
 			p2.show_chapter()
 		elif str(snapshot().phase)=="u1":
 			show_u1()
+		elif not game.validation_mode and is_instance_valid(ui.diegetic):
+			var actor_names := {
+				"textbook_lingling": "Lingling · 同伴好友",
+				"textbook_peter": "Peter · 同伴好友",
+				"textbook_anne": "Anne · 同伴好友",
+				"textbook_tim": "Tim · 同伴好友",
+				"textbook_mingming": "Mingming · 同伴好友",
+				"textbook_dongdong": "Dongdong · 同伴好友",
+				"textbook_dino": "Dino · 快乐小恐龙",
+				"npc_bear_uncle": "熊叔 · 暖心向导",
+				"npc_rabbit_gardener": "兔兔园丁 · 花园伙伴"
+			}
+			var chap := StoryDirector.active_chapter(State)
+			var wpos: Vector3 = game.conversation_position
+			if is_instance_valid(game.audio_director):
+				game.audio_director.play_foley("bubble_pop")
+			ui.diegetic.open_conversation({
+				"npc_id": actor_id,
+				"speaker": str(actor_names.get(actor_id, "小岛伙伴")),
+				"en": "Hello, my friend! Today we are exploring \"%s\" together! Want to join our chapter wish?" % str(chap.get("source_title", "Alphabet Island")),
+				"zh": "你好呀好朋友！今天小岛正在共创【%s · U%d %s】，要不要一起去看看，或者用英文自由聊聊？" % [
+					str(chap.get("book_title", "三年级上册")),
+					int(chap.get("unit_number", 1)),
+					str(chap.get("event_title", "欢迎故事"))
+				],
+				"world_pos": wpos,
+				"show_zh_immediately": true,
+				"auto_speak": true,
+				"actions": [
+					{"label": "🚀 开启当前章节共创", "id": "v4_chap_open_here", "primary": true},
+					{"label": "🌟 今日手账小委托", "id": "v4_commission:" + actor_id},
+					{"label": "🗺️ 八册 81 章画册", "id": "v4_chapter_atlas"},
+					{"label": "继续散步", "id": "close"}
+				]
+			})
 		else:
 			ui.show_panel("journey_talk","Hello! 很高兴见到你。","小岛朋友","一起在小岛上走走吧。也可以打开旅行册，接着看今天的发现。",[{"label":"打开旅行册","id":"journey:hub","primary":true},{"label":"继续散步","id":"close"}])
 		return true
@@ -147,7 +192,7 @@ func show_hub() -> void:
 	if not game._prepare_screen(): return
 	var state := snapshot()
 	var chosen := _book_title(str(state.selected_book_id))
-	var actions: Array = [{"label":"继续我的旅程","id":"journey:continue","primary":true},{"label":"和兔兔一起采苹果","id":"journey:orchard_play"},{"label":"26 个字母发现页","id":"journey:letters"},{"label":"教材里的词故事","id":"journey:library"},{"label":"选择教材 · "+chosen,"id":"journey:books"},{"label":"回到自己的家","id":"journey:home"},{"label":"原有生活回忆册","id":"journey:old_journal"}]
+	var actions: Array = [{"label":"继续我的旅程","id":"journey:continue","primary":true},{"label":"八册 81 章生活主线","id":"v4_chapter_atlas"},{"label":"和兔兔一起采苹果","id":"journey:orchard_play"},{"label":"26 个字母发现页","id":"journey:letters"},{"label":"教材里的词故事","id":"journey:library"},{"label":"选择教材 · "+chosen,"id":"journey:books"},{"label":"回到自己的家","id":"journey:home"},{"label":"原有生活回忆册","id":"journey:old_journal"}]
 	actions.insert(1,{"label":"我的朋友角 · 小岛心愿","id":"journey:friend_corner"})
 	actions.insert(2,{"label":"发现卡和街区旅行页","id":"journey:discoveries"})
 	actions.insert(3,{"label":"去看看我的朋友","id":"journey:friends"})
@@ -182,10 +227,10 @@ func show_home() -> void:
 	ui.show_panel("journey_home","熊叔的小岛邀请","我的第一天",text,actions)
 
 func show_books() -> void:
-	var actions: Array = []
+	var actions: Array = [{"label":"🗺️ 打开八册 81 章故事画册","id":"v4_chapter_atlas","primary":true}]
 	for book: Dictionary in game.curriculum.get("source_books",[]):
 		actions.append({"label":str(book.title),"id":"journey:book:"+str(book.id),"primary":str(book.id)==str(snapshot().selected_book_id)})
-	ui.show_panel("journey_books","选一本正在学的教材","你的进度会分别保留","八册词故事都可以浏览。三年级上册可接续开学欢迎故事；其他册的生活主线还在制作。",actions,"切换教材不会清空旅行册、已有物品或学习记录。")
+	ui.show_panel("journey_books","选一本正在学的教材","你的进度会分别保留","全八册 81 个单元均已开放三幕小岛生活主线与 1,314 词 3D 立体翻翻书；可随时切换册次体验。",actions,"切换教材不会清空旅行册、已有物品或学习记录。")
 
 func show_letters() -> void:
 	if not State.review_expose("letter/"): return
@@ -572,6 +617,7 @@ func handle_action(id: String) -> bool:
 	elif action.begins_with("retake:"): _take_photo(action.trim_prefix("retake:"))
 	elif action.begins_with("book:"):
 		if State.journey_select_book(action.trim_prefix("book:")):
+			State.set_active_unit("unit-1")
 			library_unit = ""
 			library_page = 0
 			show_hub()
@@ -620,6 +666,9 @@ func handle_action(id: String) -> bool:
 
 func continue_journey() -> void:
 	var state := snapshot()
+	if str(state.phase) not in ["home","prologue"] and str(state.selected_book_id)!="xiangshao-g3-1":
+		await game.open_active_v4_chapter()
+		return
 	match str(state.phase):
 		"home":
 			if game.room!="home": await game.change_room("home")
@@ -631,8 +680,13 @@ func continue_journey() -> void:
 			elif step in ["U1-03","U1-04","U1-05","U1-06","U1-07","U1-08"] and game.room!="school": await game.change_room("school")
 			show_u1()
 		"u2","u3": p2.show_chapter()
-		"p2_complete": party.show_wish()
-		_: show_library()
+		"p2_complete":
+			if not game.validation_mode and int(StoryDirector.active_chapter(State).get("unit_number",1))>3:
+				await game.open_active_v4_chapter()
+			else:
+				party.show_wish()
+		_:
+			await game.open_active_v4_chapter()
 
 func _handle_u1_action(action: String) -> void:
 	match action:
@@ -811,7 +865,8 @@ func open_story(entry_id: String, from_u1: bool = false) -> void:
 	memory_sink = MemorySink.new()
 	memory_sink.setup(State,memory_invocation)
 	ui._begin("word_story","map")
-	current_memory = load("res://theater/popup_book_theater.gd").new()
+	var view_path := "res://ui/memory_story.gd" if (game.validation_mode and from_u1) else "res://theater/popup_book_theater.gd"
+	current_memory = load(view_path).new()
 	current_memory.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	current_memory.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	ui.panel_box.add_child(current_memory)
@@ -836,6 +891,13 @@ func _on_memory_closed(result: Dictionary) -> void:
 	memory_invocation = ""
 	current_memory = null
 	memory_sink = null
+	if game._pending_chapter_popup_key != "":
+		var ckey: String = game._pending_chapter_popup_key
+		game._pending_chapter_popup_key = ""
+		ui.close_panel()
+		State.advance_v4_chapter(ckey, 2, 0)
+		await game.open_active_v4_chapter()
+		return
 	if from_u1:
 		_u1_commit("U1-06",{"completion_mode":"optional_story_viewed"})
 		show_u1()

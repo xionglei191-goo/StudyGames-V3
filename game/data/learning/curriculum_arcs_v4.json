@@ -1,0 +1,5133 @@
+{
+  "schema_version": 4,
+  "book_count": 8,
+  "unit_count": 81,
+  "books": [
+    {
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "grade": 3,
+      "volume": 1,
+      "edition": "2022年课标修订版",
+      "unit_count": 10
+    },
+    {
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "grade": 3,
+      "volume": 2,
+      "edition": "2022年课标修订版",
+      "unit_count": 10
+    },
+    {
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "grade": 4,
+      "volume": 1,
+      "edition": "2022年课标修订版",
+      "unit_count": 10
+    },
+    {
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "grade": 4,
+      "volume": 2,
+      "edition": "2022年课标修订版",
+      "unit_count": 10
+    },
+    {
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "grade": 5,
+      "volume": 1,
+      "edition": "2022年课标修订版",
+      "unit_count": 10
+    },
+    {
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "grade": 5,
+      "volume": 2,
+      "edition": "三年级起点版",
+      "unit_count": 12
+    },
+    {
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "grade": 6,
+      "volume": 1,
+      "edition": "2022年课标修订版",
+      "unit_count": 10
+    },
+    {
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "arc_title": "走向世界的毕业展",
+      "grade": 6,
+      "volume": 2,
+      "edition": "三年级起点版",
+      "unit_count": 9
+    }
+  ],
+  "units": [
+    {
+      "order": 1,
+      "chapter_key": "xiangshao-g3-1/unit-1",
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "unit_id": "unit-1",
+      "unit_number": 1,
+      "source_title": "Hello！",
+      "event_title": "欢迎角的第一张名牌与合照",
+      "player_goal": "向熊叔和教材同伴打招呼，把自己的名牌放进欢迎墙，再将第一张合照带回家。",
+      "primary_room": "home",
+      "room_ids": [
+        "village",
+        "home",
+        "school"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-03bdaeaf2b39",
+      "lead_word": "bag",
+      "lead_zh": "包",
+      "featured_words": [
+        {
+          "entry_id": "occ-03bdaeaf2b39",
+          "word": "bag",
+          "zh": "包"
+        },
+        {
+          "entry_id": "occ-46a650cc1237",
+          "word": "good",
+          "zh": "好的"
+        },
+        {
+          "entry_id": "occ-a6e41c5905e6",
+          "word": "hello",
+          "zh": "你好"
+        },
+        {
+          "entry_id": "occ-d60a734be099",
+          "word": "help",
+          "zh": "救命（求救声）；帮助"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在校门口听 Lingling 示范问候，再从可回听的选项中回应。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "在小屋名牌台选择展示称呼；向教材同伴介绍自己，不要求输入真实姓名。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把名牌贴到校园欢迎墙，按需回听 Aa、Bb、Cc；与朋友留下第一张合照，再回家安放展示。"
+        }
+      ],
+      "world_keepsake": "校园欢迎墙增加玩家名牌，同伴此后使用这个称呼；小屋新增可查看的第一张合照。"
+    },
+    {
+      "order": 2,
+      "chapter_key": "xiangshao-g3-1/unit-2",
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "unit_id": "unit-2",
+      "unit_number": 2,
+      "source_title": "What's your name？",
+      "event_title": "寄给新朋友的邀请",
+      "player_goal": "找到两位邻居的名字，把欢迎会邀请放到正确的信格。",
+      "primary_room": "landmark_Z",
+      "room_ids": [
+        "landmark_Z",
+        "school",
+        "landmark_M"
+      ],
+      "host_npc_id": "host_Z",
+      "host_speaker": "Z 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-fe88cd957400",
+      "lead_word": "afternoon",
+      "lead_zh": "下午",
+      "featured_words": [
+        {
+          "entry_id": "occ-fe88cd957400",
+          "word": "afternoon",
+          "zh": "下午"
+        },
+        {
+          "entry_id": "occ-ffc76e831985",
+          "word": "and",
+          "zh": "和"
+        },
+        {
+          "entry_id": "occ-0a701857deca",
+          "word": "back",
+          "zh": "回原处"
+        },
+        {
+          "entry_id": "occ-aaafe8ab531f",
+          "word": "ball",
+          "zh": "球"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在邮局领取两张空白邀请，询问两位收件人的名字。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "根据本人回答填写邀请标签；允许反复听姓名。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "送出邀请，离开时道别，再把 Dd、Ee、Ff、Gg 标签放回字母墙。"
+        }
+      ],
+      "world_keepsake": "邮局出现两封已投递的邀请，邻居回信成为欢迎会来客名单。"
+    },
+    {
+      "order": 3,
+      "chapter_key": "xiangshao-g3-1/unit-3",
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "unit_id": "unit-3",
+      "unit_number": 3,
+      "source_title": "How old are you？",
+      "event_title": "欢迎会座位数",
+      "player_goal": "问清朋友的年龄，数出十以内的座位卡，布置一张合适的欢迎桌。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "classroom"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-030f341f3824",
+      "lead_word": "are",
+      "lead_zh": "是",
+      "featured_words": [
+        {
+          "entry_id": "occ-030f341f3824",
+          "word": "are",
+          "zh": "是"
+        },
+        {
+          "entry_id": "occ-b3c6c0ab1846",
+          "word": "eight",
+          "zh": "八"
+        },
+        {
+          "entry_id": "occ-67a5638b4901",
+          "word": "five",
+          "zh": "五"
+        },
+        {
+          "entry_id": "occ-9293db6d9fde",
+          "word": "four",
+          "zh": "四"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "向三位虚构同学询问年龄，把回答对应到人物卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "按来客人数逐个摆放座位卡并点数，数量不对可立即调整。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "给角色选择与其年龄一致的数字贴，回看 Hh、Ii、Jj、Kk。"
+        }
+      ],
+      "world_keepsake": "欢迎桌出现正确数量的座位；人物卡保留剧情给定年龄。"
+    },
+    {
+      "order": 4,
+      "chapter_key": "xiangshao-g3-1/unit-4",
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "unit_id": "unit-4",
+      "unit_number": 4,
+      "source_title": "This is my family",
+      "event_title": "家人的合影角",
+      "player_goal": "帮助邻居把家人合影摆好，并向来访者介绍合影里的人。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "landmark_Q"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-132af51f5ae8",
+      "lead_word": "aunt",
+      "lead_zh": "伯母；舅母；婶婶；姑姑；姨",
+      "featured_words": [
+        {
+          "entry_id": "occ-132af51f5ae8",
+          "word": "aunt",
+          "zh": "伯母；舅母；婶婶；姑姑；姨"
+        },
+        {
+          "entry_id": "occ-461c058def2f",
+          "word": "box",
+          "zh": "盒；箱"
+        },
+        {
+          "entry_id": "occ-d8cacf3ac4fb",
+          "word": "brother",
+          "zh": "哥哥；弟弟"
+        },
+        {
+          "entry_id": "occ-0e0fc2f1e505",
+          "word": "cousin",
+          "zh": "堂兄弟（姐妹）；表兄弟（姐妹）"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "听故事馆主人介绍虚构家庭成员，将人物放进相框位置。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "到小屋选择要介绍的人物卡，回答关系问题。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "完成一张可回看的家庭合影卡，并重遇 Ll、Mm、Nn、Oo、Pp。"
+        }
+      ],
+      "world_keepsake": "小屋增加一张故事家庭合影卡，不要求录入真实家庭信息。"
+    },
+    {
+      "order": 5,
+      "chapter_key": "xiangshao-g3-1/unit-5",
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "unit_id": "unit-5",
+      "unit_number": 5,
+      "source_title": "Is this your pen？",
+      "event_title": "失物桌上的铅笔盒",
+      "player_goal": "询问物品主人，把遗失的文具一件件送回去。",
+      "primary_room": "classroom",
+      "room_ids": [
+        "classroom",
+        "school"
+      ],
+      "host_npc_id": "textbook_miss_li",
+      "host_speaker": "李老师 · 阳光故事圈",
+      "lead_entry_id": "occ-5605ac34c5f2",
+      "lead_word": "book",
+      "lead_zh": "书",
+      "featured_words": [
+        {
+          "entry_id": "occ-5605ac34c5f2",
+          "word": "book",
+          "zh": "书"
+        },
+        {
+          "entry_id": "occ-2c51ae8d0710",
+          "word": "football",
+          "zh": "足球"
+        },
+        {
+          "entry_id": "occ-d047d8b7485b",
+          "word": "isn't",
+          "zh": "不是（缩略形式及展开）"
+        },
+        {
+          "entry_id": "occ-cccbd194198a",
+          "word": "is not",
+          "zh": "不是（缩略形式及展开）"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在失物桌查看待认领文具，先听名称再选择要拿起的物品。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "依次询问角色这是不是他的物品，依据肯定或否定回答继续寻找。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把文具放进相应书包，整理 Qq、Rr、Ss、Tt 标签。"
+        }
+      ],
+      "world_keepsake": "失物桌清空已归还物品，书包出现归还回执。"
+    },
+    {
+      "order": 6,
+      "chapter_key": "xiangshao-g3-1/unit-6",
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "unit_id": "unit-6",
+      "unit_number": 6,
+      "source_title": "Touch your head",
+      "event_title": "开场前的热身口令",
+      "player_goal": "跟着体育老师做一段身体热身，为欢迎会排好动作节目。",
+      "primary_room": "playground",
+      "room_ids": [
+        "playground",
+        "school"
+      ],
+      "host_npc_id": "textbook_tim",
+      "host_speaker": "Tim · 青草操场",
+      "lead_entry_id": "occ-e1fed847186b",
+      "lead_word": "all",
+      "lead_zh": "全部",
+      "featured_words": [
+        {
+          "entry_id": "occ-e1fed847186b",
+          "word": "all",
+          "zh": "全部"
+        },
+        {
+          "entry_id": "occ-8fdeb3ae8a8a",
+          "word": "body",
+          "zh": "身体"
+        },
+        {
+          "entry_id": "occ-a38c62b81100",
+          "word": "ear",
+          "zh": "耳朵"
+        },
+        {
+          "entry_id": "occ-2b0eb5bb1d63",
+          "word": "eye",
+          "zh": "眼睛"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "看示范认识身体部位，允许先看图再听口令。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "按口令触碰或抬起对应部位，用动作按钮替代摄像头识别。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把三步热身顺序交给伙伴领操，回看 Uu、Vv、Ww、Xx、Yy、Zz。"
+        }
+      ],
+      "world_keepsake": "欢迎会节目单加入玩家排好的三步热身。"
+    },
+    {
+      "order": 7,
+      "chapter_key": "xiangshao-g3-1/unit-7",
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "unit_id": "unit-7",
+      "unit_number": 7,
+      "source_title": "What colour is it？",
+      "event_title": "褪色的欢迎旗",
+      "player_goal": "认出彩旗的颜色，选好配色，重新挂起欢迎会旗串。",
+      "primary_room": "art_room",
+      "room_ids": [
+        "art_room",
+        "school"
+      ],
+      "host_npc_id": "textbook_peter",
+      "host_speaker": "Peter · 美术画室",
+      "lead_entry_id": "occ-febaf208ad3a",
+      "lead_word": "beautiful",
+      "lead_zh": "美丽的",
+      "featured_words": [
+        {
+          "entry_id": "occ-febaf208ad3a",
+          "word": "beautiful",
+          "zh": "美丽的"
+        },
+        {
+          "entry_id": "occ-d7eb3befc13b",
+          "word": "black",
+          "zh": "黑色；黑色的"
+        },
+        {
+          "entry_id": "occ-3d8802c9ae0a",
+          "word": "blue",
+          "zh": "蓝色；蓝色的"
+        },
+        {
+          "entry_id": "occ-a18cb2dfccab",
+          "word": "brown",
+          "zh": "棕色；棕色的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在美术教室观察几组颜色卡，询问旗面的颜色。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "用现有绘画活动试配旗面，再按剧情目标选择相应颜色。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把完成的彩旗挂到校园入口，向伙伴说明一组配色。"
+        }
+      ],
+      "world_keepsake": "校园欢迎旗换成玩家选定的颜色组合。"
+    },
+    {
+      "order": 8,
+      "chapter_key": "xiangshao-g3-1/unit-8",
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "unit_id": "unit-8",
+      "unit_number": 8,
+      "source_title": "What's this？",
+      "event_title": "小农场参观牌",
+      "player_goal": "为故事农场的动物展板补上识别牌，让来客找到正确的动物。",
+      "primary_room": "landmark_P",
+      "room_ids": [
+        "landmark_P",
+        "landmark_O"
+      ],
+      "host_npc_id": "host_P",
+      "host_speaker": "P 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-2f1f861033cc",
+      "lead_word": "cat",
+      "lead_zh": "猫",
+      "featured_words": [
+        {
+          "entry_id": "occ-2f1f861033cc",
+          "word": "cat",
+          "zh": "猫"
+        },
+        {
+          "entry_id": "occ-12d6a2142102",
+          "word": "cow",
+          "zh": "奶牛"
+        },
+        {
+          "entry_id": "occ-ec764ed7cf9a",
+          "word": "dog",
+          "zh": "狗"
+        },
+        {
+          "entry_id": "occ-746aacde2a34",
+          "word": "duck",
+          "zh": "鸭子"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在图书馆查看动物图卡及声音，再到农场临时展板辨认。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "通过这是什么、那是什么的问答，选出指向的动物卡。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把识别牌放到对应展位，带一个新角色完成一次参观。"
+        }
+      ],
+      "world_keepsake": "农场临时动物展板的识别牌完整，来客可以按牌参观。"
+    },
+    {
+      "order": 9,
+      "chapter_key": "xiangshao-g3-1/unit-9",
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "unit_id": "unit-9",
+      "unit_number": 9,
+      "source_title": "I like apples",
+      "event_title": "大家都喜欢的果盘",
+      "player_goal": "询问来客喜欢什么水果，为欢迎会准备一份可调整的果盘。",
+      "primary_room": "landmark_A",
+      "room_ids": [
+        "landmark_A",
+        "canteen"
+      ],
+      "host_npc_id": "npc_rabbit_gardener",
+      "host_speaker": "兔兔园丁 · A 苹果果园",
+      "lead_entry_id": "occ-f7669b9d7e86",
+      "lead_word": "apple",
+      "lead_zh": "苹果",
+      "featured_words": [
+        {
+          "entry_id": "occ-f7669b9d7e86",
+          "word": "apple",
+          "zh": "苹果"
+        },
+        {
+          "entry_id": "occ-7b44aebc0164",
+          "word": "banana",
+          "zh": "香蕉"
+        },
+        {
+          "entry_id": "occ-ce01ff1663e3",
+          "word": "boy",
+          "zh": "男孩"
+        },
+        {
+          "entry_id": "occ-21bf9bbab64e",
+          "word": "don't",
+          "zh": "不；不要（do not 的缩略形式及展开）"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在果园识别水果样品，听取三位虚构来客的喜好。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "按喜欢和不喜欢的回应搭配果盘；任何时候都能查看喜好卡。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把果盘送到餐厅，向新来客询问一次喜好后调整一份。"
+        }
+      ],
+      "world_keepsake": "欢迎桌多出符合角色偏好的果盘，保存的是剧情选择。"
+    },
+    {
+      "order": 10,
+      "chapter_key": "xiangshao-g3-1/unit-10",
+      "book_id": "xiangshao-g3-1",
+      "book_title": "三年级上册",
+      "arc_title": "欢迎会与第一批朋友",
+      "unit_id": "unit-10",
+      "unit_number": 10,
+      "source_title": "Happy birthday！",
+      "event_title": "第一场生日欢迎会",
+      "player_goal": "准备一张生日卡，把礼物送给新朋友，并回应朋友的感谢。",
+      "primary_room": "landmark_C",
+      "room_ids": [
+        "landmark_C",
+        "art_room",
+        "school"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · C 蛋糕烘焙坊",
+      "lead_entry_id": "occ-bfc922504a92",
+      "lead_word": "birthday",
+      "lead_zh": "生日",
+      "featured_words": [
+        {
+          "entry_id": "occ-bfc922504a92",
+          "word": "birthday",
+          "zh": "生日"
+        },
+        {
+          "entry_id": "occ-bf536dbfa59c",
+          "word": "cake",
+          "zh": "蛋糕"
+        },
+        {
+          "entry_id": "occ-51d15d824d20",
+          "word": "card",
+          "zh": "卡片"
+        },
+        {
+          "entry_id": "occ-30913f95f6ff",
+          "word": "doll",
+          "zh": "玩偶；玩具娃娃"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在烘焙坊取得剧情蛋糕，选择一份给虚构寿星的礼物。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "用现有绘画活动制作生日卡，练习祝福和递礼物的表达。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "到校园欢迎会上送出礼物，轮到自己收礼时表达感谢。"
+        }
+      ],
+      "world_keepsake": "欢迎会合影和生日卡收入故事相册，第一册欢迎篇结束。"
+    },
+    {
+      "order": 11,
+      "chapter_key": "xiangshao-g3-2/unit-1",
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "unit_id": "unit-1",
+      "unit_number": 1,
+      "source_title": "How are you?",
+      "event_title": "清晨关心小站",
+      "player_goal": "问候刚到岛上的伙伴，把他的状态告诉接待员。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "landmark_M"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-22fd0dcb30f5",
+      "lead_word": "again",
+      "lead_zh": "又；再次",
+      "featured_words": [
+        {
+          "entry_id": "occ-22fd0dcb30f5",
+          "word": "again",
+          "zh": "又；再次"
+        },
+        {
+          "entry_id": "occ-b77327c1d2e4",
+          "word": "baby",
+          "zh": "婴儿"
+        },
+        {
+          "entry_id": "occ-8386a58e8bdb",
+          "word": "boy",
+          "zh": "男孩"
+        },
+        {
+          "entry_id": "occ-82156d7f6307",
+          "word": "but",
+          "zh": "但是"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "向伙伴询问近况。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "根据回答选择他愿意休息或继续参观的安排。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把关心卡交到校园服务台。"
+        }
+      ],
+      "world_keepsake": "服务台留下伙伴选择的安排，伙伴出现在相应地点。"
+    },
+    {
+      "order": 12,
+      "chapter_key": "xiangshao-g3-2/unit-2",
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "unit_id": "unit-2",
+      "unit_number": 2,
+      "source_title": "What time is it?",
+      "event_title": "差一点错过的演出",
+      "player_goal": "看懂约定时间，把提醒牌放到排练入口。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "music_room",
+        "landmark_X"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-ac75ce5af26e",
+      "lead_word": "bed",
+      "lead_zh": "床",
+      "featured_words": [
+        {
+          "entry_id": "occ-ac75ce5af26e",
+          "word": "bed",
+          "zh": "床"
+        },
+        {
+          "entry_id": "occ-4cf0d9df4ba1",
+          "word": "chore",
+          "zh": "家务"
+        },
+        {
+          "entry_id": "occ-a88d399fda41",
+          "word": "clock",
+          "zh": "时钟"
+        },
+        {
+          "entry_id": "occ-ce83cefb25f1",
+          "word": "day",
+          "zh": "白天；一天"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在小屋查看剧情时钟。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问演出的时间并对照节目卡。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "在正确时刻敲响集合提示，时间错误可重新安排。"
+        }
+      ],
+      "world_keepsake": "海边舞台出现带时间的节目牌。"
+    },
+    {
+      "order": 13,
+      "chapter_key": "xiangshao-g3-2/unit-3",
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "unit_id": "unit-3",
+      "unit_number": 3,
+      "source_title": "What's the weather like?",
+      "event_title": "雨天的参观计划",
+      "player_goal": "询问天气，为今天的参观挑一条合适的路线。",
+      "primary_room": "landmark_U",
+      "room_ids": [
+        "landmark_U",
+        "school",
+        "landmark_F"
+      ],
+      "host_npc_id": "host_U",
+      "host_speaker": "U 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-358977506c4a",
+      "lead_word": "cloudy",
+      "lead_zh": "多云的；阴天的",
+      "featured_words": [
+        {
+          "entry_id": "occ-358977506c4a",
+          "word": "cloudy",
+          "zh": "多云的；阴天的"
+        },
+        {
+          "entry_id": "occ-dff74de29b9c",
+          "word": "cold",
+          "zh": "冷的"
+        },
+        {
+          "entry_id": "occ-403f257d2981",
+          "word": "feel",
+          "zh": "觉得"
+        },
+        {
+          "entry_id": "occ-39e5834711ad",
+          "word": "hot",
+          "zh": "炎热的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "从气象屋获取剧情天气。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "比较露天校园和室内温室两个目的地。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把天气图标贴到今日路线卡并带伙伴出发。"
+        }
+      ],
+      "world_keepsake": "校园公告板显示玩家选定的天气路线。"
+    },
+    {
+      "order": 14,
+      "chapter_key": "xiangshao-g3-2/unit-4",
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "unit_id": "unit-4",
+      "unit_number": 4,
+      "source_title": "Do you like the dress?",
+      "event_title": "服装展示台",
+      "player_goal": "询问伙伴是否喜欢裙装，为橱窗选一套被认可的展示。",
+      "primary_room": "landmark_H",
+      "room_ids": [
+        "landmark_H",
+        "art_room"
+      ],
+      "host_npc_id": "host_H",
+      "host_speaker": "H 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-6df55828681b",
+      "lead_word": "big",
+      "lead_zh": "大的",
+      "featured_words": [
+        {
+          "entry_id": "occ-6df55828681b",
+          "word": "big",
+          "zh": "大的"
+        },
+        {
+          "entry_id": "occ-86451b8a61de",
+          "word": "cap",
+          "zh": "（有帽舌的）帽子"
+        },
+        {
+          "entry_id": "occ-cfd95f21c11a",
+          "word": "clothes",
+          "zh": "衣服"
+        },
+        {
+          "entry_id": "occ-bfec6d367df8",
+          "word": "coat",
+          "zh": "外套；大衣"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看裁缝店的服装图样。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问虚构顾客是否喜欢候选裙装。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "按肯定或否定意见更换展示并加上颜色标签。"
+        }
+      ],
+      "world_keepsake": "裁缝店橱窗保存最终认可的展示方案。"
+    },
+    {
+      "order": 15,
+      "chapter_key": "xiangshao-g3-2/unit-5",
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "unit_id": "unit-5",
+      "unit_number": 5,
+      "source_title": "How many kites are there?",
+      "event_title": "风筝清点员",
+      "player_goal": "数清工坊里待出借的风筝，把数量写进借用板。",
+      "primary_room": "landmark_K",
+      "room_ids": [
+        "landmark_K",
+        "playground"
+      ],
+      "host_npc_id": "host_K",
+      "host_speaker": "K 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-b7c03f887948",
+      "lead_word": "bird",
+      "lead_zh": "鸟",
+      "featured_words": [
+        {
+          "entry_id": "occ-b7c03f887948",
+          "word": "bird",
+          "zh": "鸟"
+        },
+        {
+          "entry_id": "occ-36e3c5d38fc4",
+          "word": "eighteen",
+          "zh": "十八"
+        },
+        {
+          "entry_id": "occ-680416c3a5a5",
+          "word": "fifteen",
+          "zh": "十五"
+        },
+        {
+          "entry_id": "occ-c1d864330bb8",
+          "word": "fourteen",
+          "zh": "十四"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "按颜色把风筝分组。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问并逐个点数展示区域内的风筝。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把约定数量送到操场，再核对留在工坊的数量。"
+        }
+      ],
+      "world_keepsake": "工坊借用板与操场风筝数一致。"
+    },
+    {
+      "order": 16,
+      "chapter_key": "xiangshao-g3-2/unit-6",
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "unit_id": "unit-6",
+      "unit_number": 6,
+      "source_title": "There is an egg here",
+      "event_title": "发现一枚蛋",
+      "player_goal": "向观察员说明发现了什么，给观察台补一张位置记录。",
+      "primary_room": "landmark_E",
+      "room_ids": [
+        "landmark_E",
+        "science_room"
+      ],
+      "host_npc_id": "host_E",
+      "host_speaker": "E 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-5df6031bf2ba",
+      "lead_word": "dinner",
+      "lead_zh": "晚餐；正餐",
+      "featured_words": [
+        {
+          "entry_id": "occ-5df6031bf2ba",
+          "word": "dinner",
+          "zh": "晚餐；正餐"
+        },
+        {
+          "entry_id": "occ-a0574eb51418",
+          "word": "egg",
+          "zh": "鸡蛋；蛋"
+        },
+        {
+          "entry_id": "occ-e870a38f6ae8",
+          "word": "grape",
+          "zh": "葡萄"
+        },
+        {
+          "entry_id": "occ-ba49b1035548",
+          "word": "juice",
+          "zh": "果汁"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在孵化屋寻找一枚剧情观察蛋。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "指出这里有一枚蛋并放置观察标记。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把发现卡送往科学教室，保留观察位置。"
+        }
+      ],
+      "world_keepsake": "观察台增加一条蛋的发现记录，不模拟真实孵化结论。"
+    },
+    {
+      "order": 17,
+      "chapter_key": "xiangshao-g3-2/unit-7",
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "unit_id": "unit-7",
+      "unit_number": 7,
+      "source_title": "Wash your hands",
+      "event_title": "开饭前的洗手提醒",
+      "player_goal": "按提示完成洗手准备，再把提醒牌送到餐厅入口。",
+      "primary_room": "canteen",
+      "room_ids": [
+        "canteen",
+        "art_room"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "餐点主厨 · 暖香食堂",
+      "lead_entry_id": "occ-7598ad3e5c62",
+      "lead_word": "arm",
+      "lead_zh": "手臂",
+      "featured_words": [
+        {
+          "entry_id": "occ-7598ad3e5c62",
+          "word": "arm",
+          "zh": "手臂"
+        },
+        {
+          "entry_id": "occ-2fb6583ef4db",
+          "word": "clean",
+          "zh": "干净的"
+        },
+        {
+          "entry_id": "occ-459e2e7f0f0b",
+          "word": "come",
+          "zh": "来"
+        },
+        {
+          "entry_id": "occ-3ac49d601884",
+          "word": "dad",
+          "zh": "爸爸"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看进餐前的准备情景。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "按洗手指令选择对应动作卡。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "设计并放置一张图文提醒牌。"
+        }
+      ],
+      "world_keepsake": "餐厅入口出现洗手提醒，剧情角色按提示准备。"
+    },
+    {
+      "order": 18,
+      "chapter_key": "xiangshao-g3-2/unit-8",
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "unit_id": "unit-8",
+      "unit_number": 8,
+      "source_title": "Children's Day",
+      "event_title": "我们的儿童节展台",
+      "player_goal": "给儿童节安排一个自己愿意参加的小节目。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "music_room",
+        "art_room"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-0b00b3074c31",
+      "lead_word": "child",
+      "lead_zh": "儿童",
+      "featured_words": [
+        {
+          "entry_id": "occ-0b00b3074c31",
+          "word": "child",
+          "zh": "儿童"
+        },
+        {
+          "entry_id": "occ-321b80572e76",
+          "word": "children",
+          "zh": "儿童"
+        },
+        {
+          "entry_id": "occ-848953c1d82f",
+          "word": "Children's Day",
+          "zh": "儿童节"
+        },
+        {
+          "entry_id": "occ-9183d13b458f",
+          "word": "dance",
+          "zh": "跳舞"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在音乐或美术活动中选择一个展示方向。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "制作节目卡并向伙伴发出节日问候。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "到校园布置展位，参观一位伙伴的作品。"
+        }
+      ],
+      "world_keepsake": "校园出现儿童节展台及玩家的节目卡。"
+    },
+    {
+      "order": 19,
+      "chapter_key": "xiangshao-g3-2/unit-9",
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "unit_id": "unit-9",
+      "unit_number": 9,
+      "source_title": "I go there by bus",
+      "event_title": "坐公交去哪里",
+      "player_goal": "询问路线后选择公交出行，把目的地贴到出行卡。",
+      "primary_room": "landmark_T",
+      "room_ids": [
+        "landmark_T",
+        "landmark_G",
+        "school"
+      ],
+      "host_npc_id": "host_T",
+      "host_speaker": "T 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-244529effcab",
+      "lead_word": "Be careful!",
+      "lead_zh": "当心！",
+      "featured_words": [
+        {
+          "entry_id": "occ-244529effcab",
+          "word": "Be careful!",
+          "zh": "当心！"
+        },
+        {
+          "entry_id": "occ-26e625122b9f",
+          "word": "bike",
+          "zh": "自行车"
+        },
+        {
+          "entry_id": "occ-14e9ecbcfcc2",
+          "word": "bus",
+          "zh": "公共汽车"
+        },
+        {
+          "entry_id": "occ-ccbf2931f16a",
+          "word": "car",
+          "zh": "小汽车"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在车站查看目的地示意图。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "向伙伴说明自己乘公交前往目标地点。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "完成一次剧情乘车转场并核对到达地。"
+        }
+      ],
+      "world_keepsake": "车站保留玩家本次公交出行记录。"
+    },
+    {
+      "order": 20,
+      "chapter_key": "xiangshao-g3-2/unit-10",
+      "book_id": "xiangshao-g3-2",
+      "book_title": "三年级下册",
+      "arc_title": "把小岛的一天过起来",
+      "unit_id": "unit-10",
+      "unit_number": 10,
+      "source_title": "Is she a driver?",
+      "event_title": "职业采访日",
+      "player_goal": "访谈校园接送员，确认她是不是司机并做一张职业卡。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "landmark_T",
+        "landmark_Z"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-b3e715c3d6c6",
+      "lead_word": "doctor",
+      "lead_zh": "医生",
+      "featured_words": [
+        {
+          "entry_id": "occ-b3e715c3d6c6",
+          "word": "doctor",
+          "zh": "医生"
+        },
+        {
+          "entry_id": "occ-3f2b57d2a9e5",
+          "word": "driver",
+          "zh": "驾驶员"
+        },
+        {
+          "entry_id": "occ-f6fe8b6ddf57",
+          "word": "farmer",
+          "zh": "农民"
+        },
+        {
+          "entry_id": "occ-2193fc010096",
+          "word": "food",
+          "zh": "食物"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "从接送情景观察角色正在做的事情。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "通过是否为司机的问答确认身份。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把经角色确认的职业卡投递到校园展板。"
+        }
+      ],
+      "world_keepsake": "校园增加一张经过角色确认的职业采访卡。"
+    },
+    {
+      "order": 21,
+      "chapter_key": "xiangshao-g4-1/unit-1",
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "unit_id": "unit-1",
+      "unit_number": 1,
+      "source_title": "This is our school",
+      "event_title": "校园小向导",
+      "player_goal": "带初来的同学走完校园，并介绍这是我们的学校。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "classroom",
+        "canteen"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-44112a9a1892",
+      "lead_word": "a lot of",
+      "lead_zh": "许多",
+      "featured_words": [
+        {
+          "entry_id": "occ-44112a9a1892",
+          "word": "a lot of",
+          "zh": "许多"
+        },
+        {
+          "entry_id": "occ-23f1202ee22f",
+          "word": "art",
+          "zh": "美术；艺术"
+        },
+        {
+          "entry_id": "occ-ffd6329aaa4a",
+          "word": "classroom",
+          "zh": "教室"
+        },
+        {
+          "entry_id": "occ-647c57bf9c5b",
+          "word": "colour",
+          "zh": "给……上色"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在校园导览页选三个实际地点。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "带同学依次到达并用学校介绍语回应。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把实际走过的路线留在迎新桌。"
+        }
+      ],
+      "world_keepsake": "迎新桌增加一条玩家导览路线。"
+    },
+    {
+      "order": 22,
+      "chapter_key": "xiangshao-g4-1/unit-2",
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "unit_id": "unit-2",
+      "unit_number": 2,
+      "source_title": "What time do you get up?",
+      "event_title": "起床到上学",
+      "player_goal": "安排自己的晨间时间，让小屋到校园的准备不再混乱。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "school"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-9020467578a1",
+      "lead_word": "after",
+      "lead_zh": "在……之后",
+      "featured_words": [
+        {
+          "entry_id": "occ-9020467578a1",
+          "word": "after",
+          "zh": "在……之后"
+        },
+        {
+          "entry_id": "occ-f3b3b03d490c",
+          "word": "breakfast",
+          "zh": "早餐"
+        },
+        {
+          "entry_id": "occ-42458f9b1ada",
+          "word": "dinner",
+          "zh": "晚餐；正餐"
+        },
+        {
+          "entry_id": "occ-925e5cce9f47",
+          "word": "early",
+          "zh": "早的；早地"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在剧情日程板设置起床时间。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "向伙伴回答什么时候起床。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把准备步骤按时间排好并带到校门口。"
+        }
+      ],
+      "world_keepsake": "小屋保存一张晨间日程卡。"
+    },
+    {
+      "order": 23,
+      "chapter_key": "xiangshao-g4-1/unit-3",
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "unit_id": "unit-3",
+      "unit_number": 3,
+      "source_title": "I like dumplings",
+      "event_title": "餐厅的饺子午餐",
+      "player_goal": "说明自己喜欢饺子，为同桌准备一张用餐偏好卡。",
+      "primary_room": "canteen",
+      "room_ids": [
+        "canteen",
+        "landmark_C"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "餐点主厨 · 暖香食堂",
+      "lead_entry_id": "occ-445fcfec3ca1",
+      "lead_word": "and",
+      "lead_zh": "和；又；与",
+      "featured_words": [
+        {
+          "entry_id": "occ-445fcfec3ca1",
+          "word": "and",
+          "zh": "和；又；与"
+        },
+        {
+          "entry_id": "occ-49c8c5536690",
+          "word": "bread",
+          "zh": "面包"
+        },
+        {
+          "entry_id": "occ-5a5629e2c615",
+          "word": "chicken",
+          "zh": "鸡肉；鸡"
+        },
+        {
+          "entry_id": "occ-3d7f50193cb3",
+          "word": "fish",
+          "zh": "鱼肉；鱼；钓鱼"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "观察午餐图卡并选择喜欢的一项。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "听同桌的喜好后给他安排相应座位餐牌。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把自己的饺子偏好卡放到餐厅记录架。"
+        }
+      ],
+      "world_keepsake": "餐厅偏好架收下玩家与同桌的午餐卡。"
+    },
+    {
+      "order": 24,
+      "chapter_key": "xiangshao-g4-1/unit-4",
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "unit_id": "unit-4",
+      "unit_number": 4,
+      "source_title": "Look at the elephant",
+      "event_title": "大象观察展",
+      "player_goal": "引导来客看大象展板，并选出支持描述的观察细节。",
+      "primary_room": "landmark_G",
+      "room_ids": [
+        "landmark_G",
+        "science_room"
+      ],
+      "host_npc_id": "host_G",
+      "host_speaker": "G 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-5b4d63951a77",
+      "lead_word": "animal",
+      "lead_zh": "动物",
+      "featured_words": [
+        {
+          "entry_id": "occ-5b4d63951a77",
+          "word": "animal",
+          "zh": "动物"
+        },
+        {
+          "entry_id": "occ-f9e2fe349036",
+          "word": "bear",
+          "zh": "熊"
+        },
+        {
+          "entry_id": "occ-2f1559c00692",
+          "word": "beautiful",
+          "zh": "美丽的；优美的"
+        },
+        {
+          "entry_id": "occ-a7a60ef63ec8",
+          "word": "China",
+          "zh": "中国"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在旅行馆设置虚构动物观察展。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "指引伙伴看指定的大象图像。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "用科学教室观察卡记录可见特征并放回展台。"
+        }
+      ],
+      "world_keepsake": "旅行馆增加一张附观察记录的大象展板。"
+    },
+    {
+      "order": 25,
+      "chapter_key": "xiangshao-g4-1/unit-5",
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "unit_id": "unit-5",
+      "unit_number": 5,
+      "source_title": "Can you play basketball?",
+      "event_title": "操场队伍招募",
+      "player_goal": "询问伙伴会不会打篮球，为体验活动安排合适的任务。",
+      "primary_room": "playground",
+      "room_ids": [
+        "playground",
+        "school"
+      ],
+      "host_npc_id": "textbook_tim",
+      "host_speaker": "Tim · 青草操场",
+      "lead_entry_id": "occ-1fa87a06fa9c",
+      "lead_word": "basketball",
+      "lead_zh": "篮球",
+      "featured_words": [
+        {
+          "entry_id": "occ-1fa87a06fa9c",
+          "word": "basketball",
+          "zh": "篮球"
+        },
+        {
+          "entry_id": "occ-574fcd88ca2e",
+          "word": "can",
+          "zh": "能；会"
+        },
+        {
+          "entry_id": "occ-3e71cf2b67ac",
+          "word": "can't",
+          "zh": "不能；不会"
+        },
+        {
+          "entry_id": "occ-5881167ebe3d",
+          "word": "cannot",
+          "zh": "不能；不会"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看操场体验项目图卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问两位伙伴是否会打篮球。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "按回答安排示范或初学位置，人人都可加入。"
+        }
+      ],
+      "world_keepsake": "操场名单记录示范与初学体验位置。"
+    },
+    {
+      "order": 26,
+      "chapter_key": "xiangshao-g4-1/unit-6",
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "unit_id": "unit-6",
+      "unit_number": 6,
+      "source_title": "What are those?",
+      "event_title": "远处的展品",
+      "player_goal": "用远处指示问答确认展品，为玻璃罐馆补上成组标签。",
+      "primary_room": "landmark_J",
+      "room_ids": [
+        "landmark_J",
+        "landmark_O"
+      ],
+      "host_npc_id": "host_J",
+      "host_speaker": "J 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-52ae5993c2f3",
+      "lead_word": "bee",
+      "lead_zh": "蜜蜂",
+      "featured_words": [
+        {
+          "entry_id": "occ-52ae5993c2f3",
+          "word": "bee",
+          "zh": "蜜蜂"
+        },
+        {
+          "entry_id": "occ-dd9ba0593ee0",
+          "word": "best",
+          "zh": "最好的"
+        },
+        {
+          "entry_id": "occ-3d115c896d0f",
+          "word": "flower",
+          "zh": "花"
+        },
+        {
+          "entry_id": "occ-26af251fc1bf",
+          "word": "garden",
+          "zh": "花园"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "观察远处两组被遮住标签的展品。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问那些是什么，听回答后选标签。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "到图书馆核对图卡，把成组标签挂回去。"
+        }
+      ],
+      "world_keepsake": "玻璃罐馆两组展品获得完整标签。"
+    },
+    {
+      "order": 27,
+      "chapter_key": "xiangshao-g4-1/unit-7",
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "unit_id": "unit-7",
+      "unit_number": 7,
+      "source_title": "Whose watch is this?",
+      "event_title": "失而复得的手表",
+      "player_goal": "通过询问物品归属找回手表主人，并留下交接记录。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "landmark_Z"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-7c3dcde18eb8",
+      "lead_word": "bag",
+      "lead_zh": "包",
+      "featured_words": [
+        {
+          "entry_id": "occ-7c3dcde18eb8",
+          "word": "bag",
+          "zh": "包"
+        },
+        {
+          "entry_id": "occ-9b6cc7a47338",
+          "word": "know",
+          "zh": "知道"
+        },
+        {
+          "entry_id": "occ-5597cae68077",
+          "word": "pet",
+          "zh": "宠物"
+        },
+        {
+          "entry_id": "occ-f00c2c238cd9",
+          "word": "quiet",
+          "zh": "安静的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在校门失物处查看手表。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "向候选角色询问归属，并对照角色提供的线索。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "归还手表后由主人确认收取。"
+        }
+      ],
+      "world_keepsake": "失物记录标记为已归还，手表从桌上移除。"
+    },
+    {
+      "order": 28,
+      "chapter_key": "xiangshao-g4-1/unit-8",
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "unit_id": "unit-8",
+      "unit_number": 8,
+      "source_title": "Don't talk in the library",
+      "event_title": "图书馆安静角",
+      "player_goal": "在图书馆出现交谈声时，礼貌指向安静规则并安排讨论去处。",
+      "primary_room": "landmark_O",
+      "room_ids": [
+        "landmark_O",
+        "school"
+      ],
+      "host_npc_id": "host_O",
+      "host_speaker": "O 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-2a344930eede",
+      "lead_word": "always",
+      "lead_zh": "总是",
+      "featured_words": [
+        {
+          "entry_id": "occ-2a344930eede",
+          "word": "always",
+          "zh": "总是"
+        },
+        {
+          "entry_id": "occ-b6b6af53c08a",
+          "word": "class",
+          "zh": "（一节）课；上课时间"
+        },
+        {
+          "entry_id": "occ-ce1a58cd87a5",
+          "word": "down",
+          "zh": "向下；往下"
+        },
+        {
+          "entry_id": "occ-2732d2a0c631",
+          "word": "eat",
+          "zh": "吃"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "识别需要安静的阅读区。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "选择禁止交谈的提示牌并放到合适位置。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把讨论小组引导到校园交流桌。"
+        }
+      ],
+      "world_keepsake": "图书馆保留安静提示，讨论角色移到交流桌。"
+    },
+    {
+      "order": 29,
+      "chapter_key": "xiangshao-g4-1/unit-9",
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "unit_id": "unit-9",
+      "unit_number": 9,
+      "source_title": "Welcome to my home!",
+      "event_title": "请到我的小屋来",
+      "player_goal": "为朋友准备来访路线并欢迎他们进入自己的小屋。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "landmark_M"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-e0dfa3d5680a",
+      "lead_word": "chair",
+      "lead_zh": "椅子",
+      "featured_words": [
+        {
+          "entry_id": "occ-e0dfa3d5680a",
+          "word": "chair",
+          "zh": "椅子"
+        },
+        {
+          "entry_id": "occ-340236bb7b92",
+          "word": "cousin",
+          "zh": "堂兄弟（姐妹）；表兄弟（姐妹）"
+        },
+        {
+          "entry_id": "occ-c8f245fb4d15",
+          "word": "desk",
+          "zh": "书桌；办公桌"
+        },
+        {
+          "entry_id": "occ-9f3a3ad2b55c",
+          "word": "home",
+          "zh": "家；住所；窝"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "选择小屋现有装扮作为接待角。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "把从邻居家到小屋的来访卡交给朋友。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "到门口欢迎朋友，带他参观接待角。"
+        }
+      ],
+      "world_keepsake": "小屋来访簿增加一次接待记录。"
+    },
+    {
+      "order": 30,
+      "chapter_key": "xiangshao-g4-1/unit-10",
+      "book_id": "xiangshao-g4-1",
+      "book_title": "四年级上册",
+      "arc_title": "校园开放日与邻里来访",
+      "unit_id": "unit-10",
+      "unit_number": 10,
+      "source_title": "What's her job?",
+      "event_title": "她的工作展板",
+      "player_goal": "采访一位女性工作人员，把她的工作介绍放进校园职业展。",
+      "primary_room": "landmark_Z",
+      "room_ids": [
+        "landmark_Z",
+        "landmark_C",
+        "school"
+      ],
+      "host_npc_id": "host_Z",
+      "host_speaker": "Z 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-6fd0e948072d",
+      "lead_word": "astronaut",
+      "lead_zh": "宇航员",
+      "featured_words": [
+        {
+          "entry_id": "occ-6fd0e948072d",
+          "word": "astronaut",
+          "zh": "宇航员"
+        },
+        {
+          "entry_id": "occ-cfe3d6a3c916",
+          "word": "fire",
+          "zh": "火"
+        },
+        {
+          "entry_id": "occ-69213f605c59",
+          "word": "job",
+          "zh": "工作"
+        },
+        {
+          "entry_id": "occ-2345d39b9ecd",
+          "word": "on fire",
+          "zh": "着火"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "选择邮局或烘焙坊的一位虚构工作人员。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问她的工作并确认岗位图卡。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "带采访卡回校园，向新同学介绍她。"
+        }
+      ],
+      "world_keepsake": "校园职业展增加一张带受访者确认的岗位卡。"
+    },
+    {
+      "order": 31,
+      "chapter_key": "xiangshao-g4-2/unit-1",
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "unit_id": "unit-1",
+      "unit_number": 1,
+      "source_title": "It's on your head",
+      "event_title": "帽子去哪了",
+      "player_goal": "根据位置提示找到帽子，让准备上台的伙伴及时出发。",
+      "primary_room": "landmark_H",
+      "room_ids": [
+        "landmark_H",
+        "home"
+      ],
+      "host_npc_id": "host_H",
+      "host_speaker": "H 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-343740172b8b",
+      "lead_word": "behind",
+      "lead_zh": "在……后面",
+      "featured_words": [
+        {
+          "entry_id": "occ-343740172b8b",
+          "word": "behind",
+          "zh": "在……后面"
+        },
+        {
+          "entry_id": "occ-18c0e9f3f65f",
+          "word": "beside",
+          "zh": "在……旁边"
+        },
+        {
+          "entry_id": "occ-ceb443f7df20",
+          "word": "between",
+          "zh": "在……之间"
+        },
+        {
+          "entry_id": "occ-ba3156dadfef",
+          "word": "brown",
+          "zh": "棕色的；棕色"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "先在屋内两处候选位置查找帽子。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "听取它在你头上的提示，选择相应人物位置。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "将寻物结果做成一张可重玩的提示卡。"
+        }
+      ],
+      "world_keepsake": "裁缝店增加一张位置提示卡，伙伴戴帽赴约。"
+    },
+    {
+      "order": 32,
+      "chapter_key": "xiangshao-g4-2/unit-2",
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "unit_id": "unit-2",
+      "unit_number": 2,
+      "source_title": "What classes do you have this morning?",
+      "event_title": "上午课程传话员",
+      "player_goal": "询问上午有哪些课，把缺漏的课表送到教室。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "classroom",
+        "music_room"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-916793a3bbc5",
+      "lead_word": "answer",
+      "lead_zh": "回答",
+      "featured_words": [
+        {
+          "entry_id": "occ-916793a3bbc5",
+          "word": "answer",
+          "zh": "回答"
+        },
+        {
+          "entry_id": "occ-cffe89086a09",
+          "word": "Chinese",
+          "zh": "语文；中文；中国的"
+        },
+        {
+          "entry_id": "occ-8cd1362e9cdf",
+          "word": "English",
+          "zh": "英语"
+        },
+        {
+          "entry_id": "occ-e979e78de18a",
+          "word": "every",
+          "zh": "每个；每一"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "询问同学上午的课程安排。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "把课程卡放到对应时间段。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "到一间真实教室确认安排并将课表交回。"
+        }
+      ],
+      "world_keepsake": "校园公告板补全今天上午的课表。"
+    },
+    {
+      "order": 33,
+      "chapter_key": "xiangshao-g4-2/unit-3",
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "unit_id": "unit-3",
+      "unit_number": 3,
+      "source_title": "Today is Wednesday",
+      "event_title": "星期三的约定",
+      "player_goal": "确认今天星期几，把社团约定排在正确的日期栏。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "school",
+        "art_room"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-0a0d8ff979bc",
+      "lead_word": "Friday",
+      "lead_zh": "星期五",
+      "featured_words": [
+        {
+          "entry_id": "occ-0a0d8ff979bc",
+          "word": "Friday",
+          "zh": "星期五"
+        },
+        {
+          "entry_id": "occ-369d9833c090",
+          "word": "look",
+          "zh": "看"
+        },
+        {
+          "entry_id": "occ-bb287e6d52a0",
+          "word": "Monday",
+          "zh": "星期一"
+        },
+        {
+          "entry_id": "occ-7383ee8078ed",
+          "word": "now",
+          "zh": "现在"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在小屋查看星期卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "向伙伴确认今天是星期三。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把一次美术社团约定放到相应日期并提醒同伴。"
+        }
+      ],
+      "world_keepsake": "校园周安排表留下星期三的社团约定。"
+    },
+    {
+      "order": 34,
+      "chapter_key": "xiangshao-g4-2/unit-4",
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "unit_id": "unit-4",
+      "unit_number": 4,
+      "source_title": "Class one gets 54 points",
+      "event_title": "班级积分公告",
+      "player_goal": "核对一班的五十四分，为班际活动制作清楚的积分牌。",
+      "primary_room": "playground",
+      "room_ids": [
+        "playground",
+        "football_field",
+        "school"
+      ],
+      "host_npc_id": "textbook_tim",
+      "host_speaker": "Tim · 青草操场",
+      "lead_entry_id": "occ-5a2810d74159",
+      "lead_word": "between... and...",
+      "lead_zh": "在……和……之间",
+      "featured_words": [
+        {
+          "entry_id": "occ-5a2810d74159",
+          "word": "between... and...",
+          "zh": "在……和……之间"
+        },
+        {
+          "entry_id": "occ-aba183e2336e",
+          "word": "come on",
+          "zh": "加油"
+        },
+        {
+          "entry_id": "occ-539a8caaec02",
+          "word": "does",
+          "zh": "do的第三人称单数形式"
+        },
+        {
+          "entry_id": "occ-b6b211e4f13e",
+          "word": "eighty",
+          "zh": "八十"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看剧情给定的各项积分凭条。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "找到一班的合计分并与 54 分公告对照。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "将核对后的积分牌挂回校园。"
+        }
+      ],
+      "world_keepsake": "校园显示一班 54 分的剧情积分牌；与足球个人成绩分开。"
+    },
+    {
+      "order": 35,
+      "chapter_key": "xiangshao-g4-2/unit-5",
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "unit_id": "unit-5",
+      "unit_number": 5,
+      "source_title": "She helps students",
+      "event_title": "校园帮助热线",
+      "player_goal": "听清工作人员怎样帮助学生，把求助卡送到合适的人手中。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "classroom",
+        "landmark_O"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-d01498cb61c0",
+      "lead_word": "all",
+      "lead_zh": "全部；每一个",
+      "featured_words": [
+        {
+          "entry_id": "occ-d01498cb61c0",
+          "word": "all",
+          "zh": "全部；每一个"
+        },
+        {
+          "entry_id": "occ-05d8b700a7d7",
+          "word": "but",
+          "zh": "但是"
+        },
+        {
+          "entry_id": "occ-b637ced1f96f",
+          "word": "cook",
+          "zh": "烹调；煮"
+        },
+        {
+          "entry_id": "occ-d802e80b2f9c",
+          "word": "get to",
+          "zh": "到达"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看一位学生的剧情求助。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "听角色说明她帮助学生的工作。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "陪同学生把卡交到对应服务点并取得回复。"
+        }
+      ],
+      "world_keepsake": "校园求助卡完成一次交接并显示处理结果。"
+    },
+    {
+      "order": 36,
+      "chapter_key": "xiangshao-g4-2/unit-6",
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "unit_id": "unit-6",
+      "unit_number": 6,
+      "source_title": "What's your favourite season?",
+      "event_title": "四季花园提案",
+      "player_goal": "询问伙伴最喜欢的季节，为温室做一块四季展示板。",
+      "primary_room": "landmark_F",
+      "room_ids": [
+        "landmark_F",
+        "landmark_U"
+      ],
+      "host_npc_id": "host_F",
+      "host_speaker": "F 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-71557f29369b",
+      "lead_word": "autumn",
+      "lead_zh": "秋天",
+      "featured_words": [
+        {
+          "entry_id": "occ-71557f29369b",
+          "word": "autumn",
+          "zh": "秋天"
+        },
+        {
+          "entry_id": "occ-b63e3e4a2bd0",
+          "word": "beach",
+          "zh": "海滩；沙滩"
+        },
+        {
+          "entry_id": "occ-120d43e2d965",
+          "word": "careful",
+          "zh": "小心的"
+        },
+        {
+          "entry_id": "occ-29a002b89c2a",
+          "word": "cool",
+          "zh": "凉爽的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "到气象屋查看四季展示图。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问伙伴最喜欢哪个季节并记录选择。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "在温室选择相应花园图案，解释自己的选择。"
+        }
+      ],
+      "world_keepsake": "温室保留玩家和伙伴的季节偏好展示。"
+    },
+    {
+      "order": 37,
+      "chapter_key": "xiangshao-g4-2/unit-7",
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "unit_id": "unit-7",
+      "unit_number": 7,
+      "source_title": "What can you see?",
+      "event_title": "观察台看见了什么",
+      "player_goal": "从观察窗指出看见的东西，完成一页有依据的观测记录。",
+      "primary_room": "landmark_N",
+      "room_ids": [
+        "landmark_N",
+        "landmark_S"
+      ],
+      "host_npc_id": "host_N",
+      "host_speaker": "N 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-030d50ecc953",
+      "lead_word": "boat",
+      "lead_zh": "小船",
+      "featured_words": [
+        {
+          "entry_id": "occ-030d50ecc953",
+          "word": "boat",
+          "zh": "小船"
+        },
+        {
+          "entry_id": "occ-1380a9e286b2",
+          "word": "lake",
+          "zh": "湖"
+        },
+        {
+          "entry_id": "occ-858f34f0728f",
+          "word": "place",
+          "zh": "地方"
+        },
+        {
+          "entry_id": "occ-f27624e704e4",
+          "word": "river",
+          "zh": "江；河"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在鸟巢观察屋先看再描述可见对象。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "到天文台比较两个观察视角。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "只把实际可见的对象放进观察册。"
+        }
+      ],
+      "world_keepsake": "观察册保存两个视角对应的可见对象卡。"
+    },
+    {
+      "order": 38,
+      "chapter_key": "xiangshao-g4-2/unit-8",
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "unit_id": "unit-8",
+      "unit_number": 8,
+      "source_title": "He is cleaning the window",
+      "event_title": "窗边清洁值日",
+      "player_goal": "描述正在擦窗的同学，为值日小组安排下一步工作。",
+      "primary_room": "classroom",
+      "room_ids": [
+        "classroom",
+        "school"
+      ],
+      "host_npc_id": "textbook_miss_li",
+      "host_speaker": "李老师 · 阳光故事圈",
+      "lead_entry_id": "occ-2b71eb57639b",
+      "lead_word": "busy",
+      "lead_zh": "忙碌的",
+      "featured_words": [
+        {
+          "entry_id": "occ-2b71eb57639b",
+          "word": "busy",
+          "zh": "忙碌的"
+        },
+        {
+          "entry_id": "occ-f859c7ccda86",
+          "word": "clean",
+          "zh": "（把……）弄干净；打扫；洁净的"
+        },
+        {
+          "entry_id": "occ-1b2d9d2ed951",
+          "word": "dirty",
+          "zh": "脏的"
+        },
+        {
+          "entry_id": "occ-e40a62680739",
+          "word": "drink",
+          "zh": "喝；饮"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "观察角色正在执行的清洁动作。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "将正在擦窗的描述对应到该角色。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "分配剩余值日卡并记录完成情况。"
+        }
+      ],
+      "world_keepsake": "教室窗面清洁，值日板显示各项剧情完成状态。"
+    },
+    {
+      "order": 39,
+      "chapter_key": "xiangshao-g4-2/unit-9",
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "unit_id": "unit-9",
+      "unit_number": 9,
+      "source_title": "The Dragon Boat Festival",
+      "event_title": "端午河岸展",
+      "player_goal": "为端午节做一条文化参观路线，让伙伴按序看完展台。",
+      "primary_room": "landmark_B",
+      "room_ids": [
+        "landmark_B",
+        "landmark_L",
+        "school"
+      ],
+      "host_npc_id": "host_B",
+      "host_speaker": "B 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-8da15e8a8818",
+      "lead_word": "about",
+      "lead_zh": "关于",
+      "featured_words": [
+        {
+          "entry_id": "occ-8da15e8a8818",
+          "word": "about",
+          "zh": "关于"
+        },
+        {
+          "entry_id": "occ-e90932cb3d39",
+          "word": "fifth",
+          "zh": "第五；第五的"
+        },
+        {
+          "entry_id": "occ-21ca69eede22",
+          "word": "5th",
+          "zh": "第五；第五的"
+        },
+        {
+          "entry_id": "occ-f2938740cf23",
+          "word": "make",
+          "zh": "制作；制定"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看待核对的节日图文素材。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "为船屋与灯笼驿站安排两个节日展示点。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "带伙伴参观并把节日介绍卡送回校园。"
+        }
+      ],
+      "world_keepsake": "校园留存一条端午节文化参观路线。"
+    },
+    {
+      "order": 40,
+      "chapter_key": "xiangshao-g4-2/unit-10",
+      "book_id": "xiangshao-g4-2",
+      "book_title": "四年级下册",
+      "arc_title": "校园日程和公共生活",
+      "unit_id": "unit-10",
+      "unit_number": 10,
+      "source_title": "What does that sign mean?",
+      "event_title": "看懂岛上的标志",
+      "player_goal": "询问三个标志的意思，把容易混淆的提示放到合适地点。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "landmark_O",
+        "landmark_V"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-83f36bf9c533",
+      "lead_word": "ask",
+      "lead_zh": "问；询问",
+      "featured_words": [
+        {
+          "entry_id": "occ-83f36bf9c533",
+          "word": "ask",
+          "zh": "问；询问"
+        },
+        {
+          "entry_id": "occ-e1036e201a9f",
+          "word": "cinema",
+          "zh": "电影院"
+        },
+        {
+          "entry_id": "occ-609ee231713d",
+          "word": "light",
+          "zh": "灯"
+        },
+        {
+          "entry_id": "occ-742f776a1d16",
+          "word": "look at",
+          "zh": "（仔细）看"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在校园、图书馆和观察站查看待解释标志。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问每个标志的意义并选择对应行为。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "将标志放回能帮助来客决策的位置。"
+        }
+      ],
+      "world_keepsake": "三个地点的提示牌获得剧情中的解释卡。"
+    },
+    {
+      "order": 41,
+      "chapter_key": "english-grade5-volume1-smartedu-2022/unit-1",
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "unit_id": "unit-1",
+      "unit_number": 1,
+      "source_title": "What does she look like?",
+      "event_title": "找到照片里的客人",
+      "player_goal": "根据外貌描述在接待区找到来访者，并请她确认身份。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "landmark_Z"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-4b9b95808f44",
+      "lead_word": "give",
+      "lead_zh": "送；给",
+      "featured_words": [
+        {
+          "entry_id": "occ-4b9b95808f44",
+          "word": "give",
+          "zh": "送；给"
+        },
+        {
+          "entry_id": "occ-059d1da69e62",
+          "word": "glass",
+          "zh": "玻璃杯"
+        },
+        {
+          "entry_id": "occ-e88b4f23ffa9",
+          "word": "glasses",
+          "zh": "眼镜；玻璃杯的复数形式"
+        },
+        {
+          "entry_id": "occ-8cfc9c1a91e6",
+          "word": "him",
+          "zh": "他（宾格）"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "从邀请卡获得角色外貌线索。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问她长什么样并比较候选角色卡。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "找到客人后以姓名确认，再带到接待桌。"
+        }
+      ],
+      "world_keepsake": "接待名单标记该客人已到达。"
+    },
+    {
+      "order": 42,
+      "chapter_key": "english-grade5-volume1-smartedu-2022/unit-2",
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "unit_id": "unit-2",
+      "unit_number": 2,
+      "source_title": "I'd like a sandwich",
+      "event_title": "一份三明治订单",
+      "player_goal": "向餐厅表达想要三明治，把订单送到正确的取餐位。",
+      "primary_room": "canteen",
+      "room_ids": [
+        "canteen",
+        "landmark_C"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "餐点主厨 · 暖香食堂",
+      "lead_entry_id": "occ-3ddc19fffe48",
+      "lead_word": "a glass of",
+      "lead_zh": "一杯",
+      "featured_words": [
+        {
+          "entry_id": "occ-3ddc19fffe48",
+          "word": "a glass of",
+          "zh": "一杯"
+        },
+        {
+          "entry_id": "occ-3ffadb8f7420",
+          "word": "drink",
+          "zh": "饮料"
+        },
+        {
+          "entry_id": "occ-c297f65766f9",
+          "word": "feel",
+          "zh": "觉得；感到"
+        },
+        {
+          "entry_id": "occ-059d1da69e62",
+          "word": "glass",
+          "zh": "玻璃杯"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看今日剧情菜单。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "表达自己想要的三明治并确认一份订单。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把订单交给制作台，在取餐位核对领取。"
+        }
+      ],
+      "world_keepsake": "餐厅订单架完成一笔三明治取餐记录。"
+    },
+    {
+      "order": 43,
+      "chapter_key": "english-grade5-volume1-smartedu-2022/unit-3",
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "unit_id": "unit-3",
+      "unit_number": 3,
+      "source_title": "I can email my friends with the computer",
+      "event_title": "电脑里的电子邀请",
+      "player_goal": "在模拟电脑中给朋友写一封可预览的电子邀请。",
+      "primary_room": "classroom",
+      "room_ids": [
+        "classroom",
+        "landmark_R"
+      ],
+      "host_npc_id": "textbook_miss_li",
+      "host_speaker": "李老师 · 阳光故事圈",
+      "lead_entry_id": "occ-169d253e2591",
+      "lead_word": "a lot",
+      "lead_zh": "很多",
+      "featured_words": [
+        {
+          "entry_id": "occ-169d253e2591",
+          "word": "a lot",
+          "zh": "很多"
+        },
+        {
+          "entry_id": "occ-d687f081c0ee",
+          "word": "also",
+          "zh": "还；也"
+        },
+        {
+          "entry_id": "occ-8fea7c68dffd",
+          "word": "back",
+          "zh": "回到原处；回应"
+        },
+        {
+          "entry_id": "occ-cb51801713ee",
+          "word": "bad",
+          "zh": "坏的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在机器人工坊了解模拟电脑的发送界面。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "选择故事好友并组合邀请内容。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "检查收件人和预览后发送至游戏内信箱。"
+        }
+      ],
+      "world_keepsake": "游戏内好友信箱出现一封邀请，不连接真实邮箱。"
+    },
+    {
+      "order": 44,
+      "chapter_key": "english-grade5-volume1-smartedu-2022/unit-4",
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "unit_id": "unit-4",
+      "unit_number": 4,
+      "source_title": "Can I use your pencil, please?",
+      "event_title": "先借再画",
+      "player_goal": "画图前礼貌询问能否借用铅笔，使用后归还给主人。",
+      "primary_room": "art_room",
+      "room_ids": [
+        "art_room",
+        "classroom"
+      ],
+      "host_npc_id": "textbook_peter",
+      "host_speaker": "Peter · 美术画室",
+      "lead_entry_id": "occ-76a0e48457f7",
+      "lead_word": "ask",
+      "lead_zh": "询问",
+      "featured_words": [
+        {
+          "entry_id": "occ-76a0e48457f7",
+          "word": "ask",
+          "zh": "询问"
+        },
+        {
+          "entry_id": "occ-8bda4cbaf287",
+          "word": "at home",
+          "zh": "在家里"
+        },
+        {
+          "entry_id": "occ-4162abeef7d3",
+          "word": "blackboard",
+          "zh": "黑板"
+        },
+        {
+          "entry_id": "occ-26f6b662e13c",
+          "word": "try",
+          "zh": "试；尝试"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "发现自己的绘画台缺少铅笔。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "向物品主人发出借用请求并等待回应。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "在现有绘画活动完成一笔创作后归还铅笔。"
+        }
+      ],
+      "world_keepsake": "借用簿记录铅笔已归还，绘画卡收入作品夹。"
+    },
+    {
+      "order": 45,
+      "chapter_key": "english-grade5-volume1-smartedu-2022/unit-5",
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "unit_id": "unit-5",
+      "unit_number": 5,
+      "source_title": "May I have a pet?",
+      "event_title": "照顾宠物的承诺",
+      "player_goal": "先征求养宠物许可，再为故事宠物整理照料安排。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "landmark_M"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-8fea7c68dffd",
+      "lead_word": "back",
+      "lead_zh": "回到原处；回应",
+      "featured_words": [
+        {
+          "entry_id": "occ-8fea7c68dffd",
+          "word": "back",
+          "zh": "回到原处；回应"
+        },
+        {
+          "entry_id": "occ-04b13175ba0c",
+          "word": "clever",
+          "zh": "聪明的"
+        },
+        {
+          "entry_id": "occ-2c050caed18d",
+          "word": "helpful",
+          "zh": "有帮助的；有用的"
+        },
+        {
+          "entry_id": "occ-a651ece02643",
+          "word": "lovely",
+          "zh": "美丽的；可爱的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "向虚构监护角色提出是否可以养宠物的请求。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "阅读剧情给定的照料要求并安排照料卡。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "根据同意或暂缓回应完成准备，不强制获得宠物。"
+        }
+      ],
+      "world_keepsake": "小屋保存一张经角色讨论的养宠准备卡。"
+    },
+    {
+      "order": 46,
+      "chapter_key": "english-grade5-volume1-smartedu-2022/unit-6",
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "unit_id": "unit-6",
+      "unit_number": 6,
+      "source_title": "Which one do you want?",
+      "event_title": "挑选手作礼物",
+      "player_goal": "比较候选礼物，询问对方想要哪一个后再包装。",
+      "primary_room": "landmark_Y",
+      "room_ids": [
+        "landmark_Y",
+        "landmark_H",
+        "landmark_Z"
+      ],
+      "host_npc_id": "host_Y",
+      "host_speaker": "Y 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-e72a1335aceb",
+      "lead_word": "a little",
+      "lead_zh": "少许；一点儿",
+      "featured_words": [
+        {
+          "entry_id": "occ-e72a1335aceb",
+          "word": "a little",
+          "zh": "少许；一点儿"
+        },
+        {
+          "entry_id": "occ-6e75c89bb353",
+          "word": "a pair of",
+          "zh": "一双；一对"
+        },
+        {
+          "entry_id": "occ-9aa8e3b8438f",
+          "word": "clothes",
+          "zh": "衣服"
+        },
+        {
+          "entry_id": "occ-175b4a3b9b08",
+          "word": "idea",
+          "zh": "主意"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在手作屋挑出两件候选礼物。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问收礼人想要哪一个并确认选择。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "去裁缝店选包装，再到邮局留下寄送卡。"
+        }
+      ],
+      "world_keepsake": "邮局展示已确认款式的礼物包裹。"
+    },
+    {
+      "order": 47,
+      "chapter_key": "english-grade5-volume1-smartedu-2022/unit-7",
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "unit_id": "unit-7",
+      "unit_number": 7,
+      "source_title": "What chores do you do at home?",
+      "event_title": "小屋家务分工",
+      "player_goal": "说说自己在家做什么家务，与伙伴完成一张公平分工表。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "landmark_M"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-7a8c6cb69ffa",
+      "lead_word": "chore",
+      "lead_zh": "家务",
+      "featured_words": [
+        {
+          "entry_id": "occ-7a8c6cb69ffa",
+          "word": "chore",
+          "zh": "家务"
+        },
+        {
+          "entry_id": "occ-9aa8e3b8438f",
+          "word": "clothes",
+          "zh": "衣服"
+        },
+        {
+          "entry_id": "occ-bd1c9b18b8c2",
+          "word": "floor",
+          "zh": "地板"
+        },
+        {
+          "entry_id": "occ-2c050caed18d",
+          "word": "helpful",
+          "zh": "有帮助的；有用的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看小屋的剧情家务需求。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "向伙伴介绍自己承担的家务。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "共同把任务放进分工表并完成一项可操作任务。"
+        }
+      ],
+      "world_keepsake": "小屋出现家务分工表和本次完成标记。"
+    },
+    {
+      "order": 48,
+      "chapter_key": "english-grade5-volume1-smartedu-2022/unit-8",
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "unit_id": "unit-8",
+      "unit_number": 8,
+      "source_title": "What's your hobby?",
+      "event_title": "周末兴趣交换会",
+      "player_goal": "介绍自己的爱好，找到愿意共同参加活动的伙伴。",
+      "primary_room": "music_room",
+      "room_ids": [
+        "music_room",
+        "art_room",
+        "football_field",
+        "school"
+      ],
+      "host_npc_id": "textbook_anne",
+      "host_speaker": "Anne · 音乐工坊",
+      "lead_entry_id": "occ-9bd4944d8c2c",
+      "lead_word": "always",
+      "lead_zh": "总是",
+      "featured_words": [
+        {
+          "entry_id": "occ-9bd4944d8c2c",
+          "word": "always",
+          "zh": "总是"
+        },
+        {
+          "entry_id": "occ-e1ea9604a89f",
+          "word": "answer",
+          "zh": "回答"
+        },
+        {
+          "entry_id": "occ-a60461857f2c",
+          "word": "fan",
+          "zh": "……迷"
+        },
+        {
+          "entry_id": "occ-6a3c48ddaf09",
+          "word": "find",
+          "zh": "找到"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在已有音乐、美术或足球活动中体验一个方向。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "在校园兴趣卡上表达自己的爱好。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "选择一位志趣相近的故事伙伴并约定一次活动。"
+        }
+      ],
+      "world_keepsake": "校园社团板留下玩家与伙伴的兴趣组合。"
+    },
+    {
+      "order": 49,
+      "chapter_key": "english-grade5-volume1-smartedu-2022/unit-9",
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "unit_id": "unit-9",
+      "unit_number": 9,
+      "source_title": "I'm sorry",
+      "event_title": "碰翻展示后的修复",
+      "player_goal": "为弄乱他人作品道歉，征得对方同意后一起修复展台。",
+      "primary_room": "art_room",
+      "room_ids": [
+        "art_room",
+        "school"
+      ],
+      "host_npc_id": "textbook_peter",
+      "host_speaker": "Peter · 美术画室",
+      "lead_entry_id": "occ-8892f48a41b9",
+      "lead_word": "angry",
+      "lead_zh": "生气的；发怒的",
+      "featured_words": [
+        {
+          "entry_id": "occ-8892f48a41b9",
+          "word": "angry",
+          "zh": "生气的；发怒的"
+        },
+        {
+          "entry_id": "occ-f8de4d3b1a67",
+          "word": "cup",
+          "zh": "茶杯"
+        },
+        {
+          "entry_id": "occ-d1d83d4a9d47",
+          "word": "excited",
+          "zh": "兴奋的；激动的"
+        },
+        {
+          "entry_id": "occ-c297f65766f9",
+          "word": "feel",
+          "zh": "觉得；感到"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "观察虚构的展台被碰乱情景。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "向作品主人道歉并听取回应。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "按主人同意的方案复位作品，留下修复说明。"
+        }
+      ],
+      "world_keepsake": "展台恢复，故事关系记录一次协商修复。"
+    },
+    {
+      "order": 50,
+      "chapter_key": "english-grade5-volume1-smartedu-2022/unit-10",
+      "book_id": "english-grade5-volume1-smartedu-2022",
+      "book_title": "五年级上册",
+      "arc_title": "有商有量的邻里社区",
+      "unit_id": "unit-10",
+      "unit_number": 10,
+      "source_title": "The Spring Festival",
+      "event_title": "新春邻里团聚",
+      "player_goal": "为春节筹备一张邻里团聚邀请，并布置岛上节日角。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "landmark_L",
+        "landmark_C",
+        "school"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-a060e0d1dccc",
+      "lead_word": "before",
+      "lead_zh": "在……之前",
+      "featured_words": [
+        {
+          "entry_id": "occ-a060e0d1dccc",
+          "word": "before",
+          "zh": "在……之前"
+        },
+        {
+          "entry_id": "occ-e64d83e3d993",
+          "word": "bring",
+          "zh": "带来"
+        },
+        {
+          "entry_id": "occ-49c87f75839b",
+          "word": "light",
+          "zh": "点燃；点亮"
+        },
+        {
+          "entry_id": "occ-9e7f392f912a",
+          "word": "lion dance",
+          "zh": "舞狮"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "核对本册春节文化素材后选择一项展示。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "制作并投递给故事邻居的节日邀请。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "在校园展示节日角，让来客留下祝福卡。"
+        }
+      ],
+      "world_keepsake": "校园增加春节团聚展与来客祝福。"
+    },
+    {
+      "order": 51,
+      "chapter_key": "xiangshao-g5-2/unit-1",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-1",
+      "unit_number": 1,
+      "source_title": "We're going to read stories",
+      "event_title": "故事朗读小队",
+      "player_goal": "说明小组准备读故事，完成一张可执行的阅读计划。",
+      "primary_room": "landmark_O",
+      "room_ids": [
+        "landmark_O",
+        "classroom"
+      ],
+      "host_npc_id": "host_O",
+      "host_speaker": "O 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-f7c8e01c0dc3",
+      "lead_word": "great",
+      "lead_zh": "好极了；太棒了",
+      "featured_words": [
+        {
+          "entry_id": "occ-f7c8e01c0dc3",
+          "word": "great",
+          "zh": "好极了；太棒了"
+        },
+        {
+          "entry_id": "occ-04a59d4410ac",
+          "word": "interesting",
+          "zh": "有趣的"
+        },
+        {
+          "entry_id": "occ-0a15bf2be78f",
+          "word": "listen to",
+          "zh": "听；倾听"
+        },
+        {
+          "entry_id": "occ-e1e40e69f13a",
+          "word": "play",
+          "zh": "戏剧；演出"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在图书馆挑选剧情故事卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "共同决定将要读哪一则及由谁开始。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "按计划试读并把下一次阅读安排放进书签。"
+        }
+      ],
+      "world_keepsake": "图书馆展示小组阅读计划和试读记录。"
+    },
+    {
+      "order": 52,
+      "chapter_key": "xiangshao-g5-2/unit-2",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-2",
+      "unit_number": 2,
+      "source_title": "We're going to do some research",
+      "event_title": "小岛观察研究",
+      "player_goal": "提出一个可观察的问题，安排一次有记录的简单研究。",
+      "primary_room": "science_room",
+      "room_ids": [
+        "science_room",
+        "landmark_F",
+        "landmark_N"
+      ],
+      "host_npc_id": "textbook_mingming",
+      "host_speaker": "Mingming · 科学观察角",
+      "lead_entry_id": "occ-55ade8f8ceee",
+      "lead_word": "ask",
+      "lead_zh": "提问；询问",
+      "featured_words": [
+        {
+          "entry_id": "occ-55ade8f8ceee",
+          "word": "ask",
+          "zh": "提问；询问"
+        },
+        {
+          "entry_id": "occ-8927946f4165",
+          "word": "find",
+          "zh": "找到；发现"
+        },
+        {
+          "entry_id": "occ-cc343081207a",
+          "word": "information",
+          "zh": "信息"
+        },
+        {
+          "entry_id": "occ-a601d1024117",
+          "word": "report",
+          "zh": "报告"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "从植物或鸟巢展示中选择一个观察问题。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "为准备进行的研究分配观察、记录和汇报角色。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "在两个时间点收集剧情数据并整理记录；不冒充真实实验结论。"
+        }
+      ],
+      "world_keepsake": "科学教室增加一页有来源标记的观察记录。"
+    },
+    {
+      "order": 53,
+      "chapter_key": "xiangshao-g5-2/unit-3",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-3",
+      "unit_number": 3,
+      "source_title": "Let's make a kite",
+      "event_title": "一只风筝的制作计划",
+      "player_goal": "邀请伙伴一起制作风筝，把工序排成能照做的卡片。",
+      "primary_room": "landmark_K",
+      "room_ids": [
+        "landmark_K",
+        "art_room",
+        "playground"
+      ],
+      "host_npc_id": "host_K",
+      "host_speaker": "K 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-6eb212034d18",
+      "lead_word": "bamboo",
+      "lead_zh": "竹子",
+      "featured_words": [
+        {
+          "entry_id": "occ-6eb212034d18",
+          "word": "bamboo",
+          "zh": "竹子"
+        },
+        {
+          "entry_id": "occ-d3162383b740",
+          "word": "cut",
+          "zh": "切；削；剪"
+        },
+        {
+          "entry_id": "occ-db6e5e2d725d",
+          "word": "first",
+          "zh": "第一；首先"
+        },
+        {
+          "entry_id": "occ-1d3a5abad728",
+          "word": "kite",
+          "zh": "风筝"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在风筝工坊选取材料图卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "提出一起做风筝并商量工序。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "制作纸面样式，到操场展示完成品。"
+        }
+      ],
+      "world_keepsake": "工坊保留制作步骤，操场出现玩家风筝展示。"
+    },
+    {
+      "order": 54,
+      "chapter_key": "xiangshao-g5-2/unit-4",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-4",
+      "unit_number": 4,
+      "source_title": "Don't talk here",
+      "event_title": "安静通道的协商",
+      "player_goal": "理解这里不要交谈的要求，为小组安排能交流的地点。",
+      "primary_room": "landmark_O",
+      "room_ids": [
+        "landmark_O",
+        "landmark_S",
+        "school"
+      ],
+      "host_npc_id": "host_O",
+      "host_speaker": "O 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-008308ea3507",
+      "lead_word": "favourite",
+      "lead_zh": "最喜欢的",
+      "featured_words": [
+        {
+          "entry_id": "occ-008308ea3507",
+          "word": "favourite",
+          "zh": "最喜欢的"
+        },
+        {
+          "entry_id": "occ-c42b7bbd385f",
+          "word": "floor",
+          "zh": "地板"
+        },
+        {
+          "entry_id": "occ-e808f7493a16",
+          "word": "here",
+          "zh": "在这里"
+        },
+        {
+          "entry_id": "occ-dbbb01c9694b",
+          "word": "library",
+          "zh": "图书馆"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "发现参观队伍位于需要安静的展区。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "根据禁止交谈的提示暂缓讨论。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "与伙伴约定到校园交流桌再分享观察。"
+        }
+      ],
+      "world_keepsake": "参观路线增加安静段与交流段标记。"
+    },
+    {
+      "order": 55,
+      "chapter_key": "xiangshao-g5-2/unit-5",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-5",
+      "unit_number": 5,
+      "source_title": "When's your birthday?",
+      "event_title": "不撞期的生日安排",
+      "player_goal": "询问伙伴的生日，把庆祝活动放进正确日期。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "landmark_Z",
+        "school"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-5f2b2c43b204",
+      "lead_word": "April",
+      "lead_zh": "四月",
+      "featured_words": [
+        {
+          "entry_id": "occ-5f2b2c43b204",
+          "word": "April",
+          "zh": "四月"
+        },
+        {
+          "entry_id": "occ-6e665c05e578",
+          "word": "August",
+          "zh": "八月"
+        },
+        {
+          "entry_id": "occ-8fc51a8829a1",
+          "word": "December",
+          "zh": "十二月"
+        },
+        {
+          "entry_id": "occ-5dc6781c544b",
+          "word": "February",
+          "zh": "二月"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "读取虚构伙伴给出的生日日期。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问并确认日期，避免与其他校园活动冲突。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "在剧情日历中安排一次庆祝并投递提醒。"
+        }
+      ],
+      "world_keepsake": "校园日历新增已确认的生日庆祝日期。"
+    },
+    {
+      "order": 56,
+      "chapter_key": "xiangshao-g5-2/unit-6",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-6",
+      "unit_number": 6,
+      "source_title": "I'll make a beautiful card",
+      "event_title": "亲手做的漂亮贺卡",
+      "player_goal": "作出将要制作贺卡的承诺，完成后送给约定的收件人。",
+      "primary_room": "art_room",
+      "room_ids": [
+        "art_room",
+        "landmark_Z",
+        "landmark_M"
+      ],
+      "host_npc_id": "textbook_peter",
+      "host_speaker": "Peter · 美术画室",
+      "lead_entry_id": "occ-64869d8e1adb",
+      "lead_word": "celebrate",
+      "lead_zh": "庆祝",
+      "featured_words": [
+        {
+          "entry_id": "occ-64869d8e1adb",
+          "word": "celebrate",
+          "zh": "庆祝"
+        },
+        {
+          "entry_id": "occ-73d7000d6d85",
+          "word": "chocolate",
+          "zh": "巧克力"
+        },
+        {
+          "entry_id": "occ-008308ea3507",
+          "word": "favourite",
+          "zh": "最喜欢的"
+        },
+        {
+          "entry_id": "occ-378584eda026",
+          "word": "Mother's Day",
+          "zh": "母亲节"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "向伙伴说明将制作一张贺卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "用现有绘画活动设计卡面，并选择合适的祝福。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "将卡面装入剧情信封，交给收件人确认。"
+        }
+      ],
+      "world_keepsake": "收件人展示玩家的贺卡，承诺清单变为已兑现。"
+    },
+    {
+      "order": 57,
+      "chapter_key": "xiangshao-g5-2/unit-7",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-7",
+      "unit_number": 7,
+      "source_title": "There's a post office near my school",
+      "event_title": "学校附近的邮局",
+      "player_goal": "在旅行馆的虚构校园周边图中标出邮局，并向新同学介绍图中的位置关系。",
+      "primary_room": "landmark_G",
+      "room_ids": [
+        "landmark_G",
+        "classroom"
+      ],
+      "host_npc_id": "host_G",
+      "host_speaker": "G 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-e8236dc8c091",
+      "lead_word": "around",
+      "lead_zh": "在……周围",
+      "featured_words": [
+        {
+          "entry_id": "occ-e8236dc8c091",
+          "word": "around",
+          "zh": "在……周围"
+        },
+        {
+          "entry_id": "occ-b6b50c0995d9",
+          "word": "bank",
+          "zh": "银行"
+        },
+        {
+          "entry_id": "occ-0b0db13ebb99",
+          "word": "cinema",
+          "zh": "电影院"
+        },
+        {
+          "entry_id": "occ-d649ca3f0ae8",
+          "word": "hometown",
+          "zh": "家乡"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在旅行馆领取明确标为模拟的校园周边图，认识图中的学校和邮局。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "把邮局图标放在示意图中学校附近，保留示意范围与尺度说明。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "向新同学描述图中的邮局位置，确认这些位置关系只指模拟图。"
+        }
+      ],
+      "world_keepsake": "旅行馆展示一张校园周边模拟图；不改变主岛学校与斑马邮局的实际位置。"
+    },
+    {
+      "order": 58,
+      "chapter_key": "xiangshao-g5-2/unit-8",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-8",
+      "unit_number": 8,
+      "source_title": "Can you show me the way to the Xinhua Hotel?",
+      "event_title": "带路到新华酒店",
+      "player_goal": "在旅行馆模拟街区中指路，帮助客人到达图上的酒店。",
+      "primary_room": "landmark_G",
+      "room_ids": [
+        "landmark_G",
+        "landmark_T"
+      ],
+      "host_npc_id": "host_G",
+      "host_speaker": "G 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-00fd77846f5a",
+      "lead_word": "airport",
+      "lead_zh": "机场",
+      "featured_words": [
+        {
+          "entry_id": "occ-00fd77846f5a",
+          "word": "airport",
+          "zh": "机场"
+        },
+        {
+          "entry_id": "occ-89eada4a32b0",
+          "word": "along",
+          "zh": "沿着"
+        },
+        {
+          "entry_id": "occ-27fd0a8e8a06",
+          "word": "crossing",
+          "zh": "十字路口"
+        },
+        {
+          "entry_id": "occ-c2cfb5ffbb6c",
+          "word": "get off",
+          "zh": "下车"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "在旅行馆领取虚构街区地图并定位新华酒店。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "听取问路请求，依次指出转向和目的地。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "让标记角色按路线移动并核对终点。"
+        }
+      ],
+      "world_keepsake": "旅行馆保存一条成功到达的模拟路线；岛上不新增酒店房间。"
+    },
+    {
+      "order": 59,
+      "chapter_key": "xiangshao-g5-2/unit-9",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-9",
+      "unit_number": 9,
+      "source_title": "He's kind to children",
+      "event_title": "善意帮助的一天",
+      "player_goal": "观察故事志愿者怎样对待孩子，把具体帮助记进采访卡。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "landmark_O",
+        "playground"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-3bb06cbcfa7c",
+      "lead_word": "active",
+      "lead_zh": "活跃的",
+      "featured_words": [
+        {
+          "entry_id": "occ-3bb06cbcfa7c",
+          "word": "active",
+          "zh": "活跃的"
+        },
+        {
+          "entry_id": "occ-211832330352",
+          "word": "friendly",
+          "zh": "友好的"
+        },
+        {
+          "entry_id": "occ-6b2d22ec4f9d",
+          "word": "interested",
+          "zh": "感兴趣的"
+        },
+        {
+          "entry_id": "occ-91fd37346a93",
+          "word": "kind",
+          "zh": "亲切的；和蔼的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "跟随虚构志愿者查看一个帮助孩子的情景。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "用与标题相关的描述概括他的友善行为。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "将观察事实交给受助角色确认后展示。"
+        }
+      ],
+      "world_keepsake": "校园公益墙增加一张有具体行为依据的采访卡。"
+    },
+    {
+      "order": 60,
+      "chapter_key": "xiangshao-g5-2/unit-10",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-10",
+      "unit_number": 10,
+      "source_title": "Where were you yesterday?",
+      "event_title": "昨天的地点拼图",
+      "player_goal": "询问伙伴昨天在哪里，把回忆放回正确的地点栏。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "school",
+        "landmark_G"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-b902447c3cb0",
+      "lead_word": "better",
+      "lead_zh": "更好的",
+      "featured_words": [
+        {
+          "entry_id": "occ-b902447c3cb0",
+          "word": "better",
+          "zh": "更好的"
+        },
+        {
+          "entry_id": "occ-daa06de6dd3f",
+          "word": "last",
+          "zh": "最近过去的"
+        },
+        {
+          "entry_id": "occ-0c29c84d0c12",
+          "word": "sick",
+          "zh": "病的；有病的"
+        },
+        {
+          "entry_id": "occ-3a060401f73f",
+          "word": "was",
+          "zh": "is、am 的过去式"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看剧情提供的昨日地点卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问两位伙伴昨天在哪里。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "按回答整理时间线，并与角色再次确认。"
+        }
+      ],
+      "world_keepsake": "故事相册增加一条带昨日时间标记的地点记录。"
+    },
+    {
+      "order": 61,
+      "chapter_key": "xiangshao-g5-2/unit-11",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-11",
+      "unit_number": 11,
+      "source_title": "Who was first?",
+      "event_title": "谁先到达终点",
+      "player_goal": "核对比赛顺序，给参赛者摆放正确的名次牌。",
+      "primary_room": "playground",
+      "room_ids": [
+        "playground",
+        "football_field"
+      ],
+      "host_npc_id": "textbook_tim",
+      "host_speaker": "Tim · 青草操场",
+      "lead_entry_id": "occ-2eba1ae2d5d7",
+      "lead_word": "eighth",
+      "lead_zh": "第八",
+      "featured_words": [
+        {
+          "entry_id": "occ-2eba1ae2d5d7",
+          "word": "eighth",
+          "zh": "第八"
+        },
+        {
+          "entry_id": "occ-2e2d87851f9b",
+          "word": "fifth",
+          "zh": "第五"
+        },
+        {
+          "entry_id": "occ-db6e5e2d725d",
+          "word": "first",
+          "zh": "第一；首先"
+        },
+        {
+          "entry_id": "occ-cda0f390e94d",
+          "word": "fourth",
+          "zh": "第四"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "观看非实时的剧情比赛回放卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问谁是第一名并核对终点顺序。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "按记录摆放名次牌，接受角色复核。"
+        }
+      ],
+      "world_keepsake": "操场成绩架展示按剧情记录核对的名次。"
+    },
+    {
+      "order": 62,
+      "chapter_key": "xiangshao-g5-2/unit-12",
+      "book_id": "xiangshao-g5-2",
+      "book_title": "五年级下册",
+      "arc_title": "研究、制作与第一次旅行",
+      "unit_id": "unit-12",
+      "unit_number": 12,
+      "source_title": "Where did you go?",
+      "event_title": "一次旅行的回顾",
+      "player_goal": "询问伙伴去过哪里，把旅行地点串成一页回顾。",
+      "primary_room": "landmark_G",
+      "room_ids": [
+        "landmark_G",
+        "landmark_T",
+        "home"
+      ],
+      "host_npc_id": "host_G",
+      "host_speaker": "G 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-55ade8f8ceee",
+      "lead_word": "ask",
+      "lead_zh": "提问；询问",
+      "featured_words": [
+        {
+          "entry_id": "occ-55ade8f8ceee",
+          "word": "ask",
+          "zh": "提问；询问"
+        },
+        {
+          "entry_id": "occ-da528e34f1f9",
+          "word": "forest",
+          "zh": "森林"
+        },
+        {
+          "entry_id": "occ-9315744d2e48",
+          "word": "museum",
+          "zh": "博物馆"
+        },
+        {
+          "entry_id": "occ-7eca688305db",
+          "word": "note",
+          "zh": "笔记"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "从剧情旅行卡中选择已发生的行程。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问伙伴去了哪里并匹配地点图。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "将地点与一条旅行感受放进回顾页。"
+        }
+      ],
+      "world_keepsake": "小屋故事相册新增本次旅行回顾页。"
+    },
+    {
+      "order": 63,
+      "chapter_key": "xiangshao-g6-1/unit-1",
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "unit_id": "unit-1",
+      "unit_number": 1,
+      "source_title": "What did you do during the holidays?",
+      "event_title": "假期分享桌",
+      "player_goal": "讲述假期做过的事情，把一段回忆交给同伴继续提问。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "classroom",
+        "landmark_Q"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-4b1028b27103",
+      "lead_word": "box",
+      "lead_zh": "盒；盒子",
+      "featured_words": [
+        {
+          "entry_id": "occ-4b1028b27103",
+          "word": "box",
+          "zh": "盒；盒子"
+        },
+        {
+          "entry_id": "occ-c12dc805f0e1",
+          "word": "city",
+          "zh": "城市"
+        },
+        {
+          "entry_id": "occ-179fd02e3fb7",
+          "word": "farm",
+          "zh": "农场"
+        },
+        {
+          "entry_id": "occ-f4f963448384",
+          "word": "go shopping",
+          "zh": "去购物"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "选择虚构或自愿提供的非敏感假期事件卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "询问并回应假期做了什么。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把事件按发生顺序放进分享页，让伙伴确认理解。"
+        }
+      ],
+      "world_keepsake": "故事馆展示一页经玩家确认的假期分享。"
+    },
+    {
+      "order": 64,
+      "chapter_key": "xiangshao-g6-1/unit-2",
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "unit_id": "unit-2",
+      "unit_number": 2,
+      "source_title": "Beibei always gets up early",
+      "event_title": "早起伙伴的日常",
+      "player_goal": "观察贝贝的晨间习惯，为小队设计一张持续作息记录。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "school"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-0e23bb045bbb",
+      "lead_word": "always",
+      "lead_zh": "总是",
+      "featured_words": [
+        {
+          "entry_id": "occ-0e23bb045bbb",
+          "word": "always",
+          "zh": "总是"
+        },
+        {
+          "entry_id": "occ-caf70128b99b",
+          "word": "bad",
+          "zh": "严重的；坏的"
+        },
+        {
+          "entry_id": "occ-2558defff075",
+          "word": "homework",
+          "zh": "家庭作业"
+        },
+        {
+          "entry_id": "occ-5b18a613d5a8",
+          "word": "hurt",
+          "zh": "伤害"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "读取虚构角色贝贝的多日晨间记录。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "用经常性描述说明他总是早起。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "为小队安排一项可持续的晨间准备并记录一次。"
+        }
+      ],
+      "world_keepsake": "小屋作息板区分日常习惯与一次性事件。"
+    },
+    {
+      "order": 65,
+      "chapter_key": "xiangshao-g6-1/unit-3",
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "unit_id": "unit-3",
+      "unit_number": 3,
+      "source_title": "The Mid-Autumn Festival",
+      "event_title": "月下分享会",
+      "player_goal": "为中秋节筹备一次分享活动，向来客介绍经核对的节日内容。",
+      "primary_room": "landmark_L",
+      "room_ids": [
+        "landmark_L",
+        "landmark_S",
+        "home"
+      ],
+      "host_npc_id": "host_L",
+      "host_speaker": "L 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-4b1028b27103",
+      "lead_word": "box",
+      "lead_zh": "盒；盒子",
+      "featured_words": [
+        {
+          "entry_id": "occ-4b1028b27103",
+          "word": "box",
+          "zh": "盒；盒子"
+        },
+        {
+          "entry_id": "occ-db1f52d066f8",
+          "word": "close",
+          "zh": "接近的；关上"
+        },
+        {
+          "entry_id": "occ-05e3cad92316",
+          "word": "open",
+          "zh": "打开"
+        },
+        {
+          "entry_id": "occ-cc2b872b4b54",
+          "word": "sit",
+          "zh": "坐"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "核对本册中秋节素材并选择展示内容。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "在天文台准备月亮观察图卡。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "回小屋安排分享桌，让来客交流节日卡。"
+        }
+      ],
+      "world_keepsake": "小屋保留中秋分享页与观察图卡。"
+    },
+    {
+      "order": 66,
+      "chapter_key": "xiangshao-g6-1/unit-4",
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "unit_id": "unit-4",
+      "unit_number": 4,
+      "source_title": "It will be sunny and cool tomorrow",
+      "event_title": "明天的户外活动",
+      "player_goal": "依据晴朗凉爽的剧情预报，安排明天的户外活动与备选计划。",
+      "primary_room": "landmark_U",
+      "room_ids": [
+        "landmark_U",
+        "playground",
+        "school"
+      ],
+      "host_npc_id": "host_U",
+      "host_speaker": "U 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-15fb9d6a122c",
+      "lead_word": "heavy",
+      "lead_zh": "大量的；重的",
+      "featured_words": [
+        {
+          "entry_id": "occ-15fb9d6a122c",
+          "word": "heavy",
+          "zh": "大量的；重的"
+        },
+        {
+          "entry_id": "occ-def745ac2248",
+          "word": "rain",
+          "zh": "雨；下雨"
+        },
+        {
+          "entry_id": "occ-a856ca74908c",
+          "word": "safe",
+          "zh": "安全的"
+        },
+        {
+          "entry_id": "occ-8db8e9ee46ab",
+          "word": "should",
+          "zh": "应该"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "读取标明为剧情的明日天气预报。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "说明明天会晴朗凉爽。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "安排户外活动并给天气变化留一个室内备选。"
+        }
+      ],
+      "world_keepsake": "校园公告板显示明日计划和备选地点。"
+    },
+    {
+      "order": 67,
+      "chapter_key": "xiangshao-g6-1/unit-5",
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "unit_id": "unit-5",
+      "unit_number": 5,
+      "source_title": "I will bring a bottle of orange juice",
+      "event_title": "野餐带什么",
+      "player_goal": "向伙伴承诺带一瓶橙汁，并核对集体出行物品清单。",
+      "primary_room": "canteen",
+      "room_ids": [
+        "canteen",
+        "home",
+        "playground"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "餐点主厨 · 暖香食堂",
+      "lead_entry_id": "occ-9198f5a800ab",
+      "lead_word": "air",
+      "lead_zh": "空气",
+      "featured_words": [
+        {
+          "entry_id": "occ-9198f5a800ab",
+          "word": "air",
+          "zh": "空气"
+        },
+        {
+          "entry_id": "occ-db07c07512bc",
+          "word": "bring",
+          "zh": "带来"
+        },
+        {
+          "entry_id": "occ-761666e4e6a4",
+          "word": "can",
+          "zh": "罐；听"
+        },
+        {
+          "entry_id": "occ-6d66ac6bc908",
+          "word": "candy",
+          "zh": "糖果"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看剧情野餐分工单。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "表达将带一瓶橙汁并登记到自己的栏位。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "出发前核对承诺物品，缺项可回家补取。"
+        }
+      ],
+      "world_keepsake": "野餐清单显示玩家的承诺已经备齐。"
+    },
+    {
+      "order": 68,
+      "chapter_key": "xiangshao-g6-1/unit-6",
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "unit_id": "unit-6",
+      "unit_number": 6,
+      "source_title": "What can I do?",
+      "event_title": "我能帮忙做什么",
+      "player_goal": "主动询问能做什么，在社区服务台领取一项合适任务。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "landmark_O",
+        "landmark_F"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-2cd79a23a7d2",
+      "lead_word": "age",
+      "lead_zh": "年龄",
+      "featured_words": [
+        {
+          "entry_id": "occ-2cd79a23a7d2",
+          "word": "age",
+          "zh": "年龄"
+        },
+        {
+          "entry_id": "occ-8cdfbdb6c32b",
+          "word": "make friends",
+          "zh": "交朋友"
+        },
+        {
+          "entry_id": "occ-a6e88cb20cf7",
+          "word": "share",
+          "zh": "分享"
+        },
+        {
+          "entry_id": "occ-c16a1b5bd0d8",
+          "word": "song",
+          "zh": "歌曲"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "向服务台询问自己可以承担什么。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "从整理图卡或搬运剧情花盆中选择一项任务。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "完成后请受助角色确认并说明下一步需求。"
+        }
+      ],
+      "world_keepsake": "社区服务板记下具体帮助结果和后续需求。"
+    },
+    {
+      "order": 69,
+      "chapter_key": "xiangshao-g6-1/unit-7",
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "unit_id": "unit-7",
+      "unit_number": 7,
+      "source_title": "We shouldn't waste water",
+      "event_title": "不浪费水的小行动",
+      "player_goal": "指出浪费水的情景，为温室制定可执行的节水提醒。",
+      "primary_room": "landmark_F",
+      "room_ids": [
+        "landmark_F",
+        "science_room",
+        "school"
+      ],
+      "host_npc_id": "host_F",
+      "host_speaker": "F 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-9198f5a800ab",
+      "lead_word": "air",
+      "lead_zh": "空气",
+      "featured_words": [
+        {
+          "entry_id": "occ-9198f5a800ab",
+          "word": "air",
+          "zh": "空气"
+        },
+        {
+          "entry_id": "occ-99ffdfc36a10",
+          "word": "minute",
+          "zh": "分钟"
+        },
+        {
+          "entry_id": "occ-8db8e9ee46ab",
+          "word": "should",
+          "zh": "应该"
+        },
+        {
+          "entry_id": "occ-b13415bf1c77",
+          "word": "shouldn't",
+          "zh": "不应该"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "观察虚构水流情景，区分需要用水与无效流失。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "说明不应该浪费水并选择相应行为卡。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把提醒放到温室，并查看剧情给出的前后记录。"
+        }
+      ],
+      "world_keepsake": "温室出现节水提醒与注明为剧情的用水记录。"
+    },
+    {
+      "order": 70,
+      "chapter_key": "xiangshao-g6-1/unit-8",
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "unit_id": "unit-8",
+      "unit_number": 8,
+      "source_title": "This bird is bigger than the first one",
+      "event_title": "两只鸟的比较卡",
+      "player_goal": "比较两张鸟类观察图，指出哪只比第一只更大。",
+      "primary_room": "landmark_N",
+      "room_ids": [
+        "landmark_N",
+        "science_room"
+      ],
+      "host_npc_id": "host_N",
+      "host_speaker": "N 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-62b73d1c3ff8",
+      "lead_word": "clay",
+      "lead_zh": "黏土；泥土",
+      "featured_words": [
+        {
+          "entry_id": "occ-62b73d1c3ff8",
+          "word": "clay",
+          "zh": "黏土；泥土"
+        },
+        {
+          "entry_id": "occ-b216fe2cfd8e",
+          "word": "loud",
+          "zh": "大声的"
+        },
+        {
+          "entry_id": "occ-b803ec844a5a",
+          "word": "once",
+          "zh": "曾经"
+        },
+        {
+          "entry_id": "occ-c7f44a408448",
+          "word": "singer",
+          "zh": "歌手；歌唱家"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看注明同一尺度的两张故事观察图。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "比较大小并对应标题中的比较表达。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把比较结果和尺度说明一起放进观察册。"
+        }
+      ],
+      "world_keepsake": "鸟巢观察册新增一张有同尺度依据的比较卡。"
+    },
+    {
+      "order": 71,
+      "chapter_key": "xiangshao-g6-1/unit-9",
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "unit_id": "unit-9",
+      "unit_number": 9,
+      "source_title": "I don't feel well",
+      "event_title": "不舒服时先求助",
+      "player_goal": "在虚构角色不舒服时表达状态，并向可信任的成年人求助。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "school"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-caf70128b99b",
+      "lead_word": "bad",
+      "lead_zh": "严重的；坏的",
+      "featured_words": [
+        {
+          "entry_id": "occ-caf70128b99b",
+          "word": "bad",
+          "zh": "严重的；坏的"
+        },
+        {
+          "entry_id": "occ-bd54c578fbcd",
+          "word": "catch",
+          "zh": "患（病）"
+        },
+        {
+          "entry_id": "occ-29a7266a25bf",
+          "word": "cold",
+          "zh": "感冒"
+        },
+        {
+          "entry_id": "occ-768db119a29d",
+          "word": "ill",
+          "zh": "有病的；不适的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "识别剧情角色表示不舒服的情景。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "选择表达不舒服并暂停原活动。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "联系校园中的可信成年人，依剧情指引休息或求助。"
+        }
+      ],
+      "world_keepsake": "故事行程改为求助安排，角色获得成人陪同。"
+    },
+    {
+      "order": 72,
+      "chapter_key": "xiangshao-g6-1/unit-10",
+      "book_id": "xiangshao-g6-1",
+      "book_title": "六年级上册",
+      "arc_title": "共同照顾小岛",
+      "unit_id": "unit-10",
+      "unit_number": 10,
+      "source_title": "Festivals bring families together",
+      "event_title": "节日让我们相聚",
+      "player_goal": "邀请不同背景的故事家庭分享节日，办一场互相倾听的团聚展。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "landmark_Q",
+        "home"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-139fe9ef1911",
+      "lead_word": "both",
+      "lead_zh": "（两者）都",
+      "featured_words": [
+        {
+          "entry_id": "occ-139fe9ef1911",
+          "word": "both",
+          "zh": "（两者）都"
+        },
+        {
+          "entry_id": "occ-d175768cdf3c",
+          "word": "celebrate",
+          "zh": "庆祝"
+        },
+        {
+          "entry_id": "occ-d3185c7f1eb3",
+          "word": "Christmas",
+          "zh": "圣诞节"
+        },
+        {
+          "entry_id": "occ-c9267e6fe8ae",
+          "word": "colourful",
+          "zh": "彩色的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "从已核对的节日卡中选择各家庭愿意分享的内容。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "邀请故事家庭说明节日如何让亲友相聚。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把共同之处和不同习惯并列展示，允许角色修订。"
+        }
+      ],
+      "world_keepsake": "校园形成经角色确认的多家庭节日团聚展。"
+    },
+    {
+      "order": 73,
+      "chapter_key": "xiangshao-g6-2/unit-1",
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "arc_title": "走向世界的毕业展",
+      "unit_id": "unit-1",
+      "unit_number": 1,
+      "source_title": "A family outing",
+      "event_title": "一起商量家庭出游",
+      "player_goal": "听取虚构家人的出游偏好，选出共同接受的路线。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "landmark_G",
+        "landmark_B"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-0c5d928d792d",
+      "lead_word": "grandparent",
+      "lead_zh": "（外）祖父／母",
+      "featured_words": [
+        {
+          "entry_id": "occ-0c5d928d792d",
+          "word": "grandparent",
+          "zh": "（外）祖父／母"
+        },
+        {
+          "entry_id": "occ-31a8a0abb802",
+          "word": "ride",
+          "zh": "骑（自行车／马等）"
+        },
+        {
+          "entry_id": "occ-787505b0f01f",
+          "word": "together",
+          "zh": "在一起"
+        },
+        {
+          "entry_id": "occ-5c9b9a4de489",
+          "word": "ourselves",
+          "zh": "我们自己"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "每位故事家庭成员提供一张出游偏好卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "比较地点、时间与天气安排。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "达成共同路线后在船屋展示出行计划。"
+        }
+      ],
+      "world_keepsake": "小屋保存一张全体角色确认的家庭出游计划。"
+    },
+    {
+      "order": 74,
+      "chapter_key": "xiangshao-g6-2/unit-2",
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "arc_title": "走向世界的毕业展",
+      "unit_id": "unit-2",
+      "unit_number": 2,
+      "source_title": "Some stories are more interesting",
+      "event_title": "我推荐这则故事",
+      "player_goal": "比较两则故事，给出哪则更有趣的个人选择和依据。",
+      "primary_room": "landmark_O",
+      "room_ids": [
+        "landmark_O",
+        "landmark_Q"
+      ],
+      "host_npc_id": "host_O",
+      "host_speaker": "O 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-ed585ccf0c18",
+      "lead_word": "a piece of",
+      "lead_zh": "一块",
+      "featured_words": [
+        {
+          "entry_id": "occ-ed585ccf0c18",
+          "word": "a piece of",
+          "zh": "一块"
+        },
+        {
+          "entry_id": "occ-b45662bf0f58",
+          "word": "cross",
+          "zh": "穿过"
+        },
+        {
+          "entry_id": "occ-b0c9c82f6a41",
+          "word": "drop",
+          "zh": "落下"
+        },
+        {
+          "entry_id": "occ-70e5eb22f625",
+          "word": "happily",
+          "zh": "高兴地"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "阅读两则经审核的短故事素材。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "说明自己认为哪则更有趣，并选择一个具体理由。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "给不同喜好的伙伴留下可撤回的推荐卡。"
+        }
+      ],
+      "world_keepsake": "图书馆推荐架保存个人评价及理由，允许不同意见。"
+    },
+    {
+      "order": 75,
+      "chapter_key": "xiangshao-g6-2/unit-3",
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "arc_title": "走向世界的毕业展",
+      "unit_id": "unit-3",
+      "unit_number": 3,
+      "source_title": "We should learn to take care of ourselves",
+      "event_title": "照顾自己的行动卡",
+      "player_goal": "为故事角色整理日常自我照顾安排，知道何时向成年人求助。",
+      "primary_room": "home",
+      "room_ids": [
+        "home",
+        "canteen",
+        "playground"
+      ],
+      "host_npc_id": "npc_bear_uncle",
+      "host_speaker": "熊叔 · 温馨客厅",
+      "lead_entry_id": "occ-4a04a004a0ee",
+      "lead_word": "exercise",
+      "lead_zh": "锻炼；练习",
+      "featured_words": [
+        {
+          "entry_id": "occ-4a04a004a0ee",
+          "word": "exercise",
+          "zh": "锻炼；练习"
+        },
+        {
+          "entry_id": "occ-5f4336394973",
+          "word": "healthy",
+          "zh": "健康的"
+        },
+        {
+          "entry_id": "occ-ed4632ebd9ed",
+          "word": "jog",
+          "zh": "慢跑"
+        },
+        {
+          "entry_id": "occ-4f589c501cbc",
+          "word": "keep",
+          "zh": "保持"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看剧情角色一日生活安排。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "挑选适合年龄的饮食、休息和活动提醒。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "完成一张可调整的行动卡，并保留求助入口。"
+        }
+      ],
+      "world_keepsake": "小屋行动卡区分自主准备与需要成人帮助的事项。"
+    },
+    {
+      "order": 76,
+      "chapter_key": "xiangshao-g6-2/unit-4",
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "arc_title": "走向世界的毕业展",
+      "unit_id": "unit-4",
+      "unit_number": 4,
+      "source_title": "Planting trees is good for us",
+      "event_title": "种树小队的一年",
+      "player_goal": "为种树行动选择位置，安排后续照料并观察剧情中的变化。",
+      "primary_room": "landmark_F",
+      "room_ids": [
+        "landmark_F",
+        "landmark_P",
+        "school"
+      ],
+      "host_npc_id": "host_F",
+      "host_speaker": "F 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-8126f59b8b1e",
+      "lead_word": "air",
+      "lead_zh": "空气",
+      "featured_words": [
+        {
+          "entry_id": "occ-8126f59b8b1e",
+          "word": "air",
+          "zh": "空气"
+        },
+        {
+          "entry_id": "occ-aa8f80f4a2b6",
+          "word": "land",
+          "zh": "陆地；土地"
+        },
+        {
+          "entry_id": "occ-44f58ff1d3b9",
+          "word": "place",
+          "zh": "地方；地点"
+        },
+        {
+          "entry_id": "occ-b3089b44ad4f",
+          "word": "Tree Planting Day",
+          "zh": "植树节"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "查看适合种植的剧情位置与限制卡。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "说明种树对大家有益，并选择一株虚构树苗。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "安排浇护和复查，在明确压缩时间的剧情里查看变化。"
+        }
+      ],
+      "world_keepsake": "校园生态板增加树苗及后续照料日程。"
+    },
+    {
+      "order": 77,
+      "chapter_key": "xiangshao-g6-2/unit-5",
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "arc_title": "走向世界的毕业展",
+      "unit_id": "unit-5",
+      "unit_number": 5,
+      "source_title": "Our Earth looks like this in space",
+      "event_title": "从太空看我们的地球",
+      "player_goal": "用旅行馆和天文台的地球模型，制作一张视角说明卡。",
+      "primary_room": "landmark_G",
+      "room_ids": [
+        "landmark_G",
+        "landmark_S",
+        "science_room"
+      ],
+      "host_npc_id": "host_G",
+      "host_speaker": "G 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-17fb79a6a1a5",
+      "lead_word": "Earth",
+      "lead_zh": "地球",
+      "featured_words": [
+        {
+          "entry_id": "occ-17fb79a6a1a5",
+          "word": "Earth",
+          "zh": "地球"
+        },
+        {
+          "entry_id": "occ-aa8f80f4a2b6",
+          "word": "land",
+          "zh": "陆地；土地"
+        },
+        {
+          "entry_id": "occ-cb8c94748885",
+          "word": "space",
+          "zh": "太空"
+        },
+        {
+          "entry_id": "occ-678c67249f8a",
+          "word": "face",
+          "zh": "面对；面向"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "观察地球仪与太空视角图像的差别。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "指出从太空看地球的外观。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "把图像来源与视角标记一起放上科学展台。"
+        }
+      ],
+      "world_keepsake": "科学展台增加带图像来源和视角说明的地球展示。"
+    },
+    {
+      "order": 78,
+      "chapter_key": "xiangshao-g6-2/unit-6",
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "arc_title": "走向世界的毕业展",
+      "unit_id": "unit-6",
+      "unit_number": 6,
+      "source_title": "Anne wanted to dance",
+      "event_title": "安妮想跳舞",
+      "player_goal": "听懂安妮过去想跳舞的愿望，帮助她安排一次可以选择退出的尝试。",
+      "primary_room": "music_room",
+      "room_ids": [
+        "music_room",
+        "landmark_D",
+        "landmark_X"
+      ],
+      "host_npc_id": "textbook_anne",
+      "host_speaker": "Anne · 音乐工坊",
+      "lead_entry_id": "occ-a7523c52f5e2",
+      "lead_word": "aloud",
+      "lead_zh": "大声地",
+      "featured_words": [
+        {
+          "entry_id": "occ-a7523c52f5e2",
+          "word": "aloud",
+          "zh": "大声地"
+        },
+        {
+          "entry_id": "occ-564532dfe1c6",
+          "word": "easy",
+          "zh": "容易的"
+        },
+        {
+          "entry_id": "occ-9096c6f1a51a",
+          "word": "move",
+          "zh": "移动"
+        },
+        {
+          "entry_id": "occ-e0040492e30b",
+          "word": "piano",
+          "zh": "钢琴"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "听取故事角色安妮的过往愿望。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "在音乐教室选择一段伴奏或节奏作为尝试背景。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "到舞台排好简单动作卡，演出或退出都留下本人决定。"
+        }
+      ],
+      "world_keepsake": "舞台故事页记录安妮选择的尝试过程。"
+    },
+    {
+      "order": 79,
+      "chapter_key": "xiangshao-g6-2/unit-7",
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "arc_title": "走向世界的毕业展",
+      "unit_id": "unit-7",
+      "unit_number": 7,
+      "source_title": "I'm not afraid!",
+      "event_title": "勇气来自准备",
+      "player_goal": "在安全的虚构挑战前表达感受，选择求助或尝试并完成复盘。",
+      "primary_room": "landmark_V",
+      "room_ids": [
+        "landmark_V",
+        "school",
+        "playground"
+      ],
+      "host_npc_id": "host_V",
+      "host_speaker": "V 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-c327dd51fe74",
+      "lead_word": "afraid",
+      "lead_zh": "害怕的",
+      "featured_words": [
+        {
+          "entry_id": "occ-c327dd51fe74",
+          "word": "afraid",
+          "zh": "害怕的"
+        },
+        {
+          "entry_id": "occ-208e31530ac2",
+          "word": "clever",
+          "zh": "聪明的"
+        },
+        {
+          "entry_id": "occ-6f8b1293e78c",
+          "word": "close",
+          "zh": "关；闭"
+        },
+        {
+          "entry_id": "occ-023eb75c6a7e",
+          "word": "difficult",
+          "zh": "困难的"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "先阅读观察站内的安全边界，危险区域保持不可进入。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "对安全的展板讲解或平地公开展示表达是否害怕。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "选择同伴陪同、先观察或尝试，记录自己的感受变化。"
+        }
+      ],
+      "world_keepsake": "勇气册保留玩家自选的安全尝试与复盘，不以冒险换奖励。"
+    },
+    {
+      "order": 80,
+      "chapter_key": "xiangshao-g6-2/unit-8",
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "arc_title": "走向世界的毕业展",
+      "unit_id": "unit-8",
+      "unit_number": 8,
+      "source_title": "International Children's Day",
+      "event_title": "给远方朋友的儿童节",
+      "player_goal": "比较经核对的儿童节资料，给虚构远方伙伴做一份节日介绍。",
+      "primary_room": "school",
+      "room_ids": [
+        "school",
+        "landmark_Z",
+        "landmark_G"
+      ],
+      "host_npc_id": "textbook_lingling",
+      "host_speaker": "Lingling · 山丘学园",
+      "lead_entry_id": "occ-bf37d0eba7da",
+      "lead_word": "party",
+      "lead_zh": "聚会",
+      "featured_words": [
+        {
+          "entry_id": "occ-bf37d0eba7da",
+          "word": "party",
+          "zh": "聚会"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "选取已审核的国际儿童节素材。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "准备自己愿意分享的校园活动说明。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "通过游戏内信箱交换节日介绍，标注故事虚构的来信。"
+        }
+      ],
+      "world_keepsake": "校园国际交流角展示双方节日介绍与来源说明。"
+    },
+    {
+      "order": 81,
+      "chapter_key": "xiangshao-g6-2/unit-9",
+      "book_id": "xiangshao-g6-2",
+      "book_title": "六年级下册",
+      "arc_title": "走向世界的毕业展",
+      "unit_id": "unit-9",
+      "unit_number": 9,
+      "source_title": "Look at these beautiful places in the world",
+      "event_title": "从小岛出发的世界展",
+      "player_goal": "为毕业展选择世界地点，用地图、介绍卡和回忆串起整段旅程。",
+      "primary_room": "landmark_G",
+      "room_ids": [
+        "landmark_G",
+        "landmark_O",
+        "school",
+        "home"
+      ],
+      "host_npc_id": "host_G",
+      "host_speaker": "G 馆长伙伴 · 字母工坊",
+      "lead_entry_id": "occ-75b9d0fc01d7",
+      "lead_word": "Big Ben",
+      "lead_zh": "大本钟",
+      "featured_words": [
+        {
+          "entry_id": "occ-75b9d0fc01d7",
+          "word": "Big Ben",
+          "zh": "大本钟"
+        },
+        {
+          "entry_id": "occ-606eb31bc532",
+          "word": "places of interest",
+          "zh": "名胜古迹"
+        },
+        {
+          "entry_id": "occ-4bbcabc58f69",
+          "word": "the Eiffel Tower",
+          "zh": "埃菲尔铁塔"
+        },
+        {
+          "entry_id": "occ-917a959c405d",
+          "word": "the Golden Gate Bridge",
+          "zh": "金门大桥"
+        }
+      ],
+      "stages": [
+        {
+          "stage": 1,
+          "title": "聆听伙伴心愿",
+          "text": "从经审核的世界地点图卡中选择一处并说明想展示的特点。"
+        },
+        {
+          "stage": 2,
+          "title": "亲手共创体验",
+          "text": "在旅行馆放好地图位置、来源及介绍卡。"
+        },
+        {
+          "stage": 3,
+          "title": "点亮小岛回响",
+          "text": "回校园邀请伙伴参观，在小屋归档自己的小岛成长故事。"
+        }
+      ],
+      "world_keepsake": "校园毕业世界展开放，小屋相册汇总故事经历并单独显示英语学习状态。"
+    }
+  ]
+}

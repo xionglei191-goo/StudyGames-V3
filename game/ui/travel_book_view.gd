@@ -4,13 +4,13 @@ const Style = preload("res://ui/island_theme.gd")
 
 const SOCIAL_ORDER := ["journey:revisits", "journey:friend_corner", "journey:party", "journey:friends", "journey:orchard_play", "journey:p2:transfer"]
 const MEMORY_ORDER := ["journey:discoveries", "journey:letters", "journey:photo", "journey:p2:keepsakes", "journey:home", "journey:p2:home", "journey:old_journal", "journey:old_quest"]
-const STORY_ORDER := ["journey:library", "journey:books"]
+const STORY_ORDER := ["v4_chapter_atlas", "journey:library", "journey:books"]
 const ICONS := {
 	"friend_corner":"home", "party":"picnic", "friends":"flower_box",
 	"orchard_play":"apple", "transfer":"flower_box", "discoveries":"map",
 	"letters":"map", "photo":"picnic", "keepsakes":"journal", "home":"home",
 	"old_journal":"journal", "old_quest":"leaf", "library":"journal", "books":"science",
-	"revisits":"flower_box", "parent":"journal"
+	"revisits":"flower_box", "parent":"journal", "v4_chapter_atlas":"journal"
 }
 
 static func build(ui: Node, book_title: String, next_wish: String, visited: int, discoveries: int, entries: Array) -> void:
@@ -39,8 +39,8 @@ static func build(ui: Node, book_title: String, next_wish: String, visited: int,
 	v4_bar.name = "V4CozyQuickBar"
 	v4_bar.add_theme_constant_override("separation", 10)
 	right_page.add_child(v4_bar)
-	for quick: Array in [["👗 阳光换装镜台", "bag"], ["📖 3D 立体翻翻书", "journey:library"], ["🌱 家长 AI 观察室", "v4_parent_ai"]]:
-		var qbtn := ui.button(str(quick[0]), str(quick[1]), str(quick[1]) == "journey:library", Vector2(0, 44)) as Button
+	for quick: Array in [["👗 换装镜台", "bag"], ["🗺️ 八册 81 章", "v4_chapter_atlas"], ["📖 立体翻翻书", "journey:library"], ["🌱 AI 观察室", "v4_parent_ai"]]:
+		var qbtn := ui.button(str(quick[0]), str(quick[1]), str(quick[1]) == "v4_chapter_atlas", Vector2(0, 44)) as Button
 		qbtn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		qbtn.add_theme_font_size_override("font_size", 16)
 		v4_bar.add_child(qbtn)

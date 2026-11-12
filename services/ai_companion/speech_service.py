@@ -161,3 +161,59 @@ def _write_chime_wav(text: str, target: Path) -> None:
         wf.setsampwidth(2)
         wf.setframerate(sr)
         wf.writeframes(bytes(frames))
+
+
+def evaluate_follow_along(payload: dict[str, Any]) -> dict[str, Any]:
+    """Tolerant, zero-stress speaking encouragement for 7–12yo learners.
+
+    Never grades harsh pronunciation scores or blocks story progression.
+    Supports shy/silent reading mode as well as microphone energy/rhythm analysis.
+    """
+    target_text = " ".join(str(payload.get("target_text") or "Hello!").strip().split())[:120]
+    mode = str(payload.get("mode") or "voice").strip().lower()
+    rms_energy = float(payload.get("rms_energy") or 0.0)
+    duration_ms = int(payload.get("duration_ms") or 0)
+    wav_b64 = str(payload.get("wav_base64") or "").strip()
+
+    if wav_b64:
+        try:
+            raw = base64.b64decode(wav_b64)
+            if len(raw) > 48:
+                pcm = raw[44:]
+                count = len(pcm) // 2
+                if count > 0:
+                    samples = struct.unpack(f"<{count}h", pcm[: count * 2])
+                    sq = sum((s / 32768.0) ** 2 for s in samples)
+                    rms_energy = max(rms_energy, math.sqrt(sq / count))
+                    duration_ms = max(duration_ms, int(count / 22.05))
+        except Exception:
+            pass
+
+    if mode == "shy":
+        return {
+            "ok": True,
+            "mode": "shy",
+            "voice_detected": False,
+            "cheer_badge": "🌿 安心默读星",
+            "reply_en": f'Listening in your heart is great too! "{target_text}" stays with you!',
+            "reply_zh": f"在心里轻轻默读「{target_text}」也很棒！不着急，想开口时随时都可以 ✨",
+        }
+
+    if rms_energy >= 0.012 or duration_ms >= 550:
+        return {
+            "ok": True,
+            "mode": "voice",
+            "voice_detected": True,
+            "cheer_badge": "🌟 自信开口星",
+            "reply_en": f'Sunny voice! You spoke "{target_text}" so warmly and bravely!',
+            "reply_zh": f"声音真洪亮温暖！刚才跟读「{target_text}」超级自信，为你鼓掌 🌟",
+        }
+
+    return {
+        "ok": True,
+        "mode": "voice",
+        "voice_detected": True,
+        "cheer_badge": "✨ 勇敢轻声星",
+        "reply_en": f'I heard your gentle voice trying "{target_text}"! Wonderful try!',
+        "reply_zh": f"听到了你轻轻跟读「{target_text}」的声音！勇敢开口就是最棒的进步 ✨",
+    }

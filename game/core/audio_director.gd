@@ -44,7 +44,7 @@ func set_enabled(on: bool) -> void:
 	else:
 		apply_room_soundscape(current_room)
 
-func apply_room_soundscape(room_id: String) -> void:
+func apply_room_soundscape(room_id: String, weather_id: String = "clear") -> void:
 	current_room = room_id
 	if not enabled or not is_instance_valid(_bgm_player):
 		return
@@ -55,11 +55,23 @@ func apply_room_soundscape(room_id: String) -> void:
 		_bgm_player.play()
 
 	var outdoor := room_id in ["village", "home_estate", "school", "playground", "football_field"] or room_id.begins_with("landmark_")
-	var amb_key := "amb_breeze" if outdoor else "amb_indoor"
+	var amb_key := "amb_rain" if (outdoor and weather_id == "light_rain") else ("amb_breeze" if outdoor else "amb_indoor")
 	var amb_stream := _clips.get(amb_key) as AudioStreamWAV
 	if amb_stream != null and (_ambience_player.stream != amb_stream or not _ambience_player.playing):
 		_ambience_player.stream = amb_stream
 		_ambience_player.play()
+
+func play_footstep_for_room(room_id: String) -> void:
+	if not enabled:
+		return
+	var surface := "step_grass"
+	if room_id.begins_with("home") and room_id != "home_estate":
+		surface = "step_wood"
+	elif room_id in ["classroom", "music_room", "art_room", "landmark_C", "landmark_H", "landmark_O", "landmark_Q", "landmark_Y"]:
+		surface = "step_wood"
+	elif room_id in ["school", "canteen", "science_room", "landmark_G", "landmark_R", "landmark_S", "landmark_T", "landmark_Z"]:
+		surface = "step_stone"
+	play_foley(surface)
 
 func play_foley(kind: String) -> void:
 	if not enabled or not is_instance_valid(_foley_player):
@@ -89,10 +101,14 @@ func _build_soundbank() -> void:
 
 	_clips["amb_breeze"] = _synth_breeze_loop(5.0, true)
 	_clips["amb_indoor"] = _synth_breeze_loop(5.0, false)
+	_clips["amb_rain"] = _synth_rain_loop(4.5)
 	_clips["page_flip"] = _synth_page_flip()
 	_clips["slot_snap"] = _synth_wooden_pop(587.33, 880.0)
 	_clips["bubble_pop"] = _synth_wooden_pop(440.0, 659.25)
 	_clips["wardrobe_sparkle"] = _synth_sparkle()
+	_clips["step_grass"] = _synth_footstep("grass")
+	_clips["step_wood"] = _synth_footstep("wood")
+	_clips["step_stone"] = _synth_footstep("stone")
 
 func _to_wav(samples: PackedFloat32Array, loop: bool = false) -> AudioStreamWAV:
 	var pcm := PackedByteArray()
@@ -191,3 +207,42 @@ func _synth_sparkle() -> AudioStreamWAV:
 			var t := float(j) / float(SAMPLE_RATE)
 			buf[start + j] = clampf(buf[start + j] + sin(TAU * f * t) * exp(-t * 9.5) * 0.20, -0.9, 0.9)
 	return _to_wav(buf, false)
+
+func _synth_footstep(surface: String) -> AudioStreamWAV:
+	var count := int(0.11 * SAMPLE_RATE)
+	var buf := PackedFloat32Array()
+	buf.resize(count)
+	var rng := RandomNumberGenerator.new()
+	rng.seed = surface.hash()
+	var lp := 0.0
+	for i in range(count):
+		var t := float(i) / float(SAMPLE_RATE)
+		var raw := rng.randf_range(-1.0, 1.0)
+		if surface == "grass":
+			lp = lp * 0.72 + raw * 0.28
+			var env := sin(PI * clampf(t / 0.10, 0.0, 1.0)) * exp(-t * 18.0)
+			buf[i] = lp * env * 0.22
+		elif surface == "wood":
+			var thump := sin(TAU * 165.0 * t) * exp(-t * 36.0) * 0.28 + sin(TAU * 310.0 * t) * exp(-t * 48.0) * 0.14
+			buf[i] = clampf(thump, -0.8, 0.8)
+		else:
+			lp = lp * 0.45 + raw * 0.55
+			var click := (sin(TAU * 520.0 * t) * 0.16 + lp * 0.20) * exp(-t * 44.0)
+			buf[i] = clampf(click, -0.8, 0.8)
+	return _to_wav(buf, false)
+
+func _synth_rain_loop(duration: float) -> AudioStreamWAV:
+	var count := int(duration * SAMPLE_RATE)
+	var buf := PackedFloat32Array()
+	buf.resize(count)
+	var rng := RandomNumberGenerator.new()
+	rng.seed = 20261112
+	var lp := 0.0
+	for i in range(count):
+		var white := rng.randf_range(-1.0, 1.0)
+		lp = lp * 0.84 + white * 0.16
+		var drop := 0.0
+		if rng.randf() < 0.0025:
+			drop = rng.randf_range(-0.18, 0.18)
+		buf[i] = clampf(lp * 0.14 + drop, -0.85, 0.85)
+	return _to_wav(buf, true)

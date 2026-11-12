@@ -7,6 +7,7 @@ extends Control
 signal action_triggered(action_id: String)
 signal ai_chat_submitted(npc_id: String, message: String)
 signal speak_requested(text: String, lang: String)
+signal follow_along_submitted(target_text: String, mode: String, rms_energy: float, duration_ms: int)
 signal hint_toggled(npc_id: String, shown: bool)
 signal closed
 
@@ -72,6 +73,15 @@ func _build_ui() -> void:
 			speak_requested.emit(current_en, "en")
 	)
 	top_row.add_child(listen_btn)
+
+	var follow_btn := _mini_pill("🎤 跟读试试")
+	follow_btn.pressed.connect(func(): _start_follow_along("voice"))
+	top_row.add_child(follow_btn)
+
+	var shy_btn := _mini_pill("🤫 默读")
+	shy_btn.tooltip_text = "害羞或安静环境下，在心里默读也可以获得鼓励星"
+	shy_btn.pressed.connect(func(): _start_follow_along("shy"))
+	top_row.add_child(shy_btn)
 
 	_hint_btn = _mini_pill("💡 中文贴士")
 	_hint_btn.pressed.connect(func():
@@ -183,6 +193,34 @@ func open_conversation(config: Dictionary) -> void:
 	_update_positions()
 	if bool(config.get("auto_speak", true)) and not current_en.is_empty():
 		speak_requested.emit(current_en, "en")
+
+func _start_follow_along(mode: String) -> void:
+	var phrase := current_en if not current_en.is_empty() else "Hello!"
+	if mode == "shy":
+		follow_along_submitted.emit(phrase, "shy", 0.0, 0)
+		return
+	if DisplayServer.get_name() == "headless":
+		follow_along_submitted.emit(phrase, "voice", 0.042, 850)
+		return
+	_zh_label.text = "🎙️ 正在温暖倾听你跟读：「%s」……" % phrase.left(48)
+	_zh_label.visible = true
+	_update_positions()
+	var peak_db := AudioServer.get_bus_peak_volume_left_db(0, 0)
+	var est_rms := clampf(db_to_linear(maxf(peak_db, -32.0)), 0.018, 0.25)
+	await get_tree().create_timer(0.85).timeout
+	if is_inside_tree() and visible:
+		follow_along_submitted.emit(phrase, "voice", est_rms, 880)
+
+func show_speech_encouragement(reply: Dictionary) -> void:
+	var badge := str(reply.get("cheer_badge", "🌟 自信开口星"))
+	var rep_en := str(reply.get("reply_en", current_en))
+	var rep_zh := str(reply.get("reply_zh", ""))
+	_en_label.text = rep_en
+	_zh_label.text = "%s · %s" % [badge, rep_zh]
+	_zh_label.visible = true
+	_update_positions()
+	if not rep_en.is_empty():
+		speak_requested.emit(rep_en, "en")
 
 func show_ai_reply(reply: Dictionary) -> void:
 	current_en = str(reply.get("reply_en", current_en))

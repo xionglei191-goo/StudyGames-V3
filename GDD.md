@@ -1,6 +1,9 @@
 # 字母岛 · 游戏设计文档（GDD）
 
-版本：1.0 策划整合基线（2026-10-22）；实施状态更新：2026-10-24（Asia/Shanghai）。适用项目：StudyGames V3 / LoveStudy，当前工程版本 **0.11.0-dev**。
+> [!IMPORTANT]
+> **V4 全量完成状态同步（2026-11-12）**：工程已全面升级至 **StudyGames v4.0.0 · 精致微缩童话岛全量完成版**（Godot 4.7 `forward_plus` + 本地 AI 安全伴学轻服务 `services/ai_companion/`）。原先策划中待后续开发的 **全 8 册 81 单元三幕生活主线与永久 3D 章节纪念牌**（`game/data/learning/curriculum_arcs_v4.json` + `game/gameplay/unit_storyline_director.gd` + `game/ui_v4/chapter_atlas_view.gd`）、**全岛 30 个场景（26 字母地标 A–Z + 小院 + 校园三区）亲手捧物与工坊分享台**（`game/gameplay/tactile_life_quests.gd`）、**100% 去考卷弹窗世界绘本对话气泡**（`game/ui_v4/diegetic_dialogue.gd`）、**包容式口语跟读喝彩与害羞默读**、以及 **1,314 词 3D 精装立体翻翻书剧场**（`game/theater/popup_book_theater.gd`）均已全量落地并通过自动化回归验收。下文第 1–5 节保留 2026-10 策划整合时的原始历史快照供溯源。
+
+版本：1.0 策划整合基线（2026-10-22）；实施状态更新：2026-11-12（Asia/Shanghai）。适用项目：StudyGames V4 / LoveStudy，当前工程版本 **v4.0.0（全量完成版）**。
 
 本文汇总主线、八册单词故事与动态美术策划，并统一它们之间的规则。**“最终策划”表示本轮已经对齐的制作基线，不表示游戏已经实现这些内容，也不替代后续教材编辑、人物图像核对和儿童试玩。**
 

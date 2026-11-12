@@ -165,4 +165,21 @@ def test_asgi_endpoints_end_to_end() -> None:
             assert rep.status_code == 200
             assert "湘少版四年级上册" in rep.json()["narrative_zh"]
 
+            enc_voice = await client.post(
+                "/api/v4/speech/encourage",
+                json={"target_text": "Good morning!", "mode": "voice", "rms_energy": 0.045, "duration_ms": 950},
+            )
+            assert enc_voice.status_code == 200
+            assert enc_voice.json()["ok"] is True
+            assert enc_voice.json()["voice_detected"] is True
+            assert "Good morning!" in enc_voice.json()["reply_en"]
+
+            enc_shy = await client.post(
+                "/api/v4/speech/encourage",
+                json={"target_text": "Good morning!", "mode": "shy"},
+            )
+            assert enc_shy.status_code == 200
+            assert enc_shy.json()["ok"] is True
+            assert enc_shy.json()["mode"] == "shy"
+
     asyncio.run(_exercise())

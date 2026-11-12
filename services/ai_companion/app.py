@@ -14,7 +14,7 @@ from starlette.routing import Route
 
 from . import __version__
 from .npc_companion import generate_npc_reply
-from .speech_service import synthesize_speech
+from .speech_service import evaluate_follow_along, synthesize_speech
 from .stealth_mastery import build_parent_weekly_report, update_irt_mastery
 
 
@@ -64,6 +64,14 @@ async def parent_report(request: Request) -> JSONResponse:
     return JSONResponse(build_parent_weekly_report(body if isinstance(body, dict) else {}))
 
 
+async def speech_encourage(request: Request) -> JSONResponse:
+    try:
+        body = await request.json()
+    except Exception:
+        return JSONResponse({"ok": False, "error": "invalid_json"}, status_code=400)
+    return JSONResponse(evaluate_follow_along(body if isinstance(body, dict) else {}))
+
+
 app = Starlette(
     debug=False,
     middleware=[
@@ -78,6 +86,7 @@ app = Starlette(
         Route("/health", health, methods=["GET"]),
         Route("/api/v4/npc/chat", npc_chat, methods=["POST"]),
         Route("/api/v4/tts/speak", tts_speak, methods=["POST"]),
+        Route("/api/v4/speech/encourage", speech_encourage, methods=["POST"]),
         Route("/api/v4/mastery/observe", mastery_observe, methods=["POST"]),
         Route("/api/v4/parent/report", parent_report, methods=["POST"]),
     ],

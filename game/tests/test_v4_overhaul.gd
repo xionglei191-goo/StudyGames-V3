@@ -5,6 +5,8 @@ extends SceneTree
 const Wardrobe = preload("res://actors/modular_wardrobe.gd")
 const Content = preload("res://ui/memory_story_content.gd")
 const CurriculumDirector = preload("res://gameplay/curriculum_quest_director.gd")
+const StoryDirector = preload("res://gameplay/unit_storyline_director.gd")
+const TactileQuests = preload("res://gameplay/tactile_life_quests.gd")
 
 var _failures: Array[String] = []
 var _main: Node3D
@@ -162,6 +164,84 @@ func _run() -> void:
 			await _wait_frames(3)
 		_main._close()
 
+	# 8. Verify All 30 Tactile Life Rooms (26 Landmarks A-Z + Home Courtyard + Campus) & Persistent EchoCraft
+	_check("all_30_tactile_rooms_configured", TactileQuests.ROOM_QUEST_SPECS.size() == 30)
+	for code_idx in range(26):
+		var letter_key := "landmark_" + char(65 + code_idx)
+		_check("tactile_spec_present_" + letter_key, TactileQuests.ROOM_QUEST_SPECS.has(letter_key))
+	await _main.change_room("landmark_B")
+	await _wait_room("landmark_B")
+	_check("landmark_B_station_spawned", _main.tactile_quests.get_node_or_null("CozyCraftStation") != null and _main.tactile_quests._pickups.size() == 3)
+	if not _main.tactile_quests._pickups.is_empty():
+		var boat_node: Node3D = _main.tactile_quests._pickups[0].get("node") as Node3D
+		var coins_before_boat := int(state.data.coins)
+		if boat_node != null:
+			_main.player.global_position = Vector3(boat_node.global_position.x, _main.player.global_position.y, boat_node.global_position.z)
+			await _wait_frames(5)
+			_check("landmark_B_boat_picked", _main.tactile_quests.held_kind == "boat" and str(_main.player.visual.carried_item) == "boat")
+			_main.player.global_position = Vector3(_main.tactile_quests._basket_pos.x, _main.player.global_position.y, _main.tactile_quests._basket_pos.z)
+			await _wait_frames(5)
+			_check("landmark_B_boat_delivered_with_coin_reward", _main.tactile_quests.held_kind == "" and int(state.data.coins) == coins_before_boat + 4)
+			state.load_state()
+			_main.tactile_quests.attach_to_room(_main, "landmark_B")
+			await _wait_frames(2)
+			_check("landmark_B_persistent_echocraft_survives_reload", int(state.data.v4.landmark_crafts.get("landmark_B", 0)) == 1 and _main.tactile_quests.get_node_or_null("EchoCraft_0") != null)
+
+	# 9. Verify Full 8-Book / 81-Unit 3-Stage Cozy Storyline Engine, Chapter Atlas UI, and 3D World Keepsake Plaque
+	var arc_units := StoryDirector.all_units()
+	_check("story_director_81_units_loaded", arc_units.size() == 81 and StoryDirector.books().size() == 8)
+	var valid_story_units := 0
+	for u: Dictionary in arc_units:
+		if not str(u.get("primary_room", "")).is_empty() and (u.get("stages", []) as Array).size() == 3 and not str(u.get("world_keepsake", "")).is_empty():
+			valid_story_units += 1
+	_check("all_81_story_units_have_3_stages_and_keepsake", valid_story_units == 81)
+
+	await _main._on_action("v4_chapter_atlas")
+	await _wait_frames(3)
+	_check("chapter_atlas_ui_opens", _main.ui.current_panel == "v4_chapter_atlas")
+	await _main._on_action("v4_chap_go:xiangshao-g4-1:unit-3")
+	await _wait_frames(5)
+	var active_chap := StoryDirector.active_chapter(state)
+	var ckey := str(active_chap.get("chapter_key", ""))
+	_check("chapter_go_teleported_to_primary_room", ckey == "xiangshao-g4-1/unit-3" and _main.room == str(active_chap.get("primary_room", "")) and _main.ui.diegetic.visible)
+	var coins_before_chap := int(state.data.coins)
+	await _main._on_action("v4_chap_step:1:" + ckey)
+	await _wait_frames(2)
+	_check("chapter_stage_1_recorded", state.v4_chapter_stage(ckey) == 1)
+	await _main._on_action("v4_chap_step:2:" + ckey)
+	await _wait_frames(2)
+	_check("chapter_stage_2_recorded", state.v4_chapter_stage(ckey) == 2)
+	await _main._on_action("v4_chap_step:3:" + ckey)
+	await _wait_frames(3)
+	_check("chapter_stage_3_completed_with_coins_and_plaque", state.v4_chapter_stage(ckey) == 3 and int(state.data.coins) == coins_before_chap + 12 and _main.tactile_quests.get_node_or_null("ChapterWorldKeepsake") != null)
+	state.load_state()
+	_check("chapter_stage_3_persists_reload", state.v4_chapter_stage(ckey) == 3 and StoryDirector.total_completed_chapters(state) >= 1)
+	_main._close()
+
+	# 10. Verify 100% Diegetic Normal Play (Zero Exam Modals), Commission Completion & Tolerant Voice Encouragement
+	_main.validation_mode = false
+	await _main.change_room("classroom")
+	await _wait_room("classroom")
+	await _main.interact_id("teacher")
+	await _wait_frames(3)
+	_check("classroom_teacher_uses_diegetic_bubble_no_exam_modal", _main.ui.diegetic.visible and not _main.ui.modal.visible)
+	_main.ui.diegetic.follow_along_submitted.emit("Good morning!", "voice", 0.35, 920)
+	await _wait_frames(15)
+	_check("voice_follow_along_cheer_recorded", int(state.data.v4.get("voice_cheers", 0)) >= 1)
+	var coins_before_comm := int(state.data.coins)
+	_main._handle_v4_commission_pick("1:morning:test-comm-01:textbook_miss_li:xiangshao-g3-1-u1-hello")
+	await _wait_frames(2)
+	_check("commission_completion_grants_coins", int(state.data.coins) == coins_before_comm + 6 and (state.data.v4.completed_commissions as Array).has("test-comm-01"))
+	_main._close()
+
+	await _main.change_room("canteen")
+	await _wait_room("canteen")
+	await _main.interact_id("lunch")
+	await _wait_frames(3)
+	_check("canteen_lunch_uses_diegetic_bubble", _main.ui.diegetic.visible and not _main.ui.modal.visible)
+	_main._close()
+	_main.validation_mode = true
+
 	# Clean up isolated validation save files
 	var abs_save := ProjectSettings.globalize_path(str(state.save_path))
 	for suffix: String in ["", ".bak", ".tmp"]:
@@ -174,7 +254,7 @@ func _finish() -> void:
 	if is_instance_valid(_main):
 		_main.queue_free()
 	if _failures.is_empty():
-		print("PASS: StudyGames V4 overhaul (Forward+, Diorama Plinths, 3D Wardrobe, Tactile Orchard, 8-Book/81-Unit Commissions, 3D Pop-up Book Theater, Stealth Assessment)")
+		print("PASS: StudyGames V4 full completion (Forward+, 44-Scene Diorama Plinths, 6x5x4 3D Wardrobe, 30-Room Tactile Life Stations + EchoCraft, 8-Book/81-Unit 3-Stage Cozy Storylines + Chapter Atlas + 3D Plaques, 100% Diegetic Bubbles, Tolerant Voice Encouragement, 3D Pop-up Book Theater, Stealth IRT)")
 		quit(0)
 	else:
 		print("FAIL: %d checks failed: %s" % [_failures.size(), ", ".join(_failures)])

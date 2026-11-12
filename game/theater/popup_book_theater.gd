@@ -180,6 +180,7 @@ func _build_layout() -> void:
 	title_box.add_child(_subtitle_label)
 
 	top_bar.add_child(_pill_btn("🔊 听读音", _on_speak_word, false))
+	top_bar.add_child(_pill_btn("🎤 跟读", _on_follow_along_word, false))
 	top_bar.add_child(_pill_btn("✨ 演立体剧", _on_play_theater, false))
 	top_bar.add_child(_pill_btn("💡 小提示", _on_gentle_hint, false))
 	top_bar.add_child(_pill_btn("🧩 拼立体卡", _on_toggle_puzzle, true))
@@ -741,6 +742,24 @@ func _on_speak_word() -> void:
 		var bus := (Engine.get_main_loop() as SceneTree).root.get_node_or_null("EventBus")
 		if bus != null:
 			bus.tts_speak_requested.emit(word, "en", "storyteller")
+
+func _on_follow_along_word() -> void:
+	var word := str(entry.get("spelling_display", "")).strip_edges()
+	if word.is_empty():
+		return
+	_on_speak_word()
+	_story_banner.text = "🎙️ 跟着读一读：「%s」…… 声音真好听！🌟 已收下一颗自信开口星！" % word
+	if Engine.get_main_loop() is SceneTree:
+		var root_node := (Engine.get_main_loop() as SceneTree).root
+		var st := root_node.get_node_or_null("State")
+		if st != null and st.has_method("record_voice_cheer"):
+			st.record_voice_cheer()
+			st.record_stealth_evidence({
+				"word": word,
+				"support_level": 1,
+				"correct": true,
+				"context": "popup_follow_along"
+			})
 
 func _on_play_theater() -> void:
 	if view_mode != "story":

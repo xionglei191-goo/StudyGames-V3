@@ -14,12 +14,15 @@ const AudioDirectorScript = preload("res://core/audio_director.gd")
 const AICompanionBridgeScript = preload("res://core/ai_companion_bridge.gd")
 const TactileQuestsScript = preload("res://gameplay/tactile_life_quests.gd")
 const CurriculumDirector = preload("res://gameplay/curriculum_quest_director.gd")
+const StoryDirector = preload("res://gameplay/unit_storyline_director.gd")
 const ParentAIPortal = preload("res://ui_v4/parent_ai_portal.gd")
+const ChapterAtlasView = preload("res://ui_v4/chapter_atlas_view.gd")
 var online: Node
 var audio_director: Node
 var ai_bridge: Node
 var tactile_quests: Node3D
 var _commission_hint_used := false
+var _pending_chapter_popup_key := ""
 var online_config: Dictionary = {}
 var world: Node3D
 var player: CharacterBody3D
@@ -140,6 +143,18 @@ func _ready() -> void:
 		if is_instance_valid(ui) and is_instance_valid(ui.diegetic) and ui.diegetic.visible:
 			ui.diegetic.show_ai_reply(reply)
 	)
+	ai_bridge.speech_encouragement_ready.connect(func(reply: Dictionary):
+		State.record_voice_cheer()
+		var target_w := str(reply.get("target_text", "")).strip_edges().split(" ")[0].to_lower()
+		if not target_w.is_empty():
+			State.record_stealth_evidence({"word": target_w, "support_level": 1, "correct": true, "context": "voice_follow_along"})
+		if is_instance_valid(audio_director):
+			audio_director.play_foley("wardrobe_sparkle")
+		if is_instance_valid(ui) and is_instance_valid(ui.diegetic) and ui.diegetic.visible:
+			ui.diegetic.show_speech_encouragement(reply)
+		else:
+			ui.notify("🎤 " + str(reply.get("encouragement_zh", "读得真棒！")))
+	)
 	var bus := get_node_or_null("/root/EventBus")
 	if bus != null:
 		bus.stealth_evidence_observed.connect(func(payload: Dictionary): State.record_stealth_evidence(payload))
@@ -192,10 +207,34 @@ func _ready() -> void:
 		feedback.pickup(player.position, player.position, "apple", "+1 鲜果入篮")
 		ui.notify("太棒啦！亲手把第 %d 颗果实放进了藤编果篮！" % total_deliv)
 	)
+	tactile_quests.item_picked.connect(func(_kind: String, word_en: String, room_id: String):
+		if room_id == "landmark_A": return
+		if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
+		if is_instance_valid(ai_bridge): ai_bridge.speak_text(word_en, "en", "warm")
+		ui.notify("双手捧起了 %s！快走到发光工坊分享台放好吧 ✨" % word_en)
+	)
+	tactile_quests.station_delivered.connect(func(room_id: String, craft_total: int, word_en: String):
+		if room_id == "landmark_A": return
+		State.record_stealth_evidence({"word": word_en.to_lower(), "support_level": 0, "correct": true, "context": "tactile_station:" + room_id})
+		if is_instance_valid(audio_director): audio_director.play_foley("wardrobe_sparkle")
+		var badge_text := "+4 叶币" if craft_total <= 3 else "✨ 共创纪念"
+		feedback.pickup(player.position, player.position, "leaf", badge_text)
+		var active_chap := StoryDirector.active_chapter(State)
+		var ckey := str(active_chap.get("chapter_key", ""))
+		if not ckey.is_empty() and str(active_chap.get("primary_room", "")) == room_id and State.v4_chapter_stage(ckey) == 1:
+			State.advance_v4_chapter(ckey, 2, 0)
+			ui.notify("🌟 亲手放好了 %s，本章第 2 幕共创完成！快找伙伴点亮终幕纪念牌吧！" % word_en)
+		else:
+			ui.notify("太棒啦！这里新增了你亲手安放的 %s（累计共创 %d 件）！" % [word_en, craft_total])
+	)
 	if is_instance_valid(ui.diegetic):
 		ui.diegetic.camera = camera
 		ui.diegetic.speak_requested.connect(func(t: String, l: String):
 			if is_instance_valid(ai_bridge): ai_bridge.speak_text(t, l, "warm")
+		)
+		ui.diegetic.follow_along_submitted.connect(func(target_text: String, mode: String, rms_peak: float, duration_ms: int):
+			if is_instance_valid(ai_bridge):
+				ai_bridge.request_speech_encouragement(target_text, mode, rms_peak, duration_ms)
 		)
 		ui.diegetic.hint_toggled.connect(func(_npc: String, shown: bool):
 			if shown: _commission_hint_used = true
@@ -334,7 +373,7 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	if is_instance_valid(tactile_quests):
 		tactile_quests.attach_to_room(self, room)
 	if is_instance_valid(audio_director):
-		audio_director.apply_room_soundscape(room)
+		audio_director.apply_room_soundscape(room, str(living.weather_id) if is_instance_valid(living) else "clear")
 	if is_instance_valid(journey):
 		journey.on_room_ready()
 	_refresh()
@@ -512,6 +551,8 @@ func _process(delta: float) -> void:
 	step_clock -= delta
 	if player.velocity.length()>1.5 and player.is_on_floor() and not player.locked and step_clock<=0:
 		sounds.play("step")
+		if is_instance_valid(audio_director):
+			audio_director.play_footstep_for_room(room)
 		step_clock = 0.34
 	if ui.bubble_panel.visible:
 		ui.bubble_panel.position = camera.unproject_position(bubble_world_position)+Vector2(-100,-106)
@@ -808,20 +849,114 @@ func interact_id(id: String) -> void:
 		"village_exit":
 			var door := "school_gate" if room=="school" else (room if room.begins_with("landmark_") else "home_gate")
 			await change_room("village", door)
-		"teacher": show_lessons()
+		"teacher":
+			if not validation_mode and is_instance_valid(ui.diegetic):
+				play_phrase("good_morning")
+				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
+				var chap := StoryDirector.active_chapter(State)
+				ui.diegetic.open_conversation({
+					"npc_id": "textbook_miss_li",
+					"speaker": "李老师 · 阳光故事圈",
+					"en": "Good morning! No exams here — let's share today's cozy story \"%s\" or try a storybook sticker together!" % str(chap.get("source_title", "Hello")),
+					"zh": "早上好呀！阳光教室没有考试题板，只有温馨故事会！今天想开启「%s · U%d %s」三幕共创，还是贴一张单元手账贴纸？" % [str(chap.get("book_title", "三年级上册")), int(chap.get("unit_number", 1)), str(chap.get("event_title", "小岛故事"))],
+					"world_pos": conversation_position,
+					"auto_speak": false,
+					"actions": [
+						{"label": "🚀 开启本章三幕共创", "id": "v4_chap_open_here", "primary": true},
+						{"label": "🌟 贴一张单元手账贴纸", "id": "v4_commission:textbook_miss_li"},
+						{"label": "🗺️ 八册 81 章故事画册", "id": "v4_chapter_atlas"},
+						{"label": "🔊 Good morning!", "id": "audio:good_morning"},
+						{"label": "先在教室逛逛", "id": "close"}
+					]
+				})
+			else:
+				show_lessons()
 		"lunch":
 			play_phrase("milk")
-			ui.show_panel("lunch","今天想吃点什么？","校园食堂   /   生活英语","和食堂阿姨一起认识食物。\n点选食物，就能听到它的英文名字。",[{"label":"牛奶  milk","id":"audio:milk","primary":true},{"label":"面包  bread","id":"audio:bread"},{"label":"蛋糕  cake","id":"audio:cake"},{"label":"谢谢阿姨  Thank you.","id":"audio:thank_you"}],"这里是自由体验，不计为独立掌握。")
+			if not validation_mode and is_instance_valid(ui.diegetic):
+				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
+				ui.diegetic.open_conversation({
+					"npc_id": "npc_bear_uncle",
+					"speaker": "食堂主厨 · 暖香餐台",
+					"en": "Welcome to our sunny canteen! Would you like warm milk, soft bread, or a sweet cake? You can also carry tray items on the floor!",
+					"zh": "欢迎来到校园阳光餐厅！点选食物听听英文发音，或者走过去双手捧起地面上的牛奶盒和面包送到餐盘分享台吧！",
+					"world_pos": conversation_position,
+					"auto_speak": false,
+					"actions": [
+						{"label": "🥛 牛奶 milk", "id": "audio:milk", "primary": true},
+						{"label": "🍞 面包 bread", "id": "audio:bread"},
+						{"label": "🎂 蛋糕 cake", "id": "audio:cake"},
+						{"label": "💛 谢谢 Thank you!", "id": "audio:thank_you"},
+						{"label": "去端餐盘好物", "id": "close"}
+					]
+				})
+			else:
+				ui.show_panel("lunch","今天想吃点什么？","校园食堂   /   生活英语","和食堂阿姨一起认识食物。\n点选食物，就能听到它的英文名字。",[{"label":"牛奶  milk","id":"audio:milk","primary":true},{"label":"面包  bread","id":"audio:bread"},{"label":"蛋糕  cake","id":"audio:cake"},{"label":"谢谢阿姨  Thank you.","id":"audio:thank_you"}],"这里是自由体验，不计为独立掌握。")
 		"sports":
 			play_phrase("how_old")
-			ui.show_panel("sports","操场上认识新朋友","课间   /   自由对话","How old are you?\n小伙伴想知道你几岁了。听一听示范，再试着说自己的年龄。",[{"label":"听听 I'm nine.","id":"audio:im_nine","primary":true},{"label":"回教室看看课程","id":"navigate:school_exit"}],"第一版不录音、不评判口语；听过或跟读不记为独立掌握。")
+			if not validation_mode and is_instance_valid(ui.diegetic):
+				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
+				ui.diegetic.open_conversation({
+					"npc_id": "textbook_peter",
+					"speaker": "操场伙伴 · 青草运动角",
+					"en": "Hi friend! How old are you? Come pick up a colorful ball on the grass and play with us!",
+					"zh": "嗨！小伙伴想认识你！你可以听听示范、点气泡上的「🎤 跟读试试」大胆开口，也可以去草地上双手捧起彩球放进收纳台！",
+					"world_pos": conversation_position,
+					"auto_speak": false,
+					"actions": [
+						{"label": "🔊 听听 I'm nine.", "id": "audio:im_nine", "primary": true},
+						{"label": "🚀 本章生活故事", "id": "v4_chap_open_here"},
+						{"label": "🌟 今日手账小委托", "id": "v4_commission:textbook_peter"},
+						{"label": "去草地捡球玩", "id": "close"}
+					]
+				})
+			else:
+				ui.show_panel("sports","操场上认识新朋友","课间   /   自由对话","How old are you?\n小伙伴想知道你几岁了。听一听示范，再试着说自己的年龄。",[{"label":"听听 I'm nine.","id":"audio:im_nine","primary":true},{"label":"回教室看看课程","id":"navigate:school_exit"}],"第一版不录音、不评判口语；听过或跟读不记为独立掌握。")
 		"bed":
-			ui.show_panel("bed","今天也是充实的一天","我的小屋   /   休息","睡一觉，明天的苹果就成熟了。\n小屋、装饰、叶币和学习记录都会保留。",[{"label":"睡到明天","id":"next_day","primary":true},{"label":"再玩一会儿","id":"close"}])
+			if not validation_mode and is_instance_valid(ui.diegetic):
+				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
+				ui.diegetic.open_conversation({
+					"npc_id": "npc_bear_uncle",
+					"speaker": "松软小床 · 晚安时光",
+					"en": "Good night, little explorer! Sleep tight — tomorrow fresh apples and sunny adventures await!",
+					"zh": "今天也是充实又温暖的一天！睡一觉，明天的果园苹果又会熟透啦，所有装饰、叶币和成长手账都会稳稳保留。",
+					"world_pos": conversation_position,
+					"show_zh_immediately": true,
+					"auto_speak": true,
+					"actions": [
+						{"label": "🌙 晚安，睡到明天", "id": "next_day", "primary": true},
+						{"label": "✨ 再玩一会儿", "id": "close"}
+					]
+				})
+			else:
+				ui.show_panel("bed","今天也是充实的一天","我的小屋   /   休息","睡一觉，明天的苹果就成熟了。\n小屋、装饰、叶币和学习记录都会保留。",[{"label":"睡到明天","id":"next_day","primary":true},{"label":"再玩一会儿","id":"close"}])
 		"decorate": show_decorate()
 		"host":
 			var activity := _room_activity()
 			if not activity.is_empty():
 				start_activity(activity)
+			elif not validation_mode and is_instance_valid(ui.diegetic) and room.begins_with("landmark_"):
+				var letter_code := room.trim_prefix("landmark_")
+				var spec: Dictionary = TactileQuestsScript.ROOM_QUEST_SPECS.get(room, {})
+				var word_en := str(spec.get("word", letter_code))
+				var st_name := str(spec.get("station", "手作分享台"))
+				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
+				ui.diegetic.open_conversation({
+					"npc_id": "npc_bear_uncle",
+					"speaker": "%s 馆主理人 · %s" % [letter_code, st_name],
+					"en": "Welcome to Landmark %s! \"%s\" starts with %s! Pick up the 3D %s items nearby and place them on our %s!" % [letter_code, word_en, letter_code, word_en.to_lower(), st_name],
+					"zh": "欢迎来到 %s 字母馆！在房间里走近发光的 3D「%s」就能双手捧起，送到「%s」会留下永久小岛手作纪念哦！" % [letter_code, word_en, st_name],
+					"world_pos": conversation_position,
+					"show_zh_immediately": true,
+					"auto_speak": true,
+					"actions": [
+						{"label": "🃏 收集 %s 字母发现卡" % letter_code, "id": "journey:inspect:" + letter_code, "primary": true},
+						{"label": "🚀 本章三幕共创", "id": "v4_chap_open_here"},
+						{"label": "🌟 今日手账小委托", "id": "v4_commission:npc_bear_uncle"},
+						{"label": "🗺️ 看看五处回忆点", "id": "map"},
+						{"label": "去捧起 3D 好物", "id": "close"}
+					]
+				})
 			else:
 				show_place()
 
@@ -1165,6 +1300,67 @@ func _handle_v4_commission_pick(payload: String) -> void:
 			audio_director.play_foley("bubble_pop")
 		ui.notify("差一点点！点一下气泡右上角的「💡 中文贴士」或打开 3D 立体翻翻书看看吧 ✨")
 
+func open_active_v4_chapter() -> void:
+	var chap := StoryDirector.active_chapter(State)
+	if chap.is_empty():
+		return
+	_close()
+	var target_room := str(chap.get("primary_room", "village"))
+	if not target_room.is_empty() and room != target_room:
+		await change_room(target_room)
+	var host_npc := str(chap.get("host_npc_id", "npc_bear_uncle"))
+	var anchor_pos := player.position + Vector3(1.1, 0.0, -1.0)
+	if is_instance_valid(living):
+		var actor_node: Node3D = living.get_actor(host_npc)
+		if is_instance_valid(actor_node):
+			anchor_pos = actor_node.position
+			actor_node.face(player.position)
+	for entry: Dictionary in interactions:
+		if str(entry.get("id", "")) in ["host", "teacher", "baker", "gardener", "lunch", "sports"]:
+			anchor_pos = entry.position
+			break
+	conversation_position = anchor_pos
+	player.face(anchor_pos)
+	if is_instance_valid(audio_director):
+		audio_director.play_foley("bubble_pop")
+	if is_instance_valid(ui.diegetic):
+		ui.diegetic.open_conversation(StoryDirector.build_stage_dialogue(State, chap, anchor_pos))
+
+func _handle_v4_chapter_step(payload: String) -> void:
+	var parts := payload.split(":", true, 1)
+	if parts.size() < 2:
+		return
+	var target_stage := int(parts[0])
+	var ckey := parts[1]
+	var chap := StoryDirector.get_chapter_by_key(ckey)
+	if chap.is_empty():
+		return
+	var prev_stage := State.v4_chapter_stage(ckey)
+	var bonus := 12 if (target_stage >= 3 and prev_stage < 3) else 0
+	State.advance_v4_chapter(ckey, target_stage, bonus)
+	var lead_w := str(chap.get("lead_word", "")).to_lower()
+	if not lead_w.is_empty():
+		State.record_stealth_evidence({
+			"word": lead_w,
+			"support_level": 1 if target_stage < 3 else 0,
+			"correct": true,
+			"context": "v4_chapter_stage_%d:%s" % [target_stage, ckey]
+		})
+	if target_stage >= 3:
+		if is_instance_valid(audio_director):
+			audio_director.play_foley("wardrobe_sparkle")
+		player.gesture("wave")
+		feedback.pickup(player.position, player.position, "leaf", "🏅 +12 叶币 · 章节纪念牌" if bonus > 0 else "🏅 章节纪念牌")
+		if is_instance_valid(tactile_quests):
+			tactile_quests.attach_to_room(self, room)
+		ui.notify("🎉 恭喜点亮「%s · U%d %s」！场景里已立起永久章节纪念牌！" % [str(chap.get("book_title", "")), int(chap.get("unit_number", 1)), str(chap.get("event_title", ""))])
+	else:
+		if is_instance_valid(audio_director):
+			audio_director.play_foley("bubble_pop")
+	_refresh()
+	if is_instance_valid(ui.diegetic):
+		ui.diegetic.open_conversation(StoryDirector.build_stage_dialogue(State, chap, conversation_position))
+
 func _on_action(id: String) -> void:
 	if is_instance_valid(sounds) and not id.begins_with("note:"):
 		sounds.play("click")
@@ -1211,6 +1407,41 @@ func _on_action(id: String) -> void:
 	elif id == "v4_parent_ai":
 		if _prepare_screen():
 			ParentAIPortal.build(ui, State, ai_bridge)
+	elif id == "v4_chapter_atlas":
+		if _prepare_screen():
+			ChapterAtlasView.build(ui, State)
+	elif id.begins_with("v4_atlas_book:"):
+		var bid := id.trim_prefix("v4_atlas_book:")
+		State.journey_select_book(bid)
+		State.set_active_unit("unit-1")
+		if _prepare_screen():
+			ChapterAtlasView.build(ui, State)
+	elif id.begins_with("v4_atlas_unit:"):
+		var uparts := id.trim_prefix("v4_atlas_unit:").split(":", true, 1)
+		if uparts.size() == 2:
+			State.journey_select_book(uparts[0])
+			State.set_active_unit(uparts[1])
+			if _prepare_screen():
+				ChapterAtlasView.build(ui, State)
+	elif id.begins_with("v4_chap_go:"):
+		var gparts := id.trim_prefix("v4_chap_go:").split(":", true, 1)
+		if gparts.size() == 2:
+			State.journey_select_book(gparts[0])
+			State.set_active_unit(gparts[1])
+			await open_active_v4_chapter()
+	elif id == "v4_chap_open_here":
+		await open_active_v4_chapter()
+	elif id.begins_with("v4_chap_step:"):
+		_handle_v4_chapter_step(id.trim_prefix("v4_chap_step:"))
+	elif id.begins_with("v4_chap_popup:"):
+		var pparts := id.trim_prefix("v4_chap_popup:").split(":", true, 1)
+		if pparts.size() == 2 and not pparts[1].is_empty():
+			State.advance_v4_chapter(pparts[0], 1, 0)
+			_pending_chapter_popup_key = pparts[0]
+			if is_instance_valid(ui.diegetic):
+				ui.diegetic.dismiss()
+			if is_instance_valid(journey):
+				journey.open_story(pparts[1], false)
 	elif id.begins_with("open_popup_story:"):
 		var entry_id := id.trim_prefix("open_popup_story:")
 		if is_instance_valid(ui.diegetic):

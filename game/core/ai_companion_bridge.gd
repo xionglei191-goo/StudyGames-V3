@@ -5,6 +5,7 @@ extends Node
 
 signal chat_reply_ready(npc_id: String, reply: Dictionary)
 signal parent_report_ready(report: Dictionary)
+signal speech_encouragement_ready(reply: Dictionary)
 
 const DEFAULT_BASE_URL := "http://127.0.0.1:4195"
 const Wardrobe = preload("res://actors/modular_wardrobe.gd")
@@ -86,6 +87,75 @@ func speak_text(text: String, lang: String = "en", voice_hint: String = "warm") 
 	var err := req.request(base_url + "/api/v4/tts/speak", ["Content-Type: application/json"], HTTPClient.METHOD_POST, payload)
 	if err != OK:
 		req.queue_free()
+
+func observe_stealth_mastery(word: String, support_level: int, correct: bool, response_ms: int, _context_id: String = "") -> void:
+	if DisplayServer.get_name() == "headless" or word.strip_edges().is_empty():
+		return
+	var req := HTTPRequest.new()
+	req.timeout = 3.0
+	add_child(req)
+	req.request_completed.connect(func(_r: int, _c: int, _h: PackedStringArray, _b: PackedByteArray): req.queue_free())
+	var payload := JSON.stringify({
+		"events": [{
+			"word": word,
+			"support_level": support_level,
+			"correct": correct,
+			"response_ms": response_ms
+		}]
+	})
+	var err := req.request(base_url + "/api/v4/mastery/observe", ["Content-Type: application/json"], HTTPClient.METHOD_POST, payload)
+	if err != OK:
+		req.queue_free()
+
+func request_speech_encouragement(target_text: String, mode: String = "voice", rms_energy: float = 0.035, duration_ms: int = 900) -> void:
+	if DisplayServer.get_name() == "headless":
+		speech_encouragement_ready.emit(_local_fallback_encourage(target_text, mode, rms_energy, duration_ms))
+		return
+	var req := HTTPRequest.new()
+	req.timeout = 3.5
+	add_child(req)
+	req.request_completed.connect(func(result: int, code: int, _headers: PackedStringArray, body: PackedByteArray):
+		req.queue_free()
+		if result == HTTPRequest.RESULT_SUCCESS and code == 200:
+			var parsed: Variant = JSON.parse_string(body.get_string_from_utf8())
+			if parsed is Dictionary and bool(parsed.get("ok", false)):
+				speech_encouragement_ready.emit(parsed as Dictionary)
+				return
+		speech_encouragement_ready.emit(_local_fallback_encourage(target_text, mode, rms_energy, duration_ms))
+	)
+	var payload := JSON.stringify({
+		"target_text": target_text,
+		"mode": mode,
+		"rms_energy": rms_energy,
+		"duration_ms": duration_ms
+	})
+	var err := req.request(base_url + "/api/v4/speech/encourage", ["Content-Type: application/json"], HTTPClient.METHOD_POST, payload)
+	if err != OK:
+		req.queue_free()
+		speech_encouragement_ready.emit(_local_fallback_encourage(target_text, mode, rms_energy, duration_ms))
+
+func _local_fallback_encourage(target_text: String, mode: String, rms_energy: float, duration_ms: int) -> Dictionary:
+	var clean := target_text.strip_edges()
+	if clean.is_empty():
+		clean = "Hello!"
+	if mode == "shy":
+		return {
+			"ok": true,
+			"mode": "shy",
+			"voice_detected": false,
+			"cheer_badge": "🌿 安心默读星",
+			"reply_en": "Listening in your heart is great too! \"%s\" stays with you!" % clean,
+			"reply_zh": "在心里轻轻默读「%s」也很棒！不着急，想开口时随时都可以 ✨" % clean
+		}
+	var strong := rms_energy >= 0.012 or duration_ms >= 550
+	return {
+		"ok": true,
+		"mode": "voice",
+		"voice_detected": true,
+		"cheer_badge": "🌟 自信开口星" if strong else "✨ 勇敢轻声星",
+		"reply_en": "Sunny voice! You spoke \"%s\" so warmly!" % clean,
+		"reply_zh": "声音真温暖自信！刚才跟读「%s」超级棒 🌟" % clean
+	}
 
 func request_parent_report(payload: Dictionary) -> void:
 	if DisplayServer.get_name() == "headless":

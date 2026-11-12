@@ -305,16 +305,163 @@ static func build_carried_prop(prop_id: String) -> Node3D:
 				for m: Node in a.find_children("*", "MeshInstance3D", true, false):
 					(m as MeshInstance3D).material_override = _toy_mat(tint, 0.30, 0.40)
 				holder.add_child(a)
-		"cake":
+		"cake", "bread":
 			var c := WorldArt.create_prop("cake")
 			if c != null:
-				c.scale = Vector3.ONE * 0.42
+				c.scale = Vector3.ONE * (0.42 if prop_id == "cake" else 0.36)
 				holder.add_child(c)
-		"book":
+		"book", "owl_book":
 			var b := WorldArt.create_prop("book")
 			if b != null:
 				b.scale = Vector3.ONE * 0.48
 				holder.add_child(b)
+		"boat":
+			var hull := MeshInstance3D.new()
+			var hbox := BoxMesh.new()
+			hbox.size = Vector3(0.28, 0.10, 0.16)
+			hull.mesh = hbox
+			hull.material_override = _toy_mat(Color("c9844c"), 0.52, 0.22)
+			holder.add_child(hull)
+			var sail := MeshInstance3D.new()
+			var prism := PrismMesh.new()
+			prism.size = Vector3(0.18, 0.22, 0.03)
+			sail.mesh = prism
+			sail.position = Vector3(0.0, 0.15, 0.0)
+			sail.material_override = _toy_mat(Color("fff8eb"), 0.42, 0.25)
+			holder.add_child(sail)
+		"drum", "jar", "milk":
+			var cyl_m := MeshInstance3D.new()
+			var cyl := CylinderMesh.new()
+			cyl.top_radius = 0.11
+			cyl.bottom_radius = 0.11
+			cyl.height = 0.20 if prop_id != "drum" else 0.15
+			cyl_m.mesh = cyl
+			var col := Color("e26a5a") if prop_id == "drum" else (Color("9ad7e8") if prop_id == "jar" else Color("fffaf2"))
+			cyl_m.material_override = _toy_mat(col, 0.32, 0.42)
+			holder.add_child(cyl_m)
+			var lid := MeshInstance3D.new()
+			var lcyl := CylinderMesh.new()
+			lcyl.top_radius = 0.118
+			lcyl.bottom_radius = 0.118
+			lcyl.height = 0.035
+			lid.mesh = lcyl
+			lid.position = Vector3(0.0, 0.10, 0.0)
+			lid.material_override = _toy_mat(Color("f4d36b") if prop_id != "milk" else Color("6da9cb"), 0.36, 0.35)
+			holder.add_child(lid)
+		"egg", "ball", "globe", "yarn":
+			var sph_m := MeshInstance3D.new()
+			var sph := SphereMesh.new()
+			sph.radius = 0.12
+			sph.height = 0.27 if prop_id == "egg" else 0.24
+			sph_m.mesh = sph
+			var scol := Color("fff3dc") if prop_id == "egg" else (Color("5ca7d8") if prop_id == "globe" else (Color("f08ca2") if prop_id == "yarn" else Color("f79f46")))
+			sph_m.material_override = _toy_mat(scol, 0.36, 0.38)
+			holder.add_child(sph_m)
+		"flower":
+			var stem := MeshInstance3D.new()
+			var scyl := CylinderMesh.new()
+			scyl.top_radius = 0.02
+			scyl.bottom_radius = 0.022
+			scyl.height = 0.18
+			stem.mesh = scyl
+			stem.material_override = _toy_mat(Color("68ad62"), 0.50, 0.20)
+			holder.add_child(stem)
+			var bloom := MeshInstance3D.new()
+			var bsph := SphereMesh.new()
+			bsph.radius = 0.095
+			bsph.height = 0.16
+			bloom.mesh = bsph
+			bloom.position = Vector3(0.0, 0.12, 0.0)
+			bloom.material_override = _toy_mat(Color("f5829d"), 0.35, 0.35)
+			holder.add_child(bloom)
+		"hat":
+			var h := build_hat_mesh("straw_hat")
+			if h != null:
+				h.scale = Vector3.ONE * 0.68
+				holder.add_child(h)
+		"ice_cream":
+			var cone := MeshInstance3D.new()
+			var ccyl := CylinderMesh.new()
+			ccyl.top_radius = 0.085
+			ccyl.bottom_radius = 0.015
+			ccyl.height = 0.18
+			cone.mesh = ccyl
+			cone.material_override = _toy_mat(Color("dba265"), 0.55, 0.18)
+			holder.add_child(cone)
+			var scoop := MeshInstance3D.new()
+			var ssph := SphereMesh.new()
+			ssph.radius = 0.095
+			ssph.height = 0.18
+			scoop.mesh = ssph
+			scoop.position = Vector3(0.0, 0.12, 0.0)
+			scoop.material_override = _toy_mat(Color("ff9eb5"), 0.34, 0.35)
+			holder.add_child(scoop)
+		"kite", "quilt", "xylophone_bar":
+			var tile := MeshInstance3D.new()
+			var tbox := BoxMesh.new()
+			tbox.size = Vector3(0.24, 0.04, 0.24 if prop_id != "xylophone_bar" else 0.11)
+			tile.mesh = tbox
+			if prop_id == "kite":
+				tile.rotation_degrees.y = 45.0
+			var kcol := Color("6ec2e8") if prop_id == "kite" else (Color("c297e0") if prop_id == "quilt" else Color("f2be54"))
+			tile.material_override = _toy_mat(kcol, 0.38, 0.32)
+			holder.add_child(tile)
+		"lantern", "star", "volcano_gem":
+			var gem_m := MeshInstance3D.new()
+			var gmesh := SphereMesh.new()
+			gmesh.radius = 0.115
+			gmesh.height = 0.24
+			gmesh.radial_segments = 8
+			gmesh.rings = 4
+			gem_m.mesh = gmesh
+			var gcol := Color("ffd45e") if prop_id != "volcano_gem" else Color("eb6b56")
+			var gmat := _toy_mat(gcol, 0.24, 0.50)
+			gmat.emission_enabled = true
+			gmat.emission = gcol
+			gmat.emission_energy_multiplier = 0.35
+			gem_m.material_override = gmat
+			holder.add_child(gem_m)
+		"mushroom", "umbrella":
+			var stalk := MeshInstance3D.new()
+			var mcyl := CylinderMesh.new()
+			mcyl.top_radius = 0.035 if prop_id == "mushroom" else 0.015
+			mcyl.bottom_radius = 0.045 if prop_id == "mushroom" else 0.015
+			mcyl.height = 0.18
+			stalk.mesh = mcyl
+			stalk.material_override = _toy_mat(Color("fff5e4"), 0.50, 0.18)
+			holder.add_child(stalk)
+			var cap_m := MeshInstance3D.new()
+			var csph := SphereMesh.new()
+			csph.radius = 0.13
+			csph.height = 0.13
+			csph.is_hemisphere = true
+			cap_m.mesh = csph
+			cap_m.position = Vector3(0.0, 0.08, 0.0)
+			cap_m.material_override = _toy_mat(Color("e35d52") if prop_id == "mushroom" else Color("63b4e8"), 0.35, 0.38)
+			holder.add_child(cap_m)
+		"pumpkin":
+			var pm := MeshInstance3D.new()
+			var psph := SphereMesh.new()
+			psph.radius = 0.13
+			psph.height = 0.20
+			pm.mesh = psph
+			pm.material_override = _toy_mat(Color("eb8634"), 0.38, 0.34)
+			holder.add_child(pm)
+		"robot", "train":
+			var body_b := MeshInstance3D.new()
+			var rbox := BoxMesh.new()
+			rbox.size = Vector3(0.22, 0.18, 0.16) if prop_id == "robot" else Vector3(0.26, 0.14, 0.14)
+			body_b.mesh = rbox
+			body_b.material_override = _toy_mat(Color("7aa8d6") if prop_id == "robot" else Color("d95f52"), 0.34, 0.40)
+			holder.add_child(body_b)
+		"nest", "whale_shell":
+			var tr := MeshInstance3D.new()
+			var tmesh := TorusMesh.new()
+			tmesh.inner_radius = 0.055
+			tmesh.outer_radius = 0.125
+			tr.mesh = tmesh
+			tr.material_override = _toy_mat(Color("b58350") if prop_id == "nest" else Color("7bc7db"), 0.48, 0.26)
+			holder.add_child(tr)
 		_:
 			var inv := WorldArt.create_prop("invitation")
 			if inv != null:

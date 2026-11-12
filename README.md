@@ -1,16 +1,19 @@
-# StudyGames V4 · 字母岛（精致微缩童话岛全量重构版）
+# StudyGames V4 · 字母岛（精致微缩童话岛全量完成版）
 
-当前 **v4.0.0-v4 · 微缩童话岛全量重构** 已完成渲染管线、高颜值 3D 换装、去弹窗化世界生活交互、3D 立体翻翻书剧场、全八册 81 单元委托系统与本地 AI 安全伴学轻服务的端到端升级：
+当前 **v4.0.0 · 微缩童话岛全量完成版** 已完成 Forward+ 渲染管线、高颜值 3D 模块化换装、全岛 30 场景亲手捧物与手作台、100% 去考卷弹窗世界绘本对话、**全八册 81 单元三幕生活主线与章节画册**、3D 立体翻翻书剧场、包容式口语跟读喝彩与本地 AI 安全伴学轻服务的端到端全量落地：
 
-- **Forward+ 微缩模型岛美学（Toy Diorama）**：全面升级至 Godot 4.7 `forward_plus` 渲染管线，开启 `ProceduralSky` 天光漫反射、`AgX` 胶片色调映射、`SSAO` / `SSIL` 接触光影、柔和阴影、双层岸边泡沫果冻水体（`game/shaders/toy_water.gdshader`）与微风树冠摇曳（`game/shaders/toy_foliage_wind.gdshader`）。全岛 **44 个场景**统一配备胡桃木微缩底座托盘与室外草坡/云朵或室内暖阳窗景（`game/world/diorama_backdrop.gd`），彻底告别空洞的纯色虚空背景。
-- **高颜值模块化 3D 换装镜台（`CozyWardrobeStudio`）**：支持 **6 套治愈穿搭**（柠檬黄、蜜桃粉、晴空蓝、薄荷森系、星光薰衣草、奶油焦糖）× **5 款 3D 头饰**（自然发型、丝带草帽、蝴蝶结、摘星贝雷帽、暖绒兔耳）× **4 款 3D 背饰**（向日葵书包、野餐花篮、星光小翅膀）自由混搭，并配备双手持物挂点（`CarrySocket`）与阳光镜台 3D 旋转预览。
-- **去考卷化情境气泡与亲手生活委托**：日常探索以世界锚定的圆润绘本对话气泡（`game/ui_v4/diegetic_dialogue.gd`）取代突兀的全屏三选一做题弹窗；在 `landmark_A` 苹果果园可亲手捧起草地上的 3D 红苹果/金苹果放入发光藤篮（`game/gameplay/tactile_life_quests.gd`）；全 **8 册教材、81 个单元、1,314 条词表记录**均已通过 `game/gameplay/curriculum_quest_director.gd` 动态桥接至每日邻居手账贴纸委托与立体书架。
-- **3D 微缩立体翻翻书剧场（`PopupBookTheater`）**：在真实 3D 胡桃木书桌上展开精装立体书，26 个字母插画立体纸偶随折页弹起跳跃演绎助记故事，支持亲手点击木块拼装立起纸偶，并与原有 `MemorySink` 存档进度无缝兼容。
-- **AI 安全伴学轻服务与隐性素养追踪（`services/ai_companion/`）**：内置双层儿童隐私与安全护栏（`KidRails`）、感知穿搭与手持物品的受控词域 `i+1` 伙伴轻聊、自然语音合成及 SHA-256 缓存、以及基于 **3PL IRT + H0–H5 支架分级**的隐性能力估算与家长温暖成长周报（`game/ui_v4/parent_ai_portal.gd`）。双击 `启动字母岛.cmd` 或运行 `./start-game.ps1` 将自动拉起本地伴学服务与 Forward+ 客户端；未配置云端 API Key 时自动启用零密钥本地引擎与离线语音。
+- **Forward+ 微缩模型岛美学（Toy Diorama）**：全面升级至 Godot 4.7 `forward_plus` 渲染管线，开启 `ProceduralSky` 天光漫反射、`AgX` 胶片色调映射、`SSAO` / `SSIL` 接触光影、柔和阴影、双层岸边泡沫果冻水体（`game/shaders/toy_water.gdshader`）与微风树冠摇曳（`game/shaders/toy_foliage_wind.gdshader`）。全岛 **44 个场景**统一配备胡桃木微缩底座托盘与室外草坡/云朵或室内暖阳窗景（`game/world/diorama_backdrop.gd`），并搭配区分草地/木地板/石板路的轻盈脚步声与细雨白噪音（`game/core/audio_director.gd`）。
+- **高颜值模块化 3D 换装镜台（`CozyWardrobeStudio`）**：支持 **6 套治愈穿搭**（柠檬黄、蜜桃粉、晴空蓝、薄荷森系、星光薰衣草、奶油焦糖）× **5 款 3D 头饰** × **4 款 3D 背饰**自由混搭，并配备支持 **28 种 3D 手持道具**的双手持物挂点（`CarrySocket`）与阳光镜台 3D 旋转预览。
+- **全岛 30 场景亲手捧物工坊与永久世界回响（`TactileLifeQuests`）**：在全部 **26 座字母地标馆（`landmark_A`–`landmark_Z`）+ 自家小院（`home_estate`）+ 校园/餐厅/操场（`school`/`canteen`/`playground`）** 均设有走近即可双手捧起的 3D 主题好物与胡桃木工坊分享台；亲手安放后会留驻永久 3D 微缩手作纪念（`EchoCraft`）并回赠叶币。
+- **全八册 81 单元三幕生活主线与故事画册（`UnitStorylineDirector` + `ChapterAtlasView`）**：湘少版三年级上册至六年级下册全部 **8 册、81 个单元**均已编译为可游玩的三幕小岛生活故事（`game/data/learning/curriculum_arcs_v4.json`：*① 聆听伙伴心愿 → ② 亲手共创体验 / 立体翻翻书 → ③ 安放永久 3D 章节纪念牌 `ChapterWorldKeepsake`*），可通过旅行册快捷栏或设置随时打开「八册 81 章故事画册」自由跳转体验。
+- **100% 去考卷化绘本气泡、包容式口语跟读与 3D 立体翻翻书（`DiegeticDialogue` + `PopupBookTheater`）**：日常游玩彻底告别传统三选一考卷弹窗（阳光教室李老师、校园餐厅、青草操场、26 字母主理人、教材伙伴闲聊均升级为世界锚定绘本气泡）；支持零扣分、重鼓励的 **`🎤 跟读试试` 与 `🤫 害羞默读`**；在真实 3D 胡桃木书桌上展开精装立体书，1,314 条词表记录均可通过 26 个字母立体纸偶弹出演绎与木块拼装体验。
+- **AI 安全伴学轻服务与隐性素养追踪（`services/ai_companion/`）**：内置双层儿童隐私与安全护栏（`KidRails`）、感知穿搭与手持物品的受控词域 `i+1` 伙伴轻聊、自然语音合成及跟读喝彩接口（`/api/v4/speech/encourage`）、以及基于 **3PL IRT + H0–H5 支架分级**的隐性能力估算与家长温暖成长周报（`game/ui_v4/parent_ai_portal.gd`）。双击 `启动字母岛.cmd` 或运行 `./start-game.ps1` 将自动拉起本地伴学服务与 Forward+ 客户端；未配置云端 API Key 时自动启用零密钥本地引擎与离线语音。
 
 ![V4 主岛微缩景观与高颜值草帽穿搭](docs/screenshots/v4-showcase/01_village_diorama.png)
 
-![V4 苹果果园亲手捧果与世界锚定绘本气泡](docs/screenshots/v4-showcase/04_landmark_A_tactile_orchard.png)
+![V4 八册 81 章小岛生活主线画册](docs/screenshots/v4-showcase/08_chapter_atlas_81_units.png)
+
+![V4 B 船坞工坊双手捧起 3D 小木船与分享台](docs/screenshots/v4-showcase/09_landmark_B_boat_tactile_workshop.png)
 
 ![V4 3D 立体翻翻书剧场](docs/screenshots/v4-showcase/06_popup_book_theater_3d.png)
 
@@ -92,7 +95,7 @@ v0.9.0 的场景采用暖色环境填光、较轻的阴影和区分室内外的�
 
 上图是 v0.5.0 的引擎实拍，保留作历史记录。[v0.5.0 实施记录](docs/verification/v0.5.0/README.md)及其 [Windows 离线包](build/AlphabetIsland-v0.5.0-Windows.zip)继续保留；当前本地开发版按工程源码运行。更早的交互和地图验证见 [v0.4.0 记录](docs/verification/v0.4.0/README.md)和 [Blender 地图版验收记录](docs/Blender地图版验收记录.md)。
 
-所有地标可以进入探索；策划中的各行各业经营流程还需后续开发。原课程保留前三单元的部分核心表达；八册新增词故事浏览不等于 81 章完整课程已经制作。语音为合成缓存，不是原版教材录音；不包含口语识别、评分或开放式 AI 对话。
+所有地标现已开放 V4 亲手捧物与手作分享台（`TactileLifeQuests`），全八册 81 章三幕小岛生活主线与永久章节纪念牌均已实装（`UnitStorylineDirector`），并接入 KidRails 双层护栏的受控词域 AI 伙伴轻聊与包容式口语跟读喝彩（不打冷冰冰的口语扣分）。语音为合成缓存与本地语音，不是原版教材录音。
 
 ## 校园的三个层级
 

@@ -44,7 +44,14 @@ func _default_state() -> Dictionary:
 		"life": {"discoveries": {}, "activities": {"music":false,"art":false,"science":false,"football":false}, "scores":{"football":0}, "artwork":[], "home_tasks":{}},
 		"preferences": {"voice":true,"effects":true,"reduced_motion":false,"fixed_day":false},
 		"wardrobe": {"hat": "none", "bag": "none"},
-		"v4": {"active_unit_id": "unit-1", "stealth_events": [], "completed_commissions": []},
+		"v4": {
+			"active_unit_id": "unit-1",
+			"stealth_events": [],
+			"completed_commissions": [],
+			"chapter_progress": {},
+			"landmark_crafts": {},
+			"voice_cheers": 0
+		},
 		"journey": JOURNEY.fresh(),
 		"reviews": Reviews.fresh(),
 	}
@@ -375,26 +382,110 @@ func set_bag(id: String) -> bool:
 	return _commit(before, "小背包已搭配好。")
 
 
+func _ensure_v4() -> Dictionary:
+	if not data.has("v4") or not data["v4"] is Dictionary:
+		data["v4"] = {
+			"active_unit_id": "unit-1",
+			"stealth_events": [],
+			"completed_commissions": [],
+			"chapter_progress": {},
+			"landmark_crafts": {},
+			"voice_cheers": 0
+		}
+	var v4_ref: Dictionary = data["v4"]
+	if not v4_ref.has("chapter_progress") or not v4_ref["chapter_progress"] is Dictionary:
+		v4_ref["chapter_progress"] = {}
+	if not v4_ref.has("landmark_crafts") or not v4_ref["landmark_crafts"] is Dictionary:
+		v4_ref["landmark_crafts"] = {}
+	if not v4_ref.has("voice_cheers"):
+		v4_ref["voice_cheers"] = 0
+	return v4_ref
+
+
 func set_active_unit(unit_id: String) -> bool:
 	if unit_id.is_empty() or not unit_id.begins_with("unit-"):
 		return false
-	if not data.has("v4") or not data["v4"] is Dictionary:
-		data["v4"] = {"active_unit_id": "unit-1", "stealth_events": [], "completed_commissions": []}
-	if str(data["v4"].get("active_unit_id", "unit-1")) == unit_id:
+	var v4_ref := _ensure_v4()
+	if str(v4_ref.get("active_unit_id", "unit-1")) == unit_id:
 		return true
 	var before: Dictionary = snapshot()
-	data["v4"]["active_unit_id"] = unit_id
+	_ensure_v4()["active_unit_id"] = unit_id
 	return _commit(before)
+
+
+func complete_v4_commission(commission_id: String, coin_bonus: int = 6) -> bool:
+	var cid := commission_id.strip_edges()
+	if cid.is_empty():
+		return false
+	_ensure_v4()
+	var before: Dictionary = snapshot()
+	var v4_ref := _ensure_v4()
+	var done: Array = v4_ref.get("completed_commissions", [])
+	if not done.has(cid):
+		done.append(cid)
+		while done.size() > 240:
+			done.pop_front()
+		v4_ref["completed_commissions"] = done
+		data["coins"] = mini(1_000_000, int(data["coins"]) + maxi(0, coin_bonus))
+	return _commit(before)
+
+
+func v4_chapter_stage(chapter_key: String) -> int:
+	var v4_ref := _ensure_v4()
+	var prog: Dictionary = v4_ref.get("chapter_progress", {})
+	return clampi(int(prog.get(chapter_key, 0)), 0, 3)
+
+
+func advance_v4_chapter(chapter_key: String, target_stage: int, coin_bonus: int = 0) -> bool:
+	var key := chapter_key.strip_edges()
+	if key.is_empty() or target_stage < 1 or target_stage > 3:
+		return false
+	var current := v4_chapter_stage(key)
+	if target_stage <= current:
+		return true
+	var before: Dictionary = snapshot()
+	var v4_ref := _ensure_v4()
+	var prog: Dictionary = v4_ref["chapter_progress"]
+	prog[key] = target_stage
+	if coin_bonus > 0:
+		data["coins"] = mini(1_000_000, int(data["coins"]) + coin_bonus)
+	return _commit(before)
+
+
+func record_landmark_craft(room_id: String, coin_bonus: int = 4) -> int:
+	var rid := room_id.strip_edges()
+	if rid.is_empty():
+		return 0
+	var before: Dictionary = snapshot()
+	var v4_ref := _ensure_v4()
+	var crafts: Dictionary = v4_ref["landmark_crafts"]
+	var next_count := mini(9999, int(crafts.get(rid, 0)) + 1)
+	crafts[rid] = next_count
+	if coin_bonus > 0 and next_count <= 3:
+		data["coins"] = mini(1_000_000, int(data["coins"]) + coin_bonus)
+	if _commit(before):
+		return next_count
+	return int(crafts.get(rid, 0))
+
+
+func record_voice_cheer() -> int:
+	var before: Dictionary = snapshot()
+	var v4_ref := _ensure_v4()
+	var next_val := mini(99999, int(v4_ref.get("voice_cheers", 0)) + 1)
+	v4_ref["voice_cheers"] = next_val
+	if _commit(before):
+		return next_val
+	return int(v4_ref.get("voice_cheers", 0))
 
 
 func record_stealth_evidence(payload: Dictionary) -> bool:
 	var word := str(payload.get("word", "")).strip_edges().to_lower()
 	if word.is_empty():
 		return false
-	if not data.has("v4") or not data["v4"] is Dictionary:
-		data["v4"] = {"active_unit_id": "unit-1", "stealth_events": [], "completed_commissions": []}
+	_ensure_v4()
 	var before: Dictionary = snapshot()
-	var events: Array = data["v4"].get("stealth_events", [])
+	var v4_ref := _ensure_v4()
+	var events: Array = v4_ref.get("stealth_events", [])
 	events.append({
 		"word": word,
 		"support_level": clampi(int(payload.get("support_level", 0)), 0, 5),
@@ -404,15 +495,15 @@ func record_stealth_evidence(payload: Dictionary) -> bool:
 	})
 	while events.size() > 300:
 		events.pop_front()
-	data["v4"]["stealth_events"] = events
+	v4_ref["stealth_events"] = events
 	var commission_id := str(payload.get("commission_id", "")).strip_edges()
 	if not commission_id.is_empty():
-		var done: Array = data["v4"].get("completed_commissions", [])
+		var done: Array = v4_ref.get("completed_commissions", [])
 		if not done.has(commission_id):
 			done.append(commission_id)
-			while done.size() > 160:
+			while done.size() > 240:
 				done.pop_front()
-			data["v4"]["completed_commissions"] = done
+			v4_ref["completed_commissions"] = done
 			data["coins"] = mini(1_000_000, int(data["coins"]) + int(payload.get("coin_bonus", 6)))
 	return _commit(before)
 
@@ -779,13 +870,29 @@ func _normalize_state(value: Variant) -> Dictionary:
 					})
 		var clean_commissions: Array = []
 		if v4_in.get("completed_commissions", []) is Array:
-			for cid: Variant in (v4_in.get("completed_commissions", []) as Array).slice(-160):
+			for cid: Variant in (v4_in.get("completed_commissions", []) as Array).slice(-240):
 				if cid is String and not str(cid).is_empty():
 					clean_commissions.append(str(cid))
+		var clean_chapters: Dictionary = {}
+		if v4_in.get("chapter_progress", {}) is Dictionary:
+			var raw_chap: Dictionary = v4_in.get("chapter_progress", {})
+			for ck: Variant in raw_chap.keys():
+				if ck is String and not str(ck).is_empty() and clean_chapters.size() <= 120:
+					clean_chapters[str(ck).left(64)] = clampi(int(raw_chap[ck]), 0, 3)
+		var clean_crafts: Dictionary = {}
+		if v4_in.get("landmark_crafts", {}) is Dictionary:
+			var raw_crafts: Dictionary = v4_in.get("landmark_crafts", {})
+			for rk: Variant in raw_crafts.keys():
+				if rk is String and not str(rk).is_empty() and clean_crafts.size() <= 64:
+					clean_crafts[str(rk).left(32)] = clampi(int(raw_crafts[rk]), 0, 9999)
+		var clean_cheers := clampi(int(v4_in.get("voice_cheers", 0)), 0, 99999)
 		normalized.v4 = {
 			"active_unit_id": unit_val,
 			"stealth_events": clean_events,
-			"completed_commissions": clean_commissions
+			"completed_commissions": clean_commissions,
+			"chapter_progress": clean_chapters,
+			"landmark_crafts": clean_crafts,
+			"voice_cheers": clean_cheers
 		}
 	return {"ok": true, "state": normalized}
 
