@@ -76,6 +76,8 @@ func show_overview() -> void:
 	else:
 		actions.append({"label":"走回家里的走廊", "id":"navigate:home_exit", "primary":true})
 	actions.append({"label":"看看今天能做什么", "id":"home:day"})
+	if game.room in ["home", "home_estate", "home_bedroom", "home_study"]:
+		actions.append({"label":"✨ 动森自由网格布置", "id":"v4_free_decor"})
 	if game.room != "home_hall": actions.append({"label":"打开家园地图", "id":"map"})
 	game.ui.show_panel("home_overview", "每个房间都有自己的生活", "我的家 · 小院与七个房间", "推开家门后，就能走进门厅和走廊。\n沿走廊走到各个房间门前，按 E 进入。离开房间会回到刚才的门边。", actions)
 

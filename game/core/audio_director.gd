@@ -1,8 +1,9 @@
 extends Node
-## V4 Multi-layer Cozy Soundscape Director.
-## Synthesizes warm acoustic kalimba/marimba pentatonic BGM, gentle nature breeze/birds,
-## and crisp tactile toy Foley (page flips, wooden token snaps, bubble pops, footsteps)
-## with zero external binary dependencies and graceful headless muting.
+## V4.5 Multi-Layer Stereo Cozy Soundscape & Original Acoustic BGM Director.
+## Synthesizes 4 distinct stereo multi-instrument acoustic BGM compositions
+## (Morning Breeze Guitar & Kalimba, Warm Hearth Music-Box & Rhodes, Sunlit Campus
+## Xylophone & Pizzicato, Pop-up Wonder Harp & Celesta), nature breeze/rain,
+## and crisp tactile toy Foley with graceful headless muting.
 
 const SAMPLE_RATE := 22050
 
@@ -12,6 +13,9 @@ var _foley_player: AudioStreamPlayer
 var _clips: Dictionary = {}
 var enabled := true
 var current_room := "village"
+var current_weather := "clear"
+var theater_mode := false
+var active_bgm_key := "bgm_island"
 
 func _ready() -> void:
 	if DisplayServer.get_name() == "headless":
@@ -19,7 +23,7 @@ func _ready() -> void:
 		return
 	_bgm_player = AudioStreamPlayer.new()
 	_bgm_player.name = "CozyBgmPlayer"
-	_bgm_player.volume_db = -17.5
+	_bgm_player.volume_db = -15.5
 	add_child(_bgm_player)
 
 	_ambience_player = AudioStreamPlayer.new()
@@ -34,6 +38,19 @@ func _ready() -> void:
 
 	_build_soundbank()
 
+static func select_bgm_key(room_id: String, is_theater: bool = false) -> String:
+	if is_theater:
+		return "bgm_theater"
+	if room_id.begins_with("home"):
+		return "bgm_home"
+	if room_id in ["school", "classroom", "music_room", "art_room", "science_room", "canteen", "playground", "football_field"]:
+		return "bgm_campus"
+	if room_id.begins_with("landmark_"):
+		var code := room_id.trim_prefix("landmark_")
+		if code in ["G", "I", "L", "O", "Q", "S", "U", "X"]:
+			return "bgm_theater"
+	return "bgm_island"
+
 func set_enabled(on: bool) -> void:
 	enabled = on and DisplayServer.get_name() != "headless"
 	if not enabled:
@@ -42,14 +59,22 @@ func set_enabled(on: bool) -> void:
 		if is_instance_valid(_ambience_player):
 			_ambience_player.stop()
 	else:
-		apply_room_soundscape(current_room)
+		if _clips.is_empty():
+			_build_soundbank()
+		apply_room_soundscape(current_room, current_weather)
+
+func set_theater_mode(active: bool) -> void:
+	theater_mode = active
+	active_bgm_key = select_bgm_key(current_room, theater_mode)
+	apply_room_soundscape(current_room, current_weather)
 
 func apply_room_soundscape(room_id: String, weather_id: String = "clear") -> void:
 	current_room = room_id
+	current_weather = weather_id
+	active_bgm_key = select_bgm_key(room_id, theater_mode)
 	if not enabled or not is_instance_valid(_bgm_player):
 		return
-	var bgm_key := "bgm_home" if room_id.begins_with("home") else "bgm_island"
-	var bgm_stream := _clips.get(bgm_key) as AudioStreamWAV
+	var bgm_stream := _clips.get(active_bgm_key) as AudioStreamWAV
 	if bgm_stream != null and (_bgm_player.stream != bgm_stream or not _bgm_player.playing):
 		_bgm_player.stream = bgm_stream
 		_bgm_player.play()
@@ -83,21 +108,73 @@ func play_foley(kind: String) -> void:
 		_foley_player.play()
 
 func _build_soundbank() -> void:
-	# C-major / F-lydian cozy pentatonic kalimba progression (8.0s seamless loop)
-	var island_notes := [
-		[0.0, 261.63, 1.6], [0.0, 329.63, 1.6], [0.5, 392.00, 0.9], [1.0, 523.25, 1.2],
-		[2.0, 293.66, 1.5], [2.5, 440.00, 1.1], [3.0, 392.00, 1.2],
-		[4.0, 349.23, 1.7], [4.0, 440.00, 1.5], [4.5, 523.25, 0.9], [5.0, 659.25, 1.3],
-		[6.0, 392.00, 1.8], [6.5, 493.88, 0.9], [7.0, 587.33, 1.1]
+	# 1. bgm_island — Morning Breeze Village (16s Stereo: Acoustic Guitar + Kalimba + Warm Bass)
+	var island_events := [
+		# Bar 1 (G6): G2 bass + guitar arpeggio + kalimba motif
+		[0.0, 98.00, 3.6, "bass", 0.0],
+		[0.0, 196.00, 1.4, "guitar", -0.35], [0.5, 246.94, 1.3, "guitar", -0.25], [1.0, 293.66, 1.3, "guitar", -0.20], [1.5, 392.00, 1.4, "guitar", -0.30],
+		[0.0, 587.33, 1.1, "kalimba", 0.30], [1.0, 659.25, 0.9, "kalimba", 0.35], [1.5, 783.99, 1.4, "kalimba", 0.25], [2.5, 659.25, 1.1, "kalimba", 0.30], [3.0, 587.33, 1.0, "kalimba", 0.20],
+		# Bar 2 (Em7)
+		[4.0, 82.41, 3.6, "bass", 0.0],
+		[4.0, 164.81, 1.5, "guitar", -0.35], [4.5, 246.94, 1.3, "guitar", -0.25], [5.0, 293.66, 1.3, "guitar", -0.20], [5.5, 392.00, 1.4, "guitar", -0.30],
+		[4.0, 493.88, 1.2, "kalimba", 0.28], [5.0, 587.33, 0.9, "kalimba", 0.32], [5.5, 659.25, 1.5, "kalimba", 0.25], [7.0, 587.33, 1.0, "kalimba", 0.28],
+		# Bar 3 (Cmaj7)
+		[8.0, 130.81, 3.6, "bass", 0.0],
+		[8.0, 261.63, 1.5, "guitar", -0.32], [8.5, 329.63, 1.3, "guitar", -0.22], [9.0, 392.00, 1.3, "guitar", -0.18], [9.5, 493.88, 1.4, "guitar", -0.28],
+		[8.0, 523.25, 1.2, "kalimba", 0.32], [9.0, 659.25, 1.0, "kalimba", 0.35], [9.5, 783.99, 1.3, "kalimba", 0.26], [10.5, 880.00, 1.2, "kalimba", 0.30],
+		# Bar 4 (Dadd9 -> gentle turnaround)
+		[12.0, 146.83, 3.6, "bass", 0.0],
+		[12.0, 293.66, 1.5, "guitar", -0.32], [12.5, 369.99, 1.3, "guitar", -0.22], [13.0, 440.00, 1.3, "guitar", -0.18], [13.5, 329.63, 1.5, "guitar", -0.26],
+		[12.0, 659.25, 1.4, "kalimba", 0.30], [13.0, 587.33, 1.1, "kalimba", 0.26], [14.0, 493.88, 1.0, "kalimba", 0.22], [14.5, 440.00, 1.2, "kalimba", 0.18]
 	]
-	_clips["bgm_island"] = _synth_kalimba_loop(8.0, island_notes)
+	_clips["bgm_island"] = _synth_stereo_ensemble_loop(16.0, island_events)
 
-	var home_notes := [
-		[0.0, 261.63, 2.0], [0.6, 329.63, 1.4], [1.3, 392.00, 1.4],
-		[2.5, 220.00, 2.0], [3.2, 329.63, 1.4], [4.0, 293.66, 1.8],
-		[5.2, 349.23, 1.6], [6.2, 392.00, 1.7]
+	# 2. bgm_home — Warm Hearth & Tea (16s Stereo: Rhodes Warm Chords + Music Box Lullaby)
+	var home_events := [
+		# Fmaj7
+		[0.0, 174.61, 3.8, "rhodes", -0.20], [0.0, 220.00, 3.8, "rhodes", 0.15], [0.0, 261.63, 3.8, "rhodes", -0.10], [0.0, 329.63, 3.8, "rhodes", 0.22],
+		[0.0, 523.25, 1.4, "celesta", 0.25], [1.0, 659.25, 1.2, "celesta", -0.20], [2.0, 587.33, 1.5, "celesta", 0.20], [3.0, 523.25, 1.1, "celesta", -0.15],
+		# Dm7
+		[4.0, 146.83, 3.8, "rhodes", -0.20], [4.0, 220.00, 3.8, "rhodes", 0.15], [4.0, 261.63, 3.8, "rhodes", -0.10], [4.0, 349.23, 3.8, "rhodes", 0.22],
+		[4.0, 440.00, 1.5, "celesta", 0.22], [5.5, 523.25, 1.2, "celesta", -0.22], [6.5, 587.33, 1.4, "celesta", 0.18],
+		# Bbmaj7
+		[8.0, 116.54, 3.8, "rhodes", -0.20], [8.0, 233.08, 3.8, "rhodes", 0.15], [8.0, 293.66, 3.8, "rhodes", -0.10], [8.0, 349.23, 3.8, "rhodes", 0.22],
+		[8.0, 698.46, 1.4, "celesta", 0.26], [9.0, 659.25, 1.2, "celesta", -0.18], [10.0, 587.33, 1.5, "celesta", 0.22], [11.0, 523.25, 1.1, "celesta", -0.15],
+		# C9sus4
+		[12.0, 130.81, 3.8, "rhodes", -0.18], [12.0, 233.08, 3.8, "rhodes", 0.16], [12.0, 293.66, 3.8, "rhodes", -0.10], [12.0, 349.23, 3.8, "rhodes", 0.20],
+		[12.0, 587.33, 1.6, "celesta", 0.20], [13.5, 523.25, 1.2, "celesta", -0.20], [14.5, 440.00, 1.4, "celesta", 0.15]
 	]
-	_clips["bgm_home"] = _synth_kalimba_loop(8.0, home_notes)
+	_clips["bgm_home"] = _synth_stereo_ensemble_loop(16.0, home_events)
+
+	# 3. bgm_campus — Sunlit Chalk & Xylophone (16s Stereo: Playful Marimba + Pizzicato Bass)
+	var campus_events := [
+		# D major playful bounce
+		[0.0, 146.83, 0.8, "pizz", -0.15], [1.0, 220.00, 0.8, "pizz", -0.15], [2.0, 146.83, 0.8, "pizz", -0.15], [3.0, 220.00, 0.8, "pizz", -0.15],
+		[0.0, 587.33, 0.7, "kalimba", 0.25], [0.5, 659.25, 0.7, "kalimba", -0.20], [1.0, 739.99, 1.0, "kalimba", 0.28], [2.0, 880.00, 0.9, "celesta", -0.25], [3.0, 739.99, 0.9, "kalimba", 0.22],
+		# Bm7
+		[4.0, 123.47, 0.8, "pizz", -0.15], [5.0, 185.00, 0.8, "pizz", -0.15], [6.0, 123.47, 0.8, "pizz", -0.15], [7.0, 185.00, 0.8, "pizz", -0.15],
+		[4.0, 659.25, 0.8, "kalimba", 0.24], [5.0, 587.33, 0.8, "kalimba", -0.22], [6.0, 493.88, 1.1, "kalimba", 0.26], [7.0, 587.33, 0.8, "celesta", -0.18],
+		# Gmaj7
+		[8.0, 98.00, 0.8, "pizz", -0.15], [9.0, 146.83, 0.8, "pizz", -0.15], [10.0, 196.00, 0.8, "pizz", -0.15], [11.0, 146.83, 0.8, "pizz", -0.15],
+		[8.0, 587.33, 0.7, "kalimba", 0.25], [8.5, 659.25, 0.7, "kalimba", -0.20], [9.0, 783.99, 1.1, "celesta", 0.30], [10.5, 739.99, 0.9, "kalimba", -0.22], [11.25, 659.25, 0.7, "kalimba", 0.20],
+		# Asus4 -> A
+		[12.0, 110.00, 0.8, "pizz", -0.15], [13.0, 164.81, 0.8, "pizz", -0.15], [14.0, 220.00, 1.2, "pizz", -0.15],
+		[12.0, 587.33, 1.0, "kalimba", 0.25], [13.0, 554.37, 1.0, "kalimba", -0.22], [14.0, 659.25, 1.4, "celesta", 0.24]
+	]
+	_clips["bgm_campus"] = _synth_stereo_ensemble_loop(16.0, campus_events)
+
+	# 4. bgm_theater — Pop-up Wonder Book (16s Stereo: Harp Arpeggios + Celesta Bell)
+	var theater_events := [
+		[0.0, 261.63, 1.8, "guitar", -0.35], [0.4, 329.63, 1.6, "guitar", -0.15], [0.8, 392.00, 1.6, "guitar", 0.15], [1.2, 493.88, 1.6, "guitar", 0.35],
+		[1.6, 783.99, 1.8, "celesta", 0.25], [2.8, 659.25, 1.2, "celesta", -0.25],
+		[4.0, 220.00, 1.8, "guitar", -0.35], [4.4, 261.63, 1.6, "guitar", -0.15], [4.8, 329.63, 1.6, "guitar", 0.15], [5.2, 392.00, 1.6, "guitar", 0.35],
+		[5.6, 659.25, 1.8, "celesta", 0.22], [6.8, 587.33, 1.2, "celesta", -0.22],
+		[8.0, 174.61, 1.8, "guitar", -0.35], [8.4, 261.63, 1.6, "guitar", -0.15], [8.8, 349.23, 1.6, "guitar", 0.15], [9.2, 440.00, 1.6, "guitar", 0.35],
+		[9.6, 880.00, 1.8, "celesta", 0.28], [10.8, 783.99, 1.2, "celesta", -0.22],
+		[12.0, 196.00, 1.8, "guitar", -0.35], [12.4, 293.66, 1.6, "guitar", -0.15], [12.8, 392.00, 1.6, "guitar", 0.15], [13.2, 493.88, 1.6, "guitar", 0.35],
+		[13.6, 783.99, 1.6, "celesta", 0.20], [14.8, 587.33, 1.2, "celesta", -0.20]
+	]
+	_clips["bgm_theater"] = _synth_stereo_ensemble_loop(16.0, theater_events)
 
 	_clips["amb_breeze"] = _synth_breeze_loop(5.0, true)
 	_clips["amb_indoor"] = _synth_breeze_loop(5.0, false)
@@ -105,10 +182,81 @@ func _build_soundbank() -> void:
 	_clips["page_flip"] = _synth_page_flip()
 	_clips["slot_snap"] = _synth_wooden_pop(587.33, 880.0)
 	_clips["bubble_pop"] = _synth_wooden_pop(440.0, 659.25)
+	_clips["decor_place"] = _synth_wooden_pop(220.0, 523.25)
+	_clips["decor_rotate"] = _synth_wooden_pop(392.0, 587.33)
+	_clips["bell_ding"] = _synth_sparkle()
 	_clips["wardrobe_sparkle"] = _synth_sparkle()
 	_clips["step_grass"] = _synth_footstep("grass")
 	_clips["step_wood"] = _synth_footstep("wood")
 	_clips["step_stone"] = _synth_footstep("stone")
+
+func _synth_stereo_ensemble_loop(duration: float, events: Array) -> AudioStreamWAV:
+	var frames := int(duration * SAMPLE_RATE)
+	var left := PackedFloat32Array()
+	var right := PackedFloat32Array()
+	left.resize(frames)
+	right.resize(frames)
+	left.fill(0.0)
+	right.fill(0.0)
+
+	for ev: Array in events:
+		var start_i := int(float(ev[0]) * SAMPLE_RATE)
+		var freq := float(ev[1])
+		var len_s := float(ev[2])
+		var inst := str(ev[3])
+		var pan := clampf(float(ev[4]), -0.8, 0.8)
+		var gain_l := sqrt(0.5 * (1.0 - pan))
+		var gain_r := sqrt(0.5 * (1.0 + pan))
+		var len_i := int(len_s * SAMPLE_RATE)
+
+		for j in range(len_i):
+			var idx := (start_i + j) % frames
+			var t := float(j) / float(SAMPLE_RATE)
+			var sig := 0.0
+			if inst == "guitar":
+				var env := minf(t / 0.008, 1.0) * exp(-t * 2.1)
+				sig = (sin(TAU * freq * t) * 0.68 + sin(TAU * freq * 2.0 * t) * 0.24 * exp(-t * 3.5) + sin(TAU * freq * 3.0 * t) * 0.08 * exp(-t * 6.0)) * env * 0.20
+			elif inst == "kalimba":
+				var env := minf(t / 0.010, 1.0) * exp(-t * 2.8)
+				sig = (sin(TAU * freq * t) * 0.78 + sin(TAU * freq * 2.98 * t) * 0.14 * exp(-t * 9.0)) * env * 0.21
+			elif inst == "celesta":
+				var env := minf(t / 0.012, 1.0) * exp(-t * 2.3)
+				sig = (sin(TAU * freq * t) * 0.72 + sin(TAU * freq * 2.0 * t) * 0.20 + sin(TAU * freq * 4.0 * t) * 0.08 * exp(-t * 7.0)) * env * 0.18
+			elif inst == "rhodes":
+				var fade_out := clampf((len_s - t) / 0.25, 0.0, 1.0)
+				var trem := 0.88 + 0.12 * sin(TAU * 3.2 * t)
+				var env := minf(t / 0.04, 1.0) * exp(-t * 0.55) * fade_out * trem
+				sig = (sin(TAU * freq * t) * 0.82 + sin(TAU * freq * 2.0 * t) * 0.14 * exp(-t * 2.0)) * env * 0.11
+			elif inst == "pizz":
+				var env := minf(t / 0.006, 1.0) * exp(-t * 5.2)
+				sig = (sin(TAU * freq * t) * 0.75 + sin(TAU * freq * 2.0 * t) * 0.25 * exp(-t * 8.0)) * env * 0.22
+			else: # warm upright bass
+				var fade_out := clampf((len_s - t) / 0.20, 0.0, 1.0)
+				var env := minf(t / 0.025, 1.0) * exp(-t * 0.85) * fade_out
+				sig = (sin(TAU * freq * t) * 0.85 + sin(TAU * freq * 2.0 * t) * 0.15) * env * 0.18
+			left[idx] += sig * gain_l
+			right[idx] += sig * gain_r
+
+	# Subtle warm stereo room reflection (Haas 24ms cross-echo) for spacious studio warmth
+	var delay_samples := int(0.024 * SAMPLE_RATE)
+	var pcm := PackedByteArray()
+	pcm.resize(frames * 4)
+	for i in range(frames):
+		var prev_i := (i - delay_samples + frames) % frames
+		var out_l := clampf(left[i] + right[prev_i] * 0.14, -0.92, 0.92)
+		var out_r := clampf(right[i] + left[prev_i] * 0.14, -0.92, 0.92)
+		pcm.encode_s16(i * 4, clampi(int(round(out_l * 32767.0)), -32768, 32767))
+		pcm.encode_s16(i * 4 + 2, clampi(int(round(out_r * 32767.0)), -32768, 32767))
+
+	var wav := AudioStreamWAV.new()
+	wav.format = AudioStreamWAV.FORMAT_16_BITS
+	wav.mix_rate = SAMPLE_RATE
+	wav.stereo = true
+	wav.data = pcm
+	wav.loop_mode = AudioStreamWAV.LOOP_FORWARD
+	wav.loop_begin = 0
+	wav.loop_end = frames
+	return wav
 
 func _to_wav(samples: PackedFloat32Array, loop: bool = false) -> AudioStreamWAV:
 	var pcm := PackedByteArray()
@@ -126,25 +274,6 @@ func _to_wav(samples: PackedFloat32Array, loop: bool = false) -> AudioStreamWAV:
 		wav.loop_begin = 0
 		wav.loop_end = samples.size()
 	return wav
-
-func _synth_kalimba_loop(duration: float, notes: Array) -> AudioStreamWAV:
-	var count := int(duration * SAMPLE_RATE)
-	var buf := PackedFloat32Array()
-	buf.resize(count)
-	buf.fill(0.0)
-	for n: Array in notes:
-		var start_i := int(float(n[0]) * SAMPLE_RATE)
-		var freq := float(n[1])
-		var len_s := float(n[2])
-		var len_i := int(len_s * SAMPLE_RATE)
-		for j in range(len_i):
-			var idx := (start_i + j) % count
-			var t := float(j) / float(SAMPLE_RATE)
-			var env := minf(t / 0.012, 1.0) * exp(-t * 2.6)
-			# Soft wooden tine: fundamental + gentle 2nd harmonic + quick woody transient
-			var sig := sin(TAU * freq * t) * 0.75 + sin(TAU * freq * 2.0 * t) * 0.18 * exp(-t * 5.0)
-			buf[idx] = clampf(buf[idx] + sig * env * 0.24, -0.95, 0.95)
-	return _to_wav(buf, true)
 
 func _synth_breeze_loop(duration: float, with_birds: bool) -> AudioStreamWAV:
 	var count := int(duration * SAMPLE_RATE)

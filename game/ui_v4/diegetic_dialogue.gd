@@ -20,6 +20,9 @@ var current_npc_id := ""
 var current_en := ""
 var current_zh := ""
 var zh_visible := false
+var last_captured_wav_b64 := ""
+var _mic_player: AudioStreamPlayer
+var _mic_capture: AudioEffectCapture
 
 var _bubble_card: PanelContainer
 var _speaker_badge: Label
@@ -196,20 +199,106 @@ func open_conversation(config: Dictionary) -> void:
 
 func _start_follow_along(mode: String) -> void:
 	var phrase := current_en if not current_en.is_empty() else "Hello!"
+	last_captured_wav_b64 = ""
 	if mode == "shy":
 		follow_along_submitted.emit(phrase, "shy", 0.0, 0)
 		return
 	if DisplayServer.get_name() == "headless":
 		follow_along_submitted.emit(phrase, "voice", 0.042, 850)
 		return
-	_zh_label.text = "🎙️ 正在温暖倾听你跟读：「%s」……" % phrase.left(48)
+	_zh_label.text = "🎙️ 正在温暖倾听你跟读：「%s」……（离线语音识别中）" % phrase.left(44)
 	_zh_label.visible = true
 	_update_positions()
-	var peak_db := AudioServer.get_bus_peak_volume_left_db(0, 0)
-	var est_rms := clampf(db_to_linear(maxf(peak_db, -32.0)), 0.018, 0.25)
-	await get_tree().create_timer(0.85).timeout
+
+	var rec_info := await _record_mic_wav_16k(1.35)
+	last_captured_wav_b64 = str(rec_info.get("wav_b64", ""))
+	var est_rms := float(rec_info.get("rms", 0.035))
+	var dur_ms := int(rec_info.get("duration_ms", 1100))
 	if is_inside_tree() and visible:
-		follow_along_submitted.emit(phrase, "voice", est_rms, 880)
+		follow_along_submitted.emit(phrase, "voice", est_rms, dur_ms)
+
+func _record_mic_wav_16k(duration_sec: float) -> Dictionary:
+	var mix_rate := float(AudioServer.get_mix_rate())
+	var can_capture := bool(ProjectSettings.get_setting("audio/driver/enable_input", false)) and mix_rate >= 8000.0
+	if not can_capture:
+		await get_tree().create_timer(0.85).timeout
+		return {"wav_b64": "", "rms": 0.035, "duration_ms": 880}
+
+	var bus_idx := AudioServer.get_bus_index("V4MicBus")
+	if bus_idx < 0:
+		AudioServer.add_bus()
+		bus_idx = AudioServer.bus_count - 1
+		AudioServer.set_bus_name(bus_idx, "V4MicBus")
+		AudioServer.set_bus_mute(bus_idx, true)
+		_mic_capture = AudioEffectCapture.new()
+		_mic_capture.buffer_length = 3.0
+		AudioServer.add_bus_effect(bus_idx, _mic_capture)
+	else:
+		_mic_capture = AudioServer.get_bus_effect(bus_idx, 0) as AudioEffectCapture
+
+	if not is_instance_valid(_mic_player):
+		_mic_player = AudioStreamPlayer.new()
+		_mic_player.stream = AudioStreamMicrophone.new()
+		_mic_player.bus = "V4MicBus"
+		add_child(_mic_player)
+
+	if _mic_capture != null:
+		_mic_capture.clear_buffer()
+	_mic_player.play()
+	await get_tree().create_timer(duration_sec).timeout
+	_mic_player.stop()
+
+	if _mic_capture == null:
+		return {"wav_b64": "", "rms": 0.035, "duration_ms": int(duration_sec * 1000.0)}
+
+	var avail := _mic_capture.get_frames_available()
+	if avail < 400:
+		return {"wav_b64": "", "rms": 0.032, "duration_ms": int(duration_sec * 1000.0)}
+
+	var raw_frames: PackedVector2Array = _mic_capture.get_buffer(avail)
+	var target_sr := 16000
+	var step := maxf(1.0, mix_rate / float(target_sr))
+	var out_count := int(float(raw_frames.size()) / step)
+	if out_count < 160:
+		return {"wav_b64": "", "rms": 0.032, "duration_ms": int(duration_sec * 1000.0)}
+
+	var pcm := PackedByteArray()
+	pcm.resize(out_count * 2)
+	var sum_sq := 0.0
+	for i in range(out_count):
+		var src_i := mini(raw_frames.size() - 1, int(float(i) * step))
+		var mono := clampf((raw_frames[src_i].x + raw_frames[src_i].y) * 0.5, -1.0, 1.0)
+		sum_sq += mono * mono
+		pcm.encode_s16(i * 2, clampi(int(round(mono * 32767.0)), -32768, 32767))
+
+	var rms := sqrt(sum_sq / float(out_count))
+	if rms < 0.0015:
+		# Silence / unplugged mic -> let server use friendly envelope mode
+		return {"wav_b64": "", "rms": 0.032, "duration_ms": int(duration_sec * 1000.0)}
+
+	var data_len := pcm.size()
+	var header := PackedByteArray()
+	header.resize(44)
+	header.encode_u8(0, 82); header.encode_u8(1, 73); header.encode_u8(2, 70); header.encode_u8(3, 70) # RIFF
+	header.encode_u32(4, 36 + data_len)
+	header.encode_u8(8, 87); header.encode_u8(9, 65); header.encode_u8(10, 86); header.encode_u8(11, 69) # WAVE
+	header.encode_u8(12, 102); header.encode_u8(13, 109); header.encode_u8(14, 116); header.encode_u8(15, 32) # fmt 
+	header.encode_u32(16, 16)
+	header.encode_u16(20, 1) # PCM
+	header.encode_u16(22, 1) # Mono
+	header.encode_u32(24, target_sr)
+	header.encode_u32(28, target_sr * 2)
+	header.encode_u16(32, 2)
+	header.encode_u16(34, 16)
+	header.encode_u8(36, 100); header.encode_u8(37, 97); header.encode_u8(38, 116); header.encode_u8(39, 97) # data
+	header.encode_u32(40, data_len)
+	header.append_array(pcm)
+
+	return {
+		"wav_b64": Marshalls.raw_to_base64(header),
+		"rms": rms,
+		"duration_ms": int(float(out_count) * 1000.0 / float(target_sr))
+	}
 
 func show_speech_encouragement(reply: Dictionary) -> void:
 	var badge := str(reply.get("cheer_badge", "🌟 自信开口星"))

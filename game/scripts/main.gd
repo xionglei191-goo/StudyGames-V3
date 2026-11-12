@@ -17,12 +17,16 @@ const CurriculumDirector = preload("res://gameplay/curriculum_quest_director.gd"
 const StoryDirector = preload("res://gameplay/unit_storyline_director.gd")
 const ParentAIPortal = preload("res://ui_v4/parent_ai_portal.gd")
 const ChapterAtlasView = preload("res://ui_v4/chapter_atlas_view.gd")
+const FreeGridDecorScript = preload("res://gameplay/free_grid_decor_studio.gd")
+const ThematicPlay = preload("res://gameplay/chapter_thematic_play.gd")
 var online: Node
 var audio_director: Node
 var ai_bridge: Node
 var tactile_quests: Node3D
+var free_decor_studio: Node3D
 var _commission_hint_used := false
 var _pending_chapter_popup_key := ""
+var _thematic_session: Dictionary = {}
 var online_config: Dictionary = {}
 var world: Node3D
 var player: CharacterBody3D
@@ -192,6 +196,9 @@ func _ready() -> void:
 	household = preload("res://scripts/home_controller.gd").new()
 	add_child(household)
 	household.setup(self)
+	free_decor_studio = FreeGridDecorScript.new()
+	add_child(free_decor_studio)
+	free_decor_studio.setup(self)
 	tactile_quests = TactileQuestsScript.new()
 	tactile_quests.name = "TactileLifeQuests"
 	add_child(tactile_quests)
@@ -234,7 +241,7 @@ func _ready() -> void:
 		)
 		ui.diegetic.follow_along_submitted.connect(func(target_text: String, mode: String, rms_peak: float, duration_ms: int):
 			if is_instance_valid(ai_bridge):
-				ai_bridge.request_speech_encouragement(target_text, mode, rms_peak, duration_ms)
+				ai_bridge.request_speech_encouragement(target_text, mode, rms_peak, duration_ms, ui.diegetic.last_captured_wav_b64)
 		)
 		ui.diegetic.hint_toggled.connect(func(_npc: String, shown: bool):
 			if shown: _commission_hint_used = true
@@ -372,6 +379,8 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	player.locked = false
 	if is_instance_valid(tactile_quests):
 		tactile_quests.attach_to_room(self, room)
+	if is_instance_valid(free_decor_studio):
+		free_decor_studio.attach_to_room(room)
 	if is_instance_valid(audio_director):
 		audio_director.apply_room_soundscape(room, str(living.weather_id) if is_instance_valid(living) else "clear")
 	if is_instance_valid(journey):
@@ -488,7 +497,8 @@ func _nearest_walkable_cell(origin: Vector2i, point: Vector3) -> Vector2i:
 func _process(delta: float) -> void:
 	if not is_instance_valid(player) or loading_room or metadata.is_empty() or capturing_photo:
 		return
-	player.locked = ui.modal.visible or is_instance_valid(football) or is_instance_valid(orchard_activity)
+	var studio_open: bool = is_instance_valid(free_decor_studio) and bool(free_decor_studio.active)
+	player.locked = ui.modal.visible or is_instance_valid(football) or is_instance_valid(orchard_activity) or studio_open
 	if is_instance_valid(living):
 		living.set_context({"dialogue_open":ui.modal.visible,"learning_open":ui.current_panel=="question","memory_open":ui.current_panel=="word_story","paused":ui.current_panel=="settings" or (is_instance_valid(orchard_activity) and orchard_activity.paused),"backgrounded":application_backgrounded,"reduced_motion":ui.reduced_motion,"fixed_day":bool(State.data.preferences.get("fixed_day",false)),"guided_prologue":journey_phase in ["home","prologue"],"story_day_phase":"dawn" if ui.current_panel=="journey_u1" and journey.u1_visible_step=="U1-01" else "","active_actor_ids":journey.active_actor_ids if ui.modal.visible else []})
 		living.refresh_interactions(interactions)
@@ -528,6 +538,10 @@ func _process(delta: float) -> void:
 	if ui.current_panel=="decorate" or ui.current_panel=="purchase":
 		focus = Vector3(bounds.get_center().x,-4.3,bounds.get_center().y)
 		desired_size = 26
+	if studio_open:
+		var room_c := Vector3(bounds.get_center().x, 0.0, bounds.get_center().y)
+		focus = free_decor_studio.cursor_pos.lerp(room_c, 0.35) + Vector3(0.0, -1.2, 0.0)
+		desired_size = 22.0 if room == "home_estate" else 18.5
 	if is_instance_valid(football):
 		focus = football.start.lerp(football.goal,0.5)+Vector3(0,-2.8,0)
 		desired_size = 17.5
@@ -577,7 +591,7 @@ func _process(delta: float) -> void:
 				greeting_clock = 8
 	player.look_target = nearest.position if not nearest.is_empty() else Vector3.INF
 	var diegetic_open: bool = is_instance_valid(ui.diegetic) and bool(ui.diegetic.visible)
-	if not ui.modal.visible and not diegetic_open and not is_instance_valid(football):
+	if not ui.modal.visible and not diegetic_open and not studio_open and not is_instance_valid(football):
 		var selected: Dictionary = hover_interaction if not hover_interaction.is_empty() else nearest
 		feedback.highlight(selected)
 		if not selected.is_empty() and not camera.is_position_behind(selected.position):
@@ -599,6 +613,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		return
 	if is_instance_valid(orchard_activity):
 		orchard_activity.handle_input(event)
+		get_viewport().set_input_as_handled()
+		return
+	if is_instance_valid(free_decor_studio) and free_decor_studio.handle_input(event):
 		get_viewport().set_input_as_handled()
 		return
 	if event.is_action_pressed("ui_cancel"):
@@ -704,6 +721,8 @@ func _close() -> void:
 	if is_instance_valid(household): household.cancel_task()
 	if is_instance_valid(ui) and is_instance_valid(ui.diegetic):
 		ui.diegetic.dismiss()
+	if is_instance_valid(free_decor_studio) and free_decor_studio.active:
+		free_decor_studio.close_studio()
 	_stop_orchard_activity()
 	_rollback_decoration()
 	_stop_football()
@@ -930,7 +949,11 @@ func interact_id(id: String) -> void:
 				})
 			else:
 				ui.show_panel("bed","今天也是充实的一天","我的小屋   /   休息","睡一觉，明天的苹果就成熟了。\n小屋、装饰、叶币和学习记录都会保留。",[{"label":"睡到明天","id":"next_day","primary":true},{"label":"再玩一会儿","id":"close"}])
-		"decorate": show_decorate()
+		"decorate":
+			if not validation_mode and is_instance_valid(free_decor_studio):
+				await free_decor_studio.open_studio()
+			else:
+				await show_decorate()
 		"host":
 			var activity := _room_activity()
 			if not activity.is_empty():
@@ -1212,6 +1235,7 @@ func show_settings() -> void:
 		{"label":"减少动态："+("开" if ui.reduced_motion else "关"),"id":"toggle_motion"},
 		{"label":"固定白昼："+("开" if State.data.preferences.get("fixed_day",false) else "关"),"id":"toggle_day"},
 		{"label":"窗口 / 全屏","id":"fullscreen"},
+		{"label":"✨ 动森自由网格家园布置","id":"v4_free_decor"},
 		{"label":"家长 AI 成长观察室 & 八册同步","id":"v4_parent_ai","primary":true},
 		{"label":"家长观察册","id":"journey:parent"},
 		{"label":"保存并继续","id":"save","primary":true},
@@ -1361,6 +1385,82 @@ func _handle_v4_chapter_step(payload: String) -> void:
 	if is_instance_valid(ui.diegetic):
 		ui.diegetic.open_conversation(StoryDirector.build_stage_dialogue(State, chap, conversation_position))
 
+func open_v4_thematic_play(ckey: String) -> void:
+	var chap := StoryDirector.get_chapter_by_key(ckey)
+	if chap.is_empty():
+		chap = StoryDirector.active_chapter(State)
+	if chap.is_empty() or not _prepare_screen():
+		return
+	var real_key := str(chap.get("chapter_key", ckey))
+	State.journey_select_book(str(chap.get("book_id", "xiangshao-g3-1")))
+	State.set_active_unit(str(chap.get("unit_id", "unit-1")))
+	State.advance_v4_chapter(real_key, 1, 0)
+	_thematic_session = {"ckey": real_key, "filled": 0, "hint": false, "note": ""}
+	ThematicPlay.build(ui, State, chap, _thematic_session)
+	var targets := ThematicPlay.target_cards_for_chapter(chap)
+	if not targets.is_empty() and is_instance_valid(ai_bridge):
+		ai_bridge.speak_text(str(targets[0].get("word", "")), "en", "warm")
+
+func _handle_v4_thematic_pick(payload: String) -> void:
+	var parts := payload.split(":", true, 1)
+	if parts.size() < 2:
+		return
+	var ckey := parts[0]
+	var chosen_word := parts[1]
+	var chap := StoryDirector.get_chapter_by_key(ckey)
+	if chap.is_empty():
+		return
+	var targets := ThematicPlay.target_cards_for_chapter(chap)
+	var filled := clampi(int(_thematic_session.get("filled", 0)), 0, targets.size())
+	if filled >= targets.size():
+		return
+	var expected := str(targets[filled].get("word", ""))
+	var hint_used := bool(_thematic_session.get("hint", false))
+	if is_instance_valid(ai_bridge):
+		ai_bridge.speak_text(chosen_word, "en", "warm")
+	if chosen_word.to_lower() == expected.to_lower():
+		_thematic_session["filled"] = filled + 1
+		_thematic_session["hint"] = false
+		_thematic_session["note"] = "🌟 放对啦！「%s」（%s）已经稳稳摆上托盘！" % [expected, str(targets[filled].get("zh", ""))]
+		State.record_stealth_evidence({
+			"word": expected.to_lower(),
+			"support_level": 1 if hint_used else 0,
+			"correct": true,
+			"context": "v4_thematic_play:" + ckey
+		})
+		if is_instance_valid(audio_director):
+			audio_director.play_foley("wardrobe_sparkle" if filled + 1 >= targets.size() else "bell_ding")
+		if filled + 1 < targets.size() and is_instance_valid(ai_bridge):
+			var next_w := str(targets[filled + 1].get("word", ""))
+			get_tree().create_timer(0.65).timeout.connect(func():
+				if is_instance_valid(ai_bridge) and ui.current_panel == "v4_thematic_play":
+					ai_bridge.speak_text(next_w, "en", "warm")
+			)
+	else:
+		var tapped_zh := chosen_word
+		for item: Dictionary in ThematicPlay.choice_pool_for_chapter(chap, targets):
+			if str(item.get("word", "")).to_lower() == chosen_word.to_lower():
+				tapped_zh = str(item.get("zh", chosen_word))
+				break
+		_thematic_session["note"] = "🌱 这张卡是「%s」（%s）哦～听听读音，再找找哪张是【%s】吧 ✨" % [
+			chosen_word, tapped_zh, str(targets[filled].get("zh", ""))
+		]
+		if is_instance_valid(audio_director):
+			audio_director.play_foley("bubble_pop")
+	ThematicPlay.build(ui, State, chap, _thematic_session)
+
+func _handle_v4_thematic_done(ckey: String) -> void:
+	var chap := StoryDirector.get_chapter_by_key(ckey)
+	if chap.is_empty():
+		return
+	var prev_st := State.v4_chapter_stage(ckey)
+	var bonus := 6 if prev_st < 2 else 2
+	State.advance_v4_chapter(ckey, 2, bonus)
+	if is_instance_valid(audio_director):
+		audio_director.play_foley("wardrobe_sparkle")
+	await open_active_v4_chapter()
+	feedback.pickup(player.position, player.position, "leaf", "+%d 叶币 · 共创完成" % bonus)
+
 func _on_action(id: String) -> void:
 	if is_instance_valid(sounds) and not id.begins_with("note:"):
 		sounds.play("click")
@@ -1404,6 +1504,24 @@ func _on_action(id: String) -> void:
 	elif id.begins_with("wardrobe_speak:"):
 		if is_instance_valid(ai_bridge):
 			ai_bridge.speak_text(id.trim_prefix("wardrobe_speak:"), "en", "warm")
+	elif id == "v4_free_decor":
+		if is_instance_valid(free_decor_studio):
+			await free_decor_studio.open_studio()
+	elif id.begins_with("v4_thematic_open:"):
+		open_v4_thematic_play(id.trim_prefix("v4_thematic_open:"))
+	elif id.begins_with("v4_thematic_speak:"):
+		if is_instance_valid(ai_bridge):
+			ai_bridge.speak_text(id.trim_prefix("v4_thematic_speak:"), "en", "warm")
+	elif id.begins_with("v4_thematic_hint:"):
+		var hkey := id.trim_prefix("v4_thematic_hint:")
+		var hchap := StoryDirector.get_chapter_by_key(hkey)
+		if not hchap.is_empty():
+			_thematic_session["hint"] = true
+			ThematicPlay.build(ui, State, hchap, _thematic_session)
+	elif id.begins_with("v4_thematic_pick:"):
+		_handle_v4_thematic_pick(id.trim_prefix("v4_thematic_pick:"))
+	elif id.begins_with("v4_thematic_done:"):
+		await _handle_v4_thematic_done(id.trim_prefix("v4_thematic_done:"))
 	elif id == "v4_parent_ai":
 		if _prepare_screen():
 			ParentAIPortal.build(ui, State, ai_bridge)
@@ -1693,6 +1811,8 @@ func _capture(directory: String, name: String) -> void:
 	get_viewport().get_texture().get_image().save_png(directory.path_join(name+".png"))
 func _prepare_screen() -> bool:
 	if is_instance_valid(journey) and not journey.close_memory(): return false
+	if is_instance_valid(free_decor_studio) and free_decor_studio.active:
+		free_decor_studio.close_studio()
 	_stop_orchard_activity()
 	_cancel_navigation()
 	_rollback_decoration()

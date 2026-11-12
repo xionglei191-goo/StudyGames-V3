@@ -1,9 +1,9 @@
 # 字母岛 · 游戏设计文档（GDD）
 
 > [!IMPORTANT]
-> **V4 全量完成状态同步（2026-11-12）**：工程已全面升级至 **StudyGames v4.0.0 · 精致微缩童话岛全量完成版**（Godot 4.7 `forward_plus` + 本地 AI 安全伴学轻服务 `services/ai_companion/`）。原先策划中待后续开发的 **全 8 册 81 单元三幕生活主线与永久 3D 章节纪念牌**（`game/data/learning/curriculum_arcs_v4.json` + `game/gameplay/unit_storyline_director.gd` + `game/ui_v4/chapter_atlas_view.gd`）、**全岛 30 个场景（26 字母地标 A–Z + 小院 + 校园三区）亲手捧物与工坊分享台**（`game/gameplay/tactile_life_quests.gd`）、**100% 去考卷弹窗世界绘本对话气泡**（`game/ui_v4/diegetic_dialogue.gd`）、**包容式口语跟读喝彩与害羞默读**、以及 **1,314 词 3D 精装立体翻翻书剧场**（`game/theater/popup_book_theater.gd`）均已全量落地并通过自动化回归验收。下文第 1–5 节保留 2026-10 策划整合时的原始历史快照供溯源。
+> **V4.5 全量精修状态同步（2026-11-12）**：工程已升级至 **StudyGames v4.5.0 · 精致微缩童话岛全量精修版**（Godot 4.7 `forward_plus` + 本地离线神经网络语音/识别伴学服务 `services/ai_companion/`）。除全 8 册 81 单元三幕生活主线与永久 3D 章节纪念牌、全岛 30 个场景亲手捧物与工坊分享台、100% 去考卷弹窗绘本气泡外，现已进一步落地：**2,526 条离线 Piper ONNX 神经网络语音库预烘**（`voice_manifest_v4.json`）、**本地离线 Vosk 语音识别零扣分跟读反馈**、**4 首立体声原声级治愈 BGM**（`audio_director.gd`）、**动森式 0.5m 自由网格 3D 家园与庭院装修工坊**（`free_grid_decor_studio.gd`）、**5 类章节专属差异化情境微玩法**（`chapter_thematic_play.gd`）、以及 **301 处高频核心词双语生活例句与 5 种 3D 纸偶专属舞蹈编排**（`popup_choreography_v4.json`）。下文第 1–5 节保留 2026-10 策划整合时的原始历史快照供溯源。
 
-版本：1.0 策划整合基线（2026-10-22）；实施状态更新：2026-11-12（Asia/Shanghai）。适用项目：StudyGames V4 / LoveStudy，当前工程版本 **v4.0.0（全量完成版）**。
+版本：1.0 策划整合基线（2026-10-22）；实施状态更新：2026-11-12（Asia/Shanghai）。适用项目：StudyGames V4.5 / LoveStudy，当前工程版本 **v4.5.0（全量精修完成版）**。
 
 本文汇总主线、八册单词故事与动态美术策划，并统一它们之间的规则。**“最终策划”表示本轮已经对齐的制作基线，不表示游戏已经实现这些内容，也不替代后续教材编辑、人物图像核对和儿童试玩。**
 

@@ -7,6 +7,8 @@ const Content = preload("res://ui/memory_story_content.gd")
 const CurriculumDirector = preload("res://gameplay/curriculum_quest_director.gd")
 const StoryDirector = preload("res://gameplay/unit_storyline_director.gd")
 const TactileQuests = preload("res://gameplay/tactile_life_quests.gd")
+const AudioDirector = preload("res://core/audio_director.gd")
+const ThematicPlay = preload("res://gameplay/chapter_thematic_play.gd")
 
 var _failures: Array[String] = []
 var _main: Node3D
@@ -240,6 +242,68 @@ func _run() -> void:
 	await _wait_frames(3)
 	_check("canteen_lunch_uses_diegetic_bubble", _main.ui.diegetic.visible and not _main.ui.modal.visible)
 	_main._close()
+
+	# 11. Verify 4 Stereo Cozy Original BGM Themes in AudioDirector
+	_check("bgm_island_selection", AudioDirector.select_bgm_key("village", false) == "bgm_island")
+	_check("bgm_home_selection", AudioDirector.select_bgm_key("home", false) == "bgm_home" and AudioDirector.select_bgm_key("home_estate", false) == "bgm_home")
+	_check("bgm_campus_selection", AudioDirector.select_bgm_key("classroom", false) == "bgm_campus" and AudioDirector.select_bgm_key("school", false) == "bgm_campus")
+	_check("bgm_theater_selection", AudioDirector.select_bgm_key("village", true) == "bgm_theater")
+
+	# 12. Verify Animal-Crossing Free-Grid 3D Home & Courtyard Studio (`FreeGridDecorStudio`)
+	await _main.change_room("home")
+	await _wait_room("home")
+	await _main.free_decor_studio.open_studio()
+	await _wait_frames(3)
+	_check("free_decor_studio_opened", _main.free_decor_studio.active and _main.room == "home")
+	_main.free_decor_studio.select_furniture("sunflower_rug")
+	_main.free_decor_studio.rotate_ghost(90)
+	_check("free_decor_rotation_90", _main.free_decor_studio.current_rot_deg == 90)
+	var placed_ok: bool = _main.free_decor_studio.place_at_cursor()
+	await _wait_frames(2)
+	var placed_container: Node = _main.free_decor_studio.get_node_or_null("PlacedFreeDecorItems")
+	_check("free_decor_placed_in_3d_room", placed_ok and placed_container != null and placed_container.get_child_count() == 1)
+	state.load_state()
+	_main.free_decor_studio.rebuild_room_items("home")
+	_check("free_decor_persists_reload", state.free_decor_placed_total("sunflower_rug") == 1 and placed_container.get_child_count() == 1)
+	_main.free_decor_studio.undo_last_item()
+	_check("free_decor_undo_works", state.free_decor_placed_total("sunflower_rug") == 0 and placed_container.get_child_count() == 0)
+	_main.free_decor_studio.close_studio()
+	await _wait_frames(2)
+
+	# 13. Verify All 5 Differentiated Thematic Chapter Mini-Games (`ChapterThematicPlay`)
+	var mode_counts: Dictionary = {}
+	for u_item: Dictionary in arc_units:
+		var m_spec: Dictionary = ThematicPlay.classify_chapter(u_item)
+		var m_id: String = str(m_spec.get("id", ""))
+		mode_counts[m_id] = int(mode_counts.get(m_id, 0)) + 1
+	for req_mode: String in ["cafe_order", "weather_dress", "island_compass", "clock_planner", "kaleidoscope_sort"]:
+		_check("thematic_mode_covered_" + req_mode, int(mode_counts.get(req_mode, 0)) >= 3)
+
+	var test_chap_key := "xiangshao-g3-1/unit-9"
+	var test_chap := StoryDirector.get_chapter_by_key(test_chap_key)
+	_main.open_v4_thematic_play(test_chap_key)
+	await _wait_frames(3)
+	_check("thematic_play_ui_opened", _main.ui.current_panel == "v4_thematic_play")
+	var t_targets: Array[Dictionary] = ThematicPlay.target_cards_for_chapter(test_chap)
+	for t_card: Dictionary in t_targets:
+		_main._handle_v4_thematic_pick("%s:%s" % [test_chap_key, str(t_card.get("word", ""))])
+		await _wait_frames(2)
+	var coins_before_theme := int(state.data.coins)
+	await _main._handle_v4_thematic_done(test_chap_key)
+	await _wait_frames(3)
+	_check("thematic_play_advances_stage_2_with_coins", state.v4_chapter_stage(test_chap_key) >= 2 and int(state.data.coins) == coins_before_theme + 6)
+	_main._close()
+
+	# 14. Verify 3D Pop-up Choreography & Bilingual Usage Ribbon (`popup_choreography_v4.json`)
+	_main.journey.open_story("occ-f7669b9d7e86", false) # "apple"
+	await _wait_frames(4)
+	var apple_theater: Control = _main.journey.current_memory
+	_check("popup_choreo_loaded_for_apple", is_instance_valid(apple_theater) and apple_theater.dance_style() == "bounce_wave" and apple_theater.example_en().to_lower().contains("apple"))
+	if is_instance_valid(apple_theater):
+		apple_theater.request_close()
+		await _wait_frames(3)
+	_main._close()
+
 	_main.validation_mode = true
 
 	# Clean up isolated validation save files

@@ -107,12 +107,12 @@ func observe_stealth_mastery(word: String, support_level: int, correct: bool, re
 	if err != OK:
 		req.queue_free()
 
-func request_speech_encouragement(target_text: String, mode: String = "voice", rms_energy: float = 0.035, duration_ms: int = 900) -> void:
+func request_speech_encouragement(target_text: String, mode: String = "voice", rms_energy: float = 0.035, duration_ms: int = 900, wav_base64: String = "") -> void:
 	if DisplayServer.get_name() == "headless":
 		speech_encouragement_ready.emit(_local_fallback_encourage(target_text, mode, rms_energy, duration_ms))
 		return
 	var req := HTTPRequest.new()
-	req.timeout = 3.5
+	req.timeout = 4.5
 	add_child(req)
 	req.request_completed.connect(func(result: int, code: int, _headers: PackedStringArray, body: PackedByteArray):
 		req.queue_free()
@@ -127,7 +127,8 @@ func request_speech_encouragement(target_text: String, mode: String = "voice", r
 		"target_text": target_text,
 		"mode": mode,
 		"rms_energy": rms_energy,
-		"duration_ms": duration_ms
+		"duration_ms": duration_ms,
+		"wav_base64": wav_base64
 	})
 	var err := req.request(base_url + "/api/v4/speech/encourage", ["Content-Type: application/json"], HTTPClient.METHOD_POST, payload)
 	if err != OK:

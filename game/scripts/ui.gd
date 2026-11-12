@@ -304,6 +304,7 @@ func show_decoration_tray(data: Dictionary, selected: String, previewing: bool, 
 	var title := label("一点点，变成喜欢的家",24)
 	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	row.add_child(title)
+	row.add_child(button("✨ 动森自由网格布置","v4_free_decor",false,Vector2(195,44)))
 	row.add_child(button("去杂货架挑选","shop",false,Vector2(170,44)))
 	row.add_child(button("完成布置","close",true,Vector2(130,44)))
 	var shelf := HBoxContainer.new()

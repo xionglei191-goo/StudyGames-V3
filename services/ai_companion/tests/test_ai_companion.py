@@ -61,6 +61,7 @@ def test_speech_service_synthesizes_and_caches_wav() -> None:
     phrase = "Good morning from Alphabet Island V4 test!"
     res = asyncio.run(synthesize_speech(phrase, lang="en", voice_hint="warm"))
     assert res["ok"] is True
+    assert res["engine"] in {"piper_neural_onnx", "neural_disk_cache"}
     assert len(res["wav_base64"]) > 100
     raw = base64.b64decode(res["wav_base64"])
     assert raw[:4] == b"RIFF"
@@ -69,6 +70,11 @@ def test_speech_service_synthesizes_and_caches_wav() -> None:
     second = asyncio.run(synthesize_speech(phrase, lang="en", voice_hint="warm"))
     assert second["ok"] is True
     assert second["cached"] is True
+
+    zh_res = asyncio.run(synthesize_speech("早上好，欢迎来到字母岛！", lang="zh", voice_hint="warm"))
+    assert zh_res["ok"] is True
+    assert zh_res["engine"] in {"piper_neural_onnx", "neural_disk_cache"}
+    assert len(zh_res["wav_base64"]) > 100
 
 
 def test_stealth_mastery_3pl_irt_and_parent_report() -> None:
@@ -181,5 +187,40 @@ def test_asgi_endpoints_end_to_end() -> None:
             assert enc_shy.status_code == 200
             assert enc_shy.json()["ok"] is True
             assert enc_shy.json()["mode"] == "shy"
+
+            # Real offline Vosk ASR roundtrip: feed Piper WAV for "good morning" & mismatch check
+            gm_tts = await synthesize_speech("good morning", lang="en", voice_hint="warm")
+            asr_exact = await client.post(
+                "/api/v4/speech/encourage",
+                json={
+                    "target_text": "good morning",
+                    "mode": "voice",
+                    "rms_energy": 0.08,
+                    "duration_ms": 1100,
+                    "wav_base64": gm_tts["wav_base64"],
+                },
+            )
+            assert asr_exact.status_code == 200
+            exact_body = asr_exact.json()
+            assert exact_body["ok"] is True
+            assert exact_body["asr_engine"] == "vosk_offline_asr"
+            assert "morning" in exact_body["transcript"]
+            assert exact_body["match_tier"] in {"exact", "close"}
+
+            asr_gentle = await client.post(
+                "/api/v4/speech/encourage",
+                json={
+                    "target_text": "watermelon",
+                    "mode": "voice",
+                    "rms_energy": 0.08,
+                    "duration_ms": 1100,
+                    "wav_base64": gm_tts["wav_base64"],
+                },
+            )
+            assert asr_gentle.status_code == 200
+            gentle_body = asr_gentle.json()
+            assert gentle_body["ok"] is True
+            assert gentle_body["asr_engine"] == "vosk_offline_asr"
+            assert gentle_body["match_tier"] == "gentle_model"
 
     asyncio.run(_exercise())

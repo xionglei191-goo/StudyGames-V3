@@ -12,6 +12,15 @@ signal close_requested(result: Dictionary)
 
 const Style = preload("res://ui/island_theme.gd")
 const Content = preload("res://ui/memory_story_content.gd")
+const CHOREO_PATH := "res://data/learning/popup_choreography_v4.json"
+
+const DANCE_LABELS := {
+	"bounce_wave": "欢跳挥手舞",
+	"orbit_dance": "圆舞旋转步",
+	"peekaboo_pop": "躲猫猫弹跳",
+	"domino_cheer": "多米诺人浪",
+	"starlight_float": "星光漂浮舞",
+}
 
 const SUPPORT_KINDS := [
 	"unassisted_attempt", "location_and_meaning", "first_step",
@@ -64,10 +73,31 @@ var _slots_row: HBoxContainer
 var _tiles_row: HBoxContainer
 var _type_input: LineEdit
 var _feedback_label: Label
+var _usage_btn: Button
 var _audio: AudioStreamPlayer
 var _built_tokens: Array[String] = []
+var _current_choreo: Dictionary = {}
 
 static var _letter_tex_cache: Dictionary = {}
+static var _choreo_cache: Dictionary = {}
+
+static func _load_choreo_map() -> Dictionary:
+	if _choreo_cache.is_empty() and FileAccess.file_exists(CHOREO_PATH):
+		var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(CHOREO_PATH))
+		if parsed is Dictionary:
+			var entries_val: Variant = (parsed as Dictionary).get("entries", {})
+			if entries_val is Dictionary:
+				_choreo_cache = entries_val as Dictionary
+	return _choreo_cache
+
+func dance_style() -> String:
+	return str(_current_choreo.get("dance_style", "bounce_wave"))
+
+func example_en() -> String:
+	return str(_current_choreo.get("example_en", ""))
+
+func example_zh() -> String:
+	return str(_current_choreo.get("example_zh", ""))
 
 func _ready() -> void:
 	name = "PopupBookTheater"
@@ -104,6 +134,9 @@ func setup(value: Dictionary, resume: Dictionary = {}) -> void:
 	if _show_sequence:
 		support_level = 5
 	_content_unavailable = entry.is_empty()
+	var cmap: Dictionary = _load_choreo_map()
+	var eid_key: String = str(entry.get("entry_id", ""))
+	_current_choreo = (cmap[eid_key] as Dictionary) if (cmap.has(eid_key) and cmap[eid_key] is Dictionary) else {}
 	_built_tokens.clear()
 	_playing_beat = false
 	_book_open_progress = 0.0
@@ -241,6 +274,13 @@ func _build_layout() -> void:
 	_beat_nav_box.add_child(_prev_beat_btn)
 	_beat_nav_box.add_child(_beat_counter_lbl)
 	_beat_nav_box.add_child(_next_beat_btn)
+
+	_usage_btn = _pill_btn("💬 生活例句", _on_speak_example, false)
+	_usage_btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
+	_usage_btn.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_usage_btn.custom_minimum_size = Vector2(0, 38)
+	_usage_btn.add_theme_font_size_override("font_size", 15)
+	cap_col.add_child(_usage_btn)
 
 	# 4. Interactive Wooden Token Assembly Tray (shown in Puzzle Mode)
 	_puzzle_box = VBoxContainer.new()
@@ -589,19 +629,47 @@ func _process(delta: float) -> void:
 			hinge.rotation_degrees.x = target_pitch
 			hinge.position = p.base_pos as Vector3
 		else:
-			hinge.rotation_degrees.x = lerpf(hinge.rotation_degrees.x, target_pitch, minf(delta * 10.0, 1.0))
+			var d_style: String = dance_style()
+			var extra_pitch := 0.0
 			var base_p: Vector3 = p.base_pos
 			var hop := 0.0
+			var off_x := 0.0
+			var off_z := 0.0
 			var sway := 0.0
+			var yaw := 0.0
 			if shown and _playing_beat and in_beat:
-				hop = absf(sin(_stage_time * 5.2 + float(idx))) * 0.18
-				sway = sin(_stage_time * 4.0 + float(idx)) * 7.5
+				match d_style:
+					"orbit_dance":
+						off_x = sin(_stage_time * 3.8 + float(idx)) * 0.08
+						off_z = cos(_stage_time * 3.8 + float(idx)) * 0.06
+						hop = absf(sin(_stage_time * 4.2 + float(idx))) * 0.11
+						yaw = sin(_stage_time * 3.2 + float(idx)) * 16.0
+						sway = cos(_stage_time * 3.8 + float(idx)) * 5.0
+					"peekaboo_pop":
+						var peek_s := sin(_stage_time * 4.5 + float(idx) * 1.25)
+						extra_pitch = -28.0 * maxf(0.0, peek_s)
+						hop = maxf(0.0, -peek_s) * 0.22
+						sway = sin(_stage_time * 6.0 + float(idx)) * 4.0
+					"domino_cheer":
+						var w_phase := fposmod(_stage_time * 3.5 - float(idx) * 0.45, TAU)
+						var crest := maxf(0.0, sin(w_phase))
+						hop = crest * crest * 0.24
+						sway = cos(w_phase) * 6.5
+					"starlight_float":
+						hop = 0.10 + sin(_stage_time * 2.4 + float(idx) * 0.8) * 0.09
+						sway = sin(_stage_time * 1.9 + float(idx) * 0.6) * 5.0
+						yaw = cos(_stage_time * 1.6 + float(idx)) * 9.0
+					_: # "bounce_wave"
+						hop = absf(sin(_stage_time * 5.4 + float(idx) * 0.8)) * 0.19
+						sway = sin(_stage_time * 4.2 + float(idx)) * 8.0
 				if is_instance_valid(_spotlight):
 					_spotlight.look_at_from_position(_spotlight.position, hinge.global_position + Vector3(0, 0.5, 0), Vector3.UP)
 			elif shown:
 				hop = sin(_stage_time * 1.8 + float(idx) * 0.9) * 0.02
-			hinge.position = base_p + Vector3(0.0, hop, 0.0)
+			hinge.rotation_degrees.x = lerpf(hinge.rotation_degrees.x, target_pitch + extra_pitch, minf(delta * 10.0, 1.0))
+			hinge.position = base_p + Vector3(off_x, hop, off_z)
 			hinge.rotation_degrees.z = lerpf(hinge.rotation_degrees.z, sway, minf(delta * 8.0, 1.0))
+			hinge.rotation_degrees.y = lerpf(hinge.rotation_degrees.y, yaw, minf(delta * 8.0, 1.0))
 
 func _refresh_ui() -> void:
 	if not _ready_done or entry.is_empty():
@@ -612,10 +680,15 @@ func _refresh_ui() -> void:
 	current_beat = clampi(current_beat, 1, maxi(1, beats.size()))
 	var beat: Dictionary = beats[current_beat - 1] if not beats.is_empty() else {}
 
+	var d_style: String = dance_style()
+	var d_badge: String = str(DANCE_LABELS.get(d_style, "欢跳挥手舞"))
+	var ex_en: String = example_en()
+	var ex_zh: String = example_zh()
+
 	if view_mode == "story":
 		var show_word := (support_level == 5 or _show_sequence)
 		_title_label.text = ("📖 %s  ·  %s" % [spelling, meaning]) if show_word else ("📖 %s  ·  翻翻立体书猜一猜" % meaning)
-		_subtitle_label.text = "26 字母纸偶立体剧场 · 看着纸偶弹起来演故事，顺便记住字母顺序"
+		_subtitle_label.text = "26 字母纸偶立体剧场（🎭 %s） · 看着纸偶弹起来演故事，顺便记住字母顺序" % d_badge
 		var beat_narration := str(beat.get("narration_zh", "")).strip_edges()
 		if beat_narration.is_empty():
 			var steps_arr: Array = entry.get("steps", [])
@@ -628,6 +701,12 @@ func _refresh_ui() -> void:
 						pieces.append(act)
 			beat_narration = "  →  ".join(pieces) if not pieces.is_empty() else "纸偶伙伴正在书页上排排坐！"
 		_story_banner.text = ("✨ " + beat_narration) if support_level >= 4 else "💡 小折角收起了一半纸偶，想一想藏着哪位字母伙伴？"
+		if is_instance_valid(_usage_btn):
+			if show_word and not ex_en.is_empty():
+				_usage_btn.text = "🔊 生活例句：%s   |   %s" % [ex_en, ex_zh]
+				_usage_btn.show()
+			else:
+				_usage_btn.hide()
 		_beat_nav_box.visible = beats.size() > 1
 		_prev_beat_btn.disabled = current_beat <= 1
 		_next_beat_btn.disabled = current_beat >= beats.size()
@@ -637,6 +716,16 @@ func _refresh_ui() -> void:
 		_title_label.text = "🧩 亲手拼立体书  ·  「%s」" % meaning
 		_subtitle_label.text = "点击木块把纸偶一个个立起来！完全靠自己立起全部纸偶会有小惊喜 ✨"
 		_story_banner.text = "目标词义：「%s」 —— 试试按顺序摆好木块，让立体纸偶弹起来吧！" % meaning
+		var solved := false
+		var latest_r: Variant = later_response if later_response != null else first_response
+		if latest_r is Dictionary and bool((latest_r as Dictionary).get("correct", false)):
+			solved = true
+		if is_instance_valid(_usage_btn):
+			if solved and not ex_en.is_empty():
+				_usage_btn.text = "🔊 生活例句：%s   |   %s" % [ex_en, ex_zh]
+				_usage_btn.show()
+			else:
+				_usage_btn.hide()
 		_beat_nav_box.hide()
 		_puzzle_box.show()
 		_rebuild_puzzle_tray()
@@ -718,6 +807,17 @@ func _reset_tokens() -> void:
 	_built_tokens.clear()
 	_sync_tokens_to_input()
 	_rebuild_puzzle_tray()
+
+func _on_speak_example() -> void:
+	var sent := example_en().strip_edges()
+	if sent.is_empty():
+		return
+	if Engine.get_main_loop() is SceneTree:
+		var bus := (Engine.get_main_loop() as SceneTree).root.get_node_or_null("EventBus")
+		if bus != null:
+			bus.tts_speak_requested.emit(sent, "en", "storyteller")
+	_playing_beat = not _reduced_motion
+	_play_timer = 0.0
 
 func _on_speak_word() -> void:
 	var word := str(entry.get("spelling_display", ""))

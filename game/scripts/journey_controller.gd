@@ -879,9 +879,13 @@ func open_story(entry_id: String, from_u1: bool = false) -> void:
 		resume.support_level = 5
 	current_memory.setup(entry,resume)
 	current_memory.set_reduced_motion(ui.reduced_motion)
+	if is_instance_valid(game.audio_director):
+		game.audio_director.set_theater_mode(true)
 	ui._layout.call_deferred()
 
 func _on_memory_closed(result: Dictionary) -> void:
+	if is_instance_valid(game.audio_director):
+		game.audio_director.set_theater_mode(false)
 	var from_u1 := memory_from_u1
 	if result.get("progress") is Dictionary:
 		_queue_memory("progress",result.progress)
@@ -930,6 +934,8 @@ func close_memory() -> bool:
 			ui.notify("记录还没保存好，请先保留这一页。")
 			return false
 		memory_invocation = ""
+	if is_instance_valid(game.audio_director):
+		game.audio_director.set_theater_mode(false)
 	current_memory = null
 	memory_sink = null
 	return true

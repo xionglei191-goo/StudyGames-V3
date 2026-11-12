@@ -50,7 +50,9 @@ func _default_state() -> Dictionary:
 			"completed_commissions": [],
 			"chapter_progress": {},
 			"landmark_crafts": {},
-			"voice_cheers": 0
+			"voice_cheers": 0,
+			"free_decor_owned": {"sunflower_rug": 1, "tea_table": 1, "potted_monstera": 1},
+			"free_decor_placed": {}
 		},
 		"journey": JOURNEY.fresh(),
 		"reviews": Reviews.fresh(),
@@ -390,7 +392,9 @@ func _ensure_v4() -> Dictionary:
 			"completed_commissions": [],
 			"chapter_progress": {},
 			"landmark_crafts": {},
-			"voice_cheers": 0
+			"voice_cheers": 0,
+			"free_decor_owned": {"sunflower_rug": 1, "tea_table": 1, "potted_monstera": 1},
+			"free_decor_placed": {}
 		}
 	var v4_ref: Dictionary = data["v4"]
 	if not v4_ref.has("chapter_progress") or not v4_ref["chapter_progress"] is Dictionary:
@@ -399,7 +403,91 @@ func _ensure_v4() -> Dictionary:
 		v4_ref["landmark_crafts"] = {}
 	if not v4_ref.has("voice_cheers"):
 		v4_ref["voice_cheers"] = 0
+	if not v4_ref.has("free_decor_owned") or not v4_ref["free_decor_owned"] is Dictionary:
+		v4_ref["free_decor_owned"] = {"sunflower_rug": 1, "tea_table": 1, "potted_monstera": 1}
+	if not v4_ref.has("free_decor_placed") or not v4_ref["free_decor_placed"] is Dictionary:
+		v4_ref["free_decor_placed"] = {}
 	return v4_ref
+
+
+func free_decor_owned_count(item_id: String) -> int:
+	var owned: Dictionary = _ensure_v4().get("free_decor_owned", {})
+	return clampi(int(owned.get(item_id, 0)), 0, 99)
+
+
+func free_decor_placed_total(item_id: String) -> int:
+	var placed_map: Dictionary = _ensure_v4().get("free_decor_placed", {})
+	var count := 0
+	for r_list: Variant in placed_map.values():
+		if r_list is Array:
+			for entry: Variant in r_list:
+				if entry is Dictionary and str(entry.get("id", "")) == item_id:
+					count += 1
+	return count
+
+
+func buy_free_decor(item_id: String, price: int) -> bool:
+	var iid := item_id.strip_edges()
+	if iid.is_empty() or price < 0:
+		return false
+	if int(data["coins"]) < price:
+		return _reject("叶币不足，去地标手作台或完成章节心愿就能获得叶币哦 ✨")
+	var before: Dictionary = snapshot()
+	data["coins"] -= price
+	var owned: Dictionary = _ensure_v4()["free_decor_owned"]
+	owned[iid] = mini(99, int(owned.get(iid, 0)) + 1)
+	return _commit(before, "新家具已收入背包！在地面点击即可自由摆放。")
+
+
+func place_free_decor_item(room_id: String, item_id: String, pos: Vector3, rot_deg: int, bonus_stock: int = 0) -> bool:
+	var rid := room_id.strip_edges()
+	var iid := item_id.strip_edges()
+	if rid.is_empty() or iid.is_empty():
+		return false
+	var avail := free_decor_owned_count(iid) + maxi(0, bonus_stock) - free_decor_placed_total(iid)
+	if avail <= 0:
+		return _reject("这件物品已全部摆出啦，可以先购买一件或收回已摆的家具。")
+	var v4_ref := _ensure_v4()
+	var placed_map: Dictionary = v4_ref["free_decor_placed"]
+	var room_arr: Array = (placed_map.get(rid, []) as Array).duplicate(true) if placed_map.get(rid, []) is Array else []
+	if room_arr.size() >= 28:
+		return _reject("这个房间已经摆满 28 件精致装饰啦，先收回一件再摆吧。")
+	var before: Dictionary = snapshot()
+	room_arr.append({
+		"id": iid,
+		"x": snappedf(pos.x, 0.25),
+		"y": snappedf(pos.y, 0.05),
+		"z": snappedf(pos.z, 0.25),
+		"rot": posmod(rot_deg, 360)
+	})
+	_ensure_v4()["free_decor_placed"][rid] = room_arr
+	return _commit(before)
+
+
+func pop_last_free_decor_item(room_id: String) -> Dictionary:
+	var rid := room_id.strip_edges()
+	var placed_map: Dictionary = _ensure_v4()["free_decor_placed"]
+	if not placed_map.has(rid) or not placed_map[rid] is Array:
+		return {}
+	var room_arr: Array = (placed_map[rid] as Array).duplicate(true)
+	if room_arr.is_empty():
+		return {}
+	var before: Dictionary = snapshot()
+	var removed: Dictionary = room_arr.pop_back()
+	_ensure_v4()["free_decor_placed"][rid] = room_arr
+	if _commit(before, "已收回最近摆放的一件家具。"):
+		return removed
+	return {}
+
+
+func clear_room_free_decor(room_id: String) -> bool:
+	var rid := room_id.strip_edges()
+	var placed_map: Dictionary = _ensure_v4()["free_decor_placed"]
+	if not placed_map.has(rid) or (placed_map[rid] as Array).is_empty():
+		return true
+	var before: Dictionary = snapshot()
+	_ensure_v4()["free_decor_placed"][rid] = []
+	return _commit(before, "已将本房间的自由家具全部收回收纳箱。")
 
 
 func set_active_unit(unit_id: String) -> bool:
@@ -886,13 +974,39 @@ func _normalize_state(value: Variant) -> Dictionary:
 				if rk is String and not str(rk).is_empty() and clean_crafts.size() <= 64:
 					clean_crafts[str(rk).left(32)] = clampi(int(raw_crafts[rk]), 0, 9999)
 		var clean_cheers := clampi(int(v4_in.get("voice_cheers", 0)), 0, 99999)
+		var clean_fd_owned: Dictionary = {"sunflower_rug": 1, "tea_table": 1, "potted_monstera": 1}
+		if v4_in.get("free_decor_owned", {}) is Dictionary:
+			var raw_fdo: Dictionary = v4_in.get("free_decor_owned", {})
+			if not raw_fdo.is_empty():
+				clean_fd_owned = {}
+				for fk: Variant in raw_fdo.keys():
+					if fk is String and not str(fk).is_empty() and clean_fd_owned.size() <= 80:
+						clean_fd_owned[str(fk).left(40)] = clampi(int(raw_fdo[fk]), 0, 99)
+		var clean_fd_placed: Dictionary = {}
+		if v4_in.get("free_decor_placed", {}) is Dictionary:
+			var raw_fdp: Dictionary = v4_in.get("free_decor_placed", {})
+			for r_key: Variant in raw_fdp.keys():
+				if r_key is String and raw_fdp[r_key] is Array and clean_fd_placed.size() <= 16:
+					var out_items: Array = []
+					for it: Variant in (raw_fdp[r_key] as Array).slice(0, 28):
+						if it is Dictionary and str(it.get("id", "")) != "":
+							out_items.append({
+								"id": str(it.get("id", "")).left(40),
+								"x": clampf(float(it.get("x", 0.0)), -120.0, 120.0),
+								"y": clampf(float(it.get("y", 0.0)), -20.0, 20.0),
+								"z": clampf(float(it.get("z", 0.0)), -120.0, 120.0),
+								"rot": posmod(int(it.get("rot", 0)), 360)
+							})
+					clean_fd_placed[str(r_key).left(32)] = out_items
 		normalized.v4 = {
 			"active_unit_id": unit_val,
 			"stealth_events": clean_events,
 			"completed_commissions": clean_commissions,
 			"chapter_progress": clean_chapters,
 			"landmark_crafts": clean_crafts,
-			"voice_cheers": clean_cheers
+			"voice_cheers": clean_cheers,
+			"free_decor_owned": clean_fd_owned,
+			"free_decor_placed": clean_fd_placed
 		}
 	return {"ok": true, "state": normalized}
 

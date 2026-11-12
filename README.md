@@ -1,21 +1,28 @@
-# StudyGames V4 · 字母岛（精致微缩童话岛全量完成版）
+# StudyGames V4.5 · 字母岛（精致微缩童话岛 · 真人语音识别与自由装修全量版）
 
-当前 **v4.0.0 · 微缩童话岛全量完成版** 已完成 Forward+ 渲染管线、高颜值 3D 模块化换装、全岛 30 场景亲手捧物与手作台、100% 去考卷弹窗世界绘本对话、**全八册 81 单元三幕生活主线与章节画册**、3D 立体翻翻书剧场、包容式口语跟读喝彩与本地 AI 安全伴学轻服务的端到端全量落地：
+当前 **v4.5.0 · 精致微缩童话岛全量完成版** 已在 V4 基线上进一步完成 **全量 2,526 条离线神经网络真人感语音预烘（Piper ONNX）+ 本地离线语音识别（Vosk ASR）+ 4 首立体声原声级治愈 BGM**，以及 **动森式 0.5m 自由网格 3D 家园装修工坊 + 八册 81 章 5 类差异化主题微玩法 + 301 个高频核心词双语生活例句与 5 种 3D 纸偶编舞** 的全量落地：
 
-- **Forward+ 微缩模型岛美学（Toy Diorama）**：全面升级至 Godot 4.7 `forward_plus` 渲染管线，开启 `ProceduralSky` 天光漫反射、`AgX` 胶片色调映射、`SSAO` / `SSIL` 接触光影、柔和阴影、双层岸边泡沫果冻水体（`game/shaders/toy_water.gdshader`）与微风树冠摇曳（`game/shaders/toy_foliage_wind.gdshader`）。全岛 **44 个场景**统一配备胡桃木微缩底座托盘与室外草坡/云朵或室内暖阳窗景（`game/world/diorama_backdrop.gd`），并搭配区分草地/木地板/石板路的轻盈脚步声与细雨白噪音（`game/core/audio_director.gd`）。
-- **高颜值模块化 3D 换装镜台（`CozyWardrobeStudio`）**：支持 **6 套治愈穿搭**（柠檬黄、蜜桃粉、晴空蓝、薄荷森系、星光薰衣草、奶油焦糖）× **5 款 3D 头饰** × **4 款 3D 背饰**自由混搭，并配备支持 **28 种 3D 手持道具**的双手持物挂点（`CarrySocket`）与阳光镜台 3D 旋转预览。
-- **全岛 30 场景亲手捧物工坊与永久世界回响（`TactileLifeQuests`）**：在全部 **26 座字母地标馆（`landmark_A`–`landmark_Z`）+ 自家小院（`home_estate`）+ 校园/餐厅/操场（`school`/`canteen`/`playground`）** 均设有走近即可双手捧起的 3D 主题好物与胡桃木工坊分享台；亲手安放后会留驻永久 3D 微缩手作纪念（`EchoCraft`）并回赠叶币。
-- **全八册 81 单元三幕生活主线与故事画册（`UnitStorylineDirector` + `ChapterAtlasView`）**：湘少版三年级上册至六年级下册全部 **8 册、81 个单元**均已编译为可游玩的三幕小岛生活故事（`game/data/learning/curriculum_arcs_v4.json`：*① 聆听伙伴心愿 → ② 亲手共创体验 / 立体翻翻书 → ③ 安放永久 3D 章节纪念牌 `ChapterWorldKeepsake`*），可通过旅行册快捷栏或设置随时打开「八册 81 章故事画册」自由跳转体验。
-- **100% 去考卷化绘本气泡、包容式口语跟读与 3D 立体翻翻书（`DiegeticDialogue` + `PopupBookTheater`）**：日常游玩彻底告别传统三选一考卷弹窗（阳光教室李老师、校园餐厅、青草操场、26 字母主理人、教材伙伴闲聊均升级为世界锚定绘本气泡）；支持零扣分、重鼓励的 **`🎤 跟读试试` 与 `🤫 害羞默读`**；在真实 3D 胡桃木书桌上展开精装立体书，1,314 条词表记录均可通过 26 个字母立体纸偶弹出演绎与木块拼装体验。
-- **AI 安全伴学轻服务与隐性素养追踪（`services/ai_companion/`）**：内置双层儿童隐私与安全护栏（`KidRails`）、感知穿搭与手持物品的受控词域 `i+1` 伙伴轻聊、自然语音合成及跟读喝彩接口（`/api/v4/speech/encourage`）、以及基于 **3PL IRT + H0–H5 支架分级**的隐性能力估算与家长温暖成长周报（`game/ui_v4/parent_ai_portal.gd`）。双击 `启动字母岛.cmd` 或运行 `./start-game.ps1` 将自动拉起本地伴学服务与 Forward+ 客户端；未配置云端 API Key 时自动启用零密钥本地引擎与离线语音。
+- **离线神经网络真人感语音预烘 + 本地离线语音识别 + 4 首治愈原声 BGM（`speech_service.py` + `audio_director.gd`）**：
+  - **2,526 条离线神经网络 TTS 语音库预烘**：基于本地 `piper-tts` VITS ONNX（美式柔和女声 `en_US-amy-medium` + 中文温柔伴读 `zh_CN-huayan-medium`），已将全八册 1,314 条词表记录、常用问候语与 247 条核心词生活例句预烘至 `.local/tts_cache/`（索引清单 `game/data/learning/voice_manifest_v4.json`），零联网延迟毫秒级发声。
+  - **真离线语音识别跟读互动（`vosk-model-small-en-us-0.15`）**：客户端通过 `AudioEffectCapture` 采集 16kHz PCM WAV 音频流发送至本地伴学服务，由离线 Vosk Kaldi 引擎完成真实词句识别与发音相似度匹配（`exact` / `close` / `gentle_model` 三档零红叉、零扣分温暖反馈，同时保留 `🤫 害羞默读`）。
+  - **4 首立体声多乐器原声 BGM 循环**：内置主岛晴风吉他（`bgm_island`）、家园温暖钢片琴（`bgm_home`）、学园轻快马林巴（`bgm_campus`）、3D 立体书八音盒（`bgm_theater`）四套 16 秒立体声哈斯空间混响配乐，随场景与剧场平滑切换。
+- **动森式 0.5m 自由网格 3D 家园与庭院装修工坊（`FreeGridDecorStudio`）**：在温馨客厅（`home`）、阳光小院（`home_estate`）、卧室（`home_bedroom`）与书房（`home_study`）支持 **0.5m 地面网格吸附**、**半透明 3D 家具虚影预览**、**90° 朝向旋转（`R` 键/右键）**、撤销与一键收纳，内置 **13 款 Toy-PBR 3D 家具/庭院景观/手作与章节纪念展台**（向日葵圆毯、云朵双人沙发、下午茶圆桌、童话绘本架、摘星落地灯、黄铜留声机、森系木秋千、晴空小喷泉、兔兔绿雕等），跨存档房间级持久化。
+- **八册 81 章 5 类差异化主题微玩法（`ChapterThematicPlay`）**：在全八册 81 单元三幕主线基础上，按单元主题自动匹配 5 种零扣分情境微玩法——**🍰 暖香点餐配盘**、**🌦️ 天气穿搭造型台**、**🧭 小岛问路寻宝图**、**🕰️ 阳光作息时钟盘**、**🎁 奇趣主题百宝箱**，支持语音提示、首字母贴士与章节纪念牌联动。
+- **Forward+ 微缩模型岛美学（Toy Diorama）与高颜值 3D 换装（`CozyWardrobeStudio`）**：全面采用 Godot 4.7 `forward_plus`（`ProceduralSky`、`AgX`、`SSAO`/`SSIL`、果冻水体与微风树冠），全岛 **44 个场景**统一配备胡桃木微缩底座托盘；支持 **6 套穿搭 × 5 款 3D 头饰 × 4 款 3D 背饰** 与 **28 种双手捧物道具**。
+- **全岛 30 场景亲手捧物工坊（`TactileLifeQuests`）与 3D 立体翻翻书精调（`PopupBookTheater`）**：26 座字母地标馆 + 小院 + 校园三区均设有可捧起 3D 物件与永久微缩纪念；1,314 词立体书新增 **301 处高频核心词双语生活例句条**（点击即读）与 **5 种 3D 纸偶专属舞蹈编排**（欢跳挥手舞、圆舞旋转步、躲猫猫弹跳、多米诺人浪、星光漂浮舞，`popup_choreography_v4.json`）。
+- **AI 安全伴学轻服务与隐性素养追踪（`services/ai_companion/`）**：内置双层儿童隐私护栏（`KidRails`）、感知穿搭与手持物的受控词域 `i+1` 伙伴轻聊、以及 **3PL IRT + H0–H5 支架分级**家长成长观察室（`game/ui_v4/parent_ai_portal.gd`）。
 
 ![V4 主岛微缩景观与高颜值草帽穿搭](docs/screenshots/v4-showcase/01_village_diorama.png)
+
+![V4.5 动森式 0.5m 自由网格 3D 家园装修工坊](docs/screenshots/v4-showcase/11_free_grid_home_studio.png)
+
+![V4.5 章节专属情境主题微玩法（暖香点餐配盘）](docs/screenshots/v4-showcase/12_thematic_chapter_minigame.png)
 
 ![V4 八册 81 章小岛生活主线画册](docs/screenshots/v4-showcase/08_chapter_atlas_81_units.png)
 
 ![V4 B 船坞工坊双手捧起 3D 小木船与分享台](docs/screenshots/v4-showcase/09_landmark_B_boat_tactile_workshop.png)
 
-![V4 3D 立体翻翻书剧场](docs/screenshots/v4-showcase/06_popup_book_theater_3d.png)
+![V4.5 3D 立体翻翻书剧场（双语例句与纸偶编舞）](docs/screenshots/v4-showcase/06_popup_book_theater_3d.png)
 
 ---
 

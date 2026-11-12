@@ -6,6 +6,7 @@ extends RefCounted
 
 const Style = preload("res://ui/island_theme.gd")
 const StoryDirector = preload("res://gameplay/unit_storyline_director.gd")
+const ThematicPlay = preload("res://gameplay/chapter_thematic_play.gd")
 
 const ROOM_NAMES := {
 	"village": "字母岛广场",
@@ -172,6 +173,15 @@ static func build(ui: Node, state: Node) -> void:
 	var spacer := Control.new()
 	spacer.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	rcol.add_child(spacer)
+
+	var t_spec: Dictionary = ThematicPlay.classify_chapter(current_chap)
+	var play_btn: Button = ui.button(
+		"🎮 体验本章主题微玩法 · " + str(t_spec.get("title", "🎁 奇趣主题百宝箱")),
+		"v4_thematic_open:" + str(current_chap.get("chapter_key", "")),
+		false,
+		Vector2(0, 44)
+	)
+	rcol.add_child(play_btn)
 
 	var go_label := "🚀 前往【%s】开启本章生活故事" % _room_title(str(current_chap.get("primary_room", "village")))
 	if chap_stage >= 3:

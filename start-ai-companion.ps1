@@ -22,8 +22,12 @@ if (Test-AICompanionReady -CheckPort $Port) {
     return
 }
 
-# Find Python 3 with starlette + uvicorn installed
+# Find Python 3 with starlette + uvicorn (+ optional piper-tts/vosk in .local/ai-companion-venv)
 $pythonCandidates = @()
+$localVenvPy = Join-Path $PSScriptRoot '.local\ai-companion-venv\Scripts\python.exe'
+if (Test-Path $localVenvPy) {
+    $pythonCandidates += $localVenvPy
+}
 foreach ($cmdName in @('python.exe', 'python3.exe', 'py.exe')) {
     $cmd = Get-Command $cmdName -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
     if ($cmd) { $pythonCandidates += $cmd.Source }
