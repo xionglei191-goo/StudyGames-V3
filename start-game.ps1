@@ -69,7 +69,10 @@ if ($Editor) {
     return
 }
 
-$pythonPath = Join-Path $PSScriptRoot '.local\web-online-venv\Scripts\python.exe'
+$pythonPath = Join-Path $PSScriptRoot '.local\ai-companion-venv\Scripts\python.exe'
+if (-not (Test-Path -LiteralPath $pythonPath -PathType Leaf)) {
+    $pythonPath = Join-Path $PSScriptRoot '.local\web-online-venv\Scripts\python.exe'
+}
 if (-not (Test-Path -LiteralPath $pythonPath -PathType Leaf)) {
     $pythonCommand = Get-Command python.exe -CommandType Application -ErrorAction SilentlyContinue | Select-Object -First 1
     if (-not $pythonCommand) { throw 'Python 3 is required for shared profile locking. Install Python or run start-web-online.ps1 once.' }
