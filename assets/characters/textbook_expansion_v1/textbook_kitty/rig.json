@@ -1,0 +1,376 @@
+{
+  "id": "textbook_kitty",
+  "intake_id": "p04",
+  "family": "animal",
+  "rig_type": "quadruped",
+  "height": 0.9,
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hips",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.3869999945163727,
+        -0.13859999179840088
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Spine",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.05399999022483826,
+        0.25244998931884766
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "Spine",
+      "origin": [
+        0.0,
+        0.11699998378753662,
+        0.10935000330209732
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "origin": [
+        0.0,
+        0.06300002336502075,
+        0.05579999089241028
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_L",
+      "parent": "Spine",
+      "origin": [
+        -0.21136599779129028,
+        -0.04050001502037048,
+        0.024828560650348663
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_L",
+      "parent": "UpperArm_L",
+      "origin": [
+        0.0,
+        -0.20249997079372406,
+        -0.013499990105628967
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_L",
+      "parent": "LowerArm_L",
+      "origin": [
+        0.0,
+        -0.1574999988079071,
+        0.013499990105628967
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_L",
+      "parent": "Hips",
+      "origin": [
+        -0.3220205307006836,
+        -0.018000006675720215,
+        0.054376959800720215
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_L",
+      "parent": "UpperLeg_L",
+      "origin": [
+        0.0,
+        -0.17099998891353607,
+        0.018000006675720215
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_L",
+      "parent": "LowerLeg_L",
+      "origin": [
+        0.0,
+        -0.1574999988079071,
+        -0.018000006675720215
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_R",
+      "parent": "Spine",
+      "origin": [
+        0.2457805722951889,
+        -0.04050001502037048,
+        -0.10123461484909058
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_R",
+      "parent": "UpperArm_R",
+      "origin": [
+        0.0,
+        -0.20249997079372406,
+        -0.013499999418854713
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_R",
+      "parent": "LowerArm_R",
+      "origin": [
+        0.0,
+        -0.1574999988079071,
+        0.013499999418854713
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_R",
+      "parent": "Hips",
+      "origin": [
+        0.17444577813148499,
+        -0.018000006675720215,
+        -0.0541362464427948
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_R",
+      "parent": "UpperLeg_R",
+      "origin": [
+        0.0,
+        -0.17099998891353607,
+        0.01799999177455902
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_R",
+      "parent": "LowerLeg_R",
+      "origin": [
+        0.0,
+        -0.1574999988079071,
+        -0.01799999177455902
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.009000003337860107,
+        -0.21239998936653137
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail_02",
+      "parent": "Tail",
+      "origin": [
+        0.0,
+        0.22499999403953552,
+        -0.08100000023841858
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail_03",
+      "parent": "Tail_02",
+      "origin": [
+        0.0,
+        0.17100000381469727,
+        0.017999976873397827
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hand_sockets": {},
+  "source": "assets/tripo/generation_selection_20261112/01_priority_48/textbook_kitty.glb",
+  "source_sha256": "e74299b02890137d7a40dd2fe2e42fe05e8a5f1c0fc520408e890dcc7e03dab6",
+  "source_triangles": 1660436,
+  "triangles": 32000,
+  "name_zh": "Kitty",
+  "identity_reference": "assets/tripo/generation_selection_20261112/01_priority_48/P14_textbook_kitty.png",
+  "runtime_profile": {
+    "name": "Kitty",
+    "kind": "animal",
+    "source": "assets/tripo/generation_selection_20261112/01_priority_48/P14_textbook_kitty.png"
+  },
+  "editable_source": "assets/characters/textbook_expansion_v1/textbook_kitty/rigged.blend",
+  "export_glb": "assets/characters/textbook_expansion_v1/textbook_kitty/character.glb",
+  "rigging_provider": {
+    "provider": "Mesh2Motion",
+    "engine_commit": "e66f13ccf00ba0afc07e82d876af016e40792422",
+    "core_solver_modified": false,
+    "template": "fitted quadruped semantic rig with independent appendages"
+  },
+  "weight_method": "Unmodified Mesh2Motion quadruped solve, explicit continuous anatomical regions, 30% supported solver blends and 32 adjacency smoothing passes; four normalized influences",
+  "weight_refinement": "species-regions-v1",
+  "vertices": 16002,
+  "unweighted_vertices": 0,
+  "weight_sum_max_error": 2.220446049250313e-16,
+  "actions": [
+    {
+      "name": "idle",
+      "duration": 3.2,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "greet_wave",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "listen_nod",
+      "duration": 1.8,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "talk_gesture",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pose_photo",
+      "duration": 2.4,
+      "loop": false,
+      "contact_time": -1.0
+    }
+  ],
+  "allowed_actions": [
+    "idle",
+    "walk",
+    "greet_wave",
+    "listen_nod",
+    "talk_gesture",
+    "pose_photo"
+  ],
+  "locomotion": "quadruped",
+  "animation_clip_path": "res://assets/characters/textbook_expansion_v1/textbook_kitty/animation-clips.json",
+  "bounds": {
+    "min": [
+      -0.48297572135925293,
+      1.0260419912810903e-05,
+      -0.34522730112075806
+    ],
+    "max": [
+      0.4830789268016815,
+      0.8998307585716248,
+      0.345461905002594
+    ]
+  },
+  "status": "rigged_pending_engine_validation",
+  "elapsed_seconds": 6.25
+}

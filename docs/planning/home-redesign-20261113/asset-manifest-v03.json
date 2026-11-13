@@ -1,0 +1,32 @@
+{
+  "asset": "home-concept-v03-spacious.png",
+  "status": "pending_user_review",
+  "generated_with": "built-in image_gen",
+  "source_concept": "home-concept-v02.png",
+  "revision": "spacious_layout_then_entry_connection",
+  "size_px": [
+    1672,
+    941
+  ],
+  "sha256": "d93ae3973e52d5862a387c85e11726d7bb9d0cf74883779b108c72c865c99ecd",
+  "prompts": [
+    "prompt-v03-spacious.md",
+    "prompt-v03-entry-fix.md"
+  ],
+  "player_collision_reference": {
+    "file": "game/scripts/player.gd",
+    "radius": 0.34,
+    "height": 1.5
+  },
+  "design_targets_m": {
+    "main_route": 2.4,
+    "secondary_route": 1.4,
+    "door_clear_width": 1.6,
+    "activity_area": [
+      4,
+      4
+    ]
+  },
+  "dimensions_verified_in_image": false,
+  "production_model_modified": false
+}

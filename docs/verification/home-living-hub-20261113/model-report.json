@@ -1,0 +1,691 @@
+{
+  "source": "assets\\blender\\interiors\\home\\home_v07_own.blend",
+  "blend": "assets\\blender\\interiors\\home\\home_v08_living_hub.blend",
+  "glb": "assets\\blender\\interiors\\home\\home_v08_living_hub.glb",
+  "preserved_objects": 496,
+  "changed_protected_objects": [],
+  "doors": [
+    {
+      "room": "home_study",
+      "side": -1,
+      "y": 4.5,
+      "label": "STUDY",
+      "width_m": 2.2
+    },
+    {
+      "room": "home_bedroom",
+      "side": -1,
+      "y": 0,
+      "label": "BEDROOM",
+      "width_m": 2.2
+    },
+    {
+      "room": "home_bathroom",
+      "side": -1,
+      "y": -4.5,
+      "label": "BATHROOM",
+      "width_m": 2.2
+    },
+    {
+      "room": "home_kitchen",
+      "side": 1,
+      "y": 4.5,
+      "label": "KITCHEN",
+      "width_m": 2.2
+    },
+    {
+      "room": "home_dining",
+      "side": 1,
+      "y": 0,
+      "label": "DINING",
+      "width_m": 2.2
+    },
+    {
+      "room": "home_balcony",
+      "side": 1,
+      "y": -4.5,
+      "label": "BALCONY",
+      "width_m": 2.2
+    }
+  ],
+  "source_contract": {
+    "room_id": "home",
+    "anchors": [
+      {
+        "name": "SG_BED",
+        "label": "休息床边",
+        "position_blender": [
+          3.15,
+          3.8,
+          0.0
+        ],
+        "position_godot": [
+          3.15,
+          0.0,
+          -3.8
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      },
+      {
+        "name": "SG_DECOR_FLOWER_BOX",
+        "label": "FLOWER_BOX",
+        "position_blender": [
+          -6.4,
+          -2.2,
+          0.0
+        ],
+        "position_godot": [
+          -6.4,
+          0.0,
+          2.2
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      },
+      {
+        "name": "SG_DECOR_LAMP",
+        "label": "LAMP",
+        "position_blender": [
+          2.5,
+          5.4,
+          0.0
+        ],
+        "position_godot": [
+          2.5,
+          0.0,
+          -5.4
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      },
+      {
+        "name": "SG_DECOR_PICNIC",
+        "label": "PICNIC",
+        "position_blender": [
+          1.0,
+          -3.25,
+          0.0
+        ],
+        "position_godot": [
+          1.0,
+          0.0,
+          3.25
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      },
+      {
+        "name": "SG_MEMORY_01",
+        "label": "门厅随身篮",
+        "position_blender": [
+          -3.5,
+          -3.4,
+          0.0
+        ],
+        "position_godot": [
+          -3.5,
+          0.0,
+          3.4
+        ],
+        "associated_prop": "Locus_01_Everyday_Basket_Handle",
+        "memory_id": "memory_HOME_01",
+        "activity": "欢迎朋友进来，把带来的物品放在门厅。"
+      },
+      {
+        "name": "SG_MEMORY_02",
+        "label": "左侧衣柜",
+        "position_blender": [
+          -4.8,
+          -0.7,
+          0.0
+        ],
+        "position_godot": [
+          -4.8,
+          0.0,
+          0.7
+        ],
+        "associated_prop": "Locus_02_Wardrobe",
+        "memory_id": "memory_HOME_02",
+        "activity": "在进门处挂好外套，也可以继续布置客厅。"
+      },
+      {
+        "name": "SG_MEMORY_03",
+        "label": "中央茶几",
+        "position_blender": [
+          0.0,
+          -0.3,
+          0.0
+        ],
+        "position_godot": [
+          0.0,
+          0.0,
+          0.3
+        ],
+        "associated_prop": "Locus_03_Dining_Table_Leg",
+        "memory_id": "memory_HOME_03",
+        "activity": "摆好茶杯与点心，和朋友介绍自己的家。"
+      },
+      {
+        "name": "SG_MEMORY_04",
+        "label": "窗边家人相册",
+        "position_blender": [
+          4.7,
+          -0.7,
+          0.0
+        ],
+        "position_godot": [
+          4.7,
+          0.0,
+          0.7
+        ],
+        "associated_prop": "Locus_04_Window_Desk_Top",
+        "memory_id": "memory_HOME_04",
+        "activity": "看看相册，用照片介绍家人；晚上去卧室休息。"
+      },
+      {
+        "name": "SG_MEMORY_05",
+        "label": "出口回忆展示架",
+        "position_blender": [
+          4.6,
+          -3.9,
+          0.0
+        ],
+        "position_godot": [
+          4.6,
+          0.0,
+          3.9
+        ],
+        "associated_prop": "Locus_05_Keepsakes_Back",
+        "memory_id": "memory_HOME_05",
+        "activity": "把合照与礼物放回纪念架，回想家人和朋友相聚的日子。"
+      },
+      {
+        "name": "SG_NPC_HOST",
+        "label": "主人交谈点",
+        "position_blender": [
+          -2.2,
+          -1.4,
+          0.0
+        ],
+        "position_godot": [
+          -2.2,
+          0.0,
+          1.4
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      },
+      {
+        "name": "SG_WARDROBE",
+        "label": "换装衣柜",
+        "position_blender": [
+          -4.8,
+          -0.7,
+          0.0
+        ],
+        "position_godot": [
+          -4.8,
+          0.0,
+          0.7
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      },
+      {
+        "name": "SG_EXIT",
+        "label": "走出家门 · 回到小院",
+        "position_blender": [
+          0.0,
+          -7.63,
+          0.0
+        ],
+        "position_godot": [
+          0.0,
+          0.0,
+          7.63
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      },
+      {
+        "name": "SG_SPAWN",
+        "label": "入户客厅",
+        "position_blender": [
+          0.0,
+          -6.25,
+          0.0
+        ],
+        "position_godot": [
+          0.0,
+          0.0,
+          6.25
+        ],
+        "associated_prop": null,
+        "memory_id": "",
+        "activity": ""
+      }
+    ],
+    "colliders": [
+      {
+        "name": "SG_COLLIDER_Family_Album_Stand",
+        "aabb_blender": [
+          2.8499999046325684,
+          5.199999809265137,
+          -0.06000000238418579,
+          4.050000190734863,
+          6.0,
+          0.9599999785423279
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_Home_Pantry",
+        "aabb_blender": [
+          -6.869999885559082,
+          5.174999713897705,
+          0.0,
+          -3.930000066757202,
+          6.025000095367432,
+          1.899999976158142
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_Home_Rear_Sofa",
+        "aabb_blender": [
+          -1.399999976158142,
+          3.7250001430511475,
+          0.0,
+          1.399999976158142,
+          5.075000286102295,
+          1.399999976158142
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_Locus_01_Mail_Table",
+        "aabb_blender": [
+          -5.25,
+          -5.300000190734863,
+          -0.06000000238418579,
+          -3.3500001430511475,
+          -4.300000190734863,
+          0.8399999737739563
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_Locus_03_Dining_Table",
+        "aabb_blender": [
+          -1.350000023841858,
+          0.9000000357627869,
+          -0.06000000238418579,
+          1.350000023841858,
+          2.5,
+          0.9599999785423279
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_Locus_04_Window_Desk",
+        "aabb_blender": [
+          3.700000047683716,
+          0.375,
+          -0.06000003218650818,
+          6.300000190734863,
+          1.625,
+          1.0099999904632568
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_Locus_05_Keepsakes",
+        "aabb_blender": [
+          3.9799997806549072,
+          -5.825000286102295,
+          0.0,
+          6.420000076293945,
+          -4.974999904632568,
+          1.600000023841858
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_Wardrobe",
+        "aabb_blender": [
+          -6.550000190734863,
+          0.40000003576278687,
+          0.0,
+          -3.6499998569488525,
+          1.7999999523162842,
+          2.9000000953674316
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_Window_Reading_Chair",
+        "aabb_blender": [
+          4.150000095367432,
+          4.0,
+          0.0,
+          5.849999904632568,
+          5.600000381469727,
+          1.399999976158142
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Rear_Wall",
+        "aabb_blender": [
+          -10.199999809265137,
+          6.860000133514404,
+          0.0,
+          10.199999809265137,
+          7.139999866485596,
+          3.799999952316284
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Wall_-1_-8.5",
+        "aabb_blender": [
+          -10.199999809265137,
+          -8.5,
+          0.0,
+          -9.90000057220459,
+          -5.600000381469727,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Wall_-1_-3.4",
+        "aabb_blender": [
+          -10.199999809265137,
+          -3.4000000953674316,
+          0.0,
+          -9.90000057220459,
+          -1.100000023841858,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Wall_-1_1.1",
+        "aabb_blender": [
+          -10.199999809265137,
+          1.100000023841858,
+          0.0,
+          -9.90000057220459,
+          3.4000000953674316,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Wall_-1_5.6",
+        "aabb_blender": [
+          -10.199999809265137,
+          5.600000381469727,
+          0.0,
+          -9.90000057220459,
+          6.920000076293945,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Front_-1",
+        "aabb_blender": [
+          -10.100000381469727,
+          -8.59000015258789,
+          0.0,
+          -1.9000000953674316,
+          -8.40999984741211,
+          2.200000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Wall_1_-8.5",
+        "aabb_blender": [
+          9.90000057220459,
+          -8.5,
+          0.0,
+          10.199999809265137,
+          -5.600000381469727,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Wall_1_-3.4",
+        "aabb_blender": [
+          9.90000057220459,
+          -3.4000000953674316,
+          0.0,
+          10.199999809265137,
+          -1.100000023841858,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Wall_1_1.1",
+        "aabb_blender": [
+          9.90000057220459,
+          1.100000023841858,
+          0.0,
+          10.199999809265137,
+          3.4000000953674316,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Wall_1_5.6",
+        "aabb_blender": [
+          9.90000057220459,
+          5.600000381469727,
+          0.0,
+          10.199999809265137,
+          6.920000076293945,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Front_1",
+        "aabb_blender": [
+          1.9000000953674316,
+          -8.59000015258789,
+          0.0,
+          10.100000381469727,
+          -8.40999984741211,
+          2.200000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_study_Header",
+        "aabb_blender": [
+          -10.199999809265137,
+          3.4000000953674316,
+          2.8500001430511475,
+          -9.90000057220459,
+          5.599999904632568,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_study_ClosedLeaf",
+        "aabb_blender": [
+          -10.210000038146973,
+          3.4800000190734863,
+          0.019999980926513672,
+          -10.089999198913574,
+          5.519999980926514,
+          2.7799999713897705
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_bedroom_Header",
+        "aabb_blender": [
+          -10.199999809265137,
+          -1.100000023841858,
+          2.8500001430511475,
+          -9.90000057220459,
+          1.100000023841858,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_bedroom_ClosedLeaf",
+        "aabb_blender": [
+          -10.210000038146973,
+          -1.0199999809265137,
+          0.019999980926513672,
+          -10.089999198913574,
+          1.0199999809265137,
+          2.7799999713897705
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_bathroom_Header",
+        "aabb_blender": [
+          -10.199999809265137,
+          -5.599999904632568,
+          2.8500001430511475,
+          -9.90000057220459,
+          -3.4000000953674316,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_bathroom_ClosedLeaf",
+        "aabb_blender": [
+          -10.210000038146973,
+          -5.519999980926514,
+          0.019999980926513672,
+          -10.089999198913574,
+          -3.4800000190734863,
+          2.7799999713897705
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_kitchen_Header",
+        "aabb_blender": [
+          9.90000057220459,
+          3.4000000953674316,
+          2.8500001430511475,
+          10.199999809265137,
+          5.599999904632568,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_kitchen_ClosedLeaf",
+        "aabb_blender": [
+          10.089999198913574,
+          3.4800000190734863,
+          0.019999980926513672,
+          10.210000038146973,
+          5.519999980926514,
+          2.7799999713897705
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_dining_Header",
+        "aabb_blender": [
+          9.90000057220459,
+          -1.100000023841858,
+          2.8500001430511475,
+          10.199999809265137,
+          1.100000023841858,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_dining_ClosedLeaf",
+        "aabb_blender": [
+          10.089999198913574,
+          -1.0199999809265137,
+          0.019999980926513672,
+          10.210000038146973,
+          1.0199999809265137,
+          2.7799999713897705
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_balcony_Header",
+        "aabb_blender": [
+          9.90000057220459,
+          -5.599999904632568,
+          2.8500001430511475,
+          10.199999809265137,
+          -3.4000000953674316,
+          3.700000047683716
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_home_balcony_ClosedLeaf",
+        "aabb_blender": [
+          10.089999198913574,
+          -5.519999980926514,
+          0.019999980926513672,
+          10.210000038146973,
+          -3.4800000190734863,
+          2.7799999713897705
+        ]
+      },
+      {
+        "name": "SG_COLLIDER_HUB_Entry_Bench",
+        "aabb_blender": [
+          -6.574999809265137,
+          -7.730000019073486,
+          0.0,
+          -4.425000190734863,
+          -7.03000020980835,
+          0.699999988079071
+        ]
+      }
+    ],
+    "bounds": [
+      -10.199999809265137,
+      -7.100000381469727,
+      20.399999618530273,
+      15.600000381469727
+    ],
+    "mesh_objects": 762,
+    "missing_external_textures": [],
+    "floor_nodes": [
+      "SG_FLOOR_Main"
+    ],
+    "required_nodes": [
+      "SG_SPAWN",
+      "SG_EXIT",
+      "SG_NPC_HOST",
+      "SG_MEMORY_01",
+      "SG_MEMORY_02",
+      "SG_MEMORY_03",
+      "SG_MEMORY_04",
+      "SG_MEMORY_05",
+      "SG_BED",
+      "SG_WARDROBE",
+      "SG_DECOR_FLOWER_BOX",
+      "SG_DECOR_PICNIC",
+      "SG_DECOR_LAMP",
+      "SG_DECOR_MODEL_FLOWER_BOX",
+      "SG_DECOR_MODEL_PICNIC",
+      "SG_DECOR_MODEL_LAMP",
+      "SG_DOOR_HOME_STUDY",
+      "SG_DOOR_HOME_BEDROOM",
+      "SG_DOOR_HOME_BATHROOM",
+      "SG_DOOR_HOME_KITCHEN",
+      "SG_DOOR_HOME_DINING",
+      "SG_DOOR_HOME_BALCONY"
+    ]
+  },
+  "export": {
+    "glb_bytes": 11323664,
+    "glb_node_count": 799,
+    "triangles_instanced": 244968,
+    "embedded_images": 15,
+    "missing_nodes": [],
+    "sha256": "09639022140b2e75814540386cb37d0ef7e3d442357d766b1e91607e431954d7"
+  },
+  "bounds": [
+    -10.199999809265137,
+    -7.100000381469727,
+    20.399999618530273,
+    15.600000381469727
+  ]
+}

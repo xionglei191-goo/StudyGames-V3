@@ -50,6 +50,7 @@ def inspect_glb(path: Path, room_id: str) -> dict:
     if room_id == "home":
         required |= {"SG_BED", "SG_WARDROBE"}
         required |= {f"SG_DECOR_MODEL_{name}" for name in ("FLOWER_BOX", "PICNIC", "LAMP")}
+        required |= {"SG_DOOR_" + name.upper() for name in ("home_study", "home_bedroom", "home_bathroom", "home_kitchen", "home_dining", "home_balcony")}
     if room_id == "home_estate":
         required.add("SG_HOUSE_ENTRY")
         required |= {"SG_DOOR_" + name.upper() for name in ("home", "home_bedroom", "home_kitchen", "home_dining", "home_bathroom", "home_study", "home_balcony")}

@@ -6,11 +6,15 @@ var _decorations: Dictionary = {}
 var _markers: Dictionary = {}
 var _interactions: Array[Dictionary] = []
 const HomeCatalog = preload("res://scripts/home_catalog.gd")
+const Residents = preload("res://actors/building_resident_catalog.gd")
 
 static func available(room_id: String) -> bool:
 	return ResourceLoader.exists("res://assets/interiors/%s.glb" % room_id)
 
 func build(room_id: String, plan: Dictionary) -> Dictionary:
+	if room_id == "home_hall":
+		room_id = HomeCatalog.canonical_room(room_id)
+		plan = HomeCatalog.room(room_id)
 	var path := "res://assets/interiors/%s.glb" % room_id
 	var packed := load(path) as PackedScene
 	if packed == null:
@@ -50,13 +54,13 @@ func build(room_id: String, plan: Dictionary) -> Dictionary:
 				bounds = Rect2(float(b[0]), float(b[1]), float(b[2]), float(b[3]))
 	var return_to: Dictionary = plan.get("return_to", {})
 	var parent_room := str(return_to.get("room_id", "village"))
-	var exit_id := {"school":"school_exit", "home_hall":"home_exit"}.get(parent_room, "village_exit") as String
-	var return_id := room_id + "_gate" if parent_room in ["school", "home_hall"] else ("school_gate" if room_id == "school" else (room_id if room_id.begins_with("landmark_") else "home_gate"))
+	var exit_id := {"school":"school_exit", "home":"home_exit", "home_hall":"home_exit"}.get(parent_room, "village_exit") as String
+	var return_id := room_id + "_gate" if parent_room in ["school", "home", "home_hall"] else ("school_gate" if room_id == "school" else (room_id if room_id.begins_with("landmark_") else "home_gate"))
 	return_id = str(return_to.get("interaction_id", return_id))
-	if room_id == "home_hall":
+	if room_id == "home":
 		exit_id = "courtyard_exit"
 		return_id = "house_entry"
-	var exit_label: String = {"school":"回到校园", "home_hall":"回到家里的走廊", "home_estate":"走出家门 · 回到小院"}.get(parent_room, "回到字母岛")
+	var exit_label: String = {"school":"回到校园", "home":"回到客厅", "home_hall":"回到客厅", "home_estate":"走出家门 · 回到小院"}.get(parent_room, "回到字母岛")
 	_bind_travel(exit_id, exit_label, "SG_EXIT", parent_room, return_id)
 	var memory_count := 0 if room_id in HomeCatalog.HOME_NAV_ROOMS else 5
 	for i in range(1, memory_count + 1):
@@ -110,8 +114,12 @@ func build(room_id: String, plan: Dictionary) -> Dictionary:
 				var model_key: String = "SG_DECOR_MODEL_" + str(id).to_upper()
 				if _markers.has(model_key):
 					_decorations[id] = _markers[model_key]
+			var doors: Dictionary = plan.get("model_bindings", {}).get("doors", {})
+			for destination: String in HomeCatalog.DESTINATION_ROOMS:
+				if doors.has(destination):
+					_bind_travel(destination + "_gate", "走进" + str(HomeCatalog.room(destination).name), str(doors[destination]), destination)
 		"home_estate":
-			_bind_travel("house_entry", "走进家门", "SG_HOUSE_ENTRY", "home_hall")
+			_bind_travel("house_entry", "走进家门 · 客厅", "SG_HOUSE_ENTRY", "home")
 			if _markers.has("SG_HOUSE_ENTRY"): _interactions.back()["radius"] = 1.5
 		"home_hall":
 			var doors: Dictionary = plan.get("model_bindings", {}).get("doors", {})
@@ -122,9 +130,14 @@ func build(room_id: String, plan: Dictionary) -> Dictionary:
 		"home_bedroom":
 			_bind("bed", "休息，迎接新的一天", "SG_BED", "rest", 2.0)
 	var is_household := HomeCatalog.is_home_space(room_id)
+	var resident := Residents.for_room(room_id)
+	if not resident.is_empty():
+		host_name = str(resident.name)
+		host_kind = str(resident.character_id)
 	if not is_household and _markers.has("SG_NPC_HOST"):
 		_bind(host_id, "和%s聊一聊" % host_name, "SG_NPC_HOST", "npc", 2.3, "good_morning")
-		npcs.append({"kind":host_kind,"position":_position("SG_NPC_HOST"),"name":host_name,"angle":0.0})
+		if not resident.is_empty(): _interactions.back()["resident_id"] = str(resident.character_id)
+		npcs.append({"kind":host_kind,"position":_position("SG_NPC_HOST"),"name":host_name,"angle":0.0,"interaction_id":host_id})
 	var camera_size := 34.0 if room_id == "football_field" else (31.0 if room_id == "school" else (21.5 if room_id == "playground" else 18.5))
 	camera_size = float(plan.get("camera_size", camera_size))
 	return {"spawn":spawn,"bounds":bounds,"interactions":_interactions,"camera_size":camera_size,"landmarks":[],"terrain":true,"room_label":str(plan.get("name", room_id)),"npcs":npcs,"source":"blender","marker_count":_markers.size(),"marker_nodes":_markers,"parent_room":parent_room,"scene_level":int(plan.get("scene_level",2))}
@@ -159,3 +172,6 @@ func _bind_travel(id: String, label: String, key: String, destination: String, r
 	_bind(id, label, key, "travel", 1.7)
 	_interactions.back()["destination"] = destination
 	_interactions.back()["return_id"] = return_id
+	var marker: Node3D = _markers[key]
+	if marker.has_meta("return_x") and marker.has_meta("return_y"):
+		_interactions.back()["return_position"] = Vector3(float(marker.get_meta("return_x")), marker.global_position.y, -float(marker.get_meta("return_y")))

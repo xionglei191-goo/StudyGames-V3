@@ -10,6 +10,7 @@ signal action_phase_changed(character_id: String, action_id: String, phase: Stri
 
 const P1Actions = preload("res://actors/p1_action_source.gd")
 const CharacterArt = preload("res://actors/character_art_v3.gd")
+const Residents = preload("res://actors/building_resident_catalog.gd")
 const WorldArt = preload("res://scripts/world_art.gd")
 
 const PROFILES := {
@@ -71,11 +72,14 @@ var _held_prop_id := ""
 var _contact_prediction_cache: Dictionary = {}
 var _carrying_pose := false
 var _explicit_loop := ""
+var _seated := false
+var _standing_visual_y := 0.0
 var _contact_marker_pending := false
 var _attachments: Array[BoneAttachment3D] = []
 
 static func canonical_id(value: String) -> String:
 	var result := value.strip_edges().to_lower()
+	if result.begins_with("resident_"): return result
 	if result in ["bear", "bear_uncle", "npc_bear_uncle"]:
 		return "npc_bear_uncle"
 	if result in ["rabbit", "rabbit_gardener", "npc_rabbit_gardener"]:
@@ -87,13 +91,16 @@ static func canonical_id(value: String) -> String:
 	return result
 
 static func supports(value: String) -> bool:
-	return PROFILES.has(canonical_id(value))
+	var id := canonical_id(value)
+	return PROFILES.has(id) or CharacterArt.expansion_characters().has(id) or (Residents.all().has(id) and not CharacterArt.character_entry(id).is_empty())
 
 func configure(value: String, options: Dictionary = {}) -> bool:
 	character_id = canonical_id(value)
-	if not PROFILES.has(character_id):
+	if not supports(character_id):
 		return false
-	profile = (PROFILES[character_id] as Dictionary).duplicate(true)
+	profile = (PROFILES.get(character_id,Residents.profile(character_id)) as Dictionary).duplicate(true)
+	if CharacterArt.expansion_characters().has(character_id):
+		profile = CharacterArt.character_entry(character_id).get("profile",{}).duplicate(true)
 	_rig_family = P1Actions.family_for(str(profile.get("kind","human")))
 	display_name = str(profile.name)
 	name = "Actor_" + character_id
@@ -140,6 +147,8 @@ func configure(value: String, options: Dictionary = {}) -> bool:
 	name_label.font_size = 26
 	name_label.pixel_size = 0.009
 	name_label.position.y = 2.85 if str(profile.get("kind","")) == "rabbit" else 2.65 if not _is_wheelchair() else 2.45
+	if CharacterArt.expansion_characters().has(character_id):
+		name_label.position.y = float(CharacterArt.character_entry(character_id).get("height",2.15)) + 0.35
 	name_label.modulate = Color("fff5df")
 	name_label.outline_modulate = Color("4d554f")
 	name_label.outline_size = 6
@@ -200,6 +209,7 @@ func _attachment(bone_name: String) -> BoneAttachment3D:
 
 func _build_hand_sockets() -> void:
 	for side: String in ["L","R"]:
+		if not _bones.has("LowerArm_"+side): continue
 		var attachment := _attachment("LowerArm_" + side)
 		var socket := Node3D.new()
 		socket.name = "RightHandPropSocket" if side == "R" else "LeftHandPropSocket"
@@ -226,6 +236,11 @@ func _process(delta: float) -> void:
 
 func advance_visual(delta: float) -> void:
 	if not _configured:
+		return
+	if _seated:
+		animation_player.advance(clampf(delta,0.0,0.1))
+		skeleton.force_update_all_bone_transforms()
+		_sync_bone_attachments()
 		return
 	var step := clampf(delta, 0.0, 0.1)
 	_visual_time += step
@@ -296,6 +311,7 @@ func _sync_bone_attachments() -> void:
 		attachment.on_skeleton_update()
 
 func play_action(action_id: String, event_key: String = "", options: Dictionary = {}) -> bool:
+	if _seated: stand_from_seat()
 	var requested := P1Actions.canonical_action(action_id)
 	var action_spec := get_action_spec(requested)
 	if not bool(action_spec.get("allowed",false)):
@@ -368,7 +384,11 @@ func _flush_contact_marker() -> void:
 		semantic_event.emit(character_id,_requested_action,_action_event_key)
 
 func get_action_spec(action_id: String) -> Dictionary:
-	return P1Actions.spec(action_id,_rig_family)
+	var result := P1Actions.spec(action_id,_rig_family)
+	var entry := CharacterArt.character_entry(character_id)
+	if entry.has("allowed_actions"):
+		result.allowed = bool(result.allowed) and (entry.allowed_actions as Array).has(P1Actions.canonical_action(action_id))
+	return result
 
 func get_action_duration(action_id: String) -> float:
 	var action_spec := get_action_spec(action_id)
@@ -403,6 +423,7 @@ func get_action_contact_transform(action_id: String, hand: String = "right") -> 
 	var time := float(action_spec.contact_time) if float(action_spec.contact_time) >= 0.0 else float(action_spec.duration) * 0.5
 	var socket := left_hand_socket if hand == "left" else hand_socket
 	var bone := "LowerArm_L" if hand == "left" else "LowerArm_R"
+	if socket == null or not _bones.has(bone): return Transform3D.IDENTITY
 	var cache: Dictionary = {}
 	var pose := _sample_bone_transform(clip,time,int(_bones[bone]),cache)
 	return visual.transform * skeleton.transform * pose * socket.transform
@@ -446,6 +467,7 @@ func move_to(point: Vector3) -> bool:
 	return set_path(PackedVector3Array([point]))
 
 func set_path(points: PackedVector3Array) -> bool:
+	if _seated: stand_from_seat()
 	if _is_wheelchair():
 		return false
 	for point: Vector3 in points:
@@ -460,6 +482,35 @@ func set_path(points: PackedVector3Array) -> bool:
 	_action_complete = false
 	_explicit_loop = ""
 	return true
+
+func sit_at_height(seat_height: float = 0.63) -> bool:
+	if not _configured or _is_wheelchair() or animation_player == null: return false
+	if not animation_player.has_animation_library("life"):
+		var source := preload("res://actors/seated_pose.gd").library(_rig_family)
+		animation_player.add_animation_library("life",CharacterArt.adapt_library(character_id,source,P1Actions.hips_height(_rig_family),true))
+	if not _seated: _standing_visual_y=visual.position.y
+	_seated=true
+	motion_path.clear()
+	velocity=Vector3.ZERO
+	_actual_speed=0
+	current_action="sit"
+	_requested_action="sit"
+	animation_player.play("life/sit",0)
+	animation_player.advance(0)
+	skeleton.force_update_all_bone_transforms()
+	var hip_index := skeleton.find_bone("Hips")
+	if hip_index>=0:
+		var hip_y := skeleton.get_bone_global_pose(hip_index).origin.y
+		visual.position.y=seat_height+0.1-hip_y
+	_sync_bone_attachments()
+	return true
+
+func stand_from_seat() -> void:
+	if not _seated: return
+	_seated=false
+	visual.position.y=_standing_visual_y
+	_active_clip=""
+	_start_clip("idle",true)
 
 func _physics_process(delta: float) -> void:
 	if not _configured or get_tree().paused or not world_running:
@@ -516,6 +567,7 @@ func _dry_floor_at(point: Vector3) -> Dictionary:
 	return hit
 
 func set_held_prop(prop_id: String) -> void:
+	if not prop_id.is_empty() and not bool(get_action_spec("carry_item").get("allowed",false)): return
 	if is_instance_valid(_held_prop):
 		_held_prop.queue_free()
 		_held_prop = null
@@ -526,7 +578,10 @@ func set_held_prop(prop_id: String) -> void:
 	_held_prop = Node3D.new()
 	_held_prop.name = "Held_" + prop_id.validate_node_name()
 	hand_socket.add_child(_held_prop)
-	if prop_id in ["apple","travel_book","book","cake","basket","invitation","nameplate"]:
+	var imported := preload("res://actors/tripo_prop_library.gd").create(prop_id,"carry")
+	if imported != null:
+		_held_prop.add_child(imported)
+	elif prop_id in ["apple","travel_book","book","cake","basket","invitation","nameplate"]:
 		var kind := "book" if prop_id == "travel_book" else prop_id
 		var authored := WorldArt.create_prop(kind)
 		if authored:

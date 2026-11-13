@@ -80,6 +80,8 @@ static func _toy_mat(color: Color, roughness: float = 0.48, clearcoat: float = 0
 static func build_hat_mesh(hat_id: String) -> Node3D:
 	if hat_id == "none" or hat_id.is_empty():
 		return null
+	var imported := preload("res://actors/tripo_prop_library.gd").create(hat_id,"hat")
+	if imported != null: return imported
 	var root := Node3D.new()
 	root.name = "WardrobeHat_" + hat_id
 	match hat_id:
@@ -203,6 +205,8 @@ static func build_hat_mesh(hat_id: String) -> Node3D:
 static func build_bag_mesh(bag_id: String) -> Node3D:
 	if bag_id == "none" or bag_id.is_empty():
 		return null
+	var imported := preload("res://actors/tripo_prop_library.gd").create(bag_id,"bag")
+	if imported != null: return imported
 	var root := Node3D.new()
 	root.name = "WardrobeBag_" + bag_id
 	match bag_id:
@@ -289,6 +293,8 @@ static func build_bag_mesh(bag_id: String) -> Node3D:
 static func build_carried_prop(prop_id: String) -> Node3D:
 	if prop_id.is_empty() or prop_id == "none":
 		return null
+	var imported := preload("res://actors/tripo_prop_library.gd").create(prop_id,"carry")
+	if imported != null: return imported
 	var holder := Node3D.new()
 	holder.name = "CarriedProp_" + prop_id
 	match prop_id:

@@ -1,0 +1,410 @@
+{
+  "id": "resident_c",
+  "intake_id": "model_29",
+  "revision": "tripo-character-v1",
+  "family": "humanoid",
+  "height": 2.15,
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hips",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.8170000314712524,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Spine",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.33668994903564453,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "Spine",
+      "origin": [
+        0.0,
+        0.3728100061416626,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "origin": [
+        0.0,
+        0.05375015735626221,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_L",
+      "parent": "Spine",
+      "origin": [
+        -0.27389174699783325,
+        0.28681015968322754,
+        -0.01655426435172558
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_L",
+      "parent": "UpperArm_L",
+      "origin": [
+        -0.16287702322006226,
+        -0.30100011825561523,
+        0.005190495401620865
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_L",
+      "parent": "LowerArm_L",
+      "origin": [
+        -0.10135799646377563,
+        -0.2687499523162842,
+        0.03812370449304581
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_L",
+      "parent": "Hips",
+      "origin": [
+        -0.1954345405101776,
+        -0.042999982833862305,
+        0.022631309926509857
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_L",
+      "parent": "UpperLeg_L",
+      "origin": [
+        0.014833465218544006,
+        -0.31175002455711365,
+        -0.013895480893552303
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_L",
+      "parent": "LowerLeg_L",
+      "origin": [
+        -0.020846307277679443,
+        -0.3440000116825104,
+        0.04215684533119202
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_R",
+      "parent": "Spine",
+      "origin": [
+        0.2721715271472931,
+        0.28681015968322754,
+        -0.012649789452552795
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_R",
+      "parent": "UpperArm_R",
+      "origin": [
+        0.1612468659877777,
+        -0.30100011825561523,
+        0.0013762665912508965
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_R",
+      "parent": "LowerArm_R",
+      "origin": [
+        0.10716599225997925,
+        -0.2687499523162842,
+        0.03849092870950699
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_R",
+      "parent": "Hips",
+      "origin": [
+        0.19311214983463287,
+        -0.042999982833862305,
+        0.04329263046383858
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_R",
+      "parent": "UpperLeg_R",
+      "origin": [
+        -0.010728195309638977,
+        -0.31175002455711365,
+        -0.034491315484046936
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_R",
+      "parent": "LowerLeg_R",
+      "origin": [
+        0.01931595802307129,
+        -0.3440000116825104,
+        0.040334831923246384
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hand_sockets": {
+    "L": [
+      -0.10780799388885498,
+      -0.3386249542236328,
+      0.08172369748353958
+    ],
+    "R": [
+      0.11361604928970337,
+      -0.3386249542236328,
+      0.08209093660116196
+    ]
+  },
+  "source": "assets/tripo/building_residents_v01/tripo_convert_de9e7132-8a60-49b6-98a0-1da3fa472fc1.glb",
+  "source_sha256": "a028f486d0b342151cdeed35435adf06fb8efbdbf80eaae6c17917a85c75ba49",
+  "source_triangles": 1968900,
+  "triangles": 32000,
+  "editable_source": "assets/characters/building_residents_v1/resident_c/rigged.blend",
+  "export_glb": "assets/characters/building_residents_v1/resident_c/character.glb",
+  "weight_method": "Unmodified Mesh2Motion solver; fitted semantic biped, connected-surface body/arm constraints, continuous collar/hip transitions, cross-leg filtering, isolated appendages and weighted adjacency smoothing; four normalized influences",
+  "weight_refinement": "continuous-neck-hip-and-appendage-v2",
+  "joint_fitting": "opposing-surface-quantile-midpoint",
+  "rigging_provider": {
+    "provider": "Mesh2Motion",
+    "engine_commit": "e66f13ccf00ba0afc07e82d876af016e40792422",
+    "core_solver_modified": false,
+    "adapter": "scripts/mesh2motion_skin.mjs",
+    "coordinate_fit": {
+      "resident_id": "resident_c",
+      "hip": 0.38,
+      "neck": 0.71,
+      "head": 0.735,
+      "shoulder": 0.67,
+      "elbow": 0.53,
+      "wrist": 0.405,
+      "knee": 0.215,
+      "sx": 0.14,
+      "ex": 0.2,
+      "wx": 0.255,
+      "legx": 0.085,
+      "region_blend_width": 0.05,
+      "weight_smoothing_iterations": 96,
+      "arm_joint_prior": 0.65,
+      "wave_upper_angle": 50,
+      "wave_lower_angle": 80
+    }
+  },
+  "vertices": 16002,
+  "unweighted_vertices": 0,
+  "weight_sum_max_error": 2.220446049250313e-16,
+  "blended_vertices": 10802,
+  "raw_solver_blended_vertices": 1738,
+  "bone_vertex_counts": {
+    "Root": 0,
+    "Hips": 4841,
+    "Spine": 6475,
+    "Neck": 0,
+    "Head": 7084,
+    "UpperArm_L": 4402,
+    "LowerArm_L": 1508,
+    "Hand_L": 1169,
+    "UpperLeg_L": 2723,
+    "LowerLeg_L": 1776,
+    "Foot_L": 1237,
+    "UpperArm_R": 4436,
+    "LowerArm_R": 1514,
+    "Hand_R": 1162,
+    "UpperLeg_R": 2852,
+    "LowerLeg_R": 1774,
+    "Foot_R": 1259
+  },
+  "actions": [
+    {
+      "name": "carry_item",
+      "duration": 2.0,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "carry_walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "give_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "greet_wave",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "idle",
+      "duration": 3.2,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "listen_nod",
+      "duration": 1.8,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pick_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "place_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "point_target",
+      "duration": 2.0,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pose_photo",
+      "duration": 2.4,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "reach_target",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "take_item",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": 1.1
+    },
+    {
+      "name": "talk_gesture",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    }
+  ],
+  "region_split_height": 0.5349999999999999,
+  "room_id": "landmark_C",
+  "name_zh": "米洛",
+  "identity_reference": "assets/tripo/building_residents_v01/03_landmark_C_front.png",
+  "status": "validated_sampled_engine_review",
+  "elapsed_seconds": 11.73,
+  "validation_report": "docs/verification/resident-deformation-review-20261112/review.json"
+}

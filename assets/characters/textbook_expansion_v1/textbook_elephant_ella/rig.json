@@ -1,0 +1,446 @@
+{
+  "id": "textbook_elephant_ella",
+  "intake_id": "p13",
+  "family": "animal",
+  "rig_type": "quadruped",
+  "height": 1.7,
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hips",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.8159999847412109,
+        -0.28050002455711365
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Spine",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.17000001668930054,
+        0.4955500364303589
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "Spine",
+      "origin": [
+        0.0,
+        0.15300005674362183,
+        0.16575001180171967
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "origin": [
+        0.0,
+        0.13600003719329834,
+        0.09520000219345093
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_L",
+      "parent": "Spine",
+      "origin": [
+        -0.23975683748722076,
+        -0.07649993896484375,
+        -0.006735175848007202
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_L",
+      "parent": "UpperArm_L",
+      "origin": [
+        0.0,
+        -0.518500030040741,
+        -0.025499984622001648
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_L",
+      "parent": "LowerArm_L",
+      "origin": [
+        0.0,
+        -0.31450003385543823,
+        0.025499984622001648
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_L",
+      "parent": "Hips",
+      "origin": [
+        -0.32546597719192505,
+        -0.03399991989135742,
+        -0.27005115151405334
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_L",
+      "parent": "UpperLeg_L",
+      "origin": [
+        0.0,
+        -0.39100003242492676,
+        0.03400003910064697
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_L",
+      "parent": "LowerLeg_L",
+      "origin": [
+        0.0,
+        -0.31450003385543823,
+        -0.03400003910064697
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_R",
+      "parent": "Spine",
+      "origin": [
+        0.31787917017936707,
+        -0.07649993896484375,
+        -0.02299658954143524
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_R",
+      "parent": "UpperArm_R",
+      "origin": [
+        0.0,
+        -0.518500030040741,
+        -0.025499999523162842
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_R",
+      "parent": "LowerArm_R",
+      "origin": [
+        0.0,
+        -0.31450003385543823,
+        0.025499999523162842
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_R",
+      "parent": "Hips",
+      "origin": [
+        0.21266724169254303,
+        -0.03399991989135742,
+        -0.39433929324150085
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_R",
+      "parent": "UpperLeg_R",
+      "origin": [
+        0.0,
+        -0.39100003242492676,
+        0.0339999794960022
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_R",
+      "parent": "LowerLeg_R",
+      "origin": [
+        0.0,
+        -0.31450003385543823,
+        -0.0339999794960022
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.0,
+        -0.4844999611377716
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail_02",
+      "parent": "Tail",
+      "origin": [
+        0.0,
+        -0.18699997663497925,
+        -0.13599997758865356
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail_03",
+      "parent": "Tail_02",
+      "origin": [
+        0.0,
+        -0.11899995803833008,
+        -0.03400009870529175
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Trunk",
+      "parent": "Head",
+      "origin": [
+        0.0,
+        -0.11900007724761963,
+        0.11900001764297485
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Trunk_02",
+      "parent": "Trunk",
+      "origin": [
+        0.0,
+        -0.2550000548362732,
+        0.13599997758865356
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Trunk_03",
+      "parent": "Trunk_02",
+      "origin": [
+        0.0,
+        -0.28899991512298584,
+        0.017000019550323486
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Ear_L",
+      "parent": "Head",
+      "origin": [
+        -0.3400000035762787,
+        0.0,
+        -0.16999998688697815
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Ear_R",
+      "parent": "Head",
+      "origin": [
+        0.3400000035762787,
+        0.0,
+        -0.16999998688697815
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hand_sockets": {},
+  "source": "assets/tripo/generation_selection_20261112/01_priority_48/textbook_elephant_ella.glb",
+  "source_sha256": "a7877332a90fd6bd1eb07b889a563da991633a4ef248527d28dfde95c87259ed",
+  "source_triangles": 1518769,
+  "triangles": 31999,
+  "name_zh": "Elephant Ella",
+  "identity_reference": "assets/tripo/generation_selection_20261112/01_priority_48/P15_textbook_elephant_ella.png",
+  "runtime_profile": {
+    "name": "Elephant Ella",
+    "kind": "animal",
+    "source": "assets/tripo/generation_selection_20261112/01_priority_48/P15_textbook_elephant_ella.png"
+  },
+  "editable_source": "assets/characters/textbook_expansion_v1/textbook_elephant_ella/rigged.blend",
+  "export_glb": "assets/characters/textbook_expansion_v1/textbook_elephant_ella/character.glb",
+  "rigging_provider": {
+    "provider": "Mesh2Motion",
+    "engine_commit": "e66f13ccf00ba0afc07e82d876af016e40792422",
+    "core_solver_modified": false,
+    "template": "fitted quadruped semantic rig with independent appendages"
+  },
+  "weight_method": "Unmodified Mesh2Motion quadruped solve, explicit continuous anatomical regions, 30% supported solver blends and 32 adjacency smoothing passes; four normalized influences",
+  "weight_refinement": "species-regions-v1",
+  "vertices": 16001,
+  "unweighted_vertices": 0,
+  "weight_sum_max_error": 3.3306690738754696e-16,
+  "actions": [
+    {
+      "name": "idle",
+      "duration": 3.2,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "greet_wave",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "listen_nod",
+      "duration": 1.8,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "talk_gesture",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pose_photo",
+      "duration": 2.4,
+      "loop": false,
+      "contact_time": -1.0
+    }
+  ],
+  "allowed_actions": [
+    "idle",
+    "walk",
+    "greet_wave",
+    "listen_nod",
+    "talk_gesture",
+    "pose_photo"
+  ],
+  "locomotion": "quadruped",
+  "animation_clip_path": "res://assets/characters/textbook_expansion_v1/textbook_elephant_ella/animation-clips.json",
+  "bounds": {
+    "min": [
+      -1.0329679250717163,
+      -0.0001678785338299349,
+      -0.9791034460067749
+    ],
+    "max": [
+      1.0328255891799927,
+      1.699950933456421,
+      0.9787123799324036
+    ]
+  },
+  "status": "rigged_pending_engine_validation",
+  "elapsed_seconds": 8.3
+}

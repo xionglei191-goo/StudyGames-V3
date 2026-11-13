@@ -1,5 +1,9 @@
 extends CharacterBody3D
 
+# At full travel speed a stride takes about 0.71 s. Distance still drives the
+# phase, so braking and blocked movement cannot keep the feet cycling in place.
+const WALK_PHASE_PER_METER := 1.7
+
 var visual: Node3D
 var camera: Camera3D
 var bounds := Rect2(-25, -22, 50, 44)
@@ -20,6 +24,7 @@ var gesture_kind := ""
 var reduced_motion := false
 var _dust_particles: GPUParticles3D
 var look_target := Vector3.INF
+var _visual_floor_offset := 0.0
 
 func _ready() -> void:
 	var shape := CollisionShape3D.new()
@@ -28,6 +33,7 @@ func _ready() -> void:
 	capsule.height = 1.5
 	shape.shape = capsule
 	shape.position.y = 0.8
+	_visual_floor_offset = shape.position.y-capsule.height*0.5
 	add_child(shape)
 	collision_layer = 2
 	collision_mask = 5
@@ -141,7 +147,7 @@ func _physics_process(delta: float) -> void:
 		var movement := Vector2(position.x-old_position.x,position.z-old_position.z)
 		var moving := movement.length() > 0.002 and not water_contact
 		if moving:
-			walk_time += movement.length() * 2.3
+			walk_time += movement.length() * WALK_PHASE_PER_METER
 			var target_yaw := atan2(movement.x, movement.y)
 			var yaw_diff := wrapf(target_yaw - visual.rotation.y, -PI, PI)
 			visual.rotation.y = lerp_angle(visual.rotation.y, target_yaw, minf(delta * 14, 1.0))
@@ -154,6 +160,12 @@ func _physics_process(delta: float) -> void:
 			visual.position.y = 0.0 if reduced_motion else sin(idle_time * 2.0) * 0.014
 			visual.rotation.z = lerpf(visual.rotation.z, 0.0, delta * 8.0)
 			visual.rotation.x = lerpf(visual.rotation.x, 0.0, delta * 8.0)
+		if visual.has_method("animate_player"):
+			# The skinned gait shifts weight at the pelvis and grounds the soles.
+			# A second whole-model bounce/lean lifts and tilts both planted feet.
+			visual.position.y = _visual_floor_offset
+			visual.rotation.x = 0.0
+			visual.rotation.z = 0.0
 		if is_instance_valid(_dust_particles):
 			_dust_particles.emitting = moving and not reduced_motion and is_on_floor()
 		if visual.has_method("set_head_interest"):

@@ -15,11 +15,14 @@ const DioramaEnvironment = preload("res://world/diorama_environment.gd")
 const DioramaBackdrop = preload("res://world/diorama_backdrop.gd")
 const ToySurfacePolisher = preload("res://world/toy_surface_polisher.gd")
 const HeroSceneDressing = preload("res://world/hero_scene_dressing.gd")
+const ResidentActor = preload("res://scripts/textbook_actor.gd")
+var _resident_hosts: Dictionary = {}
 var _backdrop: Node3D
 var _polisher: Node3D
 var _hero_dressing: Node3D
 
 func build(room: String) -> Dictionary:
+	_resident_hosts.clear()
 	for child: Node in get_children():
 		remove_child(child)
 		child.queue_free()
@@ -74,7 +77,15 @@ func set_day_phase(phase: String) -> void:
 
 func _add_imported_npcs(info: Dictionary) -> void:
 	for npc in info.get("npcs", []):
-		_npc(str(npc.kind), npc.position, float(npc.get("angle", 0.0)), str(npc.get("name", "邻居")))
+		var character := _npc(str(npc.kind), npc.position, float(npc.get("angle", 0.0)), str(npc.get("name", "邻居")))
+		if str(npc.kind).begins_with("resident_"):
+			_resident_hosts[str(npc.get("interaction_id","host"))] = character
+
+func greet_resident(interaction_id: String, target: Vector3) -> void:
+	var actor: Variant = _resident_hosts.get(interaction_id)
+	if is_instance_valid(actor):
+		actor.face(target)
+		actor.play_action("greet_wave")
 
 func room_plan(room_id: String) -> Dictionary:
 	var home_plan: Dictionary = HomeCatalog.room(room_id)
@@ -169,15 +180,22 @@ func _label(parent: Node3D, text: String, pos: Vector3, size: int = 40, color: C
 	parent.add_child(label)
 	return label
 
-func _npc(kind: String, pos: Vector3, angle: float, display_name: String) -> void:
+func _npc(kind: String, pos: Vector3, angle: float, display_name: String) -> Node3D:
 	var character: Node3D = make_character(kind)
 	character.position = pos
 	character.rotation.y = angle
 	add_child(character)
-	_label(self, display_name, pos + Vector3(0, 3.0, 0), 25, Color("fff6df"))
+	if not kind.begins_with("resident_"):
+		_label(self, display_name, pos + Vector3(0, 3.0, 0), 25, Color("fff6df"))
 	_solid(pos + Vector3(0, 0.7, 0), Vector3(0.55, 1.4, 0.55))
+	return character
 
 func make_character(kind: String) -> Node3D:
+	if kind.begins_with("resident_"):
+		var actor := ResidentActor.new()
+		if actor.configure(kind): return actor
+		actor.free()
+		push_error("Missing building resident: " + kind)
 	var visual := preload("res://actors/player_visual_v3.gd").new()
 	var character_id: String = {"player":"player","bear":"npc_bear_uncle","rabbit":"npc_rabbit_gardener","teacher":"textbook_miss_li"}.get(kind,"player")
 	visual.configure(character_id)

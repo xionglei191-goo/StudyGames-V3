@@ -4,6 +4,12 @@
 
 运行项目根目录的 `start-game.ps1`，即可查看新版。也可打开 [角色预览页](tripo-characters-gallery.html)，逐个切换静态、挥手、步行/接物和递物姿态。
 
+2026-11-12 更新：玩家和 10 位可步行 NPC 已接入连续的膝盖/脚踝步态曲线，并重新校准鞋底贴地。当前 Godot 行走效果、预览和检查结果见[步态调整记录](delivery/walk-refinement-20261112.md)。下文的角色绑定与交付数量仍为 2026-10-23 的记录。
+
+同日另完成 34 位独立建筑居民的 Mesh2Motion 骨架绑定与房间替换，详见[居民交付记录](delivery/building-residents-rigging-20261112.md)及[原生动作预览](verification/building-residents-v1/index.html)。
+
+2026-11-12 新增的 48 个优先模型与 8 个章节候选也已完成处理，共 40 个带骨架角色、16 件道具。见[新增素材交付](delivery/textbook-expansion-20261112.md)和[全部素材预览与下载](verification/textbook-expansion-v1/index.html)。
+
 ## 已交付内容
 
 8 位站立人形角色使用 Adobe Mixamo 完成自动绑定，原始下载 FBX 和 SHA-256 位于 `assets/characters/mixamo_v1/downloads/` 及 `input/manifest.json`。熊叔、兔兔、Dino、轮椅 Jim 使用 Blender 定制骨架和蒙皮。所有角色均保留可编辑 Blender 文件、带骨骼 GLB 和 Godot 原生网格资源。

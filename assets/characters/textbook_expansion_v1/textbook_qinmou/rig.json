@@ -1,0 +1,376 @@
+{
+  "id": "textbook_qinmou",
+  "intake_id": "p03",
+  "family": "animal",
+  "rig_type": "quadruped",
+  "height": 1.15,
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hips",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.44849997758865356,
+        -0.164450004696846
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Spine",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.12650001049041748,
+        0.30992498993873596
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "Spine",
+      "origin": [
+        0.0,
+        0.18400001525878906,
+        0.05692501366138458
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "origin": [
+        0.0,
+        0.08050000667572021,
+        0.05059999227523804
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_L",
+      "parent": "Spine",
+      "origin": [
+        -0.19732160866260529,
+        -0.051750004291534424,
+        0.35191571712493896
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_L",
+      "parent": "UpperArm_L",
+      "origin": [
+        0.0,
+        -0.28174999356269836,
+        -0.017249971628189087
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_L",
+      "parent": "LowerArm_L",
+      "origin": [
+        0.0,
+        -0.18974998593330383,
+        0.017249971628189087
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_L",
+      "parent": "Hips",
+      "origin": [
+        -0.2139095962047577,
+        -0.022999972105026245,
+        0.02402500808238983
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_L",
+      "parent": "UpperLeg_L",
+      "origin": [
+        0.0,
+        -0.18400001525878906,
+        0.023000001907348633
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_L",
+      "parent": "LowerLeg_L",
+      "origin": [
+        0.0,
+        -0.18974998593330383,
+        -0.023000001907348633
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_R",
+      "parent": "Spine",
+      "origin": [
+        0.1920001357793808,
+        -0.051750004291534424,
+        0.3416200876235962
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_R",
+      "parent": "UpperArm_R",
+      "origin": [
+        0.0,
+        -0.28174999356269836,
+        -0.017250031232833862
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_R",
+      "parent": "LowerArm_R",
+      "origin": [
+        0.0,
+        -0.18974998593330383,
+        0.017250031232833862
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_R",
+      "parent": "Hips",
+      "origin": [
+        0.2167597860097885,
+        -0.022999972105026245,
+        0.023332849144935608
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_R",
+      "parent": "UpperLeg_R",
+      "origin": [
+        0.0,
+        -0.18400001525878906,
+        0.023000001907348633
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_R",
+      "parent": "LowerLeg_R",
+      "origin": [
+        0.0,
+        -0.18974998593330383,
+        -0.023000001907348633
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.011500030755996704,
+        -0.2610499858856201
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail_02",
+      "parent": "Tail",
+      "origin": [
+        0.0,
+        0.32199999690055847,
+        -0.14949998259544373
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail_03",
+      "parent": "Tail_02",
+      "origin": [
+        0.0,
+        0.1839999556541443,
+        0.12650001049041748
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hand_sockets": {},
+  "source": "assets/tripo/generation_selection_20261112/01_priority_48/textbook_qinmou.glb",
+  "source_sha256": "7d1bd40e4ce3f42cd04f834e4b19dcd3f5239e45fef217adf672e7def78e52fb",
+  "source_triangles": 1526120,
+  "triangles": 31998,
+  "name_zh": "Qinmou",
+  "identity_reference": "assets/tripo/generation_selection_20261112/01_priority_48/P17_textbook_qinmou.png",
+  "runtime_profile": {
+    "name": "Qinmou",
+    "kind": "animal",
+    "source": "assets/tripo/generation_selection_20261112/01_priority_48/P17_textbook_qinmou.png"
+  },
+  "editable_source": "assets/characters/textbook_expansion_v1/textbook_qinmou/rigged.blend",
+  "export_glb": "assets/characters/textbook_expansion_v1/textbook_qinmou/character.glb",
+  "rigging_provider": {
+    "provider": "Mesh2Motion",
+    "engine_commit": "e66f13ccf00ba0afc07e82d876af016e40792422",
+    "core_solver_modified": false,
+    "template": "fitted quadruped semantic rig with independent appendages"
+  },
+  "weight_method": "Unmodified Mesh2Motion quadruped solve, explicit continuous anatomical regions, 30% supported solver blends and 32 adjacency smoothing passes; four normalized influences",
+  "weight_refinement": "species-regions-v1",
+  "vertices": 16001,
+  "unweighted_vertices": 0,
+  "weight_sum_max_error": 3.3306690738754696e-16,
+  "actions": [
+    {
+      "name": "idle",
+      "duration": 3.2,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "greet_wave",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "listen_nod",
+      "duration": 1.8,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "talk_gesture",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pose_photo",
+      "duration": 2.4,
+      "loop": false,
+      "contact_time": -1.0
+    }
+  ],
+  "allowed_actions": [
+    "idle",
+    "walk",
+    "greet_wave",
+    "listen_nod",
+    "talk_gesture",
+    "pose_photo"
+  ],
+  "locomotion": "quadruped",
+  "animation_clip_path": "res://assets/characters/textbook_expansion_v1/textbook_qinmou/animation-clips.json",
+  "bounds": {
+    "min": [
+      -0.3516015410423279,
+      -0.0003843732411041856,
+      -0.6858372688293457
+    ],
+    "max": [
+      0.3506681025028229,
+      1.1511105298995972,
+      0.686196506023407
+    ]
+  },
+  "status": "rigged_pending_engine_validation",
+  "elapsed_seconds": 6.19
+}

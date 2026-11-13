@@ -4,6 +4,8 @@ extends Node3D
 
 const Art = preload("res://actors/character_art_v3.gd")
 const Wardrobe = preload("res://actors/modular_wardrobe.gd")
+const WalkGait = preload("res://actors/walk_gait.gd")
+const FootSupport = preload("res://actors/foot_support.gd")
 
 var skeleton: Skeleton3D
 var meshes: Array[MeshInstance3D] = []
@@ -23,6 +25,9 @@ var current_bag := "none"
 var carried_item := ""
 var head_interest_yaw := 0.0
 var head_interest_pitch := 0.0
+var _walk_weight := 0.0
+var _foot_support := FootSupport.new()
+var _bone_indices: Dictionary = {}
 
 func configure(id: String = "player") -> void:
 	character_id = id
@@ -31,6 +36,9 @@ func configure(id: String = "player") -> void:
 	skeleton = Art.create_skeleton(id)
 	add_child(skeleton)
 	meshes = Art.attach(id, skeleton)
+	for index: int in range(skeleton.get_bone_count()):
+		_bone_indices[skeleton.get_bone_name(index)] = index
+	_foot_support.configure(skeleton,meshes)
 	set_meta("art_revision", Art.revision())
 	if id == "player":
 		_setup_accessory_sockets()
@@ -93,40 +101,53 @@ func animate_player(walking: bool, delta: float, stride_time: float, gesture: St
 	if skeleton == null:
 		return
 	elapsed += delta
-	var stride := sin(stride_time) * 0.48 if walking else 0.0
+	var blend := 1.0-exp(-delta*16.0)
+	_walk_weight = lerpf(_walk_weight,1.0 if walking else 0.0,blend)
+	var gait := WalkGait.pose(stride_time/TAU,reduced_motion)
 	var breath := 0.0 if reduced_motion else sin(elapsed * 2.3) * 0.028
 	var carrying := not carried_item.is_empty()
 
 	var pose := {
-		"Spine": Vector3(0.04 if walking else breath, 0.0, 0.0),
+		"Spine": Vector3(breath,0,0).lerp(gait.Spine,_walk_weight),
+		"Hips": (gait.Hips as Vector3)*_walk_weight,
 		"Head": Vector3(
 			clampf(head_interest_pitch + (-breath * 0.6), -0.22, 0.22),
 			clampf(head_interest_yaw, -0.45, 0.45),
-			0.0 if reduced_motion else sin(stride_time * 0.5) * (0.03 if walking else 0.0)
+			0.0 if reduced_motion else sin(stride_time) * 0.012 * _walk_weight
 		),
-		"UpperLeg_L": Vector3(stride, 0.0, 0.0),
-		"UpperLeg_R": Vector3(-stride, 0.0, 0.0),
-		"LowerLeg_L": Vector3(maxf(0.0, -stride) * 0.72, 0.0, 0.0),
-		"LowerLeg_R": Vector3(maxf(0.0, stride) * 0.72, 0.0, 0.0),
-		"UpperArm_L": Vector3(-0.78 if carrying else -stride * 0.62, 0.22 if carrying else 0.0, 0.10),
-		"UpperArm_R": Vector3(-0.78 if carrying else stride * 0.62, -0.22 if carrying else 0.0, -0.10),
-		"LowerArm_L": Vector3(-0.48 if carrying else -0.10, 0.0, 0.0),
-		"LowerArm_R": Vector3(-0.48 if carrying else -0.10, 0.0, 0.0)
+		"UpperArm_L": Vector3(-0.78,0.22,0.10) if carrying else Vector3(0,0,0.10).lerp(gait.UpperArm_L,_walk_weight),
+		"UpperArm_R": Vector3(-0.78,-0.22,-0.10) if carrying else Vector3(0,0,-0.10).lerp(gait.UpperArm_R,_walk_weight),
+		"LowerArm_L": Vector3(-0.48,0,0) if carrying else Vector3(-0.10,0,0).lerp(gait.LowerArm_L,_walk_weight),
+		"LowerArm_R": Vector3(-0.48,0,0) if carrying else Vector3(-0.10,0,0).lerp(gait.LowerArm_R,_walk_weight)
 	}
+	for side: String in ["L","R"]:
+		for bone: String in ["UpperLeg_","LowerLeg_","Foot_"]:
+			pose[bone+side] = (gait[bone+side] as Vector3)*_walk_weight
 
 	if gesture_time > 0.0:
 		if gesture == "kick":
-			pose.UpperLeg_R = Vector3(-0.8 * sin(gesture_time * PI / 0.8), 0.0, 0.0)
+			var kick := sin(gesture_time * PI / 0.8)
+			pose.UpperLeg_R = (pose.UpperLeg_R as Vector3).lerp(Vector3(-0.8,0,0),kick)
+			pose.LowerLeg_R = (pose.LowerLeg_R as Vector3).lerp(Vector3(0.12,0,0),kick)
+			pose.Foot_R = (pose.Foot_R as Vector3).lerp(Vector3(0.2,0,0),kick)
 		else:
 			pose.UpperArm_R = Vector3(-1.3 if gesture == "reach" else -2.2 + sin(gesture_time * 18.0) * 0.18, 0.0, -0.1)
 			pose.LowerArm_R = Vector3(-0.22, 0.0, 0.0)
 
 	for bone_name: String in pose:
-		var index := skeleton.find_bone(bone_name)
+		var index := int(_bone_indices.get(bone_name,-1))
 		if index >= 0:
 			var target := skeleton.get_bone_rest(index).basis.get_rotation_quaternion() * Quaternion.from_euler(pose[bone_name])
-			skeleton.set_bone_pose_rotation(index, skeleton.get_bone_pose_rotation(index).slerp(target, minf(delta * 14.0, 1.0)))
+			# The gait is already C1 continuous. Filtering each joint again flattens
+			# the brief knee fold and delays the foot relative to the support phase.
+			var lower_body := bone_name.contains("Leg_") or bone_name.begins_with("Foot_") or bone_name == "Hips"
+			skeleton.set_bone_pose_rotation(index,target if lower_body else skeleton.get_bone_pose_rotation(index).slerp(target,blend))
+	var hips := int(_bone_indices.get("Hips",-1))
+	if hips >= 0: skeleton.set_bone_pose_position(hips,skeleton.get_bone_rest(hips).origin)
 	skeleton.force_update_all_bone_transforms()
+	if hips >= 0:
+		skeleton.set_bone_pose_position(hips,skeleton.get_bone_rest(hips).origin-Vector3.UP*_foot_support.lowest(skeleton))
+		skeleton.force_update_all_bone_transforms()
 	Art.expression(meshes, elapsed, gesture if gesture_time > 0.0 else "idle", reduced_motion)
 
 	if is_instance_valid(_carry_anchor) and carrying and not reduced_motion:

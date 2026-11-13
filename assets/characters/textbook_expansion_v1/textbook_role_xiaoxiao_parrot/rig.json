@@ -1,0 +1,334 @@
+{
+  "id": "textbook_role_xiaoxiao_parrot",
+  "intake_id": "p39",
+  "family": "animal",
+  "rig_type": "bird",
+  "height": 0.9,
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hips",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.1979999989271164,
+        -0.017999999225139618
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Spine",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.1889999955892563,
+        0.017999999225139618
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "Spine",
+      "origin": [
+        0.0,
+        0.1889999806880951,
+        0.035999998450279236
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "origin": [
+        0.0,
+        0.07200002670288086,
+        0.027000002562999725
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_L",
+      "parent": "Hips",
+      "origin": [
+        -0.08999999612569809,
+        0.009000003337860107,
+        0.035999998450279236
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_L",
+      "parent": "UpperLeg_L",
+      "origin": [
+        0.0,
+        -0.09000001102685928,
+        -0.008999999612569809
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_L",
+      "parent": "LowerLeg_L",
+      "origin": [
+        0.0,
+        -0.07649999111890793,
+        0.026999998837709427
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Wing_L",
+      "parent": "Spine",
+      "origin": [
+        -0.12600000202655792,
+        0.11700001358985901,
+        -0.017999999225139618
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "WingTip_L",
+      "parent": "Wing_L",
+      "origin": [
+        -0.07199999690055847,
+        -0.18000000715255737,
+        -0.08999999612569809
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_R",
+      "parent": "Hips",
+      "origin": [
+        0.08999999612569809,
+        0.009000003337860107,
+        0.035999998450279236
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_R",
+      "parent": "UpperLeg_R",
+      "origin": [
+        0.0,
+        -0.09000001102685928,
+        -0.008999999612569809
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_R",
+      "parent": "LowerLeg_R",
+      "origin": [
+        0.0,
+        -0.07649999111890793,
+        0.026999998837709427
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Wing_R",
+      "parent": "Spine",
+      "origin": [
+        0.12600000202655792,
+        0.11700001358985901,
+        -0.017999999225139618
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "WingTip_R",
+      "parent": "Wing_R",
+      "origin": [
+        0.07199999690055847,
+        -0.18000000715255737,
+        -0.08999999612569809
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.07200001180171967,
+        -0.08999999612569809
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail_02",
+      "parent": "Tail",
+      "origin": [
+        0.0,
+        0.0,
+        -0.2157471925020218
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hand_sockets": {},
+  "source": "assets/tripo/generation_selection_20261112/01_priority_48/textbook_role_xiaoxiao_parrot.glb",
+  "source_sha256": "01a9e45472093cda7a89687dcbc4b17db31c484ac83210e0ea25d98ae23ba3ca",
+  "source_triangles": 1417311,
+  "triangles": 32000,
+  "name_zh": "Xiaoxiao 的鹦鹉",
+  "identity_reference": "assets/tripo/generation_selection_20261112/01_priority_48/P23_textbook_role_xiaoxiao_parrot.png",
+  "runtime_profile": {
+    "name": "Xiaoxiao 的鹦鹉",
+    "kind": "animal",
+    "source": "assets/tripo/generation_selection_20261112/01_priority_48/P23_textbook_role_xiaoxiao_parrot.png"
+  },
+  "editable_source": "assets/characters/textbook_expansion_v1/textbook_role_xiaoxiao_parrot/rigged.blend",
+  "export_glb": "assets/characters/textbook_expansion_v1/textbook_role_xiaoxiao_parrot/character.glb",
+  "rigging_provider": {
+    "provider": "Mesh2Motion",
+    "engine_commit": "e66f13ccf00ba0afc07e82d876af016e40792422",
+    "core_solver_modified": false,
+    "template": "fitted bird semantic rig with independent appendages"
+  },
+  "weight_method": "Unmodified Mesh2Motion bird solve, explicit continuous anatomical regions, 30% supported solver blends and 32 adjacency smoothing passes; four normalized influences",
+  "weight_refinement": "species-regions-v1",
+  "vertices": 15999,
+  "unweighted_vertices": 0,
+  "weight_sum_max_error": 2.220446049250313e-16,
+  "actions": [
+    {
+      "name": "idle",
+      "duration": 3.2,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "greet_wave",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "listen_nod",
+      "duration": 1.8,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "talk_gesture",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pose_photo",
+      "duration": 2.4,
+      "loop": false,
+      "contact_time": -1.0
+    }
+  ],
+  "allowed_actions": [
+    "idle",
+    "walk",
+    "greet_wave",
+    "listen_nod",
+    "talk_gesture",
+    "pose_photo"
+  ],
+  "locomotion": "bird",
+  "animation_clip_path": "res://assets/characters/textbook_expansion_v1/textbook_role_xiaoxiao_parrot/animation-clips.json",
+  "bounds": {
+    "min": [
+      -0.2826264500617981,
+      -9.120384493144229e-05,
+      -0.47609880566596985
+    ],
+    "max": [
+      0.28213828802108765,
+      0.9000383615493774,
+      0.4761723279953003
+    ]
+  },
+  "status": "rigged_pending_engine_validation",
+  "elapsed_seconds": 5.47
+}

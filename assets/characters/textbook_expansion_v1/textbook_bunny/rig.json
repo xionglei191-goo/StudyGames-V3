@@ -1,0 +1,362 @@
+{
+  "id": "textbook_bunny",
+  "intake_id": "p01",
+  "family": "animal",
+  "rig_type": "quadruped",
+  "height": 0.9,
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hips",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.21599999070167542,
+        -0.0494999997317791
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Spine",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.0990000069141388,
+        0.133650004863739
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "Spine",
+      "origin": [
+        0.0,
+        0.07199999690055847,
+        -0.004950001835823059
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "origin": [
+        0.0,
+        0.0990000069141388,
+        0.01979999989271164
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_L",
+      "parent": "Spine",
+      "origin": [
+        -0.1215243861079216,
+        -0.040499985218048096,
+        0.048521384596824646
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_L",
+      "parent": "UpperArm_L",
+      "origin": [
+        0.0,
+        -0.1665000170469284,
+        -0.013499997556209564
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_L",
+      "parent": "LowerArm_L",
+      "origin": [
+        0.0,
+        -0.06749999523162842,
+        0.013499997556209564
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_L",
+      "parent": "Hips",
+      "origin": [
+        -0.12498658150434494,
+        -0.01799999177455902,
+        0.002297487109899521
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_L",
+      "parent": "UpperLeg_L",
+      "origin": [
+        0.0,
+        -0.09000000357627869,
+        0.017999999225139618
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_L",
+      "parent": "LowerLeg_L",
+      "origin": [
+        0.0,
+        -0.06749999523162842,
+        -0.017999999225139618
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperArm_R",
+      "parent": "Spine",
+      "origin": [
+        0.11955880373716354,
+        -0.040499985218048096,
+        0.04775208234786987
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerArm_R",
+      "parent": "UpperArm_R",
+      "origin": [
+        0.0,
+        -0.1665000170469284,
+        -0.013500005006790161
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hand_R",
+      "parent": "LowerArm_R",
+      "origin": [
+        0.0,
+        -0.06749999523162842,
+        0.013500005006790161
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_R",
+      "parent": "Hips",
+      "origin": [
+        0.12434647977352142,
+        -0.01799999177455902,
+        -0.021804187446832657
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_R",
+      "parent": "UpperLeg_R",
+      "origin": [
+        0.0,
+        -0.09000000357627869,
+        0.018000006675720215
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_R",
+      "parent": "LowerLeg_R",
+      "origin": [
+        0.0,
+        -0.06749999523162842,
+        -0.018000006675720215
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Ear_L",
+      "parent": "Head",
+      "origin": [
+        -0.08100000023841858,
+        0.13499999046325684,
+        -0.03149999678134918
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Ear_R",
+      "parent": "Head",
+      "origin": [
+        0.08100000023841858,
+        0.13499999046325684,
+        -0.03149999678134918
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hand_sockets": {},
+  "source": "assets/tripo/generation_selection_20261112/01_priority_48/textbook_bunny.glb",
+  "source_sha256": "f7a7da746f2da82588ccf0b910348e0f04c5b828cd81db7e844bf5a77dfbfbdc",
+  "source_triangles": 1281470,
+  "triangles": 31998,
+  "name_zh": "Bunny",
+  "identity_reference": "assets/tripo/generation_selection_20261112/01_priority_48/P18_textbook_bunny.png",
+  "runtime_profile": {
+    "name": "Bunny",
+    "kind": "animal",
+    "source": "assets/tripo/generation_selection_20261112/01_priority_48/P18_textbook_bunny.png"
+  },
+  "editable_source": "assets/characters/textbook_expansion_v1/textbook_bunny/rigged.blend",
+  "export_glb": "assets/characters/textbook_expansion_v1/textbook_bunny/character.glb",
+  "rigging_provider": {
+    "provider": "Mesh2Motion",
+    "engine_commit": "e66f13ccf00ba0afc07e82d876af016e40792422",
+    "core_solver_modified": false,
+    "template": "fitted quadruped semantic rig with independent appendages"
+  },
+  "weight_method": "Unmodified Mesh2Motion quadruped solve, explicit continuous anatomical regions, 30% supported solver blends and 32 adjacency smoothing passes; four normalized influences",
+  "weight_refinement": "species-regions-v1",
+  "vertices": 15997,
+  "unweighted_vertices": 0,
+  "weight_sum_max_error": 2.220446049250313e-16,
+  "actions": [
+    {
+      "name": "idle",
+      "duration": 3.2,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "greet_wave",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "listen_nod",
+      "duration": 1.8,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "talk_gesture",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pose_photo",
+      "duration": 2.4,
+      "loop": false,
+      "contact_time": -1.0
+    }
+  ],
+  "allowed_actions": [
+    "idle",
+    "walk",
+    "greet_wave",
+    "listen_nod",
+    "talk_gesture",
+    "pose_photo"
+  ],
+  "locomotion": "quadruped",
+  "animation_clip_path": "res://assets/characters/textbook_expansion_v1/textbook_bunny/animation-clips.json",
+  "bounds": {
+    "min": [
+      -0.22732847929000854,
+      2.5390829250682145e-05,
+      -0.3388276994228363
+    ],
+    "max": [
+      0.2274126410484314,
+      0.9000512361526489,
+      0.3387530744075775
+    ]
+  },
+  "status": "rigged_pending_engine_validation",
+  "elapsed_seconds": 6.59
+}

@@ -1236,25 +1236,31 @@
     {
       "room_id": "home",
       "name": "客厅",
-      "source_glb": "assets/blender/interiors/home/home_v07_own.glb",
-      "source_blend": "assets/blender/interiors/home/home_v07_own.blend",
+      "source_glb": "assets/blender/interiors/home/home_v08_living_hub.glb",
+      "source_blend": "assets/blender/interiors/home/home_v08_living_hub.blend",
       "game_glb": "res://assets/interiors/home.glb",
-      "source_sha256": "8672b8a0f07d8c949468b629909a6e6aa96d2c28706dc19939889fe4a04ed94f",
+      "source_sha256": "09639022140b2e75814540386cb37d0ef7e3d442357d766b1e91607e431954d7",
       "bounds": [
-        -8.1,
+        -10.2,
         -7.1,
-        16.2,
-        14.2
+        20.4,
+        15.6
       ],
       "validation": {
-        "nodes": 624,
+        "nodes": 799,
         "floor_meshes": 1,
-        "collision_proxies": 117,
+        "collision_proxies": 33,
         "required_markers": [
           "SG_BED",
           "SG_DECOR_MODEL_FLOWER_BOX",
           "SG_DECOR_MODEL_LAMP",
           "SG_DECOR_MODEL_PICNIC",
+          "SG_DOOR_HOME_BALCONY",
+          "SG_DOOR_HOME_BATHROOM",
+          "SG_DOOR_HOME_BEDROOM",
+          "SG_DOOR_HOME_DINING",
+          "SG_DOOR_HOME_KITCHEN",
+          "SG_DOOR_HOME_STUDY",
           "SG_EXIT",
           "SG_MEMORY_01",
           "SG_MEMORY_02",
@@ -1265,14 +1271,14 @@
           "SG_SPAWN",
           "SG_WARDROBE"
         ],
-        "bytes": 7730556,
+        "bytes": 11323664,
         "images": 15,
-        "triangles": 186972
+        "triangles": 244968
       },
-      "model_version": "v07_own",
-      "preview": "docs/verification/own-yarn-post-home-recovery-20261025/home/blender-source-after.png",
-      "triangles": 186972,
-      "refinement_revision": "own-14"
+      "model_version": "v08_living_hub",
+      "preview": "docs/verification/home-living-hub-20261113/overview.png",
+      "triangles": 244968,
+      "refinement_revision": "living-hub-20261113"
     },
     {
       "room_id": "home_balcony",

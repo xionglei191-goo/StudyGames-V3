@@ -1,8 +1,8 @@
 extends SceneTree
 ## Convert Blender's real GLB skins to the established native character loader.
 ## The semantic bone order and canonical rest transforms come from rig.json.
-const OUTPUT := "res://assets/characters/tripo_v1"
-const SOURCE := "res://../assets/characters/tripo_v1"
+var OUTPUT := "res://assets/characters/tripo_v1"
+var SOURCE := "res://../assets/characters/tripo_v1"
 var failures := 0
 
 func _initialize() -> void:
@@ -13,13 +13,18 @@ func _fail(message: String) -> void:
 	push_error(message)
 
 func _run() -> void:
+	for arg: String in OS.get_cmdline_user_args():
+		if arg.begins_with("--source="): SOURCE = arg.trim_prefix("--source=")
+		if arg.begins_with("--output="): OUTPUT = arg.trim_prefix("--output=")
 	var manifest := {"schema_version":4,"art_revision":"tripo-character-v1","characters":{}}
 	if FileAccess.file_exists(OUTPUT.path_join("manifest.json")):
 		manifest = JSON.parse_string(FileAccess.get_file_as_string(OUTPUT.path_join("manifest.json")))
 	var folder := ProjectSettings.globalize_path(SOURCE).simplify_path()
 	var ids := DirAccess.open(folder).get_directories()
 	ids.sort()
-	var selected := OS.get_cmdline_user_args()
+	var selected: Array[String] = []
+	for arg: String in OS.get_cmdline_user_args():
+		if not arg.begins_with("--"): selected.append(arg)
 	for id: String in ids:
 		if not selected.is_empty() and not selected.has(id) and not selected.has("--all"):
 			continue
@@ -43,6 +48,9 @@ func _run() -> void:
 			"family":data.family,"height":data.height,"source_triangles":data.source_triangles,
 			"actions":data.actions,"weight_method":data.weight_method,"editable_source":data.editable_source}
 		if data.has("rigging_provider"): record["rigging_provider"]=data.rigging_provider
+		if data.has("runtime_profile"): record["profile"] = data.runtime_profile
+		for key: String in ["room_id","name_zh","identity_reference","intake_id","weight_refinement","animation_clip_path","locomotion","allowed_actions","bounds","stride_scale","skirt_bone"]:
+			if data.has(key): record[key] = data[key]
 		var order := {}
 		for i: int in range(data.bones.size()):
 			order[str(data.bones[i].name)] = i
@@ -108,7 +116,8 @@ func _run() -> void:
 							shape_normals[i] = transformed_normal.normalized() if mesh.blend_shape_mode == Mesh.BLEND_SHAPE_MODE_NORMALIZED else transformed_normal
 					shape[Mesh.ARRAY_VERTEX] = points
 					shape[Mesh.ARRAY_NORMAL] = shape_normals
-				mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,arrays,morphs)
+				var skin_flags := Mesh.ARRAY_FLAG_USE_8_BONE_WEIGHTS if influences == 8 else 0
+				mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,arrays,morphs,{},skin_flags)
 				var material := source_mesh.mesh.surface_get_material(surface)
 				if id == "player": material = _player_material(material as StandardMaterial3D)
 				mesh.surface_set_material(surface,material)

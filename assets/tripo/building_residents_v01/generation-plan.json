@@ -1,0 +1,663 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-12",
+  "purpose": "34 independent building resident full-body front reference images; user operates Tripo3D",
+  "generator": "built-in image_gen",
+  "status": "reference_images_ready",
+  "count": 34,
+  "human_count": 16,
+  "animal_count": 18,
+  "coverage": "26 alphabet landmarks plus 8 campus locations; player homes excluded",
+  "common_prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: ",
+  "style_selection": "Existing core character references selected as style targets; new identities and occupations designed autonomously per user instruction.",
+  "tripo_reference": "https://www.tripo3d.ai/help/features/how-to-get-better-image-to-3d-results",
+  "runtime_status": "concepts_only_not_integrated",
+  "characters": [
+    {
+      "order": 1,
+      "building_code": "A",
+      "room_id": "landmark_A",
+      "building_name": "苹果果园屋",
+      "name_zh": "阿梨",
+      "name_en": "Ali",
+      "type": "human",
+      "role": "果园管家",
+      "palette": "苹果红、鼠尾草绿",
+      "design_zh": "年轻女园艺师，短栗发、红头巾、绿背带裤，口袋有苹果贴布。",
+      "id": "resident_a",
+      "file": "01_landmark_A_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: A young adult East Asian woman orchard keeper, warm peach skin, short chestnut bob, compact red headscarf tied close to head, sage-green bib overalls over a cream short-sleeved blouse, a single red apple-shaped sewn patch on the bib, cuffed trousers and ochre ankle work boots. Thoughtful lively brown eyes and friendly smile. Practical slim rounded silhouette, 4.2 heads tall. No basket or fruit in her hands.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 2,
+      "building_code": "B",
+      "room_id": "landmark_B",
+      "building_name": "船屋码头",
+      "name_zh": "阿渡",
+      "name_en": "Dory",
+      "type": "animal",
+      "role": "船屋摆渡员",
+      "palette": "水蓝、沙棕、橙黄",
+      "design_zh": "棕色水獭，水蓝短外套、奶油长裤和贴身橙色领结。",
+      "id": "resident_b",
+      "file": "02_landmark_B_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic river otter ferryman, warm brown fur and cream muzzle, small round ears, tiny dark nose, a short sturdy tail curving visibly beside one calf without touching the leg. Water-blue cropped sailor jacket, cream shirt, small fitted ochre neckerchief, sand trousers and dark navy rounded deck shoes. Two arms with simple rounded otter hands, two separated humanlike standing legs, 3.7 heads tall. Calm helpful expression. No oar, boat or rope.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 3,
+      "building_code": "C",
+      "room_id": "landmark_C",
+      "building_name": "蛋糕烘焙坊",
+      "name_zh": "米洛",
+      "name_en": "Milo",
+      "type": "human",
+      "role": "蛋糕师",
+      "palette": "奶油白、杏桃橙",
+      "design_zh": "卷发青年糕点师，矮厨师帽、桃色围裙和可可长裤。",
+      "id": "resident_c",
+      "file": "03_landmark_C_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: A cheerful young adult human man pastry chef with medium warm brown skin, short dark curly hair visible beneath a low cream baker cap, rounded cheeks, soft dark eyebrows. Cream short-sleeved chef jacket with peach buttons, short apricot waist apron above cocoa-brown straight trousers, cream rounded shoes. A small sewn cake-slice emblem on apron, no text. Stocky but articulated body, 4.2 heads tall. Empty relaxed hands, no cake, tray or utensils.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 4,
+      "building_code": "D",
+      "room_id": "landmark_D",
+      "building_name": "鼓屋音乐厅",
+      "name_zh": "鼓鼓",
+      "name_en": "Gugu",
+      "type": "animal",
+      "role": "节奏乐手",
+      "palette": "赤陶红、靛蓝",
+      "design_zh": "金棕小猴，红色盘扣马甲、靛蓝裤，尾巴有清晰轮廓。",
+      "id": "resident_d",
+      "file": "04_landmark_D_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An anthropomorphic golden-brown monkey percussionist, cream oval face and round protruding ears, small tidy crest of hair, bright brown eyes. Terracotta-red sleeveless vest with two large rounded cloth toggle fasteners over cream shirt, indigo cuffed trousers, tan soft boots. A short thick curling monkey tail visible to one side with generous gap from body. Youthful adult, 3.8 heads tall, clear elbows and knees. No drum, sticks, necklace or handheld objects.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 5,
+      "building_code": "E",
+      "room_id": "landmark_E",
+      "building_name": "蛋壳孵化屋",
+      "name_zh": "啾妈",
+      "name_en": "Aunt Chirp",
+      "type": "animal",
+      "role": "孵化照护员",
+      "palette": "奶黄、暖白、薰衣草紫",
+      "design_zh": "奶油母鸡，低矮红鸡冠，淡紫围裙，温柔照护者。",
+      "id": "resident_e",
+      "file": "05_landmark_E_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: A gentle adult anthropomorphic cream hen hatchery caretaker, small low rounded coral comb, warm yellow short beak, large kind dark eyes. Pale butter-yellow tunic, short lavender apron with one egg-shaped pale patch, lavender cropped trousers and ochre rounded shoes. Wings adapted as two distinct humanoid arms with elbow and soft three-lobed feather hands, both clearly separated from torso; two bipedal legs. 3.5 heads tall, plump pear-shaped silhouette but visible knees. No eggs, chicks or basket.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 6,
+      "building_code": "F",
+      "room_id": "landmark_F",
+      "building_name": "巨花温室",
+      "name_zh": "花婆婆",
+      "name_en": "Grandma Flora",
+      "type": "human",
+      "role": "温室花艺师",
+      "palette": "紫藤、青苔绿",
+      "design_zh": "银发圆髻花婆婆，紫色开衫、绿围裙裤，胸前小花贴布。",
+      "id": "resident_f",
+      "file": "06_landmark_F_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An elderly East Asian woman florist with warm peach skin, silver hair in a neat low bun visible at sides, gentle crow's feet, rosy round cheeks and lively brown eyes. Wisteria-purple short cardigan, pale cream blouse, moss-green gardener apron ending high on thighs over straight olive trousers, dusty mauve garden shoes. A single simple yellow flower applique on upper pocket. Sturdy friendly body, 4 heads tall, upright neutral stance. No glasses, cane, pots or flowers in hands.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 7,
+      "building_code": "G",
+      "room_id": "landmark_G",
+      "building_name": "地球仪旅行馆",
+      "name_zh": "路远",
+      "name_en": "Rowan",
+      "type": "human",
+      "role": "旅行向导",
+      "palette": "土黄、湖蓝",
+      "design_zh": "深肤色卷发向导，沙色马甲、蓝色衬衫、结实旅行靴。",
+      "id": "resident_g",
+      "file": "07_landmark_G_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult human man travel guide with deep brown skin, short tightly curled black hair, thick friendly eyebrows, clean-shaven face and warm eyes. Sandy ochre field vest with large simple pockets over a pale sky-blue shirt, teal trousers, warm brown ankle hiking boots, one flat circular compass-like stitched badge with no letters. Broad shoulders, slim waist, 4.4 heads tall. No backpack, straps, map or accessories projecting beyond body.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 8,
+      "building_code": "H",
+      "room_id": "landmark_H",
+      "building_name": "帽子裁缝店",
+      "name_zh": "绒绒",
+      "name_en": "Rory",
+      "type": "animal",
+      "role": "帽饰裁缝",
+      "palette": "锈橙、李子紫、米白",
+      "design_zh": "赤狐裁缝，梅紫短马甲、米白衬衫和小贝雷帽。",
+      "id": "resident_h",
+      "file": "08_landmark_H_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An elegant adult anthropomorphic red fox hat tailor, rust-orange fur, cream muzzle and inner ears, large upright triangular ears, modest slim tail ending in cream tip visible beside one leg. Plum-purple fitted vest over ivory blouse, charcoal-lavender trousers, plum rounded loafers, small soft dusty-plum beret tilted slightly between ears without hiding them. 4 heads tall, poised friendly face, simple rounded paw hands. No scissors, pins, hanging measuring tape or held hat.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 9,
+      "building_code": "I",
+      "room_id": "landmark_I",
+      "building_name": "冰淇淋驿亭",
+      "name_zh": "凉凉",
+      "name_en": "Chilly",
+      "type": "animal",
+      "role": "冰淇淋店员",
+      "palette": "冰蓝、奶白、珊瑚粉",
+      "design_zh": "圆润企鹅，冰蓝短制服、珊瑚小领结，橙色脚蹼。",
+      "id": "resident_i",
+      "file": "09_landmark_I_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic penguin ice-cream host with smooth charcoal-blue head, white face and belly, short orange beak, friendly dark eyes. Ice-blue short-sleeved shop jacket and short matching trousers, small coral bowtie fitted at neck, small rounded cream paper-style shop cap with no text. Two distinct flipper-like arms posed away from body, simple rounded ends, short but visible separated legs ending in chunky orange feet. 3.4 heads tall. No cone, scoops or tray.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 10,
+      "building_code": "J",
+      "room_id": "landmark_J",
+      "building_name": "玻璃罐收藏馆",
+      "name_zh": "藏藏",
+      "name_en": "Coby",
+      "type": "animal",
+      "role": "收藏整理员",
+      "palette": "灰棕、芥末黄、石板蓝",
+      "design_zh": "浣熊整理员，黄马甲、蓝工装裤，黑眼罩和环纹尾。",
+      "id": "resident_j",
+      "file": "10_landmark_J_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: A friendly adult anthropomorphic raccoon collection curator, silvery grey fur, distinctive soft charcoal eye mask, cream muzzle, rounded triangle ears, short chunky striped tail visible beside one leg. Mustard waistcoat over ivory long-sleeved shirt, slate-blue trousers, brown rounded boots. One simple solid circular pocket patch suggesting a jar lid, no transparent material. Compact 3.8-head body, curious gentle expression. No jars, glasses, keys or handheld objects.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 11,
+      "building_code": "K",
+      "room_id": "landmark_K",
+      "building_name": "风筝工坊",
+      "name_zh": "风仔",
+      "name_en": "Flynn",
+      "type": "human",
+      "role": "风筝匠学徒",
+      "palette": "青绿、暖橙",
+      "design_zh": "小麦肤色少年，蓬松短黑发，青绿工坊服，菱形口袋。",
+      "id": "resident_k",
+      "file": "11_landmark_K_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: A teenage human boy kite-making apprentice with warm tan skin, tousled short black hair, wide brown eyes, slim energetic proportions. Teal work shirt with rolled short sleeves, muted orange short waist apron with a single diamond-shaped patch, navy cropped trousers, cream canvas shoes. 4.1 heads tall, natural distinct knees and elbows, calm closed-mouth smile. No kite, string, spool or tools; costume itself carries a simple kite motif.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 12,
+      "building_code": "L",
+      "room_id": "landmark_L",
+      "building_name": "灯笼驿站",
+      "name_zh": "灯禾",
+      "name_en": "Luma",
+      "type": "human",
+      "role": "灯笼匠",
+      "palette": "朱红、暖金、深青",
+      "design_zh": "东亚女灯笼匠，紧凑双髻、朱红短外套、深青长裤。",
+      "id": "resident_l",
+      "file": "12_landmark_L_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult East Asian woman lantern craftsperson, warm light skin, black hair in two compact low rounded buns, soft straight fringe, expressive brown eyes. Vermilion short jacket with rounded mandarin collar and three broad golden cloth toggle closures, pale gold undershirt, deep teal straight trousers, burgundy cloth shoes with cream soles. A small sewn lantern-shaped patch on jacket hem. 4.2 heads tall, composed welcoming face. No dangling tassels, lanterns, poles or held objects.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 13,
+      "building_code": "M",
+      "room_id": "landmark_M",
+      "building_name": "蘑菇邻居屋",
+      "name_zh": "团团",
+      "name_en": "Toto",
+      "type": "animal",
+      "role": "邻里客厅主人",
+      "palette": "咖啡棕、燕麦、砖红",
+      "design_zh": "水豚邻居，燕麦针织开衫、砖红裤，慢悠悠的神情。",
+      "id": "resident_m",
+      "file": "13_landmark_M_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic capybara neighborhood host, warm coffee-brown fur, broad rounded rectangular muzzle, tiny rounded ears and relaxed half-open dark eyes, gentle friendly smile. Oatmeal knitted cardigan with broad simple bands and large brown buttons, cream shirt, brick-red cropped trousers, tan rounded house shoes. Round belly but visible separate shoulders elbows knees, 3.6 heads tall. No mushroom hat, teacup, chair, props or tail.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 14,
+      "building_code": "N",
+      "room_id": "landmark_N",
+      "building_name": "鸟巢观察屋",
+      "name_zh": "林听",
+      "name_en": "Wren",
+      "type": "human",
+      "role": "观鸟记录员",
+      "palette": "苔绿、沙米、土橙",
+      "design_zh": "棕肤卷发女观察员，苔绿马甲、浅米工装裤、橙色便帽。",
+      "id": "resident_n",
+      "file": "14_landmark_N_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult human woman bird observer with medium brown skin, short dark curly hair, dark brown eyes and subtle freckles. Moss-green pocket vest over an ivory shirt, sandy beige straight field trousers, muted burnt-orange soft cap, chestnut hiking shoes. One small flat feather-shaped stitched emblem on vest. Slender upright silhouette, 4.3 heads tall, attentive kind expression. No binoculars, camera, birds, notebook, bag or loose straps.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 15,
+      "building_code": "O",
+      "room_id": "landmark_O",
+      "building_name": "猫头鹰图书馆",
+      "name_zh": "墨羽",
+      "name_en": "Oliver",
+      "type": "animal",
+      "role": "图书管理员",
+      "palette": "栗棕、墨绿、奶白",
+      "design_zh": "栗棕猫头鹰，奶白脸盘、墨绿开衫，胸前书页贴布。",
+      "id": "resident_o",
+      "file": "15_landmark_O_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic tawny owl librarian, chestnut-brown plumage, cream heart-shaped facial disk, small golden beak, large wise amber eyes, small rounded feather tufts. Deep forest-green cardigan, ivory shirt and tidy brown trousers, tan rounded shoes. A simple book-shaped applique on pocket. Two clearly separate wing-arms with elbows and rounded feather hands; two straight biped legs, 3.7 heads tall. No spectacles, held books, loose feathers or furniture.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 16,
+      "building_code": "P",
+      "room_id": "landmark_P",
+      "building_name": "南瓜农场屋",
+      "name_zh": "麦麦",
+      "name_en": "Maple",
+      "type": "animal",
+      "role": "南瓜农夫",
+      "palette": "南瓜橙、苔绿、桃粉",
+      "design_zh": "桃粉小猪，南瓜橙背带裤、绿衬衫、泥棕短靴。",
+      "id": "resident_p",
+      "file": "16_landmark_P_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic pig farmer, warm peach-pink skin, small upright rounded ears, broad pink snout, cheerful brown eyes. Pumpkin-orange bib overalls over a muted moss-green short sleeve shirt, wide turned-up cuffs, mud-brown rounded ankle work boots. Small dark green leaf patch on bib. Stout capable body with clear legs, 3.7 heads tall. A very short curled tail can peek at side without crossing leg. No pumpkin, straw hat, shovel or tools.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 17,
+      "building_code": "Q",
+      "room_id": "landmark_Q",
+      "building_name": "拼布故事馆",
+      "name_zh": "布爷爷",
+      "name_en": "Grandpa Patch",
+      "type": "human",
+      "role": "拼布故事人",
+      "palette": "靛蓝、赭黄、砖红",
+      "design_zh": "银色短胡须老先生，暖色拼布马甲，深蓝长裤。",
+      "id": "resident_q",
+      "file": "17_landmark_Q_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An elderly human man patchwork storyteller with medium tan skin, short silver hair and a neatly sculpted compact silver moustache and beard, kind brown eyes. Waistcoat of six large simple cloth panels in indigo, muted terracotta, ochre and cream, cream long sleeve shirt, navy straight trousers, russet soft shoes. 4.1 heads tall, slightly round torso, upright posture. Fabric pieces broad and readable, no tiny busy quilting. Empty hands, no glasses, walking stick, blanket or book.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 18,
+      "building_code": "R",
+      "room_id": "landmark_R",
+      "building_name": "机器人工坊",
+      "name_zh": "丁丁",
+      "name_en": "Tessa",
+      "type": "human",
+      "role": "机器人修理师",
+      "palette": "汽油蓝、亮橙",
+      "design_zh": "雀斑女工程师，短铜发、蓝工装、橙色膝部补丁。",
+      "id": "resident_r",
+      "file": "18_landmark_R_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult human woman robot mechanic, fair warm skin with a few freckles, short copper-red pixie haircut, bright hazel eyes. Petrol-blue fitted work coveralls with rolled sleeves, burnt-orange reinforced knee patches, cream undershirt, brown rounded work boots. One simple stitched robot-face patch on chest with two dots and a line, no text. 4.3 heads tall with sturdy practical build. No goggles, tool belt, robot companion, wrench or handheld equipment.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 19,
+      "building_code": "S",
+      "room_id": "landmark_S",
+      "building_name": "星形天文台",
+      "name_zh": "星野",
+      "name_en": "Aster",
+      "type": "human",
+      "role": "星空讲解员",
+      "palette": "午夜蓝、紫灰、星金",
+      "design_zh": "青年观星员，波浪黑发、深蓝短外套、星形衣扣。",
+      "id": "resident_s",
+      "file": "19_landmark_S_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult East Asian man astronomer with light warm skin, softly wavy short black hair, warm dark eyes, clean shaven. Midnight-blue hip-length jacket with two large muted-gold star-shaped buttons, dusky lavender shirt, smoky purple straight trousers, dark plum rounded boots. 4.4 heads tall, slim gentle silhouette, quietly delighted expression. No cape, wizard hat, telescope, glasses, stars floating outside body or props.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 20,
+      "building_code": "T",
+      "room_id": "landmark_T",
+      "building_name": "火车车站",
+      "name_zh": "轨轨",
+      "name_en": "Gus",
+      "type": "animal",
+      "role": "车站站务员",
+      "palette": "海军蓝、暖棕、金黄",
+      "design_zh": "柯基站务员，立耳、蓝制服、低沿站务帽和圆金扣。",
+      "id": "resident_t",
+      "file": "20_landmark_T_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic corgi stationmaster, golden tan and cream fur, large distinct upright ears, short broad muzzle and cheerful dark eyes. Navy railway uniform jacket with large gold buttons, neat cream collar, maroon short fitted tie, navy trousers, dark brown rounded shoes. Low navy station cap placed between ears, no letters or insignia text. Biped with visible separate arms and legs, 3.6 heads tall. No train, luggage, whistle, clock or held objects.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 21,
+      "building_code": "U",
+      "room_id": "landmark_U",
+      "building_name": "雨伞气象屋",
+      "name_zh": "小晴",
+      "name_en": "Sunny",
+      "type": "animal",
+      "role": "天气观察员",
+      "palette": "雨黄、叶绿、湖蓝",
+      "design_zh": "叶绿青蛙，雨黄短外套、蓝短裤和雨靴，圆眼突出。",
+      "id": "resident_u",
+      "file": "21_landmark_U_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic frog weather observer, smooth desaturated leaf-green skin, broad pale-cream muzzle and belly, two large rounded eyes high on head, gentle closed smile. Rain-yellow hip-length waterproof jacket with broad buttons and hood folded neatly behind neck, sky-blue knee-length shorts, yellow rounded rain boots. Two arms with broad three-fingered soft hands, two separate biped legs, 3.5 heads tall. No umbrella, raindrops, glasses or equipment.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 22,
+      "building_code": "V",
+      "room_id": "landmark_V",
+      "building_name": "休眠火山观察站",
+      "name_zh": "岩岚",
+      "name_en": "Rhea",
+      "type": "human",
+      "role": "岩石研究员",
+      "palette": "赭红、沙米、石灰",
+      "design_zh": "深棕肤女地质员，紧束卷发、赭红工作服、米色护膝。",
+      "id": "resident_v",
+      "file": "22_landmark_V_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult human woman geologist with deep warm brown skin, tightly curled dark hair gathered in a small high bun, strong gentle eyebrows and warm eyes. Terracotta-red field jacket with cream collar, sand-colored cargo trousers with broad light grey knee patches, ochre rugged rounded boots. A simple angular rock-shaped grey patch on upper chest. 4.4 heads tall, solid capable stance. No hard hat, goggles, rock samples, hammer or backpack.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 23,
+      "building_code": "W",
+      "room_id": "landmark_W",
+      "building_name": "鲸鱼海洋馆",
+      "name_zh": "汐汐",
+      "name_en": "Shelly",
+      "type": "animal",
+      "role": "海洋馆讲解员",
+      "palette": "海盐灰、海蓝、奶白",
+      "design_zh": "灰海豹，海蓝工作服，圆鼻和奶油口鼻，双足拟人。",
+      "id": "resident_w",
+      "file": "23_landmark_W_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic grey harbor seal marine educator, smooth soft sea-grey skin, round head, cream muzzle, small charcoal nose, large dark eyes, subtle sculpted whisker dots without long whisker strands. Ocean-blue polo and deep teal cropped trousers, pale cream deck shoes. Small flat whale silhouette patch on polo. Two separate flipper-like arms with soft rounded hands, two bipedal legs suitable for walking, 3.5 heads tall. No fish, water, pool, diving gear or props.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 24,
+      "building_code": "X",
+      "room_id": "landmark_X",
+      "building_name": "木琴海边舞台",
+      "name_zh": "铃鹿",
+      "name_en": "Linden",
+      "type": "animal",
+      "role": "木琴演奏家",
+      "palette": "蜂蜜棕、青绿、淡金",
+      "design_zh": "蜂蜜色小鹿，极短圆鹿角、青绿马甲、木色长裤。",
+      "id": "resident_x",
+      "file": "24_landmark_X_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic small deer xylophonist, honey-brown fur, cream muzzle, big soft brown eyes, large rounded ears, two very short sturdy rounded antlers with only one blunt branch each. Seafoam-green fitted vest over ivory shirt, warm walnut trousers, dark tan rounded shoes. A row of four small broad amber rectangular sewn patches on vest evokes wooden keys. 4 heads tall, slender graceful body. No instrument, mallets, music notes, scarf or props.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 25,
+      "building_code": "Y",
+      "room_id": "landmark_Y",
+      "building_name": "毛线手作屋",
+      "name_zh": "绵姨",
+      "name_en": "Aunt Wool",
+      "type": "animal",
+      "role": "毛线手作师",
+      "palette": "奶白、莓粉、蓝灰",
+      "design_zh": "奶白绵羊，块面卷毛、莓粉开衫、蓝灰长裤。",
+      "id": "resident_y",
+      "file": "25_landmark_Y_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic sheep knitting teacher with warm ivory wool sculpted in broad soft rounded curls, pale oatmeal face and drooping rounded ears, gentle dark eyes, no horns. Berry-rose cardigan with large cream buttons, ivory blouse, dusty slate-blue trousers, plum soft rounded shoes. Two arms and simple rounded hoof-like hands separated from torso, two articulated biped legs, 3.7 heads tall. No needles, yarn ball, basket, glasses or strands.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 26,
+      "building_code": "Z",
+      "room_id": "landmark_Z",
+      "building_name": "斑马邮局",
+      "name_zh": "斑邮",
+      "name_en": "Zippy",
+      "type": "animal",
+      "role": "邮局投递员",
+      "palette": "墨白、邮政绿、砖红",
+      "design_zh": "斑马邮递员，短鬃毛、绿制服，红色贴身邮包。",
+      "id": "resident_z",
+      "file": "26_landmark_Z_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic zebra postal worker, warm ivory coat with clean broad charcoal stripes, short upright sculpted black mane, large rounded ears and kind brown eyes. Postal-green fitted short jacket with cream collar, olive trousers, russet rounded shoes, a compact brick-red flat mail pouch fixed tightly at hip with strap lying against torso. 4 heads tall, rounded equine muzzle. No letters, packages, bicycle, cap text or handheld objects; all limbs clear.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 27,
+      "building_code": "27",
+      "room_id": "school",
+      "building_name": "山丘学园",
+      "name_zh": "榕校长",
+      "name_en": "Principal Rong",
+      "type": "human",
+      "role": "校园迎新校长",
+      "palette": "橄榄绿、浅米、棕褐",
+      "design_zh": "银黑短发校长，橄榄绿开衫和叶形徽章，温厚可靠。",
+      "id": "resident_school",
+      "file": "27_school_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: A middle-aged East Asian man school principal, warm light skin, salt-and-pepper short side-parted hair, broad friendly brows, clean-shaven face with subtle smile lines. Olive-green buttoned cardigan over light cream collared shirt, tobacco-brown trousers, chestnut rounded loafers. A small gold leaf-shaped school badge without letters. 4.4 heads tall, broad welcoming shoulders, open gentle face. No spectacles, tie hanging loose, clipboard, cane or handheld objects.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 28,
+      "building_code": "28",
+      "room_id": "classroom",
+      "building_name": "阳光教室",
+      "name_zh": "苏老师",
+      "name_en": "Teacher Sue",
+      "type": "human",
+      "role": "语言课堂老师",
+      "palette": "向日黄、天蓝、奶白",
+      "design_zh": "短黑发女老师，黄开衫、天蓝长裤，温和明快。",
+      "id": "resident_classroom",
+      "file": "28_classroom_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult East Asian woman language teacher, warm fair skin, sleek short black bob tucked behind both ears with softly curved fringe, friendly brown eyes. Sunflower-yellow short cardigan over cream blouse, sky-blue straight trousers, cream-and-ochre flat shoes. Small blue square book-page patch on cardigan pocket. 4.3 heads tall, gentle upright pose, approachable grown-up face distinct from a schoolchild. No spectacles, books, pointer or objects.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 29,
+      "building_code": "29",
+      "room_id": "music_room",
+      "building_name": "音乐教室",
+      "name_zh": "乐老师",
+      "name_en": "Teacher Leo",
+      "type": "human",
+      "role": "音乐老师",
+      "palette": "酒红、灰蓝、奶白",
+      "design_zh": "深肤色男音乐老师，短卷发、酒红马甲与小领结。",
+      "id": "resident_music_room",
+      "file": "29_music_room_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult human man music teacher with deep brown skin, short close-cut black curls, a tidy small moustache, warm attentive brown eyes. Burgundy waistcoat over cream shirt with sleeves rolled to forearm, small fitted navy bowtie, slate-blue trousers, dark brown rounded loafers. One small broad cream musical-note applique on vest, no written text. 4.4 heads tall, slender expressive face. No instruments, baton, sheet music or held objects.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 30,
+      "building_code": "30",
+      "room_id": "art_room",
+      "building_name": "美术教室",
+      "name_zh": "彩彩",
+      "name_en": "Callie",
+      "type": "animal",
+      "role": "美术老师",
+      "palette": "奶白、橘黑、钴蓝",
+      "design_zh": "三花猫美术老师，蓝工作服、三块彩色围裙口袋。",
+      "id": "resident_art_room",
+      "file": "30_art_room_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic calico cat art teacher, ivory fur with broad soft ginger and charcoal patches, clear triangular ears, sage-green eyes, small pink nose, short curved tail visible beside leg. Cobalt-blue smock with three large pocket panels in muted yellow, coral and teal, cream cropped trousers, ochre shoes. 3.8 heads tall, two hands with soft rounded fingers, articulated elbows and knees. No paint splashes on background, brush, palette, beret or handheld objects.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 31,
+      "building_code": "31",
+      "room_id": "science_room",
+      "building_name": "科学教室",
+      "name_zh": "诺老师",
+      "name_en": "Teacher Nova",
+      "type": "human",
+      "role": "科学老师",
+      "palette": "浅青、雾紫、奶白",
+      "design_zh": "雀斑女科学老师，栗色短卷发、浅青实验外套。",
+      "id": "resident_science_room",
+      "file": "31_science_room_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult human woman science teacher with light warm olive skin, a few small freckles, short rounded chestnut curls and hazel eyes. Pale aqua hip-length lab-style teaching coat with broad rounded pockets, lavender crew-neck shirt, charcoal-violet trousers, cream closed-toe shoes. One simple three-circle molecule applique flat on pocket, no fine lines. 4.3 heads tall, curious encouraging expression. No glasses, goggles, gloves, bottles, beakers or lab props.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 32,
+      "building_code": "32",
+      "room_id": "canteen",
+      "building_name": "校园食堂",
+      "name_zh": "饭团",
+      "name_en": "Pudding",
+      "type": "animal",
+      "role": "校园厨师",
+      "palette": "竹绿、黑白、奶黄",
+      "design_zh": "熊猫厨师，竹绿围裙、奶黄厨师帽，圆脸亲切。",
+      "id": "resident_canteen",
+      "file": "32_canteen_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic panda school cook, warm ivory and charcoal fur, rounded black ears, distinctive soft black eye patches and friendly dark eyes. Low rounded pale butter-yellow cook cap between ears, ivory short sleeve kitchen shirt, bamboo-green short apron, charcoal trousers, warm cream kitchen shoes. 3.6 heads tall, round sturdy torso but separate articulated legs and arms, simple rounded paw hands. No bowls, utensils, rice ball or food.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 33,
+      "building_code": "33",
+      "room_id": "playground",
+      "building_name": "青草操场",
+      "name_zh": "跳跳",
+      "name_en": "Joey",
+      "type": "animal",
+      "role": "操场活动领队",
+      "palette": "沙金、薄荷、珊瑚",
+      "design_zh": "沙金袋鼠，薄荷运动服、珊瑚短裤、粗短尾巴。",
+      "id": "resident_playground",
+      "file": "33_playground_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult anthropomorphic kangaroo playground activity leader, sandy golden fur, cream muzzle, tall rounded ears, warm brown eyes, thick short tail curving beside one calf with clear white gap. Mint-green zip sports top with cream sleeve panels, coral knee-length athletic shorts, cream and tan rounded trainers. 4 heads tall, athletic but softly rounded humanlike biped legs, visible knees, no exaggerated giant feet. No baby in pouch, balls, whistle or equipment.",
+      "status": "visual_review_passed"
+    },
+    {
+      "order": 34,
+      "building_code": "34",
+      "room_id": "football_field",
+      "building_name": "校园足球场",
+      "name_zh": "乔教练",
+      "name_en": "Coach Jo",
+      "type": "human",
+      "role": "足球教练",
+      "palette": "靛蓝、橙金、奶白",
+      "design_zh": "棕肤短发女教练，蓝橙运动服，利落运动鞋。",
+      "id": "resident_football_field",
+      "file": "34_football_field_front.png",
+      "references": [
+        "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+      ],
+      "prompt": "Use case: stylized-concept. Create exactly ONE new original resident for the cozy 3D children's educational game Alphabet Island, as an isolated full-body reference to upload into Tripo image-to-3D. Input image is ONLY a style reference for soft sculpted volume, friendly face rendering, matte cloth and warm rounded storybook game look; do not copy its character identity, clothes or species. Cohesive polished 3D render, continuous organic anatomy with no mechanical ball joints, medium simple detail, sculpted hair/fur rather than individual wisps. Grown-up residents with the specified 3.4–4.4 heads-tall stylized proportions, clearly readable shoulders, elbows, knees. Orthographic FRONT view, zero body yaw, face straight toward camera, both shoulders and both feet evenly visible. Relaxed A-pose with arms 25 degrees out from torso, elbows gently extended, both empty hands clear of clothing, relaxed well-formed fingers or species-appropriate simplified paws, feet shoulder-width apart facing forward. Entire silhouette including headwear, ears, tail and both shoe soles inside frame; centered, character occupies 80–85% height with clean margins. Square image at least 1024x1024. Pure solid WHITE background, even diffuse neutral studio illumination, very faint ground contact shadow only, no floor horizon. No scene, pedestal, extra characters, multi-view panels, text, labels, logo, watermark or border. Clothes use only a few broad recognizable shapes, accessories fitted closely, no straps dangling across hands. SUBJECT: An adult human woman football coach with warm medium brown skin, short dark wavy crop, strong friendly eyebrows, confident brown eyes. Indigo athletic zip jacket with broad golden-orange shoulder panels, matching indigo track trousers with a single cream side stripe, cream and orange rounded sports shoes. 4.4 heads tall, athletic broad shoulders and clear knees, relaxed smile. No numbers, logos, whistle, ball, watch, equipment or objects.",
+      "status": "visual_review_passed"
+    }
+  ]
+}

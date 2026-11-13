@@ -1,0 +1,81 @@
+{
+  "status": "PASS_SAMPLED_REVIEW",
+  "reviewed_at": "2026-11-12T22:38:26",
+  "characters": 34,
+  "actions": 14,
+  "modes": [
+    "normal",
+    "reduced"
+  ],
+  "deformation_samples_per_action_per_mode": 17,
+  "total_deformation_samples": 16184,
+  "support_samples_per_action_per_mode": 49,
+  "total_support_samples": 46648,
+  "severe_flagged_characters_before": 33,
+  "severe_flagged_characters_after": 0,
+  "maximum_action_support_error_m": 0.00243628025054932,
+  "definition": "Unique mesh edges longer than 6 mm. Strained: >2x original length and >25mm growth; severe: >3x and >45mm growth. Flags locate suspicious deformations, not automatic visual acceptance.",
+  "visual_review": {
+    "characters": [
+      "resident_a",
+      "resident_b",
+      "resident_c",
+      "resident_d",
+      "resident_e",
+      "resident_f",
+      "resident_g",
+      "resident_h",
+      "resident_i",
+      "resident_j",
+      "resident_k",
+      "resident_l",
+      "resident_m",
+      "resident_n",
+      "resident_o",
+      "resident_p",
+      "resident_q",
+      "resident_r",
+      "resident_s",
+      "resident_t",
+      "resident_u",
+      "resident_v",
+      "resident_w",
+      "resident_x",
+      "resident_y",
+      "resident_z",
+      "resident_school",
+      "resident_classroom",
+      "resident_music_room",
+      "resident_art_room",
+      "resident_science_room",
+      "resident_canteen",
+      "resident_playground",
+      "resident_football_field"
+    ],
+    "poses_per_character": 6,
+    "views": [
+      "front",
+      "side",
+      "back"
+    ],
+    "native_images": 612
+  },
+  "validation": {
+    "full_resident_checks": 1260,
+    "subsequent_c_wave_recheck": 39,
+    "room_checks": 378,
+    "native_room_checks": 70,
+    "core_animation_checks": 623
+  },
+  "runtime_hashes": {
+    "manifest.json": "f2bb8cb736e1109dd4ab281de004c71a0404a6c02aab334c592f95fac8ba0a6d",
+    "gesture-overrides.json": "bf03d518753bab23322a14db625e18e36e8afb5ea50cccb4219e59d3420b3928",
+    "grounding.json": "a3eacd7c910d646962f21e0e0f30071a02285c4f72eb63f919d3aafc2118062d"
+  },
+  "limitations": [
+    "Sampling does not prove every in-between frame or detect every self-intersection.",
+    "Mild cloth strain remains in large bends; these are static skinned meshes, without cloth simulation or independent fingers.",
+    "Standalone GLB contains base clips; Godot applies its gait and sole corrections at runtime.",
+    "No long gameplay or full-project performance acceptance; exported application packages were not rebuilt."
+  ]
+}

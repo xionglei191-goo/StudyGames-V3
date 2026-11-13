@@ -1,0 +1,124 @@
+{
+  "asset": "home-v06-rectangular-living-hub.png",
+  "status": "implemented_and_verified",
+  "generated_with": "built-in image_gen",
+  "size_px": [
+    1586,
+    992
+  ],
+  "sha256": "1beb552a49a8af1acc67532521b44251a518e0479d16523f71b63887840670d8",
+  "prompt": "prompt-v06-living-room-hub.md",
+  "scope": {
+    "room_count": 7,
+    "central_room": "home",
+    "destinations": [
+      "home_study",
+      "home_bedroom",
+      "home_bathroom",
+      "home_kitchen",
+      "home_dining",
+      "home_balcony"
+    ],
+    "circulation": "exterior entry -> open entry zone inside living room -> six other independent rooms",
+    "shape": "rectangle with straight walls and right-angle corners",
+    "preserved": "six child-room models and layouts; existing living-room furniture and learning-anchor arrangement",
+    "new_work_if_approved": "entry and six perimeter portals in living room; routing and return-anchor compatibility; remove separate hall from user-facing flow"
+  },
+  "protected_baseline": [
+    {
+      "path": "assets/blender/interiors/home/home_v07_own.blend",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home/home_v07_own.glb",
+      "unchanged": true
+    },
+    {
+      "path": "game/assets/interiors/home.glb",
+      "unchanged": false,
+      "change": "authorized runtime replacement; prior file retained in backup"
+    },
+    {
+      "path": "assets/blender/interiors/home_bedroom/home_bedroom_v10_own.blend",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_bedroom/home_bedroom_v10_own.glb",
+      "unchanged": true
+    },
+    {
+      "path": "game/assets/interiors/home_bedroom.glb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_kitchen/home_kitchen_v10_own.blend",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_kitchen/home_kitchen_v10_own.glb",
+      "unchanged": true
+    },
+    {
+      "path": "game/assets/interiors/home_kitchen.glb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_dining/home_dining_v09_own.blend",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_dining/home_dining_v09_own.glb",
+      "unchanged": true
+    },
+    {
+      "path": "game/assets/interiors/home_dining.glb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_bathroom/home_bathroom_v08_own.blend",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_bathroom/home_bathroom_v08_own.glb",
+      "unchanged": true
+    },
+    {
+      "path": "game/assets/interiors/home_bathroom.glb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_study/home_study_v07_own.blend",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_study/home_study_v07_own.glb",
+      "unchanged": true
+    },
+    {
+      "path": "game/assets/interiors/home_study.glb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_balcony/home_balcony_v08_own.blend",
+      "unchanged": true
+    },
+    {
+      "path": "assets/blender/interiors/home_balcony/home_balcony_v08_own.glb",
+      "unchanged": true
+    },
+    {
+      "path": "game/assets/interiors/home_balcony.glb",
+      "unchanged": true
+    }
+  ],
+  "preservation_passed": true,
+  "production_model_modified": true,
+  "concept_geometry_verified_in_engine": true,
+  "implementation": {
+    "date": "2026-11-13",
+    "authorization": "那继续完成模型修改，并进行替换",
+    "source_blend": "assets\\blender\\interiors\\home\\home_v08_living_hub.blend",
+    "runtime_glb": "game/assets/interiors/home.glb",
+    "verification": "docs/verification/home-living-hub-20261113/delivery.json"
+  }
+}

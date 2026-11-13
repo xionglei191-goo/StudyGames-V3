@@ -165,6 +165,11 @@ func place_at_cursor() -> bool:
 		return false
 	var entry := catalog_entry(selected_id)
 	var b_stock := bonus_trophy_stock(state, selected_id)
+	if is_instance_valid(game.creation):
+		var reason: String = game.creation.legacy_placement_error(selected_id,cursor_pos)
+		if not reason.is_empty():
+			game.ui.notify(reason)
+			return false
 	var avail: int = state.free_decor_owned_count(selected_id) + b_stock - state.free_decor_placed_total(selected_id)
 	if avail <= 0:
 		# Auto-purchase if player has enough coins!
@@ -521,6 +526,8 @@ static func _mat(hex: String, rough: float = 0.45, emit_hex: String = "", emit_e
 	return m
 
 static func build_furniture_mesh(item_id: String) -> Node3D:
+	var imported := preload("res://actors/tripo_prop_library.gd").create(item_id)
+	if imported != null: return imported
 	var root := Node3D.new()
 	match item_id:
 		"sunflower_rug":

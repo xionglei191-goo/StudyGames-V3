@@ -302,13 +302,12 @@ func handles_interaction(id: String) -> bool:
 	show_wish()
 	return true
 
-func build_world(parent: Node3D, at: Vector3) -> void:
+func build_world(parent: Node3D, _at: Vector3) -> void:
 	var party := state()
 	var root := Node3D.new()
 	root.name = "PartyKeepsake"
-	# The existing living-room table is behind the navigation marker. Keep this
-	# ornament on its tabletop; the marker and authored collision stay unchanged.
-	root.position = at + Vector3(0,0.94,-2.0)
+	# Keep the keepsake on the window desk, leaving the coffee table usable for tea.
+	root.position = Vector3(5.55,1.04,-1.0)
 	root.scale = Vector3.ONE * 0.45
 	root.set_meta("confirmed_revision",int(party.revision))
 	root.set_meta("layout",party.layout.duplicate(true))
@@ -327,9 +326,10 @@ func build_world(parent: Node3D, at: Vector3) -> void:
 	label.text = "相聚回忆" if Progress.watched(party) else "欢迎桌" if int(party.revision) > 0 else "小小心愿"
 	root.add_child(label)
 	var found := false
+	var interaction_at := Vector3(4.2,0.1,0.25)
 	for entry: Dictionary in game.interactions:
-		if entry.id == "journey_party_table": found = true; entry.position = at
-	if not found: game.interactions.append({"id":"journey_party_table","type":"memory","position":at,"radius":2.6,"label":"看看我们的欢迎桌"})
+		if entry.id == "journey_party_table": found = true; entry.position = interaction_at
+	if not found: game.interactions.append({"id":"journey_party_table","type":"memory","position":interaction_at,"radius":2.6,"label":"看看我们的欢迎桌"})
 	game.feedback.bind_interactions(game.interactions)
 
 func _finish(focus_name: String) -> void:

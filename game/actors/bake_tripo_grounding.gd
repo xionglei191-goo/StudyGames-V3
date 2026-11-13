@@ -9,9 +9,18 @@ func _initialize() -> void:
 func _run() -> void:
 	Art.use_manifest("res://assets/characters/tripo_v1/manifest.json")
 	Art._skip_grounding=true
-	var result := {"schema_version":1,"method":"60 Hz fitted sole support, 18 mm rest-space sample cells; root position and action timing retained","characters":{}}
-	for id: String in Art.manifest().characters:
+	var result := {"schema_version":1,"gait_revision":Art.WalkGait.REVISION,"method":"60 Hz fitted sole support, 18 mm rest-space sample cells; root position and action timing retained","characters":{}}
+	var residents := OS.get_cmdline_user_args().has("--residents")
+	var expansion := OS.get_cmdline_user_args().has("--expansion")
+	var supported_actions: Array[String] = ["walk","carry_walk"]
+	if residents or expansion: supported_actions.append("place_item")
+	result["supported_actions"] = supported_actions
+	var entries: Dictionary = Actor.Residents.all() if residents else Art.manifest().characters
+	if expansion: entries = Art.expansion_characters()
+	for id: String in entries:
+		if Art.character_entry(id).is_empty(): continue
 		if id=="player" or str(Art.character_entry(id).family)=="wheelchair": continue
+		if str(Art.character_entry(id).get("locomotion",""))=="swim": continue
 		var actor: Node3D = Actor.new()
 		actor.configure(id)
 		root.add_child(actor)
@@ -25,8 +34,9 @@ func _run() -> void:
 		var modes := {}
 		for mode: String in ["normal","reduced"]:
 			var clips := {}
-			for name: String in ["walk","carry_walk"]:
+			for name: String in supported_actions:
 				var path := mode+"/"+name
+				if not actor.animation_player.has_animation(path): continue
 				var clip: Animation = actor.animation_player.get_animation(path)
 				actor.animation_player.play(path,0.0)
 				actor.animation_player.advance(0.0)
@@ -43,7 +53,7 @@ func _run() -> void:
 		print("TRIPO_GROUNDING ",id," samples=",points.size())
 		actor.queue_free()
 		await process_frame
-	var file := FileAccess.open(Art.GROUNDING_PATH,FileAccess.WRITE)
+	var file := FileAccess.open(Art.EXPANSION_GROUNDING_PATH if expansion else Art.RESIDENT_GROUNDING_PATH if residents else Art.GROUNDING_PATH,FileAccess.WRITE)
 	file.store_string(JSON.stringify(result,"\t"))
 	file.close()
 	print("TRIPO_GROUNDING_DONE ",result.characters.size())

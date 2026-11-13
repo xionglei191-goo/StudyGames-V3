@@ -194,6 +194,7 @@ func show_hub() -> void:
 	var chosen := _book_title(str(state.selected_book_id))
 	var actions: Array = [{"label":"继续我的旅程","id":"journey:continue","primary":true},{"label":"八册 81 章生活主线","id":"v4_chapter_atlas"},{"label":"和兔兔一起采苹果","id":"journey:orchard_play"},{"label":"26 个字母发现页","id":"journey:letters"},{"label":"教材里的词故事","id":"journey:library"},{"label":"选择教材 · "+chosen,"id":"journey:books"},{"label":"回到自己的家","id":"journey:home"},{"label":"原有生活回忆册","id":"journey:old_journal"}]
 	actions.insert(1,{"label":"我的朋友角 · 小岛心愿","id":"journey:friend_corner"})
+	actions.insert(1,{"label":"生活工坊 · 设计、制作与小摊","id":"creation"})
 	actions.insert(2,{"label":"发现卡和街区旅行页","id":"journey:discoveries"})
 	actions.insert(3,{"label":"去看看我的朋友","id":"journey:friends"})
 	actions.insert(1,{"label":"朋友捎来的小邀请","id":"journey:revisits"})

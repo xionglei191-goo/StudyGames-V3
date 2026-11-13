@@ -1,0 +1,20 @@
+# 候选 12 个：按章节和场景再选
+
+每次上传一张独立 PNG，下载后按“建议 GLB 名称”保存。全部图片是原参考图的字节副本。
+
+候选包只在对应场景确定需要时使用。70 个可生成名额中建议保留 10 个用于补缺或返工。
+
+| 顺序 | 名称 | 建议 GLB 名称 | 选取理由 |
+|---|---|---|---|
+| O01 | Daisy | `textbook_daisy.glb` | Daisy 的红色卷发与连帽衫有辨识度；三下植树情境确定制作独立角色时再生成。 |
+| O02 | Bob | `textbook_bob_weather_photo.glb` | 照片例句中的 Bob 有完整雨衣造型；只有需要近景天气表演时才值得独立生成。 |
+| O03 | Socrates | `textbook_socrates.glb` | 苏格拉底的希腊长袍有独立轮廓；文化页先保留图片，需要三维展示时再生成。 |
+| O04 | Harry | `textbook_harry.glb` | Harry 提供穿衣直立的猫；四上宠物服装情境做成三维表演时再选，可作为 Jeff 的服装改造基础。 |
+| O05 | Spot | `textbook_spot.glb` | Spot 提供垂耳直立犬与帽围巾服装；与柯基站务员耳形不同，四上宠物服装情境落地时再选。 |
+| O06 | Tu Youyou | `textbook_tu_youyou.glb` | 屠呦呦保留独立姓名与面部识别；科学家内容若只采用阅读/照片展示，现有立绘已经够用。 |
+| O07 | Yuan Longping | `textbook_yuan_longping.glb` | 袁隆平保留独立姓名与面部识别；农业人物内容确定需要三维近景时再生成。 |
+| O08 | Andy Armstrong | `textbook_andy_armstrong.glb` | Andy 是儿童宇航员，不能只把成人宇航员整体缩小；该篇故事确定三维演出后再生成。 |
+| O09 | 蓝海小地球仪 | `prop_globe.glb` | 如果需要这款装饰地球仪的黄铜支架再生成；球体、支架和教学用地图也可本地制作。图片陆地不能直接用作地理教学。 |
+| O10 | 晴空蓝雨伞 | `prop_umbrella.glb` | 需要展示图片里的伞骨细节时再选；伞面厚度、伞柄和握持点仍要修整。 |
+| O11 | 森系木秋千 | `prop_courtyard_swing.glb` | 需要该外观时可生成；可动座板、绳索和框架必须分件，现有几何秋千也能继续细化。 |
+| O12 | 晴空小喷泉 | `prop_garden_fountain.glb` | 需要该石雕外观时可生成；动态水流仍由引擎制作，单靠这次生成不提供流水动画。 |

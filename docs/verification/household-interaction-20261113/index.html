@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>家务场景操作 · 原生画面</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f7f3e9;color:#424838;font:16px/1.6 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1500px;margin:auto;padding:40px 28px}h1{font-size:30px;margin:0 0 8px}p{color:#69705f;margin:0 0 24px}section{margin:38px 0}h2{font-size:22px;margin:0 0 12px}.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}figure{margin:0;background:#fffdf6;border:1px solid #dedbcf;border-radius:12px;overflow:hidden}img{display:block;width:100%;height:auto}figcaption{padding:10px 16px}a{color:#496d52}@media(max-width:800px){.pair{grid-template-columns:1fr}main{padding:24px 16px}}
+</style>
+<main><h1>家务在房间里完成</h1><p>2026-11-13 · Godot 原生画面 · <a href="results.json">171 项通过的检查记录</a> · <a href="../../delivery/household-interaction-20261113.md">操作与验证说明</a></p>
+<div id="gallery"></div>
+<script>
+const rows=[
+ ['摆餐桌','home_dining-before','home_dining-complete','从托盘拖放餐垫、餐盘和杯子。'],
+ ['摆茶几','home-before','home-complete','铺桌垫，放茶杯，再摆果盘。'],
+ ['整理床铺','home_bedroom-before','home_bedroom-complete','拖开被子、摆正枕头，再来回抚平。'],
+ ['收好书','home_study-before','home_study-complete','按高矮把绘本放回对应书位。'],
+ ['晾袜子','home_balcony-before','home_balcony-complete','先挂袜子，再夹好夹子。'],
+ ['洗蔬菜','home_kitchen-before','home_kitchen-complete','在水流下洗去泥点，装篮并关水。'],
+ ['洗手','home_bathroom-before','home_bathroom-complete','洗手液、揉搓、冲洗和关水。'],
+ ['浇花','home_estate-before','home_estate-complete','水流浇透三个区域，土壤逐渐变深。']
+];
+const gallery=document.getElementById('gallery');
+for(const [title,before,after,description] of rows){const section=document.createElement('section');const h=document.createElement('h2');h.textContent=title;section.append(h);const p=document.createElement('p');p.textContent=description;section.append(p);const pair=document.createElement('div');pair.className='pair';for(const [path,label] of [[before,'开始操作'],[after,'完成后']]){const figure=document.createElement('figure');const a=document.createElement('a');a.href=path+'.png';const img=document.createElement('img');img.src=path+'.png';img.alt=title+' · '+label;img.loading='lazy';a.append(img);figure.append(a);const caption=document.createElement('figcaption');caption.textContent=label;figure.append(caption);pair.append(figure)}section.append(pair);gallery.append(section)}
+</script></main></html>

@@ -1,0 +1,56 @@
+# 优先生成 48 个
+
+每次上传一张独立 PNG，下载后按“建议 GLB 名称”保存。全部图片是原参考图的字节副本。
+
+候选包只在对应场景确定需要时使用。70 个可生成名额中建议保留 10 个用于补缺或返工。
+
+| 顺序 | 名称 | 建议 GLB 名称 | 选取理由 |
+|---|---|---|---|
+| P01 | Li Jie | `textbook_li_jie.glb` | 兽医 Li Jie 的白大褂与听诊器补齐医疗职业轮廓；可作为后续医疗服装的制作起点。 |
+| P02 | Mr Wang | `textbook_mr_wang.glb` | 环卫工人 Mr Wang 的反光工装和工作帽形成独立职业造型；教材身份为环卫工人。 |
+| P03 | Mr Chen | `textbook_mr_chen.glb` | 交警 Mr Chen 的制帽、反光背心和手套与既有人物服装差异明确。 |
+| P04 | Miss Lin | `textbook_miss_lin.glb` | 车站服务员 Miss Lin 提供成人女性制服造型，适用于问路、帮助乘客的教材情境。 |
+| P05 | Wang Yaping | `textbook_wang_yaping.glb` | 王亚平的成人宇航服带有明显的颈环、关节和手套结构；其他成人航天服可从这套服装派生。 |
+| P06 | Lingling 的母亲 | `textbook_role_lingling_mother.glb` | 玲玲母亲的成年比例与日常长裙用于三上家庭介绍；也可作为其他母亲角色的身体、裙装起点。 |
+| P07 | Lingling 的父亲 | `textbook_role_lingling_father.glb` | 玲玲父亲的成年比例与日常针织衫用于三上家庭介绍；能减少后来普通成年男性的独立建模。 |
+| P08 | Uncle Ben | `textbook_uncle_ben.glb` | Uncle Ben 的红棕发、衬衫与背心补充另一种成年男性造型，并与家庭成员同场使用。 |
+| P09 | Aunt Carol | `textbook_aunt_carol.glb` | Aunt Carol 的长卷发和衬衫长裙提供另一种成年女性轮廓，避免家庭场景所有母亲同形。 |
+| P10 | Lily | `textbook_lily.glb` | Lily 与 Lucy 的参考图几乎同形；只生成 Lily，另一位保留独立身份并复用网格。 |
+| P11 | Amy | `textbook_amy.glb` | Amy 的卷发双髻、背带裙和肤色组合补充现有儿童造型；可作为 Cindy、Fran 等改装的身体起点。 |
+| P12 | Dan | `textbook_dan.glb` | Dan 的紧卷短发与连帽外套补充另一种儿童轮廓；Benson 等可复用身体后更换服装。 |
+| P13 | Doggie | `textbook_doggie.glb` | Doggie 是自然四足犬；已有的站立动物居民无法直接提供这种身体结构和行走方式。 |
+| P14 | Kitty | `textbook_kitty.glb` | Kitty 是自然四足短毛猫；与拟人美术老师彩彩分开制作，可承接白猫毛色变体。 |
+| P15 | Elephant Ella | `textbook_elephant_ella.glb` | Elephant Ella 补齐象鼻、大耳与粗壮四肢，已有模型中没有相近体型。 |
+| P16 | Fendi | `textbook_fendi.glb` | Fendi 补齐鱼体、鳍和尾部结构；适合水中故事与观察活动。 |
+| P17 | Qinmou | `textbook_qinmou.glb` | Qinmou 是自然姿态的金丝猴，与穿衣直立的鼓鼓体型和支撑方式有明显差异。 |
+| P18 | Bunny | `textbook_bunny.glb` | Bunny 是自然兔，保留后腿、长耳与四足结构；与穿衣的兔兔园丁分别处理。 |
+| P19 | Nian | `textbook_nian.glb` | 年兽的角、鬃毛、尾巴和四足轮廓独特，适合节庆故事。 |
+| P20 | Baker | `textbook_baker_bird.glb` | Baker 作为六只大小比较鸟的基础网格；其他五只先以缩放、羽色及少量冠羽/尾羽调整派生。 |
+| P21 | Kelly | `textbook_kelly.glb` | Kelly 是细长四肢的成年母犬；犬妈妈与圆头短身幼犬同场时需要不同的身体比例。 |
+| P22 | Kathy | `textbook_kathy.glb` | Kathy 作为三只幼犬的共同网格；Kent、Karen 通过黑色和斑点贴图、领结色区分。 |
+| P23 | Xiaoxiao 的鹦鹉 | `textbook_role_xiaoxiao_parrot.glb` | 鹦鹉的弯喙、长尾与足部抓握结构区别于比较大小的小鸟，单独保留。 |
+| P24 | Robbie | `textbook_robbie.glb` | Robbie 提供独立机械关节与外壳造型；玩具机器人可考虑用其简化版本。 |
+| P25 | Confucius | `textbook_confucius.glb` | 孔子的长须、古代学者长袍和发髻提供老年文士造型；作为后续相关故事服装的基础。 |
+| P26 | Qu Yuan | `textbook_qu_yuan.glb` | 屈原提供较清瘦的成年古装长袍造型，与老年孔子和儿童古装区分。 |
+| P27 | Zhang Heng | `textbook_zhang_heng.glb` | 这里的张衡是幼年形象；儿童交领短袍和发式可用于后续古代儿童服装改装。 |
+| P28 | Yu Gong | `textbook_yu_gong.glb` | 愚公的瘦长老年体型、短袖短裤和草鞋区别于文士长袍，保留劳动场景造型。 |
+| P29 | Jade Emperor | `textbook_jade_emperor.glb` | 玉皇大帝提供冠冕、礼服和宽袍结构，可作为其他古代君主服装的起点。 |
+| P30 | Chang'e | `textbook_chang_e.glb` | 嫦娥的宽袖、长裙和飘带轮廓独特，现有日常女性服装难以直接派生。 |
+| P31 | Santa Claus | `textbook_santa_claus.glb` | 圣诞老人的圆润体型、胡须、红衣与靴子形成完整节庆造型；可复用帽子配件。 |
+| P32 | Old MacDonald | `textbook_old_macdonald.glb` | Old MacDonald 的老年体型、草帽与背带工装适合作为农场活动常用造型。 |
+| P33 | 红色蒸汽小火车 | `prop_train.glb` | 从当前块状小火车提升为清晰的机车轮廓，锅炉、驾驶室与车轮细节使用频率高。 |
+| P34 | 海蓝旋纹贝壳 | `prop_whale_shell.glb` | 螺旋外壳与开口曲面有明显立体细节，适合海边拾取物。 |
+| P35 | 暖枝小鸟巢 | `prop_nest.glb` | 交错树枝与巢碗结构较费手工，能明显改善鸟巢场景。 |
+| P36 | 暖光纸灯笼 | `prop_lantern.glb` | 补齐灯笼的提手、筋骨和穗，能同时服务灯笼屋与节庆活动。 |
+| P37 | 蜜桃毛线球 | `prop_yarn.glb` | 交错毛线纹理比现有单色球更有辨识度，可用于毛线屋与收藏道具。 |
+| P38 | 秋日小南瓜 | `prop_pumpkin.glb` | 保留南瓜沟槽、瓜柄和叶片，可用于农场、节庆与摆设。 |
+| P39 | 草莓冰淇淋 | `prop_ice_cream.glb` | 甜筒格纹和冰淇淋表面能提升近景拾取/展示观感。 |
+| P40 | 麦香乡村面包 | `prop_bread.glb` | 面包裂纹和烘焙表面能替换现有简化几何，适合烘焙屋及餐饮场景。 |
+| P41 | 云朵双人沙发 | `prop_reading_sofa.glb` | 常驻室内的较大件家具，软包和云朵靠背会持续出现在画面里。 |
+| P42 | 童话绘本架 | `prop_walnut_bookshelf.glb` | 常驻图书/家居场景，层架开口与弧顶具有明显视觉收益；书和抽屉后续按需拆分。 |
+| P43 | 黄铜留声机 | `prop_music_gramophone.glb` | 喇叭口和弯管结构独特，适合音乐场景；唱片若需旋转要另分件。 |
+| P44 | 兔兔绿雕 | `prop_bunny_topiary.glb` | 兔形轮廓与叶簇细节能作为庭院视觉中心；与活动角色分开处理。 |
+| P45 | 田园丝带草帽 | `prop_straw_hat.glb` | 一件独立草帽可以给多位人物复用，编织材质和帽檐比重复生成人物更划算。 |
+| P46 | 摘星画家贝雷帽 | `prop_star_beret.glb` | 一件贝雷帽可供多个发型适配，保留独立配件以减少整个人物重生成。 |
+| P47 | 元气向日葵书包 | `prop_school_pack.glb` | 书包可供儿童角色和学校场景反复使用；背带需按角色体型校正。 |
+| P48 | 藤编野餐花篮 | `prop_picnic_basket.glb` | 藤编纹理、开口和背带结构适合图生模型，并能服务采集与野餐场景。 |

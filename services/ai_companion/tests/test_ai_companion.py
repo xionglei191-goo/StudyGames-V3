@@ -9,6 +9,7 @@ import httpx
 from services.ai_companion.app import app
 from services.ai_companion.guardrails import check_child_input, sanitize_npc_output
 from services.ai_companion.npc_companion import generate_npc_reply
+from services.ai_companion.npc_companion import NPC_PERSONAS, _offline_cozy_reply
 from services.ai_companion.speech_service import synthesize_speech
 from services.ai_companion.stealth_mastery import build_parent_weekly_report, update_irt_mastery
 
@@ -55,6 +56,18 @@ def test_npc_companion_context_aware_roleplay() -> None:
     assert reply.get("blocked", False) is False
     assert len(reply["reply_en"]) > 5
     assert len(reply["suggestions"]) >= 2
+
+
+def test_building_residents_keep_their_own_chat_identity() -> None:
+    residents = {key: value for key, value in NPC_PERSONAS.items() if key.startswith("resident_")}
+    assert len(residents) == 34
+    assert len({row["name_zh"] for row in residents.values()}) == 34
+    for npc_id, persona in residents.items():
+        reply = _offline_cozy_reply(npc_id, "Hello!", {"target_word": "apple"})
+        assert reply["npc_id"] == npc_id
+        assert reply["speaker_zh"] == persona["name_zh"]
+        assert persona["name_en"] in reply["reply_en"]
+    assert NPC_PERSONAS["npc_bear_uncle"]["name_zh"] == "熊叔"
 
 
 def test_speech_service_synthesizes_and_caches_wav() -> None:

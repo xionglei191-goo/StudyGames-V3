@@ -1,0 +1,302 @@
+{
+  "status": "design_constraint_recorded_not_model_implemented",
+  "user_requirement": "房间数量和里面的布局要和现在的一样，这样二级房间就可以不用调整",
+  "reference": "current local room assets and home catalog",
+  "room_count": 7,
+  "rooms": [
+    {
+      "id": "home",
+      "name": "客厅",
+      "bounds": [
+        -8.1,
+        -7.1,
+        16.2,
+        14.2
+      ],
+      "preserve": [
+        "interior_geometry",
+        "furniture_positions",
+        "memory_points",
+        "tasks",
+        "spawn_and_exit_markers",
+        "save_identity"
+      ],
+      "files": [
+        {
+          "role": "source_blend",
+          "path": "assets/blender/interiors/home/home_v07_own.blend",
+          "exists": true,
+          "sha256": "0696560656638bf64433a4491d76a8568c1379ec4add22ee658ec03f341705f2"
+        },
+        {
+          "role": "source_glb",
+          "path": "assets/blender/interiors/home/home_v07_own.glb",
+          "exists": true,
+          "sha256": "8672b8a0f07d8c949468b629909a6e6aa96d2c28706dc19939889fe4a04ed94f"
+        },
+        {
+          "role": "game_glb",
+          "path": "game/assets/interiors/home.glb",
+          "exists": true,
+          "sha256": "8672b8a0f07d8c949468b629909a6e6aa96d2c28706dc19939889fe4a04ed94f"
+        }
+      ]
+    },
+    {
+      "id": "home_bedroom",
+      "name": "温暖卧室",
+      "bounds": [
+        -6.6,
+        -5.4,
+        13.2,
+        10.8
+      ],
+      "preserve": [
+        "interior_geometry",
+        "furniture_positions",
+        "memory_points",
+        "tasks",
+        "spawn_and_exit_markers",
+        "save_identity"
+      ],
+      "files": [
+        {
+          "role": "source_blend",
+          "path": "assets/blender/interiors/home_bedroom/home_bedroom_v10_own.blend",
+          "exists": true,
+          "sha256": "66fa4e5cc3a5d8cdbabcdb90359cc76e4375d6ea37b0ff0bde6228d9f9975054"
+        },
+        {
+          "role": "source_glb",
+          "path": "assets/blender/interiors/home_bedroom/home_bedroom_v10_own.glb",
+          "exists": true,
+          "sha256": "abe65d52941c0bf4a8a0000446a8ac960368c2e5ee912eca1b58811dcdf1799b"
+        },
+        {
+          "role": "game_glb",
+          "path": "game/assets/interiors/home_bedroom.glb",
+          "exists": true,
+          "sha256": "abe65d52941c0bf4a8a0000446a8ac960368c2e5ee912eca1b58811dcdf1799b"
+        }
+      ]
+    },
+    {
+      "id": "home_kitchen",
+      "name": "明亮厨房",
+      "bounds": [
+        -8.0,
+        -7.0,
+        16.0,
+        14.0
+      ],
+      "preserve": [
+        "interior_geometry",
+        "furniture_positions",
+        "memory_points",
+        "tasks",
+        "spawn_and_exit_markers",
+        "save_identity"
+      ],
+      "files": [
+        {
+          "role": "source_blend",
+          "path": "assets/blender/interiors/home_kitchen/home_kitchen_v10_own.blend",
+          "exists": true,
+          "sha256": "7bc22da2e30fd0e2240634e945b33560d64f8febdef8d8022561211fdc706c45"
+        },
+        {
+          "role": "source_glb",
+          "path": "assets/blender/interiors/home_kitchen/home_kitchen_v10_own.glb",
+          "exists": true,
+          "sha256": "8dd13e1413c94db383288bccd68ec5ab8cc260429def03f18a5912de024a298d"
+        },
+        {
+          "role": "game_glb",
+          "path": "game/assets/interiors/home_kitchen.glb",
+          "exists": true,
+          "sha256": "8dd13e1413c94db383288bccd68ec5ab8cc260429def03f18a5912de024a298d"
+        }
+      ]
+    },
+    {
+      "id": "home_dining",
+      "name": "家庭餐厅",
+      "bounds": [
+        -6.6,
+        -5.4,
+        13.2,
+        10.8
+      ],
+      "preserve": [
+        "interior_geometry",
+        "furniture_positions",
+        "memory_points",
+        "tasks",
+        "spawn_and_exit_markers",
+        "save_identity"
+      ],
+      "files": [
+        {
+          "role": "source_blend",
+          "path": "assets/blender/interiors/home_dining/home_dining_v09_own.blend",
+          "exists": true,
+          "sha256": "9f686a010d7fa0ba6be910907d27faf179d8861888201ac7a5c3ecea4c38e901"
+        },
+        {
+          "role": "source_glb",
+          "path": "assets/blender/interiors/home_dining/home_dining_v09_own.glb",
+          "exists": true,
+          "sha256": "28fa531f9db0a7b79e4e0aa084ccc7dcaa0617dc4b3b87fbf44050b243d4e355"
+        },
+        {
+          "role": "game_glb",
+          "path": "game/assets/interiors/home_dining.glb",
+          "exists": true,
+          "sha256": "28fa531f9db0a7b79e4e0aa084ccc7dcaa0617dc4b3b87fbf44050b243d4e355"
+        }
+      ]
+    },
+    {
+      "id": "home_bathroom",
+      "name": "清爽浴室",
+      "bounds": [
+        -6.0,
+        -5.25,
+        12.0,
+        10.5
+      ],
+      "preserve": [
+        "interior_geometry",
+        "furniture_positions",
+        "memory_points",
+        "tasks",
+        "spawn_and_exit_markers",
+        "save_identity"
+      ],
+      "files": [
+        {
+          "role": "source_blend",
+          "path": "assets/blender/interiors/home_bathroom/home_bathroom_v08_own.blend",
+          "exists": true,
+          "sha256": "81300c6e47f59e561369355f2b6a68de38298a9280372756ed4f699c149922c6"
+        },
+        {
+          "role": "source_glb",
+          "path": "assets/blender/interiors/home_bathroom/home_bathroom_v08_own.glb",
+          "exists": true,
+          "sha256": "1f3c1579293ee2a6555db5012d43696816bb962675d3e6d729eada5af36eb480"
+        },
+        {
+          "role": "game_glb",
+          "path": "game/assets/interiors/home_bathroom.glb",
+          "exists": true,
+          "sha256": "1f3c1579293ee2a6555db5012d43696816bb962675d3e6d729eada5af36eb480"
+        }
+      ]
+    },
+    {
+      "id": "home_study",
+      "name": "窗边书房",
+      "bounds": [
+        -6.6,
+        -5.4,
+        13.2,
+        10.8
+      ],
+      "preserve": [
+        "interior_geometry",
+        "furniture_positions",
+        "memory_points",
+        "tasks",
+        "spawn_and_exit_markers",
+        "save_identity"
+      ],
+      "files": [
+        {
+          "role": "source_blend",
+          "path": "assets/blender/interiors/home_study/home_study_v07_own.blend",
+          "exists": true,
+          "sha256": "e8ab156ffc3a18c84e2854e69338eb6e2567e79774eae6b50235078c8c206840"
+        },
+        {
+          "role": "source_glb",
+          "path": "assets/blender/interiors/home_study/home_study_v07_own.glb",
+          "exists": true,
+          "sha256": "f0050d168c7dda64970a72a8cca01dd7466ae6fb7437d41f15edf8b47c69303d"
+        },
+        {
+          "role": "game_glb",
+          "path": "game/assets/interiors/home_study.glb",
+          "exists": true,
+          "sha256": "f0050d168c7dda64970a72a8cca01dd7466ae6fb7437d41f15edf8b47c69303d"
+        }
+      ]
+    },
+    {
+      "id": "home_balcony",
+      "name": "家务阳台",
+      "bounds": [
+        -6.6,
+        -5.4,
+        13.2,
+        10.8
+      ],
+      "preserve": [
+        "interior_geometry",
+        "furniture_positions",
+        "memory_points",
+        "tasks",
+        "spawn_and_exit_markers",
+        "save_identity"
+      ],
+      "files": [
+        {
+          "role": "source_blend",
+          "path": "assets/blender/interiors/home_balcony/home_balcony_v08_own.blend",
+          "exists": true,
+          "sha256": "284dcaf19d7c89715f547c174b656c9151523fa1fc4d188666ab750aac1782b3"
+        },
+        {
+          "role": "source_glb",
+          "path": "assets/blender/interiors/home_balcony/home_balcony_v08_own.glb",
+          "exists": true,
+          "sha256": "4a888b105011076aa869e4b30d21306e6654d6856dcfdb845d747177111f099d"
+        },
+        {
+          "role": "game_glb",
+          "path": "game/assets/interiors/home_balcony.glb",
+          "exists": true,
+          "sha256": "4a888b105011076aa869e4b30d21306e6654d6856dcfdb845d747177111f099d"
+        }
+      ]
+    }
+  ],
+  "data_baseline": [
+    {
+      "path": "game/data/home_hierarchy.json",
+      "sha256": "0a97058c286af2ce1dd2f9a4280c7fef5b67331e9363c0b772393913ee4aa059"
+    },
+    {
+      "path": "game/data/interiors_manifest.json",
+      "sha256": "0da1609ffb4bb5f96e1b66abb2a9f8ef39689cded590842304c390b449fe3158"
+    },
+    {
+      "path": "game/scripts/home_catalog.gd",
+      "sha256": "bab5ef34bf969bb881269a9f7f5f13987488f917f948c5c5793465bcfc04f6fb"
+    }
+  ],
+  "scope": "Only redesign the common entry hall, connecting wall structures and door surroundings; each portal continues to target its original child room.",
+  "excluded": [
+    "merging living room dining room and kitchen",
+    "changing child-room floorplans",
+    "moving interior furniture or interactions",
+    "replacing child-room models"
+  ],
+  "concept_status": {
+    "v02": "superseded_as_floorplan",
+    "v03": "superseded_as_floorplan",
+    "v04": "superseded_as_floorplan",
+    "use": "Material, lighting and spaciousness references only; room layout must follow existing game assets."
+  },
+  "production_files_modified": false
+}

@@ -1,0 +1,483 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-12",
+  "generator": "built_in_image_gen",
+  "count": 24,
+  "purpose": "User-led Tripo3D reference handoff; 14 interactive props, 6 furniture objects, 4 wearable accessories.",
+  "scope_note": "Selected detailed prop set based on current gameplay. Other existing simple props and catalog furniture are outside this 24-item batch.",
+  "style": "Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. ",
+  "items": [
+    {
+      "order": 1,
+      "id": "robot",
+      "name": "积木探险机器人",
+      "category": "interactive",
+      "file": "01_robot.png",
+      "model_filename": "prop_robot.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "robot",
+      "design": "One small friendly retro toy robot. Rounded-square powder-blue torso and head, cream face panel with two simple dark round eyes, mustard-yellow chest dial, short chunky hinged blue arms with simple clamp hands and two distinct sturdy cream feet. Minimal symmetrical details, no antenna, no loose key, neutral standing pose. A toy object that can be carried, separate from the named character Robbie.",
+      "target_longest_dimension_m": 0.36,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One small friendly retro toy robot. Rounded-square powder-blue torso and head, cream face panel with two simple dark round eyes, mustard-yellow chest dial, short chunky hinged blue arms with simple clamp hands and two distinct sturdy cream feet. Minimal symmetrical details, no antenna, no loose key, neutral standing pose. A toy object that can be carried, separate from the named character Robbie.",
+      "references": []
+    },
+    {
+      "order": 2,
+      "id": "train",
+      "name": "红色蒸汽小火车",
+      "category": "interactive",
+      "file": "02_train.png",
+      "model_filename": "prop_train.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "train",
+      "design": "One compact red wooden toy steam locomotive, no carriages. Rounded red boiler, warm cream cabin with open dark windows, mustard chimney and small brass dome, four blue wheels on two axles, warm wooden chassis. Clearly readable locomotive silhouette, all parts connected, no rails, no smoke, no face.",
+      "target_longest_dimension_m": 0.48,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One compact red wooden toy steam locomotive, no carriages. Rounded red boiler, warm cream cabin with open dark windows, mustard chimney and small brass dome, four blue wheels on two axles, warm wooden chassis. Clearly readable locomotive silhouette, all parts connected, no rails, no smoke, no face.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ]
+    },
+    {
+      "order": 3,
+      "id": "whale_shell",
+      "name": "海蓝旋纹贝壳",
+      "category": "interactive",
+      "file": "03_whale_shell.png",
+      "model_filename": "prop_whale_shell.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "whale_shell",
+      "design": "One beautiful spiral seashell, pale turquoise fading to cream at its lip, thick rounded spiral ridges, large clearly visible opening angled toward camera. Solid sculpted shell with a softly pearly matte finish. No animal or pearl, no sand, no base.",
+      "target_longest_dimension_m": 0.28,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One beautiful spiral seashell, pale turquoise fading to cream at its lip, thick rounded spiral ridges, large clearly visible opening angled toward camera. Solid sculpted shell with a softly pearly matte finish. No animal or pearl, no sand, no base.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ]
+    },
+    {
+      "order": 4,
+      "id": "nest",
+      "name": "暖枝小鸟巢",
+      "category": "interactive",
+      "file": "04_nest.png",
+      "model_filename": "prop_nest.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "nest",
+      "design": "One empty shallow round birds nest made of thick intertwined warm honey-brown twigs with a soft cream straw lining. Clearly visible empty bowl opening viewed slightly from above. Coherent connected bowl silhouette, no eggs, birds, leaves or branches protruding far out.",
+      "target_longest_dimension_m": 0.32,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One empty shallow round birds nest made of thick intertwined warm honey-brown twigs with a soft cream straw lining. Clearly visible empty bowl opening viewed slightly from above. Coherent connected bowl silhouette, no eggs, birds, leaves or branches protruding far out.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ]
+    },
+    {
+      "order": 5,
+      "id": "globe",
+      "name": "蓝海小地球仪",
+      "category": "interactive",
+      "file": "05_globe.png",
+      "model_filename": "prop_globe.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "globe",
+      "design": "One tabletop globe. Soft sky-blue globe sphere with simplified sage-green continent shapes, no labels or grid lettering, supported by a warm brass half-meridian arc on a short walnut stem and a stable round walnut base. Whole sphere and connected base, no other objects.",
+      "target_longest_dimension_m": 0.32,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One tabletop globe. Soft sky-blue globe sphere with simplified sage-green continent shapes, no labels or grid lettering, supported by a warm brass half-meridian arc on a short walnut stem and a stable round walnut base. Whole sphere and connected base, no other objects.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ]
+    },
+    {
+      "order": 6,
+      "id": "lantern",
+      "name": "暖光纸灯笼",
+      "category": "interactive",
+      "file": "06_lantern.png",
+      "model_filename": "prop_lantern.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "lantern",
+      "design": "One portable rounded yellow-orange paper lantern with broad sculpted vertical ribs, warm matte paper, coral-red top and bottom caps, a thick simple arched red handle connected at both sides, and a short single red tassel at bottom. No writing, no flame, no excessive glow. Suspended alone with the full handle and tassel visible.",
+      "target_longest_dimension_m": 0.34,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One portable rounded yellow-orange paper lantern with broad sculpted vertical ribs, warm matte paper, coral-red top and bottom caps, a thick simple arched red handle connected at both sides, and a short single red tassel at bottom. No writing, no flame, no excessive glow. Suspended alone with the full handle and tassel visible.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ]
+    },
+    {
+      "order": 7,
+      "id": "yarn",
+      "name": "蜜桃毛线球",
+      "category": "interactive",
+      "file": "07_yarn.png",
+      "model_filename": "prop_yarn.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "yarn",
+      "design": "One plump peach-pink ball of wool with broad sculpted crossing yarn strands. A short thick loose yarn end curls close to and touches the main ball, fully inside the frame. Soft matte wool finish, no knitting needles, basket or animals.",
+      "target_longest_dimension_m": 0.22,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One plump peach-pink ball of wool with broad sculpted crossing yarn strands. A short thick loose yarn end curls close to and touches the main ball, fully inside the frame. Soft matte wool finish, no knitting needles, basket or animals.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ]
+    },
+    {
+      "order": 8,
+      "id": "pumpkin",
+      "name": "秋日小南瓜",
+      "category": "interactive",
+      "file": "08_pumpkin.png",
+      "model_filename": "prop_pumpkin.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "pumpkin",
+      "design": "One squat ripe orange pumpkin with eight broad softly rounded ribs, a short thick slightly curved dark green stem and one small attached sage leaf. Warm orange material with restrained natural variation, no cut face or holes, no other vegetables.",
+      "target_longest_dimension_m": 0.32,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Use case: precise-object-edit. Edit this pumpkin game reference. Remove the gold collar ring around the stem completely. Connect the natural green stem directly into a small natural depression in the orange pumpkin skin. Preserve the same orange pumpkin shape, green leaf, rounded style, camera, lighting, white background, full framing and all other details. No metal, no band, no screws, no added objects.",
+      "references": [
+        "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-aa07e96b-c7cc-4aef-b14d-2b9f065c1c4e.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One squat ripe orange pumpkin with eight broad softly rounded ribs, a short thick slightly curved dark green stem and one small attached sage leaf. Warm orange material with restrained natural variation, no cut face or holes, no other vegetables."
+    },
+    {
+      "order": 9,
+      "id": "ice_cream",
+      "name": "草莓冰淇淋",
+      "category": "interactive",
+      "file": "09_ice_cream.png",
+      "model_filename": "prop_ice_cream.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "ice_cream",
+      "design": "One strawberry ice-cream cone. Single generous round pale-pink scoop with gentle stylized folds, golden waffle cone with broad diamond embossing, all connected and fully visible. Upright isolated object, no drips, sprinkles, cherry, wrapper or stand.",
+      "target_longest_dimension_m": 0.3,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Use case: precise-object-edit. Edit this strawberry ice-cream game reference. Remove the gold metal ring and round rivets between the scoop and the cone. Replace that area with the natural plain golden-brown edible waffle rim of the cone. Remove the red decorative chunks on the scoop so it is plain strawberry ice cream with soft folds. Preserve the same cone silhouette, waffle texture, pink scoop shape, camera, white background, lighting and full framing. No metal, band, screws or added objects.",
+      "references": [
+        "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-874c32fe-0634-460d-902f-7c0fba71da2d.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One strawberry ice-cream cone. Single generous round pale-pink scoop with gentle stylized folds, golden waffle cone with broad diamond embossing, all connected and fully visible. Upright isolated object, no drips, sprinkles, cherry, wrapper or stand."
+    },
+    {
+      "order": 10,
+      "id": "flower",
+      "name": "蜜桃小花",
+      "category": "interactive",
+      "file": "10_flower.png",
+      "model_filename": "prop_flower.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "flower",
+      "design": "One single stylized pink blossom with five thick rounded petals, warm yellow center, a sturdy green stem and two broad leaves attached near its middle. Soft organic sculpted forms, complete blossom to bottom of stem. No pot, soil, bouquet or loose petals.",
+      "target_longest_dimension_m": 0.32,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One single stylized pink blossom with five thick rounded petals, warm yellow center, a sturdy green stem and two broad leaves attached near its middle. Soft organic sculpted forms, complete blossom to bottom of stem. No pot, soil, bouquet or loose petals. MATERIAL RULE: Match the actual material of this specific subject. Do not add decorative metallic bands, gold collars, studs, rivets, screws, plates or robotic fittings. Edible food is entirely food; stems and petals are botanical.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One single stylized pink blossom with five thick rounded petals, warm yellow center, a sturdy green stem and two broad leaves attached near its middle. Soft organic sculpted forms, complete blossom to bottom of stem. No pot, soil, bouquet or loose petals."
+    },
+    {
+      "order": 11,
+      "id": "bread",
+      "name": "麦香乡村面包",
+      "category": "interactive",
+      "file": "11_bread.png",
+      "model_filename": "prop_bread.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "bread",
+      "design": "One small oval loaf of freshly baked bread with golden-brown crust, three pale diagonal scoring marks on top and a subtly lighter base. Plump handmade shape and gentle baked surface. No slices, plate, board, basket or crumbs.",
+      "target_longest_dimension_m": 0.28,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One small oval loaf of freshly baked bread with golden-brown crust, three pale diagonal scoring marks on top and a subtly lighter base. Plump handmade shape and gentle baked surface. No slices, plate, board, basket or crumbs. MATERIAL RULE: Match the actual material of this specific subject. Do not add decorative metallic bands, gold collars, studs, rivets, screws, plates or robotic fittings. Edible food is entirely food; stems and petals are botanical.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One small oval loaf of freshly baked bread with golden-brown crust, three pale diagonal scoring marks on top and a subtly lighter base. Plump handmade shape and gentle baked surface. No slices, plate, board, basket or crumbs."
+    },
+    {
+      "order": 12,
+      "id": "milk",
+      "name": "蓝盖牛奶瓶",
+      "category": "interactive",
+      "file": "12_milk.png",
+      "model_filename": "prop_milk.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "milk",
+      "design": "One sealed small milk bottle with opaque creamy-white body, a short neck and a rounded sky-blue cap. A single simple raised blue droplet emblem on the front, no letters or numbers. Soft thick glass-like shell rendered opaque for clear reconstruction, no liquid transparency, no label text or straw.",
+      "target_longest_dimension_m": 0.26,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One sealed small milk bottle with opaque creamy-white body, a short neck and a rounded sky-blue cap. A single simple raised blue droplet emblem on the front, no letters or numbers. Soft thick glass-like shell rendered opaque for clear reconstruction, no liquid transparency, no label text or straw. MATERIAL RULE: Match the actual material of this specific subject. Do not add decorative metallic bands, gold collars, studs, rivets, screws, plates or robotic fittings. Edible food is entirely food; stems and petals are botanical.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One sealed small milk bottle with opaque creamy-white body, a short neck and a rounded sky-blue cap. A single simple raised blue droplet emblem on the front, no letters or numbers. Soft thick glass-like shell rendered opaque for clear reconstruction, no liquid transparency, no label text or straw."
+    },
+    {
+      "order": 13,
+      "id": "umbrella",
+      "name": "晴空蓝雨伞",
+      "category": "interactive",
+      "file": "13_umbrella.png",
+      "model_filename": "prop_umbrella.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "umbrella",
+      "design": "One open small sky-blue umbrella. Eight rounded canopy panels, cream edging, thick warm wooden central shaft and curved J handle, subtly visible connected ribs underneath. Gentle three-quarter side view showing whole canopy and entire handle, upright with a slight tilt. No person, rain, stand or detached parts.",
+      "target_longest_dimension_m": 0.7,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One open small sky-blue umbrella. Eight rounded canopy panels, cream edging, thick warm wooden central shaft and curved J handle, subtly visible connected ribs underneath. Gentle three-quarter side view showing whole canopy and entire handle, upright with a slight tilt. No person, rain, stand or detached parts. MATERIAL RULE: Match the actual material of this specific subject. Do not add decorative metallic bands, gold collars, studs, rivets, screws, plates or robotic fittings. Edible food is entirely food; stems and petals are botanical.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One open small sky-blue umbrella. Eight rounded canopy panels, cream edging, thick warm wooden central shaft and curved J handle, subtly visible connected ribs underneath. Gentle three-quarter side view showing whole canopy and entire handle, upright with a slight tilt. No person, rain, stand or detached parts."
+    },
+    {
+      "order": 14,
+      "id": "kite",
+      "name": "彩色燕尾风筝",
+      "category": "interactive",
+      "file": "14_kite.png",
+      "model_filename": "prop_kite.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "kite",
+      "design": "One classic diamond kite with thick blue fabric outer trim, four broad panels in cream, sky blue, coral and mustard. Subtle wooden cross spars, a short thick curved tail with two broad small ribbon bows connected to its lower corner. Front three-quarter view reveals slight thickness, entire kite and tail. No string spool, hands, clouds or scenery.",
+      "target_longest_dimension_m": 0.6,
+      "pivot": "object_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One classic diamond kite with thick blue fabric outer trim, four broad panels in cream, sky blue, coral and mustard. Subtle wooden cross spars, a short thick curved tail with two broad small ribbon bows connected to its lower corner. Front three-quarter view reveals slight thickness, entire kite and tail. No string spool, hands, clouds or scenery. MATERIAL RULE: Match the actual material of this specific subject. Do not add decorative metallic bands, gold collars, studs, rivets, screws, plates or robotic fittings. Edible food is entirely food; stems and petals are botanical.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One classic diamond kite with thick blue fabric outer trim, four broad panels in cream, sky blue, coral and mustard. Subtle wooden cross spars, a short thick curved tail with two broad small ribbon bows connected to its lower corner. Front three-quarter view reveals slight thickness, entire kite and tail. No string spool, hands, clouds or scenery."
+    },
+    {
+      "order": 15,
+      "id": "reading_sofa",
+      "name": "云朵双人沙发",
+      "category": "furniture",
+      "file": "15_reading_sofa.png",
+      "model_filename": "prop_reading_sofa.glb",
+      "source": "game/gameplay/free_grid_decor_studio.gd",
+      "source_key": "reading_sofa",
+      "design": "One cozy two-seat cloud-shaped sofa. Rounded scalloped cream backrest, soft pale-sage seat upholstery, two attached rounded armrests, four short warm walnut legs. Two seat cushions built into sofa, no loose pillows or blanket. Front three-quarter view showing seat depth and supporting feet, full standalone furniture.",
+      "target_longest_dimension_m": 1.6,
+      "pivot": "floor_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One cozy two-seat cloud-shaped sofa. Rounded scalloped cream backrest, soft pale-sage seat upholstery, two attached rounded armrests, four short warm walnut legs. Two seat cushions built into sofa, no loose pillows or blanket. Front three-quarter view showing seat depth and supporting feet, full standalone furniture. MATERIAL RULE: Match the actual material of this specific subject. Do not add decorative metallic bands, gold collars, studs, rivets, screws, plates or robotic fittings. Edible food is entirely food; stems and petals are botanical.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One cozy two-seat cloud-shaped sofa. Rounded scalloped cream backrest, soft pale-sage seat upholstery, two attached rounded armrests, four short warm walnut legs. Two seat cushions built into sofa, no loose pillows or blanket. Front three-quarter view showing seat depth and supporting feet, full standalone furniture."
+    },
+    {
+      "order": 16,
+      "id": "walnut_bookshelf",
+      "name": "童话绘本架",
+      "category": "furniture",
+      "file": "16_walnut_bookshelf.png",
+      "model_filename": "prop_walnut_bookshelf.glb",
+      "source": "game/gameplay/free_grid_decor_studio.gd",
+      "source_key": "walnut_bookshelf",
+      "design": "One compact walnut storybook shelf with rounded corners, gently arched top, two open shelves and a lower drawer. A few broad pastel book spines neatly fixed in place as shelf contents, no readable writing or graphics. Solid stable feet and clear shelf cavities, simple warm wood grain. Front three-quarter view, no scattered objects.",
+      "target_longest_dimension_m": 1.45,
+      "pivot": "floor_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One compact walnut storybook shelf with rounded corners, gently arched top, two open shelves and a lower drawer. A few broad pastel book spines neatly fixed in place as shelf contents, no readable writing or graphics. Solid stable feet and clear shelf cavities, simple warm wood grain. Front three-quarter view, no scattered objects. MATERIAL RULE: Match the actual material of this specific subject. Do not add decorative metallic bands, gold collars, studs, rivets, screws, plates or robotic fittings. Edible food is entirely food; stems and petals are botanical.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One compact walnut storybook shelf with rounded corners, gently arched top, two open shelves and a lower drawer. A few broad pastel book spines neatly fixed in place as shelf contents, no readable writing or graphics. Solid stable feet and clear shelf cavities, simple warm wood grain. Front three-quarter view, no scattered objects."
+    },
+    {
+      "order": 17,
+      "id": "music_gramophone",
+      "name": "黄铜留声机",
+      "category": "furniture",
+      "file": "17_music_gramophone.png",
+      "model_filename": "prop_music_gramophone.glb",
+      "source": "game/gameplay/free_grid_decor_studio.gd",
+      "source_key": "music_gramophone",
+      "design": "One vintage tabletop gramophone. Large warm brass trumpet horn with thick scalloped lip, elegantly curved attached brass pipe, dark walnut square base with rounded corners, one black record on visible turntable and short tonearm. Front three-quarter view reveals horn opening and turntable. Simple chunky fittings, no text, no loose crank or music notes.",
+      "target_longest_dimension_m": 0.7,
+      "pivot": "floor_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One vintage tabletop gramophone. Large warm brass trumpet horn with thick scalloped lip, elegantly curved attached brass pipe, dark walnut square base with rounded corners, one black record on visible turntable and short tonearm. Front three-quarter view reveals horn opening and turntable. Simple chunky fittings, no text, no loose crank or music notes. MATERIAL RULE: Match the actual material of this specific subject. Do not add decorative metallic bands, gold collars, studs, rivets, screws, plates or robotic fittings. Edible food is entirely food; stems and petals are botanical.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One vintage tabletop gramophone. Large warm brass trumpet horn with thick scalloped lip, elegantly curved attached brass pipe, dark walnut square base with rounded corners, one black record on visible turntable and short tonearm. Front three-quarter view reveals horn opening and turntable. Simple chunky fittings, no text, no loose crank or music notes."
+    },
+    {
+      "order": 18,
+      "id": "courtyard_swing",
+      "name": "森系木秋千",
+      "category": "furniture",
+      "file": "18_courtyard_swing.png",
+      "model_filename": "prop_courtyard_swing.glb",
+      "source": "game/gameplay/free_grid_decor_studio.gd",
+      "source_key": "courtyard_swing",
+      "design": "One complete small freestanding wooden garden swing. Warm honey timber A-frame with four grounded legs, single thick top crossbar, one rounded rectangular wooden seat suspended by two thick clearly connected ropes. Minimal sturdy joinery, all four feet, ropes and whole frame visible. No vines, flowers, people, ground patch or scenery.",
+      "target_longest_dimension_m": 1.9,
+      "pivot": "floor_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One complete small freestanding wooden garden swing. Warm honey timber A-frame with four grounded legs, single thick top crossbar, one rounded rectangular wooden seat suspended by two thick clearly connected ropes. Minimal sturdy joinery, all four feet, ropes and whole frame visible. No vines, flowers, people, ground patch or scenery. MATERIAL RULE: Match this subject's specified materials only. Do not add robotic fittings, extra gold rings, metallic collar bands or rivets. Keep only functional attachments.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One complete small freestanding wooden garden swing. Warm honey timber A-frame with four grounded legs, single thick top crossbar, one rounded rectangular wooden seat suspended by two thick clearly connected ropes. Minimal sturdy joinery, all four feet, ropes and whole frame visible. No vines, flowers, people, ground patch or scenery."
+    },
+    {
+      "order": 19,
+      "id": "garden_fountain",
+      "name": "晴空小喷泉",
+      "category": "furniture",
+      "file": "19_garden_fountain.png",
+      "model_filename": "prop_garden_fountain.glb",
+      "source": "game/gameplay/free_grid_decor_studio.gd",
+      "source_key": "garden_fountain",
+      "design": "One small round garden fountain carved from warm cream stone with pale blue glazed inner basin. Wide shallow lower basin on a short stable pedestal, a smaller upper bowl on a central stem. Quiet flat blue water surfaces only, no moving water streams, splashes or particles. Soft rounded carved scallops, whole object visible, no garden surroundings.",
+      "target_longest_dimension_m": 1.2,
+      "pivot": "floor_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One small round garden fountain carved from warm cream stone with pale blue glazed inner basin. Wide shallow lower basin on a short stable pedestal, a smaller upper bowl on a central stem. Quiet flat blue water surfaces only, no moving water streams, splashes or particles. Soft rounded carved scallops, whole object visible, no garden surroundings. MATERIAL RULE: Match this subject's specified materials only. Do not add robotic fittings, extra gold rings, metallic collar bands or rivets. Keep only functional attachments.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One small round garden fountain carved from warm cream stone with pale blue glazed inner basin. Wide shallow lower basin on a short stable pedestal, a smaller upper bowl on a central stem. Quiet flat blue water surfaces only, no moving water streams, splashes or particles. Soft rounded carved scallops, whole object visible, no garden surroundings."
+    },
+    {
+      "order": 20,
+      "id": "bunny_topiary",
+      "name": "兔兔绿雕",
+      "category": "furniture",
+      "file": "20_bunny_topiary.png",
+      "model_filename": "prop_bunny_topiary.glb",
+      "source": "game/gameplay/free_grid_decor_studio.gd",
+      "source_key": "bunny_topiary",
+      "design": "One rabbit-shaped green topiary bush growing from a low round terracotta planter. Dense sage-green clipped foliage forms a seated rabbit silhouette with two tall rounded ears, chunky haunches, small front paws and a round tail, subtle leaf clumps. No cartoon eyes, clothing or facial features. Visible planter, no garden or loose leaves.",
+      "target_longest_dimension_m": 0.85,
+      "pivot": "floor_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One rabbit-shaped green topiary bush growing from a low round terracotta planter. Dense sage-green clipped foliage forms a seated rabbit silhouette with two tall rounded ears, chunky haunches, small front paws and a round tail, subtle leaf clumps. No cartoon eyes, clothing or facial features. Visible planter, no garden or loose leaves. MATERIAL RULE: Match this subject's specified materials only. Do not add robotic fittings, extra gold rings, metallic collar bands or rivets. Keep only functional attachments.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One rabbit-shaped green topiary bush growing from a low round terracotta planter. Dense sage-green clipped foliage forms a seated rabbit silhouette with two tall rounded ears, chunky haunches, small front paws and a round tail, subtle leaf clumps. No cartoon eyes, clothing or facial features. Visible planter, no garden or loose leaves."
+    },
+    {
+      "order": 21,
+      "id": "straw_hat",
+      "name": "田园丝带草帽",
+      "category": "accessory",
+      "file": "21_straw_hat.png",
+      "model_filename": "prop_straw_hat.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "straw_hat",
+      "design": "One standalone straw sunhat with rounded dome crown, broad thick gently curved brim, warm honey woven texture and a salmon-pink ribbon band with a compact bow fixed at one side. Three-quarter view from slightly above shows crown, brim thickness and rim opening edge. No head, person, mannequin, flowers or floating pieces.",
+      "target_longest_dimension_m": 0.45,
+      "pivot": "hat_bottom_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One standalone straw sunhat with rounded dome crown, broad thick gently curved brim, warm honey woven texture and a salmon-pink ribbon band with a compact bow fixed at one side. Three-quarter view from slightly above shows crown, brim thickness and rim opening edge. No head, person, mannequin, flowers or floating pieces. MATERIAL RULE: Match this subject's specified materials only. Do not add robotic fittings, extra gold rings, metallic collar bands or rivets. Keep only functional attachments.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One standalone straw sunhat with rounded dome crown, broad thick gently curved brim, warm honey woven texture and a salmon-pink ribbon band with a compact bow fixed at one side. Three-quarter view from slightly above shows crown, brim thickness and rim opening edge. No head, person, mannequin, flowers or floating pieces."
+    },
+    {
+      "order": 22,
+      "id": "star_beret",
+      "name": "摘星画家贝雷帽",
+      "category": "accessory",
+      "file": "22_star_beret.png",
+      "model_filename": "prop_star_beret.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "star_beret",
+      "design": "One standalone soft lavender felt beret, slightly slouchy rounded crown, short central felt stem, thick folded lower band, one small golden star badge sewn to the front side. Three-quarter view with visible brim edge and clear hat volume. Matte cloth, no head, mannequin, paintbrush or other items.",
+      "target_longest_dimension_m": 0.3,
+      "pivot": "hat_bottom_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One standalone soft lavender felt beret, slightly slouchy rounded crown, short central felt stem, thick folded lower band, one small golden star badge sewn to the front side. Three-quarter view with visible brim edge and clear hat volume. Matte cloth, no head, mannequin, paintbrush or other items. MATERIAL RULE: Match this subject's specified materials only. Do not add robotic fittings, extra gold rings, metallic collar bands or rivets. Keep only functional attachments.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One standalone soft lavender felt beret, slightly slouchy rounded crown, short central felt stem, thick folded lower band, one small golden star badge sewn to the front side. Three-quarter view with visible brim edge and clear hat volume. Matte cloth, no head, mannequin, paintbrush or other items."
+    },
+    {
+      "order": 23,
+      "id": "school_pack",
+      "name": "元气向日葵书包",
+      "category": "accessory",
+      "file": "23_school_pack.png",
+      "model_filename": "prop_school_pack.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "school_pack",
+      "design": "One small warm mustard-yellow school backpack with rounded rectangular shape, cream front pocket, simple embroidered sunflower patch, brown zipper piping, thick top loop and two padded shoulder straps visibly attached behind. Three-quarter front view with one side and both strap loops evident. No readable lettering, no books, person or loose accessories.",
+      "target_longest_dimension_m": 0.36,
+      "pivot": "back_attachment_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One small warm mustard-yellow school backpack with rounded rectangular shape, cream front pocket, simple embroidered sunflower patch, brown zipper piping, thick top loop and two padded shoulder straps visibly attached behind. Three-quarter front view with one side and both strap loops evident. No readable lettering, no books, person or loose accessories. MATERIAL RULE: Match this subject's specified materials only. Do not add robotic fittings, extra gold rings, metallic collar bands or rivets. Keep only functional attachments.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One small warm mustard-yellow school backpack with rounded rectangular shape, cream front pocket, simple embroidered sunflower patch, brown zipper piping, thick top loop and two padded shoulder straps visibly attached behind. Three-quarter front view with one side and both strap loops evident. No readable lettering, no books, person or loose accessories."
+    },
+    {
+      "order": 24,
+      "id": "picnic_basket",
+      "name": "藤编野餐花篮",
+      "category": "accessory",
+      "file": "24_picnic_basket.png",
+      "model_filename": "prop_picnic_basket.glb",
+      "source": "game/actors/modular_wardrobe.gd",
+      "source_key": "picnic_basket",
+      "design": "One empty wearable woven picnic basket backpack. Warm honey wicker oval basket with open top and rounded rectangular back, thick reinforced rim, two broad brown leather shoulder straps fixed to rear and a small top carrying handle. Three-quarter side-front view shows empty opening and attached straps. No flowers, food, picnic blanket or person.",
+      "target_longest_dimension_m": 0.38,
+      "pivot": "back_attachment_center",
+      "collision": "simple primitive proxy during later import",
+      "status": "reference_image_saved_and_reviewed",
+      "prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One empty wearable woven picnic basket backpack. Warm honey wicker oval basket with open top and rounded rectangular back, thick reinforced rim, two broad brown leather shoulder straps fixed to rear and a small top carrying handle. Three-quarter side-front view shows empty opening and attached straps. No flowers, food, picnic blanket or person. MATERIAL RULE: Match this subject's specified materials only. Do not add robotic fittings, extra gold rings, metallic collar bands or rivets. Keep only functional attachments.",
+      "references": [
+        "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+      ],
+      "initial_prompt": "Input image 1 is a rendering/material STYLE reference only. Do NOT reproduce the robot, eyes, face or mechanical details; make only the requested object below. Use case: stylized-concept. Create ONE isolated game-prop reference for Tripo image-to-3D for Alphabet Island. Polished cozy 3D rendering, rounded handcrafted shapes, moderately saturated pastel palette, warm wood and brass, softly sculpted details, restrained matte texture, no harsh gloss or photorealistic complexity. Square 1024x1024 or larger, pure white background, soft neutral studio light, faint contact shadow, whole object centered with generous margin. Gentle three-quarter product view unless subject states otherwise. Clear continuous solid volumes and meaningful openings, thick sturdy small components suitable for a small 3D game model. No scenery, display podium, labels, letters, numbers, logos, watermark, border, collage, multiple views, separate parts or hands. SUBJECT: One empty wearable woven picnic basket backpack. Warm honey wicker oval basket with open top and rounded rectangular back, thick reinforced rim, two broad brown leather shoulder straps fixed to rear and a small top carrying handle. Three-quarter side-front view shows empty opening and attached straps. No flowers, food, picnic blanket or person."
+    }
+  ],
+  "status": "reference_images_ready"
+}

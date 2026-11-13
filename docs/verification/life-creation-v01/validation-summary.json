@@ -1,0 +1,61 @@
+{
+  "date": "2026-11-13",
+  "engine": "Godot 4.7.2",
+  "graphics": {
+    "checks": 75,
+    "failures": [],
+    "renderer": "Windows",
+    "save_path": "user://validation-45528.json"
+  },
+  "headless": [
+    {
+      "suite": "test_creation_state",
+      "result": "CREATION_STATE: 110 checks, 0 failures",
+      "passed": true
+    },
+    {
+      "suite": "test_state",
+      "result": "PASS: state persistence, recovery, rewards, inventory, learning, legacy migration, life activities and atomic purchase guards",
+      "passed": true
+    },
+    {
+      "suite": "test_shared_profile",
+      "result": "SHARED_PROFILE_TESTS checks=17 failures=0",
+      "passed": true
+    },
+    {
+      "suite": "test_journey_state",
+      "result": "Journey state: 731 checks, 0 failures",
+      "passed": true
+    },
+    {
+      "suite": "test_home_state",
+      "result": "{\"checks\":23,\"failures\":[],\"status\":\"PASS\"}",
+      "passed": true
+    },
+    {
+      "suite": "test_v4_overhaul",
+      "result": "PASS: StudyGames V4 full completion (Forward+, 44-Scene Diorama Plinths, 6x5x4 3D Wardrobe, 30-Room Tactile Life Stations + EchoCraft, 8-Book/81-Unit 3-Stage Cozy Storylines + Chapter Atlas + 3D Plaques, 100% Diegetic Bubbles, Tolerant Voice Encouragement, 3D Pop-up Book Theater, Stealth IRT)",
+      "passed": true
+    },
+    {
+      "suite": "flow-headless",
+      "result": "CREATION_FLOW: 62 checks, 0 failures",
+      "passed": true
+    }
+  ],
+  "source_sha256": {
+    "game/gameplay/creation_catalog.gd": "4ddbaf8d7016d1611219c876427ed8128f10b5eeb7ac392e3634c7e60fc6a48c",
+    "game/gameplay/creation_state.gd": "516c34ad9620effc951cb865fc1ca33caa9ade3cb6818e6081e2439a32ce97f3",
+    "game/gameplay/creation_controller.gd": "3d26175ade03196e8401990fdabbfe27fb67c883473036a1de92c52225030b23",
+    "game/gameplay/creation_visuals.gd": "656066574c2f00a7e3be5e4348afffcd21f8bea4e08299652e4f7d2f04df707b",
+    "game/ui/creation_canvas.gd": "5ea8029d84ba83704845db544feb998ec7a395aa4c614157122e4a710ea67e72",
+    "game/actors/seated_pose.gd": "7c5a5a7cb17876e30ad23f403ec898b9a15662bd1e919baf6bbf930d21371124",
+    "game/scripts/game_state.gd": "570d97dbcbd2376775f28de8f3a0da8a7eb06d2675751513933d20088cca0ddf",
+    "game/scripts/main.gd": "05a42020baa966ea3327ecccbb0b7f163f05f83abfc2dc5f97223436a6d72468",
+    "game/scripts/textbook_actor.gd": "da8b4981635110d180c13a973eec6de315fb4facad461f66deb5d170bcf49c0b",
+    "game/tests/test_creation_state.gd": "09b177687dd82f78bb36b7b5adfb1a6522a3e303d339354e24269d48cdcd0af6",
+    "game/tests/test_creation_flow.gd": "e5c575eb920fc80c975523e5a8fefc87e584937c0f578bb3174f613d8c734592"
+  },
+  "scope": "Isolated test profiles; Windows source build; exports not rebuilt"
+}

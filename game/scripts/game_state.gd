@@ -10,6 +10,7 @@ const P2 = preload("res://scripts/p2_progress.gd")
 const Reviews = preload("res://scripts/review_progress.gd")
 const HOME = preload("res://scripts/home_catalog.gd")
 const WARDROBE = preload("res://actors/modular_wardrobe.gd")
+const Creation = preload("res://gameplay/creation_state.gd")
 const DECORATION_PRICES: Dictionary = {"flower_box": 25, "picnic": 35, "lamp": 45}
 const OUTFITS: Array[String] = ["yellow", "pink", "blue", "mint", "lavender", "caramel"]
 const UNIT_QUESTIONS: Dictionary = {
@@ -32,6 +33,7 @@ func _default_state() -> Dictionary:
 		"coins": 30,
 		"apples": 0,
 		"cakes": 0,
+		"creation": Creation.fresh(),
 		"day": 1,
 		"unit": 1,
 		"harvested": 0,
@@ -301,12 +303,22 @@ func deliver_apples() -> bool:
 	data["coins"] += 20
 	data["cakes"] += 1
 	data["quests"]["delivery_done"] = true
+	Creation.unlock(data.creation,["cake"])
 	return _commit(before, "委托完成！获得 20 枚叶币和 1 个苹果蛋糕。")
 
 
 func craft_cake() -> bool:
-	if not data["quests"]["delivery_done"]:
+	if not data["quests"]["delivery_done"] and not data.get("creation", {}).get("recipes", []).has("cake"):
 		return _reject("先完成邻居的苹果委托，学习蛋糕配方。")
+	if bool(data.get("creation", {}).get("started", false)):
+		var previous := snapshot()
+		Creation.unlock(data.creation, ["cake"])
+		var result: Dictionary = Creation.make(data, preload("res://gameplay/creation_catalog.gd").blank_design("cake"), "legacy_workbench")
+		if not result.ok:
+			data = previous
+			return _reject(str(result.message))
+		data.creation.revision += 1
+		return _commit(previous, str(result.message))
 	if int(data["apples"]) < 3:
 		return _reject("制作蛋糕需要 3 个苹果。")
 	var before: Dictionary = snapshot()
@@ -319,9 +331,25 @@ func sell_cake() -> bool:
 	if int(data["cakes"]) < 1:
 		return _reject("背包里还没有苹果蛋糕。")
 	var before: Dictionary = snapshot()
+	if not Creation.legacy_sell(data):
+		return _reject("蛋糕正在陈列或使用，请先收回仓库再出售。")
 	data["cakes"] -= 1
 	data["coins"] += 15
 	return _commit(before, "卖出 1 个苹果蛋糕，获得 15 枚叶币。")
+
+
+func creation_action(action: String, args: Dictionary = {}, expected_revision: int = -1) -> Dictionary:
+	var before := snapshot()
+	var candidate := before.duplicate(true)
+	var revision: int = int(candidate.get("creation", {}).get("revision", 0))
+	var result := Creation.apply(candidate, action, args.duplicate(true), revision if expected_revision < 0 else expected_revision)
+	if not result.ok:
+		notice.emit(str(result.message))
+		return result
+	data = candidate
+	if not _commit(before):
+		return {"ok":false,"message":"保存失败，材料和物品仍保留，请稍后再试。"}
+	return result
 
 
 func buy_decoration(id: String, place_now: bool = false) -> bool:
@@ -809,7 +837,7 @@ func _normalize_state(value: Variant) -> Dictionary:
 	var normalized: Dictionary = _default_state()
 	# Required fields and exact scalar types prevent silent coercion of damaged data.
 	for key: String in normalized.keys():
-		if key in ["life","preferences","journey","reviews","wardrobe","v4"]:
+		if key in ["life","preferences","journey","reviews","wardrobe","v4","creation"]:
 			continue # Optional additions migrate v0.1-v0.3 saves without changing their identity.
 		if not incoming.has(key):
 			return {"ok": false}
@@ -1008,6 +1036,10 @@ func _normalize_state(value: Variant) -> Dictionary:
 			"free_decor_owned": clean_fd_owned,
 			"free_decor_placed": clean_fd_placed
 		}
+	if incoming.has("creation"):
+		if not Creation.validate(incoming.creation, int(normalized.cakes)):
+			return {"ok":false}
+		normalized.creation = Creation.canonical(incoming.creation)
 	return {"ok": true, "state": normalized}
 
 

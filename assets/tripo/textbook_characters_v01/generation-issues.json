@@ -1,0 +1,35 @@
+[
+  {
+    "order": 39,
+    "id": "textbook_fendi",
+    "status": "resolved_reference_saved",
+    "attempts": 2,
+    "code": "moderation_blocked",
+    "stage": "output",
+    "category": "other",
+    "request_ids": [
+      "e85a51f0-20ab-4a86-a153-3ba41ca584f3",
+      "36bd3619-01cd-4ab8-95b6-09d3d0d8d4c2"
+    ],
+    "note": "Source is a benign children's textbook clownfish. Original reference-based prompt and concise retry both rejected by image tool. No image saved or falsely marked complete.",
+    "resolution": "Original isolated animal design generated from a plain visual description using the built-in image tool.",
+    "total_attempts": 3,
+    "resolved_file": "039_fendi_front.png"
+  },
+  {
+    "order": 115,
+    "id": "textbook_kelly",
+    "status": "resolved_reference_saved",
+    "attempts": 1,
+    "code": "moderation_blocked",
+    "stage": "output",
+    "category": "other",
+    "request_ids": [
+      "f2edeeb0-5311-4996-91f8-4dba82e9fd36"
+    ],
+    "note": "White mother dog reference rejected by image tool. No image saved; kept as an explicit incomplete item.",
+    "resolution": "Original isolated animal design generated from a plain visual description using the built-in image tool.",
+    "total_attempts": 2,
+    "resolved_file": "115_kelly_front.png"
+  }
+]

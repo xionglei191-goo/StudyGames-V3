@@ -237,6 +237,14 @@ func show_panel(id: String, title: String, kicker: String, body: String, actions
 func show_travel_book(book_title: String, next_wish: String, visited: int, discoveries: int, entries: Array) -> void:
 	preload("res://ui/travel_book_view.gd").build(self,book_title,next_wish,visited,discoveries,entries)
 
+func show_memory_card(game: Node, title: String, subtitle: String, content: Dictionary, actions: Array) -> void:
+	_begin("memory", "memory")
+	_heading(title, subtitle)
+	var view := preload("res://ui/memory_card.gd").new()
+	panel_box.add_child(view)
+	view.setup(game, content, actions)
+	_layout.call_deferred()
+
 func show_inventory(data: Dictionary, tab: String = "") -> void:
 	if not tab.is_empty():
 		active_wardrobe_tab = tab
@@ -378,10 +386,10 @@ func show_world_map(title: String, world: World3D, bounds: Rect2, entries: Array
 	panel_box.add_child(label("地点与真实场景对应 · 方向键可随时接管 · E 或点击人物互动",15,muted_ink))
 	_layout.call_deferred()
 
-func show_activity(kind: String, state: Dictionary) -> Node:
+func show_activity(kind: String, state: Dictionary, at_home: bool = false) -> Node:
 	_begin("activity","activity")
 	var titles := {"music":"把小岛的旋律弹出来","art":"画一张属于你的明信片","science":"今天的颜色实验"}
-	_heading(str(titles.get(kind,"动手试一试")),"校园工作室 · 随时可以休息")
+	_heading("画一张属于你的贺卡" if at_home and kind=="art" else str(titles.get(kind,"动手试一试")),"窗边书房 · 随时可以休息" if at_home else "校园工作室 · 随时可以休息")
 	activity_board = load("res://ui/activity_board.tscn").instantiate()
 	activity_board.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	panel_box.add_child(activity_board)
@@ -561,6 +569,12 @@ func _layout() -> void:
 	var height := minf(570,available.y-96)
 	if current_panel == "settings":
 		height = minf(650,available.y-72)
+	elif layout_kind == "memory":
+		width = minf(900,available.x-64)
+		height = panel.get_combined_minimum_size().y
+	elif current_panel == "creation_editor":
+		width = minf(1180,available.x-56)
+		height = minf(820,available.y-48)
 	elif current_panel == "review_task":
 		width = minf(1020,available.x-64)
 		height = minf(580,available.y-96)
@@ -586,7 +600,7 @@ func _layout() -> void:
 		height = 255
 	panel.size = Vector2(width,height)
 	panel.position = (available-panel.size)/2
-	if layout_kind in ["dialogue","lesson","decorate"]:
+	if layout_kind in ["dialogue","lesson","decorate","memory"]:
 		panel.position.y = available.y-panel.size.y-24
 	var toast_width := clampf(toast_label.get_theme_font("font").get_string_size(toast_label.text,HORIZONTAL_ALIGNMENT_LEFT,-1,17).x+32,260,480)
 	toast_label.position = Vector2((available.x-toast_width)/2,12)

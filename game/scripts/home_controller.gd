@@ -1,12 +1,14 @@
 extends Node
-## A household activity is a reversible prop sequence, recorded separately from English learning.
+## Household work happens in the room, recorded separately from English learning.
 
 const Catalog = preload("res://scripts/home_catalog.gd")
+const CardContent = preload("res://ui/memory_card_content.gd")
+const TASK_LABELS := {"home_estate":"浇一浇", "home":"摆茶几", "home_bedroom":"理床铺", "home_kitchen":"洗蔬菜", "home_dining":"摆餐桌", "home_bathroom":"洗洗手", "home_study":"收好书", "home_balcony":"晾袜子"}
 var game: Node3D
 var _task_room := ""
 var _task_id := ""
-var _step := 0
 var _sequence := 0
+var activity: Node3D
 
 func setup(host: Node3D) -> void:
 	game = host
@@ -15,13 +17,25 @@ func handles_room() -> bool:
 	return Catalog.is_home_space(game.room)
 
 func cancel_task() -> void:
+	if is_instance_valid(activity):
+		activity.stop()
+		activity.queue_free()
+	activity = null
 	_task_room = ""
 	_task_id = ""
-	_step = 0
 	refresh_visuals()
+
+func is_active() -> bool:
+	return is_instance_valid(activity)
+
+func handle_input(event: InputEvent) -> bool:
+	if not is_active(): return false
+	activity.handle_input(event)
+	return true
 
 func refresh_visuals() -> void:
 	if not is_instance_valid(game.world) or game.room not in Catalog.ROOMS: return
+	preload("res://activities/household_props.gd").prepare_room(game.world,game.room)
 	var plan: Dictionary = Catalog.room(game.room)
 	var done := bool(State.data.life.get("home_tasks", {}).get(str(plan.task.id), false))
 	_set_visual("after" if done else "before")
@@ -36,33 +50,29 @@ func show_memory(sequence: int) -> void:
 	_sequence = sequence
 	var plan: Dictionary = Catalog.room(game.room)
 	var anchor: Dictionary = plan.anchors[sequence - 1]
-	var source: Dictionary = anchor.source
 	State.discover(game.room, sequence)
 	var actions: Array = []
 	if sequence == int(plan.task.anchor):
-		actions.append({"label":str(plan.task.title), "id":"home:begin", "primary":true})
-	if source.has("audio"):
-		actions.append({"label":"听一听这句英语", "id":"home:audio:%d" % sequence})
+		actions.append({"label":str(TASK_LABELS.get(game.room, "做一做")), "id":"home:begin", "primary":true})
 	if game.room == "home" and sequence == 2:
-		actions.append({"label":"装扮客厅", "id":"decorate"})
+		actions.append({"label":"装扮", "id":"decorate", "primary":true})
 	if game.room == "home_bedroom" and sequence == 3:
-		actions.append({"label":"挑选今天的穿搭", "id":"home:outfit"})
+		actions.append({"label":"换衣服", "id":"home:outfit", "primary":true})
 	if game.room == "home_bedroom" and sequence == 5:
-		actions.append({"label":"睡到明天", "id":"next_day"})
+		actions.append({"label":"睡一觉", "id":"next_day", "primary":true})
 	if game.room == "home_study" and sequence == 5:
-		actions.append({"label":"画一张贺卡", "id":"activity:art"})
+		actions.append({"label":"画一画", "id":"activity:art", "primary":true})
 	if game.room == "home" and sequence == 4:
-		actions.append({"label":"去卧室休息", "id":"home:bedroom"})
+		actions.append({"label":"去休息", "id":"home:bedroom", "primary":true})
 	var visited := 0
 	for i in range(1, 6):
 		if State.data.life.discoveries.has("%s/memory_%02d" % [game.room, i]): visited += 1
 	var done := bool(State.data.life.get("home_tasks", {}).get(str(plan.task.id), false))
-	var body: String = str(anchor.activity) + "\n\n" + str(source.text)
+	var content := CardContent.build(plan, anchor)
 	if sequence == int(plan.task.anchor) and done:
-		body += "\n\n" + str(plan.task.result) + "  可以再做一次。"
-	actions.append({"label":"看看课本出处", "id":"home:source:%d" % sequence})
-	actions.append({"label":"继续逛逛", "id":"close"})
-	game.ui.show_panel("memory", str(anchor.label), "%s · 已发现 %d / 5" % [plan.name, visited], body, actions)
+		content.hint += "\n" + str(plan.task.result) + "  可以再做一次。"
+	actions.append({"label":"退出", "id":"close"})
+	game.ui.show_memory_card(game, str(anchor.label), "%s · 已发现 %d / 5" % [plan.name, visited], content, actions)
 
 func show_overview() -> void:
 	if not handles_room(): return
@@ -70,16 +80,17 @@ func show_overview() -> void:
 	var actions: Array = []
 	if game.room == "home_estate":
 		actions.append({"label":"走到家门前", "id":"navigate:house_entry", "primary":true})
-	elif game.room == "home_hall":
+	elif game.room == "home":
 		actions.append({"label":"看看室内地图", "id":"map", "primary":true})
 		actions.append({"label":"走到通往小院的门", "id":"navigate:courtyard_exit"})
 	else:
-		actions.append({"label":"走回家里的走廊", "id":"navigate:home_exit", "primary":true})
+		actions.append({"label":"走回客厅", "id":"navigate:home_exit", "primary":true})
 	actions.append({"label":"看看今天能做什么", "id":"home:day"})
 	if game.room in ["home", "home_estate", "home_bedroom", "home_study"]:
 		actions.append({"label":"✨ 动森自由网格布置", "id":"v4_free_decor"})
-	if game.room != "home_hall": actions.append({"label":"打开家园地图", "id":"map"})
-	game.ui.show_panel("home_overview", "每个房间都有自己的生活", "我的家 · 小院与七个房间", "推开家门后，就能走进门厅和走廊。\n沿走廊走到各个房间门前，按 E 进入。离开房间会回到刚才的门边。", actions)
+		actions.append({"label":"生活工坊 · 我的作品与小摊", "id":"creation"})
+	if game.room != "home": actions.append({"label":"打开家园地图", "id":"map"})
+	game.ui.show_panel("home_overview", "每个房间都有自己的生活", "我的家 · 小院与七个房间", "推开家门就是客厅。\n沿客厅两侧走到书房、卧室、浴室、厨房、餐厅和阳台门前，按 E 进入。离开房间会回到客厅对应的门边。", actions)
 
 func show_day() -> void:
 	cancel_task()
@@ -89,12 +100,8 @@ func show_day() -> void:
 		lines.append(("✓ " if done else "○ ") + str(entry.name) + "：" + str(entry.task.title))
 	game.ui.show_panel("home_day", "在家的一天", "想做哪件，就从哪件开始", "\n".join(lines), [{"label":"看看家园地图", "id":"map", "primary":true}, {"label":"继续散步", "id":"close"}], "这里记录生活体验，不催促完成，也不作为英语能力评分。")
 
-func _show_task() -> void:
-	var plan: Dictionary = Catalog.room(_task_room)
-	var task: Dictionary = plan.task
-	game.ui.show_panel("home_task", str(task.title), "%s · %d / %d" % [plan.name, _step + 1, task.steps.size()], str(task.steps[_step]), [{"label":str(task.steps[_step]), "id":"home:step", "primary":true}, {"label":"先放下，等会儿再做", "id":"close"}])
-
 func _begin_task() -> void:
+	if is_active(): return
 	if game.room not in Catalog.ROOMS: return
 	var plan: Dictionary = Catalog.room(game.room)
 	if plan.is_empty() or _sequence != int(plan.task.anchor): return
@@ -104,29 +111,10 @@ func _begin_task() -> void:
 		return
 	_task_room = game.room
 	_task_id = str(plan.task.id)
-	_step = 0
-	_set_visual("before")
-	_show_task()
-
-func _advance_task() -> void:
-	if _task_id.is_empty() or _task_room != game.room or game.ui.current_panel != "home_task": return
-	var plan: Dictionary = Catalog.room(_task_room)
-	_step += 1
-	game.player.gesture("give" if _step == 3 else "take")
-	game.sounds.play("place")
-	if _step < plan.task.steps.size():
-		_set_visual("middle")
-		_show_task()
-		return
-	if not State.complete_home_task(_task_id, _task_room):
-		cancel_task()
-		game.ui.show_panel("home_task", "这次还没有保存", "可以稍后再试", "原有生活记录已保留。", [{"label":"返回物品旁", "id":"home:memory:%d" % _sequence}])
-		return
-	_task_room = ""
-	_task_id = ""
-	_step = 0
-	refresh_visuals()
-	show_memory(_sequence)
+	activity = preload("res://activities/household_activity.gd").new()
+	add_child(activity)
+	activity.setup(game, plan)
+	activity.leave_requested.connect(cancel_task)
 
 func handle_action(id: String) -> bool:
 	if not id.begins_with("home:"): return false
@@ -135,7 +123,6 @@ func handle_action(id: String) -> bool:
 	if parts.size() < 2: return true
 	match parts[1]:
 		"begin": _begin_task()
-		"step": _advance_task()
 		"overview": show_overview()
 		"day": show_day()
 		"memory":

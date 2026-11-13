@@ -201,8 +201,8 @@ def import_mixamo_candidate(character_id, original, height, pts, parents):
         'runtime_mapping':'Spine and shoulder weights combine into Spine; finger weights into Hand; toe weights into Foot; anatomical joint positions retained',
     }
 
-def assign_weights(obj,bones,weights):
-    order=np.argsort(weights,axis=1)[:,-4:]
+def assign_weights(obj,bones,weights,max_influences=4):
+    order=np.argsort(weights,axis=1)[:,-max_influences:]
     kept=np.zeros_like(weights)
     np.put_along_axis(kept,order,np.take_along_axis(weights,order,axis=1),axis=1)
     kept/=np.maximum(kept.sum(axis=1),1e-12)[:,None]
@@ -818,9 +818,10 @@ def track_value(track,t):
 
 def pose_at(arm, bones, rest, family, clip, t):
     values={(track['bone'],track['type']):track_value(track,t) for track in clip['tracks']}
-    if clip is CONTRACT['families'][family]['clips'].get('greet_wave'):
+    action_id=next((name for name,value in CONTRACT['families'][family]['clips'].items() if value is clip),None)
+    if action_id is not None:
         character_id=arm.data.name.removesuffix('_Rig')
-        for track in GESTURES.get('characters',{}).get(character_id,{}).get('normal',{}).get('greet_wave',[]):
+        for track in GESTURES.get('characters',{}).get(character_id,{}).get('normal',{}).get(action_id,[]):
             values[(track['bone'],'rotation')]=track_value(dict(track,type='rotation'),t)
     global_poses={}
     desired_matrices={}

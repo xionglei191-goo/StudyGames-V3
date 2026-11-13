@@ -4,6 +4,7 @@ extends RefCounted
 ## into natural island commissions, diegetic conversations, and Pop-up Book shelves!
 
 const Content = preload("res://ui/memory_story_content.gd")
+const Residents = preload("res://actors/building_resident_catalog.gd")
 
 const NPC_TEMPLATES := {
 	"npc_bear_uncle": {
@@ -78,6 +79,9 @@ static func build_daily_commission(state: Node, npc_id: String = "npc_bear_uncle
 				break
 
 	var tpl: Dictionary = NPC_TEMPLATES.get(npc_id, NPC_TEMPLATES["npc_bear_uncle"])
+	var resident := Residents.profile(npc_id)
+	if not resident.is_empty():
+		tpl = {"speaker":"%s · %s" % [str(resident.name),str(resident.role)],"greeting_en":"Hello! Let's discover \"%s\" together!","greeting_zh":"欢迎来找我！今天一起认识「%s」（%s）吧！"}
 	var word_en := str(target.spelling_display)
 	var word_zh := str(target.meaning_zh)
 	var commission_id := "%s/%s/%s" % [str(info.book_id), str(info.unit_id), str(target.entry_id)]

@@ -1,0 +1,4199 @@
+{
+  "status": "MEASURED_REQUIRES_VISUAL_REVIEW",
+  "definition": "Unique mesh edges longer than 6 mm. Strained: >2x original length and >25mm growth; severe: >3x and >45mm growth. Flags locate suspicious deformations, not automatic visual acceptance.",
+  "characters": 3,
+  "rows": [
+    {
+      "id": "textbook_confucius",
+      "name": "Confucius",
+      "sample_count": 476,
+      "maximum_sole_support_error_m": 0.0007700936403125525,
+      "max_severe_edges": 0,
+      "max_strained_edges": 37,
+      "worst_actions": [
+        {
+          "action": "take_item",
+          "mode": "normal",
+          "time": 1.5125,
+          "severe_edges": 0,
+          "strained_edges": 37,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.1162080466747284,
+            "ratio": 4.287294864654541,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.03535066172480583,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.46767231822013855,
+                1.4153165817260742,
+                0.33306944370269775
+              ],
+              [
+                0.48078468441963196,
+                1.376949667930603,
+                0.31112268567085266
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "give_item",
+          "mode": "normal",
+          "time": 1.2375,
+          "severe_edges": 0,
+          "strained_edges": 35,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.12148471176624298,
+            "ratio": 4.361099720001221,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.03614433482289314,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.47807538509368896,
+                1.4232687950134277,
+                0.34933581948280334
+              ],
+              [
+                0.48981234431266785,
+                1.3849879503250122,
+                0.32491761445999146
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "carry_walk",
+          "mode": "reduced",
+          "time": 0.0,
+          "severe_edges": 0,
+          "strained_edges": 24,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.033948476309888e-07,
+          "worst": {
+            "score": 0.08473575115203857,
+            "ratio": 3.8070743083953857,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.030186500400304794,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.45620718598365784,
+                1.3881336450576782,
+                0.27072975039482117
+              ],
+              [
+                0.47036707401275635,
+                1.351707935333252,
+                0.25853273272514343
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "talk_gesture",
+          "mode": "normal",
+          "time": 1.1,
+          "severe_edges": 0,
+          "strained_edges": 24,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.10271234065294266,
+            "ratio": 4.090522289276123,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.033234622329473495,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.4586888551712036,
+                1.3954652547836304,
+                0.33355939388275146
+              ],
+              [
+                0.4729979932308197,
+                1.3598848581314087,
+                0.3120127320289612
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "carry_item",
+          "mode": "normal",
+          "time": 1.5,
+          "severe_edges": 0,
+          "strained_edges": 23,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.08497563749551773,
+            "ratio": 3.811044931411743,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.030229199677705765,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.45620718598365784,
+                1.3808951377868652,
+                0.266436368227005
+              ],
+              [
+                0.47036707401275635,
+                1.3443050384521484,
+                0.2545931339263916
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "pick_item",
+          "mode": "normal",
+          "time": 1.7875,
+          "severe_edges": 0,
+          "strained_edges": 21,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.08525782078504562,
+            "ratio": 3.8157083988189697,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.03027934953570366,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.4564193785190582,
+                1.377305507659912,
+                0.2738071382045746
+              ],
+              [
+                0.47059711813926697,
+                1.3410860300064087,
+                0.26073601841926575
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "point_target",
+          "mode": "normal",
+          "time": 0.75,
+          "severe_edges": 0,
+          "strained_edges": 16,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.10066669434309006,
+            "ratio": 4.059591770172119,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.03290200233459473,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.39308011531829834,
+                1.342176914215088,
+                0.38155579566955566
+              ],
+              [
+                0.41587427258491516,
+                1.3157180547714233,
+                0.35536080598831177
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "reach_target",
+          "mode": "normal",
+          "time": 1.2375,
+          "severe_edges": 0,
+          "strained_edges": 10,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.07812327146530151,
+            "ratio": 3.6953227519989014,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.028984755277633667,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.4909299612045288,
+                1.338173508644104,
+                0.36999282240867615
+              ],
+              [
+                0.5009070634841919,
+                1.3109920024871826,
+                0.34277573227882385
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "place_item",
+          "mode": "normal",
+          "time": 0.0,
+          "severe_edges": 0,
+          "strained_edges": 10,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.3507542579181973e-08,
+          "worst": {
+            "score": 0.05476376414299011,
+            "ratio": 3.2566657066345215,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.02426755800843239,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.4688583314418793,
+                1.3323986530303955,
+                0.2646961808204651
+              ],
+              [
+                0.4815487861633301,
+                1.3023624420166016,
+                0.2519185245037079
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "greet_wave",
+          "mode": "normal",
+          "time": 0.9625,
+          "severe_edges": 0,
+          "strained_edges": 6,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.041857656091451645,
+            "ratio": 3.357390880584717,
+            "rest_length": 0.007532024290412664,
+            "gain": 0.01775592565536499,
+            "rest_points": [
+              [
+                0.45261165499687195,
+                1.0415399074554443,
+                0.19030405580997467
+              ],
+              [
+                0.4600910246372223,
+                1.040880560874939,
+                0.19090044498443604
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.574398398399353,
+                1.2895739078521729,
+                0.24404829740524292
+              ],
+              [
+                0.5847947597503662,
+                1.3123433589935303,
+                0.24764665961265564
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3841
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2148
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.182
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.1628
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0434
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0099
+                },
+                {
+                  "bone": "Skirt",
+                  "weight": 0.0024
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3946
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2493
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1619
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.1476
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0088
+                },
+                {
+                  "bone": "Skirt",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "pose_photo",
+          "mode": "normal",
+          "time": 1.2,
+          "severe_edges": 0,
+          "strained_edges": 6,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.041848860681056976,
+            "ratio": 3.3571431636810303,
+            "rest_length": 0.007532024290412664,
+            "gain": 0.01775405928492546,
+            "rest_points": [
+              [
+                0.45261165499687195,
+                1.0415399074554443,
+                0.19030405580997467
+              ],
+              [
+                0.4600910246372223,
+                1.040880560874939,
+                0.19090044498443604
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.5744543671607971,
+                1.289429783821106,
+                0.24408051371574402
+              ],
+              [
+                0.5848639011383057,
+                1.3121906518936157,
+                0.24768197536468506
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3841
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2148
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.182
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.1628
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0434
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0099
+                },
+                {
+                  "bone": "Skirt",
+                  "weight": 0.0024
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3946
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2493
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1619
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.1476
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0088
+                },
+                {
+                  "bone": "Skirt",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "walk",
+          "mode": "normal",
+          "time": 0.07,
+          "severe_edges": 0,
+          "strained_edges": 1,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.7137910365127027e-05,
+          "worst": {
+            "score": 0.02866183966398239,
+            "ratio": 1.8378465175628662,
+            "rest_length": 0.040829598903656006,
+            "gain": 0.03420893847942352,
+            "rest_points": [
+              [
+                0.22354161739349365,
+                0.3511411249637604,
+                0.02694881521165371
+              ],
+              [
+                0.2511569857597351,
+                0.35485342144966125,
+                0.05679285153746605
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.2236163169145584,
+                0.3783031702041626,
+                -0.0518205389380455
+              ],
+              [
+                0.2514317035675049,
+                0.37083566188812256,
+                0.017471035942435265
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Skirt",
+                  "weight": 0.3826
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.3808
+                },
+                {
+                  "bone": "Foot_R",
+                  "weight": 0.1891
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0377
+                },
+                {
+                  "bone": "Foot_L",
+                  "weight": 0.0085
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0012
+                }
+              ],
+              [
+                {
+                  "bone": "Skirt",
+                  "weight": 0.6876
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.1974
+                },
+                {
+                  "bone": "Foot_R",
+                  "weight": 0.0873
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0214
+                },
+                {
+                  "bone": "Foot_L",
+                  "weight": 0.0053
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.001
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "idle",
+          "mode": "normal",
+          "time": 0.8,
+          "severe_edges": 0,
+          "strained_edges": 0,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.0019770697690546513,
+            "ratio": 1.4287770986557007,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.004610950127243996,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.48000234365463257,
+                1.0541002750396729,
+                0.17432357370853424
+              ],
+              [
+                0.4914555251598358,
+                1.0641714334487915,
+                0.17618626356124878
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "listen_nod",
+          "mode": "normal",
+          "time": 0.45,
+          "severe_edges": 0,
+          "strained_edges": 0,
+          "edge_count": 51533,
+          "lowest_sole_y": -2.6605963284964673e-05,
+          "worst": {
+            "score": 0.0018696266924962401,
+            "ratio": 1.4169634580612183,
+            "rest_length": 0.010753723792731762,
+            "gain": 0.0044839102774858475,
+            "rest_points": [
+              [
+                0.5141885280609131,
+                1.0767391920089722,
+                0.17811134457588196
+              ],
+              [
+                0.520963191986084,
+                1.0849552154541016,
+                0.17960916459560394
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.48000234365463257,
+                1.0581470727920532,
+                0.17810048162937164
+              ],
+              [
+                0.4914555549621582,
+                1.0680851936340332,
+                0.17959821224212646
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3747
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2745
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.163
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1499
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0252
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3616
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2023
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1797
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0296
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0174
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "textbook_spot",
+      "name": "Spot",
+      "sample_count": 476,
+      "maximum_sole_support_error_m": 0.0005993039812892675,
+      "max_severe_edges": 0,
+      "max_strained_edges": 33,
+      "worst_actions": [
+        {
+          "action": "greet_wave",
+          "mode": "normal",
+          "time": 0.9625,
+          "severe_edges": 0,
+          "strained_edges": 33,
+          "edge_count": 50464,
+          "lowest_sole_y": 5.8767567679751664e-05,
+          "worst": {
+            "score": 0.1102411076426506,
+            "ratio": 3.847080707550049,
+            "rest_length": 0.01360015943646431,
+            "gain": 0.03872075304389,
+            "rest_points": [
+              [
+                0.3469889461994171,
+                0.6700446605682373,
+                0.004500053822994232
+              ],
+              [
+                0.3434380292892456,
+                0.6571646928787231,
+                0.001958053559064865
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.5688245296478271,
+                0.9338573813438416,
+                0.06813976913690567
+              ],
+              [
+                0.5402871370315552,
+                0.891157329082489,
+                0.05814974755048752
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3652
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2027
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.1473
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.121
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.1113
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0429
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0085
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.311
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2235
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.2052
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.1066
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.1032
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0348
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0146
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0011
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "carry_walk",
+          "mode": "reduced",
+          "time": 0.63,
+          "severe_edges": 0,
+          "strained_edges": 29,
+          "edge_count": 50464,
+          "lowest_sole_y": -8.401068043895066e-05,
+          "worst": {
+            "score": 0.08612652868032455,
+            "ratio": 3.5685369968414307,
+            "rest_length": 0.013054651208221912,
+            "gain": 0.03353135660290718,
+            "rest_points": [
+              [
+                -0.35605230927467346,
+                0.6492575407028198,
+                0.09236554056406021
+              ],
+              [
+                -0.3561103045940399,
+                0.6539119482040405,
+                0.10456214100122452
+              ]
+            ],
+            "deformed_points": [
+              [
+                -0.2788389325141907,
+                0.8664740920066833,
+                0.2964029312133789
+              ],
+              [
+                -0.2709333300590515,
+                0.9027811884880066,
+                0.3245019018650055
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3346
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2149
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.1961
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1624
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0453
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0216
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3729
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.198
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1939
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.148
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0472
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0151
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "carry_item",
+          "mode": "normal",
+          "time": 1.5,
+          "severe_edges": 0,
+          "strained_edges": 27,
+          "edge_count": 50464,
+          "lowest_sole_y": 0.0005951946368440986,
+          "worst": {
+            "score": 0.08352875709533691,
+            "ratio": 3.5295040607452393,
+            "rest_length": 0.013054651208221912,
+            "gain": 0.03302179276943207,
+            "rest_points": [
+              [
+                -0.35605230927467346,
+                0.6492575407028198,
+                0.09236554056406021
+              ],
+              [
+                -0.3561103045940399,
+                0.6539119482040405,
+                0.10456214100122452
+              ]
+            ],
+            "deformed_points": [
+              [
+                -0.2788389325141907,
+                0.851566731929779,
+                0.29433906078338623
+              ],
+              [
+                -0.2709333300590515,
+                0.8870118260383606,
+                0.3226972222328186
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3346
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2149
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.1961
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1624
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0453
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0216
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3729
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.198
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1939
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.148
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0472
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0151
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "pick_item",
+          "mode": "normal",
+          "time": 1.925,
+          "severe_edges": 0,
+          "strained_edges": 27,
+          "edge_count": 50464,
+          "lowest_sole_y": 0.000588525552302599,
+          "worst": {
+            "score": 0.08212655037641525,
+            "ratio": 3.5081825256347656,
+            "rest_length": 0.013054651208221912,
+            "gain": 0.03274345025420189,
+            "rest_points": [
+              [
+                -0.35605230927467346,
+                0.6492575407028198,
+                0.09236554056406021
+              ],
+              [
+                -0.3561103045940399,
+                0.6539119482040405,
+                0.10456214100122452
+              ]
+            ],
+            "deformed_points": [
+              [
+                -0.2788389325141907,
+                0.8471257090568542,
+                0.29507362842559814
+              ],
+              [
+                -0.2709333300590515,
+                0.8820303082466125,
+                0.3236504793167114
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3346
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2149
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.1961
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1624
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0453
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0216
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3729
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.198
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1939
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.148
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0472
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0151
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "give_item",
+          "mode": "normal",
+          "time": 1.2375,
+          "severe_edges": 0,
+          "strained_edges": 27,
+          "edge_count": 50464,
+          "lowest_sole_y": 0.0001600213290657848,
+          "worst": {
+            "score": 0.10487756878137589,
+            "ratio": 3.4842231273651123,
+            "rest_length": 0.016994226723909378,
+            "gain": 0.042217452079057693,
+            "rest_points": [
+              [
+                0.3564617931842804,
+                0.6532860994338989,
+                0.09146703779697418
+              ],
+              [
+                0.3617839515209198,
+                0.6577140092849731,
+                0.10698708891868591
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.3223457932472229,
+                0.8564368486404419,
+                0.3382429778575897
+              ],
+              [
+                0.323091596364975,
+                0.898106038570404,
+                0.3803041875362396
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3271
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.208
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2069
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.1679
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0517
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0193
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0183
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3668
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2033
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1861
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.1538
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0561
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0219
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0112
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "take_item",
+          "mode": "normal",
+          "time": 1.2375,
+          "severe_edges": 0,
+          "strained_edges": 27,
+          "edge_count": 50464,
+          "lowest_sole_y": 0.0001600213290657848,
+          "worst": {
+            "score": 0.10487756878137589,
+            "ratio": 3.4842231273651123,
+            "rest_length": 0.016994226723909378,
+            "gain": 0.042217452079057693,
+            "rest_points": [
+              [
+                0.3564617931842804,
+                0.6532860994338989,
+                0.09146703779697418
+              ],
+              [
+                0.3617839515209198,
+                0.6577140092849731,
+                0.10698708891868591
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.3223457932472229,
+                0.8564368486404419,
+                0.3382429778575897
+              ],
+              [
+                0.323091596364975,
+                0.898106038570404,
+                0.3803041875362396
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3271
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.208
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2069
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.1679
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0517
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0193
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0183
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3668
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2033
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1861
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.1538
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0561
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0219
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0112
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "pose_photo",
+          "mode": "normal",
+          "time": 1.35,
+          "severe_edges": 0,
+          "strained_edges": 25,
+          "edge_count": 50464,
+          "lowest_sole_y": 0.00018580049800220877,
+          "worst": {
+            "score": 0.09953366219997406,
+            "ratio": 3.705284833908081,
+            "rest_length": 0.01360015943646431,
+            "gain": 0.03679230436682701,
+            "rest_points": [
+              [
+                0.3469889461994171,
+                0.6700446605682373,
+                0.004500053822994232
+              ],
+              [
+                0.3434380292892456,
+                0.6571646928787231,
+                0.001958053559064865
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.5667790174484253,
+                0.9191052913665771,
+                0.0664496198296547
+              ],
+              [
+                0.5385554432868958,
+                0.8785251379013062,
+                0.056647516787052155
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3652
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2027
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.1473
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.121
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.1113
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0429
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0085
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.311
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2235
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.2052
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.1066
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.1032
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0348
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0146
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0011
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "talk_gesture",
+          "mode": "normal",
+          "time": 1.1,
+          "severe_edges": 0,
+          "strained_edges": 23,
+          "edge_count": 50464,
+          "lowest_sole_y": 5.876756404177286e-05,
+          "worst": {
+            "score": 0.09202300012111664,
+            "ratio": 3.3270058631896973,
+            "rest_length": 0.016994226723909378,
+            "gain": 0.03954566642642021,
+            "rest_points": [
+              [
+                0.3564617931842804,
+                0.6532860994338989,
+                0.09146703779697418
+              ],
+              [
+                0.3617839515209198,
+                0.6577140092849731,
+                0.10698708891868591
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.2994528114795685,
+                0.8517025709152222,
+                0.32704025506973267
+              ],
+              [
+                0.29769378900527954,
+                0.8920549154281616,
+                0.3666048049926758
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3271
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.208
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2069
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.1679
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0517
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0193
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0183
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3668
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2033
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1861
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.1538
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0561
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0219
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0112
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "place_item",
+          "mode": "normal",
+          "time": 0.0,
+          "severe_edges": 0,
+          "strained_edges": 18,
+          "edge_count": 50464,
+          "lowest_sole_y": -7.60920926268227e-09,
+          "worst": {
+            "score": 0.08186568319797516,
+            "ratio": 3.5041959285736084,
+            "rest_length": 0.013054651208221912,
+            "gain": 0.03269140422344208,
+            "rest_points": [
+              [
+                -0.35605230927467346,
+                0.6492575407028198,
+                0.09236554056406021
+              ],
+              [
+                -0.3561103045940399,
+                0.6539119482040405,
+                0.10456214100122452
+              ]
+            ],
+            "deformed_points": [
+              [
+                -0.2788389325141907,
+                0.8465876579284668,
+                0.29507365822792053
+              ],
+              [
+                -0.270914226770401,
+                0.8814277648925781,
+                0.3236405551433563
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3346
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2149
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.1961
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1624
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0453
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0216
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3729
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.198
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1939
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.148
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0472
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0151
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "reach_target",
+          "mode": "normal",
+          "time": 1.2375,
+          "severe_edges": 0,
+          "strained_edges": 14,
+          "edge_count": 50464,
+          "lowest_sole_y": 0.00013977660273667425,
+          "worst": {
+            "score": 0.075287826359272,
+            "ratio": 3.104804039001465,
+            "rest_length": 0.016994226723909378,
+            "gain": 0.035769518464803696,
+            "rest_points": [
+              [
+                0.3564617931842804,
+                0.6532860994338989,
+                0.09146703779697418
+              ],
+              [
+                0.3617839515209198,
+                0.6577140092849731,
+                0.10698708891868591
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.33507809042930603,
+                0.783900797367096,
+                0.3221426010131836
+              ],
+              [
+                0.3374602198600769,
+                0.8146994709968567,
+                0.3649185299873352
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3271
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.208
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2069
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.1679
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0517
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0193
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0183
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3668
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2033
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1861
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.1538
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0561
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0219
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0112
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "point_target",
+          "mode": "normal",
+          "time": 0.75,
+          "severe_edges": 0,
+          "strained_edges": 14,
+          "edge_count": 50464,
+          "lowest_sole_y": 5.789953866042197e-05,
+          "worst": {
+            "score": 0.08026908338069916,
+            "ratio": 3.173318862915039,
+            "rest_length": 0.016994226723909378,
+            "gain": 0.03693387284874916,
+            "rest_points": [
+              [
+                0.3564617931842804,
+                0.6532860994338989,
+                0.09146703779697418
+              ],
+              [
+                0.3617839515209198,
+                0.6577140092849731,
+                0.10698708891868591
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.26273682713508606,
+                0.7942758798599243,
+                0.3133659362792969
+              ],
+              [
+                0.2540159523487091,
+                0.8265888094902039,
+                0.3556514084339142
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3271
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.208
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2069
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.1679
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0517
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0193
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0183
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3668
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.2033
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1861
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.1538
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0561
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0219
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0112
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "idle",
+          "mode": "normal",
+          "time": 2.4,
+          "severe_edges": 0,
+          "strained_edges": 0,
+          "edge_count": 50464,
+          "lowest_sole_y": 9.605834748072084e-06,
+          "worst": {
+            "score": 0.00043825380271300673,
+            "ratio": 1.1351064443588257,
+            "rest_length": 0.02400897815823555,
+            "gain": 0.003243766725063324,
+            "rest_points": [
+              [
+                -0.37376850843429565,
+                0.6330724954605103,
+                0.0915835052728653
+              ],
+              [
+                -0.35605230927467346,
+                0.6492575407028198,
+                0.09236554056406021
+              ]
+            ],
+            "deformed_points": [
+              [
+                -0.3469507694244385,
+                0.6297387480735779,
+                0.09561187028884888
+              ],
+              [
+                -0.3254237771034241,
+                0.6464033722877502,
+                0.0968731939792633
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.2828
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.2589
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.226
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1395
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0398
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.036
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0161
+                },
+                {
+                  "bone": "Tail",
+                  "weight": 0.0011
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3346
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2149
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.1961
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1624
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0453
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0216
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "walk",
+          "mode": "reduced",
+          "time": 0.56,
+          "severe_edges": 0,
+          "strained_edges": 0,
+          "edge_count": 50464,
+          "lowest_sole_y": -6.35744072496891e-07,
+          "worst": {
+            "score": 0.016738854348659515,
+            "ratio": 2.1323487758636475,
+            "rest_length": 0.013054651208221912,
+            "gain": 0.014782418496906757,
+            "rest_points": [
+              [
+                -0.35605230927467346,
+                0.6492575407028198,
+                0.09236554056406021
+              ],
+              [
+                -0.3561103045940399,
+                0.6539119482040405,
+                0.10456214100122452
+              ]
+            ],
+            "deformed_points": [
+              [
+                -0.33136191964149475,
+                0.6787652373313904,
+                0.20271116495132446
+              ],
+              [
+                -0.32845616340637207,
+                0.6909218430519104,
+                0.2275843620300293
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3346
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2149
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.1961
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1624
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0453
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0216
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3729
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.198
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1939
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.148
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0472
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0151
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "listen_nod",
+          "mode": "normal",
+          "time": 0.0,
+          "severe_edges": 0,
+          "strained_edges": 0,
+          "edge_count": 50464,
+          "lowest_sole_y": 7.838225428713486e-06,
+          "worst": {
+            "score": 0.0003937077126465738,
+            "ratio": 1.1280560493469238,
+            "rest_length": 0.02400897815823555,
+            "gain": 0.0030744951218366623,
+            "rest_points": [
+              [
+                -0.37376850843429565,
+                0.6330724954605103,
+                0.0915835052728653
+              ],
+              [
+                -0.35605230927467346,
+                0.6492575407028198,
+                0.09236554056406021
+              ]
+            ],
+            "deformed_points": [
+              [
+                -0.3469507694244385,
+                0.6284693479537964,
+                0.09157652407884598
+              ],
+              [
+                -0.3254237771034241,
+                0.6448854804039001,
+                0.09235990047454834
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.2828
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.2589
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.226
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1395
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0398
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.036
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0161
+                },
+                {
+                  "bone": "Tail",
+                  "weight": 0.0011
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_L",
+                  "weight": 0.3346
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2149
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.1961
+                },
+                {
+                  "bone": "Hand_L",
+                  "weight": 0.1624
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0453
+                },
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.0241
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0216
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "textbook_tu_youyou",
+      "name": "Tu Youyou",
+      "sample_count": 476,
+      "maximum_sole_support_error_m": 0.0012252877932041883,
+      "max_severe_edges": 0,
+      "max_strained_edges": 19,
+      "worst_actions": [
+        {
+          "action": "give_item",
+          "mode": "normal",
+          "time": 1.2375,
+          "severe_edges": 0,
+          "strained_edges": 19,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.08848447352647781,
+            "ratio": 2.9236972332000732,
+            "rest_length": 0.023910775780677795,
+            "gain": 0.04599709063768387,
+            "rest_points": [
+              [
+                0.2612689733505249,
+                1.1325879096984863,
+                -0.03086641989648342
+              ],
+              [
+                0.2565181851387024,
+                1.1559906005859375,
+                -0.029654279351234436
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.24251589179039001,
+                1.2411277294158936,
+                0.10304238647222519
+              ],
+              [
+                0.23207245767116547,
+                1.2966935634613037,
+                0.14415787160396576
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.3908
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1724
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.1377
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0528
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0062
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0034
+                }
+              ],
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.2867
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2526
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2155
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.027
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0067
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0016
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "take_item",
+          "mode": "normal",
+          "time": 1.2375,
+          "severe_edges": 0,
+          "strained_edges": 19,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.08848447352647781,
+            "ratio": 2.9236972332000732,
+            "rest_length": 0.023910775780677795,
+            "gain": 0.04599709063768387,
+            "rest_points": [
+              [
+                0.2612689733505249,
+                1.1325879096984863,
+                -0.03086641989648342
+              ],
+              [
+                0.2565181851387024,
+                1.1559906005859375,
+                -0.029654279351234436
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.24251589179039001,
+                1.2411277294158936,
+                0.10304238647222519
+              ],
+              [
+                0.23207245767116547,
+                1.2966935634613037,
+                0.14415787160396576
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.3908
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1724
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.1377
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0528
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0062
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0034
+                }
+              ],
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.2867
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2526
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2155
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.027
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0067
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0016
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "greet_wave",
+          "mode": "normal",
+          "time": 0.9625,
+          "severe_edges": 0,
+          "strained_edges": 18,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.0655556470155716,
+            "ratio": 3.050217628479004,
+            "rest_length": 0.015595892444252968,
+            "gain": 0.031974971294403076,
+            "rest_points": [
+              [
+                0.27353140711784363,
+                1.1515440940856934,
+                -0.056840743869543076
+              ],
+              [
+                0.26454973220825195,
+                1.1642906665802002,
+                -0.05654704198241234
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.5123596787452698,
+                1.295838713645935,
+                0.005610894411802292
+              ],
+              [
+                0.4690442681312561,
+                1.2783619165420532,
+                -0.0034070846159011126
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3485
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2278
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2261
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1769
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0093
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0057
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0054
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2694
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2546
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2441
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2091
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0123
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0073
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0027
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "pose_photo",
+          "mode": "normal",
+          "time": 0.6,
+          "severe_edges": 0,
+          "strained_edges": 12,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.056587185710668564,
+            "ratio": 2.904819965362549,
+            "rest_length": 0.015595892444252968,
+            "gain": 0.029707366600632668,
+            "rest_points": [
+              [
+                0.27353140711784363,
+                1.1515440940856934,
+                -0.056840743869543076
+              ],
+              [
+                0.26454973220825195,
+                1.1642906665802002,
+                -0.05654704198241234
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.4998520314693451,
+                1.2687952518463135,
+                0.00659287441521883
+              ],
+              [
+                0.45729175209999084,
+                1.2561140060424805,
+                -0.002362238708883524
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.3485
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2278
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2261
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.1769
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0093
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0057
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0054
+                }
+              ],
+              [
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2694
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2546
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2441
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.2091
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0123
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0073
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0027
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "talk_gesture",
+          "mode": "normal",
+          "time": 1.1,
+          "severe_edges": 0,
+          "strained_edges": 12,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.06412991136312485,
+            "ratio": 2.6376967430114746,
+            "rest_length": 0.023910775780677795,
+            "gain": 0.039158597588539124,
+            "rest_points": [
+              [
+                0.2612689733505249,
+                1.1325879096984863,
+                -0.03086641989648342
+              ],
+              [
+                0.2565181851387024,
+                1.1559906005859375,
+                -0.029654279351234436
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.2282770425081253,
+                1.2211329936981201,
+                0.09230151027441025
+              ],
+              [
+                0.21363168954849243,
+                1.2702513933181763,
+                0.12905259430408478
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.3908
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1724
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.1377
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0528
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0062
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0034
+                }
+              ],
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.2867
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2526
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2155
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.027
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0067
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0016
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "point_target",
+          "mode": "normal",
+          "time": 0.75,
+          "severe_edges": 0,
+          "strained_edges": 11,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.05998055264353752,
+            "ratio": 2.583829402923584,
+            "rest_length": 0.023910775780677795,
+            "gain": 0.03787058964371681,
+            "rest_points": [
+              [
+                0.2612689733505249,
+                1.1325879096984863,
+                -0.03086641989648342
+              ],
+              [
+                0.2565181851387024,
+                1.1559906005859375,
+                -0.029654279351234436
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.2103281170129776,
+                1.211073637008667,
+                0.084779292345047
+              ],
+              [
+                0.19043518602848053,
+                1.2582337856292725,
+                0.11937884241342545
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.3908
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1724
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.1377
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0528
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0062
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0034
+                }
+              ],
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.2867
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2526
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2155
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.027
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0067
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0016
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "reach_target",
+          "mode": "normal",
+          "time": 1.2375,
+          "severe_edges": 0,
+          "strained_edges": 10,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.05996818467974663,
+            "ratio": 2.5836660861968994,
+            "rest_length": 0.023910775780677795,
+            "gain": 0.037866685539484024,
+            "rest_points": [
+              [
+                0.2612689733505249,
+                1.1325879096984863,
+                -0.03086641989648342
+              ],
+              [
+                0.2565181851387024,
+                1.1559906005859375,
+                -0.029654279351234436
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.24971714615821838,
+                1.2094664573669434,
+                0.09404004365205765
+              ],
+              [
+                0.24140480160713196,
+                1.2556571960449219,
+                0.13421186804771423
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.3908
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1724
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.1377
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0528
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0062
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0034
+                }
+              ],
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.2867
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2526
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2155
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.027
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0067
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0016
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "pick_item",
+          "mode": "normal",
+          "time": 1.2375,
+          "severe_edges": 0,
+          "strained_edges": 10,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.05996818467974663,
+            "ratio": 2.5836660861968994,
+            "rest_length": 0.023910775780677795,
+            "gain": 0.037866685539484024,
+            "rest_points": [
+              [
+                0.2612689733505249,
+                1.1325879096984863,
+                -0.03086641989648342
+              ],
+              [
+                0.2565181851387024,
+                1.1559906005859375,
+                -0.029654279351234436
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.24971714615821838,
+                1.2094664573669434,
+                0.09404004365205765
+              ],
+              [
+                0.24140480160713196,
+                1.2556571960449219,
+                0.13421186804771423
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.3908
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1724
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.1377
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0528
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0062
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0034
+                }
+              ],
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.2867
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2526
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2155
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.027
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0067
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0016
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "place_item",
+          "mode": "normal",
+          "time": 1.2375,
+          "severe_edges": 0,
+          "strained_edges": 9,
+          "edge_count": 50389,
+          "lowest_sole_y": 1.747305589105963e-07,
+          "worst": {
+            "score": 0.057624295353889465,
+            "ratio": 2.552408456802368,
+            "rest_length": 0.023910775780677795,
+            "gain": 0.03711928799748421,
+            "rest_points": [
+              [
+                0.2612689733505249,
+                1.1325879096984863,
+                -0.03086641989648342
+              ],
+              [
+                0.2565181851387024,
+                1.1559906005859375,
+                -0.029654279351234436
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.2526552379131317,
+                1.1189125776290894,
+                0.1438739001750946
+              ],
+              [
+                0.24514727294445038,
+                1.1280529499053955,
+                0.2037467062473297
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.3908
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1724
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.1377
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0528
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0062
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0034
+                }
+              ],
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.2867
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2526
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2155
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.027
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0067
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0016
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "carry_walk",
+          "mode": "reduced",
+          "time": 0.49,
+          "severe_edges": 0,
+          "strained_edges": 5,
+          "edge_count": 50389,
+          "lowest_sole_y": -3.00643514492549e-05,
+          "worst": {
+            "score": 0.0439671166241169,
+            "ratio": 2.3560233116149902,
+            "rest_length": 0.023910775780677795,
+            "gain": 0.03242357075214386,
+            "rest_points": [
+              [
+                0.2612689733505249,
+                1.1325879096984863,
+                -0.03086641989648342
+              ],
+              [
+                0.2565181851387024,
+                1.1559906005859375,
+                -0.029654279351234436
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.21951018273830414,
+                1.1689951419830322,
+                0.07076858729124069
+              ],
+              [
+                0.2018994390964508,
+                1.2113815546035767,
+                0.10343068093061447
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.3908
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1724
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.1377
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0528
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0062
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0034
+                }
+              ],
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.2867
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2526
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2155
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.027
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0067
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0016
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "carry_item",
+          "mode": "normal",
+          "time": 1.5,
+          "severe_edges": 0,
+          "strained_edges": 3,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.041027601808309555,
+            "ratio": 2.3099093437194824,
+            "rest_length": 0.023910775780677795,
+            "gain": 0.03132094815373421,
+            "rest_points": [
+              [
+                0.2612689733505249,
+                1.1325879096984863,
+                -0.03086641989648342
+              ],
+              [
+                0.2565181851387024,
+                1.1559906005859375,
+                -0.029654279351234436
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.21951018273830414,
+                1.2041819095611572,
+                0.07498182356357574
+              ],
+              [
+                0.2018994390964508,
+                1.2463624477386475,
+                0.10598516464233398
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.3908
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1724
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.1377
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0528
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0062
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0034
+                }
+              ],
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.2867
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2526
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.2155
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.2084
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.027
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0067
+                },
+                {
+                  "bone": "Hand_R",
+                  "weight": 0.0016
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0014
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "idle",
+          "mode": "normal",
+          "time": 0.8,
+          "severe_edges": 0,
+          "strained_edges": 0,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.0001502061350038275,
+            "ratio": 1.0856142044067383,
+            "rest_length": 0.0204925537109375,
+            "gain": 0.001754453405737877,
+            "rest_points": [
+              [
+                0.2612689733505249,
+                1.1325879096984863,
+                -0.03086641989648342
+              ],
+              [
+                0.2679907977581024,
+                1.1150280237197876,
+                -0.022717049345374107
+              ]
+            ],
+            "deformed_points": [
+              [
+                0.24471734464168549,
+                1.1329867839813232,
+                -0.033695660531520844
+              ],
+              [
+                0.25494134426116943,
+                1.1151175498962402,
+                -0.02526419423520565
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.3908
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2359
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1724
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.1377
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0528
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0062
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0034
+                }
+              ],
+              [
+                {
+                  "bone": "Hips",
+                  "weight": 0.463
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.2124
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.1373
+                },
+                {
+                  "bone": "LowerArm_R",
+                  "weight": 0.0986
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.0774
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0058
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0051
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "walk",
+          "mode": "normal",
+          "time": 1.05,
+          "severe_edges": 0,
+          "strained_edges": 0,
+          "edge_count": 50389,
+          "lowest_sole_y": -3.010720683960244e-05,
+          "worst": {
+            "score": 0.01032024621963501,
+            "ratio": 1.6964292526245117,
+            "rest_length": 0.02127825655043125,
+            "gain": 0.014818800613284111,
+            "rest_points": [
+              [
+                -0.0322139672935009,
+                0.49889424443244934,
+                -0.0318237729370594
+              ],
+              [
+                -0.03110422007739544,
+                0.5132177472114563,
+                -0.047519948333501816
+              ]
+            ],
+            "deformed_points": [
+              [
+                -0.03211720660328865,
+                0.5028092861175537,
+                0.09954097121953964
+              ],
+              [
+                -0.031754449009895325,
+                0.5134389400482178,
+                0.06504638493061066
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.42
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.2204
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.121
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.0977
+                },
+                {
+                  "bone": "Foot_L",
+                  "weight": 0.0966
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0428
+                },
+                {
+                  "bone": "Foot_R",
+                  "weight": 0.0012
+                }
+              ],
+              [
+                {
+                  "bone": "LowerLeg_L",
+                  "weight": 0.3711
+                },
+                {
+                  "bone": "UpperLeg_L",
+                  "weight": 0.2334
+                },
+                {
+                  "bone": "UpperLeg_R",
+                  "weight": 0.1445
+                },
+                {
+                  "bone": "Hips",
+                  "weight": 0.118
+                },
+                {
+                  "bone": "Foot_L",
+                  "weight": 0.0768
+                },
+                {
+                  "bone": "LowerLeg_R",
+                  "weight": 0.0538
+                },
+                {
+                  "bone": "Foot_R",
+                  "weight": 0.0022
+                }
+              ]
+            ]
+          }
+        },
+        {
+          "action": "listen_nod",
+          "mode": "reduced",
+          "time": 0.45,
+          "severe_edges": 0,
+          "strained_edges": 0,
+          "edge_count": 50389,
+          "lowest_sole_y": -5.323537334334105e-05,
+          "worst": {
+            "score": 0.00021017338440287858,
+            "ratio": 1.10274338722229,
+            "rest_length": 0.01990993693470955,
+            "gain": 0.002045614644885063,
+            "rest_points": [
+              [
+                -0.00041443054215051234,
+                1.8056859970092773,
+                -0.3139469623565674
+              ],
+              [
+                -0.002952106762677431,
+                1.8252407312393188,
+                -0.3166998028755188
+              ]
+            ],
+            "deformed_points": [
+              [
+                -0.00039170635864138603,
+                1.869071364402771,
+                -0.29432493448257446
+              ],
+              [
+                -0.002952106762677431,
+                1.8907639980316162,
+                -0.2921067774295807
+              ]
+            ],
+            "influences": [
+              [
+                {
+                  "bone": "Head",
+                  "weight": 0.9629
+                },
+                {
+                  "bone": "Spine",
+                  "weight": 0.0181
+                },
+                {
+                  "bone": "UpperArm_R",
+                  "weight": 0.0099
+                },
+                {
+                  "bone": "UpperArm_L",
+                  "weight": 0.0091
+                }
+              ],
+              [
+                {
+                  "bone": "Head",
+                  "weight": 1.0
+                }
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

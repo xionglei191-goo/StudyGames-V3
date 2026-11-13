@@ -1,0 +1,334 @@
+{
+  "id": "textbook_baker_bird",
+  "intake_id": "p40",
+  "family": "animal",
+  "rig_type": "bird",
+  "height": 0.85,
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hips",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.18700000643730164,
+        -0.017000000923871994
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Spine",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.1784999966621399,
+        0.017000000923871994
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Neck",
+      "parent": "Spine",
+      "origin": [
+        0.0,
+        0.17850002646446228,
+        0.03400000184774399
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Neck",
+      "origin": [
+        0.0,
+        0.06800001859664917,
+        0.025499999523162842
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_L",
+      "parent": "Hips",
+      "origin": [
+        -0.08500000089406967,
+        0.008500009775161743,
+        0.03400000184774399
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_L",
+      "parent": "UpperLeg_L",
+      "origin": [
+        0.0,
+        -0.08500001579523087,
+        -0.008500000461935997
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_L",
+      "parent": "LowerLeg_L",
+      "origin": [
+        0.0,
+        -0.07224999368190765,
+        0.02550000138580799
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Wing_L",
+      "parent": "Spine",
+      "origin": [
+        -0.11900000274181366,
+        0.11050000786781311,
+        -0.017000000923871994
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "WingTip_L",
+      "parent": "Wing_L",
+      "origin": [
+        -0.06800000369548798,
+        -0.16999998688697815,
+        -0.08499999344348907
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "UpperLeg_R",
+      "parent": "Hips",
+      "origin": [
+        0.08500000089406967,
+        0.008500009775161743,
+        0.03400000184774399
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "LowerLeg_R",
+      "parent": "UpperLeg_R",
+      "origin": [
+        0.0,
+        -0.08500001579523087,
+        -0.008500000461935997
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Foot_R",
+      "parent": "LowerLeg_R",
+      "origin": [
+        0.0,
+        -0.07224999368190765,
+        0.02550000138580799
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Wing_R",
+      "parent": "Spine",
+      "origin": [
+        0.11900000274181366,
+        0.11050000786781311,
+        -0.017000000923871994
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "WingTip_R",
+      "parent": "Wing_R",
+      "origin": [
+        0.06800000369548798,
+        -0.16999998688697815,
+        -0.08499999344348907
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.06800001859664917,
+        -0.08499999344348907
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail_02",
+      "parent": "Tail",
+      "origin": [
+        0.0,
+        0.0,
+        -0.20286157727241516
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hand_sockets": {},
+  "source": "assets/tripo/generation_selection_20261112/01_priority_48/textbook_baker_bird.glb",
+  "source_sha256": "ff4bad6433390a25190b73aafa7a0a4442187055da18a582133bdc052ddff28f",
+  "source_triangles": 1484340,
+  "triangles": 31998,
+  "name_zh": "Baker",
+  "identity_reference": "assets/tripo/generation_selection_20261112/01_priority_48/P20_textbook_baker_bird.png",
+  "runtime_profile": {
+    "name": "Baker",
+    "kind": "animal",
+    "source": "assets/tripo/generation_selection_20261112/01_priority_48/P20_textbook_baker_bird.png"
+  },
+  "editable_source": "assets/characters/textbook_expansion_v1/textbook_baker_bird/rigged.blend",
+  "export_glb": "assets/characters/textbook_expansion_v1/textbook_baker_bird/character.glb",
+  "rigging_provider": {
+    "provider": "Mesh2Motion",
+    "engine_commit": "e66f13ccf00ba0afc07e82d876af016e40792422",
+    "core_solver_modified": false,
+    "template": "fitted bird semantic rig with independent appendages"
+  },
+  "weight_method": "Unmodified Mesh2Motion bird solve, explicit continuous anatomical regions, 30% supported solver blends and 32 adjacency smoothing passes; four normalized influences",
+  "weight_refinement": "species-regions-v1",
+  "vertices": 16001,
+  "unweighted_vertices": 0,
+  "weight_sum_max_error": 3.3306690738754696e-16,
+  "actions": [
+    {
+      "name": "idle",
+      "duration": 3.2,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "greet_wave",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "listen_nod",
+      "duration": 1.8,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "talk_gesture",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pose_photo",
+      "duration": 2.4,
+      "loop": false,
+      "contact_time": -1.0
+    }
+  ],
+  "allowed_actions": [
+    "idle",
+    "walk",
+    "greet_wave",
+    "listen_nod",
+    "talk_gesture",
+    "pose_photo"
+  ],
+  "locomotion": "bird",
+  "animation_clip_path": "res://assets/characters/textbook_expansion_v1/textbook_baker_bird/animation-clips.json",
+  "bounds": {
+    "min": [
+      -0.25439369678497314,
+      0.00015171630366239697,
+      -0.44832584261894226
+    ],
+    "max": [
+      0.25440216064453125,
+      0.8497858047485352,
+      0.44806066155433655
+    ]
+  },
+  "status": "rigged_pending_engine_validation",
+  "elapsed_seconds": 5.23
+}

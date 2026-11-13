@@ -6,6 +6,20 @@ const MANIFEST_PATH := "res://assets/characters/storybook_v3/manifest.json"
 const ACTIVE_SET_PATH := "res://assets/characters/active-set.json"
 const GROUNDING_PATH := "res://assets/characters/tripo_v1/grounding.json"
 const GESTURE_PATH := "res://assets/characters/tripo_v1/gesture-overrides.json"
+const RESIDENT_MANIFEST_PATH := "res://assets/characters/building_residents_v1/manifest.json"
+const RESIDENT_GROUNDING_PATH := "res://assets/characters/building_residents_v1/grounding.json"
+const RESIDENT_GESTURE_PATH := "res://assets/characters/building_residents_v1/gesture-overrides.json"
+const EXPANSION_MANIFEST_PATH := "res://assets/characters/textbook_expansion_v1/manifest.json"
+const EXPANSION_GROUNDING_PATH := "res://assets/characters/textbook_expansion_v1/grounding.json"
+const EXPANSION_GESTURE_PATH := "res://assets/characters/textbook_expansion_v1/gesture-overrides.json"
+const ExpansionAnimation = preload("res://actors/expansion_animation.gd")
+static var _expansion: Dictionary = {}
+static var _expansion_grounding: Dictionary = {}
+static var _expansion_gestures: Dictionary = {}
+static var _residents: Dictionary = {}
+static var _resident_grounding: Dictionary = {}
+static var _resident_gestures: Dictionary = {}
+const WalkGait = preload("res://actors/walk_gait.gd")
 static var _manifest: Dictionary = {}
 static var _manifest_override := ""
 static var _grounding: Dictionary = {}
@@ -17,6 +31,18 @@ static func use_manifest(path: String) -> void:
 	_manifest.clear()
 	_grounding.clear()
 	_gestures.clear()
+	_residents.clear()
+	_resident_grounding.clear()
+	_resident_gestures.clear()
+	_expansion.clear()
+	_expansion_grounding.clear()
+	_expansion_gestures.clear()
+
+static func expansion_characters() -> Dictionary:
+	if _expansion.is_empty() and FileAccess.file_exists(EXPANSION_MANIFEST_PATH):
+		var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(EXPANSION_MANIFEST_PATH))
+		if data is Dictionary: _expansion = data.get("characters",{})
+	return _expansion
 
 static func manifest() -> Dictionary:
 	var path := _manifest_override
@@ -34,6 +60,12 @@ static func revision() -> String:
 	return str(manifest().get("art_revision",REVISION))
 
 static func character_entry(character_id: String) -> Dictionary:
+	if character_id.begins_with("resident_"):
+		if _residents.is_empty() and FileAccess.file_exists(RESIDENT_MANIFEST_PATH):
+			var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(RESIDENT_MANIFEST_PATH))
+			if data is Dictionary: _residents = data.get("characters",{})
+		return _residents.get(character_id,{})
+	if expansion_characters().has(character_id): return _expansion[character_id]
 	return manifest().get("characters",{}).get(character_id,{})
 
 static func hand_socket(character_id: String, side: String) -> Vector3:
@@ -43,6 +75,12 @@ static func hand_socket(character_id: String, side: String) -> Vector3:
 static func adapt_library(character_id: String, library: AnimationLibrary, source_hips_height: float, reduced: bool = false) -> AnimationLibrary:
 	var entry := character_entry(character_id)
 	if str(entry.get("revision","")) != "tripo-character-v1": return library
+	if entry.has("animation_clip_path"):
+		var authored := ExpansionAnimation.library(str(entry.animation_clip_path),reduced)
+		if not _skip_grounding:
+			for action: StringName in authored.get_animation_list():
+				_apply_grounding(character_id,authored.get_animation(action),str(action),reduced)
+		return authored
 	var target_hips := Vector3.ZERO
 	for bone: Dictionary in entry.bones:
 		if str(bone.name)=="Hips": target_hips=Vector3(float(bone.origin[0]),float(bone.origin[1]),float(bone.origin[2]))
@@ -64,16 +102,51 @@ static func adapt_library(character_id: String, library: AnimationLibrary, sourc
 					var rotation: Quaternion = clip.track_get_key_value(track,key)
 					clip.track_set_key_value(track,key,Quaternion(Vector3.UP,deg_to_rad(-10.0)*amount)*Quaternion(Vector3.RIGHT,deg_to_rad(-10.0)*amount)*rotation)
 		_apply_gesture(character_id,clip,str(name),reduced)
+		if str(entry.get("family","")) != "wheelchair":
+			WalkGait.adapt_clip(clip,str(name) in ["walk","carry_walk"],str(name)=="carry_walk",reduced,target_hips)
+		if entry.has("stride_scale") and str(name) in ["walk","carry_walk"]:
+			for track: int in range(clip.get_track_count()):
+				var bone := str(clip.track_get_path(track)).get_slice(":",1)
+				if clip.track_get_type(track)==Animation.TYPE_ROTATION_3D and (bone.begins_with("UpperLeg") or bone.begins_with("LowerLeg") or bone.begins_with("Foot")):
+					for key: int in range(clip.track_get_key_count(track)):
+						clip.track_set_key_value(track,key,Quaternion.IDENTITY.slerp(clip.track_get_key_value(track,key),float(entry.stride_scale)))
+		if entry.has("skirt_bone"):
+			_counterrotate_skirt(clip,str(entry.skirt_bone))
 		if not _skip_grounding:
 			_apply_grounding(character_id,clip,str(name),reduced)
 		adapted.add_animation(name,clip)
 	return adapted
 
+static func _counterrotate_skirt(clip: Animation, bone_name: String) -> void:
+	for source: int in range(clip.get_track_count()):
+		if clip.track_get_type(source)!=Animation.TYPE_ROTATION_3D or not str(clip.track_get_path(source)).ends_with(":Hips"): continue
+		var path := NodePath(str(clip.track_get_path(source)).get_slice(":",0)+":"+bone_name)
+		var target := clip.find_track(path,Animation.TYPE_ROTATION_3D)
+		if target<0:
+			target=clip.add_track(Animation.TYPE_ROTATION_3D)
+			clip.track_set_path(target,path)
+		for index: int in range(clip.track_get_key_count(target)-1,-1,-1): clip.track_remove_key(target,index)
+		for index: int in range(clip.track_get_key_count(source)):
+			var value: Quaternion = clip.track_get_key_value(source,index)
+			clip.rotation_track_insert_key(target,clip.track_get_key_time(source,index),value.inverse())
+		return
+
 static func _apply_gesture(character_id: String, clip: Animation, name: String, reduced: bool) -> void:
 	if _gestures.is_empty() and FileAccess.file_exists(GESTURE_PATH):
 		var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(GESTURE_PATH))
 		if parsed is Dictionary: _gestures = parsed
-	var tracks: Array = _gestures.get("characters",{}).get(character_id,{}).get("reduced" if reduced else "normal",{}).get(name,[])
+	var source := _gestures
+	if character_id.begins_with("resident_"):
+		if _resident_gestures.is_empty() and FileAccess.file_exists(RESIDENT_GESTURE_PATH):
+			var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(RESIDENT_GESTURE_PATH))
+			if data is Dictionary: _resident_gestures = data
+		source = _resident_gestures
+	elif expansion_characters().has(character_id):
+		if _expansion_gestures.is_empty() and FileAccess.file_exists(EXPANSION_GESTURE_PATH):
+			var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(EXPANSION_GESTURE_PATH))
+			if data is Dictionary: _expansion_gestures = data
+		source = _expansion_gestures
+	var tracks: Array = source.get("characters",{}).get(character_id,{}).get("reduced" if reduced else "normal",{}).get(name,[])
 	var skeleton_path := ""
 	for index: int in range(clip.get_track_count()):
 		var path := str(clip.track_get_path(index))
@@ -96,11 +169,22 @@ static func _apply_gesture(character_id: String, clip: Animation, name: String, 
 			clip.rotation_track_insert_key(index,float(frame.time),Quaternion(float(value[0]),float(value[1]),float(value[2]),float(value[3])).normalized())
 
 static func _apply_grounding(character_id: String, clip: Animation, name: String, reduced: bool) -> void:
-	if name not in ["walk","carry_walk"]: return
+	if name not in ["walk","carry_walk"] and not ((character_id.begins_with("resident_") or expansion_characters().has(character_id)) and name=="place_item"): return
 	if _grounding.is_empty() and FileAccess.file_exists(GROUNDING_PATH):
 		var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(GROUNDING_PATH))
 		if parsed is Dictionary: _grounding=parsed
-	var frames: Array = _grounding.get("characters",{}).get(character_id,{}).get("reduced" if reduced else "normal",{}).get(name,[])
+	var source := _grounding
+	if character_id.begins_with("resident_"):
+		if _resident_grounding.is_empty() and FileAccess.file_exists(RESIDENT_GROUNDING_PATH):
+			var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(RESIDENT_GROUNDING_PATH))
+			if data is Dictionary: _resident_grounding = data
+		source = _resident_grounding
+	elif expansion_characters().has(character_id):
+		if _expansion_grounding.is_empty() and FileAccess.file_exists(EXPANSION_GROUNDING_PATH):
+			var data: Variant = JSON.parse_string(FileAccess.get_file_as_string(EXPANSION_GROUNDING_PATH))
+			if data is Dictionary: _expansion_grounding = data
+		source = _expansion_grounding
+	var frames: Array = source.get("characters",{}).get(character_id,{}).get("reduced" if reduced else "normal",{}).get(name,[])
 	if frames.is_empty(): return
 	for track: int in range(clip.get_track_count()):
 		if clip.track_get_type(track)!=Animation.TYPE_POSITION_3D or not str(clip.track_get_path(track)).ends_with(":Hips"): continue
@@ -115,11 +199,10 @@ static func _apply_grounding(character_id: String, clip: Animation, name: String
 
 static func attach(character_id: String, skeleton: Skeleton3D) -> Array[MeshInstance3D]:
 	var result: Array[MeshInstance3D] = []
-	var characters: Dictionary = manifest().get("characters",{})
-	if not characters.has(character_id):
+	var entry := character_entry(character_id)
+	if entry.is_empty():
 		push_error("Missing authored character: " + character_id)
 		return result
-	var entry: Dictionary = characters[character_id]
 	var skin := Skin.new()
 	for bone: Dictionary in entry.bones:
 		var index := skeleton.find_bone(str(bone.name))
@@ -147,7 +230,7 @@ static func attach(character_id: String, skeleton: Skeleton3D) -> Array[MeshInst
 static func create_skeleton(character_id: String) -> Skeleton3D:
 	var skeleton := Skeleton3D.new()
 	skeleton.name = "StorybookSkeleton"
-	var entry: Dictionary = manifest().get("characters",{}).get(character_id,{})
+	var entry := character_entry(character_id)
 	for bone: Dictionary in entry.get("bones",[]):
 		var index := skeleton.add_bone(str(bone.name))
 		if bone.parent != null:

@@ -1,0 +1,159 @@
+--- F:\LoveStudy\game\scripts\main.gd before
++++ F:\LoveStudy\game\scripts\main.gd after
+@@ -314,6 +314,9 @@
+ 			InputMap.action_add_event(action_name, event)
+ 
+ func change_room(next_room: String, return_id: String = "") -> void:
++	if next_room == "home_hall":
++		next_room = HomeCatalog.canonical_room(next_room)
++		if return_id == "home_gate": return_id = "courtyard_exit"
+ 	if is_instance_valid(creation) and not creation.before_close(): return
+ 	if loading_room:
+ 		return
+@@ -350,6 +353,7 @@
+ 		visit_return[room] = player.position
+ 	if is_instance_valid(creation): creation.prepare_room_change()
+ 	room = next_room
++	camera_offset = Vector3(8, 28, 28) if room == "home" else Vector3(18, 25, 24)
+ 	if is_instance_valid(living): living.prepare_room_change()
+ 	metadata = world.build(room)
+ 	if is_instance_valid(household): household.refresh_visuals()
+@@ -365,7 +369,7 @@
+ 				player.position = entry.get("return_position", entry.position) + Vector3(0,0.15,0)
+ 	camera_base_size = float(metadata.get("camera_size",28.0))*0.78
+ 	if room == "home":
+-		camera_base_size = 18.0
++		camera_base_size = 20.5
+ 	camera.size = camera_base_size
+ 	conversation_position = player.position
+ 	feedback.bind_interactions(interactions)
+@@ -1274,17 +1278,17 @@
+ 
+ func _navigate_to_id(target_id: String, auto_interact: bool = false) -> void:
+ 	_close()
++	if room == "home" and target_id == "home_gate": return
+ 	for entry: Dictionary in interactions:
+ 		if str(entry.id)==target_id:
+ 			_request_interaction(entry,auto_interact)
+ 			return
+ 	var exit_id := ""
+ 	if HomeCatalog.is_home_space(room) and target_id.ends_with("_gate") and target_id.trim_suffix("_gate") in HomeCatalog.CHILD_ROOMS:
+-		# Continue through actual doors: a room -> corridor -> another room, or
+-		# the courtyard -> front door -> corridor. Every leg is walked.
++		# Continue through the living room, walking to each physical doorway.
+ 		exit_id = "house_entry" if room == "home_estate" else ("home_exit" if room in HomeCatalog.CHILD_ROOMS else "")
+ 	elif room!="village" and target_id in ["baker","orchard","school_gate","home_gate"]:
+-		exit_id = "courtyard_exit" if room == "home_hall" else str({"school":"school_exit", "home_hall":"home_exit"}.get(str(metadata.get("parent_room","")), "village_exit"))
++		exit_id = "courtyard_exit" if room == "home" else str({"school":"school_exit", "home":"home_exit", "home_hall":"home_exit"}.get(str(metadata.get("parent_room","")), "village_exit"))
+ 	if not exit_id.is_empty():
+ 		for entry: Dictionary in interactions:
+ 			if str(entry.id)==exit_id:
+--- F:\LoveStudy\game\scripts\imported_interior.gd before
++++ F:\LoveStudy\game\scripts\imported_interior.gd after
+@@ -12,6 +12,9 @@
+ 	return ResourceLoader.exists("res://assets/interiors/%s.glb" % room_id)
+ 
+ func build(room_id: String, plan: Dictionary) -> Dictionary:
++	if room_id == "home_hall":
++		room_id = HomeCatalog.canonical_room(room_id)
++		plan = HomeCatalog.room(room_id)
+ 	var path := "res://assets/interiors/%s.glb" % room_id
+ 	var packed := load(path) as PackedScene
+ 	if packed == null:
+@@ -51,13 +54,13 @@
+ 				bounds = Rect2(float(b[0]), float(b[1]), float(b[2]), float(b[3]))
+ 	var return_to: Dictionary = plan.get("return_to", {})
+ 	var parent_room := str(return_to.get("room_id", "village"))
+-	var exit_id := {"school":"school_exit", "home_hall":"home_exit"}.get(parent_room, "village_exit") as String
+-	var return_id := room_id + "_gate" if parent_room in ["school", "home_hall"] else ("school_gate" if room_id == "school" else (room_id if room_id.begins_with("landmark_") else "home_gate"))
++	var exit_id := {"school":"school_exit", "home":"home_exit", "home_hall":"home_exit"}.get(parent_room, "village_exit") as String
++	var return_id := room_id + "_gate" if parent_room in ["school", "home", "home_hall"] else ("school_gate" if room_id == "school" else (room_id if room_id.begins_with("landmark_") else "home_gate"))
+ 	return_id = str(return_to.get("interaction_id", return_id))
+-	if room_id == "home_hall":
++	if room_id == "home":
+ 		exit_id = "courtyard_exit"
+ 		return_id = "house_entry"
+-	var exit_label: String = {"school":"回到校园", "home_hall":"回到家里的走廊", "home_estate":"走出家门 · 回到小院"}.get(parent_room, "回到字母岛")
++	var exit_label: String = {"school":"回到校园", "home":"回到客厅", "home_hall":"回到客厅", "home_estate":"走出家门 · 回到小院"}.get(parent_room, "回到字母岛")
+ 	_bind_travel(exit_id, exit_label, "SG_EXIT", parent_room, return_id)
+ 	var memory_count := 0 if room_id in HomeCatalog.HOME_NAV_ROOMS else 5
+ 	for i in range(1, memory_count + 1):
+@@ -111,8 +114,12 @@
+ 				var model_key: String = "SG_DECOR_MODEL_" + str(id).to_upper()
+ 				if _markers.has(model_key):
+ 					_decorations[id] = _markers[model_key]
++			var doors: Dictionary = plan.get("model_bindings", {}).get("doors", {})
++			for destination: String in HomeCatalog.DESTINATION_ROOMS:
++				if doors.has(destination):
++					_bind_travel(destination + "_gate", "走进" + str(HomeCatalog.room(destination).name), str(doors[destination]), destination)
+ 		"home_estate":
+-			_bind_travel("house_entry", "走进家门", "SG_HOUSE_ENTRY", "home_hall")
++			_bind_travel("house_entry", "走进家门 · 客厅", "SG_HOUSE_ENTRY", "home")
+ 			if _markers.has("SG_HOUSE_ENTRY"): _interactions.back()["radius"] = 1.5
+ 		"home_hall":
+ 			var doors: Dictionary = plan.get("model_bindings", {}).get("doors", {})
+@@ -165,3 +172,6 @@
+ 	_bind(id, label, key, "travel", 1.7)
+ 	_interactions.back()["destination"] = destination
+ 	_interactions.back()["return_id"] = return_id
++	var marker: Node3D = _markers[key]
++	if marker.has_meta("return_x") and marker.has_meta("return_y"):
++		_interactions.back()["return_position"] = Vector3(float(marker.get_meta("return_x")), marker.global_position.y, -float(marker.get_meta("return_y")))
+--- F:\LoveStudy\game\scripts\home_catalog.gd before
++++ F:\LoveStudy\game\scripts\home_catalog.gd after
+@@ -4,7 +4,12 @@
+ const ROOMS: Array[String] = ["home_estate", "home", "home_bedroom", "home_kitchen", "home_dining", "home_bathroom", "home_study", "home_balcony"]
+ const HOME_NAV_ROOMS: Array[String] = ["home_hall"]
+ const CHILD_ROOMS: Array[String] = ["home", "home_bedroom", "home_kitchen", "home_dining", "home_bathroom", "home_study", "home_balcony"]
++const DESTINATION_ROOMS: Array[String] = ["home_study", "home_bedroom", "home_bathroom", "home_kitchen", "home_dining", "home_balcony"]
+ static var _catalog: Dictionary = {}
++
++static func canonical_room(id: String) -> String:
++	# Old room references still resolve, without exposing an extra hall to players.
++	return "home" if id == "home_hall" else id
+ 
+ static func all() -> Dictionary:
+ 	if _catalog.is_empty():
+@@ -12,6 +17,7 @@
+ 	return _catalog
+ 
+ static func room(id: String) -> Dictionary:
++	id = canonical_room(id)
+ 	if not is_home_space(id): return {}
+ 	for entry: Dictionary in all().get("rooms", []):
+ 		if str(entry.room_id) == id: return entry
+--- F:\LoveStudy\game\scripts\home_controller.gd before
++++ F:\LoveStudy\game\scripts\home_controller.gd after
+@@ -80,17 +80,17 @@
+ 	var actions: Array = []
+ 	if game.room == "home_estate":
+ 		actions.append({"label":"走到家门前", "id":"navigate:house_entry", "primary":true})
+-	elif game.room == "home_hall":
++	elif game.room == "home":
+ 		actions.append({"label":"看看室内地图", "id":"map", "primary":true})
+ 		actions.append({"label":"走到通往小院的门", "id":"navigate:courtyard_exit"})
+ 	else:
+-		actions.append({"label":"走回家里的走廊", "id":"navigate:home_exit", "primary":true})
++		actions.append({"label":"走回客厅", "id":"navigate:home_exit", "primary":true})
+ 	actions.append({"label":"看看今天能做什么", "id":"home:day"})
+ 	if game.room in ["home", "home_estate", "home_bedroom", "home_study"]:
+ 		actions.append({"label":"✨ 动森自由网格布置", "id":"v4_free_decor"})
+ 		actions.append({"label":"生活工坊 · 我的作品与小摊", "id":"creation"})
+-	if game.room != "home_hall": actions.append({"label":"打开家园地图", "id":"map"})
+-	game.ui.show_panel("home_overview", "每个房间都有自己的生活", "我的家 · 小院与七个房间", "推开家门后，就能走进门厅和走廊。\n沿走廊走到各个房间门前，按 E 进入。离开房间会回到刚才的门边。", actions)
++	if game.room != "home": actions.append({"label":"打开家园地图", "id":"map"})
++	game.ui.show_panel("home_overview", "每个房间都有自己的生活", "我的家 · 小院与七个房间", "推开家门就是客厅。\n沿客厅两侧走到书房、卧室、浴室、厨房、餐厅和阳台门前，按 E 进入。离开房间会回到客厅对应的门边。", actions)
+ 
+ func show_day() -> void:
+ 	cancel_task()
+--- F:\LoveStudy\game\ui\world_map.gd before
++++ F:\LoveStudy\game\ui\world_map.gd after
+@@ -71,7 +71,7 @@
+ 		return str(int(id.trim_prefix("memory_")))
+ 	if id == "home_gate" and str(entry.get("destination", "")) == "home":
+ 		return "客厅"
+-	var home_names := {"house_entry":"正门", "courtyard_exit":"小院", "home_exit":"走廊", "home_bedroom_gate":"卧室", "home_kitchen_gate":"厨房", "home_dining_gate":"餐厅", "home_bathroom_gate":"浴室", "home_study_gate":"书房", "home_balcony_gate":"阳台"}
++	var home_names := {"house_entry":"正门", "courtyard_exit":"小院", "home_exit":"客厅", "home_bedroom_gate":"卧室", "home_kitchen_gate":"厨房", "home_dining_gate":"餐厅", "home_bathroom_gate":"浴室", "home_study_gate":"书房", "home_balcony_gate":"阳台"}
+ 	if home_names.has(id): return str(home_names[id])
+ 	var names := {"school_gate":"学校", "home_gate":"家", "baker":"熊叔", "orchard":"果园", "gardener":"兔兔", "village_exit":"出口", "school_exit":"出口", "classroom_gate":"教室", "music_room_gate":"音乐", "art_room_gate":"美术", "science_room_gate":"科学", "canteen_gate":"餐厅", "playground_gate":"操场", "football_field_gate":"球场", "host":"邻居", "teacher":"老师", "decorate":"布置", "bed":"休息"}
+ 	return str(names.get(id, str(entry.label).left(3)))

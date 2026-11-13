@@ -1,6 +1,7 @@
 extends Node3D
 
 const WorldScript = preload("res://scripts/world_builder.gd")
+const Residents = preload("res://actors/building_resident_catalog.gd")
 const PlayerScript = preload("res://scripts/player.gd")
 const UIScript = preload("res://scripts/ui.gd")
 const FeedbackScript = preload("res://scripts/world_feedback.gd")
@@ -24,6 +25,7 @@ var audio_director: Node
 var ai_bridge: Node
 var tactile_quests: Node3D
 var free_decor_studio: Node3D
+var creation: Node3D
 var _commission_hint_used := false
 var _pending_chapter_popup_key := ""
 var _thematic_session: Dictionary = {}
@@ -60,6 +62,7 @@ const ROOM_LABELS := {"village":"字母岛", "school":"山丘学园 · 校园", 
 const NAV_CELL := 0.75
 var nav_heights: Dictionary = {}
 var navigation_cache: Dictionary = {}
+var navigation_generation := 0
 var feedback: Node3D
 var sounds: Node
 var pending_interaction: Dictionary = {}
@@ -199,6 +202,9 @@ func _ready() -> void:
 	free_decor_studio = FreeGridDecorScript.new()
 	add_child(free_decor_studio)
 	free_decor_studio.setup(self)
+	creation = preload("res://gameplay/creation_controller.gd").new()
+	add_child(creation)
+	creation.setup(self)
 	tactile_quests = TactileQuestsScript.new()
 	tactile_quests.name = "TactileLifeQuests"
 	add_child(tactile_quests)
@@ -282,6 +288,7 @@ func _ready() -> void:
 			ui.notify("欢迎回来，今天也在小岛上慢慢逛吧。")
 
 func _dialogue_speaker(panel_id: String) -> String:
+	if panel_id.begins_with("resident_"): return panel_id
 	var local_speakers := {"baker":"npc_bear_uncle","lunch":"npc_bear_uncle","gardener":"npc_rabbit_gardener","sports":"textbook_miss_li","correct":"textbook_miss_li"}
 	if local_speakers.has(panel_id): return str(local_speakers[panel_id])
 	if panel_id not in ["journey_home","journey_u1","journey_talk","journey_name","journey_p2","friend_memory"]:
@@ -307,6 +314,10 @@ func _configure_input() -> void:
 			InputMap.action_add_event(action_name, event)
 
 func change_room(next_room: String, return_id: String = "") -> void:
+	if next_room == "home_hall":
+		next_room = HomeCatalog.canonical_room(next_room)
+		if return_id == "home_gate": return_id = "courtyard_exit"
+	if is_instance_valid(creation) and not creation.before_close(): return
 	if loading_room:
 		return
 	if OS.has_feature("web_online") and next_room != "village":
@@ -329,6 +340,7 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	_cancel_navigation()
 	loading_room = true
 	hover_interaction = {}
+	navigation_generation += 1
 	feedback.highlight({})
 	nav_ready = false
 	player.locked = true
@@ -339,7 +351,9 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	if is_instance_valid(ui.diegetic): ui.diegetic.dismiss()
 	if next_room != room:
 		visit_return[room] = player.position
+	if is_instance_valid(creation): creation.prepare_room_change()
 	room = next_room
+	camera_offset = Vector3(8, 28, 28) if room == "home" else Vector3(18, 25, 24)
 	if is_instance_valid(living): living.prepare_room_change()
 	metadata = world.build(room)
 	if is_instance_valid(household): household.refresh_visuals()
@@ -355,7 +369,7 @@ func change_room(next_room: String, return_id: String = "") -> void:
 				player.position = entry.get("return_position", entry.position) + Vector3(0,0.15,0)
 	camera_base_size = float(metadata.get("camera_size",28.0))*0.78
 	if room == "home":
-		camera_base_size = 18.0
+		camera_base_size = 20.5
 	camera.size = camera_base_size
 	conversation_position = player.position
 	feedback.bind_interactions(interactions)
@@ -385,6 +399,8 @@ func change_room(next_room: String, return_id: String = "") -> void:
 		audio_director.apply_room_soundscape(room, str(living.weather_id) if is_instance_valid(living) else "clear")
 	if is_instance_valid(journey):
 		journey.on_room_ready()
+	if is_instance_valid(creation):
+		creation.room_changed()
 	_refresh()
 	if not ui.reduced_motion:
 		ui.fade.color.a = 0.55
@@ -393,6 +409,10 @@ func change_room(next_room: String, return_id: String = "") -> void:
 		await transition.finished
 
 func _build_navigation() -> void:
+	navigation_generation += 1
+	var generation := navigation_generation
+	var build_room := room
+	nav_ready = false
 	if navigation_cache.has(room):
 		navigation = navigation_cache[room].grid
 		nav_heights = navigation_cache[room].heights
@@ -446,6 +466,8 @@ func _build_navigation() -> void:
 				nav_heights[key] = height
 		if x % 16 == 0:
 			await get_tree().process_frame
+			if generation != navigation_generation or room != build_room:
+				return
 	# AStarGrid has no per-edge height filter. Block cells bordering abrupt drops;
 	# ordinary ramps remain traversable and the character follows actual physics.
 	if terrain:
@@ -498,9 +520,11 @@ func _process(delta: float) -> void:
 	if not is_instance_valid(player) or loading_room or metadata.is_empty() or capturing_photo:
 		return
 	var studio_open: bool = is_instance_valid(free_decor_studio) and bool(free_decor_studio.active)
-	player.locked = ui.modal.visible or is_instance_valid(football) or is_instance_valid(orchard_activity) or studio_open
+	var household_open: bool = is_instance_valid(household) and household.is_active()
+	player.locked = ui.modal.visible or is_instance_valid(football) or is_instance_valid(orchard_activity) or studio_open or household_open
 	if is_instance_valid(living):
 		living.set_context({"dialogue_open":ui.modal.visible,"learning_open":ui.current_panel=="question","memory_open":ui.current_panel=="word_story","paused":ui.current_panel=="settings" or (is_instance_valid(orchard_activity) and orchard_activity.paused),"backgrounded":application_backgrounded,"reduced_motion":ui.reduced_motion,"fixed_day":bool(State.data.preferences.get("fixed_day",false)),"guided_prologue":journey_phase in ["home","prologue"],"story_day_phase":"dawn" if ui.current_panel=="journey_u1" and journey.u1_visible_step=="U1-01" else "","active_actor_ids":journey.active_actor_ids if ui.modal.visible else []})
+		if household_open: living.set_context({"paused":true})
 		living.refresh_interactions(interactions)
 		feedback.update_dynamic_targets()
 		var weather: Dictionary = living.get_status()
@@ -548,6 +572,9 @@ func _process(delta: float) -> void:
 	if is_instance_valid(orchard_activity):
 		focus=orchard_activity.camera_focus
 		desired_size=orchard_activity.camera_size
+	if household_open:
+		focus = household.activity.camera_focus
+		desired_size = household.activity.camera_size
 	if is_instance_valid(journey) and journey.handoff_busy:
 		var giver: Node3D = living.get_actor("textbook_peter")
 		if giver:
@@ -557,7 +584,7 @@ func _process(delta: float) -> void:
 	camera.position = camera.position.lerp(focus+camera_offset,smoothing)
 	camera.look_at(camera.position-camera_offset+Vector3(0,0.5,0),Vector3.UP)
 	camera.size = lerpf(camera.size,desired_size,smoothing)
-	if is_instance_valid(orchard_activity):
+	if is_instance_valid(orchard_activity) or household_open:
 		ui.prompt.hide()
 		ui.bubble_panel.hide()
 		return
@@ -585,6 +612,7 @@ func _process(delta: float) -> void:
 					phrase_key = "good_morning"
 				var phrase: Dictionary = curriculum.phrases[phrase_key]
 				play_phrase(phrase_key)
+				if entry.has("resident_id"): world.greet_resident(str(entry.id),player.global_position)
 				bubble_world_position = entry.position+Vector3(0,2.4,0)
 				ui.say(phrase.en,phrase.zh,camera.unproject_position(bubble_world_position))
 				greetings[greeting_id] = Time.get_ticks_msec()
@@ -609,6 +637,12 @@ func _process(delta: float) -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if is_instance_valid(household) and household.handle_input(event):
+		get_viewport().set_input_as_handled()
+		return
+	if is_instance_valid(creation) and creation.handle_input(event):
+		get_viewport().set_input_as_handled()
+		return
 	if loading_room or not is_instance_valid(ui):
 		return
 	if is_instance_valid(orchard_activity):
@@ -717,6 +751,7 @@ func _refresh() -> void:
 				world.set_decoration(id,bool(d.decorations_placed.get(id,false)))
 
 func _close() -> void:
+	if is_instance_valid(creation) and not creation.before_close(): return
 	if is_instance_valid(journey) and not journey.close_memory(): return
 	if is_instance_valid(household): household.cancel_task()
 	if is_instance_valid(ui) and is_instance_valid(ui.diegetic):
@@ -785,21 +820,18 @@ func show_memory(sequence: int) -> void:
 		show_place()
 		return
 	var anchor: Dictionary = anchors[sequence-1]
-	var body := str(anchor.get("activity", "看看这里的物件，下次回来时试着想起它的名字。"))
-	var focus: Array = plan.get("english_focus", [])
-	if not focus.is_empty():
-		body += "\n"+" · ".join(focus.slice(0,2))
+	var content: Dictionary = preload("res://ui/memory_card_content.gd").build(plan, anchor)
 	State.discover(room,sequence)
-	var actions: Array = [{"label":"继续探索","id":"close","primary":true}]
+	var actions: Array = [{"label":"退出","id":"close"}]
 	var activity := _room_activity()
 	if not activity.is_empty():
-		actions.push_front({"label":_activity_label(activity),"id":"activity:"+activity,"primary":true})
+		actions.push_front({"label":str({"art":"画一画", "music":"奏一奏", "science":"试一试", "football":"踢一踢"}.get(activity, "试一试")),"id":"activity:"+activity,"primary":true})
 	if room == "landmark_A" and sequence == 2:
-		actions.push_front({"label":"摘一颗苹果","id":"harvest","primary":true})
+		actions.push_front({"label":"摘苹果","id":"harvest","primary":true})
 	elif room == "landmark_C" and sequence in [1,3,5]:
-		actions.push_front({"label":"看看熊叔的订单","id":"talk_baker","primary":true})
+		actions.push_front({"label":"看订单","id":"talk_baker","primary":true})
 	elif room == "classroom":
-		actions.push_front({"label":"开始今天的课程","id":"lessons","primary":true})
+		actions.push_front({"label":"开始上课","id":"lessons","primary":true})
 	elif room == "home" and sequence == 4:
 		actions.push_front({"label":"睡到明天","id":"next_day","primary":true})
 	elif room == "home" and sequence == 2:
@@ -808,13 +840,14 @@ func show_memory(sequence: int) -> void:
 	for index: int in range(1,6):
 		if State.data.life.discoveries.has("%s/memory_%02d" % [room,index]):
 			visited += 1
-	ui.show_panel("memory",str(anchor.get("label","小岛回忆")),"%s · 已发现 %d / 5" % [_room_label(),visited],body,actions)
+	ui.show_memory_card(self,str(anchor.get("label","小岛回忆")),"%s · 已发现 %d / 5" % [_room_label(),visited],content,actions)
 
 func interact_nearest() -> void:
 	if not nearest.is_empty():
 		interact_id(str(nearest.id))
 
 func interact_id(id: String) -> void:
+	if is_instance_valid(creation) and creation.handle_action(id): return
 	player.path.clear()
 	pending_interaction = {}
 	feedback.clear_path()
@@ -827,6 +860,11 @@ func interact_id(id: String) -> void:
 	player.gesture("wave")
 	if is_instance_valid(journey) and journey.intercept_interaction(id):
 		return
+	for entry: Dictionary in interactions:
+		if str(entry.id) == id and entry.has("resident_id"):
+			world.greet_resident(id,player.global_position)
+			show_building_resident(str(entry.resident_id))
+			return
 	if id.begins_with("landmark_"):
 		if not WorldScript.InteriorScript.available(id):
 			ui.notify("这里正在布置，先在岛上逛一逛吧。")
@@ -983,7 +1021,42 @@ func interact_id(id: String) -> void:
 			else:
 				show_place()
 
+func show_building_resident(resident_id: String) -> void:
+	var resident := Residents.profile(resident_id)
+	if resident.is_empty(): return
+	var actions: Array = []
+	var activity := _room_activity()
+	if not activity.is_empty(): actions.append({"label":_activity_label(activity),"id":"activity:"+activity,"primary":true})
+	if room == "landmark_A":
+		actions.append({"label":"去采苹果","id":"navigate:orchard","primary":true})
+	elif room == "landmark_C":
+		actions.append({"label":"跟米洛学点心与包装", "id":"creation:teach"})
+		actions.append({"label":"制作苹果蛋糕","id":"craft","primary":true,"disabled":int(State.data.apples)<3})
+		actions.append({"label":"售出一份蛋糕","id":"sell","disabled":int(State.data.cakes)<1})
+	elif room == "landmark_F":
+		actions.append({"label":"跟花婆婆学花艺", "id":"creation:teach"})
+	elif room == "canteen":
+		for word: String in ["milk","bread","cake"]: actions.append({"label":"听听 "+word,"id":"audio:"+word})
+	if room.begins_with("landmark_"):
+		if room in ["landmark_A","landmark_C","landmark_F"]:
+			actions.append({"label":"材料采集与生活工坊", "id":"creation:materials"})
+		var letter := room.trim_prefix("landmark_")
+		actions.append({"label":"收集 %s 字母发现卡" % letter,"id":"journey:inspect:"+letter})
+	actions.append({"label":"今日单元小委托","id":"v4_commission:"+resident_id})
+	actions.append({"label":"本章生活故事","id":"v4_chap_open_here"})
+	actions.append({"label":"继续逛逛","id":"close"})
+	var en := "Hello! I'm %s. Welcome! Let's explore together." % str(resident.name_en)
+	var zh := "你好，我是%s，这里的%s。欢迎来到%s！" % [str(resident.name),str(resident.role),str(resident.building_name)]
+	var title := "%s · %s" % [str(resident.name),str(resident.role)]
+	if not validation_mode and is_instance_valid(ui.diegetic):
+		ui.diegetic.open_conversation({"npc_id":resident_id,"speaker":title,"en":en,"zh":zh,"world_pos":conversation_position,"auto_speak":true,"actions":actions})
+	else:
+		ui.show_panel(resident_id,title,str(resident.building_name),en+"\n"+zh,actions)
+
 func show_baker(play_greeting: bool = true) -> void:
+	if room == "landmark_C":
+		show_building_resident("resident_c")
+		return
 	var d: Dictionary = State.data
 	if play_greeting:
 		play_phrase("good_morning")
@@ -1205,17 +1278,17 @@ func show_district(letters: String) -> void:
 
 func _navigate_to_id(target_id: String, auto_interact: bool = false) -> void:
 	_close()
+	if room == "home" and target_id == "home_gate": return
 	for entry: Dictionary in interactions:
 		if str(entry.id)==target_id:
 			_request_interaction(entry,auto_interact)
 			return
 	var exit_id := ""
 	if HomeCatalog.is_home_space(room) and target_id.ends_with("_gate") and target_id.trim_suffix("_gate") in HomeCatalog.CHILD_ROOMS:
-		# Continue through actual doors: a room -> corridor -> another room, or
-		# the courtyard -> front door -> corridor. Every leg is walked.
+		# Continue through the living room, walking to each physical doorway.
 		exit_id = "house_entry" if room == "home_estate" else ("home_exit" if room in HomeCatalog.CHILD_ROOMS else "")
 	elif room!="village" and target_id in ["baker","orchard","school_gate","home_gate"]:
-		exit_id = "courtyard_exit" if room == "home_hall" else str({"school":"school_exit", "home_hall":"home_exit"}.get(str(metadata.get("parent_room","")), "village_exit"))
+		exit_id = "courtyard_exit" if room == "home" else str({"school":"school_exit", "home":"home_exit", "home_hall":"home_exit"}.get(str(metadata.get("parent_room","")), "village_exit"))
 	if not exit_id.is_empty():
 		for entry: Dictionary in interactions:
 			if str(entry.id)==exit_id:
@@ -1462,6 +1535,7 @@ func _handle_v4_thematic_done(ckey: String) -> void:
 	feedback.pickup(player.position, player.position, "leaf", "+%d 叶币 · 共创完成" % bonus)
 
 func _on_action(id: String) -> void:
+	if is_instance_valid(creation) and creation.handle_action(id): return
 	if is_instance_valid(sounds) and not id.begins_with("note:"):
 		sounds.play("click")
 	if is_instance_valid(journey) and await journey.handle_action(id):
@@ -1984,7 +2058,7 @@ func _activity_label(id: String) -> String:
 	return str({"music":"弹一段小岛旋律","art":"画一张明信片","science":"动手调配颜色","football":"开始射门练习"}.get(id,"动手试一试"))
 
 func start_activity(id: String) -> void:
-	if id!=_room_activity():
+	if id!=_room_activity() and not (id=="art" and room=="home_study"):
 		ui.notify("到对应的校园场所，和老师一起开始吧。")
 		return
 	if not _prepare_screen(): return
@@ -1992,7 +2066,7 @@ func start_activity(id: String) -> void:
 	if id=="football":
 		_start_football()
 	else:
-		ui.show_activity(id,State.data.life)
+		ui.show_activity(id,State.data.life,room=="home_study")
 
 func _request_close() -> void:
 	if ui.current_panel=="art_unsaved":
@@ -2008,7 +2082,7 @@ func _restore_art_draft() -> void:
 	_closing_for_quit = false
 	var draft: Dictionary = State.data.life.duplicate(true)
 	draft.artwork = art_draft.duplicate(true)
-	var board: Node = ui.show_activity("art",draft)
+	var board: Node = ui.show_activity("art",draft,room=="home_study")
 	board.dirty = true
 
 func _finish_art_close() -> void:
@@ -2019,6 +2093,7 @@ func _finish_art_close() -> void:
 		_request_quit()
 
 func _request_quit() -> void:
+	if is_instance_valid(creation) and not creation.before_close(): return
 	if is_instance_valid(journey) and not journey.close_memory(): return
 	if is_instance_valid(ui.activity_board) and ui.activity_board.kind=="art" and ui.activity_board.dirty:
 		_closing_for_quit = true

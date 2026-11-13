@@ -19,8 +19,8 @@
       "english_word": "Home",
       "scene_level": 2,
       "parent_room": "village",
-      "theme": "穿过石径与花园，走到住宅正门；进屋后沿门厅与走廊，走到各个房间。",
-      "composition": "完整的三体量住宅外观，坡屋顶、凹入门窗、石基座和木门廊面向小院；正门进入可行走的室内门厅，七扇房门连接各自生活空间。",
+      "theme": "穿过石径与花园，走到住宅正门；入户就是客厅，从客厅前往其他六个房间。",
+      "composition": "完整住宅外观与庭院；正门直接进入方正客厅，六个房间沿客厅两侧相连。",
       "vocabulary_status": "home is textbook vocabulary; courtyard and floor plan are original spatial design",
       "camera_size": 40.0,
       "anchors": [
@@ -177,9 +177,9 @@
           "name": "家里的客厅",
           "english_word": "Living room",
           "scene_level": 3,
-          "parent_room": "home_hall",
+          "parent_room": "home_estate",
           "theme": "在沙发与茶几旁招待朋友，用家人相册和纪念架留住共同的生活。",
-          "composition": "保留旧客厅的五个固定记忆位置、旅行册与朋友角；床角改为窗边阅读角，卧床移到独立卧室。",
+          "composition": "方正客厅内设置开放玄关，两侧连续墙体中的六个门洞连接原有独立房间；家具、五个记忆点及生活任务沿用。",
           "vocabulary_status": "direct_room_name",
           "camera_size": 23.0,
           "anchors": [
@@ -324,20 +324,31 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_hall",
-            "interaction_id": "home_gate"
+            "room_id": "home_estate",
+            "interaction_id": "house_entry"
           },
           "english_focus": [
             "Come in, please."
           ],
-          "separate_scene": true
+          "separate_scene": true,
+          "model_bindings": {
+            "doors": {
+              "home_study": "SG_DOOR_HOME_STUDY",
+              "home_bedroom": "SG_DOOR_HOME_BEDROOM",
+              "home_bathroom": "SG_DOOR_HOME_BATHROOM",
+              "home_kitchen": "SG_DOOR_HOME_KITCHEN",
+              "home_dining": "SG_DOOR_HOME_DINING",
+              "home_balcony": "SG_DOOR_HOME_BALCONY"
+            },
+            "entry_flow": "exterior_entry_to_living_room"
+          }
         },
         {
           "room_id": "home_bedroom",
           "name": "温暖卧室",
           "english_word": "Bedroom",
           "scene_level": 3,
-          "parent_room": "home_hall",
+          "parent_room": "home",
           "theme": "起床、整理床铺、挑选衣服、收拾书包与睡前阅读，各有固定位置。",
           "vocabulary_status": "direct_room_name",
           "camera_size": 23.0,
@@ -483,7 +494,7 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_hall",
+            "room_id": "home",
             "interaction_id": "home_bedroom_gate"
           },
           "english_focus": [
@@ -496,7 +507,7 @@
           "name": "明亮厨房",
           "english_word": "Kitchen",
           "scene_level": 3,
-          "parent_room": "home_hall",
+          "parent_room": "home",
           "theme": "从食材柜到洗菜池、备餐台和灶台，体验准备一餐的顺序。",
           "vocabulary_status": "direct_room_name",
           "camera_size": 23.0,
@@ -642,7 +653,7 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_hall",
+            "room_id": "home",
             "interaction_id": "home_kitchen_gate"
           },
           "english_focus": [
@@ -655,7 +666,7 @@
           "name": "家庭餐厅",
           "english_word": "Dining area",
           "scene_level": 3,
-          "parent_room": "home_hall",
+          "parent_room": "home",
           "theme": "围着一张家庭餐桌吃早餐、表达食物喜好、庆祝生日和节日。",
           "vocabulary_status": "authored_functional_space_for_textbook_meals",
           "camera_size": 23.0,
@@ -801,7 +812,7 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_hall",
+            "room_id": "home",
             "interaction_id": "home_dining_gate"
           },
           "english_focus": [
@@ -814,7 +825,7 @@
           "name": "清爽浴室",
           "english_word": "Bathroom",
           "scene_level": 3,
-          "parent_room": "home_hall",
+          "parent_room": "home",
           "theme": "洗手池、牙刷杯、浴缸、毛巾架与卫生间分区，练习日常清洁与节水。",
           "vocabulary_status": "direct_room_name",
           "camera_size": 23.0,
@@ -960,7 +971,7 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_hall",
+            "room_id": "home",
             "interaction_id": "home_bathroom_gate"
           },
           "english_focus": [
@@ -973,7 +984,7 @@
           "name": "窗边书房",
           "english_word": "Study area",
           "scene_level": 3,
-          "parent_room": "home_hall",
+          "parent_room": "home",
           "theme": "阅读、收纳文具、使用电脑、做贺卡和安排计划，各有可辨认的物件。",
           "vocabulary_status": "authored_functional_space_for_textbook_reading_and_computer",
           "camera_size": 23.0,
@@ -1119,7 +1130,7 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_hall",
+            "room_id": "home",
             "interaction_id": "home_study_gate"
           },
           "english_focus": [
@@ -1132,7 +1143,7 @@
           "name": "家务阳台",
           "english_word": "Housework area",
           "scene_level": 3,
-          "parent_room": "home_hall",
+          "parent_room": "home",
           "theme": "洗衣、晾晒、浇花、打扫与节水，共用一个明亮通风的家务区。",
           "vocabulary_status": "authored_functional_space_for_textbook_chores",
           "camera_size": 23.0,
@@ -1278,7 +1289,7 @@
           },
           "status": "runtime_spatial_content",
           "return_to": {
-            "room_id": "home_hall",
+            "room_id": "home",
             "interaction_id": "home_balcony_gate"
           },
           "english_focus": [
@@ -1289,8 +1300,8 @@
       ],
       "model_bindings": {
         "entry": "SG_HOUSE_ENTRY",
-        "entry_destination": "home_hall",
-        "entry_flow": "front_door_then_walkable_indoor_hall",
+        "entry_destination": "home",
+        "entry_flow": "front_door_then_living_room_hub",
         "legacy_doors": {
           "home": "SG_DOOR_HOME",
           "home_bedroom": "SG_DOOR_HOME_BEDROOM",
@@ -1307,11 +1318,11 @@
       "name": "家里的客厅",
       "english_word": "Living room",
       "scene_level": 3,
-      "parent_room": "home_hall",
+      "parent_room": "home_estate",
       "theme": "在沙发与茶几旁招待朋友，用家人相册和纪念架留住共同的生活。",
-      "composition": "保留旧客厅的五个固定记忆位置、旅行册与朋友角；床角改为窗边阅读角，卧床移到独立卧室。",
+      "composition": "方正客厅内设置开放玄关，两侧连续墙体中的六个门洞连接原有独立房间；家具、五个记忆点及生活任务沿用。",
       "vocabulary_status": "direct_room_name",
-      "camera_size": 23.0,
+      "camera_size": 26.3,
       "anchors": [
         {
           "label": "门厅随身篮",
@@ -1454,11 +1465,66 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_hall",
-        "interaction_id": "home_gate"
+        "room_id": "home_estate",
+        "interaction_id": "house_entry"
       },
       "english_focus": [
         "Come in, please."
+      ],
+      "model_bindings": {
+        "doors": {
+          "home_study": "SG_DOOR_HOME_STUDY",
+          "home_bedroom": "SG_DOOR_HOME_BEDROOM",
+          "home_bathroom": "SG_DOOR_HOME_BATHROOM",
+          "home_kitchen": "SG_DOOR_HOME_KITCHEN",
+          "home_dining": "SG_DOOR_HOME_DINING",
+          "home_balcony": "SG_DOOR_HOME_BALCONY"
+        },
+        "entry_flow": "exterior_entry_to_living_room"
+      },
+      "areas": [
+        {
+          "room_id": "home_study",
+          "name": "窗边书房",
+          "scene_level": 3,
+          "parent_room": "home",
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_bedroom",
+          "name": "温暖卧室",
+          "scene_level": 3,
+          "parent_room": "home",
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_bathroom",
+          "name": "清爽浴室",
+          "scene_level": 3,
+          "parent_room": "home",
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_kitchen",
+          "name": "明亮厨房",
+          "scene_level": 3,
+          "parent_room": "home",
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_dining",
+          "name": "家庭餐厅",
+          "scene_level": 3,
+          "parent_room": "home",
+          "separate_scene": true
+        },
+        {
+          "room_id": "home_balcony",
+          "name": "家务阳台",
+          "scene_level": 3,
+          "parent_room": "home",
+          "separate_scene": true
+        }
       ]
     },
     {
@@ -1466,7 +1532,7 @@
       "name": "温暖卧室",
       "english_word": "Bedroom",
       "scene_level": 3,
-      "parent_room": "home_hall",
+      "parent_room": "home",
       "theme": "起床、整理床铺、挑选衣服、收拾书包与睡前阅读，各有固定位置。",
       "vocabulary_status": "direct_room_name",
       "camera_size": 23.0,
@@ -1612,7 +1678,7 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_hall",
+        "room_id": "home",
         "interaction_id": "home_bedroom_gate"
       },
       "english_focus": [
@@ -1624,7 +1690,7 @@
       "name": "明亮厨房",
       "english_word": "Kitchen",
       "scene_level": 3,
-      "parent_room": "home_hall",
+      "parent_room": "home",
       "theme": "从食材柜到洗菜池、备餐台和灶台，体验准备一餐的顺序。",
       "vocabulary_status": "direct_room_name",
       "camera_size": 23.0,
@@ -1770,7 +1836,7 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_hall",
+        "room_id": "home",
         "interaction_id": "home_kitchen_gate"
       },
       "english_focus": [
@@ -1782,7 +1848,7 @@
       "name": "家庭餐厅",
       "english_word": "Dining area",
       "scene_level": 3,
-      "parent_room": "home_hall",
+      "parent_room": "home",
       "theme": "围着一张家庭餐桌吃早餐、表达食物喜好、庆祝生日和节日。",
       "vocabulary_status": "authored_functional_space_for_textbook_meals",
       "camera_size": 23.0,
@@ -1928,7 +1994,7 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_hall",
+        "room_id": "home",
         "interaction_id": "home_dining_gate"
       },
       "english_focus": [
@@ -1940,7 +2006,7 @@
       "name": "清爽浴室",
       "english_word": "Bathroom",
       "scene_level": 3,
-      "parent_room": "home_hall",
+      "parent_room": "home",
       "theme": "洗手池、牙刷杯、浴缸、毛巾架与卫生间分区，练习日常清洁与节水。",
       "vocabulary_status": "direct_room_name",
       "camera_size": 23.0,
@@ -2086,7 +2152,7 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_hall",
+        "room_id": "home",
         "interaction_id": "home_bathroom_gate"
       },
       "english_focus": [
@@ -2098,7 +2164,7 @@
       "name": "窗边书房",
       "english_word": "Study area",
       "scene_level": 3,
-      "parent_room": "home_hall",
+      "parent_room": "home",
       "theme": "阅读、收纳文具、使用电脑、做贺卡和安排计划，各有可辨认的物件。",
       "vocabulary_status": "authored_functional_space_for_textbook_reading_and_computer",
       "camera_size": 23.0,
@@ -2244,7 +2310,7 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_hall",
+        "room_id": "home",
         "interaction_id": "home_study_gate"
       },
       "english_focus": [
@@ -2256,7 +2322,7 @@
       "name": "家务阳台",
       "english_word": "Housework area",
       "scene_level": 3,
-      "parent_room": "home_hall",
+      "parent_room": "home",
       "theme": "洗衣、晾晒、浇花、打扫与节水，共用一个明亮通风的家务区。",
       "vocabulary_status": "authored_functional_space_for_textbook_chores",
       "camera_size": 23.0,
@@ -2402,7 +2468,7 @@
       },
       "status": "runtime_spatial_content",
       "return_to": {
-        "room_id": "home_hall",
+        "room_id": "home",
         "interaction_id": "home_balcony_gate"
       },
       "english_focus": [
@@ -2413,14 +2479,14 @@
   "routes": [
     {
       "room_id": "home_hall",
-      "name": "家里 · 门厅与走廊",
+      "name": "家里的客厅（兼容入口）",
       "scene_level": 2,
       "parent_room": "home_estate",
       "space_role": "household_indoor_navigation",
       "same_property_as": "home_estate",
       "indoor": true,
       "camera_size": 31.0,
-      "theme": "进门后在玄关收拾随身物品，沿地毯与走廊走到七个房间门前。",
+      "theme": "旧门厅引用兼容到客厅，不作为独立房间进入。",
       "composition": "连续的玄关、中央通道与横向走廊，配有鞋凳、挂衣处、墙灯、收纳和七扇带用途标识的实体门。室内采用可见人物的剖视镜头。",
       "return_to": {
         "room_id": "home_estate",
@@ -3554,8 +3620,9 @@
         }
       },
       "anchors": [],
-      "status": "runtime_navigation_space",
-      "learning_role": "navigation_only_no_added_memory_points_or_tasks"
+      "status": "legacy_alias",
+      "learning_role": "navigation_only_no_added_memory_points_or_tasks",
+      "redirect_to": "home"
     }
   ],
   "coverage": {

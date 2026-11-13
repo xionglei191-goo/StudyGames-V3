@@ -14,3 +14,12 @@ build/
 game/tests/output/
 assets/**/*.log
 scripts/*.log
+.pytest_cache/
+
+# Local rollback archives and inventories can contain personal player saves.
+/docs/verification/home-living-hub-20261113/before*.zip
+/docs/verification/home-living-hub-20261113/baseline.json
+/docs/verification/home-living-hub-20261113/working-tree-before.patch
+/docs/verification/home-living-hub-20261113/git-status-before.txt
+# Previous rig rollback archive; the current editable sources are versioned.
+/docs/verification/resident-deformation-review-20261112/before-rigs.zip

@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import os
 import re
+from pathlib import Path
 from typing import Any
 
 import httpx
@@ -53,6 +54,18 @@ NPC_PERSONAS: dict[str, dict[str, str]] = {
         "catchphrase": "You are doing wonderful!",
     },
 }
+
+# Read the same authored identities as the game; retain the established cast.
+_RESIDENT_CATALOG = Path(__file__).resolve().parents[2] / "game/assets/characters/building_residents_v1/catalog.json"
+if _RESIDENT_CATALOG.is_file():
+    _residents = json.loads(_RESIDENT_CATALOG.read_text(encoding="utf-8"))
+    for _resident_id, _resident in _residents.get("residents", {}).items():
+        NPC_PERSONAS[_resident_id] = {
+            "name_zh": _resident["name"],
+            "name_en": _resident["name_en"],
+            "role": f"friendly {_resident['role']} who welcomes visitors to {_resident['building_name']}",
+            "catchphrase": f"I'm {_resident['name_en']}. Let's explore together!",
+        }
 
 OUTFIT_COMPLIMENTS: dict[str, tuple[str, str]] = {
     "yellow": ("your sunny yellow outfit", "向日葵黄背带装"),

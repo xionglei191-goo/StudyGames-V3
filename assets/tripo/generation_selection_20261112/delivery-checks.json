@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "summary": {
+    "total_reviewed": 163,
+    "characters_reviewed": 139,
+    "props_reviewed": 24,
+    "existing_model_files": 46,
+    "resident_model_files": 34,
+    "core_model_files": 12,
+    "generation_slots_available": 70,
+    "priority_count": 48,
+    "priority_characters": 32,
+    "priority_props": 16,
+    "optional_count": 12,
+    "optional_characters": 8,
+    "optional_props": 4,
+    "reserve_count": 10,
+    "decisions": {
+      "reuse": 84,
+      "priority": 48,
+      "optional": 12,
+      "defer": 19
+    }
+  },
+  "packages": [
+    {
+      "file": "01_priority_48.zip",
+      "png_count": 48,
+      "bytes": 60648448,
+      "sha256": "0a6552d79d11785c6b0cb55aaa81d78f3e7fef29dbf977019cbe866e446a98c7",
+      "zip_integrity": true,
+      "source_hash_match": true
+    },
+    {
+      "file": "02_optional_12.zip",
+      "png_count": 12,
+      "bytes": 14082010,
+      "sha256": "661b769aa31746962af407ae7a7a3f69becd4dead0259e289dfe64f303882c78",
+      "zip_integrity": true,
+      "source_hash_match": true
+    }
+  ],
+  "identity_ids_preserved": true,
+  "all_reuse_targets_resolve": true,
+  "reference_images_visually_reviewed": 163,
+  "resident_reference_images_reviewed": 34,
+  "model_identities_individually_matched": false,
+  "new_model_generation_performed": false,
+  "runtime_changed": false
+}

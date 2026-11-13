@@ -1,0 +1,236 @@
+{
+  "id": "textbook_fendi",
+  "intake_id": "p30",
+  "family": "animal",
+  "rig_type": "fish",
+  "height": 0.6,
+  "bones": [
+    {
+      "name": "Root",
+      "parent": null,
+      "origin": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Hips",
+      "parent": "Root",
+      "origin": [
+        0.0,
+        0.2880000174045563,
+        0.0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Spine",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.0,
+        0.11752406507730484
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Head",
+      "parent": "Spine",
+      "origin": [
+        0.0,
+        0.0,
+        0.15529966354370117
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.0,
+        -0.1258939951658249
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Tail_02",
+      "parent": "Tail",
+      "origin": [
+        0.0,
+        0.0,
+        -0.1258939951658249
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "TailFin",
+      "parent": "Tail_02",
+      "origin": [
+        0.0,
+        0.0,
+        -0.09232223033905029
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Fin_L",
+      "parent": "Spine",
+      "origin": [
+        -0.06000000238418579,
+        -0.06599999964237213,
+        -0.07555118203163147
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Fin_R",
+      "parent": "Spine",
+      "origin": [
+        0.06000000238418579,
+        -0.06599999964237213,
+        -0.07555118203163147
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "Dorsal",
+      "parent": "Hips",
+      "origin": [
+        0.0,
+        0.14400002360343933,
+        -0.018000001087784767
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "hand_sockets": {},
+  "source": "assets/tripo/generation_selection_20261112/01_priority_48/textbook_fendi.glb",
+  "source_sha256": "db25fdcf2ae9a7164604860d1446a0b032417cc8a95fe9d087b5b4b7cbb6c96b",
+  "source_triangles": 1126816,
+  "triangles": 31998,
+  "name_zh": "Fendi",
+  "identity_reference": "assets/tripo/generation_selection_20261112/01_priority_48/P16_textbook_fendi.png",
+  "runtime_profile": {
+    "name": "Fendi",
+    "kind": "animal",
+    "source": "assets/tripo/generation_selection_20261112/01_priority_48/P16_textbook_fendi.png"
+  },
+  "editable_source": "assets/characters/textbook_expansion_v1/textbook_fendi/rigged.blend",
+  "export_glb": "assets/characters/textbook_expansion_v1/textbook_fendi/character.glb",
+  "rigging_provider": {
+    "provider": "Mesh2Motion",
+    "engine_commit": "e66f13ccf00ba0afc07e82d876af016e40792422",
+    "core_solver_modified": false,
+    "template": "fitted fish semantic rig with independent appendages"
+  },
+  "weight_method": "Unmodified Mesh2Motion fish solve, explicit continuous anatomical regions, 30% supported solver blends and 32 adjacency smoothing passes; four normalized influences",
+  "weight_refinement": "species-regions-v1",
+  "vertices": 16001,
+  "unweighted_vertices": 0,
+  "weight_sum_max_error": 2.220446049250313e-16,
+  "actions": [
+    {
+      "name": "idle",
+      "duration": 3.2,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "walk",
+      "duration": 1.12,
+      "loop": true,
+      "contact_time": -1.0
+    },
+    {
+      "name": "greet_wave",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "listen_nod",
+      "duration": 1.8,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "talk_gesture",
+      "duration": 2.2,
+      "loop": false,
+      "contact_time": -1.0
+    },
+    {
+      "name": "pose_photo",
+      "duration": 2.4,
+      "loop": false,
+      "contact_time": -1.0
+    }
+  ],
+  "allowed_actions": [
+    "idle",
+    "walk",
+    "greet_wave",
+    "listen_nod",
+    "talk_gesture",
+    "pose_photo"
+  ],
+  "locomotion": "swim",
+  "animation_clip_path": "res://assets/characters/textbook_expansion_v1/textbook_fendi/animation-clips.json",
+  "bounds": {
+    "min": [
+      -0.3610854744911194,
+      -7.687322795391083e-05,
+      -0.41964665055274963
+    ],
+    "max": [
+      0.3609105348587036,
+      0.6001016497612,
+      0.4197288155555725
+    ]
+  },
+  "status": "rigged_pending_engine_validation",
+  "elapsed_seconds": 5.32
+}

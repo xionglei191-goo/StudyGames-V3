@@ -1,0 +1,1572 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-12",
+  "art_direction_brief": "art-direction-brief.md",
+  "runtime_status": "concepts_only_not_integrated",
+  "assets": [
+    {
+      "resident_id": "resident_a",
+      "room_id": "landmark_A",
+      "building_name": "苹果果园屋",
+      "name_zh": "阿梨",
+      "name_en": "Ali",
+      "type": "human",
+      "role": "果园管家",
+      "palette": "苹果红、鼠尾草绿",
+      "design": "年轻女园艺师，短栗发、红头巾、绿背带裤，口袋有苹果贴布。",
+      "path": "01_landmark_A_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_a.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1300193,
+        "sha256": "440fce21745ec84600e84513eeaa2f3d187d1fd8799726ffe674f849f8b9447c",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-863dd7e4-cb15-4520-9472-e1fdca9fbfc7.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "正面全身、四肢完整；果园红头巾和苹果贴布清楚。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_b",
+      "room_id": "landmark_B",
+      "building_name": "船屋码头",
+      "name_zh": "阿渡",
+      "name_en": "Dory",
+      "type": "animal",
+      "role": "船屋摆渡员",
+      "palette": "水蓝、沙棕、橙黄",
+      "design": "棕色水獭，水蓝短外套、奶油长裤和贴身橙色领结。",
+      "path": "02_landmark_B_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_b.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1461372,
+        "sha256": "0f1c6fea9a057b7e7594693ae6f7ea915eb1d53988137cde34999a86cec4754a",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-2bb46472-f3cf-4a65-b085-d63daed08dd8.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "正面全身、四肢完整；水手制服、胡须和尾巴可见。生成加入了贴身船长帽，保留为职业识别。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_c",
+      "room_id": "landmark_C",
+      "building_name": "蛋糕烘焙坊",
+      "name_zh": "米洛",
+      "name_en": "Milo",
+      "type": "human",
+      "role": "蛋糕师",
+      "palette": "奶油白、杏桃橙",
+      "design": "卷发青年糕点师，矮厨师帽、桃色围裙和可可长裤。",
+      "path": "03_landmark_C_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_c.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1243476,
+        "sha256": "3c53645064820d66f4295a593cac3636bb4d3cc6eb5c972d4d870498ed1848f2",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-58fc7cc9-f11f-4cc6-adf0-d0428cd48941.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "糕点师厨帽、桃色围裙、蛋糕贴布清楚，双手和双脚完整。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_d",
+      "room_id": "landmark_D",
+      "building_name": "鼓屋音乐厅",
+      "name_zh": "鼓鼓",
+      "name_en": "Gugu",
+      "type": "animal",
+      "role": "节奏乐手",
+      "palette": "赤陶红、靛蓝",
+      "design": "金棕小猴，红色盘扣马甲、靛蓝裤，尾巴有清晰轮廓。",
+      "path": "04_landmark_D_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_d.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1390348,
+        "sha256": "8a3bb5bbd93e4babf36a92fee6d7d17b833330a17a55a6868f4a972e8c10e12e",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-48779c93-b973-4c8b-aa25-a5966bfaf4f3.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "猴子耳形、短卷尾、赤陶马甲清楚，手尾之间有白色间隙。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_e",
+      "room_id": "landmark_E",
+      "building_name": "蛋壳孵化屋",
+      "name_zh": "啾妈",
+      "name_en": "Aunt Chirp",
+      "type": "animal",
+      "role": "孵化照护员",
+      "palette": "奶黄、暖白、薰衣草紫",
+      "design": "奶油母鸡，低矮红鸡冠，淡紫围裙，温柔照护者。",
+      "path": "05_landmark_E_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_e.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1309424,
+        "sha256": "c040f9e7c8102b3a926ecfd45b95b6dfdd1dbd7ed7f442306d48b690ce63b546",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-4e0113b7-df23-4ea2-9e32-afc1e0c9dbc8.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "母鸡鸡冠、羽毛手、蛋形贴布清楚，双腿分离。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_f",
+      "room_id": "landmark_F",
+      "building_name": "巨花温室",
+      "name_zh": "花婆婆",
+      "name_en": "Grandma Flora",
+      "type": "human",
+      "role": "温室花艺师",
+      "palette": "紫藤、青苔绿",
+      "design": "银发圆髻花婆婆，紫色开衫、绿围裙裤，胸前小花贴布。",
+      "path": "06_landmark_F_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_f.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1276413,
+        "sha256": "f13596cd7ecdb734ee94f6e59d146fa3be5441003bbfd89a2073ccc8e7540ea5",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-108d8bdd-a072-4d21-9df3-3f80521ad0c6.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "银发老年女性、紫开衫和绿色花艺围裙清楚，四肢无遮挡。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_g",
+      "room_id": "landmark_G",
+      "building_name": "地球仪旅行馆",
+      "name_zh": "路远",
+      "name_en": "Rowan",
+      "type": "human",
+      "role": "旅行向导",
+      "palette": "土黄、湖蓝",
+      "design": "深肤色卷发向导，沙色马甲、蓝色衬衫、结实旅行靴。",
+      "path": "07_landmark_G_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_g.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1273571,
+        "sha256": "920318f6a3c8453a27a78b46aa3d7f3aa5b76d8ab3ef902fde8f5cfaeb423c71",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-0a4f7704-d9e1-4dfe-bd64-aa43913c574f.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "旅行向导的指南针胸章、土黄马甲和湖蓝长裤清楚，正面全身。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_h",
+      "room_id": "landmark_H",
+      "building_name": "帽子裁缝店",
+      "name_zh": "绒绒",
+      "name_en": "Rory",
+      "type": "animal",
+      "role": "帽饰裁缝",
+      "palette": "锈橙、李子紫、米白",
+      "design": "赤狐裁缝，梅紫短马甲、米白衬衫和小贝雷帽。",
+      "path": "08_landmark_H_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_h.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1363992,
+        "sha256": "f6e3d3c6fa2007c2dd76f5d58adc5dc737b66c0f5a98f9884c718dd3babade71",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-fbc6eb81-4fa4-4d95-a053-f0481c43a57c.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "狐狸尖耳、梅紫裁缝服和白尖尾巴清楚；双手无遮挡。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_i",
+      "room_id": "landmark_I",
+      "building_name": "冰淇淋驿亭",
+      "name_zh": "凉凉",
+      "name_en": "Chilly",
+      "type": "animal",
+      "role": "冰淇淋店员",
+      "palette": "冰蓝、奶白、珊瑚粉",
+      "design": "圆润企鹅，冰蓝短制服、珊瑚小领结，橙色脚蹼。",
+      "path": "09_landmark_I_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_i.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1313011,
+        "sha256": "6b1b6469c6d42a8c82ed3f238257eccf7f97d40c006f936eefb37a9b4f86cc46",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-480bb43e-3ec9-4fae-a1b3-5a6ad3dbcdb1.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "企鹅店员制服、珊瑚领结和双鳍分开，脚蹼完整。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_j",
+      "room_id": "landmark_J",
+      "building_name": "玻璃罐收藏馆",
+      "name_zh": "藏藏",
+      "name_en": "Coby",
+      "type": "animal",
+      "role": "收藏整理员",
+      "palette": "灰棕、芥末黄、石板蓝",
+      "design": "浣熊整理员，黄马甲、蓝工装裤，黑眼罩和环纹尾。",
+      "path": "10_landmark_J_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_j.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1480206,
+        "sha256": "f7e7b799bf0ac4f21d015d0f481f756b0239c08363d718bbc89523b159381e34",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-00f7539a-baf7-4d38-9555-f3fea90ab272.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "浣熊眼罩、黄色马甲和环纹尾巴清楚，四肢完整。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_k",
+      "room_id": "landmark_K",
+      "building_name": "风筝工坊",
+      "name_zh": "风仔",
+      "name_en": "Flynn",
+      "type": "human",
+      "role": "风筝匠学徒",
+      "palette": "青绿、暖橙",
+      "design": "小麦肤色少年，蓬松短黑发，青绿工坊服，菱形口袋。",
+      "path": "11_landmark_K_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_k.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1241302,
+        "sha256": "564db1090c0b98684bb06ab50d8cfeba356565057e1c0376f34d24e018747f0b",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-245e6000-4b71-43ca-8ec6-7b33cb9541b0.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "风筝学徒的菱形风筝贴布、青绿上衣和橙围裙清楚，双手空置。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_l",
+      "room_id": "landmark_L",
+      "building_name": "灯笼驿站",
+      "name_zh": "灯禾",
+      "name_en": "Luma",
+      "type": "human",
+      "role": "灯笼匠",
+      "palette": "朱红、暖金、深青",
+      "design": "东亚女灯笼匠，紧凑双髻、朱红短外套、深青长裤。",
+      "path": "12_landmark_L_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_l.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1302126,
+        "sha256": "e7ecf279a80e0898054ae023dc38da203c61fed00123d7cb9a66941c97358eb3",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-79c92655-cbd6-4685-922e-f46981739cbb.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "灯笼匠的朱红盘扣外套和灯笼贴布清楚，正面全身。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_m",
+      "room_id": "landmark_M",
+      "building_name": "蘑菇邻居屋",
+      "name_zh": "团团",
+      "name_en": "Toto",
+      "type": "animal",
+      "role": "邻里客厅主人",
+      "palette": "咖啡棕、燕麦、砖红",
+      "design": "水豚邻居，燕麦针织开衫、砖红裤，慢悠悠的神情。",
+      "path": "13_landmark_M_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_m.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1545588,
+        "sha256": "f48459492f3f49dc9c3e85f22599471a5e5c4938bfd6c6b370b885a68fffd50e",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-d830a802-081a-4aaa-9a74-5ac31e7d5bda.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "水豚宽口鼻和小耳朵清楚，燕麦开衫、砖红长裤区别于其他居民。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_n",
+      "room_id": "landmark_N",
+      "building_name": "鸟巢观察屋",
+      "name_zh": "林听",
+      "name_en": "Wren",
+      "type": "human",
+      "role": "观鸟记录员",
+      "palette": "苔绿、沙米、土橙",
+      "design": "棕肤卷发女观察员，苔绿马甲、浅米工装裤、橙色便帽。",
+      "path": "14_landmark_N_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_n.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1283278,
+        "sha256": "756eb801eaf4b6026786610f3d01d714719096298bb8cc1be555044bbc3ae843",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-a2e51b24-2ea8-44fd-9404-0e05315a00e4.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "观鸟记录员的橙帽、羽毛胸章和绿色马甲清楚，全身无遮挡。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_o",
+      "room_id": "landmark_O",
+      "building_name": "猫头鹰图书馆",
+      "name_zh": "墨羽",
+      "name_en": "Oliver",
+      "type": "animal",
+      "role": "图书管理员",
+      "palette": "栗棕、墨绿、奶白",
+      "design": "栗棕猫头鹰，奶白脸盘、墨绿开衫，胸前书页贴布。",
+      "path": "15_landmark_O_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_o.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1434328,
+        "sha256": "2b11f6f99c3bafa1479ee21ad76dcccac78789f5c6cd90f21d130534993cfc23",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-cc368a88-19e2-4f02-9337-875157102c70.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "猫头鹰脸盘、喙、羽毛手和书页贴布清楚，双腿分离。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_p",
+      "room_id": "landmark_P",
+      "building_name": "南瓜农场屋",
+      "name_zh": "麦麦",
+      "name_en": "Maple",
+      "type": "animal",
+      "role": "南瓜农夫",
+      "palette": "南瓜橙、苔绿、桃粉",
+      "design": "桃粉小猪，南瓜橙背带裤、绿衬衫、泥棕短靴。",
+      "path": "16_landmark_P_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_p.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1467009,
+        "sha256": "11ca8e1c02f6c1cfbc02842e75333ac83a781fcfb283fe1091397a91e0da1618",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-e3c4ba1e-6b38-45b7-b9df-b9d69119bd50.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "小猪农夫桃粉肤色、南瓜橙工装、短卷尾清楚，正面全身。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_q",
+      "room_id": "landmark_Q",
+      "building_name": "拼布故事馆",
+      "name_zh": "布爷爷",
+      "name_en": "Grandpa Patch",
+      "type": "human",
+      "role": "拼布故事人",
+      "palette": "靛蓝、赭黄、砖红",
+      "design": "银色短胡须老先生，暖色拼布马甲，深蓝长裤。",
+      "path": "17_landmark_Q_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_q.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1385012,
+        "sha256": "5637b15307339c651868d8d7fb0f87cdaba03425f36d4bc00682bd6400f7a578",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-75b48a4a-5961-4050-9093-ac0303eace77.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "拼布老先生银发短须与六块拼布马甲清楚；手脚完整。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_r",
+      "room_id": "landmark_R",
+      "building_name": "机器人工坊",
+      "name_zh": "丁丁",
+      "name_en": "Tessa",
+      "type": "human",
+      "role": "机器人修理师",
+      "palette": "汽油蓝、亮橙",
+      "design": "雀斑女工程师，短铜发、蓝工装、橙色膝部补丁。",
+      "path": "18_landmark_R_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_r.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1326834,
+        "sha256": "ff8fd1ad1bcc6e9eaf4754c6c8fe3cc71f0e0d4553786f145f0e05ee95403aa9",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-58eeaf0b-78e1-4b2c-967d-86e777b1ebb3.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "女工程师短铜发、蓝工装和橙色膝补丁清楚，无遮挡。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_s",
+      "room_id": "landmark_S",
+      "building_name": "星形天文台",
+      "name_zh": "星野",
+      "name_en": "Aster",
+      "type": "human",
+      "role": "星空讲解员",
+      "palette": "午夜蓝、紫灰、星金",
+      "design": "青年观星员，波浪黑发、深蓝短外套、星形衣扣。",
+      "path": "19_landmark_S_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_s.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1262609,
+        "sha256": "5056543ca41f0c4f14c5116bc86ca3aca69ab5b57eae1c8d52d325905e9598ff",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-b8463d82-1f78-4114-b3c5-1c5be45dbe20.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "天文讲解员深蓝外套、星形纽扣和紫灰长裤清楚，正面全身。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_t",
+      "room_id": "landmark_T",
+      "building_name": "火车车站",
+      "name_zh": "轨轨",
+      "name_en": "Gus",
+      "type": "animal",
+      "role": "车站站务员",
+      "palette": "海军蓝、暖棕、金黄",
+      "design": "柯基站务员，立耳、蓝制服、低沿站务帽和圆金扣。",
+      "path": "20_landmark_T_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_t.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1469727,
+        "sha256": "1c369aaa9d40ab00f58e38e1a24eb90ae8de08f3f165cc0bb3b551f7dd9bccb7",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-5b85d48a-f04f-4042-8f39-96e34d454680.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "柯基站务员立耳、蓝制服和站务帽清楚，四肢完整。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_u",
+      "room_id": "landmark_U",
+      "building_name": "雨伞气象屋",
+      "name_zh": "小晴",
+      "name_en": "Sunny",
+      "type": "animal",
+      "role": "天气观察员",
+      "palette": "雨黄、叶绿、湖蓝",
+      "design": "叶绿青蛙，雨黄短外套、蓝短裤和雨靴，圆眼突出。",
+      "path": "21_landmark_U_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_u.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1308949,
+        "sha256": "a458f31e34810e4ef9cb2a159238e26cf733490393047880d691fe76363511c2",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-b6aed8e8-d83d-48c4-adf2-f1c2b12fdeea.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "青蛙圆眼、黄色雨衣雨靴与三指手清楚，手腿均分离。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_v",
+      "room_id": "landmark_V",
+      "building_name": "休眠火山观察站",
+      "name_zh": "岩岚",
+      "name_en": "Rhea",
+      "type": "human",
+      "role": "岩石研究员",
+      "palette": "赭红、沙米、石灰",
+      "design": "深棕肤女地质员，紧束卷发、赭红工作服、米色护膝。",
+      "path": "22_landmark_V_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_v.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1259601,
+        "sha256": "9de6cf96831a1c29fdc5ade203b1c3bec761a15d2366012e91271788446da1da",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-118e2775-124c-4f08-ad7a-aec44a5fc182.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "地质员高发髻、岩石胸章、赭红外套与护膝清楚，无遮挡。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_w",
+      "room_id": "landmark_W",
+      "building_name": "鲸鱼海洋馆",
+      "name_zh": "汐汐",
+      "name_en": "Shelly",
+      "type": "animal",
+      "role": "海洋馆讲解员",
+      "palette": "海盐灰、海蓝、奶白",
+      "design": "灰海豹，海蓝工作服，圆鼻和奶油口鼻，双足拟人。",
+      "path": "23_landmark_W_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_w.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1426267,
+        "sha256": "161896ded14387c875fb78fafee0705d49746d9af3a7e36f1b07ebf0aa56dce2",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-baa5cd0c-7caa-4ffb-a204-6f0b5f153e55.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "海豹圆头、胡须点、鲸鱼胸章和海蓝制服清楚。生成加入贴身海员帽，保留。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_x",
+      "room_id": "landmark_X",
+      "building_name": "木琴海边舞台",
+      "name_zh": "铃鹿",
+      "name_en": "Linden",
+      "type": "animal",
+      "role": "木琴演奏家",
+      "palette": "蜂蜜棕、青绿、淡金",
+      "design": "蜂蜜色小鹿，极短圆鹿角、青绿马甲、木色长裤。",
+      "path": "24_landmark_X_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_x.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1279064,
+        "sha256": "4d3673af9ff197b6c5a95b465afb5a6663f8893f73fda7b68401d8e393410281",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-f04e8210-aad7-44c3-9504-b2e432262c57.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "小鹿短厚鹿角、耳朵与琴键贴布完整，双手和鞋底可见。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_y",
+      "room_id": "landmark_Y",
+      "building_name": "毛线手作屋",
+      "name_zh": "绵姨",
+      "name_en": "Aunt Wool",
+      "type": "animal",
+      "role": "毛线手作师",
+      "palette": "奶白、莓粉、蓝灰",
+      "design": "奶白绵羊，块面卷毛、莓粉开衫、蓝灰长裤。",
+      "path": "25_landmark_Y_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_y.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1402404,
+        "sha256": "8e059aa01b0ae7afbbd6a34056e224851d917057cd7f5da70c971b16eb46b050",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-536a579e-f4fb-43f7-802c-017d1cc2cc90.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "绵羊块面卷毛、垂耳和莓粉开衫清楚，四肢无遮挡。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_z",
+      "room_id": "landmark_Z",
+      "building_name": "斑马邮局",
+      "name_zh": "斑邮",
+      "name_en": "Zippy",
+      "type": "animal",
+      "role": "邮局投递员",
+      "palette": "墨白、邮政绿、砖红",
+      "design": "斑马邮递员，短鬃毛、绿制服，红色贴身邮包。",
+      "path": "26_landmark_Z_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_z.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1379745,
+        "sha256": "6af0e7af814b025dff953eb42e7dfd21afa93eff43a3af2fdcbba71540bb2409",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-6964fb5a-3abe-4a29-98ec-6571b47ee7c6.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "斑马条纹、绿制服、贴身红邮包清楚，邮包未遮住双手。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_school",
+      "room_id": "school",
+      "building_name": "山丘学园",
+      "name_zh": "榕校长",
+      "name_en": "Principal Rong",
+      "type": "human",
+      "role": "校园迎新校长",
+      "palette": "橄榄绿、浅米、棕褐",
+      "design": "银黑短发校长，橄榄绿开衫和叶形徽章，温厚可靠。",
+      "path": "27_school_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_school.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1306181,
+        "sha256": "365da47ba41c37c2c5aee2c0df342941646e8fcb9eb1e695af8c3644f27ee93f",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-e541c3f2-097d-4e2e-bdf0-8ec563b259aa.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "校长银黑发、成熟面容与叶形徽章清楚，橄榄绿开衫区别于其他老师。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_classroom",
+      "room_id": "classroom",
+      "building_name": "阳光教室",
+      "name_zh": "苏老师",
+      "name_en": "Teacher Sue",
+      "type": "human",
+      "role": "语言课堂老师",
+      "palette": "向日黄、天蓝、奶白",
+      "design": "短黑发女老师，黄开衫、天蓝长裤，温和明快。",
+      "path": "28_classroom_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_classroom.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1285946,
+        "sha256": "635168837ee669d3167d95facbf61dd701641122c3a708527512b49704d0bea1",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-36cc4883-cc0c-467f-9f9b-174f78b578cd.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "语言老师黑色短发、黄开衫、蓝长裤清楚，手脚无遮挡。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_music_room",
+      "room_id": "music_room",
+      "building_name": "音乐教室",
+      "name_zh": "乐老师",
+      "name_en": "Teacher Leo",
+      "type": "human",
+      "role": "音乐老师",
+      "palette": "酒红、灰蓝、奶白",
+      "design": "深肤色男音乐老师，短卷发、酒红马甲与小领结。",
+      "path": "29_music_room_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_music_room.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1270518,
+        "sha256": "d51106db9b818490bd2c99ea3f350929de903aeeccc0323286b78708750852ba",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-c26e0d78-bd7c-4abc-8fc6-2f798d9f659f.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "音乐老师小胡须、酒红马甲和音符贴布清楚，正面全身。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_art_room",
+      "room_id": "art_room",
+      "building_name": "美术教室",
+      "name_zh": "彩彩",
+      "name_en": "Callie",
+      "type": "animal",
+      "role": "美术老师",
+      "palette": "奶白、橘黑、钴蓝",
+      "design": "三花猫美术老师，蓝工作服、三块彩色围裙口袋。",
+      "path": "30_art_room_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_art_room.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1395470,
+        "sha256": "2abcc391c9166f83e661e7a2a06143507a2c399fba77b007cb490cc016089fc0",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-2b46392e-dda5-41f9-adb5-563964d53d3a.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "三花猫美术老师的三色毛发、绿色眼睛、彩色大口袋和尾巴清楚。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_science_room",
+      "room_id": "science_room",
+      "building_name": "科学教室",
+      "name_zh": "诺老师",
+      "name_en": "Teacher Nova",
+      "type": "human",
+      "role": "科学老师",
+      "palette": "浅青、雾紫、奶白",
+      "design": "雀斑女科学老师，栗色短卷发、浅青实验外套。",
+      "path": "31_science_room_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_science_room.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1286204,
+        "sha256": "174388deb60fb547db9036f6423ad4064a66c62edae3241b2f9a9461d831603a",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-0d0af833-4bc8-4280-8201-f9a3b6ca457a.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "科学老师卷发、浅青外套与分子贴布清楚，手脚完整。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_canteen",
+      "room_id": "canteen",
+      "building_name": "校园食堂",
+      "name_zh": "饭团",
+      "name_en": "Pudding",
+      "type": "animal",
+      "role": "校园厨师",
+      "palette": "竹绿、黑白、奶黄",
+      "design": "熊猫厨师，竹绿围裙、奶黄厨师帽，圆脸亲切。",
+      "path": "32_canteen_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_canteen.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1432613,
+        "sha256": "9779300c0381d51fefaf1a0df9198e7d5c32eb172fc8bf5cf6a80054cef1b469",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-75e71e2c-e356-4b0b-a013-89b60a076605.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "熊猫厨师眼斑、奶黄厨帽、竹绿围裙清楚，双手空置。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_playground",
+      "room_id": "playground",
+      "building_name": "青草操场",
+      "name_zh": "跳跳",
+      "name_en": "Joey",
+      "type": "animal",
+      "role": "操场活动领队",
+      "palette": "沙金、薄荷、珊瑚",
+      "design": "沙金袋鼠，薄荷运动服、珊瑚短裤、粗短尾巴。",
+      "path": "33_playground_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_playground.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1316165,
+        "sha256": "2a27ce760c23ffb6f2435f6dcee03ae79f467bd587b4a1671072d1fd0f644e09",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-5e356d69-731b-42d3-9c82-66f6482d06f1.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/10_bear_uncle_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "袋鼠活动领队长耳、厚尾和薄荷珊瑚运动服清楚，尾巴未遮挡腿脚。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    },
+    {
+      "resident_id": "resident_football_field",
+      "room_id": "football_field",
+      "building_name": "校园足球场",
+      "name_zh": "乔教练",
+      "name_en": "Coach Jo",
+      "type": "human",
+      "role": "足球教练",
+      "palette": "靛蓝、橙金、奶白",
+      "design": "棕肤短发女教练，蓝橙运动服，利落运动鞋。",
+      "path": "34_football_field_front.png",
+      "status": "concept_reference_checked",
+      "model_filename": "resident_football_field.glb",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1255898,
+        "sha256": "97ceeb8248eed5ef4fb17ae08e19fcb4b66e4e6681add932d0d9ec3a0004e236",
+        "background": "white",
+        "views": 1,
+        "frames": 1,
+        "source_bytes_preserved": true,
+        "collision_role": "none; 2D concept reference"
+      },
+      "source": {
+        "kind": "AI-generated original concept",
+        "tool": "built-in image_gen",
+        "date": "2026-11-12",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-eb28d748-6fc1-478b-8a58-48e53a64e19d.png",
+        "references": [
+          "F:/LoveStudy/assets/tripo/core_characters_front_v01/02_lingling_front.png"
+        ],
+        "prompt_record": "generation-plan.json",
+        "license_note": "Generated for this project; references are existing project character images."
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "review_note": "足球女教练短发、蓝橙运动服和运动鞋清楚，正面全身。",
+        "technical_checks_passed": true,
+        "reviewed_by": "Codex",
+        "in_engine_reviewed": false,
+        "tripo_model_generated": false
+      }
+    }
+  ]
+}

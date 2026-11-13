@@ -1,0 +1,824 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>字母岛 · Tripo 生成筛选</title>
+<style>
+:root{--ink:#243e35;--muted:#687b72;--accent:#246c51;--line:#d4dcd3;--paper:#f5f4ed}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.7 "Microsoft YaHei",system-ui,sans-serif}main{max-width:1480px;margin:auto;padding:42px 28px}header{border-bottom:1px solid var(--line);padding-bottom:26px}.kicker{letter-spacing:.18em;color:#876d42;font-size:12px}h1{font-size:clamp(28px,3.2vw,46px);line-height:1.25;margin:10px 0 18px}header p{max-width:970px;margin:8px 0}.budget{display:flex;flex-wrap:wrap;gap:22px;margin:24px 0}.budget div{min-width:145px;border-left:3px solid var(--accent);padding-left:16px}.budget strong{font-size:38px;line-height:1.1}.budget small{display:block;color:var(--muted);font-size:14px}.links{display:flex;flex-wrap:wrap;gap:10px 20px}a{color:var(--accent);text-underline-offset:3px}.filters{padding:24px 0 20px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}.filters button,.filters input,.filters select{font:inherit;padding:8px 13px;border:1px solid #bcc9bd;border-radius:6px;background:#fff;color:var(--ink)}.filters button{cursor:pointer}.filters button[aria-pressed=true]{background:var(--accent);color:#fff;border-color:var(--accent)}.filters input{flex:1;min-width:210px}.count{color:var(--muted);margin:0 0 16px}section.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px 20px}.card{background:white;border:1px solid #e3e6de;display:flex;flex-direction:column;min-width:0}.card[hidden]{display:none}.picture{display:block;background:#fff}.picture img{width:100%;height:auto;display:block;aspect-ratio:1;object-fit:contain}.body{padding:16px 18px 19px;display:flex;flex-direction:column;flex:1}.eyebrow{color:#7c714f;font-size:12px;letter-spacing:.05em}h2{font-size:20px;line-height:1.4;margin:5px 0}.kind{color:var(--muted);font-size:13px;margin:0!important}.body p{margin:10px 0;font-size:14px}.reuse{padding:9px 10px;background:#eff4ed}.reuse span{color:var(--muted);font-size:12px}.dependency{color:#875d24}.body code{font-size:11px;overflow-wrap:anywhere;margin-top:auto;padding-top:10px;color:var(--muted)}.download{font-size:13px;margin-top:7px}details{border:1px solid var(--line);padding:12px 16px;margin:20px 0}summary{cursor:pointer;font-weight:600}details p{max-width:1100px}footer{border-top:1px solid var(--line);margin-top:32px;padding-top:18px;color:var(--muted);font-size:13px}#empty{padding:60px 10px;text-align:center}@media(max-width:1050px){section.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}@media(max-width:760px){main{padding:24px 14px}section.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 10px}.body{padding:12px}.body h2{font-size:17px}.filters{gap:7px}.filters button{font-size:13px;padding:7px 9px}.budget{gap:15px}.budget div{min-width:90px}.budget strong{font-size:30px}}@media(max-width:440px){section.grid{grid-template-columns:1fr}.filters input{width:100%}}
+</style></head><body><main>
+<header><div class="kicker">ALPHABET ISLAND / ASSET SELECTION / 2026.11.12</div><h1>把名额留给新体型和有用的物件</h1><p>已对照 34 位建筑居民、12 位核心角色，筛过 139 张新增人物图与 24 张物品图。建议先做下面 48 个，其余按具体章节安排。</p><div class="budget"><div><strong>48</strong><small>优先：32 角色 + 16 物品</small></div><div><strong>12</strong><small>候选：8 角色 + 4 物品</small></div><div><strong>10</strong><small>保留：补缺与返工</small></div></div><nav class="links"><a href="01_priority_48.zip" download>下载优先 48 个 ZIP</a><a href="02_optional_12.zip" download>下载候选 12 个 ZIP</a><a href="selection.csv" download>全部决定 CSV</a><a href="README.md">筛选说明与命名表</a><a href="../reference_library_20261112/index.html">全部原始素材</a></nav></header>
+<details><summary>如何减少重复：共用网格，保留各自的人物身份</summary><p>Lily / Lucy 只生成 1 个；三只幼犬只生成 Kathy；六只大小比较鸟先生成 Baker。拟人动物和自然四足动物分别处理。照片、习题和单篇阅读中的人物可以先用现有图片。</p><p>“复用”项列出了基础模型和预计改动，尚未执行。发型、衣服和头身比例有些需要局部改模；只在相近网格上改色即可的项目会明确标低工作量。具名人物仍保留独立姓名、对白和来源。Mr Wang 是环卫工人，Miss Lin 是车站服务员。</p><p>这些是后续章节的制作建议。34 个居民 GLB 已收到并通过文件结构检查，下载名尚未逐一对应角色；本轮未调用 Tripo、未导入游戏。</p></details>
+<div class="filters" role="group" aria-label="筛选素材"><button data-filter="priority" aria-pressed="true">优先 48</button><button data-filter="optional" aria-pressed="false">候选 12</button><button data-filter="reuse" aria-pressed="false">复用 84</button><button data-filter="defer" aria-pressed="false">暂缓 19</button><button data-filter="all" aria-pressed="false">全部 163</button><select id="kind" aria-label="素材类型"><option value="all">角色与物品</option><option value="character">仅角色</option><option value="prop">仅物品</option></select><input id="query" type="search" aria-label="搜索素材" placeholder="搜索姓名、资产 ID、复用基础…"></div><p class="count" id="count" aria-live="polite"></p>
+<section class="grid"><article class="card" data-decision="priority" data-kind="character" data-search="textbook_li_jie Li Jie textbook_li_jie.glb 兽医 Li Jie 的白大褂与听诊器补齐医疗职业轮廓；可作为后续医疗服装的制作起点。 ">
+      <a class="picture" href="01_priority_48/P01_textbook_li_jie.png" target="_blank"><img src="preview/textbook_li_jie.jpg" alt="Li Jie" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P01 · 优先生成</div>
+      <h2>Li Jie</h2><p class="kind">职业与制服</p><p>兽医 Li Jie 的白大褂与听诊器补齐医疗职业轮廓；可作为后续医疗服装的制作起点。</p>
+      <code>textbook_li_jie.glb</code><a class="download" href="01_priority_48/P01_textbook_li_jie.png" download="P01_textbook_li_jie.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_mr_wang Mr Wang textbook_mr_wang.glb 环卫工人 Mr Wang 的反光工装和工作帽形成独立职业造型；教材身份为环卫工人。 ">
+      <a class="picture" href="01_priority_48/P02_textbook_mr_wang.png" target="_blank"><img src="preview/textbook_mr_wang.jpg" alt="Mr Wang" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P02 · 优先生成</div>
+      <h2>Mr Wang</h2><p class="kind">职业与制服</p><p>环卫工人 Mr Wang 的反光工装和工作帽形成独立职业造型；教材身份为环卫工人。</p>
+      <code>textbook_mr_wang.glb</code><a class="download" href="01_priority_48/P02_textbook_mr_wang.png" download="P02_textbook_mr_wang.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_mr_chen Mr Chen textbook_mr_chen.glb 交警 Mr Chen 的制帽、反光背心和手套与既有人物服装差异明确。 ">
+      <a class="picture" href="01_priority_48/P03_textbook_mr_chen.png" target="_blank"><img src="preview/textbook_mr_chen.jpg" alt="Mr Chen" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P03 · 优先生成</div>
+      <h2>Mr Chen</h2><p class="kind">职业与制服</p><p>交警 Mr Chen 的制帽、反光背心和手套与既有人物服装差异明确。</p>
+      <code>textbook_mr_chen.glb</code><a class="download" href="01_priority_48/P03_textbook_mr_chen.png" download="P03_textbook_mr_chen.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_miss_lin Miss Lin textbook_miss_lin.glb 车站服务员 Miss Lin 提供成人女性制服造型，适用于问路、帮助乘客的教材情境。 ">
+      <a class="picture" href="01_priority_48/P04_textbook_miss_lin.png" target="_blank"><img src="preview/textbook_miss_lin.jpg" alt="Miss Lin" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P04 · 优先生成</div>
+      <h2>Miss Lin</h2><p class="kind">职业与制服</p><p>车站服务员 Miss Lin 提供成人女性制服造型，适用于问路、帮助乘客的教材情境。</p>
+      <code>textbook_miss_lin.glb</code><a class="download" href="01_priority_48/P04_textbook_miss_lin.png" download="P04_textbook_miss_lin.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_wang_yaping Wang Yaping textbook_wang_yaping.glb 王亚平的成人宇航服带有明显的颈环、关节和手套结构；其他成人航天服可从这套服装派生。 ">
+      <a class="picture" href="01_priority_48/P05_textbook_wang_yaping.png" target="_blank"><img src="preview/textbook_wang_yaping.jpg" alt="Wang Yaping" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P05 · 优先生成</div>
+      <h2>Wang Yaping</h2><p class="kind">职业与制服</p><p>王亚平的成人宇航服带有明显的颈环、关节和手套结构；其他成人航天服可从这套服装派生。</p>
+      <code>textbook_wang_yaping.glb</code><a class="download" href="01_priority_48/P05_textbook_wang_yaping.png" download="P05_textbook_wang_yaping.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_role_lingling_mother Lingling 的母亲 textbook_role_lingling_mother.glb 玲玲母亲的成年比例与日常长裙用于三上家庭介绍；也可作为其他母亲角色的身体、裙装起点。 ">
+      <a class="picture" href="01_priority_48/P06_textbook_role_lingling_mother.png" target="_blank"><img src="preview/textbook_role_lingling_mother.jpg" alt="Lingling 的母亲" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P06 · 优先生成</div>
+      <h2>Lingling 的母亲</h2><p class="kind">家庭基础角色</p><p>玲玲母亲的成年比例与日常长裙用于三上家庭介绍；也可作为其他母亲角色的身体、裙装起点。</p>
+      <code>textbook_role_lingling_mother.glb</code><a class="download" href="01_priority_48/P06_textbook_role_lingling_mother.png" download="P06_textbook_role_lingling_mother.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_role_lingling_father Lingling 的父亲 textbook_role_lingling_father.glb 玲玲父亲的成年比例与日常针织衫用于三上家庭介绍；能减少后来普通成年男性的独立建模。 ">
+      <a class="picture" href="01_priority_48/P07_textbook_role_lingling_father.png" target="_blank"><img src="preview/textbook_role_lingling_father.jpg" alt="Lingling 的父亲" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P07 · 优先生成</div>
+      <h2>Lingling 的父亲</h2><p class="kind">家庭基础角色</p><p>玲玲父亲的成年比例与日常针织衫用于三上家庭介绍；能减少后来普通成年男性的独立建模。</p>
+      <code>textbook_role_lingling_father.glb</code><a class="download" href="01_priority_48/P07_textbook_role_lingling_father.png" download="P07_textbook_role_lingling_father.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_uncle_ben Uncle Ben textbook_uncle_ben.glb Uncle Ben 的红棕发、衬衫与背心补充另一种成年男性造型，并与家庭成员同场使用。 ">
+      <a class="picture" href="01_priority_48/P08_textbook_uncle_ben.png" target="_blank"><img src="preview/textbook_uncle_ben.jpg" alt="Uncle Ben" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P08 · 优先生成</div>
+      <h2>Uncle Ben</h2><p class="kind">家庭基础角色</p><p>Uncle Ben 的红棕发、衬衫与背心补充另一种成年男性造型，并与家庭成员同场使用。</p>
+      <code>textbook_uncle_ben.glb</code><a class="download" href="01_priority_48/P08_textbook_uncle_ben.png" download="P08_textbook_uncle_ben.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_aunt_carol Aunt Carol textbook_aunt_carol.glb Aunt Carol 的长卷发和衬衫长裙提供另一种成年女性轮廓，避免家庭场景所有母亲同形。 ">
+      <a class="picture" href="01_priority_48/P09_textbook_aunt_carol.png" target="_blank"><img src="preview/textbook_aunt_carol.jpg" alt="Aunt Carol" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P09 · 优先生成</div>
+      <h2>Aunt Carol</h2><p class="kind">家庭基础角色</p><p>Aunt Carol 的长卷发和衬衫长裙提供另一种成年女性轮廓，避免家庭场景所有母亲同形。</p>
+      <code>textbook_aunt_carol.glb</code><a class="download" href="01_priority_48/P09_textbook_aunt_carol.png" download="P09_textbook_aunt_carol.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_lily Lily textbook_lily.glb Lily 与 Lucy 的参考图几乎同形；只生成 Lily，另一位保留独立身份并复用网格。 ">
+      <a class="picture" href="01_priority_48/P10_textbook_lily.png" target="_blank"><img src="preview/textbook_lily.jpg" alt="Lily" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P10 · 优先生成</div>
+      <h2>Lily</h2><p class="kind">家庭基础角色</p><p>Lily 与 Lucy 的参考图几乎同形；只生成 Lily，另一位保留独立身份并复用网格。</p>
+      <code>textbook_lily.glb</code><a class="download" href="01_priority_48/P10_textbook_lily.png" download="P10_textbook_lily.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_amy Amy textbook_amy.glb Amy 的卷发双髻、背带裙和肤色组合补充现有儿童造型；可作为 Cindy、Fran 等改装的身体起点。 ">
+      <a class="picture" href="01_priority_48/P11_textbook_amy.png" target="_blank"><img src="preview/textbook_amy.jpg" alt="Amy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P11 · 优先生成</div>
+      <h2>Amy</h2><p class="kind">儿童基础角色</p><p>Amy 的卷发双髻、背带裙和肤色组合补充现有儿童造型；可作为 Cindy、Fran 等改装的身体起点。</p>
+      <code>textbook_amy.glb</code><a class="download" href="01_priority_48/P11_textbook_amy.png" download="P11_textbook_amy.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_dan Dan textbook_dan.glb Dan 的紧卷短发与连帽外套补充另一种儿童轮廓；Benson 等可复用身体后更换服装。 ">
+      <a class="picture" href="01_priority_48/P12_textbook_dan.png" target="_blank"><img src="preview/textbook_dan.jpg" alt="Dan" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P12 · 优先生成</div>
+      <h2>Dan</h2><p class="kind">儿童基础角色</p><p>Dan 的紧卷短发与连帽外套补充另一种儿童轮廓；Benson 等可复用身体后更换服装。</p>
+      <code>textbook_dan.glb</code><a class="download" href="01_priority_48/P12_textbook_dan.png" download="P12_textbook_dan.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_doggie Doggie textbook_doggie.glb Doggie 是自然四足犬；已有的站立动物居民无法直接提供这种身体结构和行走方式。 ">
+      <a class="picture" href="01_priority_48/P13_textbook_doggie.png" target="_blank"><img src="preview/textbook_doggie.jpg" alt="Doggie" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P13 · 优先生成</div>
+      <h2>Doggie</h2><p class="kind">动物与机器人</p><p>Doggie 是自然四足犬；已有的站立动物居民无法直接提供这种身体结构和行走方式。</p>
+      <code>textbook_doggie.glb</code><a class="download" href="01_priority_48/P13_textbook_doggie.png" download="P13_textbook_doggie.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_kitty Kitty textbook_kitty.glb Kitty 是自然四足短毛猫；与拟人美术老师彩彩分开制作，可承接白猫毛色变体。 ">
+      <a class="picture" href="01_priority_48/P14_textbook_kitty.png" target="_blank"><img src="preview/textbook_kitty.jpg" alt="Kitty" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P14 · 优先生成</div>
+      <h2>Kitty</h2><p class="kind">动物与机器人</p><p>Kitty 是自然四足短毛猫；与拟人美术老师彩彩分开制作，可承接白猫毛色变体。</p>
+      <code>textbook_kitty.glb</code><a class="download" href="01_priority_48/P14_textbook_kitty.png" download="P14_textbook_kitty.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_elephant_ella Elephant Ella textbook_elephant_ella.glb Elephant Ella 补齐象鼻、大耳与粗壮四肢，已有模型中没有相近体型。 ">
+      <a class="picture" href="01_priority_48/P15_textbook_elephant_ella.png" target="_blank"><img src="preview/textbook_elephant_ella.jpg" alt="Elephant Ella" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P15 · 优先生成</div>
+      <h2>Elephant Ella</h2><p class="kind">动物与机器人</p><p>Elephant Ella 补齐象鼻、大耳与粗壮四肢，已有模型中没有相近体型。</p>
+      <code>textbook_elephant_ella.glb</code><a class="download" href="01_priority_48/P15_textbook_elephant_ella.png" download="P15_textbook_elephant_ella.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_fendi Fendi textbook_fendi.glb Fendi 补齐鱼体、鳍和尾部结构；适合水中故事与观察活动。 ">
+      <a class="picture" href="01_priority_48/P16_textbook_fendi.png" target="_blank"><img src="preview/textbook_fendi.jpg" alt="Fendi" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P16 · 优先生成</div>
+      <h2>Fendi</h2><p class="kind">动物与机器人</p><p>Fendi 补齐鱼体、鳍和尾部结构；适合水中故事与观察活动。</p>
+      <code>textbook_fendi.glb</code><a class="download" href="01_priority_48/P16_textbook_fendi.png" download="P16_textbook_fendi.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_qinmou Qinmou textbook_qinmou.glb Qinmou 是自然姿态的金丝猴，与穿衣直立的鼓鼓体型和支撑方式有明显差异。 ">
+      <a class="picture" href="01_priority_48/P17_textbook_qinmou.png" target="_blank"><img src="preview/textbook_qinmou.jpg" alt="Qinmou" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P17 · 优先生成</div>
+      <h2>Qinmou</h2><p class="kind">动物与机器人</p><p>Qinmou 是自然姿态的金丝猴，与穿衣直立的鼓鼓体型和支撑方式有明显差异。</p>
+      <code>textbook_qinmou.glb</code><a class="download" href="01_priority_48/P17_textbook_qinmou.png" download="P17_textbook_qinmou.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_bunny Bunny textbook_bunny.glb Bunny 是自然兔，保留后腿、长耳与四足结构；与穿衣的兔兔园丁分别处理。 ">
+      <a class="picture" href="01_priority_48/P18_textbook_bunny.png" target="_blank"><img src="preview/textbook_bunny.jpg" alt="Bunny" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P18 · 优先生成</div>
+      <h2>Bunny</h2><p class="kind">动物与机器人</p><p>Bunny 是自然兔，保留后腿、长耳与四足结构；与穿衣的兔兔园丁分别处理。</p>
+      <code>textbook_bunny.glb</code><a class="download" href="01_priority_48/P18_textbook_bunny.png" download="P18_textbook_bunny.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_nian Nian textbook_nian.glb 年兽的角、鬃毛、尾巴和四足轮廓独特，适合节庆故事。 ">
+      <a class="picture" href="01_priority_48/P19_textbook_nian.png" target="_blank"><img src="preview/textbook_nian.jpg" alt="Nian" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P19 · 优先生成</div>
+      <h2>Nian</h2><p class="kind">动物与机器人</p><p>年兽的角、鬃毛、尾巴和四足轮廓独特，适合节庆故事。</p>
+      <code>textbook_nian.glb</code><a class="download" href="01_priority_48/P19_textbook_nian.png" download="P19_textbook_nian.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_baker_bird Baker textbook_baker_bird.glb Baker 作为六只大小比较鸟的基础网格；其他五只先以缩放、羽色及少量冠羽/尾羽调整派生。 ">
+      <a class="picture" href="01_priority_48/P20_textbook_baker_bird.png" target="_blank"><img src="preview/textbook_baker_bird.jpg" alt="Baker" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P20 · 优先生成</div>
+      <h2>Baker</h2><p class="kind">动物与机器人</p><p>Baker 作为六只大小比较鸟的基础网格；其他五只先以缩放、羽色及少量冠羽/尾羽调整派生。</p>
+      <code>textbook_baker_bird.glb</code><a class="download" href="01_priority_48/P20_textbook_baker_bird.png" download="P20_textbook_baker_bird.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_kelly Kelly textbook_kelly.glb Kelly 是细长四肢的成年母犬；犬妈妈与圆头短身幼犬同场时需要不同的身体比例。 ">
+      <a class="picture" href="01_priority_48/P21_textbook_kelly.png" target="_blank"><img src="preview/textbook_kelly.jpg" alt="Kelly" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P21 · 优先生成</div>
+      <h2>Kelly</h2><p class="kind">动物与机器人</p><p>Kelly 是细长四肢的成年母犬；犬妈妈与圆头短身幼犬同场时需要不同的身体比例。</p>
+      <code>textbook_kelly.glb</code><a class="download" href="01_priority_48/P21_textbook_kelly.png" download="P21_textbook_kelly.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_kathy Kathy textbook_kathy.glb Kathy 作为三只幼犬的共同网格；Kent、Karen 通过黑色和斑点贴图、领结色区分。 ">
+      <a class="picture" href="01_priority_48/P22_textbook_kathy.png" target="_blank"><img src="preview/textbook_kathy.jpg" alt="Kathy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P22 · 优先生成</div>
+      <h2>Kathy</h2><p class="kind">动物与机器人</p><p>Kathy 作为三只幼犬的共同网格；Kent、Karen 通过黑色和斑点贴图、领结色区分。</p>
+      <code>textbook_kathy.glb</code><a class="download" href="01_priority_48/P22_textbook_kathy.png" download="P22_textbook_kathy.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_role_xiaoxiao_parrot Xiaoxiao 的鹦鹉 textbook_role_xiaoxiao_parrot.glb 鹦鹉的弯喙、长尾与足部抓握结构区别于比较大小的小鸟，单独保留。 ">
+      <a class="picture" href="01_priority_48/P23_textbook_role_xiaoxiao_parrot.png" target="_blank"><img src="preview/textbook_role_xiaoxiao_parrot.jpg" alt="Xiaoxiao 的鹦鹉" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P23 · 优先生成</div>
+      <h2>Xiaoxiao 的鹦鹉</h2><p class="kind">动物与机器人</p><p>鹦鹉的弯喙、长尾与足部抓握结构区别于比较大小的小鸟，单独保留。</p>
+      <code>textbook_role_xiaoxiao_parrot.glb</code><a class="download" href="01_priority_48/P23_textbook_role_xiaoxiao_parrot.png" download="P23_textbook_role_xiaoxiao_parrot.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_robbie Robbie textbook_robbie.glb Robbie 提供独立机械关节与外壳造型；玩具机器人可考虑用其简化版本。 ">
+      <a class="picture" href="01_priority_48/P24_textbook_robbie.png" target="_blank"><img src="preview/textbook_robbie.jpg" alt="Robbie" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P24 · 优先生成</div>
+      <h2>Robbie</h2><p class="kind">动物与机器人</p><p>Robbie 提供独立机械关节与外壳造型；玩具机器人可考虑用其简化版本。</p>
+      <code>textbook_robbie.glb</code><a class="download" href="01_priority_48/P24_textbook_robbie.png" download="P24_textbook_robbie.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_confucius Confucius textbook_confucius.glb 孔子的长须、古代学者长袍和发髻提供老年文士造型；作为后续相关故事服装的基础。 ">
+      <a class="picture" href="01_priority_48/P25_textbook_confucius.png" target="_blank"><img src="preview/textbook_confucius.jpg" alt="Confucius" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P25 · 优先生成</div>
+      <h2>Confucius</h2><p class="kind">故事与文化造型</p><p>孔子的长须、古代学者长袍和发髻提供老年文士造型；作为后续相关故事服装的基础。</p>
+      <code>textbook_confucius.glb</code><a class="download" href="01_priority_48/P25_textbook_confucius.png" download="P25_textbook_confucius.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_qu_yuan Qu Yuan textbook_qu_yuan.glb 屈原提供较清瘦的成年古装长袍造型，与老年孔子和儿童古装区分。 ">
+      <a class="picture" href="01_priority_48/P26_textbook_qu_yuan.png" target="_blank"><img src="preview/textbook_qu_yuan.jpg" alt="Qu Yuan" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P26 · 优先生成</div>
+      <h2>Qu Yuan</h2><p class="kind">故事与文化造型</p><p>屈原提供较清瘦的成年古装长袍造型，与老年孔子和儿童古装区分。</p>
+      <code>textbook_qu_yuan.glb</code><a class="download" href="01_priority_48/P26_textbook_qu_yuan.png" download="P26_textbook_qu_yuan.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_zhang_heng Zhang Heng textbook_zhang_heng.glb 这里的张衡是幼年形象；儿童交领短袍和发式可用于后续古代儿童服装改装。 ">
+      <a class="picture" href="01_priority_48/P27_textbook_zhang_heng.png" target="_blank"><img src="preview/textbook_zhang_heng.jpg" alt="Zhang Heng" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P27 · 优先生成</div>
+      <h2>Zhang Heng</h2><p class="kind">故事与文化造型</p><p>这里的张衡是幼年形象；儿童交领短袍和发式可用于后续古代儿童服装改装。</p>
+      <code>textbook_zhang_heng.glb</code><a class="download" href="01_priority_48/P27_textbook_zhang_heng.png" download="P27_textbook_zhang_heng.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_yu_gong Yu Gong textbook_yu_gong.glb 愚公的瘦长老年体型、短袖短裤和草鞋区别于文士长袍，保留劳动场景造型。 ">
+      <a class="picture" href="01_priority_48/P28_textbook_yu_gong.png" target="_blank"><img src="preview/textbook_yu_gong.jpg" alt="Yu Gong" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P28 · 优先生成</div>
+      <h2>Yu Gong</h2><p class="kind">故事与文化造型</p><p>愚公的瘦长老年体型、短袖短裤和草鞋区别于文士长袍，保留劳动场景造型。</p>
+      <code>textbook_yu_gong.glb</code><a class="download" href="01_priority_48/P28_textbook_yu_gong.png" download="P28_textbook_yu_gong.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_jade_emperor Jade Emperor textbook_jade_emperor.glb 玉皇大帝提供冠冕、礼服和宽袍结构，可作为其他古代君主服装的起点。 ">
+      <a class="picture" href="01_priority_48/P29_textbook_jade_emperor.png" target="_blank"><img src="preview/textbook_jade_emperor.jpg" alt="Jade Emperor" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P29 · 优先生成</div>
+      <h2>Jade Emperor</h2><p class="kind">故事与文化造型</p><p>玉皇大帝提供冠冕、礼服和宽袍结构，可作为其他古代君主服装的起点。</p>
+      <code>textbook_jade_emperor.glb</code><a class="download" href="01_priority_48/P29_textbook_jade_emperor.png" download="P29_textbook_jade_emperor.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_chang_e Chang&#x27;e textbook_chang_e.glb 嫦娥的宽袖、长裙和飘带轮廓独特，现有日常女性服装难以直接派生。 ">
+      <a class="picture" href="01_priority_48/P30_textbook_chang_e.png" target="_blank"><img src="preview/textbook_chang_e.jpg" alt="Chang&#x27;e" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P30 · 优先生成</div>
+      <h2>Chang&#x27;e</h2><p class="kind">故事与文化造型</p><p>嫦娥的宽袖、长裙和飘带轮廓独特，现有日常女性服装难以直接派生。</p>
+      <code>textbook_chang_e.glb</code><a class="download" href="01_priority_48/P30_textbook_chang_e.png" download="P30_textbook_chang_e.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_santa_claus Santa Claus textbook_santa_claus.glb 圣诞老人的圆润体型、胡须、红衣与靴子形成完整节庆造型；可复用帽子配件。 ">
+      <a class="picture" href="01_priority_48/P31_textbook_santa_claus.png" target="_blank"><img src="preview/textbook_santa_claus.jpg" alt="Santa Claus" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P31 · 优先生成</div>
+      <h2>Santa Claus</h2><p class="kind">故事与文化造型</p><p>圣诞老人的圆润体型、胡须、红衣与靴子形成完整节庆造型；可复用帽子配件。</p>
+      <code>textbook_santa_claus.glb</code><a class="download" href="01_priority_48/P31_textbook_santa_claus.png" download="P31_textbook_santa_claus.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="character" data-search="textbook_old_macdonald Old MacDonald textbook_old_macdonald.glb Old MacDonald 的老年体型、草帽与背带工装适合作为农场活动常用造型。 ">
+      <a class="picture" href="01_priority_48/P32_textbook_old_macdonald.png" target="_blank"><img src="preview/textbook_old_macdonald.jpg" alt="Old MacDonald" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P32 · 优先生成</div>
+      <h2>Old MacDonald</h2><p class="kind">故事与文化造型</p><p>Old MacDonald 的老年体型、草帽与背带工装适合作为农场活动常用造型。</p>
+      <code>textbook_old_macdonald.glb</code><a class="download" href="01_priority_48/P32_textbook_old_macdonald.png" download="P32_textbook_old_macdonald.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="train 红色蒸汽小火车 prop_train.glb 从当前块状小火车提升为清晰的机车轮廓，锅炉、驾驶室与车轮细节使用频率高。 ">
+      <a class="picture" href="01_priority_48/P33_train.png" target="_blank"><img src="preview/train.jpg" alt="红色蒸汽小火车" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P33 · 优先生成</div>
+      <h2>红色蒸汽小火车</h2><p class="kind">道具、家具与配饰</p><p>从当前块状小火车提升为清晰的机车轮廓，锅炉、驾驶室与车轮细节使用频率高。</p>
+      <code>prop_train.glb</code><a class="download" href="01_priority_48/P33_train.png" download="P33_train.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="whale_shell 海蓝旋纹贝壳 prop_whale_shell.glb 螺旋外壳与开口曲面有明显立体细节，适合海边拾取物。 ">
+      <a class="picture" href="01_priority_48/P34_whale_shell.png" target="_blank"><img src="preview/whale_shell.jpg" alt="海蓝旋纹贝壳" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P34 · 优先生成</div>
+      <h2>海蓝旋纹贝壳</h2><p class="kind">道具、家具与配饰</p><p>螺旋外壳与开口曲面有明显立体细节，适合海边拾取物。</p>
+      <code>prop_whale_shell.glb</code><a class="download" href="01_priority_48/P34_whale_shell.png" download="P34_whale_shell.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="nest 暖枝小鸟巢 prop_nest.glb 交错树枝与巢碗结构较费手工，能明显改善鸟巢场景。 ">
+      <a class="picture" href="01_priority_48/P35_nest.png" target="_blank"><img src="preview/nest.jpg" alt="暖枝小鸟巢" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P35 · 优先生成</div>
+      <h2>暖枝小鸟巢</h2><p class="kind">道具、家具与配饰</p><p>交错树枝与巢碗结构较费手工，能明显改善鸟巢场景。</p>
+      <code>prop_nest.glb</code><a class="download" href="01_priority_48/P35_nest.png" download="P35_nest.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="lantern 暖光纸灯笼 prop_lantern.glb 补齐灯笼的提手、筋骨和穗，能同时服务灯笼屋与节庆活动。 ">
+      <a class="picture" href="01_priority_48/P36_lantern.png" target="_blank"><img src="preview/lantern.jpg" alt="暖光纸灯笼" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P36 · 优先生成</div>
+      <h2>暖光纸灯笼</h2><p class="kind">道具、家具与配饰</p><p>补齐灯笼的提手、筋骨和穗，能同时服务灯笼屋与节庆活动。</p>
+      <code>prop_lantern.glb</code><a class="download" href="01_priority_48/P36_lantern.png" download="P36_lantern.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="yarn 蜜桃毛线球 prop_yarn.glb 交错毛线纹理比现有单色球更有辨识度，可用于毛线屋与收藏道具。 ">
+      <a class="picture" href="01_priority_48/P37_yarn.png" target="_blank"><img src="preview/yarn.jpg" alt="蜜桃毛线球" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P37 · 优先生成</div>
+      <h2>蜜桃毛线球</h2><p class="kind">道具、家具与配饰</p><p>交错毛线纹理比现有单色球更有辨识度，可用于毛线屋与收藏道具。</p>
+      <code>prop_yarn.glb</code><a class="download" href="01_priority_48/P37_yarn.png" download="P37_yarn.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="pumpkin 秋日小南瓜 prop_pumpkin.glb 保留南瓜沟槽、瓜柄和叶片，可用于农场、节庆与摆设。 ">
+      <a class="picture" href="01_priority_48/P38_pumpkin.png" target="_blank"><img src="preview/pumpkin.jpg" alt="秋日小南瓜" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P38 · 优先生成</div>
+      <h2>秋日小南瓜</h2><p class="kind">道具、家具与配饰</p><p>保留南瓜沟槽、瓜柄和叶片，可用于农场、节庆与摆设。</p>
+      <code>prop_pumpkin.glb</code><a class="download" href="01_priority_48/P38_pumpkin.png" download="P38_pumpkin.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="ice_cream 草莓冰淇淋 prop_ice_cream.glb 甜筒格纹和冰淇淋表面能提升近景拾取/展示观感。 ">
+      <a class="picture" href="01_priority_48/P39_ice_cream.png" target="_blank"><img src="preview/ice_cream.jpg" alt="草莓冰淇淋" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P39 · 优先生成</div>
+      <h2>草莓冰淇淋</h2><p class="kind">道具、家具与配饰</p><p>甜筒格纹和冰淇淋表面能提升近景拾取/展示观感。</p>
+      <code>prop_ice_cream.glb</code><a class="download" href="01_priority_48/P39_ice_cream.png" download="P39_ice_cream.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="bread 麦香乡村面包 prop_bread.glb 面包裂纹和烘焙表面能替换现有简化几何，适合烘焙屋及餐饮场景。 ">
+      <a class="picture" href="01_priority_48/P40_bread.png" target="_blank"><img src="preview/bread.jpg" alt="麦香乡村面包" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P40 · 优先生成</div>
+      <h2>麦香乡村面包</h2><p class="kind">道具、家具与配饰</p><p>面包裂纹和烘焙表面能替换现有简化几何，适合烘焙屋及餐饮场景。</p>
+      <code>prop_bread.glb</code><a class="download" href="01_priority_48/P40_bread.png" download="P40_bread.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="reading_sofa 云朵双人沙发 prop_reading_sofa.glb 常驻室内的较大件家具，软包和云朵靠背会持续出现在画面里。 ">
+      <a class="picture" href="01_priority_48/P41_reading_sofa.png" target="_blank"><img src="preview/reading_sofa.jpg" alt="云朵双人沙发" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P41 · 优先生成</div>
+      <h2>云朵双人沙发</h2><p class="kind">道具、家具与配饰</p><p>常驻室内的较大件家具，软包和云朵靠背会持续出现在画面里。</p>
+      <code>prop_reading_sofa.glb</code><a class="download" href="01_priority_48/P41_reading_sofa.png" download="P41_reading_sofa.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="walnut_bookshelf 童话绘本架 prop_walnut_bookshelf.glb 常驻图书/家居场景，层架开口与弧顶具有明显视觉收益；书和抽屉后续按需拆分。 ">
+      <a class="picture" href="01_priority_48/P42_walnut_bookshelf.png" target="_blank"><img src="preview/walnut_bookshelf.jpg" alt="童话绘本架" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P42 · 优先生成</div>
+      <h2>童话绘本架</h2><p class="kind">道具、家具与配饰</p><p>常驻图书/家居场景，层架开口与弧顶具有明显视觉收益；书和抽屉后续按需拆分。</p>
+      <code>prop_walnut_bookshelf.glb</code><a class="download" href="01_priority_48/P42_walnut_bookshelf.png" download="P42_walnut_bookshelf.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="music_gramophone 黄铜留声机 prop_music_gramophone.glb 喇叭口和弯管结构独特，适合音乐场景；唱片若需旋转要另分件。 ">
+      <a class="picture" href="01_priority_48/P43_music_gramophone.png" target="_blank"><img src="preview/music_gramophone.jpg" alt="黄铜留声机" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P43 · 优先生成</div>
+      <h2>黄铜留声机</h2><p class="kind">道具、家具与配饰</p><p>喇叭口和弯管结构独特，适合音乐场景；唱片若需旋转要另分件。</p>
+      <code>prop_music_gramophone.glb</code><a class="download" href="01_priority_48/P43_music_gramophone.png" download="P43_music_gramophone.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="bunny_topiary 兔兔绿雕 prop_bunny_topiary.glb 兔形轮廓与叶簇细节能作为庭院视觉中心；与活动角色分开处理。 ">
+      <a class="picture" href="01_priority_48/P44_bunny_topiary.png" target="_blank"><img src="preview/bunny_topiary.jpg" alt="兔兔绿雕" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P44 · 优先生成</div>
+      <h2>兔兔绿雕</h2><p class="kind">道具、家具与配饰</p><p>兔形轮廓与叶簇细节能作为庭院视觉中心；与活动角色分开处理。</p>
+      <code>prop_bunny_topiary.glb</code><a class="download" href="01_priority_48/P44_bunny_topiary.png" download="P44_bunny_topiary.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="straw_hat 田园丝带草帽 prop_straw_hat.glb 一件独立草帽可以给多位人物复用，编织材质和帽檐比重复生成人物更划算。 ">
+      <a class="picture" href="01_priority_48/P45_straw_hat.png" target="_blank"><img src="preview/straw_hat.jpg" alt="田园丝带草帽" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P45 · 优先生成</div>
+      <h2>田园丝带草帽</h2><p class="kind">道具、家具与配饰</p><p>一件独立草帽可以给多位人物复用，编织材质和帽檐比重复生成人物更划算。</p>
+      <code>prop_straw_hat.glb</code><a class="download" href="01_priority_48/P45_straw_hat.png" download="P45_straw_hat.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="star_beret 摘星画家贝雷帽 prop_star_beret.glb 一件贝雷帽可供多个发型适配，保留独立配件以减少整个人物重生成。 ">
+      <a class="picture" href="01_priority_48/P46_star_beret.png" target="_blank"><img src="preview/star_beret.jpg" alt="摘星画家贝雷帽" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P46 · 优先生成</div>
+      <h2>摘星画家贝雷帽</h2><p class="kind">道具、家具与配饰</p><p>一件贝雷帽可供多个发型适配，保留独立配件以减少整个人物重生成。</p>
+      <code>prop_star_beret.glb</code><a class="download" href="01_priority_48/P46_star_beret.png" download="P46_star_beret.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="school_pack 元气向日葵书包 prop_school_pack.glb 书包可供儿童角色和学校场景反复使用；背带需按角色体型校正。 ">
+      <a class="picture" href="01_priority_48/P47_school_pack.png" target="_blank"><img src="preview/school_pack.jpg" alt="元气向日葵书包" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P47 · 优先生成</div>
+      <h2>元气向日葵书包</h2><p class="kind">道具、家具与配饰</p><p>书包可供儿童角色和学校场景反复使用；背带需按角色体型校正。</p>
+      <code>prop_school_pack.glb</code><a class="download" href="01_priority_48/P47_school_pack.png" download="P47_school_pack.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="priority" data-kind="prop" data-search="picnic_basket 藤编野餐花篮 prop_picnic_basket.glb 藤编纹理、开口和背带结构适合图生模型，并能服务采集与野餐场景。 ">
+      <a class="picture" href="01_priority_48/P48_picnic_basket.png" target="_blank"><img src="preview/picnic_basket.jpg" alt="藤编野餐花篮" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">P48 · 优先生成</div>
+      <h2>藤编野餐花篮</h2><p class="kind">道具、家具与配饰</p><p>藤编纹理、开口和背带结构适合图生模型，并能服务采集与野餐场景。</p>
+      <code>prop_picnic_basket.glb</code><a class="download" href="01_priority_48/P48_picnic_basket.png" download="P48_picnic_basket.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="character" data-search="textbook_daisy Daisy textbook_daisy.glb Daisy 的红色卷发与连帽衫有辨识度；三下植树情境确定制作独立角色时再生成。 ">
+      <a class="picture" href="02_optional_12/O01_textbook_daisy.png" target="_blank"><img src="preview/textbook_daisy.jpg" alt="Daisy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O01 · 条件候选</div>
+      <h2>Daisy</h2><p class="kind">按章节再选</p><p>Daisy 的红色卷发与连帽衫有辨识度；三下植树情境确定制作独立角色时再生成。</p>
+      <code>textbook_daisy.glb</code><a class="download" href="02_optional_12/O01_textbook_daisy.png" download="O01_textbook_daisy.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="character" data-search="textbook_bob_weather_photo Bob textbook_bob_weather_photo.glb 照片例句中的 Bob 有完整雨衣造型；只有需要近景天气表演时才值得独立生成。 ">
+      <a class="picture" href="02_optional_12/O02_textbook_bob_weather_photo.png" target="_blank"><img src="preview/textbook_bob_weather_photo.jpg" alt="Bob" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O02 · 条件候选</div>
+      <h2>Bob</h2><p class="kind">按章节再选</p><p>照片例句中的 Bob 有完整雨衣造型；只有需要近景天气表演时才值得独立生成。</p>
+      <code>textbook_bob_weather_photo.glb</code><a class="download" href="02_optional_12/O02_textbook_bob_weather_photo.png" download="O02_textbook_bob_weather_photo.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="character" data-search="textbook_socrates Socrates textbook_socrates.glb 苏格拉底的希腊长袍有独立轮廓；文化页先保留图片，需要三维展示时再生成。 ">
+      <a class="picture" href="02_optional_12/O03_textbook_socrates.png" target="_blank"><img src="preview/textbook_socrates.jpg" alt="Socrates" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O03 · 条件候选</div>
+      <h2>Socrates</h2><p class="kind">按章节再选</p><p>苏格拉底的希腊长袍有独立轮廓；文化页先保留图片，需要三维展示时再生成。</p>
+      <code>textbook_socrates.glb</code><a class="download" href="02_optional_12/O03_textbook_socrates.png" download="O03_textbook_socrates.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="character" data-search="textbook_harry Harry textbook_harry.glb Harry 提供穿衣直立的猫；四上宠物服装情境做成三维表演时再选，可作为 Jeff 的服装改造基础。 ">
+      <a class="picture" href="02_optional_12/O04_textbook_harry.png" target="_blank"><img src="preview/textbook_harry.jpg" alt="Harry" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O04 · 条件候选</div>
+      <h2>Harry</h2><p class="kind">按章节再选</p><p>Harry 提供穿衣直立的猫；四上宠物服装情境做成三维表演时再选，可作为 Jeff 的服装改造基础。</p>
+      <code>textbook_harry.glb</code><a class="download" href="02_optional_12/O04_textbook_harry.png" download="O04_textbook_harry.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="character" data-search="textbook_spot Spot textbook_spot.glb Spot 提供垂耳直立犬与帽围巾服装；与柯基站务员耳形不同，四上宠物服装情境落地时再选。 ">
+      <a class="picture" href="02_optional_12/O05_textbook_spot.png" target="_blank"><img src="preview/textbook_spot.jpg" alt="Spot" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O05 · 条件候选</div>
+      <h2>Spot</h2><p class="kind">按章节再选</p><p>Spot 提供垂耳直立犬与帽围巾服装；与柯基站务员耳形不同，四上宠物服装情境落地时再选。</p>
+      <code>textbook_spot.glb</code><a class="download" href="02_optional_12/O05_textbook_spot.png" download="O05_textbook_spot.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="character" data-search="textbook_tu_youyou Tu Youyou textbook_tu_youyou.glb 屠呦呦保留独立姓名与面部识别；科学家内容若只采用阅读/照片展示，现有立绘已经够用。 ">
+      <a class="picture" href="02_optional_12/O06_textbook_tu_youyou.png" target="_blank"><img src="preview/textbook_tu_youyou.jpg" alt="Tu Youyou" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O06 · 条件候选</div>
+      <h2>Tu Youyou</h2><p class="kind">按章节再选</p><p>屠呦呦保留独立姓名与面部识别；科学家内容若只采用阅读/照片展示，现有立绘已经够用。</p>
+      <code>textbook_tu_youyou.glb</code><a class="download" href="02_optional_12/O06_textbook_tu_youyou.png" download="O06_textbook_tu_youyou.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="character" data-search="textbook_yuan_longping Yuan Longping textbook_yuan_longping.glb 袁隆平保留独立姓名与面部识别；农业人物内容确定需要三维近景时再生成。 ">
+      <a class="picture" href="02_optional_12/O07_textbook_yuan_longping.png" target="_blank"><img src="preview/textbook_yuan_longping.jpg" alt="Yuan Longping" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O07 · 条件候选</div>
+      <h2>Yuan Longping</h2><p class="kind">按章节再选</p><p>袁隆平保留独立姓名与面部识别；农业人物内容确定需要三维近景时再生成。</p>
+      <code>textbook_yuan_longping.glb</code><a class="download" href="02_optional_12/O07_textbook_yuan_longping.png" download="O07_textbook_yuan_longping.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="character" data-search="textbook_andy_armstrong Andy Armstrong textbook_andy_armstrong.glb Andy 是儿童宇航员，不能只把成人宇航员整体缩小；该篇故事确定三维演出后再生成。 ">
+      <a class="picture" href="02_optional_12/O08_textbook_andy_armstrong.png" target="_blank"><img src="preview/textbook_andy_armstrong.jpg" alt="Andy Armstrong" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O08 · 条件候选</div>
+      <h2>Andy Armstrong</h2><p class="kind">按章节再选</p><p>Andy 是儿童宇航员，不能只把成人宇航员整体缩小；该篇故事确定三维演出后再生成。</p>
+      <code>textbook_andy_armstrong.glb</code><a class="download" href="02_optional_12/O08_textbook_andy_armstrong.png" download="O08_textbook_andy_armstrong.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="prop" data-search="globe 蓝海小地球仪 prop_globe.glb 如果需要这款装饰地球仪的黄铜支架再生成；球体、支架和教学用地图也可本地制作。图片陆地不能直接用作地理教学。 ">
+      <a class="picture" href="02_optional_12/O09_globe.png" target="_blank"><img src="preview/globe.jpg" alt="蓝海小地球仪" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O09 · 条件候选</div>
+      <h2>蓝海小地球仪</h2><p class="kind">按场景再选</p><p>如果需要这款装饰地球仪的黄铜支架再生成；球体、支架和教学用地图也可本地制作。图片陆地不能直接用作地理教学。</p>
+      <code>prop_globe.glb</code><a class="download" href="02_optional_12/O09_globe.png" download="O09_globe.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="prop" data-search="umbrella 晴空蓝雨伞 prop_umbrella.glb 需要展示图片里的伞骨细节时再选；伞面厚度、伞柄和握持点仍要修整。 ">
+      <a class="picture" href="02_optional_12/O10_umbrella.png" target="_blank"><img src="preview/umbrella.jpg" alt="晴空蓝雨伞" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O10 · 条件候选</div>
+      <h2>晴空蓝雨伞</h2><p class="kind">按场景再选</p><p>需要展示图片里的伞骨细节时再选；伞面厚度、伞柄和握持点仍要修整。</p>
+      <code>prop_umbrella.glb</code><a class="download" href="02_optional_12/O10_umbrella.png" download="O10_umbrella.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="prop" data-search="courtyard_swing 森系木秋千 prop_courtyard_swing.glb 需要该外观时可生成；可动座板、绳索和框架必须分件，现有几何秋千也能继续细化。 ">
+      <a class="picture" href="02_optional_12/O11_courtyard_swing.png" target="_blank"><img src="preview/courtyard_swing.jpg" alt="森系木秋千" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O11 · 条件候选</div>
+      <h2>森系木秋千</h2><p class="kind">按场景再选</p><p>需要该外观时可生成；可动座板、绳索和框架必须分件，现有几何秋千也能继续细化。</p>
+      <code>prop_courtyard_swing.glb</code><a class="download" href="02_optional_12/O11_courtyard_swing.png" download="O11_courtyard_swing.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="optional" data-kind="prop" data-search="garden_fountain 晴空小喷泉 prop_garden_fountain.glb 需要该石雕外观时可生成；动态水流仍由引擎制作，单靠这次生成不提供流水动画。 ">
+      <a class="picture" href="02_optional_12/O12_garden_fountain.png" target="_blank"><img src="preview/garden_fountain.jpg" alt="晴空小喷泉" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">O12 · 条件候选</div>
+      <h2>晴空小喷泉</h2><p class="kind">按场景再选</p><p>需要该石雕外观时可生成；动态水流仍由引擎制作，单靠这次生成不提供流水动画。</p>
+      <code>prop_garden_fountain.glb</code><a class="download" href="02_optional_12/O12_garden_fountain.png" download="O12_garden_fountain.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mr_zhang Mr Zhang textbook_mr_zhang.glb 从成年男性教师体型起步；分别修改年龄、黑发或胡须、眼镜及衬衫/开衫。 榕校长">
+      <a class="picture" href="../textbook_characters_v01/001_mr_zhang_front.png" target="_blank"><img src="preview/textbook_mr_zhang.jpg" alt="Mr Zhang" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 001 · 复用或本地制作</div>
+      <h2>Mr Zhang</h2><p class="kind">复用或改装候选</p><p>从成年男性教师体型起步；分别修改年龄、黑发或胡须、眼镜及衬衫/开衫。</p><p class="reuse">基础：榕校长<br><span>中高：脸型、头发和服装修改</span></p>
+      <code>textbook_mr_zhang.glb</code><a class="download" href="../textbook_characters_v01/001_mr_zhang_front.png" download="001_mr_zhang_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mrs_chen Mrs Chen textbook_mrs_chen.glb 共用成年母亲身体；改橙色裙装、领口、裙长和发带，不能仅更换显示姓名。 Lingling 的母亲">
+      <a class="picture" href="../textbook_characters_v01/002_mrs_chen_front.png" target="_blank"><img src="preview/textbook_mrs_chen.jpg" alt="Mrs Chen" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 002 · 复用或本地制作</div>
+      <h2>Mrs Chen</h2><p class="kind">复用或改装候选</p><p>共用成年母亲身体；改橙色裙装、领口、裙长和发带，不能仅更换显示姓名。</p><p class="reuse">基础：Lingling 的母亲<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_mrs_chen.glb</code><a class="download" href="../textbook_characters_v01/002_mrs_chen_front.png" download="002_mrs_chen_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_lulu Lulu textbook_lulu.glb 优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。 Anne">
+      <a class="picture" href="../textbook_characters_v01/003_lulu_front.png" target="_blank"><img src="preview/textbook_lulu.jpg" alt="Lulu" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 003 · 复用或本地制作</div>
+      <h2>Lulu</h2><p class="kind">复用或改装候选</p><p>优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。</p><p class="reuse">基础：Anne<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_lulu.glb</code><a class="download" href="../textbook_characters_v01/003_lulu_front.png" download="003_lulu_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_beibei Beibei textbook_beibei.glb 复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。 Lingling">
+      <a class="picture" href="../textbook_characters_v01/004_beibei_front.png" target="_blank"><img src="preview/textbook_beibei.jpg" alt="Beibei" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 004 · 复用或本地制作</div>
+      <h2>Beibei</h2><p class="kind">复用或改装候选</p><p>复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。</p><p class="reuse">基础：Lingling<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_beibei.glb</code><a class="download" href="../textbook_characters_v01/004_beibei_front.png" download="004_beibei_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_benny Benny textbook_benny.glb 复用已有男孩身体/骨架起点；金发/棕发、衬衫或运动装按参考图单独制作。 Peter">
+      <a class="picture" href="../textbook_characters_v01/005_benny_front.png" target="_blank"><img src="preview/textbook_benny.jpg" alt="Benny" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 005 · 复用或本地制作</div>
+      <h2>Benny</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点；金发/棕发、衬衫或运动装按参考图单独制作。</p><p class="reuse">基础：Peter<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_benny.glb</code><a class="download" href="../textbook_characters_v01/005_benny_front.png" download="005_benny_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_jiajia Jiajia textbook_jiajia.glb 复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。 Lingling">
+      <a class="picture" href="../textbook_characters_v01/006_jiajia_front.png" target="_blank"><img src="preview/textbook_jiajia.jpg" alt="Jiajia" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 006 · 复用或本地制作</div>
+      <h2>Jiajia</h2><p class="kind">复用或改装候选</p><p>复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。</p><p class="reuse">基础：Lingling<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_jiajia.glb</code><a class="download" href="../textbook_characters_v01/006_jiajia_front.png" download="006_jiajia_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_taotao Taotao textbook_taotao.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/007_taotao_front.png" target="_blank"><img src="preview/textbook_taotao.jpg" alt="Taotao" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 007 · 复用或本地制作</div>
+      <h2>Taotao</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_taotao.glb</code><a class="download" href="../textbook_characters_v01/007_taotao_front.png" download="007_taotao_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_lucy Lucy textbook_lucy.glb 共用 Lily 的身体、发型与裙装；保留 Lucy 的角色 ID、姓名和对白。必要时仅调整发饰或裙色。 Lily">
+      <a class="picture" href="../textbook_characters_v01/011_lucy_front.png" target="_blank"><img src="preview/textbook_lucy.jpg" alt="Lucy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 011 · 复用或本地制作</div>
+      <h2>Lucy</h2><p class="kind">复用或改装候选</p><p>共用 Lily 的身体、发型与裙装；保留 Lucy 的角色 ID、姓名和对白。必要时仅调整发饰或裙色。</p><p class="reuse">基础：Lily<br><span>低：实例复用或材质变化</span></p>
+      <code>textbook_lucy.glb</code><a class="download" href="../textbook_characters_v01/011_lucy_front.png" download="011_lucy_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_jason Jason textbook_jason.glb 共用普通成年男性身体/骨架起点；按参考图修改发型、年龄特征、衬衫或短裤。 Lingling 的父亲">
+      <a class="picture" href="../textbook_characters_v01/012_jason_front.png" target="_blank"><img src="preview/textbook_jason.jpg" alt="Jason" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 012 · 复用或本地制作</div>
+      <h2>Jason</h2><p class="kind">复用或改装候选</p><p>共用普通成年男性身体/骨架起点；按参考图修改发型、年龄特征、衬衫或短裤。</p><p class="reuse">基础：Lingling 的父亲<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_jason.glb</code><a class="download" href="../textbook_characters_v01/012_jason_front.png" download="012_jason_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_tiantian Tiantian textbook_tiantian.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/015_tiantian_front.png" target="_blank"><img src="preview/textbook_tiantian.jpg" alt="Tiantian" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 015 · 复用或本地制作</div>
+      <h2>Tiantian</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_tiantian.glb</code><a class="download" href="../textbook_characters_v01/015_tiantian_front.png" download="015_tiantian_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_he_yan He Yan textbook_he_yan.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/017_he_yan_front.png" target="_blank"><img src="preview/textbook_he_yan.jpg" alt="He Yan" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 017 · 保留图片暂缓</div>
+      <h2>He Yan</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_he_yan.glb</code><a class="download" href="../textbook_characters_v01/017_he_yan_front.png" download="017_he_yan_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_du_juan Du Juan textbook_du_juan.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/018_du_juan_front.png" target="_blank"><img src="preview/textbook_du_juan.jpg" alt="Du Juan" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 018 · 保留图片暂缓</div>
+      <h2>Du Juan</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_du_juan.glb</code><a class="download" href="../textbook_characters_v01/018_du_juan_front.png" download="018_du_juan_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_fred Fred textbook_fred.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/020_fred_front.png" target="_blank"><img src="preview/textbook_fred.jpg" alt="Fred" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 020 · 保留图片暂缓</div>
+      <h2>Fred</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_fred.glb</code><a class="download" href="../textbook_characters_v01/020_fred_front.png" download="020_fred_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_binbin Binbin textbook_binbin.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/023_binbin_front.png" target="_blank"><img src="preview/textbook_binbin.jpg" alt="Binbin" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 023 · 复用或本地制作</div>
+      <h2>Binbin</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_binbin.glb</code><a class="download" href="../textbook_characters_v01/023_binbin_front.png" download="023_binbin_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_xixi Xixi textbook_xixi.glb 优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。 Anne">
+      <a class="picture" href="../textbook_characters_v01/025_xixi_front.png" target="_blank"><img src="preview/textbook_xixi.jpg" alt="Xixi" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 025 · 复用或本地制作</div>
+      <h2>Xixi</h2><p class="kind">复用或改装候选</p><p>优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。</p><p class="reuse">基础：Anne<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_xixi.glb</code><a class="download" href="../textbook_characters_v01/025_xixi_front.png" download="025_xixi_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_molly Molly textbook_molly.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/028_molly_front.png" target="_blank"><img src="preview/textbook_molly.jpg" alt="Molly" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 028 · 保留图片暂缓</div>
+      <h2>Molly</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_molly.glb</code><a class="download" href="../textbook_characters_v01/028_molly_front.png" download="028_molly_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_mr_ma Mr Ma textbook_mr_ma.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/029_mr_ma_front.png" target="_blank"><img src="preview/textbook_mr_ma.jpg" alt="Mr Ma" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 029 · 保留图片暂缓</div>
+      <h2>Mr Ma</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_mr_ma.glb</code><a class="download" href="../textbook_characters_v01/029_mr_ma_front.png" download="029_mr_ma_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_dahuang Dahuang textbook_dahuang.glb 以 Doggie 为犬体起点，调整耳形、尾巴、头身比例与毛色，删除/更换胸背带或项圈。 Doggie">
+      <a class="picture" href="../textbook_characters_v01/030_dahuang_front.png" target="_blank"><img src="preview/textbook_dahuang.jpg" alt="Dahuang" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 030 · 复用或本地制作</div>
+      <h2>Dahuang</h2><p class="kind">复用或改装候选</p><p>以 Doggie 为犬体起点，调整耳形、尾巴、头身比例与毛色，删除/更换胸背带或项圈。</p><p class="reuse">基础：Doggie<br><span>中：局部塑形与贴图</span></p>
+      <code>textbook_dahuang.glb</code><a class="download" href="../textbook_characters_v01/030_dahuang_front.png" download="030_dahuang_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_kate Kate textbook_kate.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/031_kate_front.png" target="_blank"><img src="preview/textbook_kate.jpg" alt="Kate" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 031 · 保留图片暂缓</div>
+      <h2>Kate</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_kate.glb</code><a class="download" href="../textbook_characters_v01/031_kate_front.png" download="031_kate_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_jeff Jeff textbook_jeff.glb 先采用二维参考；若已选候选 Harry，再从其直立猫体改白毛、蓝帽和厚外套。 Harry">
+      <a class="picture" href="../textbook_characters_v01/033_jeff_front.png" target="_blank"><img src="preview/textbook_jeff.jpg" alt="Jeff" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 033 · 复用或本地制作</div>
+      <h2>Jeff</h2><p class="kind">复用或改装候选</p><p>先采用二维参考；若已选候选 Harry，再从其直立猫体改白毛、蓝帽和厚外套。</p><p class="reuse">基础：Harry<br><span>中高：依赖候选模型及新服装</span></p><p class="dependency">依赖条件候选模型；未生成时先使用立绘。</p>
+      <code>textbook_jeff.glb</code><a class="download" href="../textbook_characters_v01/033_jeff_front.png" download="033_jeff_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_nick Nick textbook_nick.glb 先采用二维参考；若已选候选 Spot，再从其直立犬体改帽子、T 恤和短裤。 Spot">
+      <a class="picture" href="../textbook_characters_v01/035_nick_front.png" target="_blank"><img src="preview/textbook_nick.jpg" alt="Nick" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 035 · 复用或本地制作</div>
+      <h2>Nick</h2><p class="kind">复用或改装候选</p><p>先采用二维参考；若已选候选 Spot，再从其直立犬体改帽子、T 恤和短裤。</p><p class="reuse">基础：Spot<br><span>中高：依赖候选模型及新服装</span></p><p class="dependency">依赖条件候选模型；未生成时先使用立绘。</p>
+      <code>textbook_nick.glb</code><a class="download" href="../textbook_characters_v01/035_nick_front.png" download="035_nick_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_chen_lei Chen Lei textbook_chen_lei.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/038_chen_lei_front.png" target="_blank"><img src="preview/textbook_chen_lei.jpg" alt="Chen Lei" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 038 · 复用或本地制作</div>
+      <h2>Chen Lei</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_chen_lei.glb</code><a class="download" href="../textbook_characters_v01/038_chen_lei_front.png" download="038_chen_lei_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_neil_armstrong Neil Armstrong textbook_neil_armstrong.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/041_neil_armstrong_front.png" target="_blank"><img src="preview/textbook_neil_armstrong.jpg" alt="Neil Armstrong" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 041 · 保留图片暂缓</div>
+      <h2>Neil Armstrong</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_neil_armstrong.glb</code><a class="download" href="../textbook_characters_v01/041_neil_armstrong_front.png" download="041_neil_armstrong_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mrs_zhou Mrs Zhou textbook_mrs_zhou.glb 保留银发老妇人的身体与头部起点，改开衫、裤装和眼镜；需检查生成网格的围裙是否可拆。 花婆婆">
+      <a class="picture" href="../textbook_characters_v01/042_mrs_zhou_front.png" target="_blank"><img src="preview/textbook_mrs_zhou.jpg" alt="Mrs Zhou" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 042 · 复用或本地制作</div>
+      <h2>Mrs Zhou</h2><p class="kind">复用或改装候选</p><p>保留银发老妇人的身体与头部起点，改开衫、裤装和眼镜；需检查生成网格的围裙是否可拆。</p><p class="reuse">基础：花婆婆<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_mrs_zhou.glb</code><a class="download" href="../textbook_characters_v01/042_mrs_zhou_front.png" download="042_mrs_zhou_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_zhang_leilei Zhang Leilei textbook_zhang_leilei.glb 复用学龄女孩身体比例；单独改发式、条纹上衣以及裙装/裤装，保留人物姓名。 Lily">
+      <a class="picture" href="../textbook_characters_v01/046_zhang_leilei_front.png" target="_blank"><img src="preview/textbook_zhang_leilei.jpg" alt="Zhang Leilei" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 046 · 复用或本地制作</div>
+      <h2>Zhang Leilei</h2><p class="kind">复用或改装候选</p><p>复用学龄女孩身体比例；单独改发式、条纹上衣以及裙装/裤装，保留人物姓名。</p><p class="reuse">基础：Lily<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_zhang_leilei.glb</code><a class="download" href="../textbook_characters_v01/046_zhang_leilei_front.png" download="046_zhang_leilei_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_yang_si Yang Si textbook_yang_si.glb 复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。 Lingling">
+      <a class="picture" href="../textbook_characters_v01/047_yang_si_front.png" target="_blank"><img src="preview/textbook_yang_si.jpg" alt="Yang Si" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 047 · 复用或本地制作</div>
+      <h2>Yang Si</h2><p class="kind">复用或改装候选</p><p>复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。</p><p class="reuse">基础：Lingling<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_yang_si.glb</code><a class="download" href="../textbook_characters_v01/047_yang_si_front.png" download="047_yang_si_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_lynn Lynn textbook_lynn.glb 优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。 Anne">
+      <a class="picture" href="../textbook_characters_v01/048_lynn_front.png" target="_blank"><img src="preview/textbook_lynn.jpg" alt="Lynn" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 048 · 复用或本地制作</div>
+      <h2>Lynn</h2><p class="kind">复用或改装候选</p><p>优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。</p><p class="reuse">基础：Anne<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_lynn.glb</code><a class="download" href="../textbook_characters_v01/048_lynn_front.png" download="048_lynn_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_david David textbook_david.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/050_david_front.png" target="_blank"><img src="preview/textbook_david.jpg" alt="David" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 050 · 保留图片暂缓</div>
+      <h2>David</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_david.glb</code><a class="download" href="../textbook_characters_v01/050_david_front.png" download="050_david_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mr_ye Mr Ye textbook_mr_ye.glb 共用普通成年男性身体/骨架起点；按参考图修改发型、年龄特征、衬衫或短裤。 Lingling 的父亲">
+      <a class="picture" href="../textbook_characters_v01/052_mr_ye_front.png" target="_blank"><img src="preview/textbook_mr_ye.jpg" alt="Mr Ye" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 052 · 复用或本地制作</div>
+      <h2>Mr Ye</h2><p class="kind">复用或改装候选</p><p>共用普通成年男性身体/骨架起点；按参考图修改发型、年龄特征、衬衫或短裤。</p><p class="reuse">基础：Lingling 的父亲<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_mr_ye.glb</code><a class="download" href="../textbook_characters_v01/052_mr_ye_front.png" download="052_mr_ye_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_judy_letter_writer Judy textbook_judy_letter_writer.glb 优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。 Anne">
+      <a class="picture" href="../textbook_characters_v01/053_judy_letter_writer_front.png" target="_blank"><img src="preview/textbook_judy_letter_writer.jpg" alt="Judy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 053 · 复用或本地制作</div>
+      <h2>Judy</h2><p class="kind">复用或改装候选</p><p>优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。</p><p class="reuse">基础：Anne<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_judy_letter_writer.glb</code><a class="download" href="../textbook_characters_v01/053_judy_letter_writer_front.png" download="053_judy_letter_writer_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_kaikai Kaikai textbook_kaikai.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/055_kaikai_front.png" target="_blank"><img src="preview/textbook_kaikai.jpg" alt="Kaikai" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 055 · 复用或本地制作</div>
+      <h2>Kaikai</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_kaikai.glb</code><a class="download" href="../textbook_characters_v01/055_kaikai_front.png" download="055_kaikai_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_xiaoxiao Xiaoxiao textbook_xiaoxiao.glb 复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。 Lingling">
+      <a class="picture" href="../textbook_characters_v01/057_xiaoxiao_front.png" target="_blank"><img src="preview/textbook_xiaoxiao.jpg" alt="Xiaoxiao" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 057 · 复用或本地制作</div>
+      <h2>Xiaoxiao</h2><p class="kind">复用或改装候选</p><p>复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。</p><p class="reuse">基础：Lingling<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_xiaoxiao.glb</code><a class="download" href="../textbook_characters_v01/057_xiaoxiao_front.png" download="057_xiaoxiao_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_haohao Haohao textbook_haohao.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/058_haohao_front.png" target="_blank"><img src="preview/textbook_haohao.jpg" alt="Haohao" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 058 · 复用或本地制作</div>
+      <h2>Haohao</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_haohao.glb</code><a class="download" href="../textbook_characters_v01/058_haohao_front.png" download="058_haohao_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mimi Mimi textbook_mimi.glb 从 Kitty 四足猫体起步，改白色毛发、蓝眼及尾巴；若坚持短腿与蓬松轮廓需局部塑形。 Kitty">
+      <a class="picture" href="../textbook_characters_v01/059_mimi_front.png" target="_blank"><img src="preview/textbook_mimi.jpg" alt="Mimi" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 059 · 复用或本地制作</div>
+      <h2>Mimi</h2><p class="kind">复用或改装候选</p><p>从 Kitty 四足猫体起步，改白色毛发、蓝眼及尾巴；若坚持短腿与蓬松轮廓需局部塑形。</p><p class="reuse">基础：Kitty<br><span>中：局部塑形与贴图</span></p>
+      <code>textbook_mimi.glb</code><a class="download" href="../textbook_characters_v01/059_mimi_front.png" download="059_mimi_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_liu_li Liu Li textbook_liu_li.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/060_liu_li_front.png" target="_blank"><img src="preview/textbook_liu_li.jpg" alt="Liu Li" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 060 · 保留图片暂缓</div>
+      <h2>Liu Li</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_liu_li.glb</code><a class="download" href="../textbook_characters_v01/060_liu_li_front.png" download="060_liu_li_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_zhou_jie_clothes Zhou Jie textbook_zhou_jie_clothes.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/061_zhou_jie_clothes_front.png" target="_blank"><img src="preview/textbook_zhou_jie_clothes.jpg" alt="Zhou Jie" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 061 · 保留图片暂缓</div>
+      <h2>Zhou Jie</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_zhou_jie_clothes.glb</code><a class="download" href="../textbook_characters_v01/061_zhou_jie_clothes_front.png" download="061_zhou_jie_clothes_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_tina Tina textbook_tina.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/062_tina_front.png" target="_blank"><img src="preview/textbook_tina.jpg" alt="Tina" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 062 · 保留图片暂缓</div>
+      <h2>Tina</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_tina.glb</code><a class="download" href="../textbook_characters_v01/062_tina_front.png" download="062_tina_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_alan Alan textbook_alan.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/063_alan_front.png" target="_blank"><img src="preview/textbook_alan.jpg" alt="Alan" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 063 · 保留图片暂缓</div>
+      <h2>Alan</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_alan.glb</code><a class="download" href="../textbook_characters_v01/063_alan_front.png" download="063_alan_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_carrie Carrie textbook_carrie.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/064_carrie_front.png" target="_blank"><img src="preview/textbook_carrie.jpg" alt="Carrie" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 064 · 保留图片暂缓</div>
+      <h2>Carrie</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_carrie.glb</code><a class="download" href="../textbook_characters_v01/064_carrie_front.png" download="064_carrie_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_puppy Puppy textbook_puppy.glb 以 Doggie 为犬体起点，调整耳形、尾巴、头身比例与毛色，删除/更换胸背带或项圈。 Doggie">
+      <a class="picture" href="../textbook_characters_v01/066_puppy_front.png" target="_blank"><img src="preview/textbook_puppy.jpg" alt="Puppy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 066 · 复用或本地制作</div>
+      <h2>Puppy</h2><p class="kind">复用或改装候选</p><p>以 Doggie 为犬体起点，调整耳形、尾巴、头身比例与毛色，删除/更换胸背带或项圈。</p><p class="reuse">基础：Doggie<br><span>中：局部塑形与贴图</span></p>
+      <code>textbook_puppy.glb</code><a class="download" href="../textbook_characters_v01/066_puppy_front.png" download="066_puppy_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_diana Diana textbook_diana.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/067_diana_front.png" target="_blank"><img src="preview/textbook_diana.jpg" alt="Diana" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 067 · 保留图片暂缓</div>
+      <h2>Diana</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_diana.glb</code><a class="download" href="../textbook_characters_v01/067_diana_front.png" download="067_diana_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_matt Matt textbook_matt.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/068_matt_front.png" target="_blank"><img src="preview/textbook_matt.jpg" alt="Matt" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 068 · 复用或本地制作</div>
+      <h2>Matt</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_matt.glb</code><a class="download" href="../textbook_characters_v01/068_matt_front.png" download="068_matt_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_dave Dave textbook_dave.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/069_dave_front.png" target="_blank"><img src="preview/textbook_dave.jpg" alt="Dave" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 069 · 复用或本地制作</div>
+      <h2>Dave</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_dave.glb</code><a class="download" href="../textbook_characters_v01/069_dave_front.png" download="069_dave_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_zhang_li Zhang Li textbook_zhang_li.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/070_zhang_li_front.png" target="_blank"><img src="preview/textbook_zhang_li.jpg" alt="Zhang Li" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 070 · 保留图片暂缓</div>
+      <h2>Zhang Li</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_zhang_li.glb</code><a class="download" href="../textbook_characters_v01/070_zhang_li_front.png" download="070_zhang_li_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_bob_roommate Bob textbook_bob_roommate.glb 复用已有男孩身体/骨架起点；金发/棕发、衬衫或运动装按参考图单独制作。 Peter">
+      <a class="picture" href="../textbook_characters_v01/072_bob_roommate_front.png" target="_blank"><img src="preview/textbook_bob_roommate.jpg" alt="Bob" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 072 · 复用或本地制作</div>
+      <h2>Bob</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点；金发/棕发、衬衫或运动装按参考图单独制作。</p><p class="reuse">基础：Peter<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_bob_roommate.glb</code><a class="download" href="../textbook_characters_v01/072_bob_roommate_front.png" download="072_bob_roommate_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_paul_roommate Paul textbook_paul_roommate.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/073_paul_roommate_front.png" target="_blank"><img src="preview/textbook_paul_roommate.jpg" alt="Paul" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 073 · 复用或本地制作</div>
+      <h2>Paul</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_paul_roommate.glb</code><a class="download" href="../textbook_characters_v01/073_paul_roommate_front.png" download="073_paul_roommate_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_jane_family_story Jane textbook_jane_family_story.glb 优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。 Anne">
+      <a class="picture" href="../textbook_characters_v01/075_jane_family_story_front.png" target="_blank"><img src="preview/textbook_jane_family_story.jpg" alt="Jane" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 075 · 复用或本地制作</div>
+      <h2>Jane</h2><p class="kind">复用或改装候选</p><p>优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。</p><p class="reuse">基础：Anne<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_jane_family_story.glb</code><a class="download" href="../textbook_characters_v01/075_jane_family_story_front.png" download="075_jane_family_story_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_jake Jake textbook_jake.glb 以 Doggie 为犬体起点，调整耳形、尾巴、头身比例与毛色，删除/更换胸背带或项圈。 Doggie">
+      <a class="picture" href="../textbook_characters_v01/076_jake_front.png" target="_blank"><img src="preview/textbook_jake.jpg" alt="Jake" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 076 · 复用或本地制作</div>
+      <h2>Jake</h2><p class="kind">复用或改装候选</p><p>以 Doggie 为犬体起点，调整耳形、尾巴、头身比例与毛色，删除/更换胸背带或项圈。</p><p class="reuse">基础：Doggie<br><span>中：局部塑形与贴图</span></p>
+      <code>textbook_jake.glb</code><a class="download" href="../textbook_characters_v01/076_jake_front.png" download="076_jake_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_mr_white Mr White textbook_mr_white.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/077_mr_white_front.png" target="_blank"><img src="preview/textbook_mr_white.jpg" alt="Mr White" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 077 · 保留图片暂缓</div>
+      <h2>Mr White</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_mr_white.glb</code><a class="download" href="../textbook_characters_v01/077_mr_white_front.png" download="077_mr_white_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_zhi_sou Zhi Sou textbook_zhi_sou.glb 取成年古装身体/衣袍起点，分别调整老年面部、胡须、软帽及衣袍下摆；古人姓名与情节各自保留。 Qu Yuan">
+      <a class="picture" href="../textbook_characters_v01/079_zhi_sou_front.png" target="_blank"><img src="preview/textbook_zhi_sou.jpg" alt="Zhi Sou" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 079 · 复用或本地制作</div>
+      <h2>Zhi Sou</h2><p class="kind">复用或改装候选</p><p>取成年古装身体/衣袍起点，分别调整老年面部、胡须、软帽及衣袍下摆；古人姓名与情节各自保留。</p><p class="reuse">基础：Qu Yuan<br><span>中高：头部与古装改装</span></p>
+      <code>textbook_zhi_sou.glb</code><a class="download" href="../textbook_characters_v01/079_zhi_sou_front.png" download="079_zhi_sou_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_beibei_daily_routine Beibei textbook_beibei_daily_routine.glb 复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。 Lingling">
+      <a class="picture" href="../textbook_characters_v01/081_beibei_daily_routine_front.png" target="_blank"><img src="preview/textbook_beibei_daily_routine.jpg" alt="Beibei" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 081 · 复用或本地制作</div>
+      <h2>Beibei</h2><p class="kind">复用或改装候选</p><p>复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。</p><p class="reuse">基础：Lingling<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_beibei_daily_routine.glb</code><a class="download" href="../textbook_characters_v01/081_beibei_daily_routine_front.png" download="081_beibei_daily_routine_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_wang_jun Wang Jun textbook_wang_jun.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/083_wang_jun_front.png" target="_blank"><img src="preview/textbook_wang_jun.jpg" alt="Wang Jun" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 083 · 复用或本地制作</div>
+      <h2>Wang Jun</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_wang_jun.glb</code><a class="download" href="../textbook_characters_v01/083_wang_jun_front.png" download="083_wang_jun_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_zhang_qiao Zhang Qiao textbook_zhang_qiao.glb 复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。 Lingling">
+      <a class="picture" href="../textbook_characters_v01/084_zhang_qiao_front.png" target="_blank"><img src="preview/textbook_zhang_qiao.jpg" alt="Zhang Qiao" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 084 · 复用或本地制作</div>
+      <h2>Zhang Qiao</h2><p class="kind">复用或改装候选</p><p>复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。</p><p class="reuse">基础：Lingling<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_zhang_qiao.glb</code><a class="download" href="../textbook_characters_v01/084_zhang_qiao_front.png" download="084_zhang_qiao_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_yang_xin Yang Xin textbook_yang_xin.glb 优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。 Anne">
+      <a class="picture" href="../textbook_characters_v01/085_yang_xin_front.png" target="_blank"><img src="preview/textbook_yang_xin.jpg" alt="Yang Xin" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 085 · 复用或本地制作</div>
+      <h2>Yang Xin</h2><p class="kind">复用或改装候选</p><p>优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。</p><p class="reuse">基础：Anne<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_yang_xin.glb</code><a class="download" href="../textbook_characters_v01/085_yang_xin_front.png" download="085_yang_xin_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_lin_hao Lin Hao textbook_lin_hao.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/086_lin_hao_front.png" target="_blank"><img src="preview/textbook_lin_hao.jpg" alt="Lin Hao" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 086 · 复用或本地制作</div>
+      <h2>Lin Hao</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_lin_hao.glb</code><a class="download" href="../textbook_characters_v01/086_lin_hao_front.png" download="086_lin_hao_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mr_lin_community Mr Lin textbook_mr_lin_community.glb 利用老年男性身体/骨架；另做太极服或长外套及头发胡须，老人身份分别保存。 布爷爷">
+      <a class="picture" href="../textbook_characters_v01/087_mr_lin_community_front.png" target="_blank"><img src="preview/textbook_mr_lin_community.jpg" alt="Mr Lin" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 087 · 复用或本地制作</div>
+      <h2>Mr Lin</h2><p class="kind">复用或改装候选</p><p>利用老年男性身体/骨架；另做太极服或长外套及头发胡须，老人身份分别保存。</p><p class="reuse">基础：布爷爷<br><span>中高：服装重做</span></p>
+      <code>textbook_mr_lin_community.glb</code><a class="download" href="../textbook_characters_v01/087_mr_lin_community_front.png" download="087_mr_lin_community_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mrs_lin Mrs Lin textbook_mrs_lin.glb 保留银发老妇人的身体与头部起点，改开衫、裤装和眼镜；需检查生成网格的围裙是否可拆。 花婆婆">
+      <a class="picture" href="../textbook_characters_v01/088_mrs_lin_front.png" target="_blank"><img src="preview/textbook_mrs_lin.jpg" alt="Mrs Lin" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 088 · 复用或本地制作</div>
+      <h2>Mrs Lin</h2><p class="kind">复用或改装候选</p><p>保留银发老妇人的身体与头部起点，改开衫、裤装和眼镜；需检查生成网格的围裙是否可拆。</p><p class="reuse">基础：花婆婆<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_mrs_lin.glb</code><a class="download" href="../textbook_characters_v01/088_mrs_lin_front.png" download="088_mrs_lin_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_ms_wang Ms Wang textbook_ms_wang.glb 取成年女性身体起点，按角色分别改发型、肤色、上衣和裤装；不可合并人物身份。 苏老师">
+      <a class="picture" href="../textbook_characters_v01/089_ms_wang_front.png" target="_blank"><img src="preview/textbook_ms_wang.jpg" alt="Ms Wang" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 089 · 复用或本地制作</div>
+      <h2>Ms Wang</h2><p class="kind">复用或改装候选</p><p>取成年女性身体起点，按角色分别改发型、肤色、上衣和裤装；不可合并人物身份。</p><p class="reuse">基础：苏老师<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_ms_wang.glb</code><a class="download" href="../textbook_characters_v01/089_ms_wang_front.png" download="089_ms_wang_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_bob_bird Bob textbook_bob_bird.glb 从 Baker 的鸟体派生，按比较关系设置大小与羽色，并修改冠羽/尾羽；保留六个名字和每只鸟的比较数据。 Baker">
+      <a class="picture" href="../textbook_characters_v01/090_bob_bird_front.png" target="_blank"><img src="preview/textbook_bob_bird.jpg" alt="Bob" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 090 · 复用或本地制作</div>
+      <h2>Bob</h2><p class="kind">复用或改装候选</p><p>从 Baker 的鸟体派生，按比较关系设置大小与羽色，并修改冠羽/尾羽；保留六个名字和每只鸟的比较数据。</p><p class="reuse">基础：Baker<br><span>低到中：缩放、贴图及局部羽形</span></p>
+      <code>textbook_bob_bird.glb</code><a class="download" href="../textbook_characters_v01/090_bob_bird_front.png" download="090_bob_bird_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_ben_bird Ben textbook_ben_bird.glb 从 Baker 的鸟体派生，按比较关系设置大小与羽色，并修改冠羽/尾羽；保留六个名字和每只鸟的比较数据。 Baker">
+      <a class="picture" href="../textbook_characters_v01/092_ben_bird_front.png" target="_blank"><img src="preview/textbook_ben_bird.jpg" alt="Ben" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 092 · 复用或本地制作</div>
+      <h2>Ben</h2><p class="kind">复用或改装候选</p><p>从 Baker 的鸟体派生，按比较关系设置大小与羽色，并修改冠羽/尾羽；保留六个名字和每只鸟的比较数据。</p><p class="reuse">基础：Baker<br><span>低到中：缩放、贴图及局部羽形</span></p>
+      <code>textbook_ben_bird.glb</code><a class="download" href="../textbook_characters_v01/092_ben_bird_front.png" download="092_ben_bird_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_jane_bird Jane textbook_jane_bird.glb 从 Baker 的鸟体派生，按比较关系设置大小与羽色，并修改冠羽/尾羽；保留六个名字和每只鸟的比较数据。 Baker">
+      <a class="picture" href="../textbook_characters_v01/093_jane_bird_front.png" target="_blank"><img src="preview/textbook_jane_bird.jpg" alt="Jane" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 093 · 复用或本地制作</div>
+      <h2>Jane</h2><p class="kind">复用或改装候选</p><p>从 Baker 的鸟体派生，按比较关系设置大小与羽色，并修改冠羽/尾羽；保留六个名字和每只鸟的比较数据。</p><p class="reuse">基础：Baker<br><span>低到中：缩放、贴图及局部羽形</span></p>
+      <code>textbook_jane_bird.glb</code><a class="download" href="../textbook_characters_v01/093_jane_bird_front.png" download="093_jane_bird_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_judy_bird Judy textbook_judy_bird.glb 从 Baker 的鸟体派生，按比较关系设置大小与羽色，并修改冠羽/尾羽；保留六个名字和每只鸟的比较数据。 Baker">
+      <a class="picture" href="../textbook_characters_v01/094_judy_bird_front.png" target="_blank"><img src="preview/textbook_judy_bird.jpg" alt="Judy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 094 · 复用或本地制作</div>
+      <h2>Judy</h2><p class="kind">复用或改装候选</p><p>从 Baker 的鸟体派生，按比较关系设置大小与羽色，并修改冠羽/尾羽；保留六个名字和每只鸟的比较数据。</p><p class="reuse">基础：Baker<br><span>低到中：缩放、贴图及局部羽形</span></p>
+      <code>textbook_judy_bird.glb</code><a class="download" href="../textbook_characters_v01/094_judy_bird_front.png" download="094_judy_bird_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_julia_bird Julia textbook_julia_bird.glb 从 Baker 的鸟体派生，按比较关系设置大小与羽色，并修改冠羽/尾羽；保留六个名字和每只鸟的比较数据。 Baker">
+      <a class="picture" href="../textbook_characters_v01/095_julia_bird_front.png" target="_blank"><img src="preview/textbook_julia_bird.jpg" alt="Julia" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 095 · 复用或本地制作</div>
+      <h2>Julia</h2><p class="kind">复用或改装候选</p><p>从 Baker 的鸟体派生，按比较关系设置大小与羽色，并修改冠羽/尾羽；保留六个名字和每只鸟的比较数据。</p><p class="reuse">基础：Baker<br><span>低到中：缩放、贴图及局部羽形</span></p>
+      <code>textbook_julia_bird.glb</code><a class="download" href="../textbook_characters_v01/095_julia_bird_front.png" download="095_julia_bird_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_kong_rong Kong Rong textbook_kong_rong.glb 取幼年张衡的儿童交领衣身体起点，改发片、红蓝服装及腰带；孔融保持独立人物身份。 Zhang Heng">
+      <a class="picture" href="../textbook_characters_v01/096_kong_rong_front.png" target="_blank"><img src="preview/textbook_kong_rong.jpg" alt="Kong Rong" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 096 · 复用或本地制作</div>
+      <h2>Kong Rong</h2><p class="kind">复用或改装候选</p><p>取幼年张衡的儿童交领衣身体起点，改发片、红蓝服装及腰带；孔融保持独立人物身份。</p><p class="reuse">基础：Zhang Heng<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_kong_rong.glb</code><a class="download" href="../textbook_characters_v01/096_kong_rong_front.png" download="096_kong_rong_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mrs_brown Mrs Brown textbook_mrs_brown.glb 取成年女性长裙身体起点，分别改成年脸型、卷发、开衫或粉色短袖裙。 Aunt Carol">
+      <a class="picture" href="../textbook_characters_v01/097_mrs_brown_front.png" target="_blank"><img src="preview/textbook_mrs_brown.jpg" alt="Mrs Brown" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 097 · 复用或本地制作</div>
+      <h2>Mrs Brown</h2><p class="kind">复用或改装候选</p><p>取成年女性长裙身体起点，分别改成年脸型、卷发、开衫或粉色短袖裙。</p><p class="reuse">基础：Aunt Carol<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_mrs_brown.glb</code><a class="download" href="../textbook_characters_v01/097_mrs_brown_front.png" download="097_mrs_brown_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_bian_que Bian Que textbook_bian_que.glb 取成年古装身体/衣袍起点，分别调整老年面部、胡须、软帽及衣袍下摆；古人姓名与情节各自保留。 Qu Yuan">
+      <a class="picture" href="../textbook_characters_v01/098_bian_que_front.png" target="_blank"><img src="preview/textbook_bian_que.jpg" alt="Bian Que" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 098 · 复用或本地制作</div>
+      <h2>Bian Que</h2><p class="kind">复用或改装候选</p><p>取成年古装身体/衣袍起点，分别调整老年面部、胡须、软帽及衣袍下摆；古人姓名与情节各自保留。</p><p class="reuse">基础：Qu Yuan<br><span>中高：头部与古装改装</span></p>
+      <code>textbook_bian_que.glb</code><a class="download" href="../textbook_characters_v01/098_bian_que_front.png" download="098_bian_que_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_cai_huanhou Cai Huanhou textbook_cai_huanhou.glb 共享礼袍身体和部分骨架，蔡桓侯另做冠冕、面部与橙红礼服；不直接替换成玉皇大帝。 Jade Emperor">
+      <a class="picture" href="../textbook_characters_v01/099_cai_huanhou_front.png" target="_blank"><img src="preview/textbook_cai_huanhou.jpg" alt="Cai Huanhou" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 099 · 复用或本地制作</div>
+      <h2>Cai Huanhou</h2><p class="kind">复用或改装候选</p><p>共享礼袍身体和部分骨架，蔡桓侯另做冠冕、面部与橙红礼服；不直接替换成玉皇大帝。</p><p class="reuse">基础：Jade Emperor<br><span>中高：冠冕、服装和头部修改</span></p>
+      <code>textbook_cai_huanhou.glb</code><a class="download" href="../textbook_characters_v01/099_cai_huanhou_front.png" download="099_cai_huanhou_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_martin Martin textbook_martin.glb 两位成年兄弟保留独立 ID；从成年男性身体起点分别改发型与蓝衬衫/红毛衣，避免重复造一套骨架。 Uncle Ben">
+      <a class="picture" href="../textbook_characters_v01/102_martin_front.png" target="_blank"><img src="preview/textbook_martin.jpg" alt="Martin" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 102 · 复用或本地制作</div>
+      <h2>Martin</h2><p class="kind">复用或改装候选</p><p>两位成年兄弟保留独立 ID；从成年男性身体起点分别改发型与蓝衬衫/红毛衣，避免重复造一套骨架。</p><p class="reuse">基础：Uncle Ben<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_martin.glb</code><a class="download" href="../textbook_characters_v01/102_martin_front.png" download="102_martin_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_jack_two_trees Jack textbook_jack_two_trees.glb 两位成年兄弟保留独立 ID；从成年男性身体起点分别改发型与蓝衬衫/红毛衣，避免重复造一套骨架。 Uncle Ben">
+      <a class="picture" href="../textbook_characters_v01/103_jack_two_trees_front.png" target="_blank"><img src="preview/textbook_jack_two_trees.jpg" alt="Jack" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 103 · 复用或本地制作</div>
+      <h2>Jack</h2><p class="kind">复用或改装候选</p><p>两位成年兄弟保留独立 ID；从成年男性身体起点分别改发型与蓝衬衫/红毛衣，避免重复造一套骨架。</p><p class="reuse">基础：Uncle Ben<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_jack_two_trees.glb</code><a class="download" href="../textbook_characters_v01/103_jack_two_trees_front.png" download="103_jack_two_trees_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mr_liu_family_outing Mr Liu textbook_mr_liu_family_outing.glb 共用普通成年男性身体/骨架起点；按参考图修改发型、年龄特征、衬衫或短裤。 Lingling 的父亲">
+      <a class="picture" href="../textbook_characters_v01/104_mr_liu_family_outing_front.png" target="_blank"><img src="preview/textbook_mr_liu_family_outing.jpg" alt="Mr Liu" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 104 · 复用或本地制作</div>
+      <h2>Mr Liu</h2><p class="kind">复用或改装候选</p><p>共用普通成年男性身体/骨架起点；按参考图修改发型、年龄特征、衬衫或短裤。</p><p class="reuse">基础：Lingling 的父亲<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_mr_liu_family_outing.glb</code><a class="download" href="../textbook_characters_v01/104_mr_liu_family_outing_front.png" download="104_mr_liu_family_outing_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mrs_liu Mrs Liu textbook_mrs_liu.glb 取成年女性身体起点，按角色分别改发型、肤色、上衣和裤装；不可合并人物身份。 苏老师">
+      <a class="picture" href="../textbook_characters_v01/105_mrs_liu_front.png" target="_blank"><img src="preview/textbook_mrs_liu.jpg" alt="Mrs Liu" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 105 · 复用或本地制作</div>
+      <h2>Mrs Liu</h2><p class="kind">复用或改装候选</p><p>取成年女性身体起点，按角色分别改发型、肤色、上衣和裤装；不可合并人物身份。</p><p class="reuse">基础：苏老师<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_mrs_liu.glb</code><a class="download" href="../textbook_characters_v01/105_mrs_liu_front.png" download="105_mrs_liu_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_liu_wen Liu Wen textbook_liu_wen.glb 取成年女性身体起点，按角色分别改发型、肤色、上衣和裤装；不可合并人物身份。 苏老师">
+      <a class="picture" href="../textbook_characters_v01/106_liu_wen_front.png" target="_blank"><img src="preview/textbook_liu_wen.jpg" alt="Liu Wen" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 106 · 复用或本地制作</div>
+      <h2>Liu Wen</h2><p class="kind">复用或改装候选</p><p>取成年女性身体起点，按角色分别改发型、肤色、上衣和裤装；不可合并人物身份。</p><p class="reuse">基础：苏老师<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_liu_wen.glb</code><a class="download" href="../textbook_characters_v01/106_liu_wen_front.png" download="106_liu_wen_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_benson Benson textbook_benson.glb 取 Dan 的儿童身体与卷发起点，改运动 T 恤、短裤和鞋；保留 Benson 身份。 Dan">
+      <a class="picture" href="../textbook_characters_v01/107_benson_front.png" target="_blank"><img src="preview/textbook_benson.jpg" alt="Benson" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 107 · 复用或本地制作</div>
+      <h2>Benson</h2><p class="kind">复用或改装候选</p><p>取 Dan 的儿童身体与卷发起点，改运动 T 恤、短裤和鞋；保留 Benson 身份。</p><p class="reuse">基础：Dan<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_benson.glb</code><a class="download" href="../textbook_characters_v01/107_benson_front.png" download="107_benson_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_minny Minny textbook_minny.glb 复用学龄女孩身体比例；单独改发式、条纹上衣以及裙装/裤装，保留人物姓名。 Lily">
+      <a class="picture" href="../textbook_characters_v01/108_minny_front.png" target="_blank"><img src="preview/textbook_minny.jpg" alt="Minny" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 108 · 复用或本地制作</div>
+      <h2>Minny</h2><p class="kind">复用或改装候选</p><p>复用学龄女孩身体比例；单独改发式、条纹上衣以及裙装/裤装，保留人物姓名。</p><p class="reuse">基础：Lily<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_minny.glb</code><a class="download" href="../textbook_characters_v01/108_minny_front.png" download="108_minny_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mandy Mandy textbook_mandy.glb 保留银发老妇人的身体与头部起点，改开衫、裤装和眼镜；需检查生成网格的围裙是否可拆。 花婆婆">
+      <a class="picture" href="../textbook_characters_v01/109_mandy_front.png" target="_blank"><img src="preview/textbook_mandy.jpg" alt="Mandy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 109 · 复用或本地制作</div>
+      <h2>Mandy</h2><p class="kind">复用或改装候选</p><p>保留银发老妇人的身体与头部起点，改开衫、裤装和眼镜；需检查生成网格的围裙是否可拆。</p><p class="reuse">基础：花婆婆<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_mandy.glb</code><a class="download" href="../textbook_characters_v01/109_mandy_front.png" download="109_mandy_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_charlie Charlie textbook_charlie.glb 复用儿童身体，改红毛衣并配独立圣诞帽；不能把圣诞老人整体缩成儿童。 Tim">
+      <a class="picture" href="../textbook_characters_v01/110_charlie_front.png" target="_blank"><img src="preview/textbook_charlie.jpg" alt="Charlie" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 110 · 复用或本地制作</div>
+      <h2>Charlie</h2><p class="kind">复用或改装候选</p><p>复用儿童身体，改红毛衣并配独立圣诞帽；不能把圣诞老人整体缩成儿童。</p><p class="reuse">基础：Tim<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_charlie.glb</code><a class="download" href="../textbook_characters_v01/110_charlie_front.png" download="110_charlie_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mervin Mervin textbook_mervin.glb 复用已有男孩身体/骨架起点；金发/棕发、衬衫或运动装按参考图单独制作。 Peter">
+      <a class="picture" href="../textbook_characters_v01/111_mervin_front.png" target="_blank"><img src="preview/textbook_mervin.jpg" alt="Mervin" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 111 · 复用或本地制作</div>
+      <h2>Mervin</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点；金发/棕发、衬衫或运动装按参考图单独制作。</p><p class="reuse">基础：Peter<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_mervin.glb</code><a class="download" href="../textbook_characters_v01/111_mervin_front.png" download="111_mervin_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_liu_yang Liu Yang textbook_liu_yang.glb 可复用王亚平的成人航天服与骨架；刘洋必须另做脸部、短发及具体服装细节，只有修改后才能作为另一人物。 Wang Yaping">
+      <a class="picture" href="../textbook_characters_v01/112_liu_yang_front.png" target="_blank"><img src="preview/textbook_liu_yang.jpg" alt="Liu Yang" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 112 · 复用或本地制作</div>
+      <h2>Liu Yang</h2><p class="kind">复用或改装候选</p><p>可复用王亚平的成人航天服与骨架；刘洋必须另做脸部、短发及具体服装细节，只有修改后才能作为另一人物。</p><p class="reuse">基础：Wang Yaping<br><span>中高：具名人物头部与服装审校</span></p>
+      <code>textbook_liu_yang.glb</code><a class="download" href="../textbook_characters_v01/112_liu_yang_front.png" download="112_liu_yang_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_li_wei Li Wei textbook_li_wei.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/113_li_wei_front.png" target="_blank"><img src="preview/textbook_li_wei.jpg" alt="Li Wei" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 113 · 复用或本地制作</div>
+      <h2>Li Wei</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_li_wei.glb</code><a class="download" href="../textbook_characters_v01/113_li_wei_front.png" download="113_li_wei_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_zhou_jie_farewell Zhou Jie textbook_zhou_jie_farewell.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/114_zhou_jie_farewell_front.png" target="_blank"><img src="preview/textbook_zhou_jie_farewell.jpg" alt="Zhou Jie" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 114 · 复用或本地制作</div>
+      <h2>Zhou Jie</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_zhou_jie_farewell.glb</code><a class="download" href="../textbook_characters_v01/114_zhou_jie_farewell_front.png" download="114_zhou_jie_farewell_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_kent Kent textbook_kent.glb 沿用 Kathy 的圆头幼犬网格，分别制作纯黑与黑白斑点毛色、领结颜色；保留三个独立角色。 Kathy">
+      <a class="picture" href="../textbook_characters_v01/116_kent_front.png" target="_blank"><img src="preview/textbook_kent.jpg" alt="Kent" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 116 · 复用或本地制作</div>
+      <h2>Kent</h2><p class="kind">复用或改装候选</p><p>沿用 Kathy 的圆头幼犬网格，分别制作纯黑与黑白斑点毛色、领结颜色；保留三个独立角色。</p><p class="reuse">基础：Kathy<br><span>低：贴图与材质变化</span></p>
+      <code>textbook_kent.glb</code><a class="download" href="../textbook_characters_v01/116_kent_front.png" download="116_kent_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_karen Karen textbook_karen.glb 沿用 Kathy 的圆头幼犬网格，分别制作纯黑与黑白斑点毛色、领结颜色；保留三个独立角色。 Kathy">
+      <a class="picture" href="../textbook_characters_v01/118_karen_front.png" target="_blank"><img src="preview/textbook_karen.jpg" alt="Karen" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 118 · 复用或本地制作</div>
+      <h2>Karen</h2><p class="kind">复用或改装候选</p><p>沿用 Kathy 的圆头幼犬网格，分别制作纯黑与黑白斑点毛色、领结颜色；保留三个独立角色。</p><p class="reuse">基础：Kathy<br><span>低：贴图与材质变化</span></p>
+      <code>textbook_karen.glb</code><a class="download" href="../textbook_characters_v01/118_karen_front.png" download="118_karen_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_alice Alice textbook_alice.glb 复用学龄女孩身体比例；单独改发式、条纹上衣以及裙装/裤装，保留人物姓名。 Lily">
+      <a class="picture" href="../textbook_characters_v01/119_alice_front.png" target="_blank"><img src="preview/textbook_alice.jpg" alt="Alice" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 119 · 复用或本地制作</div>
+      <h2>Alice</h2><p class="kind">复用或改装候选</p><p>复用学龄女孩身体比例；单独改发式、条纹上衣以及裙装/裤装，保留人物姓名。</p><p class="reuse">基础：Lily<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_alice.glb</code><a class="download" href="../textbook_characters_v01/119_alice_front.png" download="119_alice_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_tony Tony textbook_tony.glb 复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。 Mingming">
+      <a class="picture" href="../textbook_characters_v01/120_tony_front.png" target="_blank"><img src="preview/textbook_tony.jpg" alt="Tony" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 120 · 复用或本地制作</div>
+      <h2>Tony</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点，分别改发型、上衣、裤长与鞋色；照片或习题角色先按需出场。</p><p class="reuse">基础：Mingming<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_tony.glb</code><a class="download" href="../textbook_characters_v01/120_tony_front.png" download="120_tony_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_jerry Jerry textbook_jerry.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/121_jerry_front.png" target="_blank"><img src="preview/textbook_jerry.jpg" alt="Jerry" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 121 · 保留图片暂缓</div>
+      <h2>Jerry</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_jerry.glb</code><a class="download" href="../textbook_characters_v01/121_jerry_front.png" download="121_jerry_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_lanlan Lanlan textbook_lanlan.glb 优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。 Anne">
+      <a class="picture" href="../textbook_characters_v01/122_lanlan_front.png" target="_blank"><img src="preview/textbook_lanlan.jpg" alt="Lanlan" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 122 · 复用或本地制作</div>
+      <h2>Lanlan</h2><p class="kind">复用或改装候选</p><p>优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。</p><p class="reuse">基础：Anne<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_lanlan.glb</code><a class="download" href="../textbook_characters_v01/122_lanlan_front.png" download="122_lanlan_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_cindy Cindy textbook_cindy.glb 取 Amy 的儿童身体与卷发起点，按各自参考图改衣裙、发饰和头发长度。 Amy">
+      <a class="picture" href="../textbook_characters_v01/123_cindy_front.png" target="_blank"><img src="preview/textbook_cindy.jpg" alt="Cindy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 123 · 复用或本地制作</div>
+      <h2>Cindy</h2><p class="kind">复用或改装候选</p><p>取 Amy 的儿童身体与卷发起点，按各自参考图改衣裙、发饰和头发长度。</p><p class="reuse">基础：Amy<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_cindy.glb</code><a class="download" href="../textbook_characters_v01/123_cindy_front.png" download="123_cindy_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_ted Ted textbook_ted.glb 复用已有男孩身体/骨架起点；金发/棕发、衬衫或运动装按参考图单独制作。 Peter">
+      <a class="picture" href="../textbook_characters_v01/124_ted_front.png" target="_blank"><img src="preview/textbook_ted.jpg" alt="Ted" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 124 · 复用或本地制作</div>
+      <h2>Ted</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点；金发/棕发、衬衫或运动装按参考图单独制作。</p><p class="reuse">基础：Peter<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_ted.glb</code><a class="download" href="../textbook_characters_v01/124_ted_front.png" download="124_ted_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_simon Simon textbook_simon.glb 复用已有男孩身体/骨架起点；金发/棕发、衬衫或运动装按参考图单独制作。 Peter">
+      <a class="picture" href="../textbook_characters_v01/125_simon_front.png" target="_blank"><img src="preview/textbook_simon.jpg" alt="Simon" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 125 · 复用或本地制作</div>
+      <h2>Simon</h2><p class="kind">复用或改装候选</p><p>复用已有男孩身体/骨架起点；金发/棕发、衬衫或运动装按参考图单独制作。</p><p class="reuse">基础：Peter<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_simon.glb</code><a class="download" href="../textbook_characters_v01/125_simon_front.png" download="125_simon_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_sandy Sandy textbook_sandy.glb 复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。 Lingling">
+      <a class="picture" href="../textbook_characters_v01/126_sandy_front.png" target="_blank"><img src="preview/textbook_sandy.jpg" alt="Sandy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 126 · 复用或本地制作</div>
+      <h2>Sandy</h2><p class="kind">复用或改装候选</p><p>复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。</p><p class="reuse">基础：Lingling<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_sandy.glb</code><a class="download" href="../textbook_characters_v01/126_sandy_front.png" download="126_sandy_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_fran Fran textbook_fran.glb 取 Amy 的儿童身体与卷发起点，按各自参考图改衣裙、发饰和头发长度。 Amy">
+      <a class="picture" href="../textbook_characters_v01/127_fran_front.png" target="_blank"><img src="preview/textbook_fran.jpg" alt="Fran" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 127 · 复用或本地制作</div>
+      <h2>Fran</h2><p class="kind">复用或改装候选</p><p>取 Amy 的儿童身体与卷发起点，按各自参考图改衣裙、发饰和头发长度。</p><p class="reuse">基础：Amy<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_fran.glb</code><a class="download" href="../textbook_characters_v01/127_fran_front.png" download="127_fran_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mary Mary textbook_mary.glb 优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。 Anne">
+      <a class="picture" href="../textbook_characters_v01/128_mary_front.png" target="_blank"><img src="preview/textbook_mary.jpg" alt="Mary" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 128 · 复用或本地制作</div>
+      <h2>Mary</h2><p class="kind">复用或改装候选</p><p>优先复用已有学龄女孩身体/骨架；按各自参考图改短发或辫子、上衣及裙装。</p><p class="reuse">基础：Anne<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_mary.glb</code><a class="download" href="../textbook_characters_v01/128_mary_front.png" download="128_mary_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_mark Mark textbook_mark.glb 从成年男性教师体型起步；分别修改年龄、黑发或胡须、眼镜及衬衫/开衫。 榕校长">
+      <a class="picture" href="../textbook_characters_v01/129_mark_front.png" target="_blank"><img src="preview/textbook_mark.jpg" alt="Mark" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 129 · 复用或本地制作</div>
+      <h2>Mark</h2><p class="kind">复用或改装候选</p><p>从成年男性教师体型起步；分别修改年龄、黑发或胡须、眼镜及衬衫/开衫。</p><p class="reuse">基础：榕校长<br><span>中高：脸型、头发和服装修改</span></p>
+      <code>textbook_mark.glb</code><a class="download" href="../textbook_characters_v01/129_mark_front.png" download="129_mark_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_nancy Nancy textbook_nancy.glb 复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。 Lingling">
+      <a class="picture" href="../textbook_characters_v01/130_nancy_front.png" target="_blank"><img src="preview/textbook_nancy.jpg" alt="Nancy" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 130 · 复用或本地制作</div>
+      <h2>Nancy</h2><p class="kind">复用或改装候选</p><p>复用已有学龄女孩身体/骨架；辫子、裙裤、领结等按该角色单独改装；同名跨册也保留独立 ID。</p><p class="reuse">基础：Lingling<br><span>中高：发型与服装改装，非直接换色</span></p>
+      <code>textbook_nancy.glb</code><a class="download" href="../textbook_characters_v01/130_nancy_front.png" download="130_nancy_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_mr_zhao Mr Zhao textbook_mr_zhao.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/131_mr_zhao_front.png" target="_blank"><img src="preview/textbook_mr_zhao.jpg" alt="Mr Zhao" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 131 · 保留图片暂缓</div>
+      <h2>Mr Zhao</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_mr_zhao.glb</code><a class="download" href="../textbook_characters_v01/131_mr_zhao_front.png" download="131_mr_zhao_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="defer" data-kind="character" data-search="textbook_mr_black Mr Black textbook_mr_black.glb 该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。 ">
+      <a class="picture" href="../textbook_characters_v01/132_mr_black_front.png" target="_blank"><img src="preview/textbook_mr_black.jpg" alt="Mr Black" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 132 · 保留图片暂缓</div>
+      <h2>Mr Black</h2><p class="kind">先保留参考图</p><p>该角色的照片、练习或单篇阅读用途可先由现有立绘承接。具体三维出场未定，当前不为其新增一份完整模型；确定场景后再比较改装与独立生成成本。</p>
+      <code>textbook_mr_black.glb</code><a class="download" href="../textbook_characters_v01/132_mr_black_front.png" download="132_mr_black_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_role_judy_maths_teacher Judy 的数学教师 textbook_role_judy_maths_teacher.glb 取成年女性长裙身体起点，分别改成年脸型、卷发、开衫或粉色短袖裙。 Aunt Carol">
+      <a class="picture" href="../textbook_characters_v01/136_role_judy_maths_teacher_front.png" target="_blank"><img src="preview/textbook_role_judy_maths_teacher.jpg" alt="Judy 的数学教师" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 136 · 复用或本地制作</div>
+      <h2>Judy 的数学教师</h2><p class="kind">复用或改装候选</p><p>取成年女性长裙身体起点，分别改成年脸型、卷发、开衫或粉色短袖裙。</p><p class="reuse">基础：Aunt Carol<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_role_judy_maths_teacher.glb</code><a class="download" href="../textbook_characters_v01/136_role_judy_maths_teacher_front.png" download="136_role_judy_maths_teacher_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_role_martin_father Martin 与 Jack 的父亲 textbook_role_martin_father.glb 利用老年男性身体/骨架；另做太极服或长外套及头发胡须，老人身份分别保存。 布爷爷">
+      <a class="picture" href="../textbook_characters_v01/138_role_martin_father_front.png" target="_blank"><img src="preview/textbook_role_martin_father.jpg" alt="Martin 与 Jack 的父亲" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 138 · 复用或本地制作</div>
+      <h2>Martin 与 Jack 的父亲</h2><p class="kind">复用或改装候选</p><p>利用老年男性身体/骨架；另做太极服或长外套及头发胡须，老人身份分别保存。</p><p class="reuse">基础：布爷爷<br><span>中高：服装重做</span></p>
+      <code>textbook_role_martin_father.glb</code><a class="download" href="../textbook_characters_v01/138_role_martin_father_front.png" download="138_role_martin_father_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="character" data-search="textbook_role_xiaoxiao_auntie Xiaoxiao 在 Auckland 的 Auntie textbook_role_xiaoxiao_auntie.glb 取成年女性身体起点，按角色分别改发型、肤色、上衣和裤装；不可合并人物身份。 苏老师">
+      <a class="picture" href="../textbook_characters_v01/139_role_xiaoxiao_auntie_front.png" target="_blank"><img src="preview/textbook_role_xiaoxiao_auntie.jpg" alt="Xiaoxiao 在 Auckland 的 Auntie" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 139 · 复用或本地制作</div>
+      <h2>Xiaoxiao 在 Auckland 的 Auntie</h2><p class="kind">复用或改装候选</p><p>取成年女性身体起点，按角色分别改发型、肤色、上衣和裤装；不可合并人物身份。</p><p class="reuse">基础：苏老师<br><span>中：需服装或局部网格修改</span></p>
+      <code>textbook_role_xiaoxiao_auntie.glb</code><a class="download" href="../textbook_characters_v01/139_role_xiaoxiao_auntie_front.png" download="139_role_xiaoxiao_auntie_front.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="prop" data-search="robot 积木探险机器人 prop_robot.glb 优先保留现有程序化玩具；也可派生 Robbie 的缩小简化版本。若必须保持这款蓝黄积木造型，再另列生成。 Robbie">
+      <a class="picture" href="../props_v01/01_robot.png" target="_blank"><img src="preview/robot.jpg" alt="积木探险机器人" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 001 · 复用或本地制作</div>
+      <h2>积木探险机器人</h2><p class="kind">复用或本地制作</p><p>优先保留现有程序化玩具；也可派生 Robbie 的缩小简化版本。若必须保持这款蓝黄积木造型，再另列生成。</p><p class="reuse">基础：Robbie<br><span>本地网格/贴图处理，未在本轮实施</span></p>
+      <code>prop_robot.glb</code><a class="download" href="../props_v01/01_robot.png" download="01_robot.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="prop" data-search="flower 蜜桃小花 prop_flower.glb 五片花瓣、花心和粗茎可直接用简单网格细化，生成额度收益较低。 ">
+      <a class="picture" href="../props_v01/10_flower.png" target="_blank"><img src="preview/flower.jpg" alt="蜜桃小花" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 010 · 复用或本地制作</div>
+      <h2>蜜桃小花</h2><p class="kind">复用或本地制作</p><p>五片花瓣、花心和粗茎可直接用简单网格细化，生成额度收益较低。</p>
+      <code>prop_flower.glb</code><a class="download" href="../props_v01/10_flower.png" download="10_flower.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="prop" data-search="milk 蓝盖牛奶瓶 prop_milk.glb 瓶身、盖子和水滴标记适合简单网格及材质制作，保留现有物品 ID。 ">
+      <a class="picture" href="../props_v01/12_milk.png" target="_blank"><img src="preview/milk.jpg" alt="蓝盖牛奶瓶" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 012 · 复用或本地制作</div>
+      <h2>蓝盖牛奶瓶</h2><p class="kind">复用或本地制作</p><p>瓶身、盖子和水滴标记适合简单网格及材质制作，保留现有物品 ID。</p>
+      <code>prop_milk.glb</code><a class="download" href="../props_v01/12_milk.png" download="12_milk.png">下载这张参考图 ↗</a></div></article>
+<article class="card" data-decision="reuse" data-kind="prop" data-search="kite 彩色燕尾风筝 prop_kite.glb 菱形布面、交叉支架与尾带适合本地网格制作，便于保持薄度和做风中摆动。 ">
+      <a class="picture" href="../props_v01/14_kite.png" target="_blank"><img src="preview/kite.jpg" alt="彩色燕尾风筝" width="360" height="360"></a>
+      <div class="body"><div class="eyebrow">原图 014 · 复用或本地制作</div>
+      <h2>彩色燕尾风筝</h2><p class="kind">复用或本地制作</p><p>菱形布面、交叉支架与尾带适合本地网格制作，便于保持薄度和做风中摆动。</p>
+      <code>prop_kite.glb</code><a class="download" href="../props_v01/14_kite.png" download="14_kite.png">下载这张参考图 ↗</a></div></article></section><p id="empty" hidden>没有匹配项，试试其他名称或筛选条件。</p>
+<footer>60 张入选 PNG 按原图字节复制，来源和完整提示词保留在原素材目录。每次上传单独一张 PNG，GLB 按卡片名称保存。34 位建筑居民的既有独立设计继续保留。</footer></main>
+<script>const cards=[...document.querySelectorAll('.card')],buttons=[...document.querySelectorAll('[data-filter]')],query=document.querySelector('#query'),kind=document.querySelector('#kind');let mode='priority';function update(){const q=query.value.trim().toLocaleLowerCase();let shown=0;for(const c of cards){const show=(mode==='all'||c.dataset.decision===mode)&&(kind.value==='all'||kind.value===c.dataset.kind)&&(!q||c.dataset.search.toLocaleLowerCase().includes(q));c.hidden=!show;if(show)shown++}document.querySelector('#count').textContent='显示 '+shown+' 项';document.querySelector('#empty').hidden=shown!==0;for(const b of buttons)b.setAttribute('aria-pressed',String(b.dataset.filter===mode))}for(const b of buttons)b.addEventListener('click',()=>{mode=b.dataset.filter;update()});query.addEventListener('input',update);kind.addEventListener('change',update);update();</script></body></html>

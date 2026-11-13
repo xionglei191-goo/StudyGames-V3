@@ -1,0 +1,246 @@
+{
+  "status": "completed",
+  "date": "2026-11-13",
+  "request": "那继续完成模型修改，并进行替换",
+  "source_blend": "assets\\blender\\interiors\\home\\home_v08_living_hub.blend",
+  "source_glb": "assets\\blender\\interiors\\home\\home_v08_living_hub.glb",
+  "runtime_glb": "game/assets/interiors/home.glb",
+  "runtime_sha256": "09639022140b2e75814540386cb37d0ef7e3d442357d766b1e91607e431954d7",
+  "runtime_matches_source": true,
+  "preserved_source_objects": 496,
+  "baseline_assets": 349,
+  "only_existing_asset_replaced": "game/assets/interiors/home.glb",
+  "six_child_rooms_unchanged": true,
+  "production_save_files_checked": 5,
+  "production_saves_unchanged": true,
+  "unrelated_existing_code_unchanged": true,
+  "changed_existing_code": [
+    "game/data/home_hierarchy.json",
+    "game/data/interiors_manifest.json",
+    "game/scripts/home_catalog.gd",
+    "game/scripts/home_controller.gd",
+    "game/scripts/imported_interior.gd",
+    "game/scripts/main.gd",
+    "game/ui/world_map.gd"
+  ],
+  "headless_checks": 168,
+  "native_checks": 179,
+  "actual_routes": 26,
+  "actual_transitions": 19,
+  "household_checks": 171,
+  "reference_files_checked": 1943,
+  "full_gameplay_suite_run": false,
+  "captures": [
+    {
+      "image": "entry.png",
+      "kind": "production_camera_after_physical_front_door",
+      "position": [
+        0.0,
+        -0.0500410906970501,
+        6.0
+      ],
+      "room": "home",
+      "window": [
+        1440,
+        900
+      ],
+      "image_pixels": [
+        1440,
+        900
+      ],
+      "sha256": "7eed9fee3a7e41a7d81f993167d8c4882b45f97170104540e51e11d7ff425042"
+    },
+    {
+      "image": "overview.png",
+      "kind": "review_camera_hud_hidden",
+      "position": [
+        0.0,
+        -0.0500410906970501,
+        6.0
+      ],
+      "room": "home",
+      "window": [
+        1440,
+        900
+      ],
+      "image_pixels": [
+        1440,
+        900
+      ],
+      "sha256": "af96f9cc118eb2aede2d192268d7c8cb74e3ab9b076d54943101ac4234fa483a"
+    },
+    {
+      "image": "map-1440.png",
+      "kind": "production_map",
+      "position": [
+        0.0,
+        -0.0500410906970501,
+        6.0
+      ],
+      "room": "home",
+      "window": [
+        1440,
+        900
+      ],
+      "image_pixels": [
+        1440,
+        900
+      ],
+      "sha256": "33d6970e19f806fbb4edaf78d1decb50c193ec57bda7a3f727dfd763cd01a7a8"
+    },
+    {
+      "image": "door-home_study.png",
+      "kind": "production_camera_at_physical_door",
+      "position": [
+        -8.25033187866211,
+        -0.0491733551025391,
+        -3.03054523468018
+      ],
+      "room": "home",
+      "window": [
+        1440,
+        900
+      ],
+      "image_pixels": [
+        1440,
+        900
+      ],
+      "sha256": "2620eab455f7ec76b4dedeee20ef4f1b0e06520d138af52aa9865c934bd1b08a"
+    },
+    {
+      "image": "door-home_bedroom.png",
+      "kind": "production_camera_at_physical_door",
+      "position": [
+        -8.25,
+        -0.049172505736351,
+        -1.47500085830688
+      ],
+      "room": "home",
+      "window": [
+        1440,
+        900
+      ],
+      "image_pixels": [
+        1440,
+        900
+      ],
+      "sha256": "4df9174d82ec91ff21ac5ee2a58d0cd451b260981459172176fbdfea3f0e2e3c"
+    },
+    {
+      "image": "door-home_bathroom.png",
+      "kind": "production_camera_at_physical_door",
+      "position": [
+        -8.25,
+        -0.0491694249212742,
+        3.02500057220459
+      ],
+      "room": "home",
+      "window": [
+        1440,
+        900
+      ],
+      "image_pixels": [
+        1440,
+        900
+      ],
+      "sha256": "d65ff0db20b96de05a4f15383a07ee28214f6dd0a84252c0b05942cb8ced12d6"
+    },
+    {
+      "image": "door-home_kitchen.png",
+      "kind": "production_camera_at_physical_door",
+      "position": [
+        7.32777261734009,
+        -0.0491623505949974,
+        -3.51805877685547
+      ],
+      "room": "home",
+      "window": [
+        1440,
+        900
+      ],
+      "image_pixels": [
+        1440,
+        900
+      ],
+      "sha256": "ee930913e12fcd2bf95d0fe971d628fb5337f38c56f72e2da237a74a8eac2390"
+    },
+    {
+      "image": "door-home_dining.png",
+      "kind": "production_camera_at_physical_door",
+      "position": [
+        8.25,
+        -0.0491682216525078,
+        -1.47499930858612
+      ],
+      "room": "home",
+      "window": [
+        1440,
+        900
+      ],
+      "image_pixels": [
+        1440,
+        900
+      ],
+      "sha256": "a697b5ab2446bac9665040cedc53eebbc53b4bc1581730f5bf8c581d1cd95df9"
+    },
+    {
+      "image": "door-home_balcony.png",
+      "kind": "production_camera_at_physical_door",
+      "position": [
+        8.25,
+        -0.0491712093353271,
+        3.02500057220459
+      ],
+      "room": "home",
+      "window": [
+        1440,
+        900
+      ],
+      "image_pixels": [
+        1440,
+        900
+      ],
+      "sha256": "1e3d64ffaa3afaa47e59b0209b5a67e5d62a485f0a56c215a2e13c85a13f5ebd"
+    },
+    {
+      "image": "map-960.png",
+      "kind": "production_map_minimum_window",
+      "position": [
+        0.0,
+        -0.0499629639089108,
+        7.5
+      ],
+      "room": "home",
+      "window": [
+        960,
+        640
+      ],
+      "image_pixels": [
+        960,
+        600
+      ],
+      "sha256": "33b4fb1094e1263b22761bb8bebf6a3ea2dad371651fd2b17c9c6e671f460b5c"
+    },
+    {
+      "image": "bedroom-door-960.png",
+      "kind": "production_camera_minimum_window",
+      "position": [
+        -7.0546407699585,
+        -0.0491735562682152,
+        -0.0070611760020256
+      ],
+      "room": "home",
+      "window": [
+        960,
+        640
+      ],
+      "image_pixels": [
+        960,
+        600
+      ],
+      "sha256": "e3f27240ac64db34cae7ef4d9ae2b87f742191561f2b7d77014a58dfe58e80dd"
+    }
+  ],
+  "launch": "启动字母岛.cmd",
+  "scope": "current local project; older packaged EXE/PCK and web exports are not rebuilt"
+}

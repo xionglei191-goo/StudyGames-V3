@@ -4,7 +4,12 @@ extends RefCounted
 const ROOMS: Array[String] = ["home_estate", "home", "home_bedroom", "home_kitchen", "home_dining", "home_bathroom", "home_study", "home_balcony"]
 const HOME_NAV_ROOMS: Array[String] = ["home_hall"]
 const CHILD_ROOMS: Array[String] = ["home", "home_bedroom", "home_kitchen", "home_dining", "home_bathroom", "home_study", "home_balcony"]
+const DESTINATION_ROOMS: Array[String] = ["home_study", "home_bedroom", "home_bathroom", "home_kitchen", "home_dining", "home_balcony"]
 static var _catalog: Dictionary = {}
+
+static func canonical_room(id: String) -> String:
+	# Old room references still resolve, without exposing an extra hall to players.
+	return "home" if id == "home_hall" else id
 
 static func all() -> Dictionary:
 	if _catalog.is_empty():
@@ -12,6 +17,7 @@ static func all() -> Dictionary:
 	return _catalog
 
 static func room(id: String) -> Dictionary:
+	id = canonical_room(id)
 	if not is_home_space(id): return {}
 	for entry: Dictionary in all().get("rooms", []):
 		if str(entry.room_id) == id: return entry

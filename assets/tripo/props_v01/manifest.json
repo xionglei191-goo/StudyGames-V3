@@ -1,0 +1,1096 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-12",
+  "count": 24,
+  "categories": {
+    "interactive": 14,
+    "furniture": 6,
+    "accessory": 4
+  },
+  "stage": "reference_images_ready",
+  "generator": "built_in_image_gen",
+  "assets": [
+    {
+      "order": 1,
+      "id": "robot",
+      "name": "积木探险机器人",
+      "category": "interactive",
+      "file": "01_robot.png",
+      "model_filename": "prop_robot.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One small friendly retro toy robot. Rounded-square powder-blue torso and head, cream face panel with two simple dark round eyes, mustard-yellow chest dial, short chunky hinged blue arms with simple clamp hands and two distinct sturdy cream feet. Minimal symmetrical details, no antenna, no loose key, neutral standing pose. A toy object that can be carried, separate from the named character Robbie.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "robot",
+      "target_longest_dimension_m": 0.36,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1443391,
+        "sha256": "b5b0b7aac03b834cde6a6dbb1d2ddefcb72d3c020c356c82b4c194b562720b87",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-21eaee47-fce9-47b6-ac12-d8712ecb1d29.png",
+        "prompt_file": "generation-plan.json",
+        "references": []
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Blue-and-cream toy robot, symmetrical connected limbs, whole silhouette, no extra accessory; selected as material/style target.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 2,
+      "id": "train",
+      "name": "红色蒸汽小火车",
+      "category": "interactive",
+      "file": "02_train.png",
+      "model_filename": "prop_train.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One compact red wooden toy steam locomotive, no carriages. Rounded red boiler, warm cream cabin with open dark windows, mustard chimney and small brass dome, four blue wheels on two axles, warm wooden chassis. Clearly readable locomotive silhouette, all parts connected, no rails, no smoke, no face.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "train",
+      "target_longest_dimension_m": 0.48,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1717570,
+        "sha256": "267abaca41e5664210df02ee58991a28614be0b681a836c65640320deceae1d8",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-0c4bc9c4-7a1a-4e04-b0e5-f35e701b4d98.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Red wooden locomotive, visible wheels and open cabin, complete connected silhouette.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 3,
+      "id": "whale_shell",
+      "name": "海蓝旋纹贝壳",
+      "category": "interactive",
+      "file": "03_whale_shell.png",
+      "model_filename": "prop_whale_shell.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One beautiful spiral seashell, pale turquoise fading to cream at its lip, thick rounded spiral ridges, large clearly visible opening angled toward camera. Solid sculpted shell with a softly pearly matte finish. No animal or pearl, no sand, no base.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "whale_shell",
+      "target_longest_dimension_m": 0.28,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1491002,
+        "sha256": "3040402ff852e315d5f6cd39e54d2656ce5c96c14cab41a9142d3f1f0f82ceb6",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-95ffeb1a-0d68-40cf-a097-b807270ed825.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Turquoise shell with cream opening; decorative gold spiral retained as game styling.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 4,
+      "id": "nest",
+      "name": "暖枝小鸟巢",
+      "category": "interactive",
+      "file": "04_nest.png",
+      "model_filename": "prop_nest.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One empty shallow round birds nest made of thick intertwined warm honey-brown twigs with a soft cream straw lining. Clearly visible empty bowl opening viewed slightly from above. Coherent connected bowl silhouette, no eggs, birds, leaves or branches protruding far out.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "nest",
+      "target_longest_dimension_m": 0.32,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1603422,
+        "sha256": "adc7a687b6071a37609c5d6340530dde1ef08e85bae1c96370bd53db3b16b4da",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-53e2acf8-7797-4f44-a00b-7e89315b3ecc.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Empty coherent twig bowl, full outline, no birds or eggs.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 5,
+      "id": "globe",
+      "name": "蓝海小地球仪",
+      "category": "interactive",
+      "file": "05_globe.png",
+      "model_filename": "prop_globe.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One tabletop globe. Soft sky-blue globe sphere with simplified sage-green continent shapes, no labels or grid lettering, supported by a warm brass half-meridian arc on a short walnut stem and a stable round walnut base. Whole sphere and connected base, no other objects.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "globe",
+      "target_longest_dimension_m": 0.32,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1441496,
+        "sha256": "c0ccea086ca8a490f887acd82188890fd61924bb75f866f54eef7bd4ef3008d7",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-b09f752f-50d1-4540-9cb0-9b07721fbf56.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Globe on brass meridian and walnut base; simplified continents are decorative, not geographic teaching data.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 6,
+      "id": "lantern",
+      "name": "暖光纸灯笼",
+      "category": "interactive",
+      "file": "06_lantern.png",
+      "model_filename": "prop_lantern.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One portable rounded yellow-orange paper lantern with broad sculpted vertical ribs, warm matte paper, coral-red top and bottom caps, a thick simple arched red handle connected at both sides, and a short single red tassel at bottom. No writing, no flame, no excessive glow. Suspended alone with the full handle and tassel visible.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "lantern",
+      "target_longest_dimension_m": 0.34,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1301737,
+        "sha256": "b1f84047ce1bdcf7b412d8cd61312415b7a29f3b483b3db778b12d25855c739b",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-2283a00a-883d-43cd-b7a3-536ba84ef488.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Yellow-orange lantern with connected handle and short tassel; no writing.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 7,
+      "id": "yarn",
+      "name": "蜜桃毛线球",
+      "category": "interactive",
+      "file": "07_yarn.png",
+      "model_filename": "prop_yarn.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One plump peach-pink ball of wool with broad sculpted crossing yarn strands. A short thick loose yarn end curls close to and touches the main ball, fully inside the frame. Soft matte wool finish, no knitting needles, basket or animals.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "yarn",
+      "target_longest_dimension_m": 0.22,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1664877,
+        "sha256": "8b5fd18c51f48f1d5299d2164a140af7cddaf0adaf37a4fd351551e1812aeda9",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-f7a3334b-1a1d-48a3-ba9d-eef9b40f17da.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Peach yarn ball, thick sculpted fibers and short attached loose end.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 8,
+      "id": "pumpkin",
+      "name": "秋日小南瓜",
+      "category": "interactive",
+      "file": "08_pumpkin.png",
+      "model_filename": "prop_pumpkin.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One squat ripe orange pumpkin with eight broad softly rounded ribs, a short thick slightly curved dark green stem and one small attached sage leaf. Warm orange material with restrained natural variation, no cut face or holes, no other vegetables.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "pumpkin",
+      "target_longest_dimension_m": 0.32,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1675804,
+        "sha256": "b79a26d3ba20cea81c80df2d9c4e203bf7306fd918c88e1547e4a37379c5c5f7",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-989f14f0-3033-46f5-a489-0ae70761203c.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-aa07e96b-c7cc-4aef-b14d-2b9f065c1c4e.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Corrected gold stem collar: natural green stem directly meets orange pumpkin.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 9,
+      "id": "ice_cream",
+      "name": "草莓冰淇淋",
+      "category": "interactive",
+      "file": "09_ice_cream.png",
+      "model_filename": "prop_ice_cream.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One strawberry ice-cream cone. Single generous round pale-pink scoop with gentle stylized folds, golden waffle cone with broad diamond embossing, all connected and fully visible. Upright isolated object, no drips, sprinkles, cherry, wrapper or stand.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "ice_cream",
+      "target_longest_dimension_m": 0.3,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1700453,
+        "sha256": "9b678c7cf52e376cfdc43a98371c2b47416915bac152325f0933004d6272408c",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-1c527730-23fd-4745-8380-321fbf9afb9d.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-874c32fe-0634-460d-902f-7c0fba71da2d.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Corrected metal/rivets and red chunks: plain pink scoop on edible waffle cone.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 10,
+      "id": "flower",
+      "name": "蜜桃小花",
+      "category": "interactive",
+      "file": "10_flower.png",
+      "model_filename": "prop_flower.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One single stylized pink blossom with five thick rounded petals, warm yellow center, a sturdy green stem and two broad leaves attached near its middle. Soft organic sculpted forms, complete blossom to bottom of stem. No pot, soil, bouquet or loose petals.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "flower",
+      "target_longest_dimension_m": 0.32,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1348666,
+        "sha256": "e2494a14cc5708953b372ae17477a28dcc3e008e6da749ef8f7664435079d917",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-5c64cd19-916c-4020-8c73-97c5f618ca55.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Single connected pink flower with five petals, sturdy stem and two leaves.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 11,
+      "id": "bread",
+      "name": "麦香乡村面包",
+      "category": "interactive",
+      "file": "11_bread.png",
+      "model_filename": "prop_bread.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One small oval loaf of freshly baked bread with golden-brown crust, three pale diagonal scoring marks on top and a subtly lighter base. Plump handmade shape and gentle baked surface. No slices, plate, board, basket or crumbs.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "bread",
+      "target_longest_dimension_m": 0.28,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1485393,
+        "sha256": "263b71299a9701fd0d86b6d8b3c71899f1cc2251e7f9bdc887950adf21e2aad7",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-9828b25b-a1a2-465f-93f1-bf902bde5498.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Single golden bread loaf with three scoring marks, no added hardware or props.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 12,
+      "id": "milk",
+      "name": "蓝盖牛奶瓶",
+      "category": "interactive",
+      "file": "12_milk.png",
+      "model_filename": "prop_milk.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One sealed small milk bottle with opaque creamy-white body, a short neck and a rounded sky-blue cap. A single simple raised blue droplet emblem on the front, no letters or numbers. Soft thick glass-like shell rendered opaque for clear reconstruction, no liquid transparency, no label text or straw.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "milk",
+      "target_longest_dimension_m": 0.26,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1285212,
+        "sha256": "5c8347150f0276cdfd5699851b0a133030ff5864d0361fd116ed685413a4efa0",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-436e8d75-0bb5-4180-8a28-b6980a943983.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Opaque milk bottle with blue cap and droplet emblem; no writing.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 13,
+      "id": "umbrella",
+      "name": "晴空蓝雨伞",
+      "category": "interactive",
+      "file": "13_umbrella.png",
+      "model_filename": "prop_umbrella.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One open small sky-blue umbrella. Eight rounded canopy panels, cream edging, thick warm wooden central shaft and curved J handle, subtly visible connected ribs underneath. Gentle three-quarter side view showing whole canopy and entire handle, upright with a slight tilt. No person, rain, stand or detached parts.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "umbrella",
+      "target_longest_dimension_m": 0.7,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1317456,
+        "sha256": "de9f7979051b6ae026847ab01bdb3b0f4ef4ba623a41b7b7301f2c97d409fe01",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-cb629e2e-d035-4667-aba5-58e904b65297.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Open blue umbrella with visible ribs and complete wooden hooked handle.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 14,
+      "id": "kite",
+      "name": "彩色燕尾风筝",
+      "category": "interactive",
+      "file": "14_kite.png",
+      "model_filename": "prop_kite.glb",
+      "source_label": "互动道具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One classic diamond kite with thick blue fabric outer trim, four broad panels in cream, sky blue, coral and mustard. Subtle wooden cross spars, a short thick curved tail with two broad small ribbon bows connected to its lower corner. Front three-quarter view reveals slight thickness, entire kite and tail. No string spool, hands, clouds or scenery.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "kite",
+      "target_longest_dimension_m": 0.6,
+      "pivot": "object_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1343526,
+        "sha256": "f582cac71383872ef5a0340c9d9703cb74d82316b502dc32689fd9b5c38fe7b9",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-ea372ea8-a138-4f9f-8614-917636e50904.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Diamond kite, four color panels, attached short bow tail; whole shape visible.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 15,
+      "id": "reading_sofa",
+      "name": "云朵双人沙发",
+      "category": "furniture",
+      "file": "15_reading_sofa.png",
+      "model_filename": "prop_reading_sofa.glb",
+      "source_label": "家具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One cozy two-seat cloud-shaped sofa. Rounded scalloped cream backrest, soft pale-sage seat upholstery, two attached rounded armrests, four short warm walnut legs. Two seat cushions built into sofa, no loose pillows or blanket. Front three-quarter view showing seat depth and supporting feet, full standalone furniture.",
+      "runtime_source": "game/gameplay/free_grid_decor_studio.gd",
+      "runtime_key": "reading_sofa",
+      "target_longest_dimension_m": 1.6,
+      "pivot": "floor_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1513694,
+        "sha256": "948e71a686ec8dd34d6407cbec615970bbed7c4c5521326b0098d5d7bd667ba5",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-9cff8f43-3256-4a48-8937-613a18f725c2.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Cloud-back two-seat sofa with thick legs, no loose props.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 16,
+      "id": "walnut_bookshelf",
+      "name": "童话绘本架",
+      "category": "furniture",
+      "file": "16_walnut_bookshelf.png",
+      "model_filename": "prop_walnut_bookshelf.glb",
+      "source_label": "家具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One compact walnut storybook shelf with rounded corners, gently arched top, two open shelves and a lower drawer. A few broad pastel book spines neatly fixed in place as shelf contents, no readable writing or graphics. Solid stable feet and clear shelf cavities, simple warm wood grain. Front three-quarter view, no scattered objects.",
+      "runtime_source": "game/gameplay/free_grid_decor_studio.gd",
+      "runtime_key": "walnut_bookshelf",
+      "target_longest_dimension_m": 1.45,
+      "pivot": "floor_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1622879,
+        "sha256": "f3e0b789178d1b8f17709030b05923daeb4259855f90b45e84450d3e8b10652a",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-e06a3a58-f70e-44df-b6a5-6a6b025a6aa4.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Arched wooden shelf with pastel books, drawer and stable feet; books require later separation only if interactive.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 17,
+      "id": "music_gramophone",
+      "name": "黄铜留声机",
+      "category": "furniture",
+      "file": "17_music_gramophone.png",
+      "model_filename": "prop_music_gramophone.glb",
+      "source_label": "家具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One vintage tabletop gramophone. Large warm brass trumpet horn with thick scalloped lip, elegantly curved attached brass pipe, dark walnut square base with rounded corners, one black record on visible turntable and short tonearm. Front three-quarter view reveals horn opening and turntable. Simple chunky fittings, no text, no loose crank or music notes.",
+      "runtime_source": "game/gameplay/free_grid_decor_studio.gd",
+      "runtime_key": "music_gramophone",
+      "target_longest_dimension_m": 0.7,
+      "pivot": "floor_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1541441,
+        "sha256": "be4819c2dd0e48a9db6c52593d6106273574b1f8dfb3d7d427a59311a60374a9",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-2ddd912c-d0fd-4e56-81c1-78ae7ee205ed.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Brass horn, walnut base, turntable and tonearm; connected full silhouette.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 18,
+      "id": "courtyard_swing",
+      "name": "森系木秋千",
+      "category": "furniture",
+      "file": "18_courtyard_swing.png",
+      "model_filename": "prop_courtyard_swing.glb",
+      "source_label": "家具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One complete small freestanding wooden garden swing. Warm honey timber A-frame with four grounded legs, single thick top crossbar, one rounded rectangular wooden seat suspended by two thick clearly connected ropes. Minimal sturdy joinery, all four feet, ropes and whole frame visible. No vines, flowers, people, ground patch or scenery.",
+      "runtime_source": "game/gameplay/free_grid_decor_studio.gd",
+      "runtime_key": "courtyard_swing",
+      "target_longest_dimension_m": 1.9,
+      "pivot": "floor_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1490677,
+        "sha256": "0871dd18011d45da5a1262e38605fe54ec71260197e653cb92f93ff3f4b59037",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-88a9e9bc-9523-4ed3-a2c1-7e3331014963.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Complete wood A-frame swing with four feet, connected ropes and single seat; static reference.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 19,
+      "id": "garden_fountain",
+      "name": "晴空小喷泉",
+      "category": "furniture",
+      "file": "19_garden_fountain.png",
+      "model_filename": "prop_garden_fountain.glb",
+      "source_label": "家具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One small round garden fountain carved from warm cream stone with pale blue glazed inner basin. Wide shallow lower basin on a short stable pedestal, a smaller upper bowl on a central stem. Quiet flat blue water surfaces only, no moving water streams, splashes or particles. Soft rounded carved scallops, whole object visible, no garden surroundings.",
+      "runtime_source": "game/gameplay/free_grid_decor_studio.gd",
+      "runtime_key": "garden_fountain",
+      "target_longest_dimension_m": 1.2,
+      "pivot": "floor_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1330311,
+        "sha256": "2980c9c42ea2830ca78e955f5b2257372125595a95b0fbca2204df3f38906a8f",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-e6b40ecb-a168-4782-89b0-bb4c9e0a25e6.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Two cream stone bowls with flat blue basin surfaces; no baked splash geometry.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 20,
+      "id": "bunny_topiary",
+      "name": "兔兔绿雕",
+      "category": "furniture",
+      "file": "20_bunny_topiary.png",
+      "model_filename": "prop_bunny_topiary.glb",
+      "source_label": "家具",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One rabbit-shaped green topiary bush growing from a low round terracotta planter. Dense sage-green clipped foliage forms a seated rabbit silhouette with two tall rounded ears, chunky haunches, small front paws and a round tail, subtle leaf clumps. No cartoon eyes, clothing or facial features. Visible planter, no garden or loose leaves.",
+      "runtime_source": "game/gameplay/free_grid_decor_studio.gd",
+      "runtime_key": "bunny_topiary",
+      "target_longest_dimension_m": 0.85,
+      "pivot": "floor_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1418664,
+        "sha256": "bb285cb675416a73c59d71b0a6491aa21a4661c202ded3086e2a6a4eab87d8dd",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-4834666b-f60a-4a35-a48e-157575432561.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Leaf-covered rabbit silhouette in terracotta pot; botanical sculpture with no eyes.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 21,
+      "id": "straw_hat",
+      "name": "田园丝带草帽",
+      "category": "accessory",
+      "file": "21_straw_hat.png",
+      "model_filename": "prop_straw_hat.glb",
+      "source_label": "穿戴配饰",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One standalone straw sunhat with rounded dome crown, broad thick gently curved brim, warm honey woven texture and a salmon-pink ribbon band with a compact bow fixed at one side. Three-quarter view from slightly above shows crown, brim thickness and rim opening edge. No head, person, mannequin, flowers or floating pieces.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "straw_hat",
+      "target_longest_dimension_m": 0.45,
+      "pivot": "hat_bottom_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1550016,
+        "sha256": "6a6f0717e1d9074098d1811daa29290abaa0fd4235affbbf32bbec0b89fa62f8",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-29c68c4e-8ab6-4385-b226-b2412bf39790.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Straw sunhat with attached salmon ribbon/bow and visible brim opening edge.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 22,
+      "id": "star_beret",
+      "name": "摘星画家贝雷帽",
+      "category": "accessory",
+      "file": "22_star_beret.png",
+      "model_filename": "prop_star_beret.glb",
+      "source_label": "穿戴配饰",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One standalone soft lavender felt beret, slightly slouchy rounded crown, short central felt stem, thick folded lower band, one small golden star badge sewn to the front side. Three-quarter view with visible brim edge and clear hat volume. Matte cloth, no head, mannequin, paintbrush or other items.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "star_beret",
+      "target_longest_dimension_m": 0.3,
+      "pivot": "hat_bottom_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1692109,
+        "sha256": "9e35dfc25d1f8120054767e594a231d945994270f5317c143b0ad6e2fbaed333",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-2e719cb7-e6e5-45e3-9f71-bf286a6a44f6.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Lavender felt beret with sewn star patch, whole rim and crown.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 23,
+      "id": "school_pack",
+      "name": "元气向日葵书包",
+      "category": "accessory",
+      "file": "23_school_pack.png",
+      "model_filename": "prop_school_pack.glb",
+      "source_label": "穿戴配饰",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One small warm mustard-yellow school backpack with rounded rectangular shape, cream front pocket, simple embroidered sunflower patch, brown zipper piping, thick top loop and two padded shoulder straps visibly attached behind. Three-quarter front view with one side and both strap loops evident. No readable lettering, no books, person or loose accessories.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "school_pack",
+      "target_longest_dimension_m": 0.36,
+      "pivot": "back_attachment_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1700980,
+        "sha256": "ce3460499d387d6e5e33a1313877c7fcef985f81bf2f5e9fe108fb195a631300",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-3017e16e-b41f-4744-b5bb-bd5d52caaab1.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Mustard school bag, cream sunflower pocket, visible attached shoulder straps.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    },
+    {
+      "order": 24,
+      "id": "picnic_basket",
+      "name": "藤编野餐花篮",
+      "category": "accessory",
+      "file": "24_picnic_basket.png",
+      "model_filename": "prop_picnic_basket.glb",
+      "source_label": "穿戴配饰",
+      "adaptation": "原创游戏道具",
+      "source_refs": [],
+      "source_visual_review": null,
+      "design": "One empty wearable woven picnic basket backpack. Warm honey wicker oval basket with open top and rounded rectangular back, thick reinforced rim, two broad brown leather shoulder straps fixed to rear and a small top carrying handle. Three-quarter side-front view shows empty opening and attached straps. No flowers, food, picnic blanket or person.",
+      "runtime_source": "game/actors/modular_wardrobe.gd",
+      "runtime_key": "picnic_basket",
+      "target_longest_dimension_m": 0.38,
+      "pivot": "back_attachment_center",
+      "technical": {
+        "width": 1254,
+        "height": 1254,
+        "format": "PNG",
+        "mode": "RGB",
+        "bytes": 1600196,
+        "sha256": "c75569edb3aeb39d56d703113d26230571222fb9965c18165ea95047457c79fd",
+        "original_bytes_preserved": true,
+        "background": "opaque white",
+        "views": 1,
+        "frames": 1
+      },
+      "generation": {
+        "tool": "built_in_image_gen",
+        "original_path": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1cf00-c64b-7ff1-b8c6-d39d0c464970\\exec-388b5ef9-0c0e-459b-a6c8-87a12a382cae.png",
+        "prompt_file": "generation-plan.json",
+        "references": [
+          "F:/LoveStudy/assets/tripo/props_v01/01_robot.png"
+        ]
+      },
+      "verification": {
+        "visual_reviewed": true,
+        "visual_review_note": "Empty woven basket backpack with wide attached leather straps and handle.",
+        "image_integrity_checked": true,
+        "three_d_model_generated_in_this_task": false,
+        "in_engine_reviewed": false
+      },
+      "status": "reference_image_saved_and_reviewed"
+    }
+  ],
+  "scope": "User-led Tripo3D reference handoff; 14 interactive props, 6 furniture objects, 4 wearable accessories.",
+  "original_png_bytes_preserved": true,
+  "source_identity_note": "Original game concepts mapped to existing catalog keys.",
+  "model_state": "Reference-image delivery only; model production and engine validation not performed here."
+}
