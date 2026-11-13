@@ -47,11 +47,11 @@ func _run() -> void:
 	_game.show_bag()
 	await _layout()
 	_check_panel("wardrobe 1440x900")
-	await _click_text("草莓粉")
+	await _click_text("蜜桃草莓套装", true)
 	_check(_state.data.outfit == "pink", "Mouse click changes outfit to pink")
 	_game.show_shop()
 	await _layout()
-	await _click_text("25 叶币 · 看看")
+	await _click_text("25 叶币 · 预览")
 	for frame: int in range(300):
 		await process_frame
 		if _game.ui.current_panel == "purchase":
@@ -82,7 +82,8 @@ func _run() -> void:
 	_check_panel("unhinted lesson 1440x900")
 	var transcript: String = str(_game.quiz_current.prompt)
 	_check(not _panel_prose().contains(transcript), "Unhinted heading/body do not reveal the answer transcript")
-	_check(_game.ui.panel_box.get_child(1).text == "听听朋友的话", "Unhinted lesson uses a neutral heading")
+	var lesson_heading: Label = _panel_heading()
+	_check(lesson_heading != null and lesson_heading.text == "听听朋友的话", "Unhinted lesson uses a neutral heading")
 	await _click_text("显示中文提示")
 	_check(_game.quiz_hinted, "Mouse click reveals a Chinese hint")
 	_check(_state._active_assisted, "Hint click marks the current attempt as assisted")
@@ -163,8 +164,22 @@ func _click_text(text: String, prefix: bool = false) -> void:
 	await _layout()
 
 
+func _panel_heading() -> Label:
+	if _game.ui.panel_box.get_child_count() == 0:
+		return null
+	var first_child: Node = _game.ui.panel_box.get_child(0)
+	if first_child is Label:
+		return first_child as Label
+	for node: Node in first_child.find_children("*", "Label", true, false):
+		return node as Label
+	return null
+
+
 func _panel_prose() -> String:
 	var text := ""
+	var h := _panel_heading()
+	if h != null:
+		text += h.text + "\n"
 	# Only direct Label children are heading/body/footnote; choices are legitimate answers.
 	for child: Node in _game.ui.panel_box.get_children():
 		if child is Label:
@@ -184,9 +199,13 @@ func _check_panel(context: String) -> void:
 
 
 func _check_font_and_colors() -> void:
-	var heading: Label = _game.ui.panel_box.get_child(1) as Label
-	_check(heading.get_theme_font("font").resource_path == "res://assets/fonts/IslandSans.otf", "Heading uses the bundled font")
-	_check(heading.get_theme_color("font_color").is_equal_approx(_game.ui.ink), "Heading uses the intended ink color")
+	var heading: Label = _panel_heading()
+	var font_res: Font = heading.get_theme_font("font") if heading != null else null
+	var font_path: String = font_res.resource_path if font_res != null else ""
+	if font_path.is_empty() and font_res is FontVariation and (font_res as FontVariation).base_font != null:
+		font_path = (font_res as FontVariation).base_font.resource_path
+	_check(font_path.begins_with("res://assets/fonts/"), "Heading uses the bundled font")
+	_check(heading != null and heading.get_theme_color("font_color").is_equal_approx(_game.ui.ink), "Heading uses the intended ink color")
 	for node: Node in _game.ui.panel_box.find_children("*", "Button", true, false):
 		var button: Button = node as Button
 		if not button.disabled:

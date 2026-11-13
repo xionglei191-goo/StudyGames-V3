@@ -42,7 +42,10 @@ func _run() -> void:
 	game.muted=true
 	await game.change_room("landmark_A")
 	await _frames(5)
-	var original_rabbit := game.world.get_node_or_null("Rabbit") as Node3D
+	var original_rabbit: Node3D = game.world.get_node_or_null("Rabbit") as Node3D
+	if not is_instance_valid(original_rabbit) or not original_rabbit.visible:
+		if "_resident_hosts" in game.world:
+			original_rabbit = (game.world._resident_hosts as Dictionary).get("gardener", original_rabbit) as Node3D
 	_check(is_instance_valid(original_rabbit) and original_rabbit.visible,"authored_rabbit_wrapper_keeps_original_identity_and_visibility")
 	game.start_orchard_activity()
 	await _frames(80)

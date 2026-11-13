@@ -1,5 +1,5 @@
 {
-  "schema_version": 4,
+  "schema_version": 5,
   "book_count": 8,
   "unit_count": 81,
   "books": [
@@ -96,10 +96,15 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-03bdaeaf2b39",
-      "lead_word": "bag",
-      "lead_zh": "包",
+      "lead_entry_id": "occ-a6e41c5905e6",
+      "lead_word": "hello",
+      "lead_zh": "你好",
       "featured_words": [
+        {
+          "entry_id": "occ-a6e41c5905e6",
+          "word": "hello",
+          "zh": "你好"
+        },
         {
           "entry_id": "occ-03bdaeaf2b39",
           "word": "bag",
@@ -109,11 +114,6 @@
           "entry_id": "occ-46a650cc1237",
           "word": "good",
           "zh": "好的"
-        },
-        {
-          "entry_id": "occ-a6e41c5905e6",
-          "word": "hello",
-          "zh": "你好"
         },
         {
           "entry_id": "occ-d60a734be099",
@@ -159,29 +159,29 @@
       ],
       "host_npc_id": "host_Z",
       "host_speaker": "Z 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-fe88cd957400",
-      "lead_word": "afternoon",
-      "lead_zh": "下午",
+      "lead_entry_id": "occ-ae5480d1ab38",
+      "lead_word": "name",
+      "lead_zh": "名字",
       "featured_words": [
+        {
+          "entry_id": "occ-ae5480d1ab38",
+          "word": "name",
+          "zh": "名字"
+        },
+        {
+          "entry_id": "occ-eb740b8faa9e",
+          "word": "please",
+          "zh": "请"
+        },
         {
           "entry_id": "occ-fe88cd957400",
           "word": "afternoon",
           "zh": "下午"
         },
         {
-          "entry_id": "occ-ffc76e831985",
-          "word": "and",
-          "zh": "和"
-        },
-        {
           "entry_id": "occ-0a701857deca",
           "word": "back",
           "zh": "回原处"
-        },
-        {
-          "entry_id": "occ-aaafe8ab531f",
-          "word": "ball",
-          "zh": "球"
         }
       ],
       "stages": [
@@ -221,14 +221,14 @@
       ],
       "host_npc_id": "textbook_lingling",
       "host_speaker": "Lingling · 山丘学园",
-      "lead_entry_id": "occ-030f341f3824",
-      "lead_word": "are",
-      "lead_zh": "是",
+      "lead_entry_id": "occ-6b16301b6eab",
+      "lead_word": "old",
+      "lead_zh": "（多少）岁",
       "featured_words": [
         {
-          "entry_id": "occ-030f341f3824",
-          "word": "are",
-          "zh": "是"
+          "entry_id": "occ-6b16301b6eab",
+          "word": "old",
+          "zh": "（多少）岁"
         },
         {
           "entry_id": "occ-b3c6c0ab1846",
@@ -241,9 +241,9 @@
           "zh": "五"
         },
         {
-          "entry_id": "occ-9293db6d9fde",
-          "word": "four",
-          "zh": "四"
+          "entry_id": "occ-0285e2e76a72",
+          "word": "nine",
+          "zh": "九"
         }
       ],
       "stages": [
@@ -283,10 +283,15 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-132af51f5ae8",
-      "lead_word": "aunt",
-      "lead_zh": "伯母；舅母；婶婶；姑姑；姨",
+      "lead_entry_id": "occ-974b3f035b3d",
+      "lead_word": "family",
+      "lead_zh": "家庭；家人",
       "featured_words": [
+        {
+          "entry_id": "occ-974b3f035b3d",
+          "word": "family",
+          "zh": "家庭；家人"
+        },
         {
           "entry_id": "occ-132af51f5ae8",
           "word": "aunt",
@@ -301,11 +306,6 @@
           "entry_id": "occ-d8cacf3ac4fb",
           "word": "brother",
           "zh": "哥哥；弟弟"
-        },
-        {
-          "entry_id": "occ-0e0fc2f1e505",
-          "word": "cousin",
-          "zh": "堂兄弟（姐妹）；表兄弟（姐妹）"
         }
       ],
       "stages": [
@@ -345,29 +345,29 @@
       ],
       "host_npc_id": "textbook_miss_li",
       "host_speaker": "李老师 · 阳光故事圈",
-      "lead_entry_id": "occ-5605ac34c5f2",
-      "lead_word": "book",
-      "lead_zh": "书",
+      "lead_entry_id": "occ-ab00e4157e8c",
+      "lead_word": "pen",
+      "lead_zh": "钢笔",
       "featured_words": [
+        {
+          "entry_id": "occ-ab00e4157e8c",
+          "word": "pen",
+          "zh": "钢笔"
+        },
+        {
+          "entry_id": "occ-17e05f253511",
+          "word": "pencil",
+          "zh": "铅笔"
+        },
+        {
+          "entry_id": "occ-17c55120f402",
+          "word": "pencil case",
+          "zh": "文具盒"
+        },
         {
           "entry_id": "occ-5605ac34c5f2",
           "word": "book",
           "zh": "书"
-        },
-        {
-          "entry_id": "occ-2c51ae8d0710",
-          "word": "football",
-          "zh": "足球"
-        },
-        {
-          "entry_id": "occ-d047d8b7485b",
-          "word": "isn't",
-          "zh": "不是（缩略形式及展开）"
-        },
-        {
-          "entry_id": "occ-cccbd194198a",
-          "word": "is not",
-          "zh": "不是（缩略形式及展开）"
         }
       ],
       "stages": [
@@ -407,14 +407,19 @@
       ],
       "host_npc_id": "textbook_tim",
       "host_speaker": "Tim · 青草操场",
-      "lead_entry_id": "occ-e1fed847186b",
-      "lead_word": "all",
-      "lead_zh": "全部",
+      "lead_entry_id": "occ-ab64cc6b85a0",
+      "lead_word": "head",
+      "lead_zh": "头",
       "featured_words": [
         {
-          "entry_id": "occ-e1fed847186b",
-          "word": "all",
-          "zh": "全部"
+          "entry_id": "occ-ab64cc6b85a0",
+          "word": "head",
+          "zh": "头"
+        },
+        {
+          "entry_id": "occ-128da1606e14",
+          "word": "touch",
+          "zh": "摸；接触"
         },
         {
           "entry_id": "occ-8fdeb3ae8a8a",
@@ -422,14 +427,9 @@
           "zh": "身体"
         },
         {
-          "entry_id": "occ-a38c62b81100",
-          "word": "ear",
-          "zh": "耳朵"
-        },
-        {
-          "entry_id": "occ-2b0eb5bb1d63",
-          "word": "eye",
-          "zh": "眼睛"
+          "entry_id": "occ-e1fed847186b",
+          "word": "all",
+          "zh": "全部"
         }
       ],
       "stages": [
@@ -469,14 +469,14 @@
       ],
       "host_npc_id": "textbook_peter",
       "host_speaker": "Peter · 美术画室",
-      "lead_entry_id": "occ-febaf208ad3a",
-      "lead_word": "beautiful",
-      "lead_zh": "美丽的",
+      "lead_entry_id": "occ-85655e3ca7d2",
+      "lead_word": "colour",
+      "lead_zh": "颜色",
       "featured_words": [
         {
-          "entry_id": "occ-febaf208ad3a",
-          "word": "beautiful",
-          "zh": "美丽的"
+          "entry_id": "occ-85655e3ca7d2",
+          "word": "colour",
+          "zh": "颜色"
         },
         {
           "entry_id": "occ-d7eb3befc13b",
@@ -489,9 +489,9 @@
           "zh": "蓝色；蓝色的"
         },
         {
-          "entry_id": "occ-a18cb2dfccab",
-          "word": "brown",
-          "zh": "棕色；棕色的"
+          "entry_id": "occ-dcb6b3f282d6",
+          "word": "green",
+          "zh": "绿色；绿色的"
         }
       ],
       "stages": [
@@ -603,19 +603,19 @@
           "zh": "苹果"
         },
         {
+          "entry_id": "occ-c873d69a2e87",
+          "word": "like",
+          "zh": "喜欢"
+        },
+        {
+          "entry_id": "occ-ebce5f4583fd",
+          "word": "fruit",
+          "zh": "水果"
+        },
+        {
           "entry_id": "occ-7b44aebc0164",
           "word": "banana",
           "zh": "香蕉"
-        },
-        {
-          "entry_id": "occ-ce01ff1663e3",
-          "word": "boy",
-          "zh": "男孩"
-        },
-        {
-          "entry_id": "occ-21bf9bbab64e",
-          "word": "don't",
-          "zh": "不；不要（do not 的缩略形式及展开）"
         }
       ],
       "stages": [
@@ -666,19 +666,19 @@
           "zh": "生日"
         },
         {
+          "entry_id": "occ-d2b2ef2a58d8",
+          "word": "happy",
+          "zh": "快乐的"
+        },
+        {
+          "entry_id": "occ-33146f09a47a",
+          "word": "gift",
+          "zh": "礼物"
+        },
+        {
           "entry_id": "occ-bf536dbfa59c",
           "word": "cake",
           "zh": "蛋糕"
-        },
-        {
-          "entry_id": "occ-51d15d824d20",
-          "word": "card",
-          "zh": "卡片"
-        },
-        {
-          "entry_id": "occ-30913f95f6ff",
-          "word": "doll",
-          "zh": "玩偶；玩具娃娃"
         }
       ],
       "stages": [
@@ -718,10 +718,20 @@
       ],
       "host_npc_id": "textbook_lingling",
       "host_speaker": "Lingling · 山丘学园",
-      "lead_entry_id": "occ-22fd0dcb30f5",
-      "lead_word": "again",
-      "lead_zh": "又；再次",
+      "lead_entry_id": "occ-30cf725d0ef5",
+      "lead_word": "fine",
+      "lead_zh": "健康的；美好的",
       "featured_words": [
+        {
+          "entry_id": "occ-30cf725d0ef5",
+          "word": "fine",
+          "zh": "健康的；美好的"
+        },
+        {
+          "entry_id": "occ-2262742cd941",
+          "word": "glad",
+          "zh": "高兴的"
+        },
         {
           "entry_id": "occ-22fd0dcb30f5",
           "word": "again",
@@ -731,16 +741,6 @@
           "entry_id": "occ-b77327c1d2e4",
           "word": "baby",
           "zh": "婴儿"
-        },
-        {
-          "entry_id": "occ-8386a58e8bdb",
-          "word": "boy",
-          "zh": "男孩"
-        },
-        {
-          "entry_id": "occ-82156d7f6307",
-          "word": "but",
-          "zh": "但是"
         }
       ],
       "stages": [
@@ -781,19 +781,14 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-ac75ce5af26e",
-      "lead_word": "bed",
-      "lead_zh": "床",
+      "lead_entry_id": "occ-ab2acd755c99",
+      "lead_word": "time",
+      "lead_zh": "时间",
       "featured_words": [
         {
-          "entry_id": "occ-ac75ce5af26e",
-          "word": "bed",
-          "zh": "床"
-        },
-        {
-          "entry_id": "occ-4cf0d9df4ba1",
-          "word": "chore",
-          "zh": "家务"
+          "entry_id": "occ-ab2acd755c99",
+          "word": "time",
+          "zh": "时间"
         },
         {
           "entry_id": "occ-a88d399fda41",
@@ -804,6 +799,11 @@
           "entry_id": "occ-ce83cefb25f1",
           "word": "day",
           "zh": "白天；一天"
+        },
+        {
+          "entry_id": "occ-e1673787f1e0",
+          "word": "eleven",
+          "zh": "十一"
         }
       ],
       "stages": [
@@ -844,10 +844,20 @@
       ],
       "host_npc_id": "host_U",
       "host_speaker": "U 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-358977506c4a",
-      "lead_word": "cloudy",
-      "lead_zh": "多云的；阴天的",
+      "lead_entry_id": "occ-eea683ee2d8a",
+      "lead_word": "like",
+      "lead_zh": "怎么样；像",
       "featured_words": [
+        {
+          "entry_id": "occ-eea683ee2d8a",
+          "word": "like",
+          "zh": "怎么样；像"
+        },
+        {
+          "entry_id": "occ-666f3adad272",
+          "word": "weather",
+          "zh": "天气"
+        },
         {
           "entry_id": "occ-358977506c4a",
           "word": "cloudy",
@@ -857,16 +867,6 @@
           "entry_id": "occ-dff74de29b9c",
           "word": "cold",
           "zh": "冷的"
-        },
-        {
-          "entry_id": "occ-403f257d2981",
-          "word": "feel",
-          "zh": "觉得"
-        },
-        {
-          "entry_id": "occ-39e5834711ad",
-          "word": "hot",
-          "zh": "炎热的"
         }
       ],
       "stages": [
@@ -906,10 +906,15 @@
       ],
       "host_npc_id": "host_H",
       "host_speaker": "H 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-6df55828681b",
-      "lead_word": "big",
-      "lead_zh": "大的",
+      "lead_entry_id": "occ-a2978701e625",
+      "lead_word": "dress",
+      "lead_zh": "连衣裙",
       "featured_words": [
+        {
+          "entry_id": "occ-a2978701e625",
+          "word": "dress",
+          "zh": "连衣裙"
+        },
         {
           "entry_id": "occ-6df55828681b",
           "word": "big",
@@ -924,11 +929,6 @@
           "entry_id": "occ-cfd95f21c11a",
           "word": "clothes",
           "zh": "衣服"
-        },
-        {
-          "entry_id": "occ-bfec6d367df8",
-          "word": "coat",
-          "zh": "外套；大衣"
         }
       ],
       "stages": [
@@ -968,10 +968,20 @@
       ],
       "host_npc_id": "host_K",
       "host_speaker": "K 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-b7c03f887948",
-      "lead_word": "bird",
-      "lead_zh": "鸟",
+      "lead_entry_id": "occ-e0e930a48887",
+      "lead_word": "how many",
+      "lead_zh": "多少……",
       "featured_words": [
+        {
+          "entry_id": "occ-e0e930a48887",
+          "word": "how many",
+          "zh": "多少……"
+        },
+        {
+          "entry_id": "occ-7eea0eb70eca",
+          "word": "kite",
+          "zh": "风筝"
+        },
         {
           "entry_id": "occ-b7c03f887948",
           "word": "bird",
@@ -981,16 +991,6 @@
           "entry_id": "occ-36e3c5d38fc4",
           "word": "eighteen",
           "zh": "十八"
-        },
-        {
-          "entry_id": "occ-680416c3a5a5",
-          "word": "fifteen",
-          "zh": "十五"
-        },
-        {
-          "entry_id": "occ-c1d864330bb8",
-          "word": "fourteen",
-          "zh": "十四"
         }
       ],
       "stages": [
@@ -1030,29 +1030,29 @@
       ],
       "host_npc_id": "host_E",
       "host_speaker": "E 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-5df6031bf2ba",
-      "lead_word": "dinner",
-      "lead_zh": "晚餐；正餐",
+      "lead_entry_id": "occ-a0574eb51418",
+      "lead_word": "egg",
+      "lead_zh": "鸡蛋；蛋",
       "featured_words": [
-        {
-          "entry_id": "occ-5df6031bf2ba",
-          "word": "dinner",
-          "zh": "晚餐；正餐"
-        },
         {
           "entry_id": "occ-a0574eb51418",
           "word": "egg",
           "zh": "鸡蛋；蛋"
         },
         {
+          "entry_id": "occ-c654cb3a1da7",
+          "word": "there",
+          "zh": "（在）那里"
+        },
+        {
+          "entry_id": "occ-5df6031bf2ba",
+          "word": "dinner",
+          "zh": "晚餐；正餐"
+        },
+        {
           "entry_id": "occ-e870a38f6ae8",
           "word": "grape",
           "zh": "葡萄"
-        },
-        {
-          "entry_id": "occ-ba49b1035548",
-          "word": "juice",
-          "zh": "果汁"
         }
       ],
       "stages": [
@@ -1092,10 +1092,20 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "餐点主厨 · 暖香食堂",
-      "lead_entry_id": "occ-7598ad3e5c62",
-      "lead_word": "arm",
-      "lead_zh": "手臂",
+      "lead_entry_id": "occ-eb7c2ea65c5d",
+      "lead_word": "wash",
+      "lead_zh": "洗",
       "featured_words": [
+        {
+          "entry_id": "occ-eb7c2ea65c5d",
+          "word": "wash",
+          "zh": "洗"
+        },
+        {
+          "entry_id": "occ-4f5d53a59061",
+          "word": "ready",
+          "zh": "准备好的"
+        },
         {
           "entry_id": "occ-7598ad3e5c62",
           "word": "arm",
@@ -1105,16 +1115,6 @@
           "entry_id": "occ-2fb6583ef4db",
           "word": "clean",
           "zh": "干净的"
-        },
-        {
-          "entry_id": "occ-459e2e7f0f0b",
-          "word": "come",
-          "zh": "来"
-        },
-        {
-          "entry_id": "occ-3ac49d601884",
-          "word": "dad",
-          "zh": "爸爸"
         }
       ],
       "stages": [
@@ -1170,14 +1170,14 @@
           "zh": "儿童"
         },
         {
-          "entry_id": "occ-848953c1d82f",
-          "word": "Children's Day",
-          "zh": "儿童节"
-        },
-        {
           "entry_id": "occ-9183d13b458f",
           "word": "dance",
           "zh": "跳舞"
+        },
+        {
+          "entry_id": "occ-26dfd57869d3",
+          "word": "draw",
+          "zh": "画画"
         }
       ],
       "stages": [
@@ -1218,29 +1218,29 @@
       ],
       "host_npc_id": "host_T",
       "host_speaker": "T 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-244529effcab",
-      "lead_word": "Be careful!",
-      "lead_zh": "当心！",
+      "lead_entry_id": "occ-14e9ecbcfcc2",
+      "lead_word": "bus",
+      "lead_zh": "公共汽车",
       "featured_words": [
-        {
-          "entry_id": "occ-244529effcab",
-          "word": "Be careful!",
-          "zh": "当心！"
-        },
-        {
-          "entry_id": "occ-26e625122b9f",
-          "word": "bike",
-          "zh": "自行车"
-        },
         {
           "entry_id": "occ-14e9ecbcfcc2",
           "word": "bus",
           "zh": "公共汽车"
         },
         {
-          "entry_id": "occ-ccbf2931f16a",
-          "word": "car",
-          "zh": "小汽车"
+          "entry_id": "occ-405221484441",
+          "word": "by",
+          "zh": "乘；通过"
+        },
+        {
+          "entry_id": "occ-568a280b080f",
+          "word": "go",
+          "zh": "去"
+        },
+        {
+          "entry_id": "occ-244529effcab",
+          "word": "Be careful!",
+          "zh": "当心！"
         }
       ],
       "stages": [
@@ -1281,19 +1281,19 @@
       ],
       "host_npc_id": "textbook_lingling",
       "host_speaker": "Lingling · 山丘学园",
-      "lead_entry_id": "occ-b3e715c3d6c6",
-      "lead_word": "doctor",
-      "lead_zh": "医生",
+      "lead_entry_id": "occ-3f2b57d2a9e5",
+      "lead_word": "driver",
+      "lead_zh": "驾驶员",
       "featured_words": [
-        {
-          "entry_id": "occ-b3e715c3d6c6",
-          "word": "doctor",
-          "zh": "医生"
-        },
         {
           "entry_id": "occ-3f2b57d2a9e5",
           "word": "driver",
           "zh": "驾驶员"
+        },
+        {
+          "entry_id": "occ-b3e715c3d6c6",
+          "word": "doctor",
+          "zh": "医生"
         },
         {
           "entry_id": "occ-f6fe8b6ddf57",
@@ -1406,29 +1406,29 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-9020467578a1",
-      "lead_word": "after",
-      "lead_zh": "在……之后",
+      "lead_entry_id": "occ-16d6181f3e89",
+      "lead_word": "get up",
+      "lead_zh": "起床",
       "featured_words": [
         {
-          "entry_id": "occ-9020467578a1",
-          "word": "after",
-          "zh": "在……之后"
+          "entry_id": "occ-16d6181f3e89",
+          "word": "get up",
+          "zh": "起床"
         },
         {
-          "entry_id": "occ-f3b3b03d490c",
-          "word": "breakfast",
-          "zh": "早餐"
+          "entry_id": "occ-396fef5f2118",
+          "word": "Hurry up!",
+          "zh": "快点！"
         },
         {
-          "entry_id": "occ-42458f9b1ada",
-          "word": "dinner",
-          "zh": "晚餐；正餐"
+          "entry_id": "occ-927d61b2269b",
+          "word": "up",
+          "zh": "向上地"
         },
         {
-          "entry_id": "occ-925e5cce9f47",
-          "word": "early",
-          "zh": "早的；早地"
+          "entry_id": "occ-4fae1868e2e2",
+          "word": "1st",
+          "zh": "第一；第一的"
         }
       ],
       "stages": [
@@ -1468,14 +1468,14 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "餐点主厨 · 暖香食堂",
-      "lead_entry_id": "occ-445fcfec3ca1",
-      "lead_word": "and",
-      "lead_zh": "和；又；与",
+      "lead_entry_id": "occ-14c8cdf29ee5",
+      "lead_word": "dumpling",
+      "lead_zh": "水饺；汤圆",
       "featured_words": [
         {
-          "entry_id": "occ-445fcfec3ca1",
-          "word": "and",
-          "zh": "和；又；与"
+          "entry_id": "occ-14c8cdf29ee5",
+          "word": "dumpling",
+          "zh": "水饺；汤圆"
         },
         {
           "entry_id": "occ-49c8c5536690",
@@ -1530,10 +1530,15 @@
       ],
       "host_npc_id": "host_G",
       "host_speaker": "G 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-5b4d63951a77",
-      "lead_word": "animal",
-      "lead_zh": "动物",
+      "lead_entry_id": "occ-e591bc5501ad",
+      "lead_word": "elephant",
+      "lead_zh": "大象",
       "featured_words": [
+        {
+          "entry_id": "occ-e591bc5501ad",
+          "word": "elephant",
+          "zh": "大象"
+        },
         {
           "entry_id": "occ-5b4d63951a77",
           "word": "animal",
@@ -1548,11 +1553,6 @@
           "entry_id": "occ-2f1559c00692",
           "word": "beautiful",
           "zh": "美丽的；优美的"
-        },
-        {
-          "entry_id": "occ-a7a60ef63ec8",
-          "word": "China",
-          "zh": "中国"
         }
       ],
       "stages": [
@@ -1607,14 +1607,14 @@
           "zh": "能；会"
         },
         {
-          "entry_id": "occ-3e71cf2b67ac",
-          "word": "can't",
-          "zh": "不能；不会"
-        },
-        {
           "entry_id": "occ-5881167ebe3d",
           "word": "cannot",
           "zh": "不能；不会"
+        },
+        {
+          "entry_id": "occ-eb9659b45b81",
+          "word": "far",
+          "zh": "远地；远的"
         }
       ],
       "stages": [
@@ -1716,10 +1716,20 @@
       ],
       "host_npc_id": "textbook_lingling",
       "host_speaker": "Lingling · 山丘学园",
-      "lead_entry_id": "occ-7c3dcde18eb8",
-      "lead_word": "bag",
-      "lead_zh": "包",
+      "lead_entry_id": "occ-5d665c99fb22",
+      "lead_word": "watch",
+      "lead_zh": "手表",
       "featured_words": [
+        {
+          "entry_id": "occ-5d665c99fb22",
+          "word": "watch",
+          "zh": "手表"
+        },
+        {
+          "entry_id": "occ-d4b86c8d023c",
+          "word": "whose",
+          "zh": "谁的"
+        },
         {
           "entry_id": "occ-7c3dcde18eb8",
           "word": "bag",
@@ -1729,16 +1739,6 @@
           "entry_id": "occ-9b6cc7a47338",
           "word": "know",
           "zh": "知道"
-        },
-        {
-          "entry_id": "occ-5597cae68077",
-          "word": "pet",
-          "zh": "宠物"
-        },
-        {
-          "entry_id": "occ-f00c2c238cd9",
-          "word": "quiet",
-          "zh": "安静的"
         }
       ],
       "stages": [
@@ -1778,10 +1778,20 @@
       ],
       "host_npc_id": "host_O",
       "host_speaker": "O 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-2a344930eede",
-      "lead_word": "always",
-      "lead_zh": "总是",
+      "lead_entry_id": "occ-c2e0e6791b20",
+      "lead_word": "talk",
+      "lead_zh": "交谈；说话",
       "featured_words": [
+        {
+          "entry_id": "occ-c2e0e6791b20",
+          "word": "talk",
+          "zh": "交谈；说话"
+        },
+        {
+          "entry_id": "occ-817f36bafede",
+          "word": "rule",
+          "zh": "规则"
+        },
         {
           "entry_id": "occ-2a344930eede",
           "word": "always",
@@ -1791,16 +1801,6 @@
           "entry_id": "occ-b6b6af53c08a",
           "word": "class",
           "zh": "（一节）课；上课时间"
-        },
-        {
-          "entry_id": "occ-ce1a58cd87a5",
-          "word": "down",
-          "zh": "向下；往下"
-        },
-        {
-          "entry_id": "occ-2732d2a0c631",
-          "word": "eat",
-          "zh": "吃"
         }
       ],
       "stages": [
@@ -1840,10 +1840,15 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-e0dfa3d5680a",
-      "lead_word": "chair",
-      "lead_zh": "椅子",
+      "lead_entry_id": "occ-9f3a3ad2b55c",
+      "lead_word": "home",
+      "lead_zh": "家；住所；窝",
       "featured_words": [
+        {
+          "entry_id": "occ-9f3a3ad2b55c",
+          "word": "home",
+          "zh": "家；住所；窝"
+        },
         {
           "entry_id": "occ-e0dfa3d5680a",
           "word": "chair",
@@ -1858,11 +1863,6 @@
           "entry_id": "occ-c8f245fb4d15",
           "word": "desk",
           "zh": "书桌；办公桌"
-        },
-        {
-          "entry_id": "occ-9f3a3ad2b55c",
-          "word": "home",
-          "zh": "家；住所；窝"
         }
       ],
       "stages": [
@@ -1903,10 +1903,15 @@
       ],
       "host_npc_id": "host_Z",
       "host_speaker": "Z 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-6fd0e948072d",
-      "lead_word": "astronaut",
-      "lead_zh": "宇航员",
+      "lead_entry_id": "occ-69213f605c59",
+      "lead_word": "job",
+      "lead_zh": "工作",
       "featured_words": [
+        {
+          "entry_id": "occ-69213f605c59",
+          "word": "job",
+          "zh": "工作"
+        },
         {
           "entry_id": "occ-6fd0e948072d",
           "word": "astronaut",
@@ -1916,11 +1921,6 @@
           "entry_id": "occ-cfe3d6a3c916",
           "word": "fire",
           "zh": "火"
-        },
-        {
-          "entry_id": "occ-69213f605c59",
-          "word": "job",
-          "zh": "工作"
         },
         {
           "entry_id": "occ-2345d39b9ecd",
@@ -2028,10 +2028,15 @@
       ],
       "host_npc_id": "textbook_lingling",
       "host_speaker": "Lingling · 山丘学园",
-      "lead_entry_id": "occ-916793a3bbc5",
-      "lead_word": "answer",
-      "lead_zh": "回答",
+      "lead_entry_id": "occ-0bea3c13b1d4",
+      "lead_word": "subject",
+      "lead_zh": "学科；课程",
       "featured_words": [
+        {
+          "entry_id": "occ-0bea3c13b1d4",
+          "word": "subject",
+          "zh": "学科；课程"
+        },
         {
           "entry_id": "occ-916793a3bbc5",
           "word": "answer",
@@ -2046,11 +2051,6 @@
           "entry_id": "occ-8cd1362e9cdf",
           "word": "English",
           "zh": "英语"
-        },
-        {
-          "entry_id": "occ-e979e78de18a",
-          "word": "every",
-          "zh": "每个；每一"
         }
       ],
       "stages": [
@@ -2091,29 +2091,29 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-0a0d8ff979bc",
-      "lead_word": "Friday",
-      "lead_zh": "星期五",
+      "lead_entry_id": "occ-36bd0ff4f2d5",
+      "lead_word": "today",
+      "lead_zh": "今天",
       "featured_words": [
+        {
+          "entry_id": "occ-36bd0ff4f2d5",
+          "word": "today",
+          "zh": "今天"
+        },
+        {
+          "entry_id": "occ-8acb090987fd",
+          "word": "Wednesday",
+          "zh": "星期三"
+        },
         {
           "entry_id": "occ-0a0d8ff979bc",
           "word": "Friday",
           "zh": "星期五"
         },
         {
-          "entry_id": "occ-369d9833c090",
-          "word": "look",
-          "zh": "看"
-        },
-        {
           "entry_id": "occ-bb287e6d52a0",
           "word": "Monday",
           "zh": "星期一"
-        },
-        {
-          "entry_id": "occ-7383ee8078ed",
-          "word": "now",
-          "zh": "现在"
         }
       ],
       "stages": [
@@ -2154,29 +2154,29 @@
       ],
       "host_npc_id": "textbook_tim",
       "host_speaker": "Tim · 青草操场",
-      "lead_entry_id": "occ-5a2810d74159",
-      "lead_word": "between... and...",
-      "lead_zh": "在……和……之间",
+      "lead_entry_id": "occ-04b956646690",
+      "lead_word": "get",
+      "lead_zh": "取得；得到",
       "featured_words": [
         {
-          "entry_id": "occ-5a2810d74159",
-          "word": "between... and...",
-          "zh": "在……和……之间"
+          "entry_id": "occ-04b956646690",
+          "word": "get",
+          "zh": "取得；得到"
         },
         {
-          "entry_id": "occ-aba183e2336e",
-          "word": "come on",
-          "zh": "加油"
+          "entry_id": "occ-331363021b56",
+          "word": "one hundred",
+          "zh": "一百"
         },
         {
-          "entry_id": "occ-539a8caaec02",
-          "word": "does",
-          "zh": "do的第三人称单数形式"
+          "entry_id": "occ-33f85b661e86",
+          "word": "twenty-one",
+          "zh": "二十一"
         },
         {
-          "entry_id": "occ-b6b211e4f13e",
-          "word": "eighty",
-          "zh": "八十"
+          "entry_id": "occ-76a9fff2d524",
+          "word": "point",
+          "zh": "得分"
         }
       ],
       "stages": [
@@ -2217,29 +2217,29 @@
       ],
       "host_npc_id": "textbook_lingling",
       "host_speaker": "Lingling · 山丘学园",
-      "lead_entry_id": "occ-d01498cb61c0",
-      "lead_word": "all",
-      "lead_zh": "全部；每一个",
+      "lead_entry_id": "occ-b8010f86abab",
+      "lead_word": "help",
+      "lead_zh": "帮助",
       "featured_words": [
+        {
+          "entry_id": "occ-b8010f86abab",
+          "word": "help",
+          "zh": "帮助"
+        },
+        {
+          "entry_id": "occ-2a5f1e141ab3",
+          "word": "work",
+          "zh": "工作"
+        },
+        {
+          "entry_id": "occ-d995bb5c24e8",
+          "word": "in need",
+          "zh": "需要帮助的"
+        },
         {
           "entry_id": "occ-d01498cb61c0",
           "word": "all",
           "zh": "全部；每一个"
-        },
-        {
-          "entry_id": "occ-05d8b700a7d7",
-          "word": "but",
-          "zh": "但是"
-        },
-        {
-          "entry_id": "occ-b637ced1f96f",
-          "word": "cook",
-          "zh": "烹调；煮"
-        },
-        {
-          "entry_id": "occ-d802e80b2f9c",
-          "word": "get to",
-          "zh": "到达"
         }
       ],
       "stages": [
@@ -2279,10 +2279,20 @@
       ],
       "host_npc_id": "host_F",
       "host_speaker": "F 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-71557f29369b",
-      "lead_word": "autumn",
-      "lead_zh": "秋天",
+      "lead_entry_id": "occ-e0a33a539aed",
+      "lead_word": "favourite",
+      "lead_zh": "最喜欢的",
       "featured_words": [
+        {
+          "entry_id": "occ-e0a33a539aed",
+          "word": "favourite",
+          "zh": "最喜欢的"
+        },
+        {
+          "entry_id": "occ-5c825f4b7629",
+          "word": "season",
+          "zh": "季节"
+        },
         {
           "entry_id": "occ-71557f29369b",
           "word": "autumn",
@@ -2292,16 +2302,6 @@
           "entry_id": "occ-b63e3e4a2bd0",
           "word": "beach",
           "zh": "海滩；沙滩"
-        },
-        {
-          "entry_id": "occ-120d43e2d965",
-          "word": "careful",
-          "zh": "小心的"
-        },
-        {
-          "entry_id": "occ-29a002b89c2a",
-          "word": "cool",
-          "zh": "凉爽的"
         }
       ],
       "stages": [
@@ -2466,29 +2466,29 @@
       ],
       "host_npc_id": "host_B",
       "host_speaker": "B 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-8da15e8a8818",
-      "lead_word": "about",
-      "lead_zh": "关于",
+      "lead_entry_id": "occ-500cbf3f592a",
+      "lead_word": "dragon",
+      "lead_zh": "龙",
       "featured_words": [
         {
-          "entry_id": "occ-8da15e8a8818",
-          "word": "about",
-          "zh": "关于"
+          "entry_id": "occ-500cbf3f592a",
+          "word": "dragon",
+          "zh": "龙"
         },
         {
-          "entry_id": "occ-e90932cb3d39",
-          "word": "fifth",
-          "zh": "第五；第五的"
+          "entry_id": "occ-21abfd5aec80",
+          "word": "Dragon Boat Festival",
+          "zh": "端午节"
+        },
+        {
+          "entry_id": "occ-9561053628ca",
+          "word": "festival",
+          "zh": "节日"
         },
         {
           "entry_id": "occ-21ca69eede22",
           "word": "5th",
           "zh": "第五；第五的"
-        },
-        {
-          "entry_id": "occ-f2938740cf23",
-          "word": "make",
-          "zh": "制作；制定"
         }
       ],
       "stages": [
@@ -2529,10 +2529,20 @@
       ],
       "host_npc_id": "textbook_lingling",
       "host_speaker": "Lingling · 山丘学园",
-      "lead_entry_id": "occ-83f36bf9c533",
-      "lead_word": "ask",
-      "lead_zh": "问；询问",
+      "lead_entry_id": "occ-6093816f2524",
+      "lead_word": "mean",
+      "lead_zh": "意思是",
       "featured_words": [
+        {
+          "entry_id": "occ-6093816f2524",
+          "word": "mean",
+          "zh": "意思是"
+        },
+        {
+          "entry_id": "occ-77d4e2167486",
+          "word": "sign",
+          "zh": "标志；指示牌"
+        },
         {
           "entry_id": "occ-83f36bf9c533",
           "word": "ask",
@@ -2542,16 +2552,6 @@
           "entry_id": "occ-e1036e201a9f",
           "word": "cinema",
           "zh": "电影院"
-        },
-        {
-          "entry_id": "occ-609ee231713d",
-          "word": "light",
-          "zh": "灯"
-        },
-        {
-          "entry_id": "occ-742f776a1d16",
-          "word": "look at",
-          "zh": "（仔细）看"
         }
       ],
       "stages": [
@@ -2591,10 +2591,15 @@
       ],
       "host_npc_id": "textbook_lingling",
       "host_speaker": "Lingling · 山丘学园",
-      "lead_entry_id": "occ-4b9b95808f44",
-      "lead_word": "give",
-      "lead_zh": "送；给",
+      "lead_entry_id": "occ-ddae3b110949",
+      "lead_word": "look like",
+      "lead_zh": "看起来像",
       "featured_words": [
+        {
+          "entry_id": "occ-ddae3b110949",
+          "word": "look like",
+          "zh": "看起来像"
+        },
         {
           "entry_id": "occ-4b9b95808f44",
           "word": "give",
@@ -2609,11 +2614,6 @@
           "entry_id": "occ-e88b4f23ffa9",
           "word": "glasses",
           "zh": "眼镜；玻璃杯的复数形式"
-        },
-        {
-          "entry_id": "occ-8cfc9c1a91e6",
-          "word": "him",
-          "zh": "他（宾格）"
         }
       ],
       "stages": [
@@ -2653,29 +2653,29 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "餐点主厨 · 暖香食堂",
-      "lead_entry_id": "occ-3ddc19fffe48",
-      "lead_word": "a glass of",
-      "lead_zh": "一杯",
+      "lead_entry_id": "occ-280a536d6800",
+      "lead_word": "I would like",
+      "lead_zh": "我想要",
       "featured_words": [
+        {
+          "entry_id": "occ-280a536d6800",
+          "word": "I would like",
+          "zh": "我想要"
+        },
+        {
+          "entry_id": "occ-8ac228f4102b",
+          "word": "sandwich",
+          "zh": "三明治"
+        },
+        {
+          "entry_id": "occ-caeefd560574",
+          "word": "would like",
+          "zh": "想要"
+        },
         {
           "entry_id": "occ-3ddc19fffe48",
           "word": "a glass of",
           "zh": "一杯"
-        },
-        {
-          "entry_id": "occ-3ffadb8f7420",
-          "word": "drink",
-          "zh": "饮料"
-        },
-        {
-          "entry_id": "occ-c297f65766f9",
-          "word": "feel",
-          "zh": "觉得；感到"
-        },
-        {
-          "entry_id": "occ-059d1da69e62",
-          "word": "glass",
-          "zh": "玻璃杯"
         }
       ],
       "stages": [
@@ -2715,10 +2715,15 @@
       ],
       "host_npc_id": "textbook_miss_li",
       "host_speaker": "李老师 · 阳光故事圈",
-      "lead_entry_id": "occ-169d253e2591",
-      "lead_word": "a lot",
-      "lead_zh": "很多",
+      "lead_entry_id": "occ-20be9d871f34",
+      "lead_word": "email",
+      "lead_zh": "发电子邮件；电子邮件",
       "featured_words": [
+        {
+          "entry_id": "occ-20be9d871f34",
+          "word": "email",
+          "zh": "发电子邮件；电子邮件"
+        },
         {
           "entry_id": "occ-169d253e2591",
           "word": "a lot",
@@ -2733,11 +2738,6 @@
           "entry_id": "occ-8fea7c68dffd",
           "word": "back",
           "zh": "回到原处；回应"
-        },
-        {
-          "entry_id": "occ-cb51801713ee",
-          "word": "bad",
-          "zh": "坏的"
         }
       ],
       "stages": [
@@ -2787,6 +2787,11 @@
           "zh": "询问"
         },
         {
+          "entry_id": "occ-beb806ee8870",
+          "word": "borrow",
+          "zh": "借用"
+        },
+        {
           "entry_id": "occ-8bda4cbaf287",
           "word": "at home",
           "zh": "在家里"
@@ -2795,11 +2800,6 @@
           "entry_id": "occ-4162abeef7d3",
           "word": "blackboard",
           "zh": "黑板"
-        },
-        {
-          "entry_id": "occ-26f6b662e13c",
-          "word": "try",
-          "zh": "试；尝试"
         }
       ],
       "stages": [
@@ -2839,10 +2839,20 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-8fea7c68dffd",
-      "lead_word": "back",
-      "lead_zh": "回到原处；回应",
+      "lead_entry_id": "occ-818da0ee91f7",
+      "lead_word": "may",
+      "lead_zh": "可以；可能",
       "featured_words": [
+        {
+          "entry_id": "occ-818da0ee91f7",
+          "word": "may",
+          "zh": "可以；可能"
+        },
+        {
+          "entry_id": "occ-a1afd10001bd",
+          "word": "pet",
+          "zh": "宠物"
+        },
         {
           "entry_id": "occ-8fea7c68dffd",
           "word": "back",
@@ -2852,16 +2862,6 @@
           "entry_id": "occ-04b13175ba0c",
           "word": "clever",
           "zh": "聪明的"
-        },
-        {
-          "entry_id": "occ-2c050caed18d",
-          "word": "helpful",
-          "zh": "有帮助的；有用的"
-        },
-        {
-          "entry_id": "occ-a651ece02643",
-          "word": "lovely",
-          "zh": "美丽的；可爱的"
         }
       ],
       "stages": [
@@ -2902,10 +2902,15 @@
       ],
       "host_npc_id": "host_Y",
       "host_speaker": "Y 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-e72a1335aceb",
-      "lead_word": "a little",
-      "lead_zh": "少许；一点儿",
+      "lead_entry_id": "occ-50d0f5fdb53e",
+      "lead_word": "which",
+      "lead_zh": "哪一个",
       "featured_words": [
+        {
+          "entry_id": "occ-50d0f5fdb53e",
+          "word": "which",
+          "zh": "哪一个"
+        },
         {
           "entry_id": "occ-e72a1335aceb",
           "word": "a little",
@@ -2920,11 +2925,6 @@
           "entry_id": "occ-9aa8e3b8438f",
           "word": "clothes",
           "zh": "衣服"
-        },
-        {
-          "entry_id": "occ-175b4a3b9b08",
-          "word": "idea",
-          "zh": "主意"
         }
       ],
       "stages": [
@@ -3028,10 +3028,20 @@
       ],
       "host_npc_id": "textbook_anne",
       "host_speaker": "Anne · 音乐工坊",
-      "lead_entry_id": "occ-9bd4944d8c2c",
-      "lead_word": "always",
-      "lead_zh": "总是",
+      "lead_entry_id": "occ-02b7f77e84fc",
+      "lead_word": "hobby",
+      "lead_zh": "业余爱好",
       "featured_words": [
+        {
+          "entry_id": "occ-02b7f77e84fc",
+          "word": "hobby",
+          "zh": "业余爱好"
+        },
+        {
+          "entry_id": "occ-6a3c48ddaf09",
+          "word": "find",
+          "zh": "找到"
+        },
         {
           "entry_id": "occ-9bd4944d8c2c",
           "word": "always",
@@ -3041,16 +3051,6 @@
           "entry_id": "occ-e1ea9604a89f",
           "word": "answer",
           "zh": "回答"
-        },
-        {
-          "entry_id": "occ-a60461857f2c",
-          "word": "fan",
-          "zh": "……迷"
-        },
-        {
-          "entry_id": "occ-6a3c48ddaf09",
-          "word": "find",
-          "zh": "找到"
         }
       ],
       "stages": [
@@ -3154,10 +3154,20 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-a060e0d1dccc",
-      "lead_word": "before",
-      "lead_zh": "在……之前",
+      "lead_entry_id": "occ-c100bfd918c4",
+      "lead_word": "the Spring Festival",
+      "lead_zh": "春节",
       "featured_words": [
+        {
+          "entry_id": "occ-c100bfd918c4",
+          "word": "the Spring Festival",
+          "zh": "春节"
+        },
+        {
+          "entry_id": "occ-6525939ca96a",
+          "word": "reunion",
+          "zh": "团聚"
+        },
         {
           "entry_id": "occ-a060e0d1dccc",
           "word": "before",
@@ -3167,16 +3177,6 @@
           "entry_id": "occ-e64d83e3d993",
           "word": "bring",
           "zh": "带来"
-        },
-        {
-          "entry_id": "occ-49c87f75839b",
-          "word": "light",
-          "zh": "点燃；点亮"
-        },
-        {
-          "entry_id": "occ-9e7f392f912a",
-          "word": "lion dance",
-          "zh": "舞狮"
         }
       ],
       "stages": [
@@ -3216,10 +3216,15 @@
       ],
       "host_npc_id": "host_O",
       "host_speaker": "O 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-f7c8e01c0dc3",
-      "lead_word": "great",
-      "lead_zh": "好极了；太棒了",
+      "lead_entry_id": "occ-533662f424bc",
+      "lead_word": "story",
+      "lead_zh": "故事",
       "featured_words": [
+        {
+          "entry_id": "occ-533662f424bc",
+          "word": "story",
+          "zh": "故事"
+        },
         {
           "entry_id": "occ-f7c8e01c0dc3",
           "word": "great",
@@ -3234,11 +3239,6 @@
           "entry_id": "occ-0a15bf2be78f",
           "word": "listen to",
           "zh": "听；倾听"
-        },
-        {
-          "entry_id": "occ-e1e40e69f13a",
-          "word": "play",
-          "zh": "戏剧；演出"
         }
       ],
       "stages": [
@@ -3279,10 +3279,20 @@
       ],
       "host_npc_id": "textbook_mingming",
       "host_speaker": "Mingming · 科学观察角",
-      "lead_entry_id": "occ-55ade8f8ceee",
-      "lead_word": "ask",
-      "lead_zh": "提问；询问",
+      "lead_entry_id": "occ-977ee0c57cac",
+      "lead_word": "research",
+      "lead_zh": "调查；研究",
       "featured_words": [
+        {
+          "entry_id": "occ-977ee0c57cac",
+          "word": "research",
+          "zh": "调查；研究"
+        },
+        {
+          "entry_id": "occ-68ccd613de8e",
+          "word": "study",
+          "zh": "学习；研究"
+        },
         {
           "entry_id": "occ-55ade8f8ceee",
           "word": "ask",
@@ -3292,16 +3302,6 @@
           "entry_id": "occ-8927946f4165",
           "word": "find",
           "zh": "找到；发现"
-        },
-        {
-          "entry_id": "occ-cc343081207a",
-          "word": "information",
-          "zh": "信息"
-        },
-        {
-          "entry_id": "occ-a601d1024117",
-          "word": "report",
-          "zh": "报告"
         }
       ],
       "stages": [
@@ -3342,10 +3342,15 @@
       ],
       "host_npc_id": "host_K",
       "host_speaker": "K 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-6eb212034d18",
-      "lead_word": "bamboo",
-      "lead_zh": "竹子",
+      "lead_entry_id": "occ-1d3a5abad728",
+      "lead_word": "kite",
+      "lead_zh": "风筝",
       "featured_words": [
+        {
+          "entry_id": "occ-1d3a5abad728",
+          "word": "kite",
+          "zh": "风筝"
+        },
         {
           "entry_id": "occ-6eb212034d18",
           "word": "bamboo",
@@ -3360,11 +3365,6 @@
           "entry_id": "occ-db6e5e2d725d",
           "word": "first",
           "zh": "第一；首先"
-        },
-        {
-          "entry_id": "occ-1d3a5abad728",
-          "word": "kite",
-          "zh": "风筝"
         }
       ],
       "stages": [
@@ -3405,10 +3405,15 @@
       ],
       "host_npc_id": "host_O",
       "host_speaker": "O 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-008308ea3507",
-      "lead_word": "favourite",
-      "lead_zh": "最喜欢的",
+      "lead_entry_id": "occ-e808f7493a16",
+      "lead_word": "here",
+      "lead_zh": "在这里",
       "featured_words": [
+        {
+          "entry_id": "occ-e808f7493a16",
+          "word": "here",
+          "zh": "在这里"
+        },
         {
           "entry_id": "occ-008308ea3507",
           "word": "favourite",
@@ -3418,11 +3423,6 @@
           "entry_id": "occ-c42b7bbd385f",
           "word": "floor",
           "zh": "地板"
-        },
-        {
-          "entry_id": "occ-e808f7493a16",
-          "word": "here",
-          "zh": "在这里"
         },
         {
           "entry_id": "occ-dbbb01c9694b",
@@ -3468,10 +3468,15 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-5f2b2c43b204",
-      "lead_word": "April",
-      "lead_zh": "四月",
+      "lead_entry_id": "occ-f6897923db4e",
+      "lead_word": "activity",
+      "lead_zh": "活动",
       "featured_words": [
+        {
+          "entry_id": "occ-f6897923db4e",
+          "word": "activity",
+          "zh": "活动"
+        },
         {
           "entry_id": "occ-5f2b2c43b204",
           "word": "April",
@@ -3486,11 +3491,6 @@
           "entry_id": "occ-8fc51a8829a1",
           "word": "December",
           "zh": "十二月"
-        },
-        {
-          "entry_id": "occ-5dc6781c544b",
-          "word": "February",
-          "zh": "二月"
         }
       ],
       "stages": [
@@ -3551,9 +3551,9 @@
           "zh": "最喜欢的"
         },
         {
-          "entry_id": "occ-378584eda026",
-          "word": "Mother's Day",
-          "zh": "母亲节"
+          "entry_id": "occ-52a7d604eeee",
+          "word": "restaurant",
+          "zh": "餐馆"
         }
       ],
       "stages": [
@@ -3593,10 +3593,20 @@
       ],
       "host_npc_id": "host_G",
       "host_speaker": "G 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-e8236dc8c091",
-      "lead_word": "around",
-      "lead_zh": "在……周围",
+      "lead_entry_id": "occ-70a7461056ae",
+      "lead_word": "near",
+      "lead_zh": "在……附近",
       "featured_words": [
+        {
+          "entry_id": "occ-70a7461056ae",
+          "word": "near",
+          "zh": "在……附近"
+        },
+        {
+          "entry_id": "occ-ef720a857981",
+          "word": "post office",
+          "zh": "邮局"
+        },
         {
           "entry_id": "occ-e8236dc8c091",
           "word": "around",
@@ -3606,16 +3616,6 @@
           "entry_id": "occ-b6b50c0995d9",
           "word": "bank",
           "zh": "银行"
-        },
-        {
-          "entry_id": "occ-0b0db13ebb99",
-          "word": "cinema",
-          "zh": "电影院"
-        },
-        {
-          "entry_id": "occ-d649ca3f0ae8",
-          "word": "hometown",
-          "zh": "家乡"
         }
       ],
       "stages": [
@@ -3655,10 +3655,15 @@
       ],
       "host_npc_id": "host_G",
       "host_speaker": "G 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-00fd77846f5a",
-      "lead_word": "airport",
-      "lead_zh": "机场",
+      "lead_entry_id": "occ-d93a6ebd70f8",
+      "lead_word": "way",
+      "lead_zh": "道路；路线",
       "featured_words": [
+        {
+          "entry_id": "occ-d93a6ebd70f8",
+          "word": "way",
+          "zh": "道路；路线"
+        },
         {
           "entry_id": "occ-00fd77846f5a",
           "word": "airport",
@@ -3673,11 +3678,6 @@
           "entry_id": "occ-27fd0a8e8a06",
           "word": "crossing",
           "zh": "十字路口"
-        },
-        {
-          "entry_id": "occ-c2cfb5ffbb6c",
-          "word": "get off",
-          "zh": "下车"
         }
       ],
       "stages": [
@@ -3718,10 +3718,15 @@
       ],
       "host_npc_id": "textbook_lingling",
       "host_speaker": "Lingling · 山丘学园",
-      "lead_entry_id": "occ-3bb06cbcfa7c",
-      "lead_word": "active",
-      "lead_zh": "活跃的",
+      "lead_entry_id": "occ-91fd37346a93",
+      "lead_word": "kind",
+      "lead_zh": "亲切的；和蔼的",
       "featured_words": [
+        {
+          "entry_id": "occ-91fd37346a93",
+          "word": "kind",
+          "zh": "亲切的；和蔼的"
+        },
         {
           "entry_id": "occ-3bb06cbcfa7c",
           "word": "active",
@@ -3736,11 +3741,6 @@
           "entry_id": "occ-6b2d22ec4f9d",
           "word": "interested",
           "zh": "感兴趣的"
-        },
-        {
-          "entry_id": "occ-91fd37346a93",
-          "word": "kind",
-          "zh": "亲切的；和蔼的"
         }
       ],
       "stages": [
@@ -3781,10 +3781,15 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-b902447c3cb0",
-      "lead_word": "better",
-      "lead_zh": "更好的",
+      "lead_entry_id": "occ-0e5ad7a58c33",
+      "lead_word": "yesterday",
+      "lead_zh": "昨天",
       "featured_words": [
+        {
+          "entry_id": "occ-0e5ad7a58c33",
+          "word": "yesterday",
+          "zh": "昨天"
+        },
         {
           "entry_id": "occ-b902447c3cb0",
           "word": "better",
@@ -3799,11 +3804,6 @@
           "entry_id": "occ-0c29c84d0c12",
           "word": "sick",
           "zh": "病的；有病的"
-        },
-        {
-          "entry_id": "occ-3a060401f73f",
-          "word": "was",
-          "zh": "is、am 的过去式"
         }
       ],
       "stages": [
@@ -3843,10 +3843,15 @@
       ],
       "host_npc_id": "textbook_tim",
       "host_speaker": "Tim · 青草操场",
-      "lead_entry_id": "occ-2eba1ae2d5d7",
-      "lead_word": "eighth",
-      "lead_zh": "第八",
+      "lead_entry_id": "occ-db6e5e2d725d",
+      "lead_word": "first",
+      "lead_zh": "第一；首先",
       "featured_words": [
+        {
+          "entry_id": "occ-db6e5e2d725d",
+          "word": "first",
+          "zh": "第一；首先"
+        },
         {
           "entry_id": "occ-2eba1ae2d5d7",
           "word": "eighth",
@@ -3856,11 +3861,6 @@
           "entry_id": "occ-2e2d87851f9b",
           "word": "fifth",
           "zh": "第五"
-        },
-        {
-          "entry_id": "occ-db6e5e2d725d",
-          "word": "first",
-          "zh": "第一；首先"
         },
         {
           "entry_id": "occ-cda0f390e94d",
@@ -3969,10 +3969,20 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-4b1028b27103",
-      "lead_word": "box",
-      "lead_zh": "盒；盒子",
+      "lead_entry_id": "occ-96813e020ea7",
+      "lead_word": "holiday",
+      "lead_zh": "假日；假期",
       "featured_words": [
+        {
+          "entry_id": "occ-96813e020ea7",
+          "word": "holiday",
+          "zh": "假日；假期"
+        },
+        {
+          "entry_id": "occ-3295c3e56100",
+          "word": "during",
+          "zh": "在……期间"
+        },
         {
           "entry_id": "occ-4b1028b27103",
           "word": "box",
@@ -3982,16 +3992,6 @@
           "entry_id": "occ-c12dc805f0e1",
           "word": "city",
           "zh": "城市"
-        },
-        {
-          "entry_id": "occ-179fd02e3fb7",
-          "word": "farm",
-          "zh": "农场"
-        },
-        {
-          "entry_id": "occ-f4f963448384",
-          "word": "go shopping",
-          "zh": "去购物"
         }
       ],
       "stages": [
@@ -4041,6 +4041,11 @@
           "zh": "总是"
         },
         {
+          "entry_id": "occ-7cf81f7a5592",
+          "word": "observe",
+          "zh": "观察"
+        },
+        {
           "entry_id": "occ-caf70128b99b",
           "word": "bad",
           "zh": "严重的；坏的"
@@ -4049,11 +4054,6 @@
           "entry_id": "occ-2558defff075",
           "word": "homework",
           "zh": "家庭作业"
-        },
-        {
-          "entry_id": "occ-5b18a613d5a8",
-          "word": "hurt",
-          "zh": "伤害"
         }
       ],
       "stages": [
@@ -4094,10 +4094,15 @@
       ],
       "host_npc_id": "host_L",
       "host_speaker": "L 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-4b1028b27103",
-      "lead_word": "box",
-      "lead_zh": "盒；盒子",
+      "lead_entry_id": "occ-eb5da6b7dcc6",
+      "lead_word": "the Mid-Autumn Festival",
+      "lead_zh": "中秋节",
       "featured_words": [
+        {
+          "entry_id": "occ-eb5da6b7dcc6",
+          "word": "the Mid-Autumn Festival",
+          "zh": "中秋节"
+        },
         {
           "entry_id": "occ-4b1028b27103",
           "word": "box",
@@ -4112,11 +4117,6 @@
           "entry_id": "occ-05e3cad92316",
           "word": "open",
           "zh": "打开"
-        },
-        {
-          "entry_id": "occ-cc2b872b4b54",
-          "word": "sit",
-          "zh": "坐"
         }
       ],
       "stages": [
@@ -4157,29 +4157,29 @@
       ],
       "host_npc_id": "host_U",
       "host_speaker": "U 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-15fb9d6a122c",
-      "lead_word": "heavy",
-      "lead_zh": "大量的；重的",
+      "lead_entry_id": "occ-156e40242fbe",
+      "lead_word": "will",
+      "lead_zh": "将要",
       "featured_words": [
         {
-          "entry_id": "occ-15fb9d6a122c",
-          "word": "heavy",
-          "zh": "大量的；重的"
+          "entry_id": "occ-156e40242fbe",
+          "word": "will",
+          "zh": "将要"
         },
         {
-          "entry_id": "occ-def745ac2248",
-          "word": "rain",
-          "zh": "雨；下雨"
+          "entry_id": "occ-2a83579a2e68",
+          "word": "will not",
+          "zh": "将不会"
         },
         {
-          "entry_id": "occ-a856ca74908c",
-          "word": "safe",
-          "zh": "安全的"
+          "entry_id": "occ-f565d6fcde4f",
+          "word": "forecast",
+          "zh": "预报"
         },
         {
-          "entry_id": "occ-8db8e9ee46ab",
-          "word": "should",
-          "zh": "应该"
+          "entry_id": "occ-242f6ae27a6c",
+          "word": "weather forecast",
+          "zh": "天气预报"
         }
       ],
       "stages": [
@@ -4220,29 +4220,29 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "餐点主厨 · 暖香食堂",
-      "lead_entry_id": "occ-9198f5a800ab",
-      "lead_word": "air",
-      "lead_zh": "空气",
+      "lead_entry_id": "occ-db07c07512bc",
+      "lead_word": "bring",
+      "lead_zh": "带来",
       "featured_words": [
-        {
-          "entry_id": "occ-9198f5a800ab",
-          "word": "air",
-          "zh": "空气"
-        },
         {
           "entry_id": "occ-db07c07512bc",
           "word": "bring",
           "zh": "带来"
         },
         {
-          "entry_id": "occ-761666e4e6a4",
-          "word": "can",
-          "zh": "罐；听"
+          "entry_id": "occ-2e4b79efb405",
+          "word": "bottle",
+          "zh": "瓶子"
         },
         {
-          "entry_id": "occ-6d66ac6bc908",
-          "word": "candy",
-          "zh": "糖果"
+          "entry_id": "occ-b042e0f70d51",
+          "word": "picnic",
+          "zh": "野餐"
+        },
+        {
+          "entry_id": "occ-9198f5a800ab",
+          "word": "air",
+          "zh": "空气"
         }
       ],
       "stages": [
@@ -4346,10 +4346,15 @@
       ],
       "host_npc_id": "host_F",
       "host_speaker": "F 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-9198f5a800ab",
-      "lead_word": "air",
-      "lead_zh": "空气",
+      "lead_entry_id": "occ-0bb3cd8c6c28",
+      "lead_word": "waste",
+      "lead_zh": "浪费",
       "featured_words": [
+        {
+          "entry_id": "occ-0bb3cd8c6c28",
+          "word": "waste",
+          "zh": "浪费"
+        },
         {
           "entry_id": "occ-9198f5a800ab",
           "word": "air",
@@ -4364,11 +4369,6 @@
           "entry_id": "occ-8db8e9ee46ab",
           "word": "should",
           "zh": "应该"
-        },
-        {
-          "entry_id": "occ-b13415bf1c77",
-          "word": "shouldn't",
-          "zh": "不应该"
         }
       ],
       "stages": [
@@ -4408,10 +4408,15 @@
       ],
       "host_npc_id": "host_N",
       "host_speaker": "N 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-62b73d1c3ff8",
-      "lead_word": "clay",
-      "lead_zh": "黏土；泥土",
+      "lead_entry_id": "occ-1319169839b9",
+      "lead_word": "than",
+      "lead_zh": "比",
       "featured_words": [
+        {
+          "entry_id": "occ-1319169839b9",
+          "word": "than",
+          "zh": "比"
+        },
         {
           "entry_id": "occ-62b73d1c3ff8",
           "word": "clay",
@@ -4426,11 +4431,6 @@
           "entry_id": "occ-b803ec844a5a",
           "word": "once",
           "zh": "曾经"
-        },
-        {
-          "entry_id": "occ-c7f44a408448",
-          "word": "singer",
-          "zh": "歌手；歌唱家"
         }
       ],
       "stages": [
@@ -4596,10 +4596,15 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-0c5d928d792d",
-      "lead_word": "grandparent",
-      "lead_zh": "（外）祖父／母",
+      "lead_entry_id": "occ-787505b0f01f",
+      "lead_word": "together",
+      "lead_zh": "在一起",
       "featured_words": [
+        {
+          "entry_id": "occ-787505b0f01f",
+          "word": "together",
+          "zh": "在一起"
+        },
         {
           "entry_id": "occ-0c5d928d792d",
           "word": "grandparent",
@@ -4609,11 +4614,6 @@
           "entry_id": "occ-31a8a0abb802",
           "word": "ride",
           "zh": "骑（自行车／马等）"
-        },
-        {
-          "entry_id": "occ-787505b0f01f",
-          "word": "together",
-          "zh": "在一起"
         },
         {
           "entry_id": "occ-5c9b9a4de489",
@@ -4658,10 +4658,15 @@
       ],
       "host_npc_id": "host_O",
       "host_speaker": "O 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-ed585ccf0c18",
-      "lead_word": "a piece of",
-      "lead_zh": "一块",
+      "lead_entry_id": "occ-f03a9e943a32",
+      "lead_word": "fairy tale",
+      "lead_zh": "童话故事",
       "featured_words": [
+        {
+          "entry_id": "occ-f03a9e943a32",
+          "word": "fairy tale",
+          "zh": "童话故事"
+        },
         {
           "entry_id": "occ-ed585ccf0c18",
           "word": "a piece of",
@@ -4676,11 +4681,6 @@
           "entry_id": "occ-b0c9c82f6a41",
           "word": "drop",
           "zh": "落下"
-        },
-        {
-          "entry_id": "occ-70e5eb22f625",
-          "word": "happily",
-          "zh": "高兴地"
         }
       ],
       "stages": [
@@ -4721,10 +4721,15 @@
       ],
       "host_npc_id": "npc_bear_uncle",
       "host_speaker": "熊叔 · 温馨客厅",
-      "lead_entry_id": "occ-4a04a004a0ee",
-      "lead_word": "exercise",
-      "lead_zh": "锻炼；练习",
+      "lead_entry_id": "occ-ad8e1529b8c7",
+      "lead_word": "take care of",
+      "lead_zh": "照顾",
       "featured_words": [
+        {
+          "entry_id": "occ-ad8e1529b8c7",
+          "word": "take care of",
+          "zh": "照顾"
+        },
         {
           "entry_id": "occ-4a04a004a0ee",
           "word": "exercise",
@@ -4739,11 +4744,6 @@
           "entry_id": "occ-ed4632ebd9ed",
           "word": "jog",
           "zh": "慢跑"
-        },
-        {
-          "entry_id": "occ-4f589c501cbc",
-          "word": "keep",
-          "zh": "保持"
         }
       ],
       "stages": [
@@ -4784,10 +4784,20 @@
       ],
       "host_npc_id": "host_F",
       "host_speaker": "F 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-8126f59b8b1e",
-      "lead_word": "air",
-      "lead_zh": "空气",
+      "lead_entry_id": "occ-b3089b44ad4f",
+      "lead_word": "Tree Planting Day",
+      "lead_zh": "植树节",
       "featured_words": [
+        {
+          "entry_id": "occ-b3089b44ad4f",
+          "word": "Tree Planting Day",
+          "zh": "植树节"
+        },
+        {
+          "entry_id": "occ-fc7f960cd83c",
+          "word": "look after",
+          "zh": "照顾；照料"
+        },
         {
           "entry_id": "occ-8126f59b8b1e",
           "word": "air",
@@ -4797,16 +4807,6 @@
           "entry_id": "occ-aa8f80f4a2b6",
           "word": "land",
           "zh": "陆地；土地"
-        },
-        {
-          "entry_id": "occ-44f58ff1d3b9",
-          "word": "place",
-          "zh": "地方；地点"
-        },
-        {
-          "entry_id": "occ-b3089b44ad4f",
-          "word": "Tree Planting Day",
-          "zh": "植树节"
         }
       ],
       "stages": [
@@ -4857,14 +4857,14 @@
           "zh": "地球"
         },
         {
-          "entry_id": "occ-aa8f80f4a2b6",
-          "word": "land",
-          "zh": "陆地；土地"
-        },
-        {
           "entry_id": "occ-cb8c94748885",
           "word": "space",
           "zh": "太空"
+        },
+        {
+          "entry_id": "occ-aa8f80f4a2b6",
+          "word": "land",
+          "zh": "陆地；土地"
         },
         {
           "entry_id": "occ-678c67249f8a",
@@ -5085,19 +5085,19 @@
       ],
       "host_npc_id": "host_G",
       "host_speaker": "G 馆长伙伴 · 字母工坊",
-      "lead_entry_id": "occ-75b9d0fc01d7",
-      "lead_word": "Big Ben",
-      "lead_zh": "大本钟",
+      "lead_entry_id": "occ-606eb31bc532",
+      "lead_word": "places of interest",
+      "lead_zh": "名胜古迹",
       "featured_words": [
-        {
-          "entry_id": "occ-75b9d0fc01d7",
-          "word": "Big Ben",
-          "zh": "大本钟"
-        },
         {
           "entry_id": "occ-606eb31bc532",
           "word": "places of interest",
           "zh": "名胜古迹"
+        },
+        {
+          "entry_id": "occ-75b9d0fc01d7",
+          "word": "Big Ben",
+          "zh": "大本钟"
         },
         {
           "entry_id": "occ-4bbcabc58f69",

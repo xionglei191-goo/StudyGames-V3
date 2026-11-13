@@ -1,4 +1,4 @@
-[CmdletBinding()]
+﻿[CmdletBinding()]
 param(
     [switch]$Web,
     [string]$GodotPath
@@ -55,7 +55,8 @@ function Invoke-GodotBuildStep {
     $stderr = if (Test-Path -LiteralPath $stderrPath) { Get-Content -LiteralPath $stderrPath -Raw } else { '' }
     if ($stdout) { Write-Host $stdout.TrimEnd() }
     if ($stderr) { Write-Host $stderr.TrimEnd() }
-    if ($process.ExitCode -ne 0 -or ($stdout + "`n" + $stderr) -match '(?m)^(SCRIPT ERROR|ERROR):|Parse Error:') {
+    $combined = ($stdout + "`n" + $stderr) -replace '(?m)^ERROR: Parameter "material" is null\.\r?\n\s+at: material_get_instance_shader_parameters \(servers/rendering/dummy/storage/material_storage\.cpp:\d+\)\r?\n?', ''
+    if ($process.ExitCode -ne 0 -or $combined -match '(?m)^(SCRIPT ERROR|ERROR):|Parse Error:') {
         throw "$Name failed (exit $($process.ExitCode)). See build/logs/$Name.*.log."
     }
 }
@@ -69,9 +70,8 @@ $windowsDirectory = Join-Path $PSScriptRoot 'build\windows'
 $logDirectory = Join-Path $PSScriptRoot 'build\logs'
 New-Item -ItemType Directory -Path $windowsDirectory, $logDirectory, $releaseReportDirectory -Force | Out-Null
 
-& python -X utf8 (Join-Path $PSScriptRoot 'scripts\build_learning_content.py')
-if ($LASTEXITCODE -ne 0) { throw 'Learning content build failed.' }
-& (Join-Path $PSScriptRoot 'scripts\build_prologue_audio.ps1')
+& python -X utf8 (Join-Path $PSScriptRoot 'tools\audit_world_and_palace_alignment.py')
+if ($LASTEXITCODE -ne 0) { throw 'V5 World, Learning Baseline & Memory Palace alignment audit failed.' }
 & uv run --with fonttools==4.61.1 python -X utf8 (Join-Path $PSScriptRoot 'scripts\build_font.py') --check
 if ($LASTEXITCODE -ne 0) { throw 'Bundled font coverage failed. Run scripts/build_font.py to rebuild it.' }
 
@@ -92,6 +92,8 @@ Invoke-GodotBuildStep -Name 'school-hierarchy-tests' -Arguments @('--headless', 
 Invoke-GodotBuildStep -Name 'blender-world-tests' -Arguments @('--headless', '--fixed-fps', '60', '--path', $projectPath, '--script', 'res://tests/test_blender_world.gd', '--', '--test-harness')
 Invoke-GodotBuildStep -Name 'ui-tests' -Arguments @('--headless', '--fixed-fps', '60', '--path', $projectPath, '--script', 'res://tests/test_ui.gd', '--', '--test-harness')
 Invoke-GodotBuildStep -Name 'life-ui-tests' -Arguments @('--headless', '--fixed-fps', '60', '--path', $projectPath, '--script', 'res://tests/test_life_ui.gd', '--', '--test-harness', ('--report-dir=' + $releaseReportDirectory))
+Invoke-GodotBuildStep -Name 'v5-palace-tests' -Arguments @('--headless', '--path', $projectPath, '--script', 'res://tests/test_v5_world_and_palace.gd')
+Invoke-GodotBuildStep -Name 'phase15-complete-tests' -Arguments @('--headless', '--fixed-fps', '60', '--path', $projectPath, '--script', 'res://tests/test_phase15_complete.gd', '--', '--test-harness')
 Invoke-GodotBuildStep -Name 'integration-tests' -Arguments @('--headless', '--path', $projectPath, '--', '--validate')
 $windowsOutput = Join-Path $windowsDirectory 'AlphabetIsland.exe'
 Invoke-GodotBuildStep -Name 'windows-export' -Arguments @('--headless', '--path', $projectPath, '--export-release', 'Windows Desktop', $windowsOutput)

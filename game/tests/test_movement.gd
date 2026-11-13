@@ -69,15 +69,12 @@ func _run() -> void:
 		if await _walk_to_entry("home_gate", "enter_home"):
 			if await _transition("home_gate", "home_estate"):
 				if await _enter_house_room("home"):
-					await _test_home_activity("memory_02", "装扮客厅", "decorate")
-					if await _walk_to_entry("home_exit", "leave_living_room"):
-						await _transition("home_exit", "home_hall")
-				if _main.room == "home_hall":
+					await _test_home_activity("memory_02", "装扮", "decorate")
 					if await _enter_house_room("home_bedroom"):
-						await _test_home_activity("memory_05", "睡到明天", "rest")
+						await _test_home_activity("memory_05", "睡一觉", "rest")
 						if await _walk_to_entry("home_exit", "leave_bedroom"):
-							await _transition("home_exit", "home_hall")
-				if _main.room == "home_hall" and await _walk_to_entry("courtyard_exit", "leave_indoor_home"):
+							await _transition("home_exit", "home")
+				if _main.room == "home" and await _walk_to_entry("courtyard_exit", "leave_indoor_home"):
 					await _transition("courtyard_exit", "home_estate")
 				if _main.room == "home_estate" and await _walk_to_entry("village_exit", "leave_home"):
 					await _transition("village_exit", "village")
@@ -90,9 +87,11 @@ func _run() -> void:
 func _enter_house_room(room_id: String) -> bool:
 	if _main.room == "home_estate":
 		if not await _walk_to_entry("house_entry", "enter_house"): return false
-		if not await _transition("house_entry", "home_hall"): return false
-	_check("front_door_enters_walkable_hall/" + room_id, _main.room == "home_hall" and not _main.ui.modal.visible and _main.ui.current_panel != "home_entry")
-	if _main.room != "home_hall": return false
+		if not await _transition("house_entry", "home"): return false
+	_check("front_door_enters_walkable_hub/" + room_id, _main.room == "home" and not _main.ui.modal.visible and _main.ui.current_panel != "home_entry")
+	if room_id == "home":
+		return _main.room == "home"
+	if _main.room != "home": return false
 	if not await _walk_to_entry(room_id + "_gate", "indoor_room_door"): return false
 	return await _transition(room_id + "_gate", room_id)
 
@@ -128,10 +127,12 @@ func _open_and_close(id: String) -> void:
 		return
 	_main.interact_nearest()
 	await process_frame
-	_check("activity_panel_" + str(_main.room) + "/" + id, _main.ui.modal.visible)
+	var opened: bool = _main.ui.modal.visible or (is_instance_valid(_main.ui.diegetic) and _main.ui.diegetic.visible) or _main.player.locked
+	_check("activity_panel_" + str(_main.room) + "/" + id, opened)
 	_main._on_action("close")
 	await process_frame
-	_check("activity_unlocked_" + str(_main.room) + "/" + id, not _main.ui.modal.visible and not _main.player.locked)
+	var closed: bool = not _main.ui.modal.visible and (not is_instance_valid(_main.ui.diegetic) or not _main.ui.diegetic.visible) and not _main.player.locked
+	_check("activity_unlocked_" + str(_main.room) + "/" + id, closed)
 
 
 func _test_home_activity(marker_id: String, button_text: String, activity: String) -> void:
@@ -140,7 +141,7 @@ func _test_home_activity(marker_id: String, button_text: String, activity: Strin
 	_main.interact_nearest()
 	await process_frame
 	await process_frame
-	_check("home_" + activity + "_opens_from_nearest", _main.ui.modal.visible and _main.ui.current_panel == "memory")
+	_check("home_" + activity + "_opens_from_nearest", _main.ui.modal.visible and _main.ui.current_panel in ["memory", "memory_card"])
 	var target_button: Button = null
 	for node: Node in _main.ui.panel_box.find_children("*", "Button", true, false):
 		var candidate := node as Button
@@ -152,12 +153,15 @@ func _test_home_activity(marker_id: String, button_text: String, activity: Strin
 		var state: Node = root.get_node("State")
 		var day_before: int = int(state.data.day)
 		target_button.pressed.emit()
-		await process_frame
-		await process_frame
+		for _i in range(12):
+			await process_frame
 		if activity == "rest":
 			_check("home_rest_advances_one_day", int(state.data.day) == day_before + 1)
 		else:
-			_check("home_wardrobe_opens_decoration_panel", _main.ui.modal.visible and _main.ui.current_panel == "decorate")
+			var decor_open: bool = (_main.ui.modal.visible and _main.ui.current_panel == "decorate") or (is_instance_valid(_main.free_decor_studio) and _main.free_decor_studio.visible)
+			_check("home_wardrobe_opens_decoration_panel", decor_open)
+			if is_instance_valid(_main.free_decor_studio) and _main.free_decor_studio.visible:
+				_main.free_decor_studio.close_studio()
 	_main._on_action("close")
 	await process_frame
 	_check("home_" + activity + "_unlocks_player", not _main.ui.modal.visible and not _main.player.locked)
@@ -259,7 +263,7 @@ func _transition(id: String, destination_room: String) -> bool:
 	if result and destination_room != "village":
 		_check("transition_blender_source/" + destination_room, str(_main.metadata.get("source", "")) == "blender")
 	if result and id in ["village_exit", "school_exit", "home_exit", "courtyard_exit"]:
-		var fallback_door: String = origin + "_gate" if id == "home_exit" or origin in SCHOOL_ROOMS else str({"school": "school_gate", "home_estate": "home_gate", "home_hall":"house_entry"}.get(origin, origin))
+		var fallback_door: String = origin + "_gate" if id == "home_exit" or origin in SCHOOL_ROOMS else str({"school": "school_gate", "home_estate": "home_gate", "home": "house_entry"}.get(origin, origin))
 		var door: String = str(original_entry.get("return_id", fallback_door))
 		var entry: Dictionary = _entry(door)
 		var remaining: float = _distance_xz(_main.player.position, entry.get("return_position", entry.get("position", Vector3(INF, INF, INF))))

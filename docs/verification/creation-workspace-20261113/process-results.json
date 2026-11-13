@@ -1,0 +1,65 @@
+{
+  "results": [
+    {
+      "test": "state",
+      "exit_code": 0,
+      "seconds": 2.22,
+      "command": [
+        "F:\\Tools\\Godot\\4.7.2\\Godot_v4.7.2-stable_win64.exe",
+        "--headless",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "res://tests/test_creation_state.gd",
+        "--",
+        "--test-harness",
+        "--creation-captures=F:/LoveStudy/docs/verification/creation-workspace-20261113/state"
+      ]
+    },
+    {
+      "test": "native",
+      "exit_code": 0,
+      "seconds": 27.26,
+      "command": [
+        "F:\\Tools\\Godot\\4.7.2\\Godot_v4.7.2-stable_win64.exe",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "res://tests/test_creation_workspace.gd",
+        "--",
+        "--test-harness",
+        "--creation-captures=F:/LoveStudy/docs/verification/creation-workspace-20261113/native"
+      ]
+    },
+    {
+      "test": "flow",
+      "exit_code": 0,
+      "seconds": 15.02,
+      "command": [
+        "F:\\Tools\\Godot\\4.7.2\\Godot_v4.7.2-stable_win64.exe",
+        "--headless",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "res://tests/test_creation_flow.gd",
+        "--",
+        "--test-harness",
+        "--creation-captures=F:/LoveStudy/docs/verification/creation-workspace-20261113/flow"
+      ]
+    }
+  ],
+  "sha256": {
+    "game/gameplay/creation_controller.gd": "3cc3db8255bd5cb8f22986540b2d925ea649589d3fd05672051428e3d955e1cf",
+    "game/ui/creation_canvas.gd": "a43f96d8683f99a5c6970558d32e15b23c44629d55894bcf8653550ab0e60f1e",
+    "game/ui/creation_preview.gd": "791038c5720ea2478f006c6fe891171deda45692ee34861834fd1f06a2d556da",
+    "game/ui/creation_workspace.gd": "3554f43df6a22d037f2ad56dad5ed1d14bc1ff18ae8e986d0fac4e9c6f73922f",
+    "game/scripts/ui.gd": "1346a6dda80fd424d7261a22b4c6a45a19542f5ac82952750491647f08869e64",
+    "game/tests/test_creation_workspace.gd": "050e9b65aea7ab0958f207590ef104b491ee2b0ea77b8651624aae73fb661aad"
+  }
+}

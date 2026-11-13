@@ -61,7 +61,7 @@ func _direct_interaction() -> void:
 		await _frames(1)
 		if game.ui.modal.visible:
 			break
-	_check(game.ui.current_panel=="baker","walking_to_npc_opens_dialogue_automatically")
+	_check(game.ui.current_panel in ["baker","resident_c"],"walking_to_npc_opens_dialogue_automatically")
 	_check(game.player.path.is_empty(),"dialogue_arrival_stops_walking")
 	await _click_id("close")
 	await game.change_room("landmark_C")

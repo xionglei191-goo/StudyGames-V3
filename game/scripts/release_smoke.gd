@@ -81,7 +81,19 @@ func _run() -> void:
 				owl_choice.pressed.emit()
 				_check(book._bridge_position==old_position+1,"exported_bridge_owl_choice_advances")
 		game._close()
+		_check(FileAccess.file_exists("res://data/learning/memory_palace_v5.json"),"packaged_memory_palace_v5")
+		_check(FileAccess.file_exists("res://data/learning/world_object_semantics_v5.json"),"packaged_world_semantics_v5")
+		_check(FileAccess.file_exists("res://data/learning/voice_manifest_v4.json"),"packaged_voice_manifest_v4")
+		game.journey.open_story_from_world("occ-5605ac34c5f2")
+		for frame: int in 8: await get_tree().process_frame
+		var v5_popup: Node = game.journey.current_memory
+		_check(is_instance_valid(v5_popup) and v5_popup.name=="PopupBookTheater","exported_v5_popup_theater_opens")
+		if is_instance_valid(v5_popup):
+			_check(not str(v5_popup.palace_room_id()).is_empty(),"exported_v5_palace_locus_bound")
+			_check(v5_popup.find_child("StoryVoiceBtn",true,false)!=null,"exported_v5_zh_story_voice_btn")
+		game._close()
 		await game.change_room("classroom")
+		_check(is_instance_valid(game.get("palace_loci")) and bool(game.palace_loci.has_shrine),"exported_v5_room_palace_shrine")
 		_check(game.living.get_actor("textbook_dino")!=null,"exported_dino_rig")
 		var dino: Node=game.living.get_actor("textbook_dino")
 		_check(dino.animation_player.has_animation("normal/greet_wave") and dino.animation_player.has_animation("reduced/greet_wave"),"exported_saved_animation_libraries")

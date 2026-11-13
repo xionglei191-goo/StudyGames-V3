@@ -16,36 +16,36 @@ const Wardrobe = preload("res://actors/modular_wardrobe.gd")
 const Style = preload("res://ui/island_theme.gd")
 
 const ROOM_QUEST_SPECS := {
-	"landmark_A": {"station": "果园藤篮", "prop": "apple", "alt_prop": "golden_apple", "items": [["apple", "red apple", "🍎 Red Apple"], ["apple", "sweet apple", "🍎 Sweet Apple"], ["golden_apple", "yellow apple", "🌟 Golden Apple"]]},
-	"landmark_B": {"station": "船坞起航台", "prop": "boat", "items": [["boat", "boat", "⛵ Little Boat"], ["boat", "blue boat", "⛵ Blue Boat"], ["boat", "sail boat", "⛵ Sail Boat"]]},
-	"landmark_C": {"station": "烘焙甜点台", "prop": "cake", "items": [["cake", "cake", "🎂 Sweet Cake"], ["cake", "apple cake", "🎂 Apple Cake"], ["bread", "warm bread", "🥐 Warm Bread"]]},
-	"landmark_D": {"station": "鼓点合奏台", "prop": "drum", "items": [["drum", "drum", "🥁 Red Drum"], ["drum", "big drum", "🥁 Big Drum"], ["drum", "music drum", "🥁 Music Drum"]]},
-	"landmark_E": {"station": "暖绒孵蛋窝", "prop": "egg", "items": [["egg", "egg", "🥚 Warm Egg"], ["egg", "white egg", "🥚 White Egg"], ["egg", "little egg", "🥚 Little Egg"]]},
-	"landmark_F": {"station": "阳光花艺台", "prop": "flower", "items": [["flower", "flower", "🌸 Pink Flower"], ["flower", "red flower", "🌺 Red Flower"], ["flower", "sweet flower", "🌷 Sweet Flower"]]},
-	"landmark_G": {"station": "环球航线桌", "prop": "globe", "items": [["globe", "globe", "🌍 Blue Globe"], ["globe", "world globe", "🌎 World Globe"], ["book", "map book", "🗺️ Map Book"]]},
-	"landmark_H": {"station": "制帽展示架", "prop": "hat", "items": [["hat", "hat", "👒 Straw Hat"], ["hat", "sunny hat", "👒 Sunny Hat"], ["hat", "nice hat", "🎩 Nice Hat"]]},
-	"landmark_I": {"station": "冰爽甜筒车", "prop": "ice_cream", "items": [["ice_cream", "ice cream", "🍦 Ice Cream"], ["ice_cream", "pink ice cream", "🍧 Pink Cone"], ["ice_cream", "sweet cone", "🍨 Sweet Cone"]]},
-	"landmark_J": {"station": "果酱陈列架", "prop": "jar", "items": [["jar", "jar", "🫙 Glass Jar"], ["jar", "apple jar", "🍯 Jam Jar"], ["jar", "star jar", "✨ Star Jar"]]},
-	"landmark_K": {"station": "微风放飞台", "prop": "kite", "items": [["kite", "kite", "🪁 Sky Kite"], ["kite", "blue kite", "🪁 Blue Kite"], ["kite", "wind kite", "🎐 Wind Kite"]]},
-	"landmark_L": {"station": "暖光灯笼架", "prop": "lantern", "items": [["lantern", "lantern", "🏮 Warm Lantern"], ["lantern", "gold lantern", "🏮 Gold Lantern"], ["lantern", "night lantern", "✨ Bright Lantern"]]},
-	"landmark_M": {"station": "蘑菇采摘篮", "prop": "mushroom", "items": [["mushroom", "mushroom", "🍄 Red Mushroom"], ["mushroom", "cute mushroom", "🍄 Forest Mushroom"], ["mushroom", "soft mushroom", "🌿 Cozy Mushroom"]]},
-	"landmark_N": {"station": "树冠护巢台", "prop": "nest", "items": [["nest", "nest", "🪹 Cozy Nest"], ["nest", "bird nest", "🐦 Bird Nest"], ["egg", "nest egg", "🥚 Nest Egg"]]},
-	"landmark_O": {"station": "猫头鹰阅览桌", "prop": "owl_book", "items": [["owl_book", "owl book", "🦉 Owl Book"], ["book", "story book", "📖 Story Book"], ["owl_book", "wise owl", "📚 Night Book"]]},
-	"landmark_P": {"station": "金秋南瓜车", "prop": "pumpkin", "items": [["pumpkin", "pumpkin", "🎃 Big Pumpkin"], ["pumpkin", "orange pumpkin", "🎃 Sweet Pumpkin"], ["pumpkin", "round pumpkin", "🍂 Autumn Pumpkin"]]},
-	"landmark_Q": {"station": "拼布织布台", "prop": "quilt", "items": [["quilt", "quilt", "🧵 Soft Quilt"], ["quilt", "warm quilt", "🪡 Patch Quilt"], ["yarn", "cozy quilt", "🧶 Cozy Patch"]]},
-	"landmark_R": {"station": "发条拼装台", "prop": "robot", "items": [["robot", "robot", "🤖 Toy Robot"], ["robot", "blue robot", "⚙️ Smart Robot"], ["robot", "little robot", "🔧 Helper Robot"]]},
-	"landmark_S": {"station": "观星许愿台", "prop": "star", "items": [["star", "star", "⭐ Bright Star"], ["star", "yellow star", "🌟 Wishing Star"], ["star", "night star", "✨ Little Star"]]},
-	"landmark_T": {"station": "小火车站台", "prop": "train", "items": [["train", "train", "🚂 Red Train"], ["train", "toy train", "🚃 Toy Train"], ["train", "fast train", "🎫 Express Train"]]},
-	"landmark_U": {"station": "晴雨伞架台", "prop": "umbrella", "items": [["umbrella", "umbrella", "☂️ Blue Umbrella"], ["umbrella", "rain umbrella", "☔ Rain Umbrella"], ["umbrella", "sunny umbrella", "🌂 Cozy Umbrella"]]},
-	"landmark_V": {"station": "火山晶石台", "prop": "volcano_gem", "items": [["volcano_gem", "volcano", "🌋 Warm Crystal"], ["volcano_gem", "red stone", "💎 Volcano Gem"], ["volcano_gem", "glow rock", "🔥 Lava Stone"]]},
-	"landmark_W": {"station": "鲸歌海螺台", "prop": "whale_shell", "items": [["whale_shell", "whale", "🐋 Whale Shell"], ["whale_shell", "sea whale", "🐚 Ocean Shell"], ["boat", "sea boat", "🌊 Wave Boat"]]},
-	"landmark_X": {"station": "海风木琴架", "prop": "xylophone_bar", "items": [["xylophone_bar", "xylophone", "🎶 Gold Note"], ["xylophone_bar", "music bar", "🎵 Clear Tone"], ["xylophone_bar", "sweet note", "🎼 Sunny Bar"]]},
-	"landmark_Y": {"station": "绒线编织篮", "prop": "yarn", "items": [["yarn", "yarn", "🧶 Pink Yarn"], ["yarn", "soft yarn", "🧶 Soft Yarn"], ["yarn", "warm wool", "🎀 Cozy Wool"]]},
-	"landmark_Z": {"station": "斑马邮筒台", "prop": "zebra_letter", "items": [["zebra_letter", "zebra", "🦓 Zebra Card"], ["zebra_letter", "post letter", "✉️ Friend Letter"], ["zebra_letter", "island stamp", "📮 Post Stamp"]]},
-	"home_estate": {"station": "小院迎宾花台", "prop": "flower", "items": [["flower", "garden flower", "🌸 Garden Flower"], ["apple", "home apple", "🍎 Fresh Apple"], ["zebra_letter", "welcome card", "✉️ Morning Mail"]]},
-	"school": {"station": "校园图书分享车", "prop": "book", "items": [["book", "book", "📖 Picture Book"], ["star", "welcome star", "⭐ Welcome Star"], ["flower", "campus flower", "🌼 Sunny Flower"]]},
-	"canteen": {"station": "暖心餐盘分享台", "prop": "milk", "items": [["milk", "milk", "🥛 Warm Milk"], ["bread", "bread", "🥐 Soft Bread"], ["cake", "cake", "🍰 Berry Cake"]]},
-	"playground": {"station": "课间活力收纳筐", "prop": "ball", "items": [["ball", "ball", "⚽ Playground Ball"], ["kite", "kite", "🪁 Sunny Kite"], ["star", "team star", "🌟 Team Star"]]},
+	"landmark_A": {"word": "Apple", "station": "果园藤篮", "prop": "apple", "alt_prop": "golden_apple", "items": [["apple", "red apple", "Red Apple · 红苹果"], ["apple", "sweet apple", "Sweet Apple · 甜苹果"], ["golden_apple", "yellow apple", "Yellow Apple · 黄苹果"]]},
+	"landmark_B": {"word": "Boat", "station": "船坞起航台", "prop": "boat", "items": [["boat", "boat", "Little Boat · 小木船"], ["boat", "blue boat", "Blue Boat · 蓝木船"], ["boat", "small ship", "Small Ship · 小帆船"]]},
+	"landmark_C": {"word": "Cake", "station": "烘焙甜点台", "prop": "cake", "items": [["cake", "cake", "Sweet Cake · 甜蛋糕"], ["cake", "apple cake", "Apple Cake · 苹果蛋糕"], ["bread", "warm bread", "Warm Bread · 暖面包"]]},
+	"landmark_D": {"word": "Drum", "station": "鼓点合奏台", "prop": "drum", "items": [["drum", "drum", "Red Drum · 红圆鼓"], ["drum", "big drum", "Big Drum · 大圆鼓"], ["drum", "music drum", "Music Drum · 节奏鼓"]]},
+	"landmark_E": {"word": "Egg", "station": "暖绒孵蛋窝", "prop": "egg", "items": [["egg", "egg", "Warm Egg · 暖鸡蛋"], ["egg", "white egg", "White Egg · 白蛋壳"], ["egg", "small egg", "Small Egg · 小鸟蛋"]]},
+	"landmark_F": {"word": "Flower", "station": "阳光花艺台", "prop": "flower", "items": [["flower", "flower", "Pink Flower · 粉花朵"], ["flower", "red flower", "Red Flower · 红花朵"], ["flower", "yellow flower", "Yellow Flower · 黄花朵"]]},
+	"landmark_G": {"word": "Globe", "station": "环球航线桌", "prop": "globe", "items": [["globe", "globe", "Blue Globe · 地球仪"], ["globe", "world map", "World Map · 世界地图"], ["book", "travel book", "Travel Book · 旅行书"]]},
+	"landmark_H": {"word": "Hat", "station": "制帽展示架", "prop": "hat", "items": [["hat", "hat", "Sun Hat · 遮阳帽"], ["hat", "warm cap", "Warm Cap · 暖绒帽"], ["hat", "nice hat", "Nice Hat · 漂亮礼帽"]]},
+	"landmark_I": {"word": "Ice cream", "station": "冰爽甜筒车", "prop": "ice_cream", "items": [["ice_cream", "ice cream", "Ice Cream · 冰淇淋"], ["ice_cream", "sweet ice cream", "Sweet Cone · 甜蛋筒"], ["ice_cream", "milk ice cream", "Milk Cone · 奶香甜筒"]]},
+	"landmark_J": {"word": "Jar", "station": "玻璃罐陈列架", "prop": "jar", "items": [["jar", "jar", "Glass Jar · 玻璃罐"], ["jar", "apple jam", "Apple Jam · 苹果酱罐"], ["jar", "clean bottle", "Clean Jar · 透明收藏罐"]]},
+	"landmark_K": {"word": "Kite", "station": "微风放飞台", "prop": "kite", "items": [["kite", "kite", "Sky Kite · 飞天风筝"], ["kite", "blue kite", "Blue Kite · 蓝风筝"], ["kite", "bird kite", "Bird Kite · 燕子风筝"]]},
+	"landmark_L": {"word": "Lantern", "station": "暖光灯笼架", "prop": "lantern", "items": [["lantern", "lantern", "Warm Lantern · 暖灯笼"], ["lantern", "red lantern", "Red Lantern · 红灯笼"], ["lantern", "bright light", "Bright Lantern · 亮灯笼"]]},
+	"landmark_M": {"word": "Mushroom", "station": "蘑菇采摘篮", "prop": "mushroom", "items": [["mushroom", "mushroom", "Red Mushroom · 红蘑菇"], ["mushroom", "small mushroom", "Small Mushroom · 小蘑菇"], ["mushroom", "forest mushroom", "Forest Mushroom · 林间蘑菇"]]},
+	"landmark_N": {"word": "Nest", "station": "树冠护巢台", "prop": "nest", "items": [["nest", "nest", "Bird Nest · 小鸟巢"], ["nest", "warm nest", "Warm Nest · 温暖草巢"], ["egg", "bird egg", "Bird Egg · 鸟巢小蛋"]]},
+	"landmark_O": {"word": "Owl", "station": "猫头鹰阅览桌", "prop": "owl_book", "items": [["owl_book", "owl", "Clever Owl · 猫头鹰"], ["book", "storybook", "Storybook · 故事书"], ["book", "picture book", "Picture Book · 图画书"]]},
+	"landmark_P": {"word": "Pumpkin", "station": "金秋南瓜车", "prop": "pumpkin", "items": [["pumpkin", "pumpkin", "Big Pumpkin · 大南瓜"], ["pumpkin", "orange pumpkin", "Orange Pumpkin · 橙南瓜"], ["pumpkin", "round pumpkin", "Round Pumpkin · 圆南瓜"]]},
+	"landmark_Q": {"word": "Quilt", "station": "拼布织布台", "prop": "quilt", "items": [["quilt", "quilt", "Soft Quilt · 软拼布被"], ["quilt", "warm quilt", "Warm Quilt · 暖花被"], ["yarn", "colourful cloth", "Patch Cloth · 彩色拼布"]]},
+	"landmark_R": {"word": "Robot", "station": "发条拼装台", "prop": "robot", "items": [["robot", "robot", "Toy Robot · 玩具机器人"], ["robot", "clever robot", "Clever Robot · 聪明机器人"], ["robot", "little robot", "Little Robot · 小机器人"]]},
+	"landmark_S": {"word": "Star", "station": "观星许愿台", "prop": "star", "items": [["star", "star", "Bright Star · 亮星星"], ["star", "yellow star", "Yellow Star · 金星星"], ["star", "evening star", "Night Star · 夜空星"]]},
+	"landmark_T": {"word": "Train", "station": "小火车站台", "prop": "train", "items": [["train", "train", "Red Train · 红火车"], ["train", "toy train", "Toy Train · 玩具火车"], ["train", "fast train", "Fast Train · 快车号"]]},
+	"landmark_U": {"word": "Umbrella", "station": "晴雨伞架台", "prop": "umbrella", "items": [["umbrella", "umbrella", "Blue Umbrella · 蓝雨伞"], ["umbrella", "rain umbrella", "Rain Umbrella · 花雨伞"], ["umbrella", "big umbrella", "Big Umbrella · 大雨伞"]]},
+	"landmark_V": {"word": "Volcano", "station": "岩石样本台", "prop": "volcano_gem", "items": [["volcano_gem", "volcano", "Volcano Model · 火山模型"], ["volcano_gem", "rough rock", "Rough Rock · 粗糙岩石"], ["volcano_gem", "brown stone", "Brown Stone · 褐色山石"]]},
+	"landmark_W": {"word": "Whale", "station": "鲸歌海螺台", "prop": "whale_shell", "items": [["whale_shell", "whale", "Blue Whale · 大蓝鲸"], ["whale_shell", "sea shell", "Sea Shell · 海螺贝壳"], ["boat", "sea boat", "Sea Boat · 海浪小船"]]},
+	"landmark_X": {"word": "Xylophone", "station": "海风木琴架", "prop": "xylophone_bar", "items": [["xylophone_bar", "xylophone", "Xylophone · 彩木琴"], ["xylophone_bar", "sweet music", "Sweet Music · 悦耳琴音"], ["xylophone_bar", "clear song", "Clear Song · 清脆旋律"]]},
+	"landmark_Y": {"word": "Yarn", "station": "绒线编织篮", "prop": "yarn", "items": [["yarn", "yarn", "Pink Yarn · 粉毛线"], ["yarn", "soft yarn", "Soft Yarn · 软绒线"], ["yarn", "warm wool", "Warm Wool · 暖毛线团"]]},
+	"landmark_Z": {"word": "Zebra", "station": "斑马邮筒台", "prop": "zebra_letter", "items": [["zebra_letter", "zebra", "Zebra Card · 斑马明信片"], ["zebra_letter", "letter", "Friend Letter · 朋友来信"], ["zebra_letter", "stamp", "Post Stamp · 纪念邮票"]]},
+	"home_estate": {"word": "Flower", "station": "小院迎宾花台", "prop": "flower", "items": [["flower", "garden flower", "Garden Flower · 小院花朵"], ["apple", "fresh apple", "Fresh Apple · 新鲜苹果"], ["zebra_letter", "welcome card", "Welcome Card · 迎宾贺卡"]]},
+	"school": {"word": "Book", "station": "校园图书分享车", "prop": "book", "items": [["book", "book", "Picture Book · 图画书"], ["star", "gold star", "Gold Star · 校园金星"], ["flower", "campus flower", "Campus Flower · 校园花朵"]]},
+	"canteen": {"word": "Milk", "station": "暖心餐盘分享台", "prop": "milk", "items": [["milk", "milk", "Warm Milk · 温牛奶"], ["bread", "bread", "Soft Bread · 软面包"], ["cake", "cake", "Sweet Cake · 甜蛋糕"]]},
+	"playground": {"word": "Ball", "station": "课间活力收纳筐", "prop": "ball", "items": [["ball", "ball", "Playground Ball · 运动彩球"], ["kite", "kite", "Sunny Kite · 晴空风筝"], ["star", "team star", "Team Star · 合作之星"]]},
 }
 
 var game: Node3D
@@ -214,7 +214,7 @@ func _build_cozy_station_pedestal(station_title: String, prop_id: String) -> voi
 	_echo_badge.outline_size = 6
 	_echo_badge.position = Vector3(0.0, 1.05, 0.0)
 	_echo_badge.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	_echo_badge.text = "✨ " + station_title
+	_echo_badge.text = "◈ " + station_title
 	_station_pedestal.add_child(_echo_badge)
 
 func _refresh_persistent_echo_visuals() -> void:
@@ -230,10 +230,10 @@ func _refresh_persistent_echo_visuals() -> void:
 	var st_title := str(cfg.get("station", "手作分享台"))
 	if is_instance_valid(_echo_badge):
 		if count > 0:
-			_echo_badge.text = "🌟 %s · 已共创 %d 件" % [st_title, count]
+			_echo_badge.text = "★ %s · 已共创 %d 件" % [st_title, count]
 			_echo_badge.modulate = Color("ffe999")
 		else:
-			_echo_badge.text = "✨ " + st_title
+			_echo_badge.text = "◈ " + st_title
 	# Spawn up to 3 persistent miniature keepsakes on the station from past visits!
 	if count > 0 and active_room != "landmark_A":
 		var prop_id := str(cfg.get("prop", "star"))
@@ -300,7 +300,7 @@ func _setup_chapter_keepsake_if_completed(room_id: String) -> void:
 	lbl.modulate = Color("4f3d28")
 	lbl.position = Vector3(0.0, 1.10, 0.06)
 	lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	lbl.text = "🏅 章节纪念牌\n" + completed_titles[-1]
+	lbl.text = "★ 章节纪念牌\n" + completed_titles[-1]
 	board.add_child(lbl)
 
 func _snap_walkable(pt: Vector3) -> Vector3:

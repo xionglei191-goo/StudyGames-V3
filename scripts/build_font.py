@@ -24,7 +24,7 @@ DEFAULT_SOURCE = Path(
 )
 OUTPUT = ROOT / "game" / "assets" / "fonts"
 TARGET = OUTPUT / "IslandSans.otf"
-EXTRA_TEXT = "✓×→←↑↓•·…–—“”‘’￥★☆□■△▲○●①②③④⑤⑥⑦⑧⑨⑩"
+EXTRA_TEXT = "✓×→←↑↓•·…–—“”‘’￥★☆□■△▲○●①②③④⑤⑥⑦⑧⑨⑩◈◆◇▼▶◁▷♪♫◎›‹«»《》【】「」『』"
 
 
 def digest(path: Path) -> str:
@@ -45,9 +45,12 @@ def json_display_text(value):
 
 
 def collect_text():
-    paths = sorted((ROOT / "game" / "scripts").rglob("*.gd"))
-    paths += sorted((ROOT / "game" / "ui").rglob("*.gd"))
-    paths += sorted((ROOT / "game" / "activities").rglob("*.gd"))
+    gd_dirs = ["scripts", "ui", "ui_v4", "theater", "gameplay", "activities", "actors", "audio", "core"]
+    paths = []
+    for sub in gd_dirs:
+        d = ROOT / "game" / sub
+        if d.exists():
+            paths += sorted(d.rglob("*.gd"))
     paths += sorted((ROOT / "game" / "data").rglob("*.json"))
     paths += sorted((ROOT / "game" / "assets" / "living").glob("*.json"))
     paths += sorted((ROOT / "game" / "assets" / "world").glob("*.json"))

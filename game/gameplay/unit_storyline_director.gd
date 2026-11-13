@@ -89,7 +89,7 @@ static func build_stage_dialogue(state: Node, chapter: Dictionary, world_pos: Ve
 	var s2_txt := str(stages[1].get("text", "")) if stages.size() > 1 else ""
 	var s3_txt := str(stages[2].get("text", "")) if stages.size() > 2 else ""
 	var thematic_spec: Dictionary = load("res://gameplay/chapter_thematic_play.gd").classify_chapter(chapter)
-	var thematic_title: String = str(thematic_spec.get("title", "🎁 奇趣主题百宝箱"))
+	var thematic_title: String = str(thematic_spec.get("title", "★ 奇趣主题百宝箱"))
 
 	if stage_done == 0:
 		return {
@@ -101,10 +101,10 @@ static func build_stage_dialogue(state: Node, chapter: Dictionary, world_pos: Ve
 			"show_zh_immediately": true,
 			"auto_speak": true,
 			"actions": [
-				{"label": "✨ 收下心愿，开启第 2 幕", "id": "v4_chap_step:1:" + ckey, "primary": true},
-				{"label": "🎮 主题微玩法 · " + thematic_title, "id": "v4_thematic_open:" + ckey},
-				{"label": "📖 翻开「%s」立体书" % lead_word, "id": "v4_chap_popup:" + ckey + ":" + lead_eid, "disabled": lead_eid.is_empty()},
-				{"label": "🗺️ 八册章节画册", "id": "v4_chapter_atlas"},
+				{"label": " 收下心愿，开启第 2 幕", "id": "v4_chap_step:1:" + ckey, "primary": true},
+				{"label": "◈ 主题微玩法 · " + thematic_title, "id": "v4_thematic_open:" + ckey},
+				{"label": "◈ 翻开「%s」立体书" % lead_word, "id": "v4_chap_popup:" + ckey + ":" + lead_eid, "disabled": lead_eid.is_empty()},
+				{"label": "◈ 八册章节画册", "id": "v4_chapter_atlas"},
 				{"label": "稍后再聊", "id": "close"}
 			]
 		}
@@ -118,9 +118,9 @@ static func build_stage_dialogue(state: Node, chapter: Dictionary, world_pos: Ve
 			"show_zh_immediately": true,
 			"auto_speak": true,
 			"actions": [
-				{"label": "🎮 体验 " + thematic_title, "id": "v4_thematic_open:" + ckey, "primary": true},
-				{"label": "📖 体验 3D 立体翻翻书", "id": "v4_chap_popup:" + ckey + ":" + lead_eid, "disabled": lead_eid.is_empty()},
-				{"label": "🤲 直接完成共创进入终幕", "id": "v4_chap_step:2:" + ckey},
+				{"label": "◈ 体验 " + thematic_title, "id": "v4_thematic_open:" + ckey, "primary": true},
+				{"label": "◈ 体验 3D 立体翻翻书", "id": "v4_chap_popup:" + ckey + ":" + lead_eid, "disabled": lead_eid.is_empty()},
+				{"label": "直接完成共创进入终幕", "id": "v4_chap_step:2:" + ckey},
 				{"label": "稍后再聊", "id": "close"}
 			]
 		}
@@ -134,8 +134,8 @@ static func build_stage_dialogue(state: Node, chapter: Dictionary, world_pos: Ve
 			"show_zh_immediately": true,
 			"auto_speak": true,
 			"actions": [
-				{"label": "🏅 安放章节纪念牌 (+12 叶币)", "id": "v4_chap_step:3:" + ckey, "primary": true},
-				{"label": "📖 再看一遍立体书", "id": "v4_chap_popup:" + ckey + ":" + lead_eid, "disabled": lead_eid.is_empty()},
+				{"label": "★ 安放章节纪念牌 (+12 叶币)", "id": "v4_chap_step:3:" + ckey, "primary": true},
+				{"label": "◈ 再看一遍立体书", "id": "v4_chap_popup:" + ckey + ":" + lead_eid, "disabled": lead_eid.is_empty()},
 				{"label": "稍后再聊", "id": "close"}
 			]
 		}
@@ -145,12 +145,12 @@ static func build_stage_dialogue(state: Node, chapter: Dictionary, world_pos: Ve
 		var book_units := units_for_book(book_id).size()
 		var actions: Array = []
 		if next_u <= book_units:
-			actions.append({"label": "🚀 继续下一章 (Unit %d)" % next_u, "id": "v4_chap_go:%s:unit-%d" % [book_id, next_u], "primary": true})
+			actions.append({"label": "▶ 继续下一章 (Unit %d)" % next_u, "id": "v4_chap_go:%s:unit-%d" % [book_id, next_u], "primary": true})
 		else:
-			actions.append({"label": "📚 打开八册章节画册选新册", "id": "v4_chapter_atlas", "primary": true})
-		actions.append({"label": "🎮 重温 " + thematic_title, "id": "v4_thematic_open:" + ckey})
+			actions.append({"label": "◈ 打开八册章节画册选新册", "id": "v4_chapter_atlas", "primary": true})
+		actions.append({"label": "◈ 重温 " + thematic_title, "id": "v4_thematic_open:" + ckey})
 		if not lead_eid.is_empty():
-			actions.append({"label": "📖 温习「%s」立体书" % lead_word, "id": "open_popup_story:" + lead_eid})
+			actions.append({"label": "◈ 温习「%s」立体书" % lead_word, "id": "open_popup_story:" + lead_eid})
 		actions.append({"label": "开心散步", "id": "close"})
 		return {
 			"npc_id": npc_id,

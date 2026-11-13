@@ -52,8 +52,10 @@ func show_memory(sequence: int) -> void:
 	var anchor: Dictionary = plan.anchors[sequence - 1]
 	State.discover(game.room, sequence)
 	var actions: Array = []
+	if game.room == "home_estate" and sequence == 1:
+		actions.append({"label":"猫头鹰晨间温故信", "id":"v5_wake_mailbox", "icon":"book", "primary":true})
 	if sequence == int(plan.task.anchor):
-		actions.append({"label":str(TASK_LABELS.get(game.room, "做一做")), "id":"home:begin", "primary":true})
+		actions.append({"label":str(TASK_LABELS.get(game.room, "做一做")), "id":"home:begin", "primary":actions.is_empty()})
 	if game.room == "home" and sequence == 2:
 		actions.append({"label":"装扮", "id":"decorate", "primary":true})
 	if game.room == "home_bedroom" and sequence == 3:
@@ -71,6 +73,11 @@ func show_memory(sequence: int) -> void:
 	var content := CardContent.build(plan, anchor)
 	if sequence == int(plan.task.anchor) and done:
 		content.hint += "\n" + str(plan.task.result) + "  可以再做一次。"
+	var p_eid := str(content.get("palace_entry_id", "")).strip_edges()
+	var p_word := str(content.get("palace_word", "")).strip_edges()
+	if not p_eid.is_empty() and not p_word.is_empty():
+		actions.append({"label":"立体书记词 · " + p_word, "id":"open_palace:" + p_eid, "icon":"book", "primary":actions.is_empty()})
+	actions.append({"label":"本屋宫殿角落展台", "id":"v5_palace_tour:0", "icon":"compass"})
 	actions.append({"label":"退出", "id":"close"})
 	game.ui.show_memory_card(game, str(anchor.label), "%s · 已发现 %d / 5" % [plan.name, visited], content, actions)
 
@@ -86,11 +93,13 @@ func show_overview() -> void:
 	else:
 		actions.append({"label":"走回客厅", "id":"navigate:home_exit", "primary":true})
 	actions.append({"label":"看看今天能做什么", "id":"home:day"})
+	actions.append({"label":"猫头鹰晨间温故信", "id":"v5_wake_mailbox"})
+	actions.append({"label":"温馨家园待客三轮对话", "id":"v5_roleplay_start:home"})
 	if game.room in ["home", "home_estate", "home_bedroom", "home_study"]:
-		actions.append({"label":"✨ 动森自由网格布置", "id":"v4_free_decor"})
+		actions.append({"label":"动森自由网格布置", "id":"v4_free_decor"})
 		actions.append({"label":"生活工坊 · 我的作品与小摊", "id":"creation"})
 	if game.room != "home": actions.append({"label":"打开家园地图", "id":"map"})
-	game.ui.show_panel("home_overview", "每个房间都有自己的生活", "我的家 · 小院与七个房间", "推开家门就是客厅。\n沿客厅两侧走到书房、卧室、浴室、厨房、餐厅和阳台门前，按 E 进入。离开房间会回到客厅对应的门边。", actions)
+	game.ui.show_panel("home_overview", "Welcome to my home! Come in, please.", "我的家 · 小院与七个房间", "欢迎回家！推开正门就是温馨客厅（Come in, please!）。\n沿客厅两侧走到书房、卧室、浴室、厨房、餐厅和阳台门前，按 E 进入；走近每件家具还能认识它的英文名字与立体书奇象故事。", actions)
 
 func show_day() -> void:
 	cancel_task()

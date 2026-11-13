@@ -1,0 +1,103 @@
+{
+  "results": [
+    {
+      "test": "headless",
+      "exit_code": 0,
+      "seconds": 34.19,
+      "command": [
+        "F:\\Tools\\Godot\\4.7.2\\Godot_v4.7.2-stable_win64.exe",
+        "--headless",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "res://tests/test_interaction_access.gd",
+        "--",
+        "--test-harness",
+        "--access-output=F:/LoveStudy/docs/verification/interaction-spacing-20261113/headless"
+      ]
+    },
+    {
+      "test": "home-compat",
+      "exit_code": 0,
+      "seconds": 28.06,
+      "command": [
+        "F:\\Tools\\Godot\\4.7.2\\Godot_v4.7.2-stable_win64.exe",
+        "--headless",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "F:/LoveStudy/.local/interaction-spacing-20261113/test_home_compat.gd",
+        "--",
+        "--test-harness"
+      ]
+    },
+    {
+      "test": "living-compat",
+      "exit_code": 1,
+      "seconds": 7.1,
+      "command": [
+        "F:\\Tools\\Godot\\4.7.2\\Godot_v4.7.2-stable_win64.exe",
+        "--headless",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "res://tests/test_living_world.gd",
+        "--",
+        "--test-harness"
+      ]
+    },
+    {
+      "test": "living-baseline",
+      "exit_code": 1,
+      "seconds": 6.69,
+      "command": [
+        "F:\\Tools\\Godot\\4.7.2\\Godot_v4.7.2-stable_win64.exe",
+        "--headless",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "F:/LoveStudy/.local/interaction-spacing-20261113/test_living_before.gd",
+        "--",
+        "--test-harness"
+      ]
+    },
+    {
+      "test": "native",
+      "exit_code": 0,
+      "seconds": 33.55,
+      "command": [
+        "F:\\Tools\\Godot\\4.7.2\\Godot_v4.7.2-stable_win64.exe",
+        "--path",
+        "F:\\LoveStudy\\game",
+        "--fixed-fps",
+        "60",
+        "--script",
+        "res://tests/test_interaction_access.gd",
+        "--",
+        "--test-harness",
+        "--access-capture",
+        "--access-rooms=landmark_A,landmark_C,landmark_I,home_dining,home",
+        "--access-output=F:/LoveStudy/docs/verification/interaction-spacing-20261113/native"
+      ]
+    }
+  ],
+  "sha256": {
+    "game/scripts/main.gd": "b4ea375af7826962f5285fa8ed2fc17cd7eced9657ee06f90f5d1d57aad31ec4",
+    "game/scripts/world_builder.gd": "60d329d5b6f0a96da5c926eb31592cea0c16aa4a558bc00e60ca5108d2a697f4",
+    "game/scripts/world_feedback.gd": "95b1270bc417a4523fa4796894eba6a5db9d14688dfa956ae8aff8f34dc00602",
+    "game/scripts/interaction_layout.gd": "c6f6fe436ed3afbd7231ba89007c2c2c77cb1425b367f1f5468dbd718c35fc2a",
+    "game/scripts/interaction_targets.gd": "56343c87896683ba25088c2295fdabeaeeb4caa7df8760395922a9fcb19f2583",
+    "game/scripts/living_world.gd": "c1046db93a74fdd3ee512efabf338910cf0a747d35250e27110a8a702ebcc356",
+    "game/scripts/ui.gd": "e2c521b2c5c70f55847ad7c54d4f95faf73da8e39c9eeef21e9b8025217ed5bd",
+    "game/ui/island_hud.gd": "c7dce6722c7664b60d609579a6cbc00ac07cc7f28aae7f0dfb5c896f0a37b9fa",
+    "game/tests/test_interaction_access.gd": "32f0db30df5fa901b4ba881290b71b110d00393c0f21bba0e8abc9c6b474e9f8"
+  }
+}

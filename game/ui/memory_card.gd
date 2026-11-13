@@ -1,10 +1,17 @@
 extends VBoxContainer
-## Compact object card. Listening and optional practice never change learning scores.
+## V5 Object-Grounded Compact Memory Card (`memory_card.gd`).
+## Displays:
+##   1. Physical Object Core Noun Badge (`object_en` · `object_zh`)
+##   2. Situational English Sentence (`EnglishText`)
+##   3. Collapsible Chinese Translation & Activity Tip (`ChineseText`)
+##   4. Neural TTS Listen + Optional Mic Follow-Along + 1-Click 3D Memory Palace Link
+## Listening and optional practice never change formal learning scores.
 
 const Style = preload("res://ui/island_theme.gd")
 const Bridge = preload("res://core/ai_companion_bridge.gd")
 var game: Node
 var english := ""
+var spoken_english := ""
 var audio_path := ""
 var _hint: Label
 var _status: Label
@@ -25,84 +32,136 @@ var _sample_rate := 48000.0
 func setup(host: Node, content: Dictionary, actions: Array) -> void:
 	game = host
 	name = "MemoryCard"
-	english = str(content.english)
-	audio_path = str(content.audio)
-	add_theme_constant_override("separation", 12)
+	english = str(content.get("english", ""))
+	spoken_english = str(content.get("spoken_english", english))
+	audio_path = str(content.get("audio", ""))
+	var obj_en := str(content.get("object_en", "")).strip_edges()
+	var obj_zh := str(content.get("object_zh", "")).strip_edges()
+
+	add_theme_constant_override("separation", 10)
 	_bridge = Bridge.new()
 	add_child(_bridge)
 	_voice = AudioStreamPlayer.new()
 	_voice.volume_db = -5
 	add_child(_voice)
+
 	var top := HBoxContainer.new()
 	top.name = "EnglishTools"
-	top.add_theme_constant_override("separation", 10)
+	top.add_theme_constant_override("separation", 8)
 	add_child(top)
-	var heading: Label = game.ui.label("英语", 17, Style.SAGE)
+
+	var heading: Label = game.ui.label("眼前实物英语", 16, Style.SAGE)
 	heading.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	top.add_child(heading)
-	_listen_button = _tool_button("听读音", "Listen", _listen)
+
+	_listen_button = _tool_button("听读音", "Listen", "speaker", _listen)
 	top.add_child(_listen_button)
-	_follow_button = _tool_button("跟读试试", "FollowAlong", _toggle_follow_along)
+	_follow_button = _tool_button("跟读试试", "FollowAlong", "mic", _toggle_follow_along)
 	top.add_child(_follow_button)
-	var hint_button := _tool_button("中文贴士", "ChineseHint", _toggle_hint)
+	var hint_button := _tool_button("中文贴士", "ChineseHint", "bulb", _toggle_hint)
 	hint_button.toggle_mode = true
 	top.add_child(hint_button)
-	var phrase: Label = game.ui.label(english, 25)
+
+	# Layer 1: Crisp Physical Object Core Word Pill (so child never confuses sentence for object name!)
+	if not obj_en.is_empty():
+		var badge_panel := PanelContainer.new()
+		badge_panel.name = "ObjectWordBadge"
+		var b_sb := Style.keycap(Color("f4efe0"), Color("d9cbb0"), 2, 14, 12, 7)
+		b_sb.shadow_size = 0
+		badge_panel.add_theme_stylebox_override("panel", b_sb)
+		var badge_row := HBoxContainer.new()
+		badge_row.add_theme_constant_override("separation", 8)
+		var ic := TextureRect.new()
+		ic.texture = Style.icon("sparkle")
+		ic.custom_minimum_size = Vector2(18, 18)
+		ic.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		ic.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		ic.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		badge_row.add_child(ic)
+		var obj_en_lbl: Label = game.ui.label(obj_en, 19, Style.INK)
+		obj_en_lbl.add_theme_font_override("font", Style.heading_font())
+		badge_row.add_child(obj_en_lbl)
+		if not obj_zh.is_empty():
+			var sep_lbl: Label = game.ui.label("·  " + obj_zh, 16, Style.MUTED)
+			sep_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+			sep_lbl.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
+			badge_row.add_child(sep_lbl)
+		badge_panel.add_child(badge_row)
+		add_child(badge_panel)
+
+	# Layer 2: Authentic Situational Sentence at This Object
+	var phrase: Label = game.ui.label(english, 23)
 	phrase.name = "EnglishText"
 	phrase.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	phrase.add_theme_constant_override("line_spacing", 5)
+	phrase.add_theme_constant_override("line_spacing", 4)
 	add_child(phrase)
-	_hint = game.ui.label(str(content.hint), 18, Style.MUTED)
+
+	_hint = game.ui.label(str(content.get("hint", "")), 17, Style.MUTED)
 	_hint.name = "ChineseText"
 	_hint.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_hint.hide()
 	add_child(_hint)
-	_status = game.ui.label("", 17, Style.SAGE)
+
+	_status = game.ui.label("", 16, Style.SAGE)
 	_status.name = "PracticeStatus"
 	_status.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	_status.hide()
 	add_child(_status)
+
 	var divider := HSeparator.new()
 	var line := StyleBoxLine.new()
 	line.color = Style.LINE
 	line.thickness = 1
 	divider.add_theme_stylebox_override("separator", line)
 	add_child(divider)
+
 	var source_row := HBoxContainer.new()
 	source_row.name = "Source"
-	source_row.add_theme_constant_override("separation", 16)
+	source_row.add_theme_constant_override("separation", 12)
 	add_child(source_row)
-	source_row.add_child(game.ui.label("出处", 17, Style.MUTED))
-	var source_text: Label = game.ui.label(str(content.source), 17, Style.MUTED)
+	source_row.add_child(game.ui.label("定位", 15, Style.MUTED))
+	var source_text: Label = game.ui.label(str(content.get("source", "")), 15, Style.MUTED)
 	source_text.name = "SourceText"
 	source_text.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	source_text.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	source_row.add_child(source_text)
+
 	var footer := HBoxContainer.new()
 	footer.name = "CardActions"
 	footer.alignment = BoxContainer.ALIGNMENT_END
-	footer.add_theme_constant_override("separation", 12)
+	footer.add_theme_constant_override("separation", 10)
 	add_child(footer)
 	var first: Button
 	for entry: Dictionary in actions:
-		var action_button: Button = game.ui.button(str(entry.label), str(entry.id), bool(entry.get("primary", false)), Vector2(112, 44))
+		var action_button: Button = game.ui.button(str(entry.label), str(entry.id), bool(entry.get("primary", false)), Vector2(108, 42))
 		action_button.disabled = bool(entry.get("disabled", false))
 		action_button.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
-		_compact_style(action_button, 18, 10)
+		var act_icon := str(entry.get("icon", ""))
+		if not act_icon.is_empty():
+			action_button.icon = Style.icon(act_icon)
+			action_button.add_theme_constant_override("icon_max_width", 18)
+			action_button.add_theme_constant_override("h_separation", 6)
+		_compact_style(action_button, 16, 9)
 		footer.add_child(action_button)
-		if first == null and not action_button.disabled: first = action_button
-	if first: game.ui._focus_if_current.call_deferred(first.get_instance_id())
+		if first == null and not action_button.disabled:
+			first = action_button
+	if first:
+		game.ui._focus_if_current.call_deferred(first.get_instance_id())
 	minimum_size_changed.connect(game.ui._layout.call_deferred)
 	get_window().focus_exited.connect(_cancel_practice)
 
-func _tool_button(caption: String, node_name: String, callback: Callable) -> Button:
+func _tool_button(caption: String, node_name: String, icon_key: String, callback: Callable) -> Button:
 	var result := Button.new()
 	result.name = node_name
 	result.text = caption
+	if not icon_key.is_empty():
+		result.icon = Style.icon(icon_key)
+		result.add_theme_constant_override("icon_max_width", 17)
+		result.add_theme_constant_override("h_separation", 5)
 	result.theme_type_variation = "QuietButton"
-	result.custom_minimum_size = Vector2(106, 38)
+	result.custom_minimum_size = Vector2(104, 38)
 	result.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
-	_compact_style(result, 16, 8)
+	_compact_style(result, 15, 8)
 	result.pressed.connect(callback)
 	return result
 
@@ -135,7 +194,7 @@ func _listen() -> void:
 			_set_status("")
 			return
 	_bridge.muted = false
-	_bridge.speak_text(english.replace(" / ", ", "), "en", "warm")
+	_bridge.speak_text(spoken_english.replace(" / ", ", "), "en", "warm")
 	_set_status("")
 
 func _toggle_follow_along() -> void:

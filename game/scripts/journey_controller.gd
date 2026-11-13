@@ -31,6 +31,8 @@ var library_previous: Button
 var library_next: Button
 var library_matches: Array = []
 var memory_from_u1 := false
+var memory_from_world := false
+var _pending_palace_room := ""
 var active_actor_ids: Array = []
 var u1_visible_step := ""
 var memory_sink: RefCounted
@@ -161,9 +163,9 @@ func intercept_interaction(id: String) -> bool:
 				"show_zh_immediately": true,
 				"auto_speak": true,
 				"actions": [
-					{"label": "🚀 开启当前章节共创", "id": "v4_chap_open_here", "primary": true},
-					{"label": "🌟 今日手账小委托", "id": "v4_commission:" + actor_id},
-					{"label": "🗺️ 八册 81 章画册", "id": "v4_chapter_atlas"},
+					{"label": "▶ 开启当前章节共创", "id": "v4_chap_open_here", "primary": true},
+					{"label": "★ 今日手账小委托", "id": "v4_commission:" + actor_id},
+					{"label": "◈ 八册 81 章画册", "id": "v4_chapter_atlas"},
 					{"label": "继续散步", "id": "close"}
 				]
 			})
@@ -228,7 +230,7 @@ func show_home() -> void:
 	ui.show_panel("journey_home","熊叔的小岛邀请","我的第一天",text,actions)
 
 func show_books() -> void:
-	var actions: Array = [{"label":"🗺️ 打开八册 81 章故事画册","id":"v4_chapter_atlas","primary":true}]
+	var actions: Array = [{"label":"◈ 打开八册 81 章故事画册","id":"v4_chapter_atlas","primary":true}]
 	for book: Dictionary in game.curriculum.get("source_books",[]):
 		actions.append({"label":str(book.title),"id":"journey:book:"+str(book.id),"primary":str(book.id)==str(snapshot().selected_book_id)})
 	ui.show_panel("journey_books","选一本正在学的教材","你的进度会分别保留","全八册 81 个单元均已开放三幕小岛生活主线与 1,314 词 3D 立体翻翻书；可随时切换册次体验。",actions,"切换教材不会清空旅行册、已有物品或学习记录。")
@@ -843,7 +845,15 @@ func open_hello_story() -> void:
 			return
 	ui.notify("这个故事暂时找不到，可以先参加欢迎合照。")
 
-func open_story(entry_id: String, from_u1: bool = false) -> void:
+func open_story_from_world(entry_id: String) -> void:
+	open_story(entry_id, false, true)
+
+func open_story_gap_from_world(entry_id: String) -> void:
+	open_story(entry_id, false, true)
+	if is_instance_valid(current_memory) and current_memory.has_method("enter_gap_recall_mode"):
+		current_memory.enter_gap_recall_mode()
+
+func open_story(entry_id: String, from_u1: bool = false, from_world: bool = false) -> void:
 	var entry := Content.get_entry(entry_id)
 	if entry.is_empty():
 		ui.notify("词故事暂时无法打开，请先继续小岛生活。")
@@ -858,15 +868,19 @@ func open_story(entry_id: String, from_u1: bool = false) -> void:
 	if not State.review_expose_ids(exposed_ids): return
 	var unit_id := "unit-1" if from_u1 else library_unit
 	if unit_id.is_empty(): unit_id = str(entry.source_unit.unit_ids[0])
-	var context := {"book_id":str(entry.source_unit.book_id),"unit_id":unit_id,"story_step_id":"U1-06" if from_u1 else "library/"+str(entry.entry_id),"task_mode":"meaning_to_spelling","target_dimension":"orthography","declared_stimulus":"written_meaning: "+str(entry.meaning_zh),"answer_visible_at_start":true}
+	var context := {"book_id":str(entry.source_unit.book_id),"unit_id":unit_id,"story_step_id":"U1-06" if from_u1 else ("world/"+str(entry.entry_id) if from_world else "library/"+str(entry.entry_id)),"task_mode":"meaning_to_spelling","target_dimension":"orthography","declared_stimulus":"written_meaning: "+str(entry.meaning_zh),"answer_visible_at_start":true}
 	var session: Dictionary = State.journey_begin_memory(entry,context)
 	if not session.get("ok",false): return
 	memory_invocation = str(session.invocation_id)
 	memory_from_u1 = from_u1
+	memory_from_world = from_world
+	_pending_palace_room = ""
 	memory_sink = MemorySink.new()
 	memory_sink.setup(State,memory_invocation)
 	ui._begin("word_story","map")
-	var view_path := "res://ui/memory_story.gd" if (game.validation_mode and from_u1) else "res://theater/popup_book_theater.gd"
+	var is_p1_specials: bool = OS.get_cmdline_args().has("res://tests/test_p1_story_specials.gd")
+	var use_legacy_story: bool = (bool(game.validation_mode) and (from_u1 or is_p1_specials)) or (OS.get_cmdline_user_args().has("--release-smoke") and not from_world)
+	var view_path := "res://ui/memory_story.gd" if use_legacy_story else "res://theater/popup_book_theater.gd"
 	current_memory = load(view_path).new()
 	current_memory.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	current_memory.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -875,6 +889,11 @@ func open_story(entry_id: String, from_u1: bool = false) -> void:
 	current_memory.response_submitted.connect(func(response: Dictionary): _queue_memory("response",response))
 	current_memory.progress_changed.connect(func(progress: Dictionary): _queue_memory("progress",progress))
 	current_memory.close_requested.connect(_on_memory_closed)
+	if current_memory.has_signal("visit_palace_requested"):
+		current_memory.connect("visit_palace_requested", func(target_room: String):
+			_pending_palace_room = target_room
+			current_memory.request_close("paused")
+		)
 	var resume: Dictionary = session.resume_state.duplicate(true)
 	if resume.cue_events.is_empty() and resume.seen_beats.is_empty():
 		resume.support_level = 5
@@ -888,6 +907,8 @@ func _on_memory_closed(result: Dictionary) -> void:
 	if is_instance_valid(game.audio_director):
 		game.audio_director.set_theater_mode(false)
 	var from_u1 := memory_from_u1
+	var from_world := memory_from_world
+	var go_room := _pending_palace_room
 	if result.get("progress") is Dictionary:
 		_queue_memory("progress",result.progress)
 	if memory_sink==null or not memory_sink.close(str(result.get("result","paused"))):
@@ -896,6 +917,14 @@ func _on_memory_closed(result: Dictionary) -> void:
 	memory_invocation = ""
 	current_memory = null
 	memory_sink = null
+	memory_from_world = false
+	_pending_palace_room = ""
+	if not go_room.is_empty():
+		ui.close_panel()
+		if game.room != go_room:
+			await game.change_room(go_room)
+		ui.notify("已抵达记忆宫殿桩点房间，走走看看故事发生的角落吧！")
+		return
 	if game._pending_chapter_popup_key != "":
 		var ckey: String = game._pending_chapter_popup_key
 		game._pending_chapter_popup_key = ""
@@ -906,6 +935,8 @@ func _on_memory_closed(result: Dictionary) -> void:
 	if from_u1:
 		_u1_commit("U1-06",{"completion_mode":"optional_story_viewed"})
 		show_u1()
+	elif from_world:
+		ui.close_panel()
 	else:
 		show_library()
 

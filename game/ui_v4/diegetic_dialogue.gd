@@ -1,17 +1,33 @@
 extends Control
-## V4 Diegetic Storybook Dialogue Overlay.
-## Replaces full-screen quiz/exam popups with an airy, world-anchored speech bubble
-## above the speaking character + a compact bottom graphical response ribbon +
-## optional AI Safe Companion free-chat bar. The 3D world remains alive and visible!
+## V5 Diegetic Storybook Dialogue Overlay.
+## World-anchored speech cloud with a real drawn pointer tail, crisp vector tool chips,
+## non-overlapping bottom response ribbon, and 1–5 keyboard quick-response support.
 
 signal action_triggered(action_id: String)
 signal ai_chat_submitted(npc_id: String, message: String)
 signal speak_requested(text: String, lang: String)
 signal follow_along_submitted(target_text: String, mode: String, rms_energy: float, duration_ms: int)
 signal hint_toggled(npc_id: String, shown: bool)
+signal overlay_visibility_changed(is_open: bool)
 signal closed
 
 const Style = preload("res://ui/island_theme.gd")
+
+class SpeechTail extends Control:
+	var fill_color := Color(0.996, 0.986, 0.952, 0.98)
+	var border_color := Color("d6c6a8")
+	var tip_offset_x := 0.0
+
+	func _draw() -> void:
+		var cx := clampf(size.x * 0.5 + tip_offset_x, 26.0, size.x - 26.0)
+		var pts := PackedVector2Array([
+			Vector2(cx - 11.0, 0.0),
+			Vector2(cx + 11.0, 0.0),
+			Vector2(cx, 13.0)
+		])
+		draw_colored_polygon(pts, fill_color)
+		draw_line(pts[0], pts[2], border_color, 2.2, true)
+		draw_line(pts[1], pts[2], border_color, 2.2, true)
 
 var camera: Camera3D
 var anchor_world_pos := Vector3.ZERO
@@ -25,8 +41,10 @@ var _mic_player: AudioStreamPlayer
 var _mic_capture: AudioEffectCapture
 
 var _bubble_card: PanelContainer
+var _tail: SpeechTail
 var _speaker_badge: Label
 var _en_label: Label
+var _zh_panel: PanelContainer
 var _zh_label: Label
 var _hint_btn: Button
 var _chat_toggle_btn: Button
@@ -34,91 +52,145 @@ var _chat_box: HBoxContainer
 var _chat_input: LineEdit
 var _ribbon_panel: PanelContainer
 var _choices_flow: HBoxContainer
+var _choice_buttons: Array[Button] = []
+var _smoothed_bubble_pos := Vector2(-1.0, -1.0)
 
 func _ready() -> void:
 	name = "DiegeticDialogueOverlay"
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	mouse_filter = Control.MOUSE_FILTER_IGNORE
+	visibility_changed.connect(func():
+		overlay_visibility_changed.emit(visible)
+		if not visible:
+			_smoothed_bubble_pos = Vector2(-1.0, -1.0)
+	)
 	hide()
 	_build_ui()
 
 func _build_ui() -> void:
-	# Floating World Speech Bubble
+	# 1. Floating World Speech Cloud
 	_bubble_card = PanelContainer.new()
 	_bubble_card.name = "WorldSpeechBubble"
-	_bubble_card.custom_minimum_size = Vector2(360, 118)
-	var b_style := Style.box(Color(0.99, 0.98, 0.94, 0.97), 22, 18)
-	b_style.border_color = Color("d8ccb2")
-	b_style.set_border_width_all(2)
-	b_style.shadow_color = Color(0.20, 0.16, 0.10, 0.16)
-	b_style.shadow_size = 14
+	_bubble_card.custom_minimum_size = Vector2(420, 128)
+	var b_style := Style.modal_box(Color(0.996, 0.986, 0.952, 0.98), 24, 18)
+	b_style.border_color = Color("d6c6a8")
+	b_style.border_width_bottom = 4
+	b_style.shadow_size = 16
 	b_style.shadow_offset = Vector2(0, 6)
 	_bubble_card.add_theme_stylebox_override("panel", b_style)
 	add_child(_bubble_card)
 
+	_tail = SpeechTail.new()
+	_tail.name = "BubblePointerTail"
+	_tail.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	_tail.size = Vector2(120, 15)
+	add_child(_tail)
+
 	var col := VBoxContainer.new()
-	col.add_theme_constant_override("separation", 8)
+	col.add_theme_constant_override("separation", 10)
 	_bubble_card.add_child(col)
 
+	# Header Row: Speaker Badge Pill + Clean Close Icon
 	var top_row := HBoxContainer.new()
-	top_row.add_theme_constant_override("separation", 8)
+	top_row.add_theme_constant_override("separation", 10)
 	col.add_child(top_row)
 
-	_speaker_badge = Label.new()
-	_speaker_badge.add_theme_font_size_override("font_size", 16)
-	_speaker_badge.add_theme_color_override("font_color", Color("6f5a38"))
-	_speaker_badge.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	top_row.add_child(_speaker_badge)
+	var badge_pill := PanelContainer.new()
+	badge_pill.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var bp_sb := StyleBoxFlat.new()
+	bp_sb.bg_color = Color("f4ead3")
+	bp_sb.set_corner_radius_all(12)
+	bp_sb.content_margin_left = 10
+	bp_sb.content_margin_right = 12
+	bp_sb.content_margin_top = 4
+	bp_sb.content_margin_bottom = 4
+	badge_pill.add_theme_stylebox_override("panel", bp_sb)
+	top_row.add_child(badge_pill)
 
-	var listen_btn := _mini_pill("🔊 听读音")
+	_speaker_badge = Label.new()
+	_speaker_badge.add_theme_font_override("font", Style.heading_font())
+	_speaker_badge.add_theme_font_size_override("font_size", 15)
+	_speaker_badge.add_theme_color_override("font_color", Color("685231"))
+	badge_pill.add_child(_speaker_badge)
+
+	var top_spacer := Control.new()
+	top_spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	top_spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	top_row.add_child(top_spacer)
+
+	var close_x := _tool_chip("", "close", "收起对话 · Esc")
+	close_x.custom_minimum_size = Vector2(32, 32)
+	close_x.pressed.connect(dismiss)
+	top_row.add_child(close_x)
+
+	# Spoken English Line
+	_en_label = Label.new()
+	_en_label.add_theme_font_override("font", Style.heading_font())
+	_en_label.add_theme_font_size_override("font_size", 22)
+	_en_label.add_theme_color_override("font_color", Style.INK)
+	_en_label.add_theme_constant_override("line_spacing", 4)
+	_en_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_en_label.custom_minimum_size.x = 410
+	col.add_child(_en_label)
+
+	# Collapsible Warm Chinese Companion Note
+	_zh_panel = PanelContainer.new()
+	_zh_panel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var zh_sb := StyleBoxFlat.new()
+	zh_sb.bg_color = Color("f4efe1")
+	zh_sb.set_corner_radius_all(12)
+	zh_sb.content_margin_left = 12
+	zh_sb.content_margin_right = 12
+	zh_sb.content_margin_top = 8
+	zh_sb.content_margin_bottom = 8
+	_zh_panel.add_theme_stylebox_override("panel", zh_sb)
+	_zh_panel.hide()
+	col.add_child(_zh_panel)
+
+	_zh_label = Label.new()
+	_zh_label.add_theme_font_size_override("font_size", 15)
+	_zh_label.add_theme_color_override("font_color", Style.MUTED)
+	_zh_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	_zh_label.custom_minimum_size.x = 390
+	_zh_panel.add_child(_zh_label)
+
+	# Clean Vector Footer Tool Row
+	var tool_row := HBoxContainer.new()
+	tool_row.add_theme_constant_override("separation", 8)
+	col.add_child(tool_row)
+
+	var listen_btn := _tool_chip("听读音", "speaker", "听柔和美式女声朗读")
 	listen_btn.pressed.connect(func():
 		if not current_en.is_empty():
 			speak_requested.emit(current_en, "en")
 	)
-	top_row.add_child(listen_btn)
+	tool_row.add_child(listen_btn)
 
-	var follow_btn := _mini_pill("🎤 跟读试试")
+	var follow_btn := _tool_chip("跟读试试", "mic", "对着麦克风读英文，离线识别鼓励")
 	follow_btn.pressed.connect(func(): _start_follow_along("voice"))
-	top_row.add_child(follow_btn)
+	tool_row.add_child(follow_btn)
 
-	var shy_btn := _mini_pill("🤫 默读")
-	shy_btn.tooltip_text = "害羞或安静环境下，在心里默读也可以获得鼓励星"
+	var shy_btn := _tool_chip("心底默读", "star", "安静环境下在心里默读也能点亮鼓励星")
 	shy_btn.pressed.connect(func(): _start_follow_along("shy"))
-	top_row.add_child(shy_btn)
+	tool_row.add_child(shy_btn)
 
-	_hint_btn = _mini_pill("💡 中文贴士")
+	_hint_btn = _tool_chip("中文贴士", "bulb", "展开或收起温暖中文翻译与引导")
 	_hint_btn.pressed.connect(func():
 		zh_visible = not zh_visible
-		_zh_label.visible = zh_visible and not current_zh.is_empty()
+		_zh_panel.visible = zh_visible and not current_zh.is_empty()
 		hint_toggled.emit(current_npc_id, zh_visible)
+		_update_positions(true)
 	)
-	top_row.add_child(_hint_btn)
+	tool_row.add_child(_hint_btn)
 
-	_chat_toggle_btn = _mini_pill("💬 自由聊")
+	_chat_toggle_btn = _tool_chip("自由聊", "chat", "用英文或中文和伙伴自由聊天")
 	_chat_toggle_btn.pressed.connect(func():
 		_chat_box.visible = not _chat_box.visible
 		if _chat_box.visible:
 			_chat_input.grab_focus()
+		_update_positions(true)
 	)
-	top_row.add_child(_chat_toggle_btn)
-
-	var close_x := _mini_pill("✕")
-	close_x.pressed.connect(dismiss)
-	top_row.add_child(close_x)
-
-	_en_label = Label.new()
-	_en_label.add_theme_font_size_override("font_size", 22)
-	_en_label.add_theme_color_override("font_color", Style.INK)
-	_en_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_en_label.custom_minimum_size.x = 380
-	col.add_child(_en_label)
-
-	_zh_label = Label.new()
-	_zh_label.add_theme_font_size_override("font_size", 16)
-	_zh_label.add_theme_color_override("font_color", Style.MUTED)
-	_zh_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-	_zh_label.custom_minimum_size.x = 380
-	col.add_child(_zh_label)
+	tool_row.add_child(_chat_toggle_btn)
 
 	# Expandable Safe AI Companion Free-Chat Input
 	_chat_box = HBoxContainer.new()
@@ -127,45 +199,53 @@ func _build_ui() -> void:
 	col.add_child(_chat_box)
 
 	_chat_input = LineEdit.new()
-	_chat_input.placeholder_text = "用英文或中文和伙伴打招呼吧 (例如: Hello! Nice hat!)"
+	_chat_input.placeholder_text = "输入英文或中文和伙伴聊聊吧 (如: Hello! Nice hat!)"
 	_chat_input.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_chat_input.custom_minimum_size.y = 38
+	_chat_input.custom_minimum_size.y = 40
 	_chat_input.text_submitted.connect(_submit_chat)
 	_chat_box.add_child(_chat_input)
 
-	var send_btn := _mini_pill("发送 ✨")
+	var send_btn := _tool_chip("发送", "sparkle", "发送消息")
 	send_btn.pressed.connect(func(): _submit_chat(_chat_input.text))
 	_chat_box.add_child(send_btn)
 
-	# Compact Bottom Floating Response Ribbon (keeps 80% of 3D world visible!)
+	# 2. Bottom Floating Response Ribbon (Never overlaps HUD Dock!)
 	_ribbon_panel = PanelContainer.new()
 	_ribbon_panel.name = "BottomResponseRibbon"
-	var r_style := Style.box(Color(0.98, 0.96, 0.91, 0.95), 24, 14)
-	r_style.border_color = Color("dcd0b8")
-	r_style.set_border_width_all(2)
-	r_style.shadow_color = Color(0.18, 0.14, 0.08, 0.14)
-	r_style.shadow_size = 12
+	var r_style := Style.modal_box(Color(0.992, 0.980, 0.942, 0.97), 26, 12)
+	r_style.border_color = Color("dcd0b6")
+	r_style.border_width_bottom = 5
+	r_style.shadow_size = 16
 	_ribbon_panel.add_theme_stylebox_override("panel", r_style)
 	add_child(_ribbon_panel)
 
 	_choices_flow = HBoxContainer.new()
 	_choices_flow.alignment = BoxContainer.ALIGNMENT_CENTER
-	_choices_flow.add_theme_constant_override("separation", 12)
+	_choices_flow.add_theme_constant_override("separation", 10)
 	_ribbon_panel.add_child(_choices_flow)
 
-func _mini_pill(caption: String) -> Button:
+func _tool_chip(caption: String, icon_name: String, tip: String = "") -> Button:
 	var btn := Button.new()
 	btn.text = caption
-	btn.custom_minimum_size = Vector2(0, 32)
+	btn.icon = Style.icon(icon_name)
+	btn.tooltip_text = tip
+	btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	btn.custom_minimum_size = Vector2(0, 34)
 	btn.add_theme_font_size_override("font_size", 14)
+	btn.add_theme_constant_override("icon_max_width", 18)
+	btn.add_theme_constant_override("h_separation", 5)
 	btn.add_theme_color_override("font_color", Style.INK)
-	var sb := Style.box(Color("efeadd"), 14, 8)
+	var sb := Style.keycap(Color("f4efe1"), Color("dfd2b8"), 2, 15, 10, 5)
 	sb.shadow_size = 0
-	btn.add_theme_stylebox_override("normal", sb)
-	var hv := Style.box(Color("e4ecda"), 14, 8)
+	var hv := Style.keycap(Color("fdf2d6"), Style.GOLD, 2, 15, 10, 5)
 	hv.shadow_size = 0
+	var pr := Style.keycap(Color("ebe3cf"), Color("cbb998"), 1, 15, 10, 6)
+	pr.shadow_size = 0
+	btn.add_theme_stylebox_override("normal", sb)
 	btn.add_theme_stylebox_override("hover", hv)
-	btn.add_theme_stylebox_override("pressed", hv)
+	btn.add_theme_stylebox_override("pressed", pr)
+	if caption.is_empty():
+		btn.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	return btn
 
 func _submit_chat(raw_text: String) -> void:
@@ -177,23 +257,31 @@ func _submit_chat(raw_text: String) -> void:
 
 func open_conversation(config: Dictionary) -> void:
 	current_npc_id = str(config.get("npc_id", "neighbor"))
-	var speaker_name := str(config.get("speaker", "小岛伙伴"))
+	var speaker_name := _clean_emoji_prefix(str(config.get("speaker", "小岛伙伴")))
 	current_en = str(config.get("en", "Hello! Welcome to Alphabet Island!"))
-	current_zh = str(config.get("zh", ""))
+	current_zh = _clean_emoji_prefix(str(config.get("zh", "")))
 	zh_visible = bool(config.get("show_zh_immediately", false))
 	anchor_world_pos = config.get("world_pos", Vector3.ZERO)
 	has_world_anchor = config.has("world_pos")
 
-	_speaker_badge.text = "✦ " + speaker_name
+	_speaker_badge.text = "◈  " + speaker_name
 	_en_label.text = current_en
 	_zh_label.text = current_zh
-	_zh_label.visible = zh_visible and not current_zh.is_empty()
+	_zh_panel.visible = zh_visible and not current_zh.is_empty()
 	_hint_btn.visible = not current_zh.is_empty()
 	_chat_box.hide()
+	_smoothed_bubble_pos = Vector2(-1.0, -1.0)
 
 	_rebuild_choices(config.get("actions", []))
 	show()
-	_update_positions()
+	_update_positions(true)
+	if not _bubble_card.is_queued_for_deletion():
+		_bubble_card.modulate.a = 0.0
+		_ribbon_panel.modulate.a = 0.0
+		var tw := create_tween()
+		tw.set_parallel(true)
+		tw.tween_property(_bubble_card, "modulate:a", 1.0, 0.16)
+		tw.tween_property(_ribbon_panel, "modulate:a", 1.0, 0.18)
 	if bool(config.get("auto_speak", true)) and not current_en.is_empty():
 		speak_requested.emit(current_en, "en")
 
@@ -206,9 +294,9 @@ func _start_follow_along(mode: String) -> void:
 	if DisplayServer.get_name() == "headless":
 		follow_along_submitted.emit(phrase, "voice", 0.042, 850)
 		return
-	_zh_label.text = "🎙️ 正在温暖倾听你跟读：「%s」……（离线语音识别中）" % phrase.left(44)
-	_zh_label.visible = true
-	_update_positions()
+	_zh_label.text = "正在温暖倾听你跟读：「%s」……（离线语音识别中）" % phrase.left(44)
+	_zh_panel.visible = true
+	_update_positions(true)
 
 	var rec_info := await _record_mic_wav_16k(1.35)
 	last_captured_wav_b64 = str(rec_info.get("wav_b64", ""))
@@ -273,24 +361,23 @@ func _record_mic_wav_16k(duration_sec: float) -> Dictionary:
 
 	var rms := sqrt(sum_sq / float(out_count))
 	if rms < 0.0015:
-		# Silence / unplugged mic -> let server use friendly envelope mode
 		return {"wav_b64": "", "rms": 0.032, "duration_ms": int(duration_sec * 1000.0)}
 
 	var data_len := pcm.size()
 	var header := PackedByteArray()
 	header.resize(44)
-	header.encode_u8(0, 82); header.encode_u8(1, 73); header.encode_u8(2, 70); header.encode_u8(3, 70) # RIFF
+	header.encode_u8(0, 82); header.encode_u8(1, 73); header.encode_u8(2, 70); header.encode_u8(3, 70)
 	header.encode_u32(4, 36 + data_len)
-	header.encode_u8(8, 87); header.encode_u8(9, 65); header.encode_u8(10, 86); header.encode_u8(11, 69) # WAVE
-	header.encode_u8(12, 102); header.encode_u8(13, 109); header.encode_u8(14, 116); header.encode_u8(15, 32) # fmt 
+	header.encode_u8(8, 87); header.encode_u8(9, 65); header.encode_u8(10, 86); header.encode_u8(11, 69)
+	header.encode_u8(12, 102); header.encode_u8(13, 109); header.encode_u8(14, 116); header.encode_u8(15, 32)
 	header.encode_u32(16, 16)
-	header.encode_u16(20, 1) # PCM
-	header.encode_u16(22, 1) # Mono
+	header.encode_u16(20, 1)
+	header.encode_u16(22, 1)
 	header.encode_u32(24, target_sr)
 	header.encode_u32(28, target_sr * 2)
 	header.encode_u16(32, 2)
 	header.encode_u16(34, 16)
-	header.encode_u8(36, 100); header.encode_u8(37, 97); header.encode_u8(38, 116); header.encode_u8(39, 97) # data
+	header.encode_u8(36, 100); header.encode_u8(37, 97); header.encode_u8(38, 116); header.encode_u8(39, 97)
 	header.encode_u32(40, data_len)
 	header.append_array(pcm)
 
@@ -301,69 +388,129 @@ func _record_mic_wav_16k(duration_sec: float) -> Dictionary:
 	}
 
 func show_speech_encouragement(reply: Dictionary) -> void:
-	var badge := str(reply.get("cheer_badge", "🌟 自信开口星"))
+	var badge := _clean_emoji_prefix(str(reply.get("cheer_badge", "自信开口星")))
 	var rep_en := str(reply.get("reply_en", current_en))
-	var rep_zh := str(reply.get("reply_zh", ""))
+	var rep_zh := _clean_emoji_prefix(str(reply.get("reply_zh", "")))
 	_en_label.text = rep_en
-	_zh_label.text = "%s · %s" % [badge, rep_zh]
-	_zh_label.visible = true
-	_update_positions()
+	_zh_label.text = "★ %s · %s" % [badge, rep_zh]
+	_zh_panel.visible = true
+	_update_positions(true)
 	if not rep_en.is_empty():
 		speak_requested.emit(rep_en, "en")
 
 func show_ai_reply(reply: Dictionary) -> void:
 	current_en = str(reply.get("reply_en", current_en))
-	current_zh = str(reply.get("reply_zh", current_zh))
+	current_zh = _clean_emoji_prefix(str(reply.get("reply_zh", current_zh)))
 	_en_label.text = current_en
 	_zh_label.text = current_zh
-	_zh_label.visible = true
+	_zh_panel.visible = not current_zh.is_empty()
 	if reply.get("suggestions") is Array and not (reply.suggestions as Array).is_empty():
 		var actions: Array = []
 		for sug: Variant in reply.suggestions:
 			var s_text := str(sug)
-			actions.append({"label": "💬 " + s_text, "id": "ai_quick:" + s_text, "primary": true})
+			actions.append({"label": s_text, "id": "ai_quick:" + s_text, "primary": true, "icon": "chat"})
 		actions.append({"label": "先聊到这里", "id": "close"})
 		_rebuild_choices(actions)
-	_update_positions()
+	_update_positions(true)
 	if not current_en.is_empty():
 		speak_requested.emit(current_en, "en")
 
+static func _infer_action_icon(act_id: String, raw_label: String) -> String:
+	if act_id.begins_with("audio:"):
+		return "speaker"
+	if act_id.begins_with("v4_chapter_atlas"):
+		return "compass"
+	if act_id.begins_with("v4_chap_") or act_id.find("story") >= 0:
+		return "sparkle"
+	if act_id.begins_with("v4_commission"):
+		return "star"
+	if act_id.begins_with("open_popup") or raw_label.find("立体书") >= 0 or act_id.begins_with("journey:inspect"):
+		return "book"
+	if act_id.find("orchard") >= 0 or raw_label.find("苹果") >= 0:
+		return "apple"
+	if act_id in ["craft", "sell"] or raw_label.find("蛋糕") >= 0:
+		return "cake"
+	if act_id.find("decor") >= 0 or act_id == "shop" or raw_label.find("布置") >= 0 or raw_label.find("装饰") >= 0:
+		return "home"
+	if act_id == "map":
+		return "map"
+	if act_id.begins_with("ai_quick:") or act_id == "greet":
+		return "chat"
+	return ""
+
+static func _clean_emoji_prefix(raw: String) -> String:
+	var buf := ""
+	for i in range(raw.length()):
+		var cp := raw.unicode_at(i)
+		if cp >= 0x1F000 or cp in [0x2726, 0x2727, 0x2728, 0xFE0E, 0xFE0F]:
+			continue
+		buf += raw.substr(i, 1)
+	return buf.strip_edges()
+
 func _rebuild_choices(actions: Array) -> void:
+	_choice_buttons.clear()
 	for child: Node in _choices_flow.get_children():
 		_choices_flow.remove_child(child)
 		child.queue_free()
+	var idx := 0
 	for entry: Variant in actions:
 		if not entry is Dictionary:
 			continue
 		var act := entry as Dictionary
-		var btn := Button.new()
-		btn.text = str(act.get("label", "继续"))
-		btn.disabled = bool(act.get("disabled", false))
-		btn.custom_minimum_size = Vector2(150, 52)
-		btn.add_theme_font_size_override("font_size", 18)
-		var primary := bool(act.get("primary", false))
-		var fill := Color("dce9cc") if primary else Color("f3efe3")
-		var sb := Style.box(fill, 18, 14)
-		sb.border_color = Color("8fb573") if primary else Color("d7cbb2")
-		sb.set_border_width_all(2)
-		btn.add_theme_stylebox_override("normal", sb)
-		var hv := Style.box(fill.lightened(0.06), 18, 14)
-		hv.border_color = Color("6e9c52") if primary else Color("bba988")
-		hv.set_border_width_all(2)
-		btn.add_theme_stylebox_override("hover", hv)
-		btn.add_theme_stylebox_override("pressed", hv)
-		btn.add_theme_color_override("font_color", Style.INK)
 		var act_id := str(act.get("id", "close"))
-		btn.set_meta("action_id", act_id)
+		var raw_lbl := str(act.get("label", "继续"))
+		var clean_lbl := _clean_emoji_prefix(raw_lbl)
+		idx += 1
+		var btn := Button.new()
+		btn.text = "%s  [%d]" % [clean_lbl, idx] if idx <= 5 else clean_lbl
+		btn.disabled = bool(act.get("disabled", false))
+		btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		btn.custom_minimum_size = Vector2(146, 50)
+		btn.add_theme_font_size_override("font_size", 17)
+		var primary := bool(act.get("primary", false))
+		var icon_name := str(act.get("icon", ""))
+		if icon_name.is_empty():
+			icon_name = _infer_action_icon(act_id, raw_lbl)
+		if not icon_name.is_empty():
+			btn.icon = Style.icon(icon_name)
+			btn.add_theme_constant_override("icon_max_width", 24)
+			btn.add_theme_constant_override("h_separation", 7)
+
+		if primary:
+			btn.theme_type_variation = "PrimaryButton"
+		else:
+			btn.add_theme_stylebox_override("normal", Style.keycap(Color("fffdf7"), Color("d8c8ab"), 4, 18, 16, 10))
+			btn.add_theme_stylebox_override("hover", Style.keycap(Color("fdf3dc"), Style.GOLD, 4, 18, 16, 10))
+			btn.add_theme_stylebox_override("pressed", Style.keycap(Color("f3ead4"), Color("cbb998"), 2, 18, 16, 11))
+
 		btn.pressed.connect(func():
-			if act_id.begins_with("ai_quick:"):
-				_submit_chat(act_id.trim_prefix("ai_quick:"))
-			elif act_id == "close":
+			if act_id == "close":
 				dismiss()
 			else:
 				action_triggered.emit(act_id)
 		)
 		_choices_flow.add_child(btn)
+		_choice_buttons.append(btn)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not visible:
+		return
+	var focus_owner := get_viewport().gui_get_focus_owner()
+	if focus_owner is LineEdit:
+		return
+	if event is InputEventKey and event.pressed and not event.echo:
+		var slot := -1
+		match event.keycode:
+			KEY_1, KEY_KP_1: slot = 0
+			KEY_2, KEY_KP_2: slot = 1
+			KEY_3, KEY_KP_3: slot = 2
+			KEY_4, KEY_KP_4: slot = 3
+			KEY_5, KEY_KP_5: slot = 4
+		if slot >= 0 and slot < _choice_buttons.size():
+			var b := _choice_buttons[slot]
+			if is_instance_valid(b) and not b.disabled:
+				b.pressed.emit()
+				get_viewport().set_input_as_handled()
 
 func dismiss() -> void:
 	if not visible:
@@ -371,29 +518,41 @@ func dismiss() -> void:
 	hide()
 	closed.emit()
 
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	if visible:
-		_update_positions()
+		_update_positions(false, delta)
 
-func _update_positions() -> void:
-	var vp_size := get_viewport_rect().size
-	if vp_size.x < 10:
-		vp_size = Vector2(1440, 900)
+func _update_positions(snap_immediate: bool = false, delta: float = 0.016) -> void:
+	var vp := size
+	if vp.x < 10.0:
+		vp = Vector2(1440, 900)
 	_bubble_card.reset_size()
-	var bsize := _bubble_card.get_combined_minimum_size()
-	bsize.x = clampf(bsize.x, 380.0, 540.0)
-	_bubble_card.size = bsize
+	var b_size := _bubble_card.get_combined_minimum_size()
+	b_size.x = clampf(b_size.x, 420.0, minf(680.0, vp.x - 96.0))
+	_bubble_card.size = b_size
 
-	var target_screen := Vector2(vp_size.x * 0.5, vp_size.y * 0.30)
-	if has_world_anchor and is_instance_valid(camera) and not camera.is_position_behind(anchor_world_pos + Vector3(0, 2.35, 0)):
-		target_screen = camera.unproject_position(anchor_world_pos + Vector3(0, 2.45, 0))
+	var screen_anchor := Vector2(vp.x * 0.5, vp.y * 0.42)
+	if has_world_anchor and is_instance_valid(camera) and not camera.is_position_behind(anchor_world_pos):
+		screen_anchor = camera.unproject_position(anchor_world_pos + Vector3(0, 2.35, 0))
 
-	var bx := clampf(target_screen.x - bsize.x * 0.5, 28.0, vp_size.x - bsize.x - 28.0)
-	var by := clampf(target_screen.y - bsize.y - 16.0, 76.0, vp_size.y - bsize.y - 140.0)
-	_bubble_card.position = Vector2(bx, by)
+	var target_pos := Vector2(
+		clampf(screen_anchor.x - b_size.x * 0.5, 340.0 if vp.x >= 1200.0 else 36.0, vp.x - b_size.x - 36.0),
+		clampf(screen_anchor.y - b_size.y - 22.0, 24.0, vp.y - b_size.y - 148.0)
+	)
+	if snap_immediate or _smoothed_bubble_pos.x < 0.0:
+		_smoothed_bubble_pos = target_pos
+	else:
+		_smoothed_bubble_pos = _smoothed_bubble_pos.lerp(target_pos, minf(1.0, delta * 14.0))
+	_bubble_card.position = _smoothed_bubble_pos
+
+	if is_instance_valid(_tail):
+		_tail.position = Vector2(_bubble_card.position.x + (_bubble_card.size.x - _tail.size.x) * 0.5, _bubble_card.position.y + _bubble_card.size.y - 2.0)
+		var desired_tip := screen_anchor.x - (_tail.position.x + _tail.size.x * 0.5)
+		_tail.tip_offset_x = clampf(desired_tip, -36.0, 36.0)
+		_tail.queue_redraw()
 
 	_ribbon_panel.reset_size()
-	var rsize := _ribbon_panel.get_combined_minimum_size()
-	rsize.x = minf(maxf(rsize.x, 420.0), vp_size.x - 64.0)
-	_ribbon_panel.size = rsize
-	_ribbon_panel.position = Vector2((vp_size.x - rsize.x) * 0.5, vp_size.y - rsize.y - 22.0)
+	var r_size := _ribbon_panel.get_combined_minimum_size()
+	r_size.x = minf(r_size.x, vp.x - 64.0)
+	_ribbon_panel.size = r_size
+	_ribbon_panel.position = Vector2((vp.x - r_size.x) * 0.5, vp.y - r_size.y - 20.0)

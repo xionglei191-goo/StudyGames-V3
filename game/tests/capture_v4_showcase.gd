@@ -27,6 +27,9 @@ func _wait_room(target_room: String) -> void:
 	await _wait_seconds(0.55)
 
 func _snap_camera(focus: Vector3, cam_size: float) -> void:
+	_main._camera_zoom_target = cam_size
+	_main._camera_yaw = 0.0
+	_main._camera_yaw_target = 0.0
 	_main.camera_base_size = cam_size
 	_main.camera.size = cam_size
 	_main.camera.position = focus + _main.camera_offset

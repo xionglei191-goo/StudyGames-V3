@@ -1,8 +1,8 @@
 extends Node3D
-## V4.5 Animal-Crossing-Style Free-Grid 3D Home & Courtyard Decoration Studio.
-## Provides 0.5m snapped 3D floor grid placement, 90-degree rotation (`R` or UI button),
-## mouse raycast & keyboard cursor nudging, 13 Toy-PBR 3D furniture/garden/trophy models,
-## and automatic room-by-room persistence in `State.data.v4.free_decor_placed`.
+## V5 Animal-Crossing-Style Free-Grid 3D Home & Courtyard Decoration Studio.
+## Features 0.5m snapped 3D floor grid placement, silky smooth ghost glide,
+## 90-degree rotation (`R`/RMB), nearest-item pickup (`X`/`Delete`), category tabs,
+## tactile enamel swatch cards, and zero raw OS emoji reliance.
 
 const Style = preload("res://ui/island_theme.gd")
 const Wardrobe = preload("res://actors/modular_wardrobe.gd")
@@ -11,25 +11,33 @@ const StoryDirector = preload("res://gameplay/unit_storyline_director.gd")
 const GRID_STEP := 0.5
 const SUPPORTED_ROOMS := ["home", "home_estate", "home_bedroom", "home_study"]
 
+const ROOM_TITLES := {
+	"home": "温馨客厅",
+	"home_estate": "阳光小院",
+	"home_bedroom": "松软卧室",
+	"home_study": "安静书房",
+}
+
 const FURNITURE_CATALOG := [
-	{"id": "sunflower_rug", "name": "🌻 向日葵圆毯", "en": "sunflower rug", "price": 12, "cat": "all"},
-	{"id": "tea_table", "name": "🍵 下午茶圆桌", "en": "tea table", "price": 18, "cat": "all"},
-	{"id": "potted_monstera", "name": "🌿 阳光龟背竹", "en": "green plant", "price": 14, "cat": "all"},
-	{"id": "reading_sofa", "name": "🛋️ 云朵双人沙发", "en": "cozy sofa", "price": 26, "cat": "indoor"},
-	{"id": "walnut_bookshelf", "name": "📚 童话绘本架", "en": "bookshelf", "price": 24, "cat": "indoor"},
-	{"id": "star_floor_lamp", "name": "🌟 摘星落地灯", "en": "star lamp", "price": 22, "cat": "all"},
-	{"id": "music_gramophone", "name": "🎺 黄铜留声机", "en": "music box", "price": 28, "cat": "indoor"},
-	{"id": "apple_cake_stand", "name": "🎂 苹果甜品台", "en": "cake stand", "price": 20, "cat": "all"},
-	{"id": "courtyard_swing", "name": "🪵 森系木秋千", "en": "garden swing", "price": 32, "cat": "outdoor"},
-	{"id": "garden_fountain", "name": "⛲ 晴空小喷泉", "en": "garden fountain", "price": 35, "cat": "outdoor"},
-	{"id": "bunny_topiary", "name": "🐰 兔兔绿雕", "en": "bunny bush", "price": 18, "cat": "outdoor"},
-	{"id": "trophy_craft_pedestal", "name": "🏆 地标手作展台", "en": "craft trophy", "price": 16, "cat": "trophy"},
-	{"id": "trophy_chapter_easel", "name": "🏅 章节纪念画架", "en": "story medal", "price": 20, "cat": "trophy"},
+	{"id": "sunflower_rug", "name": "向日葵圆毯", "en": "sunflower rug", "price": 12, "cat": "indoor", "swatch": "#f5cb5c"},
+	{"id": "tea_table", "name": "下午茶圆桌", "en": "tea table", "price": 18, "cat": "indoor", "swatch": "#a66e44"},
+	{"id": "potted_monstera", "name": "阳光龟背竹", "en": "green plant", "price": 14, "cat": "indoor", "swatch": "#5ca463"},
+	{"id": "reading_sofa", "name": "云朵双人沙发", "en": "cozy sofa", "price": 26, "cat": "indoor", "swatch": "#f0dfc0"},
+	{"id": "walnut_bookshelf", "name": "童话绘本架", "en": "bookshelf", "price": 24, "cat": "indoor", "swatch": "#8c5835"},
+	{"id": "star_floor_lamp", "name": "摘星落地灯", "en": "star lamp", "price": 22, "cat": "indoor", "swatch": "#f2cf6b"},
+	{"id": "music_gramophone", "name": "黄铜留声机", "en": "music box", "price": 28, "cat": "indoor", "swatch": "#dca848"},
+	{"id": "apple_cake_stand", "name": "苹果甜品台", "en": "cake stand", "price": 20, "cat": "indoor", "swatch": "#f3a683"},
+	{"id": "courtyard_swing", "name": "森系木秋千", "en": "garden swing", "price": 32, "cat": "outdoor", "swatch": "#b87c49"},
+	{"id": "garden_fountain", "name": "晴空小喷泉", "en": "garden fountain", "price": 35, "cat": "outdoor", "swatch": "#6cc4e8"},
+	{"id": "bunny_topiary", "name": "兔兔绿雕", "en": "bunny bush", "price": 18, "cat": "outdoor", "swatch": "#68b05c"},
+	{"id": "trophy_craft_pedestal", "name": "地标手作展台", "en": "craft trophy", "price": 16, "cat": "trophy", "swatch": "#c98f56"},
+	{"id": "trophy_chapter_easel", "name": "章节纪念画架", "en": "story medal", "price": 20, "cat": "trophy", "swatch": "#e8c468"},
 ]
 
 var game: Node3D
 var active := false
 var selected_id := "sunflower_rug"
+var active_category := "all"
 var current_rot_deg := 0
 var cursor_pos := Vector3.ZERO
 
@@ -39,7 +47,9 @@ var _ghost_root: Node3D
 var _hud_layer: CanvasLayer
 var _status_lbl: Label
 var _coins_lbl: Label
+var _cat_row: HBoxContainer
 var _items_row: HBoxContainer
+static var _swatch_cache: Dictionary = {}
 
 func setup(host: Node3D) -> void:
 	game = host
@@ -141,10 +151,16 @@ func close_studio() -> void:
 		if is_instance_valid(game.player):
 			game.player.locked = false
 
+func _process(delta: float) -> void:
+	if not active or not is_instance_valid(_ghost_root):
+		return
+	var blend := 1.0 - exp(-delta * 20.0)
+	_ghost_root.position = _ghost_root.position.lerp(cursor_pos, blend)
+	var target_rad := deg_to_rad(float(current_rot_deg))
+	_ghost_root.rotation.y = lerp_angle(_ghost_root.rotation.y, target_rad, blend)
+
 func rotate_ghost(step_deg: int = 90) -> void:
 	current_rot_deg = posmod(current_rot_deg + step_deg, 360)
-	if is_instance_valid(_ghost_root):
-		_ghost_root.rotation_degrees.y = float(current_rot_deg)
 	if is_instance_valid(game) and is_instance_valid(game.audio_director):
 		game.audio_director.play_foley("decor_rotate")
 	_refresh_hud()
@@ -166,13 +182,12 @@ func place_at_cursor() -> bool:
 	var entry := catalog_entry(selected_id)
 	var b_stock := bonus_trophy_stock(state, selected_id)
 	if is_instance_valid(game.creation):
-		var reason: String = game.creation.legacy_placement_error(selected_id,cursor_pos)
+		var reason: String = game.creation.legacy_placement_error(selected_id, cursor_pos)
 		if not reason.is_empty():
 			game.ui.notify(reason)
 			return false
 	var avail: int = state.free_decor_owned_count(selected_id) + b_stock - state.free_decor_placed_total(selected_id)
 	if avail <= 0:
-		# Auto-purchase if player has enough coins!
 		var price := int(entry.get("price", 15))
 		if not state.buy_free_decor(selected_id, price):
 			return false
@@ -188,6 +203,22 @@ func place_at_cursor() -> bool:
 		rebuild_room_items(game.room)
 		_refresh_hud()
 		return true
+	return false
+
+func pickup_nearest_at_cursor() -> bool:
+	if not is_instance_valid(game):
+		return false
+	var state: Node = game.get_node_or_null("/root/State")
+	if state == null or not state.has_method("remove_nearest_free_decor_item"):
+		return false
+	var removed: Dictionary = state.remove_nearest_free_decor_item(game.room, cursor_pos, 1.8)
+	if not removed.is_empty():
+		if is_instance_valid(game.audio_director):
+			game.audio_director.play_foley("bubble_pop")
+		rebuild_room_items(game.room)
+		_refresh_hud()
+		return true
+	game.ui.notify("光标附近没有可拾起的家具，将光标移到家具上再按 X 即可收起。")
 	return false
 
 func undo_last_item() -> void:
@@ -221,6 +252,9 @@ func handle_input(event: InputEvent) -> bool:
 		elif event.keycode == KEY_R:
 			rotate_ghost(90)
 			return true
+		elif event.keycode in [KEY_X, KEY_DELETE]:
+			pickup_nearest_at_cursor()
+			return true
 		elif event.keycode in [KEY_Z, KEY_BACKSPACE]:
 			undo_last_item()
 			return true
@@ -244,20 +278,23 @@ func handle_input(event: InputEvent) -> bool:
 		return false
 	elif event is InputEventMouseButton and event.pressed:
 		var vp_h := get_viewport().get_visible_rect().size.y
-		if event.position.y < 86.0 or event.position.y > vp_h - 168.0:
+		if event.position.y < 88.0 or event.position.y > vp_h - 178.0:
 			return false
 		if event.button_index == MOUSE_BUTTON_RIGHT:
 			rotate_ghost(90)
 			return true
 		elif event.button_index == MOUSE_BUTTON_LEFT:
 			_update_cursor_from_screen(event.position)
-			place_at_cursor()
+			if event.shift_pressed:
+				pickup_nearest_at_cursor()
+			else:
+				place_at_cursor()
 			return true
 		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
-			game.camera_base_size = maxf(10.0, game.camera_base_size - 1.2)
+			game._camera_zoom_target = maxf(10.0, game._camera_zoom_target - 1.2)
 			return true
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
-			game.camera_base_size = minf(32.0, game.camera_base_size + 1.2)
+			game._camera_zoom_target = minf(32.0, game._camera_zoom_target + 1.2)
 			return true
 	return false
 
@@ -271,8 +308,6 @@ func _reset_cursor_near_player() -> void:
 
 func _nudge_cursor(delta_xz: Vector2) -> void:
 	cursor_pos = _clamp_and_snap(cursor_pos + Vector3(delta_xz.x, 0.0, delta_xz.y))
-	if is_instance_valid(_ghost_root):
-		_ghost_root.position = cursor_pos
 	_refresh_hud()
 
 func _update_cursor_from_screen(screen_pos: Vector2) -> void:
@@ -290,8 +325,6 @@ func _update_cursor_from_screen(screen_pos: Vector2) -> void:
 		var t: float = -origin.y / dir.y
 		if t > 0.0:
 			cursor_pos = _clamp_and_snap(origin + dir * t)
-	if is_instance_valid(_ghost_root):
-		_ghost_root.position = cursor_pos
 
 func _clamp_and_snap(raw_pt: Vector3) -> Vector3:
 	var bounds: Rect2 = game.player.bounds.grow(-0.55)
@@ -326,7 +359,7 @@ func _rebuild_grid_overlay() -> void:
 	var mat := StandardMaterial3D.new()
 	mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	mat.albedo_color = Color(0.46, 0.66, 0.44, 0.28)
+	mat.albedo_color = Color(0.52, 0.68, 0.48, 0.24)
 	_grid_overlay.material_override = mat
 	add_child(_grid_overlay)
 
@@ -348,11 +381,10 @@ func _rebuild_ghost() -> void:
 	var rmat := StandardMaterial3D.new()
 	rmat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 	rmat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-	rmat.albedo_color = Color(0.32, 0.78, 0.48, 0.78)
+	rmat.albedo_color = Color(0.36, 0.74, 0.48, 0.80)
 	ring.material_override = rmat
 	_ghost_root.add_child(ring)
 
-	# Forward direction pointer arrow
 	var arrow := MeshInstance3D.new()
 	var prism := PrismMesh.new()
 	prism.size = Vector3(0.24, 0.22, 0.06)
@@ -373,7 +405,7 @@ func _tint_translucent(node: Node) -> void:
 		if mi.material_override is StandardMaterial3D:
 			var dup := (mi.material_override as StandardMaterial3D).duplicate() as StandardMaterial3D
 			dup.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
-			dup.albedo_color.a = 0.72
+			dup.albedo_color.a = 0.74
 			mi.material_override = dup
 	for c: Node in node.get_children():
 		_tint_translucent(c)
@@ -390,62 +422,118 @@ func _build_hud() -> void:
 	root_ctrl.theme = Style.make_theme()
 	_hud_layer.add_child(root_ctrl)
 
-	# Top Compact Studio Ribbon
-	var top_panel := PanelContainer.new()
-	top_panel.set_anchors_preset(Control.PRESET_TOP_WIDE)
-	top_panel.offset_left = 24
-	top_panel.offset_right = -24
-	top_panel.offset_top = 14
-	top_panel.offset_bottom = 76
-	var tsb := Style.box(Color(0.98, 0.96, 0.91, 0.95), 20, 12)
-	tsb.border_color = Color("cfd8c2")
-	tsb.set_border_width_all(2)
-	top_panel.add_theme_stylebox_override("panel", tsb)
-	root_ctrl.add_child(top_panel)
+	# 1. Floating Two-Pill Top Studio Bar (Clean & Zero Debug Coordinates)
+	var top_bar := HBoxContainer.new()
+	top_bar.set_anchors_preset(Control.PRESET_TOP_WIDE)
+	top_bar.offset_left = 22
+	top_bar.offset_right = -22
+	top_bar.offset_top = 14
+	top_bar.offset_bottom = 74
+	top_bar.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	top_bar.add_theme_constant_override("separation", 14)
+	root_ctrl.add_child(top_bar)
 
-	var top_row := HBoxContainer.new()
-	top_row.add_theme_constant_override("separation", 12)
-	top_panel.add_child(top_row)
+	var info_pill := PanelContainer.new()
+	info_pill.add_theme_stylebox_override("panel", Style.pill(Color(0.996, 0.986, 0.956, 0.96), Color("dfd2b8"), Color("cbb998"), 22, 16, 10))
+	top_bar.add_child(info_pill)
+
+	var info_row := HBoxContainer.new()
+	info_row.add_theme_constant_override("separation", 12)
+	info_pill.add_child(info_row)
+
+	var home_ic := TextureRect.new()
+	home_ic.texture = Style.icon("home")
+	home_ic.custom_minimum_size = Vector2(26, 26)
+	home_ic.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	home_ic.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	info_row.add_child(home_ic)
 
 	_status_lbl = Label.new()
-	_status_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	_status_lbl.add_theme_font_size_override("font_size", 17)
+	_status_lbl.add_theme_font_override("font", Style.heading_font())
+	_status_lbl.add_theme_font_size_override("font_size", 16)
 	_status_lbl.add_theme_color_override("font_color", Style.INK)
-	top_row.add_child(_status_lbl)
+	info_row.add_child(_status_lbl)
 
+	var coin_chip := PanelContainer.new()
+	var c_sb := StyleBoxFlat.new()
+	c_sb.bg_color = Color("f4ecd8")
+	c_sb.set_corner_radius_all(14)
+	c_sb.content_margin_left = 10
+	c_sb.content_margin_right = 12
+	c_sb.content_margin_top = 3
+	c_sb.content_margin_bottom = 3
+	coin_chip.add_theme_stylebox_override("panel", c_sb)
+	info_row.add_child(coin_chip)
+
+	var coin_row := HBoxContainer.new()
+	coin_row.add_theme_constant_override("separation", 6)
+	coin_chip.add_child(coin_row)
+	var leaf_ic := TextureRect.new()
+	leaf_ic.texture = Style.icon("leaf")
+	leaf_ic.custom_minimum_size = Vector2(20, 20)
+	leaf_ic.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	leaf_ic.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	coin_row.add_child(leaf_ic)
 	_coins_lbl = Label.new()
-	_coins_lbl.add_theme_font_size_override("font_size", 17)
-	_coins_lbl.add_theme_color_override("font_color", Color("628448"))
-	top_row.add_child(_coins_lbl)
+	_coins_lbl.add_theme_font_override("font", Style.heading_font())
+	_coins_lbl.add_theme_font_size_override("font_size", 15)
+	_coins_lbl.add_theme_color_override("font_color", Color("4d6b43"))
+	coin_row.add_child(_coins_lbl)
 
-	top_row.add_child(_mini_btn("🔄 旋转 90° (R)", func(): rotate_ghost(90)))
-	top_row.add_child(_mini_btn("↩ 收回一件 (Z)", func(): undo_last_item()))
-	top_row.add_child(_mini_btn("🧹 清空本屋", func(): clear_room_items()))
-	top_row.add_child(_mini_btn("🏡 切换小院/客厅", func():
+	var top_spacer := Control.new()
+	top_spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	top_spacer.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	top_bar.add_child(top_spacer)
+
+	var tools_pill := PanelContainer.new()
+	tools_pill.add_theme_stylebox_override("panel", Style.pill(Color(0.996, 0.986, 0.956, 0.96), Color("dfd2b8"), Color("cbb998"), 22, 10, 8))
+	top_bar.add_child(tools_pill)
+
+	var tools_row := HBoxContainer.new()
+	tools_row.add_theme_constant_override("separation", 8)
+	tools_pill.add_child(tools_row)
+
+	tools_row.add_child(_mini_btn("旋转 [R]", "rotate", func(): rotate_ghost(90)))
+	tools_row.add_child(_mini_btn("拾起 [X]", "broom", func(): pickup_nearest_at_cursor()))
+	tools_row.add_child(_mini_btn("撤回 [Z]", "undo", func(): undo_last_item()))
+	tools_row.add_child(_mini_btn("清空", "", func(): clear_room_items()))
+	tools_row.add_child(_mini_btn("小院/客厅", "home", func():
 		var target_r := "home_estate" if game.room != "home_estate" else "home"
 		await game.change_room(target_r)
 	))
-	top_row.add_child(_mini_btn("✓ 完成布置", func(): close_studio(), true))
+	tools_row.add_child(_mini_btn("完成布置", "check", func(): close_studio(), true))
 
-	# Bottom Furniture Palette Dock
+	# 2. Bottom Categorized Furniture Palette Dock
 	var bot_panel := PanelContainer.new()
 	bot_panel.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
-	bot_panel.offset_left = 24
-	bot_panel.offset_right = -24
-	bot_panel.offset_top = -152
+	bot_panel.offset_left = 22
+	bot_panel.offset_right = -22
+	bot_panel.offset_top = -170
 	bot_panel.offset_bottom = -14
-	bot_panel.add_theme_stylebox_override("panel", tsb)
+	bot_panel.add_theme_stylebox_override("panel", Style.modal_box(Color(0.994, 0.984, 0.952, 0.97), 24, 14))
 	root_ctrl.add_child(bot_panel)
 
 	var bot_vbox := VBoxContainer.new()
-	bot_vbox.add_theme_constant_override("separation", 6)
+	bot_vbox.add_theme_constant_override("separation", 8)
 	bot_panel.add_child(bot_vbox)
 
+	var filter_bar := HBoxContainer.new()
+	filter_bar.add_theme_constant_override("separation", 10)
+	bot_vbox.add_child(filter_bar)
+
+	_cat_row = HBoxContainer.new()
+	_cat_row.add_theme_constant_override("separation", 8)
+	filter_bar.add_child(_cat_row)
+
+	var f_spacer := Control.new()
+	f_spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	filter_bar.add_child(f_spacer)
+
 	var hint_lbl := Label.new()
-	hint_lbl.text = "✨ 左键点击地面（或按空格）即可在 0.5m 网格摆放；右键或按 R 旋转朝向；未拥有时点击摆放会自动用叶币添置！"
-	hint_lbl.add_theme_font_size_override("font_size", 14)
+	hint_lbl.text = "左键点击地面摆放（缺货自动用叶币添置） · 右键 / R 旋转 · X 拾起光标旁家具 · 滚轮缩放"
+	hint_lbl.add_theme_font_size_override("font_size", 13)
 	hint_lbl.add_theme_color_override("font_color", Style.MUTED)
-	bot_vbox.add_child(hint_lbl)
+	filter_bar.add_child(hint_lbl)
 
 	var scroll := ScrollContainer.new()
 	scroll.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
@@ -456,21 +544,53 @@ func _build_hud() -> void:
 	_items_row.add_theme_constant_override("separation", 10)
 	scroll.add_child(_items_row)
 
-func _mini_btn(txt: String, cb: Callable, primary: bool = false) -> Button:
+func _mini_btn(txt: String, icon_name: String, cb: Callable, primary: bool = false) -> Button:
 	var b := Button.new()
 	b.text = txt
+	if not icon_name.is_empty():
+		b.icon = Style.icon(icon_name)
+		b.add_theme_constant_override("icon_max_width", 18)
+		b.add_theme_constant_override("h_separation", 5)
 	b.custom_minimum_size = Vector2(0, 38)
-	b.add_theme_font_size_override("font_size", 15)
-	var fill := Color("dce9cc") if primary else Color("f3efe3")
-	var sb := Style.box(fill, 14, 10)
-	sb.border_color = Color("8fb573") if primary else Color("d6cbb4")
-	sb.set_border_width_all(2)
-	b.add_theme_stylebox_override("normal", sb)
-	b.add_theme_stylebox_override("hover", sb)
-	b.add_theme_stylebox_override("pressed", sb)
-	b.add_theme_color_override("font_color", Style.INK)
+	b.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+	b.add_theme_font_size_override("font_size", 14)
+	if primary:
+		b.theme_type_variation = "PrimaryButton"
+	else:
+		b.add_theme_stylebox_override("normal", Style.keycap(Color("fffdf7"), Color("d8c8ab"), 3, 14, 11, 6))
+		b.add_theme_stylebox_override("hover", Style.keycap(Color("fdf3dc"), Style.GOLD, 3, 14, 11, 6))
+		b.add_theme_stylebox_override("pressed", Style.keycap(Color("f2e8d0"), Color("cbb998"), 1, 14, 11, 7))
+		b.add_theme_color_override("font_color", Style.INK)
 	b.pressed.connect(cb)
 	return b
+
+static func _catalog_swatch(hex: String, selected: bool) -> ImageTexture:
+	var key := hex + ("_1" if selected else "_0")
+	if _swatch_cache.has(key):
+		return _swatch_cache[key] as ImageTexture
+	var img := Image.create(34, 34, false, Image.FORMAT_RGBA8)
+	img.fill(Color.TRANSPARENT)
+	var col := Color(hex)
+	var c := Vector2(17.0, 17.0)
+	var spec := Vector2(13.0, 12.0)
+	for y in range(34):
+		for x in range(34):
+			var pt := Vector2(float(x) + 0.5, float(y) + 0.5)
+			var d := pt.distance_to(c)
+			if d > 15.8:
+				continue
+			var px := col
+			if d >= 13.4:
+				px = Style.SAGE_DEEP if selected else Color("d4c4a8")
+			elif d >= 12.0:
+				px = Color("fffaf0")
+			elif pt.distance_to(spec) < 4.0:
+				px = col.lightened(0.22)
+			px.a = clampf(15.8 - d, 0.0, 1.0)
+			img.set_pixel(x, y, px)
+	var tex := ImageTexture.create_from_image(img)
+	_swatch_cache[key] = tex
+	return tex
 
 func _refresh_hud() -> void:
 	if not is_instance_valid(_hud_layer) or not is_instance_valid(game):
@@ -479,38 +599,68 @@ func _refresh_hud() -> void:
 	if state == null:
 		return
 	var entry := catalog_entry(selected_id)
-	_status_lbl.text = "🏡 自由网格工坊 · 当前：%s (%s) · 朝向 %d° · 坐标 (%.1f, %.1f)" % [
+	var rtitle := str(ROOM_TITLES.get(game.room, "温馨家园"))
+	_status_lbl.text = "%s · %s (%s) · %d°" % [
+		rtitle,
 		str(entry.get("name", "")),
 		str(entry.get("en", "")),
-		current_rot_deg,
-		cursor_pos.x,
-		cursor_pos.z
+		current_rot_deg
 	]
-	_coins_lbl.text = "🍃 叶币：%d" % int(state.data.get("coins", 0))
+	_coins_lbl.text = "%d 叶币" % int(state.data.get("coins", 0))
+
+	for c: Node in _cat_row.get_children():
+		_cat_row.remove_child(c)
+		c.queue_free()
+
+	for cat_def: Array in [["all", "全部 (13)"], ["indoor", "起居室内"], ["outdoor", "阳光庭院"], ["trophy", "纪念展品"]]:
+		var cid := str(cat_def[0])
+		var is_c := (active_category == cid)
+		var cbtn := Button.new()
+		cbtn.text = str(cat_def[1])
+		cbtn.custom_minimum_size = Vector2(0, 32)
+		cbtn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+		cbtn.add_theme_font_size_override("font_size", 13)
+		if is_c:
+			cbtn.theme_type_variation = "PrimaryButton"
+		else:
+			var qsb := Style.keycap(Color("f4efe1"), Color("dfd3ba"), 2, 12, 12, 4)
+			qsb.shadow_size = 0
+			cbtn.add_theme_stylebox_override("normal", qsb)
+			cbtn.add_theme_stylebox_override("hover", Style.keycap(Color("fdf3dc"), Style.GOLD, 2, 12, 12, 4))
+		cbtn.pressed.connect(func():
+			active_category = cid
+			_refresh_hud()
+		)
+		_cat_row.add_child(cbtn)
 
 	for c: Node in _items_row.get_children():
 		_items_row.remove_child(c)
 		c.queue_free()
 
 	for item: Dictionary in FURNITURE_CATALOG:
+		if active_category != "all" and str(item.get("cat", "indoor")) != active_category:
+			continue
 		var iid := str(item.id)
 		var b_stock := bonus_trophy_stock(state, iid)
 		var owned: int = state.free_decor_owned_count(iid) + b_stock
 		var placed: int = state.free_decor_placed_total(iid)
 		var avail := maxi(0, owned - placed)
-		var stock_txt := "库存 %d" % avail if avail > 0 else "🍃%d 添置" % int(item.price)
+		var stock_txt := "库存 %d" % avail if avail > 0 else "%d 叶币添置" % int(item.price)
+		var is_sel := (iid == selected_id)
 		var btn := Button.new()
 		btn.text = "%s\n%s · %s" % [str(item.name), str(item.en), stock_txt]
-		btn.custom_minimum_size = Vector2(162, 68)
+		btn.icon = _catalog_swatch(str(item.get("swatch", "#e6b946")), is_sel)
+		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
+		btn.custom_minimum_size = Vector2(188, 72)
+		btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		btn.add_theme_font_size_override("font_size", 14)
-		var is_sel := (iid == selected_id)
-		var fill := Color("dce9cc") if is_sel else Color("f8f5ec")
-		var sb := Style.box(fill, 14, 8)
-		sb.border_color = Color("6e9c52") if is_sel else Color("d8ceb8")
-		sb.set_border_width_all(2)
-		btn.add_theme_stylebox_override("normal", sb)
-		btn.add_theme_stylebox_override("hover", sb)
-		btn.add_theme_stylebox_override("pressed", sb)
+		btn.add_theme_constant_override("icon_max_width", 34)
+		btn.add_theme_constant_override("h_separation", 10)
+		var fill := Color("e4efd8") if is_sel else Color("fffdf7")
+		var bd := Style.SAGE if is_sel else Color("d8c8ab")
+		btn.add_theme_stylebox_override("normal", Style.keycap(fill, bd, 4, 16, 12, 8))
+		btn.add_theme_stylebox_override("hover", Style.keycap(Color("fdf3dc") if not is_sel else fill, Style.GOLD if not is_sel else Style.SAGE, 4, 16, 12, 8))
+		btn.add_theme_stylebox_override("pressed", Style.keycap(Color("f2e8d0"), bd, 2, 16, 12, 9))
 		btn.add_theme_color_override("font_color", Style.INK)
 		btn.pressed.connect(func(): select_furniture(iid))
 		_items_row.add_child(btn)
@@ -527,7 +677,8 @@ static func _mat(hex: String, rough: float = 0.45, emit_hex: String = "", emit_e
 
 static func build_furniture_mesh(item_id: String) -> Node3D:
 	var imported := preload("res://actors/tripo_prop_library.gd").create(item_id)
-	if imported != null: return imported
+	if imported != null:
+		return imported
 	var root := Node3D.new()
 	match item_id:
 		"sunflower_rug":
@@ -726,7 +877,7 @@ static func build_furniture_mesh(item_id: String) -> Node3D:
 			if boat != null:
 				boat.position = Vector3(0, 0.72, 0)
 				root.add_child(boat)
-		_: # trophy_chapter_easel
+		_:
 			var easel := MeshInstance3D.new()
 			var eb := BoxMesh.new(); eb.size = Vector3(0.74, 0.96, 0.10)
 			easel.mesh = eb; easel.position = Vector3(0, 0.56, 0); easel.rotation_degrees.x = -10

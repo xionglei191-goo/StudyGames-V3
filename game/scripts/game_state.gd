@@ -459,7 +459,7 @@ func buy_free_decor(item_id: String, price: int) -> bool:
 	if iid.is_empty() or price < 0:
 		return false
 	if int(data["coins"]) < price:
-		return _reject("叶币不足，去地标手作台或完成章节心愿就能获得叶币哦 ✨")
+		return _reject("叶币不足，去地标手作台或完成章节心愿就能获得叶币哦 ")
 	var before: Dictionary = snapshot()
 	data["coins"] -= price
 	var owned: Dictionary = _ensure_v4()["free_decor_owned"]
@@ -504,6 +504,33 @@ func pop_last_free_decor_item(room_id: String) -> Dictionary:
 	var removed: Dictionary = room_arr.pop_back()
 	_ensure_v4()["free_decor_placed"][rid] = room_arr
 	if _commit(before, "已收回最近摆放的一件家具。"):
+		return removed
+	return {}
+
+
+func remove_nearest_free_decor_item(room_id: String, pos: Vector3, max_radius: float = 1.75) -> Dictionary:
+	var rid := room_id.strip_edges()
+	var placed_map: Dictionary = _ensure_v4()["free_decor_placed"]
+	if not placed_map.has(rid) or not placed_map[rid] is Array:
+		return {}
+	var room_arr: Array = (placed_map[rid] as Array).duplicate(true)
+	if room_arr.is_empty():
+		return {}
+	var best_idx := -1
+	var best_dist := max_radius
+	for i in range(room_arr.size()):
+		var rec: Dictionary = room_arr[i]
+		var d := Vector2(float(rec.get("x", 0.0)), float(rec.get("z", 0.0))).distance_to(Vector2(pos.x, pos.z))
+		if d <= best_dist:
+			best_dist = d
+			best_idx = i
+	if best_idx < 0:
+		return {}
+	var before: Dictionary = snapshot()
+	var removed: Dictionary = room_arr[best_idx]
+	room_arr.remove_at(best_idx)
+	_ensure_v4()["free_decor_placed"][rid] = room_arr
+	if _commit(before, "已将光标旁的家具收回收纳箱。"):
 		return removed
 	return {}
 

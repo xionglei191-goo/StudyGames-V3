@@ -5,6 +5,7 @@ const Residents = preload("res://actors/building_resident_catalog.gd")
 const PlayerScript = preload("res://scripts/player.gd")
 const UIScript = preload("res://scripts/ui.gd")
 const FeedbackScript = preload("res://scripts/world_feedback.gd")
+const InteractionTargets = preload("res://scripts/interaction_targets.gd")
 const SoundScript = preload("res://scripts/feedback_audio.gd")
 const FootballScript = preload("res://activities/football_practice.gd")
 const HomeCatalog = preload("res://scripts/home_catalog.gd")
@@ -20,10 +21,14 @@ const ParentAIPortal = preload("res://ui_v4/parent_ai_portal.gd")
 const ChapterAtlasView = preload("res://ui_v4/chapter_atlas_view.gd")
 const FreeGridDecorScript = preload("res://gameplay/free_grid_decor_studio.gd")
 const ThematicPlay = preload("res://gameplay/chapter_thematic_play.gd")
+const PalaceLociScript = preload("res://gameplay/memory_palace_loci_3d.gd")
+const RoleplayDirector = preload("res://gameplay/situational_roleplay.gd")
+const WakeMailbox = preload("res://gameplay/morning_wake_mailbox.gd")
 var online: Node
 var audio_director: Node
 var ai_bridge: Node
 var tactile_quests: Node3D
+var palace_loci: Node3D
 var free_decor_studio: Node3D
 var creation: Node3D
 var _commission_hint_used := false
@@ -67,12 +72,27 @@ var feedback: Node3D
 var sounds: Node
 var pending_interaction: Dictionary = {}
 var hover_interaction: Dictionary = {}
+var nearby_interactions: Array[Dictionary] = []
+var _nearby_choice := ""
+var _nearby_choice_position := Vector3.ZERO
+var _hover_pointer_active := false
+var _hover_position := Vector2.ZERO
+var _interaction_choice_ids: Array[String] = []
 var pending_auto := false
 var pending_time := 0.0
 var journey_target := ""
 var journey_auto := false
 var conversation_position := Vector3.ZERO
 var camera_base_size := 22.0
+var _camera_zoom_target := 22.0
+var _camera_yaw := 0.0
+var _camera_yaw_target := 0.0
+var _rmb_dragging := false
+var _rmb_drag_dist := 0.0
+var _rmb_last_pos := Vector2.ZERO
+var _lmb_held := false
+var _lmb_hold_time := 0.0
+var _lmb_screen_pos := Vector2.ZERO
 var step_clock := 0.0
 var decor_selected := ""
 var decor_preview := false
@@ -160,7 +180,7 @@ func _ready() -> void:
 		if is_instance_valid(ui) and is_instance_valid(ui.diegetic) and ui.diegetic.visible:
 			ui.diegetic.show_speech_encouragement(reply)
 		else:
-			ui.notify("🎤 " + str(reply.get("encouragement_zh", "读得真棒！")))
+			ui.notify("♪ " + str(reply.get("encouragement_zh", "读得真棒！")))
 	)
 	var bus := get_node_or_null("/root/EventBus")
 	if bus != null:
@@ -208,10 +228,13 @@ func _ready() -> void:
 	tactile_quests = TactileQuestsScript.new()
 	tactile_quests.name = "TactileLifeQuests"
 	add_child(tactile_quests)
+	palace_loci = PalaceLociScript.new()
+	palace_loci.name = "MemoryPalaceLoci3D"
+	add_child(palace_loci)
 	tactile_quests.apple_picked.connect(func(_kind: String, word_en: String):
 		if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 		if is_instance_valid(ai_bridge): ai_bridge.speak_text(word_en, "en", "warm")
-		ui.notify("双手捧起了香甜的 %s！快走到果篮边放进去吧 ✨" % word_en)
+		ui.notify("双手捧起了香甜的 %s！快走到果篮边放进去吧 " % word_en)
 	)
 	tactile_quests.basket_delivered.connect(func(total_deliv: int, word_en: String):
 		State.collect_apple()
@@ -224,19 +247,19 @@ func _ready() -> void:
 		if room_id == "landmark_A": return
 		if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 		if is_instance_valid(ai_bridge): ai_bridge.speak_text(word_en, "en", "warm")
-		ui.notify("双手捧起了 %s！快走到发光工坊分享台放好吧 ✨" % word_en)
+		ui.notify("双手捧起了 %s！快走到发光工坊分享台放好吧 " % word_en)
 	)
 	tactile_quests.station_delivered.connect(func(room_id: String, craft_total: int, word_en: String):
 		if room_id == "landmark_A": return
 		State.record_stealth_evidence({"word": word_en.to_lower(), "support_level": 0, "correct": true, "context": "tactile_station:" + room_id})
 		if is_instance_valid(audio_director): audio_director.play_foley("wardrobe_sparkle")
-		var badge_text := "+4 叶币" if craft_total <= 3 else "✨ 共创纪念"
+		var badge_text := "+4 叶币" if craft_total <= 3 else " 共创纪念"
 		feedback.pickup(player.position, player.position, "leaf", badge_text)
 		var active_chap := StoryDirector.active_chapter(State)
 		var ckey := str(active_chap.get("chapter_key", ""))
 		if not ckey.is_empty() and str(active_chap.get("primary_room", "")) == room_id and State.v4_chapter_stage(ckey) == 1:
 			State.advance_v4_chapter(ckey, 2, 0)
-			ui.notify("🌟 亲手放好了 %s，本章第 2 幕共创完成！快找伙伴点亮终幕纪念牌吧！" % word_en)
+			ui.notify("★ 亲手放好了 %s，本章第 2 幕共创完成！快找伙伴点亮终幕纪念牌吧！" % word_en)
 		else:
 			ui.notify("太棒啦！这里新增了你亲手安放的 %s（累计共创 %d 件）！" % [word_en, craft_total])
 	)
@@ -304,7 +327,7 @@ func _dialogue_speaker(panel_id: String) -> String:
 	return ""
 
 func _configure_input() -> void:
-	var keys := {"walk_left":[KEY_A,KEY_LEFT], "walk_right":[KEY_D,KEY_RIGHT], "walk_up":[KEY_W,KEY_UP], "walk_down":[KEY_S,KEY_DOWN], "interact":[KEY_E], "map":[KEY_M], "bag":[KEY_B], "journal":[KEY_J]}
+	var keys := {"walk_left":[KEY_A,KEY_LEFT], "walk_right":[KEY_D,KEY_RIGHT], "walk_up":[KEY_W,KEY_UP], "walk_down":[KEY_S,KEY_DOWN], "interact":[KEY_E], "cycle_interaction":[KEY_Q], "map":[KEY_M], "bag":[KEY_B], "journal":[KEY_J]}
 	for action_name in keys:
 		if not InputMap.has_action(action_name):
 			InputMap.add_action(action_name)
@@ -340,6 +363,11 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	_cancel_navigation()
 	loading_room = true
 	hover_interaction = {}
+	_hover_pointer_active = false
+	nearby_interactions.clear()
+	nearest = {}
+	_nearby_choice = ""
+	_interaction_choice_ids.clear()
 	navigation_generation += 1
 	feedback.highlight({})
 	nav_ready = false
@@ -370,12 +398,21 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	camera_base_size = float(metadata.get("camera_size",28.0))*0.78
 	if room == "home":
 		camera_base_size = 20.5
+	_camera_zoom_target = camera_base_size
+	_camera_yaw = 0.0
+	_camera_yaw_target = 0.0
+	_lmb_held = false
+	_rmb_dragging = false
+	player.pointer_steer = Vector2.ZERO
+	player.auto_sprint = false
 	camera.size = camera_base_size
 	conversation_position = player.position
 	feedback.bind_interactions(interactions)
 	camera.position = player.position + camera_offset
 	camera.look_at(player.position + Vector3(0,0.5,0), Vector3.UP)
 	await get_tree().physics_frame
+	await get_tree().physics_frame
+	world.separate_interaction_points(metadata,camera_offset)
 	await get_tree().physics_frame
 	if is_instance_valid(living):
 		living.configure(world,room,{"world_info":metadata,"player":player,"reduced_motion":ui.reduced_motion,"fixed_day":bool(State.data.preferences.get("fixed_day",false)),"guided_prologue":str(State.journey_snapshot().phase) in ["home","prologue"]})
@@ -393,6 +430,8 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	player.locked = false
 	if is_instance_valid(tactile_quests):
 		tactile_quests.attach_to_room(self, room)
+	if is_instance_valid(palace_loci):
+		palace_loci.attach_to_room(self, room)
 	if is_instance_valid(free_decor_studio):
 		free_decor_studio.attach_to_room(room)
 	if is_instance_valid(audio_director):
@@ -400,7 +439,7 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	if is_instance_valid(journey):
 		journey.on_room_ready()
 	if is_instance_valid(creation):
-		creation.room_changed()
+		await creation.room_changed()
 	_refresh()
 	if not ui.reduced_motion:
 		ui.fade.color.a = 0.55
@@ -521,7 +560,28 @@ func _process(delta: float) -> void:
 		return
 	var studio_open: bool = is_instance_valid(free_decor_studio) and bool(free_decor_studio.active)
 	var household_open: bool = is_instance_valid(household) and household.is_active()
+	var diegetic_open_now: bool = is_instance_valid(ui.diegetic) and bool(ui.diegetic.visible)
 	player.locked = ui.modal.visible or is_instance_valid(football) or is_instance_valid(orchard_activity) or studio_open or household_open
+	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) or player.locked or diegetic_open_now:
+		_lmb_held = false
+		player.pointer_steer = Vector2.ZERO
+	elif _lmb_held:
+		_lmb_hold_time += delta
+		if _lmb_hold_time >= 0.18:
+			var ground_plane := Plane(Vector3.UP, player.position.y)
+			var r_orig := camera.project_ray_origin(_lmb_screen_pos)
+			var r_dir := camera.project_ray_normal(_lmb_screen_pos)
+			var hit_pt: Variant = ground_plane.intersects_ray(r_orig, r_dir)
+			if hit_pt is Vector3:
+				var gp := hit_pt as Vector3
+				var diff := Vector2(gp.x - player.position.x, gp.z - player.position.z)
+				if diff.length() > 0.35:
+					_cancel_navigation()
+					player.pointer_steer = diff.normalized()
+				else:
+					player.pointer_steer = Vector2.ZERO
+	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_RIGHT):
+		_rmb_dragging = false
 	if is_instance_valid(living):
 		living.set_context({"dialogue_open":ui.modal.visible,"learning_open":ui.current_panel=="question","memory_open":ui.current_panel=="word_story","paused":ui.current_panel=="settings" or (is_instance_valid(orchard_activity) and orchard_activity.paused),"backgrounded":application_backgrounded,"reduced_motion":ui.reduced_motion,"fixed_day":bool(State.data.preferences.get("fixed_day",false)),"guided_prologue":journey_phase in ["home","prologue"],"story_day_phase":"dawn" if ui.current_panel=="journey_u1" and journey.u1_visible_step=="U1-01" else "","active_actor_ids":journey.active_actor_ids if ui.modal.visible else []})
 		if household_open: living.set_context({"paused":true})
@@ -580,12 +640,18 @@ func _process(delta: float) -> void:
 		if giver:
 			focus=(giver.position+player.position)/2.0+Vector3(0,-1.5,0)
 			desired_size=8.5
-	var smoothing := 1.0 if ui.reduced_motion else 1.0-exp(-delta*5)
-	camera.position = camera.position.lerp(focus+camera_offset,smoothing)
-	camera.look_at(camera.position-camera_offset+Vector3(0,0.5,0),Vector3.UP)
+	var cam_blend := 1.0 if ui.reduced_motion else 1.0 - exp(-delta * 10.0)
+	_camera_yaw = lerpf(_camera_yaw, _camera_yaw_target, cam_blend)
+	camera_base_size = lerpf(camera_base_size, _camera_zoom_target, cam_blend)
+	var active_cam_offset := camera_offset.rotated(Vector3.UP, _camera_yaw)
+	var smoothing := 1.0 if ui.reduced_motion else 1.0-exp(-delta*6.0)
+	camera.position = camera.position.lerp(focus+active_cam_offset,smoothing)
+	camera.look_at(camera.position-active_cam_offset+Vector3(0,0.5,0),Vector3.UP)
 	camera.size = lerpf(camera.size,desired_size,smoothing)
+	if not player.path.is_empty():
+		feedback.trim_passed_path(player.position)
 	if is_instance_valid(orchard_activity) or household_open:
-		ui.prompt.hide()
+		ui.hide_interaction_prompts()
 		ui.bubble_panel.hide()
 		return
 	greeting_clock -= delta
@@ -597,13 +663,9 @@ func _process(delta: float) -> void:
 		step_clock = 0.34
 	if ui.bubble_panel.visible:
 		ui.bubble_panel.position = camera.unproject_position(bubble_world_position)+Vector2(-100,-106)
-	nearest = {}
-	var nearest_distance := INF
+	_update_nearby_target()
 	for entry: Dictionary in interactions:
 		var distance := Vector2(player.position.x,player.position.z).distance_to(Vector2(entry.position.x,entry.position.z))
-		if distance<float(entry.get("radius",2.7)) and distance<nearest_distance:
-			nearest = entry
-			nearest_distance = distance
 		if distance<3.5 and not ui.modal.visible and greeting_clock<=0 and not voice.playing and not str(entry.get("greeting","")).is_empty():
 			var greeting_id := room+"/"+str(entry.id)
 			if Time.get_ticks_msec()-int(greetings.get(greeting_id,-60000))>45000:
@@ -620,20 +682,76 @@ func _process(delta: float) -> void:
 	player.look_target = nearest.position if not nearest.is_empty() else Vector3.INF
 	var diegetic_open: bool = is_instance_valid(ui.diegetic) and bool(ui.diegetic.visible)
 	if not ui.modal.visible and not diegetic_open and not studio_open and not is_instance_valid(football):
+		_refresh_hover_target()
 		var selected: Dictionary = hover_interaction if not hover_interaction.is_empty() else nearest
 		feedback.highlight(selected)
-		if not selected.is_empty() and not camera.is_position_behind(selected.position):
-			var text := str(selected.label)
-			if str(selected.id)=="orchard":
+		if not nearest.is_empty() and not camera.is_position_behind(nearest.position):
+			var text := str(nearest.label)
+			if str(nearest.id)=="orchard":
 				text = "采苹果  %d/3" % int(State.data.harvested) if int(State.data.harvested)<3 else "苹果已采完"
-			ui.show_prompt(text,camera.unproject_position(selected.position+Vector3(0,2.4,0)))
+			ui.show_prompt(text,camera.unproject_position(nearest.position+Vector3(0,2.4,0)),nearby_interactions.size(),maxi(0,nearby_interactions.find(nearest)))
 		else:
 			ui.prompt.hide()
+			ui.prompt_cycle.hide()
 		_update_navigation(delta)
 	else:
-		ui.prompt.hide()
+		ui.hide_interaction_prompts()
 		feedback.highlight({})
 
+func _update_nearby_target() -> void:
+	nearby_interactions = InteractionTargets.nearby(interactions,player.position)
+	if not _nearby_choice.is_empty():
+		if Vector2(player.position.x-_nearby_choice_position.x,player.position.z-_nearby_choice_position.z).length()<0.8:
+			for entry: Dictionary in nearby_interactions:
+				if str(entry.id)==_nearby_choice:
+					nearest = entry
+					return
+		_nearby_choice = ""
+	nearest = InteractionTargets.select_nearby(nearby_interactions,player.position,nearest)
+
+func _cycle_nearby_target() -> void:
+	_update_nearby_target()
+	if nearby_interactions.size()<2: return
+	_cancel_navigation()
+	_clear_hover_target()
+	var index := nearby_interactions.find(nearest)
+	nearest = nearby_interactions[(index+1)%nearby_interactions.size()]
+	_nearby_choice = str(nearest.id)
+	_nearby_choice_position = player.position
+
+func _clear_hover_target() -> void:
+	hover_interaction = {}
+	_hover_pointer_active = false
+	if is_instance_valid(ui): ui.hover_prompt.hide()
+	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+
+func _refresh_hover_target() -> void:
+	var hovered_control := get_viewport().gui_get_hovered_control()
+	if not _hover_pointer_active or (hovered_control!=null and hovered_control.mouse_filter!=Control.MOUSE_FILTER_IGNORE):
+		hover_interaction = {}
+		ui.hover_prompt.hide()
+		Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+		return
+	hover_interaction = feedback.pick(_hover_position,camera)
+	Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND if not hover_interaction.is_empty() else Input.CURSOR_ARROW)
+	if hover_interaction.is_empty():
+		ui.hover_prompt.hide()
+		return
+	var entries := InteractionTargets.colocated(hover_interaction,interactions)
+	var text := "这里有 %d 件事 · 点击选择" % entries.size() if entries.size()>1 else str(hover_interaction.label)+"\n点击互动 / 自动走近"
+	var height := 2.7 if str(hover_interaction.get("type","")) in InteractionTargets.NPC_TYPES else 0.65
+	ui.show_hover_prompt(text,camera.unproject_position(hover_interaction.position+Vector3.UP*height))
+
+func _choose_pointer_target(entry: Dictionary) -> void:
+	var choices := InteractionTargets.colocated(entry,interactions)
+	_clear_hover_target()
+	if choices.size()<=1:
+		_request_interaction(entry,true)
+		return
+	_cancel_navigation()
+	_interaction_choice_ids.clear()
+	for choice: Dictionary in choices: _interaction_choice_ids.append(str(choice.id))
+	ui.show_interaction_choices(choices)
 
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -675,47 +793,115 @@ func _unhandled_input(event: InputEvent) -> void:
 	if ui.modal.visible:
 		if (event.is_action_pressed("map") and ui.current_panel=="map") or (event.is_action_pressed("bag") and ui.current_panel=="bag") or (event.is_action_pressed("journal") and ui.current_panel=="journal"):
 			_request_close()
+		elif ui.current_panel == "v4_thematic_play" and event is InputEventKey and event.pressed and not event.echo:
+			var t_slot := -1
+			match event.keycode:
+				KEY_1, KEY_KP_1: t_slot = 0
+				KEY_2, KEY_KP_2: t_slot = 1
+				KEY_3, KEY_KP_3: t_slot = 2
+				KEY_4, KEY_KP_4: t_slot = 3
+				KEY_5, KEY_KP_5: t_slot = 4
+			if t_slot >= 0:
+				var crow: Node = ui.panel_box.find_child("ThematicChoiceCardsRow", true, false)
+				if crow != null and t_slot < crow.get_child_count():
+					var cbtn := crow.get_child(t_slot) as Button
+					if is_instance_valid(cbtn) and not cbtn.disabled:
+						cbtn.pressed.emit()
+						get_viewport().set_input_as_handled()
 		return
 	if event.is_action_pressed("interact"):
-		if not hover_interaction.is_empty():
-			_request_interaction(hover_interaction,true)
-		else:
-			interact_nearest()
+		_clear_hover_target()
+		interact_nearest()
+	elif event.is_action_pressed("cycle_interaction"):
+		_cycle_nearby_target()
 	elif event.is_action_pressed("map"):
 		show_map()
 	elif event.is_action_pressed("bag"):
 		show_bag()
 	elif event.is_action_pressed("journal"):
 		show_journal()
+	elif event is InputEventKey and event.pressed and not event.echo and event.keycode == KEY_G:
+		if is_instance_valid(palace_loci):
+			palace_loci.open_room_palace_tour(0)
+			get_viewport().set_input_as_handled()
 	elif event is InputEventKey and event.pressed:
+		var max_yaw := 0.82 if room in ["village", "school", "football_field", "playground", "home_estate"] else 0.42
+		if event.keycode == KEY_BRACKETLEFT:
+			_camera_yaw_target = clampf(_camera_yaw_target - 0.22, -max_yaw, max_yaw)
+		elif event.keycode == KEY_BRACKETRIGHT:
+			_camera_yaw_target = clampf(_camera_yaw_target + 0.22, -max_yaw, max_yaw)
+		elif event.keycode in [KEY_HOME, KEY_C]:
+			_camera_yaw_target = 0.0
+			_camera_zoom_target = 20.5 if room == "home" else float(metadata.get("camera_size", 28.0)) * 0.78
 		for key: String in ["walk_left","walk_right","walk_up","walk_down"]:
 			if event.is_action_pressed(key):
 				_cancel_navigation()
+				_clear_hover_target()
 				break
 	elif event is InputEventMouseMotion:
-		hover_interaction = feedback.pick(event.position,camera)
-		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND if not hover_interaction.is_empty() else Input.CURSOR_ARROW)
-	elif event is InputEventMouseButton and event.pressed:
+		_lmb_screen_pos = event.position
+		if _rmb_dragging:
+			_rmb_drag_dist += event.relative.length()
+			var max_yaw := 0.82 if room in ["village", "school", "football_field", "playground", "home_estate"] else 0.42
+			_camera_yaw_target = clampf(_camera_yaw_target - event.relative.x * 0.0045, -max_yaw, max_yaw)
+			return
+		_hover_position = event.position
+		_hover_pointer_active = true
+		_refresh_hover_target()
+	elif event is InputEventMouseButton:
+		if not event.pressed:
+			if event.button_index == MOUSE_BUTTON_LEFT:
+				_lmb_held = false
+				player.pointer_steer = Vector2.ZERO
+			elif event.button_index == MOUSE_BUTTON_RIGHT and _rmb_dragging:
+				_rmb_dragging = false
+				if _rmb_drag_dist < 6.0 and not player.path.is_empty():
+					_cancel_navigation()
+			return
 		if event.button_index==MOUSE_BUTTON_WHEEL_UP:
-			camera_base_size = maxf(10,camera_base_size-1.2)
+			_camera_zoom_target = maxf(10.0, _camera_zoom_target - 1.5)
+			if ui.reduced_motion: camera_base_size = _camera_zoom_target
 		elif event.button_index==MOUSE_BUTTON_WHEEL_DOWN:
-			camera_base_size = minf(34,camera_base_size+1.2)
+			_camera_zoom_target = minf(34.0, _camera_zoom_target + 1.5)
+			if ui.reduced_motion: camera_base_size = _camera_zoom_target
 		elif event.button_index==MOUSE_BUTTON_RIGHT:
-			_cancel_navigation()
-			ui.notify("在这里歇一会儿。")
+			if event.double_click:
+				_camera_yaw_target = 0.0
+				_camera_zoom_target = 20.5 if room == "home" else float(metadata.get("camera_size", 28.0)) * 0.78
+				_rmb_dragging = false
+			else:
+				_rmb_dragging = true
+				_rmb_drag_dist = 0.0
+				_rmb_last_pos = event.position
 		elif event.button_index==MOUSE_BUTTON_LEFT:
 			var selected: Dictionary = feedback.pick(event.position,camera)
 			if not selected.is_empty():
-				_request_interaction(selected,true)
+				player.auto_sprint = event.double_click
+				_choose_pointer_target(selected)
 				return
+			_lmb_held = true
+			_lmb_hold_time = 0.0
+			_lmb_screen_pos = event.position
 			_cancel_navigation()
+			_clear_hover_target()
 			var origin := camera.project_ray_origin(event.position)
 			var direction := camera.project_ray_normal(event.position)
+			var space := get_world_3d().direct_space_state
 			var query := PhysicsRayQueryParameters3D.create(origin,origin+direction*400.0,4)
-			var hit := get_world_3d().direct_space_state.intersect_ray(query)
+			var hit := space.intersect_ray(query)
+			if hit.is_empty():
+				# Fallback: if player clicked on a tree/fence/prop collider, project straight down to walkable ground
+				var prop_q := PhysicsRayQueryParameters3D.create(origin,origin+direction*400.0,5)
+				var prop_hit := space.intersect_ray(prop_q)
+				if not prop_hit.is_empty():
+					var ppos: Vector3 = prop_hit.position
+					var down_q := PhysicsRayQueryParameters3D.create(Vector3(ppos.x, ppos.y + 8.0, ppos.z), Vector3(ppos.x, ppos.y - 12.0, ppos.z), 4)
+					hit = space.intersect_ray(down_q)
 			if not hit.is_empty() and navigate_to(hit.position):
+				player.auto_sprint = event.double_click
+				feedback.spawn_click_ripple(player.path[-1] if not player.path.is_empty() else hit.position)
 				feedback.show_path(player.path)
-				ui.navigation("沿着小路走走 · 右键停下 / 方向键接着走")
+				ui.navigation("沿着小路漫步中" if not player.auto_sprint else "轻快小跑前往中")
 
 
 
@@ -763,7 +949,7 @@ func _close() -> void:
 	_stop_football()
 
 	_cancel_navigation()
-	Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+	_clear_hover_target()
 
 	ui.close_panel()
 	voice.stop()
@@ -822,20 +1008,27 @@ func show_memory(sequence: int) -> void:
 	var anchor: Dictionary = anchors[sequence-1]
 	var content: Dictionary = preload("res://ui/memory_card_content.gd").build(plan, anchor)
 	State.discover(room,sequence)
-	var actions: Array = [{"label":"退出","id":"close"}]
+	var actions: Array = []
 	var activity := _room_activity()
 	if not activity.is_empty():
-		actions.push_front({"label":str({"art":"画一画", "music":"奏一奏", "science":"试一试", "football":"踢一踢"}.get(activity, "试一试")),"id":"activity:"+activity,"primary":true})
+		actions.append({"label":str({"art":"画一画", "music":"奏一奏", "science":"试一试", "football":"踢一踢"}.get(activity, "试一试")),"id":"activity:"+activity,"primary":true})
 	if room == "landmark_A" and sequence == 2:
-		actions.push_front({"label":"摘苹果","id":"harvest","primary":true})
+		actions.append({"label":"摘苹果","id":"harvest","primary":true})
 	elif room == "landmark_C" and sequence in [1,3,5]:
-		actions.push_front({"label":"看订单","id":"talk_baker","primary":true})
+		actions.append({"label":"看订单","id":"talk_baker","primary":true})
 	elif room == "classroom":
-		actions.push_front({"label":"开始上课","id":"lessons","primary":true})
+		actions.append({"label":"开始上课","id":"lessons","primary":true})
 	elif room == "home" and sequence == 4:
-		actions.push_front({"label":"睡到明天","id":"next_day","primary":true})
+		actions.append({"label":"睡到明天","id":"next_day","primary":true})
 	elif room == "home" and sequence == 2:
-		actions.push_front({"label":"装扮我的小屋","id":"decorate","primary":true})
+		actions.append({"label":"装扮我的小屋","id":"decorate","primary":true})
+	var p_eid := str(content.get("palace_entry_id", "")).strip_edges()
+	var p_word := str(content.get("palace_word", "")).strip_edges()
+	if not p_eid.is_empty() and not p_word.is_empty():
+		actions.append({"label":"立体书记词 · " + p_word, "id":"open_palace:" + p_eid, "icon":"book", "primary":actions.is_empty()})
+	if not PalaceLociScript.stories_for_room(room).is_empty():
+		actions.append({"label":"本屋宫殿角落展台", "id":"v5_palace_tour:0", "icon":"compass"})
+	actions.append({"label":"退出","id":"close"})
 	var visited := 0
 	for index: int in range(1,6):
 		if State.data.life.discoveries.has("%s/memory_%02d" % [room,index]):
@@ -843,6 +1036,7 @@ func show_memory(sequence: int) -> void:
 	ui.show_memory_card(self,str(anchor.get("label","小岛回忆")),"%s · 已发现 %d / 5" % [_room_label(),visited],content,actions)
 
 func interact_nearest() -> void:
+	_update_nearby_target()
 	if not nearest.is_empty():
 		interact_id(str(nearest.id))
 
@@ -892,9 +1086,10 @@ func interact_id(id: String) -> void:
 					"world_pos": conversation_position,
 					"auto_speak": false,
 					"actions": [
-						{"label": "🌟 今日单元小委托", "id": "v4_commission:npc_rabbit_gardener", "primary": true},
-						{"label": "🔊 听听 apple", "id": "audio:apple"},
-						{"label": "🍎 摘一颗苹果", "id": "navigate:orchard"},
+						{"label": "★ 今日单元小委托", "id": "v4_commission:npc_rabbit_gardener", "primary": true},
+						{"label": "◈ 情境三轮英语对话", "id": "v5_roleplay_start:" + RoleplayDirector.scenario_id_for_context(room, "gardener")},
+						{"label": "· 听听 apple", "id": "audio:apple"},
+						{"label": "· 摘一颗苹果", "id": "navigate:orchard"},
 						{"label": "继续逛果园", "id": "close"}
 					]
 				})
@@ -919,10 +1114,11 @@ func interact_id(id: String) -> void:
 					"world_pos": conversation_position,
 					"auto_speak": false,
 					"actions": [
-						{"label": "🚀 开启本章三幕共创", "id": "v4_chap_open_here", "primary": true},
-						{"label": "🌟 贴一张单元手账贴纸", "id": "v4_commission:textbook_miss_li"},
-						{"label": "🗺️ 八册 81 章故事画册", "id": "v4_chapter_atlas"},
-						{"label": "🔊 Good morning!", "id": "audio:good_morning"},
+						{"label": "★ 开启本章三幕共创", "id": "v4_chap_open_here", "primary": true},
+						{"label": "◈ 情境三轮英语对话", "id": "v5_roleplay_start:classroom"},
+						{"label": "· 贴一张单元手账贴纸", "id": "v4_commission:textbook_miss_li"},
+						{"label": "· 八册 81 章故事画册", "id": "v4_chapter_atlas"},
+						{"label": "· Good morning!", "id": "audio:good_morning"},
 						{"label": "先在教室逛逛", "id": "close"}
 					]
 				})
@@ -940,10 +1136,11 @@ func interact_id(id: String) -> void:
 					"world_pos": conversation_position,
 					"auto_speak": false,
 					"actions": [
-						{"label": "🥛 牛奶 milk", "id": "audio:milk", "primary": true},
-						{"label": "🍞 面包 bread", "id": "audio:bread"},
-						{"label": "🎂 蛋糕 cake", "id": "audio:cake"},
-						{"label": "💛 谢谢 Thank you!", "id": "audio:thank_you"},
+						{"label": "★ 情境点餐三轮对话", "id": "v5_roleplay_start:canteen", "primary": true},
+						{"label": "· 牛奶 milk", "id": "audio:milk"},
+						{"label": "· 面包 bread", "id": "audio:bread"},
+						{"label": "· 蛋糕 cake", "id": "audio:cake"},
+						{"label": "· 谢谢 Thank you!", "id": "audio:thank_you"},
 						{"label": "去端餐盘好物", "id": "close"}
 					]
 				})
@@ -957,13 +1154,14 @@ func interact_id(id: String) -> void:
 					"npc_id": "textbook_peter",
 					"speaker": "操场伙伴 · 青草运动角",
 					"en": "Hi friend! How old are you? Come pick up a colorful ball on the grass and play with us!",
-					"zh": "嗨！小伙伴想认识你！你可以听听示范、点气泡上的「🎤 跟读试试」大胆开口，也可以去草地上双手捧起彩球放进收纳台！",
+					"zh": "嗨！小伙伴想认识你！你可以听听示范、点气泡上的「♪ 跟读试试」大胆开口，也可以去草地上双手捧起彩球放进收纳台！",
 					"world_pos": conversation_position,
 					"auto_speak": false,
 					"actions": [
-						{"label": "🔊 听听 I'm nine.", "id": "audio:im_nine", "primary": true},
-						{"label": "🚀 本章生活故事", "id": "v4_chap_open_here"},
-						{"label": "🌟 今日手账小委托", "id": "v4_commission:textbook_peter"},
+						{"label": "★ 操场运动三轮对话", "id": "v5_roleplay_start:playground", "primary": true},
+						{"label": "· 听听 I'm nine.", "id": "audio:im_nine"},
+						{"label": "· 本章生活故事", "id": "v4_chap_open_here"},
+						{"label": "· 今日手账小委托", "id": "v4_commission:textbook_peter"},
 						{"label": "去草地捡球玩", "id": "close"}
 					]
 				})
@@ -981,8 +1179,8 @@ func interact_id(id: String) -> void:
 					"show_zh_immediately": true,
 					"auto_speak": true,
 					"actions": [
-						{"label": "🌙 晚安，睡到明天", "id": "next_day", "primary": true},
-						{"label": "✨ 再玩一会儿", "id": "close"}
+						{"label": "☆ 晚安，睡到明天", "id": "next_day", "primary": true},
+						{"label": " 再玩一会儿", "id": "close"}
 					]
 				})
 			else:
@@ -1011,10 +1209,11 @@ func interact_id(id: String) -> void:
 					"show_zh_immediately": true,
 					"auto_speak": true,
 					"actions": [
-						{"label": "🃏 收集 %s 字母发现卡" % letter_code, "id": "journey:inspect:" + letter_code, "primary": true},
-						{"label": "🚀 本章三幕共创", "id": "v4_chap_open_here"},
-						{"label": "🌟 今日手账小委托", "id": "v4_commission:npc_bear_uncle"},
-						{"label": "🗺️ 看看五处回忆点", "id": "map"},
+						{"label": "★ 收集 %s 字母发现卡" % letter_code, "id": "journey:inspect:" + letter_code, "primary": true},
+						{"label": "◈ 情境三轮英语对话", "id": "v5_roleplay_start:" + RoleplayDirector.scenario_id_for_context(room, "host")},
+						{"label": "· 本屋记忆宫殿角落", "id": "v5_palace_tour:0"},
+						{"label": "· 本章三幕共创", "id": "v4_chap_open_here"},
+						{"label": "· 今日手账小委托", "id": "v4_commission:npc_bear_uncle"},
 						{"label": "去捧起 3D 好物", "id": "close"}
 					]
 				})
@@ -1042,6 +1241,9 @@ func show_building_resident(resident_id: String) -> void:
 			actions.append({"label":"材料采集与生活工坊", "id":"creation:materials"})
 		var letter := room.trim_prefix("landmark_")
 		actions.append({"label":"收集 %s 字母发现卡" % letter,"id":"journey:inspect:"+letter})
+	actions.append({"label":"◈ 情境三轮英语对话","id":"v5_roleplay_start:" + RoleplayDirector.scenario_id_for_context(room, resident_id)})
+	if not PalaceLociScript.stories_for_room(room).is_empty():
+		actions.append({"label":"★ 本屋记忆宫殿角落","id":"v5_palace_tour:0"})
 	actions.append({"label":"今日单元小委托","id":"v4_commission:"+resident_id})
 	actions.append({"label":"本章生活故事","id":"v4_chap_open_here"})
 	actions.append({"label":"继续逛逛","id":"close"})
@@ -1071,9 +1273,9 @@ func show_baker(play_greeting: bool = true) -> void:
 				"world_pos": conversation_position,
 				"auto_speak": false,
 				"actions": [
-					{"label": "👋 Hello! 很高兴认识你", "id": "greet", "primary": true},
-					{"label": "🌟 今日单元小委托", "id": "v4_commission:npc_bear_uncle"},
-					{"label": "🔊 再听一遍", "id": "audio:good_morning"},
+					{"label": "Hello! 很高兴认识你", "id": "greet", "primary": true},
+					{"label": "★ 今日单元小委托", "id": "v4_commission:npc_bear_uncle"},
+					{"label": "♪ 再听一遍", "id": "audio:good_morning"},
 					{"label": "先逛一逛", "id": "close"}
 				]
 			})
@@ -1086,9 +1288,9 @@ func show_baker(play_greeting: bool = true) -> void:
 				"world_pos": conversation_position,
 				"auto_speak": false,
 				"actions": [
-					{"label": "🍎 交给熊叔 3 颗苹果", "id": "deliver", "primary": true, "disabled": d.apples < 3},
-					{"label": "🌿 带我去苹果树", "id": "navigate:orchard"},
-					{"label": "🌟 今日单元小委托", "id": "v4_commission:npc_bear_uncle"},
+					{"label": "· 交给熊叔 3 颗苹果", "id": "deliver", "primary": true, "disabled": d.apples < 3},
+					{"label": "· 带我去苹果树", "id": "navigate:orchard"},
+					{"label": "★ 今日单元小委托", "id": "v4_commission:npc_bear_uncle"},
 					{"label": "先聊到这里", "id": "close"}
 				]
 			})
@@ -1101,10 +1303,11 @@ func show_baker(play_greeting: bool = true) -> void:
 				"world_pos": conversation_position,
 				"auto_speak": false,
 				"actions": [
-					{"label": "🎂 制作苹果蛋糕", "id": "craft", "primary": true, "disabled": d.apples < 3},
-					{"label": "🪙 售出一份蛋糕", "id": "sell", "disabled": d.cakes < 1},
-					{"label": "🌟 今日单元小委托", "id": "v4_commission:npc_bear_uncle", "primary": d.apples < 3},
-					{"label": "🏡 挑选家园装饰", "id": "shop"},
+					{"label": "★ 制作苹果蛋糕", "id": "craft", "primary": true, "disabled": d.apples < 3},
+					{"label": "· 售出一份蛋糕", "id": "sell", "disabled": d.cakes < 1},
+					{"label": "◈ 点心坊三轮英语对话", "id": "v5_roleplay_start:bakery"},
+					{"label": "· 今日单元小委托", "id": "v4_commission:npc_bear_uncle", "primary": d.apples < 3},
+					{"label": "· 挑选家园装饰", "id": "shop"},
 					{"label": "先聊到这里", "id": "close"}
 				]
 			})
@@ -1302,18 +1505,18 @@ func _navigate_to_id(target_id: String, auto_interact: bool = false) -> void:
 
 func show_settings() -> void:
 	if not _prepare_screen(): return
-	ui.show_panel("settings","歇一会儿也没关系","声音与操作","点地面散步，点人物走近聊聊，右键随时停下。\nWASD / 方向键移动 · E 互动 · M 地图 · B 背包 · J 回忆册\n滚轮拉近或拉远，Esc 返回或取消行走。",[
-		{"label":"语音："+("关" if muted else "开"),"id":"toggle_audio"},
-		{"label":"音效："+("开" if State.data.preferences.effects else "关"),"id":"toggle_effects"},
-		{"label":"减少动态："+("开" if ui.reduced_motion else "关"),"id":"toggle_motion"},
-		{"label":"固定白昼："+("开" if State.data.preferences.get("fixed_day",false) else "关"),"id":"toggle_day"},
-		{"label":"窗口 / 全屏","id":"fullscreen"},
-		{"label":"✨ 动森自由网格家园布置","id":"v4_free_decor"},
-		{"label":"家长 AI 成长观察室 & 八册同步","id":"v4_parent_ai","primary":true},
-		{"label":"家长观察册","id":"journey:parent"},
-		{"label":"保存并继续","id":"save","primary":true},
+	ui.show_panel("settings","歇一会儿也没关系","声音、视角与生活操作","左键点按或长按地面自由漫步（双击或按住 Shift 轻快小跑）；右键按住拖动旋转视角（双击右键或按 C 复位）。\nWASD / 方向键移动 · E 互动 · 滚轮平滑缩放 · M 地图 · B 换装 · J 旅行册",[
+		{"label":"语音播报："+("关" if muted else "开"),"id":"toggle_audio","icon":"speaker"},
+		{"label":"环境音效："+("开" if State.data.preferences.effects else "关"),"id":"toggle_effects","icon":"music"},
+		{"label":"减少动态："+("开" if ui.reduced_motion else "关"),"id":"toggle_motion","icon":"sun"},
+		{"label":"固定白昼："+("开" if State.data.preferences.get("fixed_day",false) else "关"),"id":"toggle_day","icon":"lamp"},
+		{"label":"窗口 / 全屏切换","id":"fullscreen"},
+		{"label":"自由网格家园布置","id":"v4_free_decor","icon":"home"},
+		{"label":"家长 AI 成长观察室 & 八册同步","id":"v4_parent_ai","primary":true,"icon":"compass"},
+		{"label":"成长明细手账","id":"journey:parent","icon":"journal"},
+		{"label":"保存并继续","id":"save","primary":true,"icon":"check"},
 		{"label":"保存并退出","id":"quit"}
-	],"物品与任务会自动保存。画好的明信片需要点击保存。")
+	],"角色穿搭、家园家具与章节进度都会自动保存。")
 
 
 
@@ -1337,7 +1540,7 @@ func _open_v4_commission(npc_id: String) -> void:
 		actions.append({"label": str(opt.get("label", "")), "id": act_id, "primary": true})
 	var target_eid := str(comm.get("target_entry_id", ""))
 	if not target_eid.is_empty():
-		actions.append({"label": "📖 打开 3D 立体翻翻书", "id": "open_popup_story:" + target_eid})
+		actions.append({"label": "◈ 打开 3D 立体翻翻书", "id": "open_popup_story:" + target_eid})
 	actions.append({"label": "先逛一逛", "id": "close"})
 	if is_instance_valid(audio_director):
 		audio_director.play_foley("bubble_pop")
@@ -1386,8 +1589,8 @@ func _handle_v4_commission_pick(payload: String) -> void:
 				"show_zh_immediately": true,
 				"auto_speak": true,
 				"actions": [
-					{"label": "🌟 再接一张单元贴纸", "id": "v4_commission:" + npc_id, "primary": true},
-					{"label": "📖 翻开 3D 立体翻翻书", "id": "open_popup_story:" + target_eid},
+					{"label": "★ 再接一张单元贴纸", "id": "v4_commission:" + npc_id, "primary": true},
+					{"label": "◈ 翻开 3D 立体翻翻书", "id": "open_popup_story:" + target_eid},
 					{"label": "开心收下", "id": "close"}
 				]
 			})
@@ -1395,7 +1598,7 @@ func _handle_v4_commission_pick(payload: String) -> void:
 		_commission_hint_used = true
 		if is_instance_valid(audio_director):
 			audio_director.play_foley("bubble_pop")
-		ui.notify("差一点点！点一下气泡右上角的「💡 中文贴士」或打开 3D 立体翻翻书看看吧 ✨")
+		ui.notify("差一点点！点一下气泡右上角的「中文贴士」或打开 3D 立体翻翻书看看吧 ")
 
 func open_active_v4_chapter() -> void:
 	var chap := StoryDirector.active_chapter(State)
@@ -1447,10 +1650,10 @@ func _handle_v4_chapter_step(payload: String) -> void:
 		if is_instance_valid(audio_director):
 			audio_director.play_foley("wardrobe_sparkle")
 		player.gesture("wave")
-		feedback.pickup(player.position, player.position, "leaf", "🏅 +12 叶币 · 章节纪念牌" if bonus > 0 else "🏅 章节纪念牌")
+		feedback.pickup(player.position, player.position, "leaf", "★ +12 叶币 · 章节纪念牌" if bonus > 0 else "★ 章节纪念牌")
 		if is_instance_valid(tactile_quests):
 			tactile_quests.attach_to_room(self, room)
-		ui.notify("🎉 恭喜点亮「%s · U%d %s」！场景里已立起永久章节纪念牌！" % [str(chap.get("book_title", "")), int(chap.get("unit_number", 1)), str(chap.get("event_title", ""))])
+		ui.notify("★ 恭喜点亮「%s · U%d %s」！场景里已立起永久章节纪念牌！" % [str(chap.get("book_title", "")), int(chap.get("unit_number", 1)), str(chap.get("event_title", ""))])
 	else:
 		if is_instance_valid(audio_director):
 			audio_director.play_foley("bubble_pop")
@@ -1494,7 +1697,7 @@ func _handle_v4_thematic_pick(payload: String) -> void:
 	if chosen_word.to_lower() == expected.to_lower():
 		_thematic_session["filled"] = filled + 1
 		_thematic_session["hint"] = false
-		_thematic_session["note"] = "🌟 放对啦！「%s」（%s）已经稳稳摆上托盘！" % [expected, str(targets[filled].get("zh", ""))]
+		_thematic_session["note"] = "★ 放对啦！「%s」（%s）已经稳稳摆上托盘！" % [expected, str(targets[filled].get("zh", ""))]
 		State.record_stealth_evidence({
 			"word": expected.to_lower(),
 			"support_level": 1 if hint_used else 0,
@@ -1515,7 +1718,7 @@ func _handle_v4_thematic_pick(payload: String) -> void:
 			if str(item.get("word", "")).to_lower() == chosen_word.to_lower():
 				tapped_zh = str(item.get("zh", chosen_word))
 				break
-		_thematic_session["note"] = "🌱 这张卡是「%s」（%s）哦～听听读音，再找找哪张是【%s】吧 ✨" % [
+		_thematic_session["note"] = "◇ 这张卡是「%s」（%s）哦～听听读音，再找找哪张是【%s】吧 " % [
 			chosen_word, tapped_zh, str(targets[filled].get("zh", ""))
 		]
 		if is_instance_valid(audio_director):
@@ -1541,6 +1744,46 @@ func _on_action(id: String) -> void:
 	if is_instance_valid(journey) and await journey.handle_action(id):
 		return
 	if is_instance_valid(household) and await household.handle_action(id):
+		return
+	if id.begins_with("open_palace:"):
+		var target_eid := id.trim_prefix("open_palace:").strip_edges()
+		if is_instance_valid(ui.diegetic) and ui.diegetic.visible:
+			ui.diegetic.dismiss()
+		if is_instance_valid(journey) and not target_eid.is_empty():
+			journey.open_story_from_world(target_eid)
+		return
+	if id.begins_with("open_palace_gap:"):
+		var gap_eid := id.trim_prefix("open_palace_gap:").strip_edges()
+		if is_instance_valid(ui.diegetic) and ui.diegetic.visible:
+			ui.diegetic.dismiss()
+		if is_instance_valid(journey) and not gap_eid.is_empty():
+			journey.open_story_gap_from_world(gap_eid)
+		return
+	if id == "v5_palace_tour" or id.begins_with("v5_palace_tour:"):
+		var off := 0
+		if id.begins_with("v5_palace_tour:"):
+			off = int(id.trim_prefix("v5_palace_tour:"))
+		if is_instance_valid(palace_loci):
+			palace_loci.open_room_palace_tour(off)
+		return
+	if id.begins_with("v5_palace_goto:"):
+		var dest_room := id.trim_prefix("v5_palace_goto:").strip_edges()
+		if not dest_room.is_empty():
+			_close()
+			if room != dest_room:
+				await change_room(dest_room)
+			if is_instance_valid(palace_loci):
+				palace_loci.open_room_palace_tour(0)
+		return
+	if id.begins_with("v5_roleplay_start:"):
+		var scen_id := id.trim_prefix("v5_roleplay_start:").strip_edges()
+		RoleplayDirector.open_turn(self, scen_id, 0)
+		return
+	if id.begins_with("v5_roleplay_pick:"):
+		RoleplayDirector.handle_pick(self, id.trim_prefix("v5_roleplay_pick:"))
+		return
+	if id == "v5_wake_mailbox":
+		WakeMailbox.open_mailbox(self)
 		return
 	if id.begins_with("audio:"):
 		play_phrase(id.trim_prefix("audio:"))
@@ -1575,6 +1818,10 @@ func _on_action(id: String) -> void:
 				ui.show_inventory(State.data, "bag")
 	elif id.begins_with("wardrobe_tab:"):
 		ui.show_inventory(State.data, id.trim_prefix("wardrobe_tab:"))
+	elif id.begins_with("wardrobe_spin:"):
+		if is_instance_valid(ui.wardrobe_preview) and ui.wardrobe_preview.has_method("spin_by"):
+			var dir_s := id.trim_prefix("wardrobe_spin:")
+			ui.wardrobe_preview.spin_by(-0.62 if dir_s == "left" else 0.62)
 	elif id.begins_with("wardrobe_speak:"):
 		if is_instance_valid(ai_bridge):
 			ai_bridge.speak_text(id.trim_prefix("wardrobe_speak:"), "en", "warm")
@@ -1667,6 +1914,15 @@ func _on_action(id: String) -> void:
 		sounds.note(int(id.trim_prefix("note:")))
 	elif id.begins_with("sound:"):
 		sounds.play(id.trim_prefix("sound:"))
+	elif id.begins_with("interaction_choice:"):
+		var target_id := id.trim_prefix("interaction_choice:")
+		if ui.current_panel != "interaction_choices" or not _interaction_choice_ids.has(target_id): return
+		for entry: Dictionary in interactions:
+			if str(entry.id)==target_id:
+				_close()
+				_interaction_choice_ids.clear()
+				_request_interaction(entry,true)
+				break
 	elif id.begins_with("unit:"):
 		start_unit(int(id.trim_prefix("unit:")))
 	elif id.begins_with("answer:"):
@@ -1674,11 +1930,8 @@ func _on_action(id: String) -> void:
 	else:
 		match id:
 			"close": _request_close()
-			"interact":
-				if not hover_interaction.is_empty():
-					_request_interaction(hover_interaction,true)
-				else:
-					interact_nearest()
+			"interact": interact_nearest()
+			"cycle_interaction": _cycle_nearby_target()
 			"quest": journey.continue_journey() if is_instance_valid(journey) else _follow_quest()
 			"map": show_map()
 			"campus_memories": show_campus_memories()
@@ -1938,6 +2191,8 @@ func _update_navigation(delta: float) -> void:
 		var next_target := journey_target
 		var next_auto := journey_auto
 		_cancel_navigation()
+		_nearby_choice = str(entry.id)
+		_nearby_choice_position = player.position
 		player.face(entry.position)
 		if automatic:
 			await interact_id(str(entry.id))
@@ -2177,12 +2432,18 @@ func _start_football() -> void:
 	player.locked = true
 	football.shot_finished.connect(func(scored: bool,attempts: int,goals: int):
 		sounds.play("success" if scored else "miss")
-		ui.football_feedback(attempts,goals,"进球啦！再试一个角度。" if scored else "差一点点。调整方向和力度，再试试。")
+		if is_instance_valid(ai_bridge):
+			ai_bridge.speak_text("Goal! Great shot!" if scored else "Nice try! Kick again!", "en", "warm")
+		ui.football_feedback(attempts,goals,"Goal! Great shot! · 进球啦！再试一个角度。" if scored else "Nice try! · 差一点点，调整方向和力度再试试。")
 	)
 	football.round_finished.connect(func(goals: int):
 		State.complete_activity("football",goals)
-		ui.football_feedback(5,goals,"五次射门完成！本轮进球 %d，最好成绩 %d。" % [goals,State.data.life.scores.football])
+		if is_instance_valid(ai_bridge):
+			ai_bridge.speak_text("Five shots finished! Fantastic job!", "en", "warm")
+		ui.football_feedback(5,goals,"Fantastic job! · 五次射门完成！本轮进球 %d，最好成绩 %d。" % [goals,State.data.life.scores.football])
 	)
+	if is_instance_valid(ai_bridge):
+		ai_bridge.speak_text("Let's kick the football into the goal!", "en", "warm")
 	ui.show_football(football)
 
 func _shoot_football() -> void:

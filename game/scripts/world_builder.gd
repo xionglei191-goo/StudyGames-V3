@@ -16,13 +16,16 @@ const DioramaBackdrop = preload("res://world/diorama_backdrop.gd")
 const ToySurfacePolisher = preload("res://world/toy_surface_polisher.gd")
 const HeroSceneDressing = preload("res://world/hero_scene_dressing.gd")
 const ResidentActor = preload("res://scripts/textbook_actor.gd")
+const InteractionLayout = preload("res://scripts/interaction_layout.gd")
 var _resident_hosts: Dictionary = {}
+var _interaction_npcs: Dictionary = {}
 var _backdrop: Node3D
 var _polisher: Node3D
 var _hero_dressing: Node3D
 
 func build(room: String) -> Dictionary:
 	_resident_hosts.clear()
+	_interaction_npcs.clear()
 	for child: Node in get_children():
 		remove_child(child)
 		child.queue_free()
@@ -78,8 +81,18 @@ func set_day_phase(phase: String) -> void:
 func _add_imported_npcs(info: Dictionary) -> void:
 	for npc in info.get("npcs", []):
 		var character := _npc(str(npc.kind), npc.position, float(npc.get("angle", 0.0)), str(npc.get("name", "邻居")))
+		var id := str(npc.get("interaction_id",""))
+		if id.is_empty():
+			for entry: Dictionary in info.get("interactions",[]):
+				if str(entry.get("type","")) in ["npc","talk"] and (entry.position as Vector3).distance_to(npc.position)<0.01:
+					id = str(entry.id)
+					break
+		if not id.is_empty(): _interaction_npcs[id] = character
 		if str(npc.kind).begins_with("resident_"):
 			_resident_hosts[str(npc.get("interaction_id","host"))] = character
+
+func separate_interaction_points(info: Dictionary, camera_offset: Vector3) -> void:
+	info["interaction_layout"] = InteractionLayout.resolve(self,info,_interaction_npcs,camera_offset)
 
 func greet_resident(interaction_id: String, target: Vector3) -> void:
 	var actor: Variant = _resident_hosts.get(interaction_id)
@@ -186,8 +199,8 @@ func _npc(kind: String, pos: Vector3, angle: float, display_name: String) -> Nod
 	character.rotation.y = angle
 	add_child(character)
 	if not kind.begins_with("resident_"):
-		_label(self, display_name, pos + Vector3(0, 3.0, 0), 25, Color("fff6df"))
-	_solid(pos + Vector3(0, 0.7, 0), Vector3(0.55, 1.4, 0.55))
+		_label(character, display_name, Vector3(0, 3.0, 0), 25, Color("fff6df"))
+	_solid(Vector3(0, 0.7, 0), Vector3(0.55, 1.4, 0.55), character)
 	return character
 
 func make_character(kind: String) -> Node3D:

@@ -5,6 +5,16 @@ signal finished
 const Props = preload("res://activities/household_props.gd")
 const Hud = preload("res://ui/household_hud.gd")
 const Style = preload("res://ui/island_theme.gd")
+const TASK_ENGLISH := {
+	"set_dinner": "Let's set the mats, plates, and cups!",
+	"welcome_table": "Let's set the tea cups and fruit plate!",
+	"make_bed": "Fold the soft quilt and make the bed!",
+	"tidy_books": "Put the picture books back neatly!",
+	"hang_laundry": "Hang the clean socks in the sun!",
+	"wash_vegetables": "Wash the fresh green vegetables!",
+	"wash_hands": "Wash your hands with soap and water!",
+	"water_garden": "Water the colourful garden flowers!",
+}
 var game: Node3D
 var task: Dictionary
 var task_id := ""
@@ -68,6 +78,9 @@ func setup(host: Node3D, plan: Dictionary) -> void:
 	hud.retry_requested.connect(_save_result)
 	_show_stage()
 	_update_hud()
+	var en_intro := str(TASK_ENGLISH.get(task_id, ""))
+	if not en_intro.is_empty() and is_instance_valid(game.get("ai_bridge")):
+		game.ai_bridge.speak_text(en_intro, "en", "warm")
 
 func stop() -> void:
 	if _stopped: return
@@ -466,6 +479,8 @@ func _save_result() -> void:
 	for target: Dictionary in targets: target.ghost.hide()
 	for crease in wrinkles: crease.hide()
 	game.sounds.play("place")
+	if is_instance_valid(game.get("ai_bridge")):
+		game.ai_bridge.speak_text("All clean and tidy! Great job!", "en", "warm")
 	finished.emit()
 	_update_hud()
 
@@ -475,11 +490,13 @@ func _feedback_message(message: String) -> void:
 
 func _update_hud() -> void:
 	if not is_instance_valid(hud): return
+	var en_line := str(TASK_ENGLISH.get(task_id, ""))
+	var bilingual_title := str(task.title) if en_line.is_empty() else ("%s  ·  %s" % [str(task.title), en_line])
 	if completed:
-		hud.update_status(str(task.title) + " · 完成", str(task.result), "已保存 · 离开再回来也能看见", 1.0)
+		hud.update_status(str(task.title) + " · All clean and tidy!", str(task.result), "已保存 · 离开再回来也能看见", 1.0)
 		return
 	if ready_to_save:
-		hud.update_status(str(task.title), "已做好，保存还没有成功", "可重试保存；原有记录仍保留", 1.0)
+		hud.update_status(bilingual_title, "已做好，保存还没有成功", "可重试保存；原有记录仍保留", 1.0)
 		return
 	var placed := 0
 	for item: Dictionary in items:
@@ -513,4 +530,4 @@ func _update_hud() -> void:
 			if total >= 2.999: hint = "都浇好了，把水壶拖回左边的小架子"
 			detail = "花圃浇水  %d%%" % int(fraction * 100)
 	if clock < _feedback_until: detail = _feedback
-	hud.update_status(str(task.title),hint,detail,fraction)
+	hud.update_status(bilingual_title,hint,detail,fraction)

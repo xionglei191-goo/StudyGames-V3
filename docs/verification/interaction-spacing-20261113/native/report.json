@@ -1,0 +1,2025 @@
+{
+	"audit_only": false,
+	"checks": [
+		{
+			"name": "isolated_save",
+			"passed": true
+		},
+		{
+			"name": "default_actors_spawn_safely/landmark_A",
+			"passed": true
+		},
+		{
+			"name": "safe_resident_placement/landmark_A/gardener",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_A/memory_01",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_A/memory_02",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_A/memory_03",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_A/memory_04",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_A/memory_05",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_A/village_exit/gardener",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_A/memory_01/gardener",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_A/memory_02/gardener",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_A/memory_03/gardener",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_A/memory_04/gardener",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_A/memory_05/gardener",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_A/orchard/gardener",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/village_exit/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/village_exit/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/village_exit/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_A/village_exit",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_01/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_01/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_01/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_A/memory_01",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_02/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_02/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_02/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_A/memory_02",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_03/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_03/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_03/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_A/memory_03",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_04/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_04/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_04/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_A/memory_04",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_05/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_05/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/memory_05/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_A/memory_05",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/orchard/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/orchard/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/orchard/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_A/orchard",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/gardener/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/gardener/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_A/gardener/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_A/gardener",
+			"passed": true
+		},
+		{
+			"name": "default_actors_spawn_safely/landmark_C",
+			"passed": true
+		},
+		{
+			"name": "safe_resident_placement/landmark_C/baker",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_C/memory_01",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_C/memory_02",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_C/memory_03",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_C/memory_04",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_C/memory_05",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_C/village_exit/baker",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_C/memory_01/baker",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_C/memory_02/baker",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_C/memory_03/baker",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_C/memory_04/baker",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_C/memory_05/baker",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/village_exit/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/village_exit/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/village_exit/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_C/village_exit",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_01/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_01/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_01/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_C/memory_01",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_02/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_02/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_02/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_C/memory_02",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_03/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_03/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_03/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_C/memory_03",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_04/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_04/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_04/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_C/memory_04",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_05/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_05/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/memory_05/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_C/memory_05",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/baker/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/baker/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_C/baker/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_C/baker",
+			"passed": true
+		},
+		{
+			"name": "default_actors_spawn_safely/landmark_I",
+			"passed": true
+		},
+		{
+			"name": "safe_resident_placement/landmark_I/host",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_I/memory_01",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_I/memory_02",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_I/memory_03",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_I/memory_04",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/landmark_I/memory_05",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_I/village_exit/host",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_I/memory_01/host",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_I/memory_02/host",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_I/memory_03/host",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_I/memory_04/host",
+			"passed": true
+		},
+		{
+			"name": "resident_clearance/landmark_I/memory_05/host",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/village_exit/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/village_exit/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/village_exit/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_I/village_exit",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_01/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_01/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_01/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_I/memory_01",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_02/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_02/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_02/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_I/memory_02",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_03/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_03/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_03/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_I/memory_03",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_04/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_04/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_04/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_I/memory_04",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_05/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_05/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/memory_05/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_I/memory_05",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/host/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/host/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/landmark_I/host/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/landmark_I/host",
+			"passed": true
+		},
+		{
+			"name": "default_actors_spawn_safely/home_dining",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/home_dining/memory_01",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/home_dining/memory_02",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/home_dining/memory_03",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/home_dining/memory_04",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/home_dining/memory_05",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/home_exit/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/home_exit/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/home_exit/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home_dining/home_exit",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_01/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_01/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_01/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home_dining/memory_01",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_02/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_02/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_02/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home_dining/memory_02",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_03/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_03/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_03/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home_dining/memory_03",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_04/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_04/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_04/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home_dining/memory_04",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_05/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_05/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home_dining/memory_05/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home_dining/memory_05",
+			"passed": true
+		},
+		{
+			"name": "default_actors_spawn_safely/home",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/home/memory_01",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/home/memory_02",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/home/memory_03",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/home/memory_04",
+			"passed": true
+		},
+		{
+			"name": "fixed_memory_anchor/home/memory_05",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/courtyard_exit/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/courtyard_exit/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/courtyard_exit/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/courtyard_exit",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_01/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_01/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_01/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/memory_01",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_02/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_02/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_02/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/memory_02",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_03/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_03/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_03/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/memory_03",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_04/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_04/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_04/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/memory_04",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_05/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_05/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/memory_05/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/memory_05",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/decorate/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/decorate/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/decorate/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/decorate",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_study_gate/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_study_gate/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_study_gate/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/home_study_gate",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_bedroom_gate/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_bedroom_gate/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_bedroom_gate/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/home_bedroom_gate",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_bathroom_gate/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_bathroom_gate/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_bathroom_gate/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/home_bathroom_gate",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_kitchen_gate/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_kitchen_gate/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_kitchen_gate/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/home_kitchen_gate",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_dining_gate/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_dining_gate/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_dining_gate/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/home_dining_gate",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_balcony_gate/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_balcony_gate/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/home_balcony_gate/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/home_balcony_gate",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/actor:npc_bear_uncle/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/actor:npc_bear_uncle/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/actor:npc_bear_uncle/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/actor:npc_bear_uncle",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/journey_discoveries/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/journey_discoveries/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/journey_discoveries/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/journey_discoveries",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/journey_party_table/(0.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/journey_party_table/(-6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "pointer_target/home/journey_party_table/(6.0, 0.0)",
+			"passed": true
+		},
+		{
+			"name": "reachable_target/home/journey_party_table",
+			"passed": true
+		},
+		{
+			"name": "click_ground_point_selects_memory_not_resident",
+			"passed": true
+		},
+		{
+			"name": "walk_and_open_clicked_memory",
+			"passed": true
+		},
+		{
+			"name": "clicked_memory_is_the_requested_one",
+			"passed": true
+		},
+		{
+			"name": "click_resident_selects_resident",
+			"passed": true
+		},
+		{
+			"name": "walk_and_open_clicked_resident",
+			"passed": true
+		},
+		{
+			"name": "walk_landmark_A/keyboard_nearby_target/memory_03",
+			"passed": true
+		},
+		{
+			"name": "interaction_available_landmark_A/keyboard_nearby_target/memory_03",
+			"passed": true
+		},
+		{
+			"name": "mouse_can_preview_a_different_distant_target",
+			"passed": true
+		},
+		{
+			"name": "E_prompt_keeps_nearby_target",
+			"passed": true
+		},
+		{
+			"name": "E_ignores_distant_mouse_hover",
+			"passed": true
+		},
+		{
+			"name": "manual_movement_clears_stale_hover",
+			"passed": true
+		},
+		{
+			"name": "walk_landmark_A/shared_object_actions",
+			"passed": true
+		},
+		{
+			"name": "both_shared_object_actions_remain_accessible",
+			"passed": true
+		},
+		{
+			"name": "Q_changes_visible_nearby_target",
+			"passed": true
+		},
+		{
+			"name": "touch_cycle_button_changes_target",
+			"passed": true
+		},
+		{
+			"name": "shared_object_click_lists_actions",
+			"passed": true
+		},
+		{
+			"name": "shared_object_choices_are_explicit",
+			"passed": true
+		},
+		{
+			"name": "small_window_choices_fit",
+			"passed": true
+		},
+		{
+			"name": "chosen_shared_action_opens_correct_memory",
+			"passed": true
+		},
+		{
+			"name": "hover_refreshes_after_camera_moves",
+			"passed": true
+		},
+		{
+			"name": "exploration_never_awards_learning_mastery",
+			"passed": true
+		},
+		{
+			"name": "production_save_unchanged",
+			"passed": true
+		}
+	],
+	"collisions": [],
+	"complete": true,
+	"engine": "4.7.2-stable (official)",
+	"failures": [],
+	"native": true,
+	"passed": true,
+	"planned_routes": [],
+	"production_save_unchanged": true,
+	"rooms": [
+		{
+			"close_pairs": [
+				{
+					"a": "memory_02",
+					"b": "orchard",
+					"distance": 0.0
+				}
+			],
+			"entries": [
+				{
+					"id": "village_exit",
+					"label": "回到字母岛",
+					"position": [
+						-0.150000005960464,
+						0.0,
+						9.69999980926514
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "memory_01",
+					"label": "门前篮子",
+					"position": [
+						-2.5,
+						0.0,
+						1.60000002384186
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_02",
+					"label": "左侧果树",
+					"position": [
+						-6.94999980926514,
+						0.0,
+						-0.5
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_03",
+					"label": "中央分拣台",
+					"position": [
+						-2.79999995231628,
+						0.0,
+						5.65000009536743
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_04",
+					"label": "右侧洗果池",
+					"position": [
+						4.15000009536743,
+						0.0,
+						2.34999990463257
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_05",
+					"label": "出口礼物架",
+					"position": [
+						3.59999990463257,
+						0.0,
+						7.05000019073486
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "orchard",
+					"label": "采一颗苹果",
+					"position": [
+						-6.94999980926514,
+						0.0,
+						-0.5
+					],
+					"radius": 2.1,
+					"type": "action"
+				},
+				{
+					"id": "gardener",
+					"label": "和阿梨聊一聊",
+					"position": [
+						0.0314695835113525,
+						0.0210002660751343,
+						2.95557022094727
+					],
+					"radius": 2.3,
+					"type": "npc"
+				}
+			],
+			"layout": [
+				{
+					"distance": 1.00022039368969,
+					"id": "gardener",
+					"original": "(-0.8, 0.0, 2.4)",
+					"position": "(0.03147, 0.021, 2.95557)",
+					"resolved": true
+				}
+			],
+			"picks": [
+				{
+					"id": "village_exit",
+					"pixel": [
+						359.991729736328,
+						755.372131347656
+					],
+					"selected": "village_exit"
+				},
+				{
+					"id": "memory_01",
+					"pixel": [
+						583.491638183594,
+						420.57080078125
+					],
+					"selected": "memory_01"
+				},
+				{
+					"id": "memory_02",
+					"pixel": [
+						410.99169921875,
+						214.206359863281
+					],
+					"selected": "memory_02"
+				},
+				{
+					"id": "memory_03",
+					"pixel": [
+						383.241729736328,
+						565.737487792969
+					],
+					"selected": "memory_03"
+				},
+				{
+					"id": "memory_04",
+					"pixel": [
+						948.741577148438,
+						638.320861816406
+					],
+					"selected": "memory_04"
+				},
+				{
+					"id": "memory_05",
+					"pixel": [
+						704.241760253906,
+						801.040283203125
+					],
+					"selected": "memory_05"
+				},
+				{
+					"id": "orchard",
+					"pixel": [
+						410.99169921875,
+						214.206359863281
+					],
+					"selected": "memory_02"
+				},
+				{
+					"id": "gardener",
+					"pixel": [
+						674.379150390625,
+						485.925354003906
+					],
+					"selected": "gardener"
+				}
+			],
+			"room": "landmark_A"
+		},
+		{
+			"close_pairs": [],
+			"entries": [
+				{
+					"id": "village_exit",
+					"label": "回到字母岛",
+					"position": [
+						0.0,
+						0.0,
+						6.44999980926514
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "memory_01",
+					"label": "门口订单板",
+					"position": [
+						-3.5,
+						0.0,
+						3.40000009536743
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_02",
+					"label": "左侧材料架",
+					"position": [
+						-4.80000019073486,
+						0.0,
+						0.699999988079071
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_03",
+					"label": "中央料理台",
+					"position": [
+						0.0,
+						0.0,
+						0.300000011920929
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_04",
+					"label": "右侧烤箱",
+					"position": [
+						4.69999980926514,
+						0.0,
+						0.699999988079071
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_05",
+					"label": "出口取餐窗",
+					"position": [
+						4.59999990463257,
+						0.0,
+						3.90000009536743
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "baker",
+					"label": "和米洛聊一聊",
+					"position": [
+						-0.432233095169067,
+						-0.000000476837158203125,
+						3.16776704788208
+					],
+					"radius": 2.3,
+					"type": "npc"
+				}
+			],
+			"layout": [
+				{
+					"distance": 2.50000009536743,
+					"id": "baker",
+					"original": "(-2.2, 0.0, 1.4)",
+					"position": "(-0.432233, -0.0, 3.167767)",
+					"resolved": true
+				}
+			],
+			"picks": [
+				{
+					"id": "village_exit",
+					"pixel": [
+						588.375,
+						629.623779296875
+					],
+					"selected": "village_exit"
+				},
+				{
+					"id": "memory_01",
+					"pixel": [
+						515.624816894531,
+						453.746856689453
+					],
+					"selected": "memory_01"
+				},
+				{
+					"id": "memory_02",
+					"pixel": [
+						559.124877929688,
+						314.273010253906
+					],
+					"selected": "memory_02"
+				},
+				{
+					"id": "memory_03",
+					"pixel": [
+						865.124938964844,
+						435.719482421875
+					],
+					"selected": "memory_03"
+				},
+				{
+					"id": "memory_04",
+					"pixel": [
+						1129.12487792969,
+						584.681518554688
+					],
+					"selected": "memory_04"
+				},
+				{
+					"id": "memory_05",
+					"pixel": [
+						979.125,
+						703.28173828125
+					],
+					"selected": "memory_05"
+				},
+				{
+					"id": "baker",
+					"pixel": [
+						710.141418457031,
+						475.326049804688
+					],
+					"selected": "baker"
+				}
+			],
+			"room": "landmark_C"
+		},
+		{
+			"close_pairs": [],
+			"entries": [
+				{
+					"id": "village_exit",
+					"label": "回到字母岛",
+					"position": [
+						0.0,
+						0.0,
+						7.22399997711182
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "memory_01",
+					"label": "入口点单图牌",
+					"position": [
+						-3.00999999046326,
+						0.0,
+						3.80800008773804
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_02",
+					"label": "左侧口味柜",
+					"position": [
+						-4.12800025939941,
+						0.0,
+						0.783999979496002
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_03",
+					"label": "中央冰淇淋台",
+					"position": [
+						0.0,
+						0.0,
+						0.336000025272369
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_04",
+					"label": "右侧配料槽",
+					"position": [
+						4.04199981689453,
+						0.0,
+						0.783999979496002
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_05",
+					"label": "出口取餐台",
+					"position": [
+						3.95599985122681,
+						0.0,
+						4.36800003051758
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "host",
+					"label": "和凉凉聊一聊",
+					"position": [
+						-0.124233119189739,
+						-0.000000461935997009277,
+						3.33576679229736
+					],
+					"radius": 2.3,
+					"type": "npc"
+				}
+			],
+			"layout": [
+				{
+					"distance": 2.49999990463257,
+					"id": "host",
+					"original": "(-1.892, 0.0, 1.568)",
+					"position": "(-0.124233, -0.0, 3.335767)",
+					"resolved": true
+				}
+			],
+			"picks": [
+				{
+					"id": "village_exit",
+					"pixel": [
+						540.044860839844,
+						652.599365234375
+					],
+					"selected": "village_exit"
+				},
+				{
+					"id": "memory_01",
+					"pixel": [
+						513.164794921875,
+						476.779235839844
+					],
+					"selected": "memory_01"
+				},
+				{
+					"id": "memory_02",
+					"pixel": [
+						582.164855957031,
+						330.189300537109
+					],
+					"selected": "memory_02"
+				},
+				{
+					"id": "memory_03",
+					"pixel": [
+						850.0048828125,
+						430.686462402344
+					],
+					"selected": "memory_03"
+				},
+				{
+					"id": "memory_04",
+					"pixel": [
+						1072.36486816406,
+						562.740661621094
+					],
+					"selected": "memory_04"
+				},
+				{
+					"id": "memory_05",
+					"pixel": [
+						905.924865722656,
+						696.313049316406
+					],
+					"selected": "memory_05"
+				},
+				{
+					"id": "host",
+					"pixel": [
+						707.561340332031,
+						484.069641113281
+					],
+					"selected": "host"
+				}
+			],
+			"room": "landmark_I"
+		},
+		{
+			"close_pairs": [
+				{
+					"a": "memory_01",
+					"b": "memory_04",
+					"distance": 2.26274180412292
+				},
+				{
+					"a": "memory_02",
+					"b": "memory_05",
+					"distance": 2.40831899642944
+				}
+			],
+			"entries": [
+				{
+					"id": "home_exit",
+					"label": "回到客厅",
+					"position": [
+						0.0,
+						0.0,
+						4.80000019073486
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "memory_01",
+					"label": "早餐边柜",
+					"position": [
+						-4.40000009536743,
+						0.0,
+						-1.69999992847443
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_02",
+					"label": "水果分享台",
+					"position": [
+						2.79999995231628,
+						0.0,
+						-0.0999999046325684
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_03",
+					"label": "家庭餐桌",
+					"position": [
+						0.0,
+						0.0,
+						1.60000002384186
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_04",
+					"label": "生日点心桌",
+					"position": [
+						-2.79999995231628,
+						0.0,
+						-0.0999999046325684
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_05",
+					"label": "节日餐边架",
+					"position": [
+						4.40000009536743,
+						0.0,
+						-1.89999997615814
+					],
+					"radius": 1.65,
+					"type": "memory"
+				}
+			],
+			"layout": [],
+			"picks": [
+				{
+					"id": "home_exit",
+					"pixel": [
+						605.25,
+						633.180786132813
+					],
+					"selected": "home_exit"
+				},
+				{
+					"id": "memory_01",
+					"pixel": [
+						633.749938964844,
+						300.751495361328
+					],
+					"selected": "memory_01"
+				},
+				{
+					"id": "memory_02",
+					"pixel": [
+						993.749938964844,
+						566.416015625
+					],
+					"selected": "memory_02"
+				},
+				{
+					"id": "memory_03",
+					"pixel": [
+						749.249938964844,
+						551.235229492188
+					],
+					"selected": "memory_03"
+				},
+				{
+					"id": "memory_04",
+					"pixel": [
+						657.75,
+						407.017333984375
+					],
+					"selected": "memory_04"
+				},
+				{
+					"id": "memory_05",
+					"pixel": [
+						1170.75,
+						543.644775390625
+					],
+					"selected": "memory_05"
+				}
+			],
+			"room": "home_dining"
+		},
+		{
+			"close_pairs": [
+				{
+					"a": "memory_01",
+					"b": "actor:npc_bear_uncle",
+					"distance": 2.74167704582214
+				},
+				{
+					"a": "memory_02",
+					"b": "decorate",
+					"distance": 0.0
+				},
+				{
+					"a": "memory_04",
+					"b": "journey_party_table",
+					"distance": 0.672681212425232
+				}
+			],
+			"entries": [
+				{
+					"id": "courtyard_exit",
+					"label": "走出家门 · 回到小院",
+					"position": [
+						0.0,
+						0.0,
+						7.63000011444092
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "memory_01",
+					"label": "门厅随身篮",
+					"position": [
+						-3.5,
+						0.0,
+						3.40000009536743
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_02",
+					"label": "左侧衣柜",
+					"position": [
+						-4.80000019073486,
+						0.0,
+						0.699999988079071
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_03",
+					"label": "中央茶几",
+					"position": [
+						0.0,
+						0.0,
+						0.300000011920929
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_04",
+					"label": "窗边家人相册",
+					"position": [
+						4.69999980926514,
+						0.0,
+						0.699999988079071
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "memory_05",
+					"label": "出口回忆展示架",
+					"position": [
+						4.59999990463257,
+						0.0,
+						3.90000009536743
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "decorate",
+					"label": "装扮我的小屋",
+					"position": [
+						-4.80000019073486,
+						0.0,
+						0.699999988079071
+					],
+					"radius": 2.0,
+					"type": "decorate"
+				},
+				{
+					"id": "home_study_gate",
+					"label": "走进窗边书房",
+					"position": [
+						-8.55000019073486,
+						0.0,
+						-4.5
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "home_bedroom_gate",
+					"label": "走进温暖卧室",
+					"position": [
+						-8.55000019073486,
+						0.0,
+						0.0
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "home_bathroom_gate",
+					"label": "走进清爽浴室",
+					"position": [
+						-8.55000019073486,
+						0.0,
+						4.5
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "home_kitchen_gate",
+					"label": "走进明亮厨房",
+					"position": [
+						8.55000019073486,
+						0.0,
+						-4.5
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "home_dining_gate",
+					"label": "走进家庭餐厅",
+					"position": [
+						8.55000019073486,
+						0.0,
+						0.0
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "home_balcony_gate",
+					"label": "走进家务阳台",
+					"position": [
+						8.55000019073486,
+						0.0,
+						4.5
+					],
+					"radius": 1.7,
+					"type": "travel"
+				},
+				{
+					"id": "actor:npc_bear_uncle",
+					"label": "和熊叔聊一聊",
+					"position": [
+						-0.763418674468994,
+						0.0200000144541264,
+						3.56707954406738
+					],
+					"radius": 2.0,
+					"type": "textbook_actor"
+				},
+				{
+					"id": "journey_discoveries",
+					"label": "看看我的发现收藏",
+					"position": [
+						-2.40000009536743,
+						0.0,
+						-4.69999980926514
+					],
+					"radius": 1.65,
+					"type": "memory"
+				},
+				{
+					"id": "journey_party_table",
+					"label": "看看我们的欢迎桌",
+					"position": [
+						4.19999980926514,
+						0.100000001490116,
+						0.25
+					],
+					"radius": 2.6,
+					"type": "memory"
+				}
+			],
+			"layout": [],
+			"picks": [
+				{
+					"id": "courtyard_exit",
+					"pixel": [
+						624.623718261719,
+						744.459838867188
+					],
+					"selected": "courtyard_exit"
+				},
+				{
+					"id": "memory_01",
+					"pixel": [
+						459.37890625,
+						522.586853027344
+					],
+					"selected": "memory_01"
+				},
+				{
+					"id": "memory_02",
+					"pixel": [
+						421.261352539063,
+						370.511627197266
+					],
+					"selected": "decorate"
+				},
+				{
+					"id": "memory_03",
+					"pixel": [
+						775.651611328125,
+						418.609710693359
+					],
+					"selected": "memory_03"
+				},
+				{
+					"id": "memory_04",
+					"pixel": [
+						1106.34716796875,
+						504.903594970703
+					],
+					"selected": "memory_04"
+				},
+				{
+					"id": "memory_05",
+					"pixel": [
+						1033.20263671875,
+						661.930114746094
+					],
+					"selected": "memory_05"
+				},
+				{
+					"id": "decorate",
+					"pixel": [
+						421.261352539063,
+						370.511627197266
+					],
+					"selected": "decorate"
+				},
+				{
+					"id": "home_study_gate",
+					"pixel": [
+						257.974060058594,
+						22.9157752990723
+					],
+					"selected": "home_study_gate"
+				},
+				{
+					"id": "home_bedroom_gate",
+					"pixel": [
+						165.255615234375,
+						245.723815917969
+					],
+					"selected": "home_bedroom_gate"
+				},
+				{
+					"id": "home_bathroom_gate",
+					"pixel": [
+						72.5372314453125,
+						468.531707763672
+					],
+					"selected": "home_bathroom_gate"
+				},
+				{
+					"id": "home_kitchen_gate",
+					"pixel": [
+						1491.12854003906,
+						264.821441650391
+					],
+					"selected": "home_kitchen_gate"
+				},
+				{
+					"id": "home_dining_gate",
+					"pixel": [
+						1398.41003417969,
+						487.629455566406
+					],
+					"selected": "home_dining_gate"
+				},
+				{
+					"id": "home_balcony_gate",
+					"pixel": [
+						1305.69165039063,
+						710.437316894531
+					],
+					"selected": "home_balcony_gate"
+				},
+				{
+					"id": "actor:npc_bear_uncle",
+					"pixel": [
+						653.282958984375,
+						515.044067382813
+					],
+					"selected": "actor:npc_bear_uncle"
+				},
+				{
+					"id": "journey_discoveries",
+					"pixel": [
+						705.597595214844,
+						137.093765258789
+					],
+					"selected": "journey_discoveries"
+				},
+				{
+					"id": "journey_party_table",
+					"pixel": [
+						1079.56188964844,
+						470.096832275391
+					],
+					"selected": "journey_party_table"
+				}
+			],
+			"room": "home"
+		}
+	],
+	"routes": [
+		{
+			"accepted": true,
+			"allowed_distance": 1.65,
+			"destination": [
+				-2.79999995231628,
+				0.0,
+				5.65000009536743
+			],
+			"distance_walked": 5.85045311134309,
+			"finish": [
+				-2.83510136604309,
+				-0.0491740554571152,
+				6.00353145599365
+			],
+			"interaction_available": true,
+			"label": "keyboard_nearby_target/memory_03",
+			"nearest_interaction": "memory_03",
+			"passed": true,
+			"physics_frames": 80,
+			"remaining_distance": 0.35526967048645,
+			"remaining_waypoints": 0,
+			"room": "landmark_A",
+			"start": [
+				-1.67767369747162,
+				-0.0292115323245525,
+				2.79796838760376
+			],
+			"target_interaction": "memory_03"
+		},
+		{
+			"accepted": true,
+			"allowed_distance": 0.55,
+			"destination": [
+				-6.94999980926514,
+				0.0,
+				-0.5
+			],
+			"distance_walked": 9.52132493536919,
+			"finish": [
+				-6.7918586730957,
+				-0.0491741150617599,
+				-0.620636940002441
+			],
+			"label": "shared_object_actions",
+			"passed": true,
+			"physics_frames": 123,
+			"remaining_distance": 0.19890171289444,
+			"remaining_waypoints": 0,
+			"room": "landmark_A",
+			"start": [
+				-2.80799007415771,
+				-0.0491743385791779,
+				5.98319864273071
+			]
+		}
+	],
+	"screenshots": [
+		"F:/LoveStudy/docs/verification/interaction-spacing-20261113/native/landmark_A.png",
+		"F:/LoveStudy/docs/verification/interaction-spacing-20261113/native/landmark_C.png",
+		"F:/LoveStudy/docs/verification/interaction-spacing-20261113/native/landmark_I.png",
+		"F:/LoveStudy/docs/verification/interaction-spacing-20261113/native/home_dining.png",
+		"F:/LoveStudy/docs/verification/interaction-spacing-20261113/native/home.png",
+		"F:/LoveStudy/docs/verification/interaction-spacing-20261113/native/shared-actions-1440.png",
+		"F:/LoveStudy/docs/verification/interaction-spacing-20261113/native/shared-actions-960.png"
+	],
+	"timestamp_utc": "2026-11-13T11:42:40",
+	"transitions": []
+}

@@ -207,6 +207,15 @@ static func apply_dynamic_mood(
 		sm.sky_horizon_color = sm.sky_horizon_color.lerp(hor_col, blend)
 		sm.ground_horizon_color = sm.ground_horizon_color.lerp(hor_col.darkened(0.06), blend)
 
+	var bg_colors := {
+		"dawn": Color("e3ddc9"),
+		"day": Color("d5e2d6"),
+		"dusk": Color("cfc4b8"),
+		"night": Color("25364d")
+	}
+	var bg_target: Color = bg_colors.get(phase, bg_colors.day)
+	env.background_color = env.background_color.lerp(bg_target, blend)
+
 	env.ambient_light_energy = lerpf(env.ambient_light_energy, (0.88 if outdoor else 0.95) * ambient_scale, blend)
 
 	var target_fog := 0.0055 if weather == "mist" and outdoor else 0.0020 if weather == "light_rain" and outdoor else (0.0010 if room_id == "village" else 0.0004 if outdoor else 0.0)

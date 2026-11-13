@@ -1,9 +1,9 @@
 {
-  "passed": true,
+  "passed": false,
   "checks": [
     {
       "name": "all_existing_models_and_previews_unchanged",
-      "passed": true
+      "passed": false
     },
     {
       "name": "eight_textbook_sources_unchanged",
@@ -51,7 +51,7 @@
     },
     {
       "name": "front_door_enters_hall",
-      "passed": true
+      "passed": false
     },
     {
       "name": "existing_three_state_household_props/home_estate",
@@ -91,7 +91,7 @@
     },
     {
       "name": "room_returns_to_own_indoor_door/home",
-      "passed": true
+      "passed": false
     },
     {
       "name": "existing_three_state_household_props/home",
@@ -131,7 +131,7 @@
     },
     {
       "name": "room_returns_to_own_indoor_door/home_bedroom",
-      "passed": true
+      "passed": false
     },
     {
       "name": "existing_three_state_household_props/home_bedroom",
@@ -159,7 +159,7 @@
     },
     {
       "name": "structure_and_conservative_navigation/home_kitchen",
-      "passed": true
+      "passed": false
     },
     {
       "name": "real_floor_support/home_kitchen",
@@ -171,7 +171,7 @@
     },
     {
       "name": "room_returns_to_own_indoor_door/home_kitchen",
-      "passed": true
+      "passed": false
     },
     {
       "name": "existing_three_state_household_props/home_kitchen",
@@ -211,7 +211,7 @@
     },
     {
       "name": "room_returns_to_own_indoor_door/home_dining",
-      "passed": true
+      "passed": false
     },
     {
       "name": "existing_three_state_household_props/home_dining",
@@ -239,7 +239,7 @@
     },
     {
       "name": "structure_and_conservative_navigation/home_bathroom",
-      "passed": true
+      "passed": false
     },
     {
       "name": "real_floor_support/home_bathroom",
@@ -251,7 +251,7 @@
     },
     {
       "name": "room_returns_to_own_indoor_door/home_bathroom",
-      "passed": true
+      "passed": false
     },
     {
       "name": "existing_three_state_household_props/home_bathroom",
@@ -291,7 +291,7 @@
     },
     {
       "name": "room_returns_to_own_indoor_door/home_study",
-      "passed": true
+      "passed": false
     },
     {
       "name": "existing_three_state_household_props/home_study",
@@ -331,7 +331,7 @@
     },
     {
       "name": "room_returns_to_own_indoor_door/home_balcony",
-      "passed": true
+      "passed": false
     },
     {
       "name": "existing_three_state_household_props/home_balcony",
@@ -375,33 +375,46 @@
     },
     {
       "name": "new_editable_hall_source",
-      "passed": true
+      "passed": false
     }
   ],
-  "failures": [],
+  "failures": [
+    "all_existing_models_and_previews_unchanged",
+    "front_door_enters_hall",
+    "room_returns_to_own_indoor_door/home",
+    "room_returns_to_own_indoor_door/home_bedroom",
+    "structure_and_conservative_navigation/home_kitchen",
+    "room_returns_to_own_indoor_door/home_kitchen",
+    "room_returns_to_own_indoor_door/home_dining",
+    "structure_and_conservative_navigation/home_bathroom",
+    "room_returns_to_own_indoor_door/home_bathroom",
+    "room_returns_to_own_indoor_door/home_study",
+    "room_returns_to_own_indoor_door/home_balcony",
+    "new_editable_hall_source"
+  ],
   "rooms": [
     {
       "room_id": "home_estate",
-      "name": "我的家 · 小院与住宅",
+      "name": "家园院落",
       "errors": [],
-      "nodes": 2267,
-      "mesh_nodes": 2233,
+      "nodes": 1822,
+      "mesh_nodes": 1788,
       "collision_proxies": 24,
       "floor_meshes": 1,
-      "textures": 0,
+      "textures": 22,
       "preview_dimensions": [
-        1500,
-        1320
+        960,
+        840
       ],
-      "glb_bytes": 18417868,
-      "triangles": 422560,
-      "sha256": "e7351f5623f3c080d79fb311886e4623a4879e7773b87d62e3fa33d4cee56420",
+      "glb_bytes": 21032244,
+      "triangles": 361380,
+      "sha256": "65ae8c769fb1a1f704bd29e4c7b98570a7997ec9b61b95023996dea4b269ccc5",
       "plan_labels_checked": 5,
       "walkability": {
         "player_radius_m": 0.32,
         "grid_step_m": 0.2,
-        "reachable_cells": 10248,
-        "free_cells": 10248,
+        "reachable_cells": 8542,
+        "free_cells": 8542,
         "anchors": {
           "SG_SPAWN": {
             "inside_obstacle": false,
@@ -579,26 +592,26 @@
     },
     {
       "room_id": "home",
-      "name": "家里的客厅",
+      "name": "客厅",
       "errors": [],
-      "nodes": 503,
-      "mesh_nodes": 484,
-      "collision_proxies": 117,
+      "nodes": 799,
+      "mesh_nodes": 774,
+      "collision_proxies": 33,
       "floor_meshes": 1,
-      "textures": 0,
+      "textures": 15,
       "preview_dimensions": [
-        1100,
-        968
+        1440,
+        900
       ],
-      "glb_bytes": 2850352,
-      "triangles": 106520,
-      "sha256": "436856bb9e2d3810e30be5b41e9bed237699cf6491ad8ee2a573c749fb72b428",
+      "glb_bytes": 11323664,
+      "triangles": 244968,
+      "sha256": "09639022140b2e75814540386cb37d0ef7e3d442357d766b1e91607e431954d7",
       "plan_labels_checked": 5,
       "walkability": {
         "player_radius_m": 0.32,
         "grid_step_m": 0.2,
-        "reachable_cells": 3964,
-        "free_cells": 3964,
+        "reachable_cells": 5641,
+        "free_cells": 5641,
         "anchors": {
           "SG_SPAWN": {
             "inside_obstacle": false,
@@ -671,11 +684,11 @@
         "passed": true,
         "errors": [],
         "mesh": "SG_FLOOR_Main",
-        "indexed_triangles": 284,
+        "indexed_triangles": 188,
         "top_y": 0.0,
         "bottom_y": -0.46,
-        "top_triangles": 4,
-        "bottom_triangles": 4,
+        "top_triangles": 2,
+        "bottom_triangles": 2,
         "top_normal_y": [
           1.0
         ],
@@ -687,7 +700,7 @@
             "ray_origin": [
               0.0,
               2.0,
-              5.65
+              6.25
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -696,7 +709,7 @@
             "ray_origin": [
               0.0,
               2.0,
-              6.45
+              7.63
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -763,24 +776,24 @@
       "room_id": "home_bedroom",
       "name": "温暖卧室",
       "errors": [],
-      "nodes": 183,
-      "mesh_nodes": 170,
+      "nodes": 262,
+      "mesh_nodes": 249,
       "collision_proxies": 11,
       "floor_meshes": 1,
-      "textures": 0,
+      "textures": 25,
       "preview_dimensions": [
-        1200,
-        1056
+        1280,
+        889
       ],
-      "glb_bytes": 2060448,
-      "triangles": 54164,
-      "sha256": "aa9b8e6d7610350e0fab3ffc7ef74be11a30e439025d7a473c719fba4d825b49",
+      "glb_bytes": 6879436,
+      "triangles": 189608,
+      "sha256": "abe65d52941c0bf4a8a0000446a8ac960368c2e5ee912eca1b58811dcdf1799b",
       "plan_labels_checked": 5,
       "walkability": {
         "player_radius_m": 0.32,
         "grid_step_m": 0.2,
-        "reachable_cells": 4245,
-        "free_cells": 4245,
+        "reachable_cells": 2269,
+        "free_cells": 2269,
         "anchors": {
           "SG_SPAWN": {
             "inside_obstacle": false,
@@ -854,7 +867,7 @@
             "ray_origin": [
               0.0,
               2.0,
-              5.5
+              3.9
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -863,7 +876,7 @@
             "ray_origin": [
               0.0,
               2.0,
-              6.4
+              4.8
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -879,45 +892,45 @@
           },
           "SG_MEMORY_01": {
             "ray_origin": [
-              -4.6,
+              -4.2,
               2.0,
-              -1.2
+              0.1
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_02": {
             "ray_origin": [
-              -1.6,
+              -1.2,
               2.0,
-              -3.4
+              -2.1
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_03": {
             "ray_origin": [
-              4.8,
+              4.3,
               2.0,
-              -2.8
+              -2.0
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_04": {
             "ray_origin": [
-              -3.1,
+              -2.7,
               2.0,
-              3.3
+              2.2
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_05": {
             "ray_origin": [
-              3.0,
               2.0,
-              3.3
+              2.0,
+              1.9
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -929,25 +942,30 @@
     {
       "room_id": "home_kitchen",
       "name": "明亮厨房",
-      "errors": [],
-      "nodes": 430,
-      "mesh_nodes": 419,
-      "collision_proxies": 10,
-      "floor_meshes": 1,
-      "textures": 0,
-      "preview_dimensions": [
-        1200,
-        1056
+      "errors": [
+        "Opaque proxy SG_COLLIDER_OWN10_FridgeSinkBridge",
+        "Opaque proxy SG_COLLIDER_OWN10_MainPreparationRun",
+        "Opaque proxy SG_COLLIDER_OWN10_StoveLanding",
+        "Opaque proxy SG_COLLIDER_OWN10_RearCounterFill"
       ],
-      "glb_bytes": 4125124,
-      "triangles": 106664,
-      "sha256": "f73e988fc03ce5eecbf3bf8b80a8c00ec1134c9248a503e638f0566b480275d4",
+      "nodes": 563,
+      "mesh_nodes": 552,
+      "collision_proxies": 14,
+      "floor_meshes": 1,
+      "textures": 23,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 8244164,
+      "triangles": 154180,
+      "sha256": "8dd13e1413c94db383288bccd68ec5ab8cc260429def03f18a5912de024a298d",
       "plan_labels_checked": 5,
       "walkability": {
         "player_radius_m": 0.32,
         "grid_step_m": 0.2,
-        "reachable_cells": 4311,
-        "free_cells": 4311,
+        "reachable_cells": 3909,
+        "free_cells": 3909,
         "anchors": {
           "SG_SPAWN": {
             "inside_obstacle": false,
@@ -1065,7 +1083,7 @@
             "ray_origin": [
               2.0,
               2.0,
-              0.5
+              -1.85
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1074,7 +1092,7 @@
             "ray_origin": [
               -3.2,
               2.0,
-              3.8
+              1.15
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1087,24 +1105,24 @@
       "room_id": "home_dining",
       "name": "家庭餐厅",
       "errors": [],
-      "nodes": 295,
-      "mesh_nodes": 284,
+      "nodes": 423,
+      "mesh_nodes": 412,
       "collision_proxies": 10,
       "floor_meshes": 1,
-      "textures": 0,
+      "textures": 23,
       "preview_dimensions": [
-        1200,
-        1056
+        800,
+        700
       ],
-      "glb_bytes": 2790764,
-      "triangles": 80696,
-      "sha256": "d17b2bacc9fcd266b37b0909a74503128b012f6f23a5efc951090576e48a1110",
+      "glb_bytes": 6115012,
+      "triangles": 117036,
+      "sha256": "28fa531f9db0a7b79e4e0aa084ccc7dcaa0617dc4b3b87fbf44050b243d4e355",
       "plan_labels_checked": 5,
       "walkability": {
         "player_radius_m": 0.32,
         "grid_step_m": 0.2,
-        "reachable_cells": 4292,
-        "free_cells": 4292,
+        "reachable_cells": 2346,
+        "free_cells": 2346,
         "anchors": {
           "SG_SPAWN": {
             "inside_obstacle": false,
@@ -1168,7 +1186,7 @@
             "ray_origin": [
               0.0,
               2.0,
-              5.5
+              3.9
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1177,7 +1195,7 @@
             "ray_origin": [
               0.0,
               2.0,
-              6.4
+              4.8
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1193,18 +1211,18 @@
           },
           "SG_MEMORY_01": {
             "ray_origin": [
-              -4.8,
+              -4.4,
               2.0,
-              -2.6
+              -1.7
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_02": {
             "ray_origin": [
-              3.2,
+              2.8,
               2.0,
-              4.8
+              -0.1
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1213,25 +1231,25 @@
             "ray_origin": [
               0.0,
               2.0,
-              1.1
+              1.6
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_04": {
             "ray_origin": [
-              -3.2,
+              -2.8,
               2.0,
-              4.3
+              -0.1
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_05": {
             "ray_origin": [
-              4.8,
+              4.4,
               2.0,
-              -3.0
+              -1.9
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1243,25 +1261,29 @@
     {
       "room_id": "home_bathroom",
       "name": "清爽浴室",
-      "errors": [],
-      "nodes": 381,
-      "mesh_nodes": 370,
-      "collision_proxies": 10,
-      "floor_meshes": 1,
-      "textures": 0,
-      "preview_dimensions": [
-        1200,
-        1056
+      "errors": [
+        "Opaque proxy SG_COLLIDER_OWN_Bath_Counter_Bridge",
+        "Opaque proxy SG_COLLIDER_OWN_Bath_Toilet_Alcove_Back",
+        "Opaque proxy SG_COLLIDER_OWN_Bath_Toilet_Screen"
       ],
-      "glb_bytes": 3996724,
-      "triangles": 88828,
-      "sha256": "58f7db6bffeffd9a119bc705de4d4eec05b3d77b5ccd7d31a9bd30a1c214122e",
+      "nodes": 527,
+      "mesh_nodes": 516,
+      "collision_proxies": 13,
+      "floor_meshes": 1,
+      "textures": 19,
+      "preview_dimensions": [
+        960,
+        840
+      ],
+      "glb_bytes": 7002732,
+      "triangles": 129584,
+      "sha256": "1f3c1579293ee2a6555db5012d43696816bb962675d3e6d729eada5af36eb480",
       "plan_labels_checked": 5,
       "walkability": {
         "player_radius_m": 0.32,
         "grid_step_m": 0.2,
-        "reachable_cells": 4269,
-        "free_cells": 4269,
+        "reachable_cells": 1975,
+        "free_cells": 1975,
         "anchors": {
           "SG_SPAWN": {
             "inside_obstacle": false,
@@ -1325,7 +1347,7 @@
             "ray_origin": [
               0.0,
               2.0,
-              5.5
+              3.75
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1334,61 +1356,61 @@
             "ray_origin": [
               0.0,
               2.0,
-              6.4
+              4.65
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_NPC_HOST": {
             "ray_origin": [
-              -1.8,
+              -2.4,
               2.0,
-              3.0
+              2.7
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_01": {
             "ray_origin": [
-              -4.8,
+              -3.7,
               2.0,
-              -2.1
+              -2.4
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_02": {
             "ray_origin": [
-              0.0,
+              -0.5,
               2.0,
-              -3.0
+              -2.4
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_03": {
             "ray_origin": [
-              3.3,
+              2.7,
               2.0,
-              -2.1
+              -0.6
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_04": {
             "ray_origin": [
-              -3.4,
+              -4.2,
               2.0,
-              3.0
+              1.1
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_05": {
             "ray_origin": [
-              3.4,
+              4.5,
               2.0,
-              3.0
+              3.35
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1401,24 +1423,24 @@
       "room_id": "home_study",
       "name": "窗边书房",
       "errors": [],
-      "nodes": 204,
-      "mesh_nodes": 193,
+      "nodes": 341,
+      "mesh_nodes": 330,
       "collision_proxies": 10,
       "floor_meshes": 1,
-      "textures": 0,
+      "textures": 21,
       "preview_dimensions": [
-        1200,
-        1056
+        1280,
+        889
       ],
-      "glb_bytes": 2180948,
-      "triangles": 54808,
-      "sha256": "e07354ad593632de71484be9639b78e506c7bd20da50b793a5f8fb8c103e8607",
+      "glb_bytes": 4794196,
+      "triangles": 81784,
+      "sha256": "f0050d168c7dda64970a72a8cca01dd7466ae6fb7437d41f15edf8b47c69303d",
       "plan_labels_checked": 5,
       "walkability": {
         "player_radius_m": 0.32,
         "grid_step_m": 0.2,
-        "reachable_cells": 4358,
-        "free_cells": 4358,
+        "reachable_cells": 2432,
+        "free_cells": 2432,
         "anchors": {
           "SG_SPAWN": {
             "inside_obstacle": false,
@@ -1482,7 +1504,7 @@
             "ray_origin": [
               0.0,
               2.0,
-              5.5
+              3.9
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1491,61 +1513,61 @@
             "ray_origin": [
               0.0,
               2.0,
-              6.4
+              4.8
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_NPC_HOST": {
             "ray_origin": [
-              -1.8,
+              1.5,
               2.0,
-              3.0
+              2.7
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_01": {
             "ray_origin": [
-              -4.8,
+              -4.4,
               2.0,
-              -2.5
+              -0.95
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_02": {
             "ray_origin": [
-              0.0,
+              0.5,
               2.0,
-              -3.6
+              -2.5
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_03": {
             "ray_origin": [
-              4.8,
+              4.0,
               2.0,
-              -2.4
+              -1.1
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_04": {
             "ray_origin": [
-              -3.0,
+              -2.4,
               2.0,
-              3.9
+              0.2
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_05": {
             "ray_origin": [
-              3.3,
+              -2.15,
               2.0,
-              3.0
+              2.8
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1558,24 +1580,24 @@
       "room_id": "home_balcony",
       "name": "家务阳台",
       "errors": [],
-      "nodes": 335,
-      "mesh_nodes": 324,
+      "nodes": 464,
+      "mesh_nodes": 453,
       "collision_proxies": 10,
       "floor_meshes": 1,
-      "textures": 0,
+      "textures": 17,
       "preview_dimensions": [
-        1200,
-        1056
+        960,
+        840
       ],
-      "glb_bytes": 1916464,
-      "triangles": 96532,
-      "sha256": "c55c81ebb4d40ef9ce050dd6cffc1bc597d80068488610ab7678d00a73f63379",
+      "glb_bytes": 5046128,
+      "triangles": 122984,
+      "sha256": "4a888b105011076aa869e4b30d21306e6654d6856dcfdb845d747177111f099d",
       "plan_labels_checked": 5,
       "walkability": {
         "player_radius_m": 0.32,
         "grid_step_m": 0.2,
-        "reachable_cells": 4503,
-        "free_cells": 4503,
+        "reachable_cells": 2621,
+        "free_cells": 2621,
         "anchors": {
           "SG_SPAWN": {
             "inside_obstacle": false,
@@ -1639,7 +1661,7 @@
             "ray_origin": [
               0.0,
               2.0,
-              5.5
+              3.9
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1648,7 +1670,7 @@
             "ray_origin": [
               0.0,
               2.0,
-              6.4
+              4.8
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1664,18 +1686,18 @@
           },
           "SG_MEMORY_01": {
             "ray_origin": [
-              -4.8,
+              -3.7,
               2.0,
-              -2.3
+              -1.6
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_02": {
             "ray_origin": [
-              4.8,
+              4.4,
               2.0,
-              -2.8
+              -1.6
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1684,25 +1706,25 @@
             "ray_origin": [
               0.0,
               2.0,
-              -4.5
+              -2.9
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_04": {
             "ray_origin": [
-              -3.3,
+              3.0,
               2.0,
-              4.2
+              2.8
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
           },
           "SG_MEMORY_05": {
             "ray_origin": [
-              3.2,
+              -2.6,
               2.0,
-              3.8
+              2.3
             ],
             "front_face_ground_y": 0.0,
             "supported_at_y_zero": true
@@ -1715,18 +1737,18 @@
       "room_id": "home_hall",
       "name": "家里 · 门厅与走廊",
       "errors": [],
-      "nodes": 760,
-      "mesh_nodes": 751,
+      "nodes": 811,
+      "mesh_nodes": 802,
       "collision_proxies": 25,
       "floor_meshes": 1,
-      "textures": 0,
+      "textures": 41,
       "preview_dimensions": [
-        1440,
-        1267
+        960,
+        840
       ],
-      "glb_bytes": 6798512,
-      "triangles": 172236,
-      "sha256": "2d14671f9248afcf43fa9090b142d737be77bbb90217ac7113c29b80593ab6b7",
+      "glb_bytes": 11314364,
+      "triangles": 186284,
+      "sha256": "a983fb12926aaad3fe553c8811f0a168d277ed74666ece8a35152d2da0ff6321",
       "plan_labels_checked": 0,
       "walkability": {
         "player_radius_m": 0.32,
@@ -1885,7 +1907,50 @@
   ],
   "protected": {
     "assets_checked": 212,
-    "changed_assets": [],
+    "changed_assets": [
+      "game/assets/interiors/art_room.glb",
+      "game/assets/interiors/canteen.glb",
+      "game/assets/interiors/classroom.glb",
+      "game/assets/interiors/football_field.glb",
+      "game/assets/interiors/home.glb",
+      "game/assets/interiors/home_balcony.glb",
+      "game/assets/interiors/home_bathroom.glb",
+      "game/assets/interiors/home_bedroom.glb",
+      "game/assets/interiors/home_dining.glb",
+      "game/assets/interiors/home_estate.glb",
+      "game/assets/interiors/home_kitchen.glb",
+      "game/assets/interiors/home_study.glb",
+      "game/assets/interiors/landmark_A.glb",
+      "game/assets/interiors/landmark_B.glb",
+      "game/assets/interiors/landmark_C.glb",
+      "game/assets/interiors/landmark_D.glb",
+      "game/assets/interiors/landmark_E.glb",
+      "game/assets/interiors/landmark_F.glb",
+      "game/assets/interiors/landmark_G.glb",
+      "game/assets/interiors/landmark_H.glb",
+      "game/assets/interiors/landmark_I.glb",
+      "game/assets/interiors/landmark_J.glb",
+      "game/assets/interiors/landmark_K.glb",
+      "game/assets/interiors/landmark_L.glb",
+      "game/assets/interiors/landmark_M.glb",
+      "game/assets/interiors/landmark_N.glb",
+      "game/assets/interiors/landmark_O.glb",
+      "game/assets/interiors/landmark_P.glb",
+      "game/assets/interiors/landmark_Q.glb",
+      "game/assets/interiors/landmark_R.glb",
+      "game/assets/interiors/landmark_S.glb",
+      "game/assets/interiors/landmark_T.glb",
+      "game/assets/interiors/landmark_U.glb",
+      "game/assets/interiors/landmark_V.glb",
+      "game/assets/interiors/landmark_W.glb",
+      "game/assets/interiors/landmark_X.glb",
+      "game/assets/interiors/landmark_Y.glb",
+      "game/assets/interiors/landmark_Z.glb",
+      "game/assets/interiors/music_room.glb",
+      "game/assets/interiors/playground.glb",
+      "game/assets/interiors/school.glb",
+      "game/assets/interiors/science_room.glb"
+    ],
     "textbooks_checked": 8,
     "changed_textbooks": []
   },

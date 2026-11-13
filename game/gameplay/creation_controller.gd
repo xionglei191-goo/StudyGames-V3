@@ -6,6 +6,8 @@ const Visual = preload("res://gameplay/creation_visuals.gd")
 const Canvas = preload("res://ui/creation_canvas.gd")
 const Style = preload("res://ui/island_theme.gd")
 const Memories = preload("res://scripts/friend_memories_controller.gd")
+const Workspace = preload("res://ui/creation_workspace.gd")
+const CraftPreview = preload("res://ui/creation_preview.gd")
 var game: Node3D
 var state: Node
 var ui: CanvasLayer
@@ -27,6 +29,8 @@ var _text_field: LineEdit
 var _series_field: LineEdit
 var _preview_root: Node3D
 var _preview_model: Node3D
+var _preview_view: SubViewportContainer
+var _workspace: RefCounted
 var _save_timer: Timer
 var _visit_actor: Node3D
 var _visit_target := ""
@@ -44,6 +48,8 @@ func setup(host: Node3D) -> void:
 	game = host
 	state = game.get_node("/root/State")
 	ui = game.ui
+	_workspace = Workspace.new()
+	_workspace.setup(self)
 	name = "LifeCreation"
 	world_items = Node3D.new()
 	world_items.name = "CraftedWorks"
@@ -78,11 +84,14 @@ func _stash() -> bool:
 	if is_instance_valid(_painter): _draft.pattern = _painter.pattern
 	_draft["source_design"] = _design_id
 	var result := transact("draft",{"design":_draft})
-	if result.ok: _dirty = false
+	if result.ok:
+		_dirty = false
+		_workspace.status(false)
 	return bool(result.ok)
 
 func _mark_dirty(_value: Variant = null) -> void:
 	_dirty = true
+	_workspace.status(true)
 	_save_timer.start()
 	if is_instance_valid(_name_field): _draft.name = _name_field.text.left(64)
 	if is_instance_valid(_text_field): _draft.text = _text_field.text.left(64)
@@ -90,22 +99,9 @@ func _mark_dirty(_value: Variant = null) -> void:
 	if is_instance_valid(_painter): _draft.pattern = _painter.pattern
 	refresh_preview()
 
-func screen(title: String, subtitle: String = "") -> bool:
+func screen(title: String, subtitle: String = "", section: String = "", editor: bool = false) -> bool:
 	if not before_close() or not game._prepare_screen(): return false
-	ui._begin("creation","journal")
-	ui._heading(title,subtitle if not subtitle.is_empty() else "%s  ·  第 %d 天  ·  %d 叶币" % [C.ROOMS.get(game.room,game._room_label()),int(state.data.day),int(state.data.coins)])
-	var nav := HBoxContainer.new()
-	ui.panel_box.add_child(nav)
-	for entry: Array in [["生活心愿",show_home],["工坊",show_recipes],["作品册",show_designs],["仓库",show_inventory],["材料",show_materials],["订单",show_orders],["小摊",show_stall],["回忆",show_memories]]:
-		button(nav,entry[0],entry[1])
-	var scroll := ScrollContainer.new()
-	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	ui.panel_box.add_child(scroll)
-	content = VBoxContainer.new()
-	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	content.add_theme_constant_override("separation",14)
-	scroll.add_child(content)
+	_workspace.screen(title,subtitle,editor,section)
 	return true
 
 func label(parent: Node, text: String, size: int = 20) -> Label:
@@ -125,9 +121,10 @@ func button(parent: Node, text: String, callback: Callable, disabled: bool = fal
 	parent.add_child(value)
 	return value
 
-func row(parent: Node = null) -> HBoxContainer:
-	var value := HBoxContainer.new()
-	value.add_theme_constant_override("separation",10)
+func row(parent: Node = null) -> HFlowContainer:
+	var value := HFlowContainer.new()
+	value.add_theme_constant_override("h_separation",10)
+	value.add_theme_constant_override("v_separation",10)
 	(parent if parent else content).add_child(value)
 	return value
 
@@ -156,33 +153,8 @@ func confirm(title: String, body: String, action: String, args: Dictionary, afte
 	button(r,"取消",after)
 
 func show_home() -> void:
-	if not screen("我的生活心愿"): return
-	if not C.available(state.data):
-		label(content,"先和熊叔走完家园的四步介绍，就可以自由设计和制作。")
-		button(content,"继续家园介绍",game.journey.show_home)
-		return
-	if not snapshot().started:
-		var box := card("把喜欢的想法，做成家里的东西", "先挑一个心愿。设计与试色免费，确认制作才使用材料。开场材料可以做出桌子、小凳和招牌。")
-		button(box,"领取材料，开始创作",func():
-			if transact("start").ok: show_home()
-		)
-		return
-	var names := {"reading":"布置自己的阅读角", "collection":"做一套自己的作品", "stall":"试开苹果点心摊"}
-	for id: String in names:
-		var box := card(("正在做 · " if snapshot().wish == id else "") + names[id])
-		button(box,"选择这个心愿",func():
-			if transact("wish",{"id":id}).ok: show_home()
-		)
-	label(content,"下一步：先在工坊保存设计，再确认制作。到客厅或小院摆好作品，就能邀请朋友来坐坐。",19)
-	var r := row()
-	button(r,"去客厅",travel.bind("home",show_home))
-	button(r,"去小院",travel.bind("home_estate",show_home))
-	button(r,"邀请朋友",show_visitors)
-	button(r,"邻里作品角",travel.bind("landmark_F",show_community))
-	button(content,"回家休息，开始新的一天",func():
-		await travel("home",show_home)
-		if state.next_day(): show_home()
-	)
+	if not screen("我的生活心愿","把小小的喜欢，慢慢变成生活。","心愿"): return
+	_workspace.home()
 
 func travel(room_id: String, after: Callable) -> void:
 	if not before_close(): return
@@ -191,167 +163,50 @@ func travel(room_id: String, after: Callable) -> void:
 
 func show_recipes() -> void:
 	if not snapshot().started: show_home(); return
-	if not screen("工坊 · 先设计，再制作"): return
-	if not snapshot().draft.is_empty():
-		var source := str(snapshot().draft.get("source_design",""))
-		button(content,"继续上次草稿",edit.bind(source if snapshot().designs.has(source) else "",snapshot().draft.duplicate(true)))
-	for id: String in C.RECIPES:
-		var r: Dictionary = C.RECIPES[id]
-		var box := card(r.name + "  ·  " + r.en,C.cost_text(id,state.data))
-		if snapshot().recipes.has(id): button(box,"设计这件作品",edit.bind("",C.blank_design(id)))
-		else:
-			var hint := "做成第一件作品后开放。" if id in ["rug","basket"] else "完成作品借展或招待后开放。"
-			if id in ["cake","plate"]: hint = "在 C 烘焙坊跟米洛学习。"
-			if id == "vase": hint = "在 F 花园跟花婆婆学习。"
-			label(box,hint,17)
-	var r := row()
-	button(r,"找米洛学烘焙",travel.bind("landmark_C",show_materials))
-	button(r,"找花婆婆学花艺",travel.bind("landmark_F",show_materials))
+	if not screen("今天，想做点什么？","选一件小物，从喜欢的颜色开始。","工坊"): return
+	_workspace.recipes()
 
 func edit(id: String, design: Dictionary) -> void:
-	if not screen("设计工坊","画笔、填色、橡皮、印章和文字都可以自由使用；修改后自动保留草稿。 "): return
-	ui.current_panel = "creation_editor"
-	ui._layout()
+	if not screen("设计 · "+str(C.RECIPES[design.recipe].name),"试色和修改免费，草稿会自动保留。","工坊",true): return
 	_editing = true
 	_draft = design.duplicate(true)
 	_design_id = id
 	_dirty = true
-	var columns := row()
-	var left := VBoxContainer.new()
-	left.custom_minimum_size.x = 350
-	columns.add_child(left)
-	_painter = Canvas.new()
-	_painter.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST
-	_painter.pattern = _draft.pattern
-	left.add_child(_painter)
-	_painter.edited.connect(_mark_dirty)
-	var palette := GridContainer.new()
-	palette.columns = 8
-	left.add_child(palette)
-	for n in range(16):
-		var swatch := button(palette,"●",func(): _painter.ink = n)
-		swatch.custom_minimum_size = Vector2(38,32)
-		swatch.add_theme_stylebox_override("normal",Style.box(Style.PAPER,7,4))
-		swatch.add_theme_stylebox_override("hover",Style.box(Style.SOFT,7,4))
-		swatch.add_theme_color_override("font_color",Color(C.PALETTE[n]))
-		swatch.tooltip_text = "画笔颜色 %d" % (n+1)
-	var tools_row := row(left)
-	for entry: Array in [["画笔","brush"],["填色","fill"],["橡皮","erase"]]:
-		button(tools_row,entry[0],func(): _painter.tool = entry[1])
-	button(tools_row,"撤销",_painter.undo)
-	var stamps := OptionButton.new()
-	for key: String in snapshot().stamps: stamps.add_item(C.STAMPS[key])
-	_painter.stamp = snapshot().stamps[0]
-	stamps.item_selected.connect(func(index: int): _painter.stamp = snapshot().stamps[index]; _painter.tool = "stamp")
-	left.add_child(stamps)
-	var middle := VBoxContainer.new()
-	middle.custom_minimum_size.x = 280
-	columns.add_child(middle)
-	label(middle,"作品预览",18)
-	build_preview(middle)
-	button(middle,"转一转预览",func():
-		if is_instance_valid(_preview_model): _preview_model.rotation.y += PI/4
-	)
-	label(middle,"图案会保留在实物表面。保存设计后，可以制作多件，也可以继续修改。",17)
-	var right := VBoxContainer.new()
-	right.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-	columns.add_child(right)
-	_name_field = field(right,"作品名字",_draft.name)
-	_text_field = field(right,"写在作品上的文字",_draft.text)
-	_series_field = field(right,"收入哪个系列（可留空）",_draft.series)
-	var choices := row(right)
-	var colors := OptionButton.new()
-	for n in range(16): colors.add_item("配色 %d" % (n+1))
-	colors.select(int(_draft.color))
-	colors.item_selected.connect(func(index: int): _draft.color=index; _mark_dirty())
-	choices.add_child(colors)
-	var shapes := OptionButton.new()
-	shapes.add_item("款式一 · 圆形")
-	shapes.add_item("款式二 · 方形")
-	shapes.select(int(_draft.shape))
-	shapes.item_selected.connect(func(index: int): _draft.shape=index; _mark_dirty())
-	choices.add_child(shapes)
-	var trims := OptionButton.new()
-	for text: String in ["素面部件","金色装饰","青色装饰"]: trims.add_item(text)
-	trims.select(int(_draft.trim))
-	trims.item_selected.connect(func(index: int): _draft.trim=index; _mark_dirty())
-	right.add_child(trims)
-	var repeat_box := CheckBox.new()
-	repeat_box.text = "四格重复图案"
-	repeat_box.button_pressed = bool(_draft.repeat)
-	repeat_box.toggled.connect(func(value: bool): _draft.repeat=value; _mark_dirty())
-	right.add_child(repeat_box)
-	if _draft.recipe == "frame":
-		var photo_path := str(state.data.journey.u1.photo.details.get("image_path",""))
-		if not photo_path.is_empty() and FileAccess.file_exists(photo_path):
-			button(right,"装入我们的第一张合照",func(): _draft.keepsake=photo_path; _mark_dirty())
-		button(right,"使用自己的绘画",func(): _draft.keepsake=""; _mark_dirty())
-	label(ui.panel_box,C.cost_text(_draft.recipe,state.data),18)
-	var actions := row(ui.panel_box)
-	button(actions,"保存设计",save_design.bind(false))
-	button(actions,"另存一份",save_design.bind(true))
-	button(actions,"保存后确认制作",func():
-		var saved := save_design(false)
-		if not saved.is_empty(): craft_confirm(saved)
-	)
-	button(actions,"预览其他表面",show_surface_choices)
+	_workspace.editor()
+	_workspace.status(true)
 	_save_timer.start()
 
 func field(parent: Node, title: String, value: String) -> LineEdit:
 	label(parent,title,16)
 	var input := LineEdit.new()
 	input.max_length = 64
+	input.custom_minimum_size.y = 44
 	input.add_theme_font_size_override("font_size",18)
-	input.add_theme_stylebox_override("normal",Style.box(Style.SOFT,8,8))
-	input.add_theme_stylebox_override("focus",Style.box(Style.SOFT,8,8))
-	input.add_theme_stylebox_override("read_only",Style.box(Style.SOFT,8,8))
+	input.add_theme_stylebox_override("normal",Workspace.flat(Style.PAPER,8,8))
+	var focus := Workspace.flat(Color.TRANSPARENT,8,0)
+	focus.border_color = Style.GOLD
+	focus.set_border_width_all(2)
+	input.add_theme_stylebox_override("focus",focus)
+	input.add_theme_stylebox_override("read_only",Workspace.flat(Style.SOFT,8,8))
 	input.text = value
 	input.text_changed.connect(_mark_dirty)
 	parent.add_child(input)
 	return input
 
 func build_preview(parent: Node) -> void:
-	var container := SubViewportContainer.new()
-	container.custom_minimum_size = Vector2(300,190)
-	container.stretch = true
-	parent.add_child(container)
-	var viewport := SubViewport.new()
-	viewport.size = Vector2i(400,240)
-	viewport.own_world_3d = true
-	viewport.render_target_update_mode = SubViewport.UPDATE_ALWAYS
-	container.add_child(viewport)
-	_preview_root = Node3D.new()
-	viewport.add_child(_preview_root)
-	var camera := Camera3D.new()
-	camera.projection = Camera3D.PROJECTION_ORTHOGONAL
-	camera.size = 2.9
-	camera.position = Vector3(2.5,2.8,4)
-	_preview_root.add_child(camera)
-	camera.look_at(Vector3(0,0.65,0))
-	var light := DirectionalLight3D.new()
-	light.rotation_degrees = Vector3(-45,-30,0)
-	light.light_energy = 1.5
-	_preview_root.add_child(light)
-	var environment := WorldEnvironment.new()
-	environment.environment = Environment.new()
-	environment.environment.background_mode = Environment.BG_COLOR
-	environment.environment.background_color = Color("eee7d9")
-	environment.environment.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
-	environment.environment.ambient_light_color = Color.WHITE
-	environment.environment.ambient_light_energy = 0.7
-	_preview_root.add_child(environment)
+	_preview_view = CraftPreview.new()
+	_preview_view.name = "CraftPreview"
+	_preview_view.custom_minimum_size = Vector2(0,160)
+	parent.add_child(_preview_view)
+	_preview_root = _preview_view.stage
 	refresh_preview()
 
+func turn_preview() -> void:
+	if is_instance_valid(_preview_view): _preview_view.turn()
+
 func refresh_preview() -> void:
-	if not is_instance_valid(_preview_root) or _draft.is_empty(): return
-	var angle := 0.0
-	if is_instance_valid(_preview_model):
-		angle = _preview_model.rotation.y
-		_preview_root.remove_child(_preview_model)
-		_preview_model.queue_free()
-	_preview_model = Visual.build(_draft)
-	_preview_model.rotation.y = angle
-	_preview_root.add_child(_preview_model)
+	if not is_instance_valid(_preview_view) or _draft.is_empty(): return
+	_preview_model = _preview_view.show_design(_draft)
 
 func save_design(copy: bool) -> String:
 	if not _stash(): return ""
@@ -393,7 +248,7 @@ func thumbnail(parent: Node, d: Dictionary) -> void:
 
 func show_designs() -> void:
 	if not snapshot().started: show_home(); return
-	if not screen("我的作品册","设计一直保留；改版后可选择应用到自己拥有的实物。"): return
+	if not screen("我的作品册","设计一直保留；改版后可选择应用到自己拥有的实物。","作品册"): return
 	if snapshot().designs.is_empty(): button(content,"去设计第一件作品",show_recipes)
 	for id: String in snapshot().designs:
 		var d: Dictionary = snapshot().designs[id]
@@ -406,7 +261,7 @@ func show_designs() -> void:
 
 func show_inventory() -> void:
 	if not snapshot().started: show_home(); return
-	if not screen("我的作品 · 实物仓库"): return
+	if not screen("我的作品 · 实物仓库","把做好的作品摆进家里，也可以赠给朋友。","仓库"): return
 	var where_names := {"inventory":"仓库", "placed":"家园", "stall":"小摊陈列", "community":"邻里借展", "gifted":"已赠送", "sold":"已售出", "consumed":"已品尝", "recycled":"已回收", "delivered":"已送达"}
 	if snapshot().items.is_empty(): button(content,"去工坊做第一件作品",show_recipes)
 	var legacy := int(state.data.cakes) - Model.owned_cakes(state.data)
@@ -478,7 +333,7 @@ func show_table_choices(id: String) -> void:
 
 func show_materials() -> void:
 	if not snapshot().started: show_home(); return
-	if not screen("材料仓库","同一天重复进出不会刷新；回家休息后恢复一批。"): return
+	if not screen("材料仓库","看看手边有什么，再去岛上找一些新材料。","材料"): return
 	if game.room in ["landmark_C","landmark_F"]:
 		button(content,"请米洛陪做苹果点心" if game.room == "landmark_C" else "请花婆婆陪做花瓶",teach)
 	for id: String in C.MATERIALS:
@@ -509,7 +364,7 @@ func teach() -> void:
 
 func show_orders() -> void:
 	if not snapshot().started: show_home(); return
-	if not screen("居民生活订单","不开摊也能送作品给需要的人；接单和取消不消耗材料。"): return
+	if not screen("居民生活订单","把作品送到需要它的朋友手里。","订单"): return
 	for id: String in snapshot().orders:
 		var order: Dictionary = snapshot().orders[id]
 		var spec: Dictionary = C.ORDERS[int(order.kind)]
@@ -536,7 +391,7 @@ func show_orders() -> void:
 
 func show_stall() -> void:
 	if not snapshot().started: show_home(); return
-	if not screen("小院手作摊","营业可随时停下；顾客不会因等待离开。未售作品始终属于你。"): return
+	if not screen("小院手作摊","挑好作品，等一位喜欢它的客人。","小摊"): return
 	var s: Dictionary = snapshot().stall
 	label(content,"%s · %d 个陈列位 · 本次 %d / 3 位顾客 · 收入 %d 叶币" % ["营业中" if s.open else "已收摊",int(s.slots),int(s.served),int(s.income)])
 	if game.room != "home_estate":
@@ -574,7 +429,7 @@ func show_community() -> void:
 	button(content,"邀请朋友来看",show_visitors)
 
 func show_memories() -> void:
-	if not screen("生活回忆","这里只记下实际制作、送达、购买和使用过的作品。"): return
+	if not screen("生活回忆","留住一起动手、分享和相聚的小日子。","回忆"): return
 	var memories: Array = snapshot().memories.duplicate()
 	memories.reverse()
 	if memories.is_empty(): label(content,"把一件作品放进生活，第一段共同经历会留在这里。")
@@ -655,7 +510,7 @@ func room_changed() -> void:
 	clear_visitor()
 	clear_customer()
 	_last_world_signature = ""
-	refresh_world()
+	await refresh_world()
 
 func prepare_room_change() -> void:
 	clear_visitor()
@@ -676,6 +531,7 @@ func refresh_world() -> void:
 	signature += JSON.stringify(snapshot().stall)
 	if signature == _last_world_signature: return
 	_last_world_signature = signature
+	var had_colliders := not world_items.find_children("*", "CollisionObject3D", true, false).is_empty()
 	for child: Node in world_items.get_children():
 		world_items.remove_child(child)
 		child.queue_free()
@@ -715,10 +571,12 @@ func refresh_world() -> void:
 				Visual.cylinder(world_items,0.25,0.25,pos+Vector3(0,0.12,0),Color("9fbb7d"))
 				add_interaction("creation:material:"+material,str(C.MATERIALS[material].name)+"材料点",pos)
 	game.feedback.bind_interactions(game.interactions)
-	game.navigation_cache.erase(game.room)
-	if not game.loading_room and game.nav_ready:
-		await get_tree().physics_frame
-		if not game.loading_room: await game._build_navigation()
+	var has_colliders := not world_items.find_children("*", "CollisionObject3D", true, false).is_empty()
+	if had_colliders or has_colliders:
+		game.navigation_cache.erase(game.room)
+		if not game.loading_room and game.nav_ready:
+			await get_tree().physics_frame
+			if not game.loading_room: await game._build_navigation()
 
 func add_interaction(id: String, title: String, pos: Vector3) -> void:
 	game.interactions.append({"id":id,"label":title,"position":pos,"radius":2.4,"type":"creation"})

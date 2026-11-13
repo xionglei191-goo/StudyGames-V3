@@ -88,11 +88,11 @@ static func build_daily_commission(state: Node, npc_id: String = "npc_bear_uncle
 
 	# Deterministic shuffle based on entry_id hash so choices don't jump on redraw
 	var options: Array[Dictionary] = [
-		{"label": "🌟 %s" % word_en, "word": word_en, "correct": true, "entry_id": str(target.entry_id)}
+		{"label": "★ %s" % word_en, "word": word_en, "correct": true, "entry_id": str(target.entry_id)}
 	]
 	for d: Dictionary in distractors:
 		options.append({
-			"label": "🌿 %s" % str(d.spelling_display),
+			"label": "· %s" % str(d.spelling_display),
 			"word": str(d.spelling_display),
 			"correct": false,
 			"entry_id": str(d.entry_id)

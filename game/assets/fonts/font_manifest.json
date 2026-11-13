@@ -38,71 +38,159 @@
   "input_files": [
     {
       "path": "game/scripts/blender_materials.gd",
-      "sha256": "9efd02d75120dff23ade25e68d33452a5809e37908df16b6f2b0a266a7dc5c01"
+      "sha256": "17662bb97a26e9e7c894f4f571eaa8f2c418f1f1563e66d950b8990a28879838"
+    },
+    {
+      "path": "game/scripts/discovery_controller.gd",
+      "sha256": "05d3467a7f757ff8b89f6a56e305c0be9fbf6d53aba9b97fd64049bc2af85383"
+    },
+    {
+      "path": "game/scripts/discovery_progress.gd",
+      "sha256": "ddb03c03e1a9557576d4c4dc99599c9bc71a30454e6e4e4e2abf0c1f20bb6683"
     },
     {
       "path": "game/scripts/feedback_audio.gd",
       "sha256": "ad67003eada371aad3b4f5642961ef521b86aa9425494498c453869180ae95bc"
     },
     {
+      "path": "game/scripts/friend_corner_controller.gd",
+      "sha256": "af15e14f2ab0ed073cca9f36666df4d288e35937b29040acdf7e2e026ad0e732"
+    },
+    {
+      "path": "game/scripts/friend_corner_progress.gd",
+      "sha256": "94c7f919f923dc3f90bb4e3fb207b8035dfc9e1dd0a7704fca57b74f5a42804a"
+    },
+    {
+      "path": "game/scripts/friend_memories_controller.gd",
+      "sha256": "7326cc22f8161f7b1fe18a1bb6c260954478f224b94ead6f36f347955339730d"
+    },
+    {
       "path": "game/scripts/game_state.gd",
-      "sha256": "cc3583817c6ec0ced8c90d2287a0d39706927a46ddc0efa34f128a44ffc8db1c"
+      "sha256": "07402c261bf6ca9f83be0987068ba34e1d561059488efbc36817bf276c90346e"
+    },
+    {
+      "path": "game/scripts/home_catalog.gd",
+      "sha256": "6f82cffd20f5dfb7ba05da4772daccedfa7dd8dad0d993f0b757ddeb5157b271"
+    },
+    {
+      "path": "game/scripts/home_controller.gd",
+      "sha256": "80b8476244852422e497177659587b0851a358474e1e890b13db48288047247d"
+    },
+    {
+      "path": "game/scripts/home_visual_refinement.gd",
+      "sha256": "f5a65a70869c9c5a1c8b0ab3792b446c0b541cde1a48092655729f68def85180"
     },
     {
       "path": "game/scripts/imported_interior.gd",
-      "sha256": "a23e1aefce617978878f90f276584c742956dfe7257be58ffcfd83e9562c9a93"
+      "sha256": "a71c97327bdd4898ed4a411ef5b731582b9ef65ba5fae1c459d3ca203bd0e783"
     },
     {
       "path": "game/scripts/imported_world.gd",
-      "sha256": "7323b6e07b4bc74adda4d36a748d816d82d099117224775a57922cdd941b59b5"
+      "sha256": "692113b0cd54157c8199b6c945b6da34cc7796480ae0922aca0bc7273f2f7d47"
+    },
+    {
+      "path": "game/scripts/interaction_layout.gd",
+      "sha256": "c6f6fe436ed3afbd7231ba89007c2c2c77cb1425b367f1f5468dbd718c35fc2a"
+    },
+    {
+      "path": "game/scripts/interaction_targets.gd",
+      "sha256": "56343c87896683ba25088c2295fdabeaeeb4caa7df8760395922a9fcb19f2583"
     },
     {
       "path": "game/scripts/journey_controller.gd",
-      "sha256": "e06803803a6d8f903c563ba151b4d4ad6879a6c0650e7088395d117313c91505"
+      "sha256": "9930515a34a4b306b2e29f0e80259a8cbdabec3745e8a13fbc4e7c47b961620b"
     },
     {
       "path": "game/scripts/journey_progress.gd",
-      "sha256": "91a085e3c7a22f399121ac3046a4cc3064a91bc93a76db5b03a577f70459fdda"
+      "sha256": "ffe9edce970242d2cba907fdaa43a771ec56a9456030d4a77bb5e1d4003e7299"
     },
     {
       "path": "game/scripts/living_world.gd",
-      "sha256": "056c687a2443b1af98ed5a0999adbe60bb22c7cf1dad474ebd0657b62491e45c"
+      "sha256": "c1046db93a74fdd3ee512efabf338910cf0a747d35250e27110a8a702ebcc356"
     },
     {
       "path": "game/scripts/main.gd",
-      "sha256": "94466b1c491d11b3da48d6e8020dcb1b9764b51fcbc97b59109b802b87a1fce1"
+      "sha256": "38f03535a80861316d9968fc08e1eaf127f35ca663a3132e78876c9c69afa9bb"
     },
     {
       "path": "game/scripts/memory_event_sink.gd",
       "sha256": "34f0813442c20be6d3b616d87c9a1111951cccf6e7cb136aa5d7f0a7c811d834"
     },
     {
+      "path": "game/scripts/online_client.gd",
+      "sha256": "de4b7ad290a6fd4889dc1b15865d22092d8f2f6b712773098132255306f0f43e"
+    },
+    {
+      "path": "game/scripts/online_friend.gd",
+      "sha256": "915c393ae9c564085577189dd2985833328748c036dfc761d08b751c98b4294c"
+    },
+    {
+      "path": "game/scripts/p2_journey_controller.gd",
+      "sha256": "ced2884598e9049bdd5aafb8c1aaa30fcc6a9b0d5d2a3ce176dd1fccedc82f14"
+    },
+    {
+      "path": "game/scripts/p2_progress.gd",
+      "sha256": "585388b936d7c7829bd50118d7a5168eb227bde5c10fbb96f7c571deabc86c12"
+    },
+    {
+      "path": "game/scripts/parent_observations.gd",
+      "sha256": "67774a105ef091c6a8d0eccd1cbde08fc88cd5330db13f4da1d4d3a923cb0871"
+    },
+    {
+      "path": "game/scripts/party_controller.gd",
+      "sha256": "e344faf55add05bb9bdf61c24469cc6ad9b1274ff78fbc971baf523fdee69789"
+    },
+    {
+      "path": "game/scripts/party_progress.gd",
+      "sha256": "e9077a7191147dbb63ab30cf114cda1a1d871522b9bca302bb896456fae914a3"
+    },
+    {
       "path": "game/scripts/player.gd",
-      "sha256": "bfefe03a28152ecfaf4d693d1a29635eaa01e398849773aa70a2f676230f4659"
+      "sha256": "f734963a880b613076b5ab429095211d558a7e86f96579bd64aff0cfc0a3feb9"
     },
     {
       "path": "game/scripts/release_smoke.gd",
-      "sha256": "823868db263f249938b0788ab9a258ffa4e6d7678c5feeaa932f09e85286bfff"
+      "sha256": "679a36e3cb0200339b4360b49a7e119ed8fe8114cbd5c4284ef301e5e9d46e33"
+    },
+    {
+      "path": "game/scripts/review_controller.gd",
+      "sha256": "385fbcf6d6a2c2a9bab3199894a45c4a294e7104c699cf5a728c1e0887a813ff"
+    },
+    {
+      "path": "game/scripts/review_progress.gd",
+      "sha256": "f3aecca7aa5edd3e3b819a723369b570a00587f200a0865043506142531432d8"
+    },
+    {
+      "path": "game/scripts/shared_profile.gd",
+      "sha256": "aeed331a6df88bb07a5b6a7d3b47f4997738451c2b85b16f9520456845bae596"
     },
     {
       "path": "game/scripts/textbook_actor.gd",
-      "sha256": "550347d1b3e061475c6ae89fd1262369e851101c9505a2b8a8005239938537b6"
+      "sha256": "da8b4981635110d180c13a973eec6de315fb4facad461f66deb5d170bcf49c0b"
     },
     {
       "path": "game/scripts/ui.gd",
-      "sha256": "1e00820c92df5894f84c53c37871c252ade2c4ace75e728feb20c31822da8de1"
+      "sha256": "4cafe4809772770be4eb3e6719710203e7b9c73d19de1924718c69908ada82b8"
+    },
+    {
+      "path": "game/scripts/web_rooms.gd",
+      "sha256": "80f2d585984892ed1c1e398599f176c7da8978cb67a2a84ec73ca9708d051a5d"
+    },
+    {
+      "path": "game/scripts/world_art.gd",
+      "sha256": "b377d66dc743476bd8156105dcf7b7dec9c41fcf2ecb88d61c57e07a9761bbeb"
     },
     {
       "path": "game/scripts/world_builder.gd",
-      "sha256": "fe7c6c7fe0cccc7a7add142be36a81c8ae4c02ec5d7950e3a5e82d1e8a11d545"
+      "sha256": "60d329d5b6f0a96da5c926eb31592cea0c16aa4a558bc00e60ca5108d2a697f4"
     },
     {
       "path": "game/scripts/world_feedback.gd",
-      "sha256": "39117f7f1cc26d2ad551fe176d01154e73902f79cb9f5420786db09bf5c76bc1"
+      "sha256": "6836640958041e10ca7571187c3d904b20d024b8cac101d4c92f10e861d70aa4"
     },
     {
       "path": "game/ui/activity_board.gd",
-      "sha256": "ee127b5734e8330e3f90d09f93de9cec157429b45da974775472fb835a9e527c"
+      "sha256": "ba9740039243416cf36f17612a1780bb0d6a7421b045ea56c83b20508b861aba"
     },
     {
       "path": "game/ui/art_canvas.gd",
@@ -110,39 +198,239 @@
     },
     {
       "path": "game/ui/character_preview.gd",
-      "sha256": "122a4f5707a3d0ef941b92dd9aa26e5fc349258fd6e7e19d78a607ca414e2994"
+      "sha256": "281c9422ca36723e0cc853e1050ae77e44c6def12ef4e069bf463383796651ea"
+    },
+    {
+      "path": "game/ui/creation_canvas.gd",
+      "sha256": "a43f96d8683f99a5c6970558d32e15b23c44629d55894bcf8653550ab0e60f1e"
+    },
+    {
+      "path": "game/ui/creation_preview.gd",
+      "sha256": "791038c5720ea2478f006c6fe891171deda45692ee34861834fd1f06a2d556da"
+    },
+    {
+      "path": "game/ui/creation_workspace.gd",
+      "sha256": "cd8c1dcf21e91b1a2386942ce567906549177049d1c2426af22bd2448153ef1e"
+    },
+    {
+      "path": "game/ui/discovery_artwork.gd",
+      "sha256": "a6447c4e9ce8917b80bac5c94813d0b9f1068cb95fc5a5f5055024f87f1bc24f"
+    },
+    {
+      "path": "game/ui/friend_corner_board.gd",
+      "sha256": "c8b1a1a27fac7b66f1c2d567cd12f903c4a90e1b82f6c852b8cd825ec1a857a4"
+    },
+    {
+      "path": "game/ui/household_hud.gd",
+      "sha256": "379f90569226bfd6fb17fc4b6b88633cc144358fa289bbcd7a8278277abb2819"
+    },
+    {
+      "path": "game/ui/island_hud.gd",
+      "sha256": "fd9350beaa0a3471a6e738f38b45afb531888f1434fb02dd80239b1abb71976c"
     },
     {
       "path": "game/ui/island_theme.gd",
-      "sha256": "b51583ce9118f9d0c5a6217aa4c558bbd060208a7942578a7321e9fca3e1f091"
+      "sha256": "73b52ec27b29d08a64ca4146e8b24832cc3fd8641000d1edffb4726f7b69de6a"
+    },
+    {
+      "path": "game/ui/landmark_activity_stage.gd",
+      "sha256": "449c460172835f290347652f22c29cbb93a041d829f10d5f8ac361cc7307ad8c"
+    },
+    {
+      "path": "game/ui/memory_card.gd",
+      "sha256": "e8cf996d938725817428b9d0e85c130c8cc3d9e31e9eff92ed2db389e46abcac"
+    },
+    {
+      "path": "game/ui/memory_card_content.gd",
+      "sha256": "4ba1eebf080e48f5fe4a7816d47175baa907f8ba7597d30101d902a4bb277dbd"
     },
     {
       "path": "game/ui/memory_story.gd",
-      "sha256": "d232b12bf341f34e2cf1c328a4e6fd001c012351912ae95248ba14224538368d"
+      "sha256": "939710c12f7e29bcca985b0494810ba0caa0c97c2bea750fe9eaf899364f07dd"
     },
     {
       "path": "game/ui/memory_story_content.gd",
-      "sha256": "bac48d893c881c7885cd48cf2a971526f16ce9d9d474b784ad1c8dcd7b58a253"
+      "sha256": "c77241940aa5819c76d98ae6fbc6ed788cef2fcd31565d13a1a10ecab41d6896"
     },
     {
       "path": "game/ui/memory_story_stage.gd",
-      "sha256": "bc83408d387d08afae64ea9a4e899644f861e61ccbe5d6efe7179e589b844666"
+      "sha256": "a091f187633c8a84887f4832ada3e89701b4e56cb7515c258cc40258bc04d2b5"
+    },
+    {
+      "path": "game/ui/party_stage.gd",
+      "sha256": "02cec49e9a43ac5010a253c63eb0c8001cf9cfecee69262bdd0042057600c0c7"
     },
     {
       "path": "game/ui/prologue_activity.gd",
-      "sha256": "bd086ccdaba3e99045a98efdb538650afa8f4cd03959de725affe5fc24efba90"
+      "sha256": "482f15881df19986fcef5d3dd21a0a01601d711507dc45fa3ca145b57018de71"
+    },
+    {
+      "path": "game/ui/travel_book_view.gd",
+      "sha256": "b7b0b280b3f53c46bd8d13030865d07fc846ef10e0977ad4e3cabce6e747042b"
     },
     {
       "path": "game/ui/world_map.gd",
-      "sha256": "444e9e3f4136a695e1b473b0a348caf7e971f01a1066c11dd2169ca990961302"
+      "sha256": "1c84323a4fb328b3128a79d5cbc5f1b8886a3e82ffade592a8e6f8454a1ef9ae"
+    },
+    {
+      "path": "game/ui_v4/chapter_atlas_view.gd",
+      "sha256": "a265c71102083504c8e02b9d5bba17ab0ebc4334e42a8856361687b8d95653df"
+    },
+    {
+      "path": "game/ui_v4/cozy_wardrobe_studio.gd",
+      "sha256": "c46de2d56b92840dd0d3310f1107306366f75e405ce27701aadbcded3d59de3d"
+    },
+    {
+      "path": "game/ui_v4/diegetic_dialogue.gd",
+      "sha256": "b5d026091271dd1de714f40168088538657fe4570554c9a9fc17d7924101cd9d"
+    },
+    {
+      "path": "game/ui_v4/parent_ai_portal.gd",
+      "sha256": "5261e0153fd9b347cf386aec511c60fb54f202374b2e63d704ef4d9367365537"
+    },
+    {
+      "path": "game/theater/popup_book_theater.gd",
+      "sha256": "85f8757a7fb52e58516cc440cf146ceea7ebd354a88646d86b07949c42012eae"
+    },
+    {
+      "path": "game/gameplay/chapter_thematic_play.gd",
+      "sha256": "e739458113a73648fcedb45e08e1fdaa23aebe42d0d615257e89ec25d9ebb295"
+    },
+    {
+      "path": "game/gameplay/creation_catalog.gd",
+      "sha256": "4ddbaf8d7016d1611219c876427ed8128f10b5eeb7ac392e3634c7e60fc6a48c"
+    },
+    {
+      "path": "game/gameplay/creation_controller.gd",
+      "sha256": "3cc3db8255bd5cb8f22986540b2d925ea649589d3fd05672051428e3d955e1cf"
+    },
+    {
+      "path": "game/gameplay/creation_state.gd",
+      "sha256": "516c34ad9620effc951cb865fc1ca33caa9ade3cb6818e6081e2439a32ce97f3"
+    },
+    {
+      "path": "game/gameplay/creation_visuals.gd",
+      "sha256": "656066574c2f00a7e3be5e4348afffcd21f8bea4e08299652e4f7d2f04df707b"
+    },
+    {
+      "path": "game/gameplay/curriculum_quest_director.gd",
+      "sha256": "d4e26b26c8e07f2fbbc78099b89c01eea71e2cbcbd1402416e01f4781e92dc33"
+    },
+    {
+      "path": "game/gameplay/free_grid_decor_studio.gd",
+      "sha256": "ad0b71a7717e412168c4f493ff5bdb2afd44c26f286d97c3a79edb9c6a72dc5c"
+    },
+    {
+      "path": "game/gameplay/memory_palace_loci_3d.gd",
+      "sha256": "36e170a4acd9467aa5a25509b811e096d75adfe082212ebdfa7a3dd4030e6247"
+    },
+    {
+      "path": "game/gameplay/morning_wake_mailbox.gd",
+      "sha256": "392d2c29601c7be0d93242596bbc8bface60647bb0bcf96cd03208b4bdd2f4db"
+    },
+    {
+      "path": "game/gameplay/situational_roleplay.gd",
+      "sha256": "bce83b8d2935b8e53fc5deaf5d0d91e79032eb5db38efce02155525ba3287e59"
+    },
+    {
+      "path": "game/gameplay/tactile_life_quests.gd",
+      "sha256": "026611c3cce671fbf90fc26b3377d108f391a9b2021c454065ab7f027742c5b2"
+    },
+    {
+      "path": "game/gameplay/unit_storyline_director.gd",
+      "sha256": "c6069b585c9e1220e33c2cf03a8eaa85ef8140a95ddaf39f05b61aabeb432a9e"
     },
     {
       "path": "game/activities/football_practice.gd",
       "sha256": "a987b73b787b706883d791d758dadd5297d9f58ba17a40580ec0a64bda32936d"
     },
     {
+      "path": "game/activities/household_activity.gd",
+      "sha256": "4b2dfafdf2b7fc88b5ba56a8d16d5e4f4ddce81b1aaaaebb7ad19f3ef28a7bb4"
+    },
+    {
+      "path": "game/activities/household_props.gd",
+      "sha256": "127200afdf7fdf2b4df5dd46cafbbdef0c65c28363680a3f9739a34b1be64b87"
+    },
+    {
       "path": "game/activities/orchard_pick.gd",
-      "sha256": "f90aa2448b335948235825f83ad8650ba78ad932878dce679c9e6493b65ccc6b"
+      "sha256": "def87b9baa6c2f6492efa2212f054f4c9f9fa291d5c4a2299cb4f0c745ab0b86"
+    },
+    {
+      "path": "game/actors/bake_character_art_v3.gd",
+      "sha256": "e8c3eb4b57fbd2c286f491eaacec5d8a6939454cd1bb284f12dd31760b0c78f5"
+    },
+    {
+      "path": "game/actors/bake_tripo_characters.gd",
+      "sha256": "df0b038aa26224ca74d9b5131a6c2e82bd7f64300bba4d6eec8ab1f582b64a5c"
+    },
+    {
+      "path": "game/actors/bake_tripo_grounding.gd",
+      "sha256": "d72f42f92656169205db1f8654fabb50b0af78ebc475d1ee8580625cf2715d7c"
+    },
+    {
+      "path": "game/actors/build_p1_animation_libraries.gd",
+      "sha256": "3b5fae470ea31d5c35c2c2e8c36584464e73fedeea1562264df323e96d9f8b6e"
+    },
+    {
+      "path": "game/actors/building_resident_catalog.gd",
+      "sha256": "2859621f5001d42c96fd4a6b2085f041f9f6fde4e06df08f340d288ec962191d"
+    },
+    {
+      "path": "game/actors/capture_p1_actor_actions.gd",
+      "sha256": "d03e81e088b320fc24f978fca98835b05a89eaff629d1f04fcb613e0e4e02efa"
+    },
+    {
+      "path": "game/actors/character_art_v3.gd",
+      "sha256": "51606ea4ac07c3f93e748a10c62268cdb207ab491cde59594afd1dac4f246c81"
+    },
+    {
+      "path": "game/actors/expansion_animation.gd",
+      "sha256": "9bd5196599a907ecf2298390dede0251bbd022871406bd7d622763ffcbc44da5"
+    },
+    {
+      "path": "game/actors/export_tripo_action_contract.gd",
+      "sha256": "379ec1786a92d080eaef3f93eca2eeb8237c4bcc965543636e7405664f55a2ef"
+    },
+    {
+      "path": "game/actors/foot_support.gd",
+      "sha256": "44ccd417b021d11bca4976451639ad92b0b77f8598937a2edc6ae72d282cca76"
+    },
+    {
+      "path": "game/actors/modular_wardrobe.gd",
+      "sha256": "a3fa80437a245094512adf82d6a34c0ffdc560a60af4e99d9212e1bbb8181126"
+    },
+    {
+      "path": "game/actors/p1_action_source.gd",
+      "sha256": "b8ddbb75a8e38105b063015ecfde0901919716f39b596febcbcf6dfb9ab19293"
+    },
+    {
+      "path": "game/actors/player_visual_v3.gd",
+      "sha256": "e708418ee8a1711d7340361f4b08d247daf33679062357e1067c51a4c81d7354"
+    },
+    {
+      "path": "game/actors/seated_pose.gd",
+      "sha256": "7c5a5a7cb17876e30ad23f403ec898b9a15662bd1e919baf6bbf930d21371124"
+    },
+    {
+      "path": "game/actors/tripo_prop_library.gd",
+      "sha256": "f2717504fa6062ec7896fa6dddf75ee94a7ac41f60f0468a107760fac5aba453"
+    },
+    {
+      "path": "game/actors/walk_gait.gd",
+      "sha256": "0c67a06a852897174e2982c5b088caff9fb10983351fe6f2c54de4040a52e5d8"
+    },
+    {
+      "path": "game/core/ai_companion_bridge.gd",
+      "sha256": "8306eb04abf37882e47e72d2cd746fbbecbf6b2b19c9a90d9d923b7317cb5ba0"
+    },
+    {
+      "path": "game/core/audio_director.gd",
+      "sha256": "0a014395e50b0ed332e503fe6825c5e50ca9e1c3581fad6d2ef43c96ec5fc220"
+    },
+    {
+      "path": "game/core/event_bus.gd",
+      "sha256": "37b3a1fa551ed1085d0a913e89f928cb2459656b9ae002455c94f8022d1502d3"
     },
     {
       "path": "game/data/content_manifest.json",
@@ -153,12 +441,16 @@
       "sha256": "e02b76fc5fa121bfc337577a871d3c2607ffee4b3833202cab8f879b281df78c"
     },
     {
+      "path": "game/data/home_hierarchy.json",
+      "sha256": "d5830ed73ae4dec74e2cfca9eb17910bd64f135b4dd87802c155a99e2239367d"
+    },
+    {
       "path": "game/data/interiors_manifest.json",
-      "sha256": "17bfb84bf2552e75d0340c281feb9f40e421229366e5eda9ed437558c86c9ca7"
+      "sha256": "f89a1a0a77d73996960ba7cd93ef3fa8fde263ea4b34c857a236c12f918f6ec5"
     },
     {
       "path": "game/data/landmark_interiors.json",
-      "sha256": "a489f04fa3962b7c6b36da1e15d914005d5d22e18420935a55764b9fea45e05d"
+      "sha256": "cdea8cd0e36aab06efe26244f0d2f5385de30a55371debf866bb59685c5d3778"
     },
     {
       "path": "game/data/learning/build_report.json",
@@ -173,8 +465,48 @@
       "sha256": "a7bc75614a7ce3a0c682d0b57bbca3f215b35da7f643712385c2b87d134dfae8"
     },
     {
+      "path": "game/data/learning/curriculum_arcs_v4.json",
+      "sha256": "c12533e33c6d5153409f55f9ed7868336915debecd7f8d850ca142b5162063f3"
+    },
+    {
+      "path": "game/data/learning/friend_corner.json",
+      "sha256": "4882517751edbbfad2e1ad6d8a902e44de91e8d5462e9eab7c35db7328eb5176"
+    },
+    {
+      "path": "game/data/learning/memory_palace_v5.json",
+      "sha256": "fcae2defa32a51885ceee6b85e22fcfc937441f21e166ae943d8880f78cfb99f"
+    },
+    {
+      "path": "game/data/learning/p2_journey.json",
+      "sha256": "4c1777618be97deec7c406e64e7f44bc3331d72beaf118aa821c7587e207f7d3"
+    },
+    {
+      "path": "game/data/learning/popup_choreography_v4.json",
+      "sha256": "24dc3709db416be92690316480c723b1e2fe8cf4cf0af28a1a1a0359a2ea64c1"
+    },
+    {
       "path": "game/data/learning/prologue.json",
       "sha256": "a24f07a2491d01dc00c52b8daa28fa566244a524384fc9b72d47196a61ed3a8f"
+    },
+    {
+      "path": "game/data/learning/revisits.json",
+      "sha256": "4ddbb99ec7fc1edecbeb51cd6d15480c948bde82863ebfc6e769a9bd317723a4"
+    },
+    {
+      "path": "game/data/learning/story_prop_art.json",
+      "sha256": "bdba52111f506e0dfcbdf3029f9a4a8ed5386dd3671dc2bd264de4083c80c394"
+    },
+    {
+      "path": "game/data/learning/voice_manifest_v4.json",
+      "sha256": "b74db95311eba80e2db5e2825e03b1c5d96bac35c2f1b3f7663af3499cabd44d"
+    },
+    {
+      "path": "game/data/learning/world_object_semantics_v5.json",
+      "sha256": "a059f6ddcefc51187b8693bb926fdec57cffb454ef230512731d3637dc2d9d7c"
+    },
+    {
+      "path": "game/data/memory_card_hints.json",
+      "sha256": "6cc0bb850ce4a0fb212845f7fa17fc33ac9deb52cbbfe5ddd9f6d9c6dfdf532d"
     },
     {
       "path": "game/assets/living/textbook_actor_catalog.json",
@@ -182,19 +514,19 @@
     },
     {
       "path": "game/assets/world/manifest.json",
-      "sha256": "9cca6f35ba23a130222d01ed71fc78209fcfcd60fb97c2bea45e499864512bc3"
+      "sha256": "85fce05a091880f910b4b3e622332dfdc024fdef70fc430142d0532c7f684247"
     }
   ],
-  "charset_sha256": "174eaf6efe3785a5fda265871e98ae03a3e6d4c2664cfd6a3a54af72be17d194",
+  "charset_sha256": "dcec718e72e495c6c38f4c4e5a7f6f5fd4f1600c2c44190fda21839636d65d31",
   "coverage": "Current game script/curriculum printable characters, ASCII and selected punctuation; not a full CJK font.",
   "result": {
     "status": "ok",
     "font": "game\\assets\\fonts\\IslandSans.otf",
-    "input_files": 37,
-    "required_codepoints": 2086,
-    "covered_codepoints": 2234,
-    "glyphs": 4225,
-    "bytes": 958116,
-    "sha256": "8ab9afade4163eaf9f0f1bdd3941710606481de2226542aa33671dec94a7b906"
+    "input_files": 120,
+    "required_codepoints": 3031,
+    "covered_codepoints": 3170,
+    "glyphs": 5975,
+    "bytes": 1415276,
+    "sha256": "b8de8efeab7869f6ec145ad34ae2e6cdb5a5be80887ffddc2e3b1d91851ac354"
   }
 }

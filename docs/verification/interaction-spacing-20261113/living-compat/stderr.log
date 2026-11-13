@@ -1,0 +1,10 @@
+ERROR: LIVING_TEST story dawn overrides guide and applies while dialogue paused <null>
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_living_world.gd:15)
+       [1] _run (res://tests/test_living_world.gd:127)
+ERROR: LIVING_TEST clearing story phase restores guided daylight <null>
+   at: push_error (core/variant/variant_utility.cpp:1023)
+   GDScript backtrace (most recent call first):
+       [0] check (res://tests/test_living_world.gd:15)
+       [1] _run (res://tests/test_living_world.gd:129)

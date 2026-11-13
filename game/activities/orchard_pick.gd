@@ -119,6 +119,11 @@ func setup(owner_game: Node3D) -> bool:
 		if node is Node3D and (str(node.name)=="Rabbit" or node is Label3D) and Vector2(node.position.x+0.8,node.position.z-2.4).length()<0.5:
 			_original_rabbit.append(node)
 			node.hide()
+	if "_resident_hosts" in game.world and (game.world._resident_hosts as Dictionary).has("gardener"):
+		var res_host := (game.world._resident_hosts as Dictionary).get("gardener") as Node3D
+		if is_instance_valid(res_host) and not _original_rabbit.has(res_host):
+			_original_rabbit.append(res_host)
+			res_host.hide()
 	apple=Node3D.new()
 	apple.name="InteractiveApple"
 	add_child(apple)

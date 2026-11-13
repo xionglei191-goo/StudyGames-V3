@@ -31,6 +31,7 @@ var _fill: DirectionalLight3D
 var _baseline: Dictionary = {}
 var _foliage: Array[Dictionary] = []
 var _water: Array[Dictionary] = []
+var _retired_materials: Array[Material] = []
 var _actors: Dictionary = {}
 var _interaction_views: Array[Array] = []
 var _world_running := true
@@ -443,12 +444,11 @@ func _spawn_clear(point: Vector3) -> bool:
 	query.transform = Transform3D(Basis.IDENTITY, point + Vector3.UP * 1.0)
 	if not get_world_3d().direct_space_state.intersect_shape(query, 1).is_empty():
 		return false
-	for entry: Dictionary in _world_info.get("interactions", []):
-		var location: Vector3 = entry.get("position", Vector3.ZERO)
-		if Vector2(point.x - location.x, point.z - location.z).length() < 1.5:
-			return false
+	var camera_offset := Vector3(8,28,28) if room_id=="home" else Vector3(18,25,24)
+	if not preload("res://scripts/interaction_layout.gd").can_place_actor(point,"",_world_info.get("interactions",[]),camera_offset,2.4):
+		return false
 	for actor: Variant in _actors.values():
-		if is_instance_valid(actor) and not actor.is_queued_for_deletion() and actor.global_position.distance_to(point) < 1.55:
+		if is_instance_valid(actor) and not actor.is_queued_for_deletion() and actor.global_position.distance_to(point) < 2.2:
 			return false
 	if is_instance_valid(_player) and _player.global_position.distance_to(point) < 1.5:
 		return false
@@ -591,8 +591,12 @@ func _release_targets() -> void:
 		if is_instance_valid(item.get("node")):
 			(item.node as Node3D).transform = item.transform as Transform3D
 	for item: Dictionary in _water:
+		if item.get("material") is Material:
+			_retired_materials.append(item.material as Material)
 		if is_instance_valid(item.get("node")):
 			(item.node as MeshInstance3D).material_overlay = item.overlay as Material
+	while _retired_materials.size() > 16:
+		_retired_materials.pop_front()
 	_foliage.clear()
 	_water.clear()
 	if _environment and not _baseline.is_empty():

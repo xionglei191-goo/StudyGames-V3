@@ -144,18 +144,18 @@ func _local_fallback_encourage(target_text: String, mode: String, rms_energy: fl
 			"ok": true,
 			"mode": "shy",
 			"voice_detected": false,
-			"cheer_badge": "🌿 安心默读星",
+			"cheer_badge": "· 安心默读星",
 			"reply_en": "Listening in your heart is great too! \"%s\" stays with you!" % clean,
-			"reply_zh": "在心里轻轻默读「%s」也很棒！不着急，想开口时随时都可以 ✨" % clean
+			"reply_zh": "在心里轻轻默读「%s」也很棒！不着急，想开口时随时都可以 " % clean
 		}
 	var strong := rms_energy >= 0.012 or duration_ms >= 550
 	return {
 		"ok": true,
 		"mode": "voice",
 		"voice_detected": true,
-		"cheer_badge": "🌟 自信开口星" if strong else "✨ 勇敢轻声星",
+		"cheer_badge": "★ 自信开口星" if strong else " 勇敢轻声星",
 		"reply_en": "Sunny voice! You spoke \"%s\" so warmly!" % clean,
-		"reply_zh": "声音真温暖自信！刚才跟读「%s」超级棒 🌟" % clean
+		"reply_zh": "声音真温暖自信！刚才跟读「%s」超级棒 ★" % clean
 	}
 
 func request_parent_report(payload: Dictionary) -> void:

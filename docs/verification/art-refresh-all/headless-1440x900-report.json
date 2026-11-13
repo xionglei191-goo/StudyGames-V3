@@ -19,6 +19,10 @@
 		"owl_wing",
 		"reading_table"
 	],
+	"additional_semantic_props": {
+		"dog": "res://assets/learning/story_props_v3/dog.png",
+		"wood_log": "res://assets/learning/story_props_v3/wood_log.png"
+	},
 	"assets": [
 		{
 			"actual_pixel_sha256": "da50c37d4052bfc0851eb91e605e4835df25e0349158b63f3885cb1a6309c2a6",
@@ -4417,6 +4421,34 @@
 			"passed": true
 		},
 		{
+			"check": "Additional semantic prop matches its available registry entry: dog",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop has a real texture source: dog",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop is actually drawn: dog",
+			"passed": true
+		},
+		{
+			"check": "Visible prop has an actual draw call: dog",
+			"passed": true
+		},
+		{
+			"check": "Actually drawn prop has nondegenerate geometry inside the stage: dog",
+			"passed": true
+		},
+		{
+			"check": "Actual draw UV is inside the preserved source PNG: dog",
+			"passed": true
+		},
+		{
+			"check": "Actual prop quad intersects the visible scroll viewport: dog",
+			"passed": true
+		},
+		{
 			"check": "Actually drawn prop uses its preserved PNG pixels: drumstick",
 			"passed": true
 		},
@@ -4445,7 +4477,63 @@
 			"passed": true
 		},
 		{
+			"check": "Additional semantic prop matches its available registry entry: dog",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop has a real texture source: dog",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop is actually drawn: dog",
+			"passed": true
+		},
+		{
+			"check": "Visible prop has an actual draw call: dog",
+			"passed": true
+		},
+		{
+			"check": "Actually drawn prop has nondegenerate geometry inside the stage: dog",
+			"passed": true
+		},
+		{
+			"check": "Actual draw UV is inside the preserved source PNG: dog",
+			"passed": true
+		},
+		{
+			"check": "Actual prop quad intersects the visible scroll viewport: dog",
+			"passed": true
+		},
+		{
 			"check": "Available prop PNGs do not silently fall back: dog/3",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop matches its available registry entry: dog",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop has a real texture source: dog",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop is actually drawn: dog",
+			"passed": true
+		},
+		{
+			"check": "Visible prop has an actual draw call: dog",
+			"passed": true
+		},
+		{
+			"check": "Actually drawn prop has nondegenerate geometry inside the stage: dog",
+			"passed": true
+		},
+		{
+			"check": "Actual draw UV is inside the preserved source PNG: dog",
+			"passed": true
+		},
+		{
+			"check": "Actual prop quad intersects the visible scroll viewport: dog",
 			"passed": true
 		},
 		{
@@ -4457,7 +4545,63 @@
 			"passed": true
 		},
 		{
+			"check": "Additional semantic prop matches its available registry entry: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop has a real texture source: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop is actually drawn: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Visible prop has an actual draw call: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actually drawn prop has nondegenerate geometry inside the stage: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actual draw UV is inside the preserved source PNG: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actual prop quad intersects the visible scroll viewport: wood_log",
+			"passed": true
+		},
+		{
 			"check": "Available prop PNGs do not silently fall back: wood/2",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop matches its available registry entry: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop has a real texture source: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop is actually drawn: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Visible prop has an actual draw call: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actually drawn prop has nondegenerate geometry inside the stage: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actual draw UV is inside the preserved source PNG: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actual prop quad intersects the visible scroll viewport: wood_log",
 			"passed": true
 		},
 		{
@@ -4465,7 +4609,63 @@
 			"passed": true
 		},
 		{
+			"check": "Additional semantic prop matches its available registry entry: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop has a real texture source: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop is actually drawn: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Visible prop has an actual draw call: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actually drawn prop has nondegenerate geometry inside the stage: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actual draw UV is inside the preserved source PNG: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actual prop quad intersects the visible scroll viewport: wood_log",
+			"passed": true
+		},
+		{
 			"check": "Available prop PNGs do not silently fall back: wood/4",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop matches its available registry entry: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop has a real texture source: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Additional semantic prop is actually drawn: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Visible prop has an actual draw call: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actually drawn prop has nondegenerate geometry inside the stage: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actual draw UV is inside the preserved source PNG: wood_log",
+			"passed": true
+		},
+		{
+			"check": "Actual prop quad intersects the visible scroll viewport: wood_log",
 			"passed": true
 		},
 		{
@@ -4725,211 +4925,211 @@
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: A",
+			"check": "P2 object stage retains the canonical letter PNG source: A",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: A",
+			"check": "P2 glyph pane uses the captured authored model: A",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: B",
+			"check": "P2 object stage retains the canonical letter PNG source: B",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: B",
+			"check": "P2 glyph pane uses the captured authored model: B",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: C",
+			"check": "P2 object stage retains the canonical letter PNG source: C",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: C",
+			"check": "P2 glyph pane uses the captured authored model: C",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: D",
+			"check": "P2 object stage retains the canonical letter PNG source: D",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: D",
+			"check": "P2 glyph pane uses the captured authored model: D",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: E",
+			"check": "P2 object stage retains the canonical letter PNG source: E",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: E",
+			"check": "P2 glyph pane uses the captured authored model: E",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: F",
+			"check": "P2 object stage retains the canonical letter PNG source: F",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: F",
+			"check": "P2 glyph pane uses the captured authored model: F",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: G",
+			"check": "P2 object stage retains the canonical letter PNG source: G",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: G",
+			"check": "P2 glyph pane uses the captured authored model: G",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: H",
+			"check": "P2 object stage retains the canonical letter PNG source: H",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: H",
+			"check": "P2 glyph pane uses the captured authored model: H",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: I",
+			"check": "P2 object stage retains the canonical letter PNG source: I",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: I",
+			"check": "P2 glyph pane uses the captured authored model: I",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: J",
+			"check": "P2 object stage retains the canonical letter PNG source: J",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: J",
+			"check": "P2 glyph pane uses the captured authored model: J",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: K",
+			"check": "P2 object stage retains the canonical letter PNG source: K",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: K",
+			"check": "P2 glyph pane uses the captured authored model: K",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: L",
+			"check": "P2 object stage retains the canonical letter PNG source: L",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: L",
+			"check": "P2 glyph pane uses the captured authored model: L",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: M",
+			"check": "P2 object stage retains the canonical letter PNG source: M",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: M",
+			"check": "P2 glyph pane uses the captured authored model: M",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: N",
+			"check": "P2 object stage retains the canonical letter PNG source: N",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: N",
+			"check": "P2 glyph pane uses the captured authored model: N",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: O",
+			"check": "P2 object stage retains the canonical letter PNG source: O",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: O",
+			"check": "P2 glyph pane uses the captured authored model: O",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: P",
+			"check": "P2 object stage retains the canonical letter PNG source: P",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: P",
+			"check": "P2 glyph pane uses the captured authored model: P",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: Q",
+			"check": "P2 object stage retains the canonical letter PNG source: Q",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: Q",
+			"check": "P2 glyph pane uses the captured authored model: Q",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: R",
+			"check": "P2 object stage retains the canonical letter PNG source: R",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: R",
+			"check": "P2 glyph pane uses the captured authored model: R",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: S",
+			"check": "P2 object stage retains the canonical letter PNG source: S",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: S",
+			"check": "P2 glyph pane uses the captured authored model: S",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: T",
+			"check": "P2 object stage retains the canonical letter PNG source: T",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: T",
+			"check": "P2 glyph pane uses the captured authored model: T",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: U",
+			"check": "P2 object stage retains the canonical letter PNG source: U",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: U",
+			"check": "P2 glyph pane uses the captured authored model: U",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: V",
+			"check": "P2 object stage retains the canonical letter PNG source: V",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: V",
+			"check": "P2 glyph pane uses the captured authored model: V",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: W",
+			"check": "P2 object stage retains the canonical letter PNG source: W",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: W",
+			"check": "P2 glyph pane uses the captured authored model: W",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: X",
+			"check": "P2 object stage retains the canonical letter PNG source: X",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: X",
+			"check": "P2 glyph pane uses the captured authored model: X",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: Y",
+			"check": "P2 object stage retains the canonical letter PNG source: Y",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: Y",
+			"check": "P2 glyph pane uses the captured authored model: Y",
 			"passed": true
 		},
 		{
-			"check": "Actual prologue TextureRect shares the letter's PNG: Z",
+			"check": "P2 object stage retains the canonical letter PNG source: Z",
 			"passed": true
 		},
 		{
-			"check": "Prologue keeps the PNG aspect ratio: Z",
+			"check": "P2 glyph pane uses the captured authored model: Z",
 			"passed": true
 		},
 		{
@@ -4941,7 +5141,7 @@
 			"passed": true
 		}
 	],
-	"checks": 1121,
+	"checks": 1170,
 	"covered_generic_kinds": [
 		"catch",
 		"fly",
@@ -5409,7 +5609,7 @@
 		1440.0,
 		900.0
 	],
-	"manifest_sha256": "8b70421e9fd033ffb0170693c8c168b542cacc312a3708ea2ed9119bee3a99c9",
+	"manifest_sha256": "429fbaafd0a1bff5aca8b4c2cc26e53620241c3e02ac7d5e5674ada31d71d463",
 	"production_save_and_backup_unchanged": true,
 	"prop_samples": [
 		{
@@ -5448,6 +5648,19 @@
 				"loaded_prop_ids": [
 					"greeting_door"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 1.0,
+					"prop_id": "",
+					"source_action": "抬帽向新朋友致意",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"greeting_door": [
 						147.0,
@@ -5556,6 +5769,19 @@
 					"greeting_door",
 					"greeting_window"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 2.0,
+					"prop_id": "",
+					"source_action": "探出窗说你好",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"greeting_door": [
 						147.0,
@@ -5617,6 +5843,19 @@
 					"greeting_door",
 					"greeting_window"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 3.0,
+					"prop_id": "",
+					"source_action": "照亮来客",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"greeting_door": [
 						147.0,
@@ -5677,6 +5916,19 @@
 					"greeting_door",
 					"greeting_window"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 4.0,
+					"prop_id": "",
+					"source_action": "把灯光递向门口",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"greeting_door": [
 						147.0,
@@ -5791,6 +6043,19 @@
 					"greeting_door",
 					"owl_wing"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 5.0,
+					"prop_id": "",
+					"source_action": "张翅回应问候",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"greeting_door": [
 						147.0,
@@ -5820,6 +6085,19 @@
 				"drawn_props": {},
 				"fallback_prop_ids": [],
 				"loaded_prop_ids": [],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 1.0,
+					"prop_id": "",
+					"source_action": "摇出一只猫头鹰",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {},
 				"support_level": 5,
 				"visible_prop_ids": []
@@ -5833,6 +6111,19 @@
 				"drawn_props": {},
 				"fallback_prop_ids": [],
 				"loaded_prop_ids": [],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 2.0,
+					"prop_id": "",
+					"source_action": "用大鼻子顶起星星",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {},
 				"support_level": 5,
 				"visible_prop_ids": []
@@ -5846,6 +6137,19 @@
 				"drawn_props": {},
 				"fallback_prop_ids": [],
 				"loaded_prop_ids": [],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 3.0,
+					"prop_id": "",
+					"source_action": "被喷嚏吹进蛋壳",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {},
 				"support_level": 5,
 				"visible_prop_ids": []
@@ -5859,6 +6163,19 @@
 				"drawn_props": {},
 				"fallback_prop_ids": [],
 				"loaded_prop_ids": [],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 4.0,
+					"prop_id": "",
+					"source_action": "接住星星，壳上留下鼻子印",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {},
 				"support_level": 5,
 				"visible_prop_ids": []
@@ -5962,6 +6279,19 @@
 					"book_cover",
 					"book_page_leaf"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 1.0,
+					"prop_id": "",
+					"source_action": "把书运到阅读台",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"book_cover": [
 						98.0,
@@ -6094,6 +6424,19 @@
 					"book_cover",
 					"book_page_leaf"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 2.0,
+					"prop_id": "",
+					"source_action": "啄开书的封面",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"book_cover": [
 						98.0,
@@ -6226,6 +6569,19 @@
 					"book_cover",
 					"book_page_leaf"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 3.0,
+					"prop_id": "",
+					"source_action": "翻开书的内页",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"book_cover": [
 						98.0,
@@ -6330,6 +6686,19 @@
 					"book_cover",
 					"book_page_leaf"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 4.0,
+					"prop_id": "",
+					"source_action": "托起打开的书展示文字图画",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"book_cover": [
 						98.0,
@@ -6402,6 +6771,19 @@
 				"loaded_prop_ids": [
 					"football"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 1.0,
+					"prop_id": "",
+					"source_action": "把足球踢向第一只猫头鹰",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"football": [
 						142.0,
@@ -6455,6 +6837,19 @@
 				"loaded_prop_ids": [
 					"football"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 2.0,
+					"prop_id": "",
+					"source_action": "胸口停球后传给第二只猫头鹰",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"football": [
 						142.0,
@@ -6508,6 +6903,19 @@
 				"loaded_prop_ids": [
 					"football"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 3.0,
+					"prop_id": "",
+					"source_action": "接球并传给火车",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"football": [
 						142.0,
@@ -6561,6 +6969,19 @@
 				"loaded_prop_ids": [
 					"football"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 4.0,
+					"prop_id": "",
+					"source_action": "将球载到船边",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"football": [
 						142.0,
@@ -6643,6 +7064,19 @@
 					"football_goal_frame",
 					"football"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 5.0,
+					"prop_id": "",
+					"source_action": "把球卸到苹果脚边",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"football": [
 						142.0,
@@ -6732,6 +7166,19 @@
 					"football_goal_frame",
 					"football"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 6.0,
+					"prop_id": "",
+					"source_action": "把球踢向第一盏灯",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"football": [
 						142.0,
@@ -6821,6 +7268,19 @@
 					"football_goal_frame",
 					"football"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 7.0,
+					"prop_id": "",
+					"source_action": "照出近端球门",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"football": [
 						142.0,
@@ -6910,6 +7370,19 @@
 					"football_goal_frame",
 					"football"
 				],
+				"resolved_semantic_prop_id": "",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "",
+					"position": 8.0,
+					"prop_id": "",
+					"source_action": "照出远端球门让球入门",
+					"status": "specialized_v2"
+				},
+				"semantic_art_status": "specialized_v2",
+				"semantic_source_paths": {},
+				"semantic_texture_cache_count": 0,
 				"source_regions": {
 					"football": [
 						142.0,
@@ -6937,6 +7410,34 @@
 		{
 			"diagnostic": {
 				"drawn_props": {
+					"dog": [
+						{
+							"quad": [
+								[
+									75.609375,
+									119.0
+								],
+								[
+									134.390625,
+									119.0
+								],
+								[
+									134.390625,
+									191.0
+								],
+								[
+									75.609375,
+									191.0
+								]
+							],
+							"source_uv": [
+								0.0,
+								0.0,
+								1.0,
+								1.0
+							]
+						}
+					],
 					"drumstick": [
 						{
 							"quad": [
@@ -6968,9 +7469,31 @@
 				},
 				"fallback_prop_ids": [],
 				"loaded_prop_ids": [
+					"dog",
 					"drumstick"
 				],
+				"resolved_semantic_prop_id": "dog",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "小狗",
+					"position": 1.0,
+					"prop_id": "dog",
+					"source_action": "把鼓槌轻轻抛给小狗",
+					"status": "concrete_asset"
+				},
+				"semantic_art_status": "concrete_asset",
+				"semantic_source_paths": {
+					"dog": "res://assets/learning/story_props_v3/dog.png"
+				},
+				"semantic_texture_cache_count": 1,
 				"source_regions": {
+					"dog": [
+						0.0,
+						0.0,
+						209.0,
+						256.0
+					],
 					"drumstick": [
 						152.0,
 						301.0,
@@ -6980,6 +7503,7 @@
 				},
 				"support_level": 5,
 				"visible_prop_ids": [
+					"dog",
 					"drumstick"
 				]
 			},
@@ -6989,12 +7513,63 @@
 		},
 		{
 			"diagnostic": {
-				"drawn_props": {},
+				"drawn_props": {
+					"dog": [
+						{
+							"quad": [
+								[
+									470.609375,
+									119.0
+								],
+								[
+									529.390625,
+									119.0
+								],
+								[
+									529.390625,
+									191.0
+								],
+								[
+									470.609375,
+									191.0
+								]
+							],
+							"source_uv": [
+								0.0,
+								0.0,
+								1.0,
+								1.0
+							]
+						}
+					]
+				},
 				"fallback_prop_ids": [],
 				"loaded_prop_ids": [
+					"dog",
 					"drumstick"
 				],
+				"resolved_semantic_prop_id": "dog",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "小狗",
+					"position": 2.0,
+					"prop_id": "dog",
+					"source_action": "引导小狗绕一圈",
+					"status": "concrete_asset"
+				},
+				"semantic_art_status": "concrete_asset",
+				"semantic_source_paths": {
+					"dog": "res://assets/learning/story_props_v3/dog.png"
+				},
+				"semantic_texture_cache_count": 1,
 				"source_regions": {
+					"dog": [
+						0.0,
+						0.0,
+						209.0,
+						256.0
+					],
 					"drumstick": [
 						152.0,
 						301.0,
@@ -7003,7 +7578,9 @@
 					]
 				},
 				"support_level": 5,
-				"visible_prop_ids": []
+				"visible_prop_ids": [
+					"dog"
+				]
 			},
 			"phase": 0.55,
 			"position": 2,
@@ -7011,12 +7588,63 @@
 		},
 		{
 			"diagnostic": {
-				"drawn_props": {},
+				"drawn_props": {
+					"dog": [
+						{
+							"quad": [
+								[
+									885.859375,
+									99.5
+								],
+								[
+									944.640625,
+									99.5
+								],
+								[
+									944.640625,
+									171.5
+								],
+								[
+									885.859375,
+									171.5
+								]
+							],
+							"source_uv": [
+								0.0,
+								0.0,
+								1.0,
+								1.0
+							]
+						}
+					]
+				},
 				"fallback_prop_ids": [],
 				"loaded_prop_ids": [
+					"dog",
 					"drumstick"
 				],
+				"resolved_semantic_prop_id": "dog",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "小狗",
+					"position": 3.0,
+					"prop_id": "dog",
+					"source_action": "在底座旁接住小狗",
+					"status": "concrete_asset"
+				},
+				"semantic_art_status": "concrete_asset",
+				"semantic_source_paths": {
+					"dog": "res://assets/learning/story_props_v3/dog.png"
+				},
+				"semantic_texture_cache_count": 1,
 				"source_regions": {
+					"dog": [
+						0.0,
+						0.0,
+						209.0,
+						256.0
+					],
 					"drumstick": [
 						152.0,
 						301.0,
@@ -7025,7 +7653,9 @@
 					]
 				},
 				"support_level": 5,
-				"visible_prop_ids": []
+				"visible_prop_ids": [
+					"dog"
+				]
 			},
 			"phase": 0.55,
 			"position": 3,
@@ -7033,12 +7663,67 @@
 		},
 		{
 			"diagnostic": {
-				"drawn_props": {},
+				"drawn_props": {
+					"wood_log": [
+						{
+							"quad": [
+								[
+									175.5,
+									103.8125
+								],
+								[
+									271.5,
+									103.8125
+								],
+								[
+									271.5,
+									167.1875
+								],
+								[
+									175.5,
+									167.1875
+								]
+							],
+							"source_uv": [
+								0.0,
+								0.0,
+								1.0,
+								1.0
+							]
+						}
+					]
+				},
 				"fallback_prop_ids": [],
-				"loaded_prop_ids": [],
-				"source_regions": {},
+				"loaded_prop_ids": [
+					"wood_log"
+				],
+				"resolved_semantic_prop_id": "wood_log",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "木板",
+					"position": 1.0,
+					"prop_id": "wood_log",
+					"source_action": "把木板托到工作台",
+					"status": "concrete_asset"
+				},
+				"semantic_art_status": "concrete_asset",
+				"semantic_source_paths": {
+					"wood_log": "res://assets/learning/story_props_v3/wood_log.png"
+				},
+				"semantic_texture_cache_count": 1,
+				"source_regions": {
+					"wood_log": [
+						0.0,
+						0.0,
+						256.0,
+						169.0
+					]
+				},
 				"support_level": 5,
-				"visible_prop_ids": []
+				"visible_prop_ids": [
+					"wood_log"
+				]
 			},
 			"phase": 0.55,
 			"position": 1,
@@ -7046,12 +7731,67 @@
 		},
 		{
 			"diagnostic": {
-				"drawn_props": {},
+				"drawn_props": {
+					"wood_log": [
+						{
+							"quad": [
+								[
+									320.333343505859,
+									123.3125
+								],
+								[
+									416.333343505859,
+									123.3125
+								],
+								[
+									416.333343505859,
+									186.6875
+								],
+								[
+									320.333343505859,
+									186.6875
+								]
+							],
+							"source_uv": [
+								0.0,
+								0.0,
+								1.0,
+								1.0
+							]
+						}
+					]
+				},
 				"fallback_prop_ids": [],
-				"loaded_prop_ids": [],
-				"source_regions": {},
+				"loaded_prop_ids": [
+					"wood_log"
+				],
+				"resolved_semantic_prop_id": "wood_log",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "木板",
+					"position": 2.0,
+					"prop_id": "wood_log",
+					"source_action": "观察木板纹理",
+					"status": "concrete_asset"
+				},
+				"semantic_art_status": "concrete_asset",
+				"semantic_source_paths": {
+					"wood_log": "res://assets/learning/story_props_v3/wood_log.png"
+				},
+				"semantic_texture_cache_count": 1,
+				"source_regions": {
+					"wood_log": [
+						0.0,
+						0.0,
+						256.0,
+						169.0
+					]
+				},
 				"support_level": 5,
-				"visible_prop_ids": []
+				"visible_prop_ids": [
+					"wood_log"
+				]
 			},
 			"phase": 0.55,
 			"position": 2,
@@ -7059,12 +7799,67 @@
 		},
 		{
 			"diagnostic": {
-				"drawn_props": {},
+				"drawn_props": {
+					"wood_log": [
+						{
+							"quad": [
+								[
+									728.5,
+									122.3125
+								],
+								[
+									824.5,
+									122.3125
+								],
+								[
+									824.5,
+									185.6875
+								],
+								[
+									728.5,
+									185.6875
+								]
+							],
+							"source_uv": [
+								0.0,
+								0.0,
+								1.0,
+								1.0
+							]
+						}
+					]
+				},
 				"fallback_prop_ids": [],
-				"loaded_prop_ids": [],
-				"source_regions": {},
+				"loaded_prop_ids": [
+					"wood_log"
+				],
+				"resolved_semantic_prop_id": "wood_log",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "exact_object_story_continuity",
+					"position": 3.0,
+					"prop_id": "wood_log",
+					"source_action": "用第二只猫头鹰沿纹理走一圈",
+					"status": "concrete_asset"
+				},
+				"semantic_art_status": "concrete_asset",
+				"semantic_source_paths": {
+					"wood_log": "res://assets/learning/story_props_v3/wood_log.png"
+				},
+				"semantic_texture_cache_count": 1,
+				"source_regions": {
+					"wood_log": [
+						0.0,
+						0.0,
+						256.0,
+						169.0
+					]
+				},
 				"support_level": 5,
-				"visible_prop_ids": []
+				"visible_prop_ids": [
+					"wood_log"
+				]
 			},
 			"phase": 0.55,
 			"position": 3,
@@ -7100,22 +7895,73 @@
 								0.338218718767166
 							]
 						}
+					],
+					"wood_log": [
+						{
+							"quad": [
+								[
+									847.0,
+									123.3125
+								],
+								[
+									943.0,
+									123.3125
+								],
+								[
+									943.0,
+									186.6875
+								],
+								[
+									847.0,
+									186.6875
+								]
+							],
+							"source_uv": [
+								0.0,
+								0.0,
+								1.0,
+								1.0
+							]
+						}
 					]
 				},
 				"fallback_prop_ids": [],
 				"loaded_prop_ids": [
+					"wood_log",
 					"drumstick"
 				],
+				"resolved_semantic_prop_id": "wood_log",
+				"runtime_parts": {},
+				"semantic_art_resolution": {
+					"label": "",
+					"match": "木板",
+					"position": 4.0,
+					"prop_id": "wood_log",
+					"source_action": "轻敲鼓棒在木板上听声",
+					"status": "concrete_asset"
+				},
+				"semantic_art_status": "concrete_asset",
+				"semantic_source_paths": {
+					"wood_log": "res://assets/learning/story_props_v3/wood_log.png"
+				},
+				"semantic_texture_cache_count": 1,
 				"source_regions": {
 					"drumstick": [
 						152.0,
 						301.0,
 						1470.0,
 						300.0
+					],
+					"wood_log": [
+						0.0,
+						0.0,
+						256.0,
+						169.0
 					]
 				},
 				"support_level": 5,
 				"visible_prop_ids": [
+					"wood_log",
 					"drumstick"
 				]
 			},
@@ -7155,48 +8001,48 @@
 		{
 			"label": "Play generic transport",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic transport",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic present",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic present",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic place",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic place",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
@@ -7204,23 +8050,23 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic mark",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic mark",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
@@ -7228,39 +8074,39 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic light",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic light",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic open",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic open",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
@@ -7268,39 +8114,39 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic travel",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic travel",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic catch",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic catch",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
@@ -7308,71 +8154,71 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic fly",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic fly",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic roll",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic roll",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic lift",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic lift",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic tap",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic tap",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
@@ -7380,7 +8226,7 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
@@ -7388,23 +8234,23 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play generic greet",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause generic greet",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
@@ -7412,7 +8258,7 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
@@ -7420,7 +8266,7 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
@@ -7428,7 +8274,7 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
@@ -7436,7 +8282,7 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
@@ -7444,23 +8290,23 @@
 			"label": "下一页",
 			"position": [
 				1295.0,
-				355.0
+				349.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Play before real disk save",
 			"position": [
-				137.0,
-				425.0
+				140.0,
+				415.0
 			],
 			"reachable": true
 		},
 		{
 			"label": "Pause before real disk save",
 			"position": [
-				255.0,
-				425.0
+				261.0,
+				415.0
 			],
 			"reachable": true
 		},
@@ -7468,7 +8314,7 @@
 			"label": "一起补空格",
 			"position": [
 				565.0,
-				287.5
+				286.5
 			],
 			"reachable": true
 		},
@@ -7476,7 +8322,7 @@
 			"label": "Reveal exactly source position 2",
 			"position": [
 				497.0,
-				806.0
+				793.0
 			],
 			"reachable": true
 		},
@@ -7484,7 +8330,7 @@
 			"label": "自己想一想",
 			"position": [
 				148.0,
-				248.5
+				247.5
 			],
 			"reachable": true
 		},
@@ -7492,7 +8338,7 @@
 			"label": "想想它住哪里",
 			"position": [
 				287.0,
-				210.5
+				209.5
 			],
 			"reachable": true
 		},
@@ -7500,7 +8346,7 @@
 			"label": "一步一步接",
 			"position": [
 				704.0,
-				248.5
+				247.5
 			],
 			"reachable": true
 		},
@@ -7508,7 +8354,7 @@
 			"label": "Choose the actual H4 next-letter candidate",
 			"position": [
 				364.0,
-				813.0
+				816.0
 			],
 			"reachable": true
 		}

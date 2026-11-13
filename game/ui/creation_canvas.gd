@@ -12,7 +12,9 @@ var _last := Vector2i(-1,-1)
 var _texture: ImageTexture
 
 func _ready() -> void:
-	custom_minimum_size = Vector2(320,320)
+	custom_minimum_size = Vector2(180,180)
+	size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	size_flags_vertical = Control.SIZE_EXPAND_FILL
 	focus_mode = Control.FOCUS_ALL
 	mouse_default_cursor_shape = Control.CURSOR_CROSS
 	refresh()
