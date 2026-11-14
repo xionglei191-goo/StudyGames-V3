@@ -169,7 +169,7 @@ func select_furniture(item_id: String) -> void:
 	selected_id = item_id
 	var entry := catalog_entry(item_id)
 	if is_instance_valid(game) and is_instance_valid(game.ai_bridge):
-		game.ai_bridge.speak_text(str(entry.get("en", "")), "en", "warm")
+		game.ai_bridge.speak_text(str(entry.get("en", "")), "en", "player")
 	_rebuild_ghost()
 	_refresh_hud()
 

@@ -1,18 +1,39 @@
 extends Node
-## V4 Async Client Bridge to `services/ai_companion` (`http://127.0.0.1:4195`).
-## Handles KidRails safe NPC free-chat, Neural/SAPI TTS WAV synthesis & playback,
-## and 3PL IRT Parent Growth Report generation — with zero-error local fallback!
+## V5 Multi-Character Async Client Bridge to `services/ai_companion` (`http://127.0.0.1:4195`).
+## Handles Cloud + Offline Multi-Character Neural TTS, KidRails safe NPC free-chat,
+## Vosk speech follow-along encouragement, auto-spawning the local sidecar when available,
+## and character-pitched standalone fallback when running without Python!
 
 signal chat_reply_ready(npc_id: String, reply: Dictionary)
 signal parent_report_ready(report: Dictionary)
 signal speech_encouragement_ready(reply: Dictionary)
+signal voice_playback_started(voice_profile: String, voice_label_zh: String, engine: String)
 
 const DEFAULT_BASE_URL := "http://127.0.0.1:4195"
 const Wardrobe = preload("res://actors/modular_wardrobe.gd")
+const CharacterVoices = preload("res://core/character_voices.gd")
+
+const BUNDLED_PHRASE_MAP := {
+	"hello": "res://assets/audio/hello.wav",
+	"good morning": "res://assets/audio/good_morning.wav",
+	"goodbye": "res://assets/audio/goodbye.wav",
+	"thank you": "res://assets/audio/thank_you.wav",
+	"apple": "res://assets/audio/apple.wav",
+	"milk": "res://assets/audio/milk.wav",
+	"bread": "res://assets/audio/bread.wav",
+	"cake": "res://assets/audio/cake.wav",
+	"how old are you": "res://assets/audio/how_old.wav",
+	"i'm nine": "res://assets/audio/im_nine.wav",
+}
 
 var base_url := DEFAULT_BASE_URL
 var voice_player: AudioStreamPlayer
 var muted := false
+var last_voice_profile := "teacher_gentle"
+var last_voice_engine := ""
+var _speak_seq := 0
+var _spawned_sidecar_pid := -1
+var _sidecar_boot_msec := 0
 
 func _ready() -> void:
 	name = "AICompanionBridge"
@@ -22,6 +43,56 @@ func _ready() -> void:
 	voice_player = AudioStreamPlayer.new()
 	voice_player.name = "CompanionTTSPlayer"
 	add_child(voice_player)
+	if DisplayServer.get_name() != "headless" and OS.get_environment("STUDYGAMES_NO_AUTO_SIDECAR").strip_edges().is_empty():
+		_ensure_sidecar_running()
+
+func _exit_tree() -> void:
+	if _spawned_sidecar_pid > 0 and OS.is_process_running(_spawned_sidecar_pid):
+		OS.kill(_spawned_sidecar_pid)
+		_spawned_sidecar_pid = -1
+
+func _ensure_sidecar_running() -> void:
+	var probe := HTTPRequest.new()
+	probe.timeout = 0.85
+	add_child(probe)
+	probe.request_completed.connect(func(result: int, code: int, _h: PackedStringArray, _b: PackedByteArray):
+		probe.queue_free()
+		if result == HTTPRequest.RESULT_SUCCESS and code == 200:
+			return
+		_try_autospawn_local_sidecar()
+	)
+	var err := probe.request(base_url + "/health")
+	if err != OK:
+		probe.queue_free()
+		_try_autospawn_local_sidecar()
+
+func _try_autospawn_local_sidecar() -> void:
+	if _spawned_sidecar_pid > 0:
+		return
+	var exe_dir := OS.get_executable_path().get_base_dir()
+	var candidates: Array[String] = [
+		ProjectSettings.globalize_path("res://..").simplify_path(),
+		exe_dir.path_join("../..").simplify_path(),
+		exe_dir.simplify_path(),
+	]
+	for root_dir: String in candidates:
+		if root_dir.is_empty():
+			continue
+		var app_py := root_dir.path_join("services/ai_companion/app.py")
+		if not FileAccess.file_exists(app_py):
+			continue
+		var pyw := root_dir.path_join(".local/ai-companion-venv/Scripts/pythonw.exe")
+		var py := root_dir.path_join(".local/ai-companion-venv/Scripts/python.exe")
+		var chosen_py := pyw if FileAccess.file_exists(pyw) else (py if FileAccess.file_exists(py) else "")
+		if chosen_py.is_empty():
+			continue
+		# Launch via short Python bootstrapper that chdirs to root_dir so `services.ai_companion.app` resolves cleanly
+		var boot_code := "import os, uvicorn; os.chdir(%s); uvicorn.run('services.ai_companion.app:app', host='127.0.0.1', port=4195, log_level='warning')" % JSON.stringify(root_dir)
+		var pid := OS.create_process(chosen_py, PackedStringArray(["-X", "utf8", "-c", boot_code]), false)
+		if pid > 0:
+			_spawned_sidecar_pid = pid
+			_sidecar_boot_msec = Time.get_ticks_msec()
+			return
 
 func request_npc_chat(npc_id: String, message: String, context: Dictionary) -> void:
 	if DisplayServer.get_name() == "headless":
@@ -47,46 +118,77 @@ func request_npc_chat(npc_id: String, message: String, context: Dictionary) -> v
 		chat_reply_ready.emit(npc_id, _local_fallback_chat(npc_id, message, context))
 
 func speak_text(text: String, lang: String = "en", voice_hint: String = "warm") -> void:
-	if muted or DisplayServer.get_name() == "headless" or text.strip_edges().is_empty():
+	var cleaned := text.strip_edges()
+	if muted or DisplayServer.get_name() == "headless" or cleaned.is_empty():
 		return
-	# Check exact authored phrase audio first if available
-	var clean_key := text.strip_edges().to_lower().trim_suffix("!").trim_suffix(".")
-	var bundled_map := {
-		"hello": "res://assets/audio/hello.wav",
-		"good morning": "res://assets/audio/good_morning.wav",
-		"goodbye": "res://assets/audio/goodbye.wav",
-		"thank you": "res://assets/audio/thank_you.wav",
-		"apple": "res://assets/audio/apple.wav",
-	}
-	if bundled_map.has(clean_key) and ResourceLoader.exists(str(bundled_map[clean_key])):
-		voice_player.stop()
-		voice_player.stream = load(str(bundled_map[clean_key]))
-		voice_player.play()
-		return
+	_speak_seq += 1
+	var seq := _speak_seq
+	var norm_hint := CharacterVoices.normalize_hint(voice_hint)
+	_dispatch_tts_request(cleaned, lang, norm_hint, seq, false)
 
+func _dispatch_tts_request(cleaned: String, lang: String, norm_hint: String, seq: int, retried: bool) -> void:
 	var req := HTTPRequest.new()
-	req.timeout = 4.5
+	req.timeout = 5.0
 	add_child(req)
 	req.request_completed.connect(func(result: int, code: int, _headers: PackedStringArray, body: PackedByteArray):
 		req.queue_free()
-		if result != HTTPRequest.RESULT_SUCCESS or code != 200 or muted:
+		if seq != _speak_seq or muted:
 			return
-		var parsed: Variant = JSON.parse_string(body.get_string_from_utf8())
-		if not (parsed is Dictionary and bool(parsed.get("ok", false))):
+		if result == HTTPRequest.RESULT_SUCCESS and code == 200:
+			var parsed: Variant = JSON.parse_string(body.get_string_from_utf8())
+			if parsed is Dictionary and bool(parsed.get("ok", false)):
+				var b64 := str(parsed.get("wav_base64", ""))
+				if not b64.is_empty():
+					var raw := Marshalls.base64_to_raw(b64)
+					var stream := _parse_pcm_wav(raw)
+					if stream != null:
+						voice_player.stop()
+						voice_player.pitch_scale = 1.0
+						voice_player.stream = stream
+						voice_player.play()
+						last_voice_profile = str(parsed.get("voice_profile", CharacterVoices.archetype_for(norm_hint)))
+						last_voice_engine = str(parsed.get("engine", "neural_tts"))
+						var lbl := str(parsed.get("voice_label_zh", CharacterVoices.label_zh_for(norm_hint)))
+						voice_playback_started.emit(last_voice_profile, lbl, last_voice_engine)
+						return
+		# If the sidecar just spawned (< 3.5s ago), retry once before falling back to local WAV
+		if not retried and _sidecar_boot_msec > 0 and (Time.get_ticks_msec() - _sidecar_boot_msec) < 3500:
+			get_tree().create_timer(0.85).timeout.connect(func():
+				if is_inside_tree() and seq == _speak_seq and not muted:
+					_dispatch_tts_request(cleaned, lang, norm_hint, seq, true)
+			)
 			return
-		var b64 := str(parsed.get("wav_base64", ""))
-		if not b64.is_empty():
-			var raw := Marshalls.base64_to_raw(b64)
-			var stream := _parse_pcm_wav(raw)
-			if stream != null:
-				voice_player.stop()
-				voice_player.stream = stream
-				voice_player.play()
+		_play_local_fallback(cleaned, lang, norm_hint)
 	)
-	var payload := JSON.stringify({"text": text, "lang": lang, "voice_hint": voice_hint})
+	var payload := JSON.stringify({"text": cleaned, "lang": lang, "voice_hint": norm_hint})
 	var err := req.request(base_url + "/api/v4/tts/speak", ["Content-Type: application/json"], HTTPClient.METHOD_POST, payload)
 	if err != OK:
 		req.queue_free()
+		_play_local_fallback(cleaned, lang, norm_hint)
+
+func _play_local_fallback(cleaned: String, lang: String, norm_hint: String) -> void:
+	if muted:
+		return
+	var arch := CharacterVoices.archetype_for(norm_hint)
+	var lbl := CharacterVoices.label_zh_for(norm_hint)
+	var pitch := CharacterVoices.fallback_pitch_scale(norm_hint)
+	var clean_key := cleaned.to_lower().trim_suffix("!").trim_suffix(".").trim_suffix("?")
+	if BUNDLED_PHRASE_MAP.has(clean_key) and ResourceLoader.exists(str(BUNDLED_PHRASE_MAP[clean_key])):
+		voice_player.stop()
+		voice_player.pitch_scale = pitch
+		voice_player.stream = load(str(BUNDLED_PHRASE_MAP[clean_key])) as AudioStream
+		voice_player.play()
+		last_voice_profile = arch
+		last_voice_engine = "bundled_pitched_wav"
+		voice_playback_started.emit(arch, lbl, last_voice_engine)
+		return
+	var os_voices := DisplayServer.tts_get_voices_for_language("en" if lang.to_lower().begins_with("en") else "zh")
+	if not os_voices.is_empty():
+		DisplayServer.tts_stop()
+		DisplayServer.tts_speak(cleaned, str(os_voices[0]), 90, clampf(pitch, 0.75, 1.30), 1.0)
+		last_voice_profile = arch
+		last_voice_engine = "os_system_tts"
+		voice_playback_started.emit(arch, lbl, last_voice_engine)
 
 func observe_stealth_mastery(word: String, support_level: int, correct: bool, response_ms: int, _context_id: String = "") -> void:
 	if DisplayServer.get_name() == "headless" or word.strip_edges().is_empty():
@@ -136,26 +238,29 @@ func request_speech_encouragement(target_text: String, mode: String = "voice", r
 		speech_encouragement_ready.emit(_local_fallback_encourage(target_text, mode, rms_energy, duration_ms))
 
 func _local_fallback_encourage(target_text: String, mode: String, rms_energy: float, duration_ms: int) -> Dictionary:
-	var clean := target_text.strip_edges()
-	if clean.is_empty():
-		clean = "Hello!"
+	var clean := target_text.strip_edges() if not target_text.strip_edges().is_empty() else "Hello!"
 	if mode == "shy":
 		return {
 			"ok": true,
 			"mode": "shy",
-			"voice_detected": false,
-			"cheer_badge": "· 安心默读星",
+			"cheer_badge": "安心默读星",
 			"reply_en": "Listening in your heart is great too! \"%s\" stays with you!" % clean,
-			"reply_zh": "在心里轻轻默读「%s」也很棒！不着急，想开口时随时都可以 " % clean
+			"reply_zh": "在心里轻轻默读「%s」也很棒！不着急，想开口时随时都可以！" % clean
 		}
-	var strong := rms_energy >= 0.012 or duration_ms >= 550
+	if rms_energy >= 0.015 or duration_ms >= 600:
+		return {
+			"ok": true,
+			"mode": "voice",
+			"cheer_badge": "自信开口星",
+			"reply_en": "Sunny voice! You spoke \"%s\" so warmly and bravely!" % clean,
+			"reply_zh": "声音真洪亮温暖！刚才跟读「%s」超级自信，为你鼓掌！" % clean
+		}
 	return {
 		"ok": true,
 		"mode": "voice",
-		"voice_detected": true,
-		"cheer_badge": "★ 自信开口星" if strong else " 勇敢轻声星",
-		"reply_en": "Sunny voice! You spoke \"%s\" so warmly!" % clean,
-		"reply_zh": "声音真温暖自信！刚才跟读「%s」超级棒 ★" % clean
+		"cheer_badge": "勇敢轻声星",
+		"reply_en": "I heard your gentle voice trying \"%s\"! Wonderful try!" % clean,
+		"reply_zh": "听到了你轻轻跟读「%s」的声音！勇敢开口就是最棒的进步！" % clean
 	}
 
 func request_parent_report(payload: Dictionary) -> void:
@@ -163,7 +268,7 @@ func request_parent_report(payload: Dictionary) -> void:
 		parent_report_ready.emit(_local_fallback_report(payload))
 		return
 	var req := HTTPRequest.new()
-	req.timeout = 4.0
+	req.timeout = 4.5
 	add_child(req)
 	req.request_completed.connect(func(result: int, code: int, _headers: PackedStringArray, body: PackedByteArray):
 		req.queue_free()
@@ -182,7 +287,6 @@ func request_parent_report(payload: Dictionary) -> void:
 func _parse_pcm_wav(raw: PackedByteArray) -> AudioStreamWAV:
 	if raw.size() < 44:
 		return null
-	# Parse standard RIFF WAVE header
 	if raw.slice(0, 4).get_string_from_ascii() != "RIFF":
 		return null
 	var pos := 12
@@ -279,5 +383,5 @@ func _local_fallback_report(payload: Dictionary) -> Dictionary:
 			"recommended_revisits": []
 		},
 		"narrative_zh": "【当前同步册次】%s（%s）\n【小岛生活足迹】已探索 %d / 26 处字母记忆宫殿地标\n【隐性成长观察】%s\n【家庭温和互动建议】散步或吃点心时，用轻松口吻和孩子聊聊果园里的红苹果或今天换上的小草帽即可，无需纸笔抽查。" % [book_title, unit_id, visited, highlight],
-		"note": "本地 IRT 隐性成长估算（启动 AI 伴学服务后自动启用完整 3PL 模型与神经语音合成）。"
+		"note": "本地 IRT 隐性成长估算（启动 AI 伴学服务后自动启用完整 3PL 模型与多角色神经语音合成）。"
 	}

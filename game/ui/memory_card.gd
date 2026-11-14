@@ -187,14 +187,16 @@ func _listen() -> void:
 		return
 	_voice.stop()
 	_bridge.voice_player.stop()
-	if not audio_path.is_empty() and ResourceLoader.exists(audio_path):
+	if DisplayServer.get_name() == "headless" and not audio_path.is_empty() and ResourceLoader.exists(audio_path):
 		_voice.stream = load(audio_path) as AudioStream
 		if _voice.stream != null:
 			_voice.play()
 			_set_status("")
 			return
+	var Voices = preload("res://core/character_voices.gd")
+	var room_host := Voices.npc_for_room(str(game.get("room")) if is_instance_valid(game) else "")
 	_bridge.muted = false
-	_bridge.speak_text(spoken_english.replace(" / ", ", "), "en", "warm")
+	_bridge.speak_text(spoken_english.replace(" / ", ", "), "en", room_host)
 	_set_status("")
 
 func _toggle_follow_along() -> void:

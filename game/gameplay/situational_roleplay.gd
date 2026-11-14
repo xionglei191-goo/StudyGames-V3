@@ -116,7 +116,7 @@ const SCENARIOS := {
 		"finale_zh": "小小气象员表现真棒！天气问答与出行穿搭表达一气呵成！"
 	},
 	"canteen": {
-		"npc_id": "npc_bear_uncle",
+		"npc_id": "resident_canteen",
 		"speaker": "食堂主厨 · 营养午餐剧场",
 		"key_word": "milk",
 		"turns": [
@@ -445,12 +445,12 @@ static func handle_pick(game: Node3D, payload: String) -> void:
 		return
 	var chosen: Dictionary = choices[choice_idx]
 	var spoken_en := str(chosen.get("en", ""))
-	if not spoken_en.is_empty() and is_instance_valid(game.ai_bridge):
-		game.ai_bridge.speak_text(spoken_en, "en", "warm")
 
 	if bool(chosen.get("ok", false)):
 		open_turn(game, scenario_id, turn_idx + 1, "")
 	else:
+		if not spoken_en.is_empty() and is_instance_valid(game.ai_bridge):
+			game.ai_bridge.speak_text(spoken_en, "en", "player")
 		var recast := str(chosen.get("recast_zh", "想想刚才伙伴问的是什么，换一句更贴切的英文回应试试吧！"))
 		open_turn(game, scenario_id, turn_idx, recast)
 

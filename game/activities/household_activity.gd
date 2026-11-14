@@ -80,7 +80,7 @@ func setup(host: Node3D, plan: Dictionary) -> void:
 	_update_hud()
 	var en_intro := str(TASK_ENGLISH.get(task_id, ""))
 	if not en_intro.is_empty() and is_instance_valid(game.get("ai_bridge")):
-		game.ai_bridge.speak_text(en_intro, "en", "warm")
+		game.ai_bridge.speak_text(en_intro, "en", "player")
 
 func stop() -> void:
 	if _stopped: return
@@ -480,7 +480,7 @@ func _save_result() -> void:
 	for crease in wrinkles: crease.hide()
 	game.sounds.play("place")
 	if is_instance_valid(game.get("ai_bridge")):
-		game.ai_bridge.speak_text("All clean and tidy! Great job!", "en", "warm")
+		game.ai_bridge.speak_text("All clean and tidy! Great job!", "en", "teacher_gentle")
 	finished.emit()
 	_update_hud()
 

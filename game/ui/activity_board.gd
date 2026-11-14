@@ -38,10 +38,16 @@ func setup(activity: String, data: Dictionary) -> void:
 func _speak_bilingual(phrase_en: String) -> void:
 	if phrase_en.is_empty():
 		return
+	var host_map := {
+		"music": "resident_music_room",
+		"art": "resident_art_room",
+		"science": "resident_science_room",
+	}
+	var vh := str(host_map.get(kind, "teacher_gentle"))
 	if Engine.get_main_loop() is SceneTree:
 		var bus := (Engine.get_main_loop() as SceneTree).root.get_node_or_null("EventBus")
 		if bus != null:
-			bus.tts_speak_requested.emit(phrase_en, "en", "warm")
+			bus.tts_speak_requested.emit(phrase_en, "en", vh)
 
 func _button(value: String, callback: Callable, primary: bool = false) -> Button:
 	var item := Button.new()

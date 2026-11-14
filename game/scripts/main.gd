@@ -14,6 +14,7 @@ const WebRooms = preload("res://scripts/web_rooms.gd")
 const SharedProfile = preload("res://scripts/shared_profile.gd")
 const AudioDirectorScript = preload("res://core/audio_director.gd")
 const AICompanionBridgeScript = preload("res://core/ai_companion_bridge.gd")
+const CharacterVoices = preload("res://core/character_voices.gd")
 const TactileQuestsScript = preload("res://gameplay/tactile_life_quests.gd")
 const CurriculumDirector = preload("res://gameplay/curriculum_quest_director.gd")
 const StoryDirector = preload("res://gameplay/unit_storyline_director.gd")
@@ -233,7 +234,7 @@ func _ready() -> void:
 	add_child(palace_loci)
 	tactile_quests.apple_picked.connect(func(_kind: String, word_en: String):
 		if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
-		if is_instance_valid(ai_bridge): ai_bridge.speak_text(word_en, "en", "warm")
+		if is_instance_valid(ai_bridge): ai_bridge.speak_text(word_en, "en", "npc_rabbit_gardener")
 		ui.notify("双手捧起了香甜的 %s！快走到果篮边放进去吧 " % word_en)
 	)
 	tactile_quests.basket_delivered.connect(func(total_deliv: int, word_en: String):
@@ -246,7 +247,7 @@ func _ready() -> void:
 	tactile_quests.item_picked.connect(func(_kind: String, word_en: String, room_id: String):
 		if room_id == "landmark_A": return
 		if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
-		if is_instance_valid(ai_bridge): ai_bridge.speak_text(word_en, "en", "warm")
+		if is_instance_valid(ai_bridge): ai_bridge.speak_text(word_en, "en", CharacterVoices.npc_for_room(room_id))
 		ui.notify("双手捧起了 %s！快走到发光工坊分享台放好吧 " % word_en)
 	)
 	tactile_quests.station_delivered.connect(func(room_id: String, craft_total: int, word_en: String):
@@ -265,8 +266,8 @@ func _ready() -> void:
 	)
 	if is_instance_valid(ui.diegetic):
 		ui.diegetic.camera = camera
-		ui.diegetic.speak_requested.connect(func(t: String, l: String):
-			if is_instance_valid(ai_bridge): ai_bridge.speak_text(t, l, "warm")
+		ui.diegetic.speak_requested.connect(func(t: String, l: String, vh: String):
+			if is_instance_valid(ai_bridge): ai_bridge.speak_text(t, l, vh)
 		)
 		ui.diegetic.follow_along_submitted.connect(func(target_text: String, mode: String, rms_peak: float, duration_ms: int):
 			if is_instance_valid(ai_bridge):
@@ -963,11 +964,25 @@ func _completed_count() -> int:
 			count += 1
 	return count
 
-func play_phrase(id: String) -> void:
+func play_phrase(id: String, speaker_override: String = "") -> void:
 	if muted or not curriculum.get("phrases",{}).has(id):
 		return
+	var entry: Dictionary = curriculum.phrases[id]
+	if not validation_mode and DisplayServer.get_name() != "headless" and is_instance_valid(ai_bridge):
+		var speaker_id := speaker_override.strip_edges()
+		if speaker_id.is_empty() and is_instance_valid(ui) and is_instance_valid(ui.diegetic) and ui.diegetic.visible:
+			speaker_id = str(ui.diegetic.current_npc_id)
+		if speaker_id.is_empty() and is_instance_valid(journey) and not journey.active_actor_ids.is_empty():
+			speaker_id = str(journey.active_actor_ids[0])
+		if speaker_id.is_empty():
+			speaker_id = CharacterVoices.npc_for_room(room)
+		var spoken_en := str(entry.get("en", "")).strip_edges()
+		if not spoken_en.is_empty():
+			voice.stop()
+			ai_bridge.speak_text(spoken_en, "en", speaker_id)
+			return
 	voice.stop()
-	var path: String = curriculum.phrases[id].audio
+	var path: String = entry.audio
 	var stream: AudioStream = load(path) as AudioStream
 	if stream:
 		voice.stream = stream
@@ -1075,7 +1090,6 @@ func interact_id(id: String) -> void:
 	match id:
 		"baker", "bakery": show_baker()
 		"gardener":
-			play_phrase("hello")
 			if not validation_mode and is_instance_valid(ui.diegetic):
 				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 				ui.diegetic.open_conversation({
@@ -1084,7 +1098,7 @@ func interact_id(id: String) -> void:
 					"en": "Hello! Sweet apples are ripe on the grass — pick one in your hands and bring it to my basket!",
 					"zh": "你好呀！香甜的 3D 红苹果已经掉落在草地上了，走过去双手捧起来放进发光藤篮，或者接一个今日单元小委托吧！",
 					"world_pos": conversation_position,
-					"auto_speak": false,
+					"auto_speak": true,
 					"actions": [
 						{"label": "★ 今日单元小委托", "id": "v4_commission:npc_rabbit_gardener", "primary": true},
 						{"label": "◈ 情境三轮英语对话", "id": "v5_roleplay_start:" + RoleplayDirector.scenario_id_for_context(room, "gardener")},
@@ -1094,6 +1108,7 @@ func interact_id(id: String) -> void:
 					]
 				})
 			else:
+				play_phrase("hello")
 				ui.show_panel("gardener","兔兔的果园","邻居   /   苹果屋","Hello!  欢迎你来果园。\n树上的苹果今天熟了，采三颗送给熊叔吧。\n累了也可以来我的花园坐一会儿。",[{"label":"听听 apple 的读音","id":"audio:apple","primary":true},{"label":"去采苹果","id":"navigate:orchard"}])
 		"orchard": show_orchard()
 		"school_gate": await change_room("school")
@@ -1103,7 +1118,6 @@ func interact_id(id: String) -> void:
 			await change_room("village", door)
 		"teacher":
 			if not validation_mode and is_instance_valid(ui.diegetic):
-				play_phrase("good_morning")
 				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 				var chap := StoryDirector.active_chapter(State)
 				ui.diegetic.open_conversation({
@@ -1112,7 +1126,7 @@ func interact_id(id: String) -> void:
 					"en": "Good morning! No exams here — let's share today's cozy story \"%s\" or try a storybook sticker together!" % str(chap.get("source_title", "Hello")),
 					"zh": "早上好呀！阳光教室没有考试题板，只有温馨故事会！今天想开启「%s · U%d %s」三幕共创，还是贴一张单元手账贴纸？" % [str(chap.get("book_title", "三年级上册")), int(chap.get("unit_number", 1)), str(chap.get("event_title", "小岛故事"))],
 					"world_pos": conversation_position,
-					"auto_speak": false,
+					"auto_speak": true,
 					"actions": [
 						{"label": "★ 开启本章三幕共创", "id": "v4_chap_open_here", "primary": true},
 						{"label": "◈ 情境三轮英语对话", "id": "v5_roleplay_start:classroom"},
@@ -1125,16 +1139,15 @@ func interact_id(id: String) -> void:
 			else:
 				show_lessons()
 		"lunch":
-			play_phrase("milk")
 			if not validation_mode and is_instance_valid(ui.diegetic):
 				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 				ui.diegetic.open_conversation({
-					"npc_id": "npc_bear_uncle",
+					"npc_id": "resident_canteen",
 					"speaker": "食堂主厨 · 暖香餐台",
 					"en": "Welcome to our sunny canteen! Would you like warm milk, soft bread, or a sweet cake? You can also carry tray items on the floor!",
 					"zh": "欢迎来到校园阳光餐厅！点选食物听听英文发音，或者走过去双手捧起地面上的牛奶盒和面包送到餐盘分享台吧！",
 					"world_pos": conversation_position,
-					"auto_speak": false,
+					"auto_speak": true,
 					"actions": [
 						{"label": "★ 情境点餐三轮对话", "id": "v5_roleplay_start:canteen", "primary": true},
 						{"label": "· 牛奶 milk", "id": "audio:milk"},
@@ -1145,9 +1158,9 @@ func interact_id(id: String) -> void:
 					]
 				})
 			else:
+				play_phrase("milk")
 				ui.show_panel("lunch","今天想吃点什么？","校园食堂   /   生活英语","和食堂阿姨一起认识食物。\n点选食物，就能听到它的英文名字。",[{"label":"牛奶  milk","id":"audio:milk","primary":true},{"label":"面包  bread","id":"audio:bread"},{"label":"蛋糕  cake","id":"audio:cake"},{"label":"谢谢阿姨  Thank you.","id":"audio:thank_you"}],"这里是自由体验，不计为独立掌握。")
 		"sports":
-			play_phrase("how_old")
 			if not validation_mode and is_instance_valid(ui.diegetic):
 				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 				ui.diegetic.open_conversation({
@@ -1156,7 +1169,7 @@ func interact_id(id: String) -> void:
 					"en": "Hi friend! How old are you? Come pick up a colorful ball on the grass and play with us!",
 					"zh": "嗨！小伙伴想认识你！你可以听听示范、点气泡上的「♪ 跟读试试」大胆开口，也可以去草地上双手捧起彩球放进收纳台！",
 					"world_pos": conversation_position,
-					"auto_speak": false,
+					"auto_speak": true,
 					"actions": [
 						{"label": "★ 操场运动三轮对话", "id": "v5_roleplay_start:playground", "primary": true},
 						{"label": "· 听听 I'm nine.", "id": "audio:im_nine"},
@@ -1166,6 +1179,7 @@ func interact_id(id: String) -> void:
 					]
 				})
 			else:
+				play_phrase("how_old")
 				ui.show_panel("sports","操场上认识新朋友","课间   /   自由对话","How old are you?\n小伙伴想知道你几岁了。听一听示范，再试着说自己的年龄。",[{"label":"听听 I'm nine.","id":"audio:im_nine","primary":true},{"label":"回教室看看课程","id":"navigate:school_exit"}],"第一版不录音、不评判口语；听过或跟读不记为独立掌握。")
 		"bed":
 			if not validation_mode and is_instance_valid(ui.diegetic):
@@ -1196,12 +1210,13 @@ func interact_id(id: String) -> void:
 				start_activity(activity)
 			elif not validation_mode and is_instance_valid(ui.diegetic) and room.begins_with("landmark_"):
 				var letter_code := room.trim_prefix("landmark_")
+				var host_npc_id := CharacterVoices.npc_for_room(room)
 				var spec: Dictionary = TactileQuestsScript.ROOM_QUEST_SPECS.get(room, {})
 				var word_en := str(spec.get("word", letter_code))
 				var st_name := str(spec.get("station", "手作分享台"))
 				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 				ui.diegetic.open_conversation({
-					"npc_id": "npc_bear_uncle",
+					"npc_id": host_npc_id,
 					"speaker": "%s 馆主理人 · %s" % [letter_code, st_name],
 					"en": "Welcome to Landmark %s! \"%s\" starts with %s! Pick up the 3D %s items nearby and place them on our %s!" % [letter_code, word_en, letter_code, word_en.to_lower(), st_name],
 					"zh": "欢迎来到 %s 字母馆！在房间里走近发光的 3D「%s」就能双手捧起，送到「%s」会留下永久小岛手作纪念哦！" % [letter_code, word_en, st_name],
@@ -1213,7 +1228,7 @@ func interact_id(id: String) -> void:
 						{"label": "◈ 情境三轮英语对话", "id": "v5_roleplay_start:" + RoleplayDirector.scenario_id_for_context(room, "host")},
 						{"label": "· 本屋记忆宫殿角落", "id": "v5_palace_tour:0"},
 						{"label": "· 本章三幕共创", "id": "v4_chap_open_here"},
-						{"label": "· 今日手账小委托", "id": "v4_commission:npc_bear_uncle"},
+						{"label": "· 今日手账小委托", "id": "v4_commission:" + host_npc_id},
 						{"label": "去捧起 3D 好物", "id": "close"}
 					]
 				})
@@ -1260,8 +1275,6 @@ func show_baker(play_greeting: bool = true) -> void:
 		show_building_resident("resident_c")
 		return
 	var d: Dictionary = State.data
-	if play_greeting:
-		play_phrase("good_morning")
 	if not validation_mode and is_instance_valid(ui.diegetic):
 		if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 		if not d.quests.greet_done:
@@ -1271,7 +1284,7 @@ func show_baker(play_greeting: bool = true) -> void:
 				"en": "Good morning! Welcome to Alphabet Island! Would you like to help me bake an apple cake today?",
 				"zh": "早上好！欢迎搬来晨光村！今天愿意帮熊叔一起烤一份香喷喷的苹果蛋糕吗？",
 				"world_pos": conversation_position,
-				"auto_speak": false,
+				"auto_speak": play_greeting,
 				"actions": [
 					{"label": "Hello! 很高兴认识你", "id": "greet", "primary": true},
 					{"label": "★ 今日单元小委托", "id": "v4_commission:npc_bear_uncle"},
@@ -1286,7 +1299,7 @@ func show_baker(play_greeting: bool = true) -> void:
 				"en": "Could you bring 3 sweet apples from the orchard? Let's bake our first cake together! (%d / 3)" % int(d.apples),
 				"zh": "帮我从果园带回 3 颗红苹果吧，送到后我们一起烤第一份蛋糕！（当前背包：%d 颗）" % int(d.apples),
 				"world_pos": conversation_position,
-				"auto_speak": false,
+				"auto_speak": play_greeting,
 				"actions": [
 					{"label": "· 交给熊叔 3 颗苹果", "id": "deliver", "primary": true, "disabled": d.apples < 3},
 					{"label": "· 带我去苹果树", "id": "navigate:orchard"},
@@ -1301,7 +1314,7 @@ func show_baker(play_greeting: bool = true) -> void:
 				"en": "Our bakery is open and warm! Bake an apple cake or pick a cozy storybook sticker with me! (Apples: %d · Cakes: %d)" % [int(d.apples), int(d.cakes)],
 				"zh": "蛋糕坊热气腾腾开张啦！3 颗苹果烤 1 份蛋糕，售出可得 15 叶币；也可以接今日教材手账小委托！",
 				"world_pos": conversation_position,
-				"auto_speak": false,
+				"auto_speak": play_greeting,
 				"actions": [
 					{"label": "★ 制作苹果蛋糕", "id": "craft", "primary": true, "disabled": d.apples < 3},
 					{"label": "· 售出一份蛋糕", "id": "sell", "disabled": d.cakes < 1},
@@ -1312,6 +1325,8 @@ func show_baker(play_greeting: bool = true) -> void:
 				]
 			})
 		return
+	if play_greeting:
+		play_phrase("good_morning")
 	if not d.quests.greet_done:
 		ui.show_panel("baker","Good morning!","熊叔   /   蛋糕烘焙坊","早上好！我是熊叔，欢迎你搬来晨光村。\n我正在准备苹果蛋糕，你愿意来帮忙吗？",[{"label":"Hello! 很高兴认识你","id":"greet","primary":true},{"label":"再听一遍","id":"audio:good_morning"}],"先和邻居熟悉起来。听到问候不计为学习过关。")
 	elif not d.quests.delivery_done:
@@ -1674,8 +1689,9 @@ func open_v4_thematic_play(ckey: String) -> void:
 	_thematic_session = {"ckey": real_key, "filled": 0, "hint": false, "note": ""}
 	ThematicPlay.build(ui, State, chap, _thematic_session)
 	var targets := ThematicPlay.target_cards_for_chapter(chap)
+	var chap_voice := str(chap.get("host_npc_id", CharacterVoices.npc_for_room(room)))
 	if not targets.is_empty() and is_instance_valid(ai_bridge):
-		ai_bridge.speak_text(str(targets[0].get("word", "")), "en", "warm")
+		ai_bridge.speak_text(str(targets[0].get("word", "")), "en", chap_voice)
 
 func _handle_v4_thematic_pick(payload: String) -> void:
 	var parts := payload.split(":", true, 1)
@@ -1686,6 +1702,7 @@ func _handle_v4_thematic_pick(payload: String) -> void:
 	var chap := StoryDirector.get_chapter_by_key(ckey)
 	if chap.is_empty():
 		return
+	var chap_voice := str(chap.get("host_npc_id", CharacterVoices.npc_for_room(room)))
 	var targets := ThematicPlay.target_cards_for_chapter(chap)
 	var filled := clampi(int(_thematic_session.get("filled", 0)), 0, targets.size())
 	if filled >= targets.size():
@@ -1693,7 +1710,7 @@ func _handle_v4_thematic_pick(payload: String) -> void:
 	var expected := str(targets[filled].get("word", ""))
 	var hint_used := bool(_thematic_session.get("hint", false))
 	if is_instance_valid(ai_bridge):
-		ai_bridge.speak_text(chosen_word, "en", "warm")
+		ai_bridge.speak_text(chosen_word, "en", chap_voice)
 	if chosen_word.to_lower() == expected.to_lower():
 		_thematic_session["filled"] = filled + 1
 		_thematic_session["hint"] = false
@@ -1710,7 +1727,7 @@ func _handle_v4_thematic_pick(payload: String) -> void:
 			var next_w := str(targets[filled + 1].get("word", ""))
 			get_tree().create_timer(0.65).timeout.connect(func():
 				if is_instance_valid(ai_bridge) and ui.current_panel == "v4_thematic_play":
-					ai_bridge.speak_text(next_w, "en", "warm")
+					ai_bridge.speak_text(next_w, "en", chap_voice)
 			)
 	else:
 		var tapped_zh := chosen_word
@@ -1824,7 +1841,7 @@ func _on_action(id: String) -> void:
 			ui.wardrobe_preview.spin_by(-0.62 if dir_s == "left" else 0.62)
 	elif id.begins_with("wardrobe_speak:"):
 		if is_instance_valid(ai_bridge):
-			ai_bridge.speak_text(id.trim_prefix("wardrobe_speak:"), "en", "warm")
+			ai_bridge.speak_text(id.trim_prefix("wardrobe_speak:"), "en", "player")
 	elif id == "v4_free_decor":
 		if is_instance_valid(free_decor_studio):
 			await free_decor_studio.open_studio()
@@ -1832,7 +1849,9 @@ func _on_action(id: String) -> void:
 		open_v4_thematic_play(id.trim_prefix("v4_thematic_open:"))
 	elif id.begins_with("v4_thematic_speak:"):
 		if is_instance_valid(ai_bridge):
-			ai_bridge.speak_text(id.trim_prefix("v4_thematic_speak:"), "en", "warm")
+			var cur_chap := StoryDirector.get_chapter_by_key(str(_thematic_session.get("ckey", "")))
+			var spk_hint := str(cur_chap.get("host_npc_id", CharacterVoices.npc_for_room(room)))
+			ai_bridge.speak_text(id.trim_prefix("v4_thematic_speak:"), "en", spk_hint)
 	elif id.begins_with("v4_thematic_hint:"):
 		var hkey := id.trim_prefix("v4_thematic_hint:")
 		var hchap := StoryDirector.get_chapter_by_key(hkey)
@@ -2433,17 +2452,17 @@ func _start_football() -> void:
 	football.shot_finished.connect(func(scored: bool,attempts: int,goals: int):
 		sounds.play("success" if scored else "miss")
 		if is_instance_valid(ai_bridge):
-			ai_bridge.speak_text("Goal! Great shot!" if scored else "Nice try! Kick again!", "en", "warm")
+			ai_bridge.speak_text("Goal! Great shot!" if scored else "Nice try! Kick again!", "en", "resident_football_field")
 		ui.football_feedback(attempts,goals,"Goal! Great shot! · 进球啦！再试一个角度。" if scored else "Nice try! · 差一点点，调整方向和力度再试试。")
 	)
 	football.round_finished.connect(func(goals: int):
 		State.complete_activity("football",goals)
 		if is_instance_valid(ai_bridge):
-			ai_bridge.speak_text("Five shots finished! Fantastic job!", "en", "warm")
+			ai_bridge.speak_text("Five shots finished! Fantastic job!", "en", "resident_football_field")
 		ui.football_feedback(5,goals,"Fantastic job! · 五次射门完成！本轮进球 %d，最好成绩 %d。" % [goals,State.data.life.scores.football])
 	)
 	if is_instance_valid(ai_bridge):
-		ai_bridge.speak_text("Let's kick the football into the goal!", "en", "warm")
+		ai_bridge.speak_text("Let's kick the football into the goal!", "en", "resident_football_field")
 	ui.show_football(football)
 
 func _shoot_football() -> void:

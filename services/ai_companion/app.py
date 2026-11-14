@@ -16,10 +16,19 @@ from . import __version__
 from .npc_companion import generate_npc_reply
 from .speech_service import evaluate_follow_along, synthesize_speech
 from .stealth_mastery import build_parent_weekly_report, update_irt_mastery
+from .voice_profiles import CHARACTER_VOICE_MAP, VOICE_ARCHETYPES
 
 
 async def health(_request: Request) -> JSONResponse:
-    return JSONResponse({"ok": True, "service": "studygames-v4-ai-companion", "version": __version__})
+    return JSONResponse(
+        {
+            "ok": True,
+            "service": "studygames-v4-ai-companion",
+            "version": __version__,
+            "voice_archetypes": len(VOICE_ARCHETYPES),
+            "character_voices": len(CHARACTER_VOICE_MAP),
+        }
+    )
 
 
 async def npc_chat(request: Request) -> JSONResponse:
@@ -42,6 +51,7 @@ async def tts_speak(request: Request) -> JSONResponse:
         text=str(body.get("text") or ""),
         lang=str(body.get("lang") or "en"),
         voice_hint=str(body.get("voice_hint") or "warm"),
+        prefer_offline=bool(body.get("prefer_offline", False)),
     )
     return JSONResponse(result, status_code=200 if result.get("ok") else 400)
 

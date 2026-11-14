@@ -84,6 +84,7 @@ func _run() -> void:
 		_check(FileAccess.file_exists("res://data/learning/memory_palace_v5.json"),"packaged_memory_palace_v5")
 		_check(FileAccess.file_exists("res://data/learning/world_object_semantics_v5.json"),"packaged_world_semantics_v5")
 		_check(FileAccess.file_exists("res://data/learning/voice_manifest_v4.json"),"packaged_voice_manifest_v4")
+		_check(ResourceLoader.exists("res://core/character_voices.gd"),"packaged_character_voices_v5")
 		game.journey.open_story_from_world("occ-5605ac34c5f2")
 		for frame: int in 8: await get_tree().process_frame
 		var v5_popup: Node = game.journey.current_memory

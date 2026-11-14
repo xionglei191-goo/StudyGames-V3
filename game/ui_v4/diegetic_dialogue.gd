@@ -5,13 +5,14 @@ extends Control
 
 signal action_triggered(action_id: String)
 signal ai_chat_submitted(npc_id: String, message: String)
-signal speak_requested(text: String, lang: String)
+signal speak_requested(text: String, lang: String, voice_hint: String)
 signal follow_along_submitted(target_text: String, mode: String, rms_energy: float, duration_ms: int)
 signal hint_toggled(npc_id: String, shown: bool)
 signal overlay_visibility_changed(is_open: bool)
 signal closed
 
 const Style = preload("res://ui/island_theme.gd")
+const CharacterVoices = preload("res://core/character_voices.gd")
 
 class SpeechTail extends Control:
 	var fill_color := Color(0.996, 0.986, 0.952, 0.98)
@@ -46,6 +47,8 @@ var _speaker_badge: Label
 var _en_label: Label
 var _zh_panel: PanelContainer
 var _zh_label: Label
+var _listen_en_btn: Button
+var _listen_zh_btn: Button
 var _hint_btn: Button
 var _chat_toggle_btn: Button
 var _chat_box: HBoxContainer
@@ -156,15 +159,26 @@ func _build_ui() -> void:
 
 	# Clean Vector Footer Tool Row
 	var tool_row := HBoxContainer.new()
-	tool_row.add_theme_constant_override("separation", 8)
+	tool_row.add_theme_constant_override("separation", 6)
 	col.add_child(tool_row)
 
-	var listen_btn := _tool_chip("听读音", "speaker", "听柔和美式女声朗读")
-	listen_btn.pressed.connect(func():
+	_listen_en_btn = _tool_chip("听读音", "speaker", "用当前角色的专属音色朗读英文")
+	_listen_en_btn.pressed.connect(func():
 		if not current_en.is_empty():
-			speak_requested.emit(current_en, "en")
+			speak_requested.emit(current_en, "en", current_npc_id)
 	)
-	tool_row.add_child(listen_btn)
+	tool_row.add_child(_listen_en_btn)
+
+	_listen_zh_btn = _tool_chip("听中文", "speaker", "用当前角色的专属音色朗读中文")
+	_listen_zh_btn.pressed.connect(func():
+		if not current_zh.is_empty():
+			if not zh_visible:
+				zh_visible = true
+				_zh_panel.visible = true
+				_update_positions(true)
+			speak_requested.emit(_clean_zh_for_tts(current_zh), "zh", current_npc_id)
+	)
+	tool_row.add_child(_listen_zh_btn)
 
 	var follow_btn := _tool_chip("跟读试试", "mic", "对着麦克风读英文，离线识别鼓励")
 	follow_btn.pressed.connect(func(): _start_follow_along("voice"))
@@ -264,11 +278,17 @@ func open_conversation(config: Dictionary) -> void:
 	anchor_world_pos = config.get("world_pos", Vector3.ZERO)
 	has_world_anchor = config.has("world_pos")
 
-	_speaker_badge.text = "◈  " + speaker_name
+	var voice_tag := CharacterVoices.label_zh_for(current_npc_id)
+	_speaker_badge.text = "◈  %s  ·  %s" % [speaker_name, voice_tag]
 	_en_label.text = current_en
 	_zh_label.text = current_zh
 	_zh_panel.visible = zh_visible and not current_zh.is_empty()
 	_hint_btn.visible = not current_zh.is_empty()
+	if is_instance_valid(_listen_zh_btn):
+		_listen_zh_btn.visible = not current_zh.is_empty()
+		_listen_zh_btn.tooltip_text = "用「%s」朗读中文" % voice_tag
+	if is_instance_valid(_listen_en_btn):
+		_listen_en_btn.tooltip_text = "用「%s」朗读英文" % voice_tag
 	_chat_box.hide()
 	_smoothed_bubble_pos = Vector2(-1.0, -1.0)
 
@@ -283,7 +303,7 @@ func open_conversation(config: Dictionary) -> void:
 		tw.tween_property(_bubble_card, "modulate:a", 1.0, 0.16)
 		tw.tween_property(_ribbon_panel, "modulate:a", 1.0, 0.18)
 	if bool(config.get("auto_speak", true)) and not current_en.is_empty():
-		speak_requested.emit(current_en, "en")
+		speak_requested.emit(current_en, "en", current_npc_id)
 
 func _start_follow_along(mode: String) -> void:
 	var phrase := current_en if not current_en.is_empty() else "Hello!"
@@ -396,7 +416,7 @@ func show_speech_encouragement(reply: Dictionary) -> void:
 	_zh_panel.visible = true
 	_update_positions(true)
 	if not rep_en.is_empty():
-		speak_requested.emit(rep_en, "en")
+		speak_requested.emit(rep_en, "en", current_npc_id)
 
 func show_ai_reply(reply: Dictionary) -> void:
 	current_en = str(reply.get("reply_en", current_en))
@@ -404,6 +424,8 @@ func show_ai_reply(reply: Dictionary) -> void:
 	_en_label.text = current_en
 	_zh_label.text = current_zh
 	_zh_panel.visible = not current_zh.is_empty()
+	if is_instance_valid(_listen_zh_btn):
+		_listen_zh_btn.visible = not current_zh.is_empty()
 	if reply.get("suggestions") is Array and not (reply.suggestions as Array).is_empty():
 		var actions: Array = []
 		for sug: Variant in reply.suggestions:
@@ -413,7 +435,13 @@ func show_ai_reply(reply: Dictionary) -> void:
 		_rebuild_choices(actions)
 	_update_positions(true)
 	if not current_en.is_empty():
-		speak_requested.emit(current_en, "en")
+		speak_requested.emit(current_en, "en", current_npc_id)
+
+static func _clean_zh_for_tts(raw_zh: String) -> String:
+	var s := raw_zh
+	for sym: String in ["★", "☆", "◈", "◇", "♪", "·", "【", "】"]:
+		s = s.replace(sym, " ")
+	return s.strip_edges()
 
 static func _infer_action_icon(act_id: String, raw_label: String) -> String:
 	if act_id.begins_with("audio:"):

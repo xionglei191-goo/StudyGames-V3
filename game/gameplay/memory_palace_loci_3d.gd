@@ -465,7 +465,8 @@ func open_room_palace_tour(page_offset: int = 0) -> bool:
 	if is_instance_valid(game.audio_director):
 		game.audio_director.play_foley("bubble_pop")
 
-	var en_line := "Welcome to the Memory Palace of %s! Try recalling \"%s\" at the corner!" % [room_zh, str(lead_it.get("word", ""))]
+	var en_room := _english_room_name(active_room)
+	var en_line := "Welcome to the Memory Palace of %s! Try recalling \"%s\" at the corner!" % [en_room, str(lead_it.get("word", ""))]
 	var zh_body := "\n".join(lines_zh)
 
 	if is_instance_valid(game.ui.diegetic) and not game.validation_mode:
@@ -491,3 +492,26 @@ func open_room_palace_tour(page_offset: int = 0) -> bool:
 			actions
 		)
 	return true
+
+static func _english_room_name(room_id: String) -> String:
+	if room_id.begins_with("landmark_"):
+		return "Landmark " + room_id.trim_prefix("landmark_")
+	var names := {
+		"classroom": "our Sunny Classroom",
+		"music_room": "our Music Room",
+		"art_room": "our Art Studio",
+		"science_room": "our Science Lab",
+		"canteen": "our School Canteen",
+		"playground": "our Green Playground",
+		"football_field": "our Football Field",
+		"school": "Hilltop School",
+		"home": "our Cozy Living Room",
+		"home_bedroom": "our Bedroom",
+		"home_kitchen": "our Warm Kitchen",
+		"home_study": "our Quiet Study",
+		"home_bathroom": "our Bathroom",
+		"home_balcony": "our Sunny Balcony",
+		"home_estate": "our Garden Courtyard",
+		"village": "Morning Breeze Village",
+	}
+	return str(names.get(room_id, "Alphabet Island"))

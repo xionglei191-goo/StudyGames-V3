@@ -22,7 +22,7 @@ if (Test-AICompanionReady -CheckPort $Port) {
     return
 }
 
-# Find Python 3 with starlette + uvicorn (+ optional piper-tts/vosk in .local/ai-companion-venv)
+# Find Python 3 with starlette + uvicorn (+ optional edge-tts/miniaudio/piper-tts/vosk in .local/ai-companion-venv)
 $pythonCandidates = @()
 $localVenvPy = Join-Path $PSScriptRoot '.local\ai-companion-venv\Scripts\python.exe'
 if (Test-Path $localVenvPy) {
@@ -54,10 +54,10 @@ New-Item -ItemType Directory -Path $logDir -Force | Out-Null
 $stdoutLog = Join-Path $logDir 'uvicorn.out.log'
 $stderrLog = Join-Path $logDir 'uvicorn.err.log'
 
-$uvicornArgs = "-m uvicorn services.ai_companion.app:app --host 127.0.0.1 --port $Port"
+$uvicornArgs = "-X utf8 -m uvicorn services.ai_companion.app:app --host 127.0.0.1 --port $Port"
 
 if ($Foreground) {
-    & $selectedPython -m uvicorn services.ai_companion.app:app --host 127.0.0.1 --port $Port
+    & $selectedPython -X utf8 -m uvicorn services.ai_companion.app:app --host 127.0.0.1 --port $Port
     return
 }
 
