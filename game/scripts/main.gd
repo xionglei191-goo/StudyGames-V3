@@ -25,11 +25,14 @@ const ThematicPlay = preload("res://gameplay/chapter_thematic_play.gd")
 const PalaceLociScript = preload("res://gameplay/memory_palace_loci_3d.gd")
 const RoleplayDirector = preload("res://gameplay/situational_roleplay.gd")
 const WakeMailbox = preload("res://gameplay/morning_wake_mailbox.gd")
+const CastDirector = preload("res://gameplay/home_school_cast_director.gd")
+const SpatialBenchScript = preload("res://gameplay/spatial_cluster_bench_3d.gd")
 var online: Node
 var audio_director: Node
 var ai_bridge: Node
 var tactile_quests: Node3D
 var palace_loci: Node3D
+var spatial_bench: Node3D
 var free_decor_studio: Node3D
 var creation: Node3D
 var _commission_hint_used := false
@@ -50,6 +53,7 @@ var navigation := AStarGrid2D.new()
 var nav_ready := false
 var loading_room := false
 var greetings: Dictionary = {}
+var greeting_turns: Dictionary = {}
 var greeting_clock := 0.0
 var bubble_world_position := Vector3.ZERO
 var muted := false
@@ -141,6 +145,8 @@ func _ready() -> void:
 	ui.action.connect(_on_action)
 	State.notice.connect(ui.notify)
 	State.changed.connect(_refresh)
+	if State.has_signal("leveled_up"):
+		State.leveled_up.connect(_on_leveled_up)
 	State.load_state()
 	if bool(profile_result.get("fresh", false)):
 		State.set_outfit(str(profile_result.get("outfit", "yellow")))
@@ -167,21 +173,26 @@ func _ready() -> void:
 	ai_bridge = AICompanionBridgeScript.new()
 	add_child(ai_bridge)
 	ai_bridge.muted = muted or validation_mode
-	ai_bridge.chat_reply_ready.connect(func(_npc_id: String, reply: Dictionary):
-		if is_instance_valid(ui) and is_instance_valid(ui.diegetic) and ui.diegetic.visible:
+	ai_bridge.chat_reply_ready.connect(func(npc_id: String, reply: Dictionary):
+		if is_instance_valid(ui) and is_instance_valid(ui.diegetic) and ui.diegetic.visible and ui.diegetic.current_npc_id == npc_id:
 			ui.diegetic.show_ai_reply(reply)
 	)
 	ai_bridge.speech_encouragement_ready.connect(func(reply: Dictionary):
 		State.record_voice_cheer()
-		var target_w := str(reply.get("target_text", "")).strip_edges().split(" ")[0].to_lower()
-		if not target_w.is_empty():
+		if State.has_method("grant_exp"):
+			State.grant_exp({"key": "voice_speak_daily", "mode": "daily_cap_10", "base_exp": 5})
+		var target_w := str(reply.get("target_text", "")).strip_edges().split(" ")[0].to_lower().trim_suffix("!").trim_suffix(".").trim_suffix("?")
+		# Participation still earns encouragement. Only an actual matching ASR
+		# transcript supplies supported English evidence; silence is not success.
+		var has_word_evidence := str(reply.get("asr_engine", "")) == "vosk_offline_asr" and not str(reply.get("transcript", "")).strip_edges().is_empty() and str(reply.get("match_tier", "")) in ["exact", "close"]
+		if not target_w.is_empty() and has_word_evidence and str(reply.get("transcript", "")).to_lower().split(" ").has(target_w):
 			State.record_stealth_evidence({"word": target_w, "support_level": 1, "correct": true, "context": "voice_follow_along"})
 		if is_instance_valid(audio_director):
 			audio_director.play_foley("wardrobe_sparkle")
 		if is_instance_valid(ui) and is_instance_valid(ui.diegetic) and ui.diegetic.visible:
 			ui.diegetic.show_speech_encouragement(reply)
 		else:
-			ui.notify("♪ " + str(reply.get("encouragement_zh", "读得真棒！")))
+			ui.notify("♪ " + str(reply.get("reply_zh", "不着急，我们一起慢慢读。")))
 	)
 	var bus := get_node_or_null("/root/EventBus")
 	if bus != null:
@@ -232,6 +243,9 @@ func _ready() -> void:
 	palace_loci = PalaceLociScript.new()
 	palace_loci.name = "MemoryPalaceLoci3D"
 	add_child(palace_loci)
+	spatial_bench = SpatialBenchScript.new()
+	spatial_bench.name = "SpatialClusterBench3D"
+	add_child(spatial_bench)
 	tactile_quests.apple_picked.connect(func(_kind: String, word_en: String):
 		if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 		if is_instance_valid(ai_bridge): ai_bridge.speak_text(word_en, "en", "npc_rabbit_gardener")
@@ -266,6 +280,16 @@ func _ready() -> void:
 	)
 	if is_instance_valid(ui.diegetic):
 		ui.diegetic.camera = camera
+		ui.diegetic.conversation_started.connect(func(_npc_id: String):
+			if is_instance_valid(ai_bridge): ai_bridge.cancel_conversation()
+		)
+		ui.diegetic.closed.connect(func():
+			if is_instance_valid(ai_bridge): ai_bridge.cancel_conversation()
+		)
+		ui.diegetic.listening_started.connect(func():
+			if is_instance_valid(ai_bridge): ai_bridge.cancel_conversation()
+			voice.stop()
+		)
 		ui.diegetic.speak_requested.connect(func(t: String, l: String, vh: String):
 			if is_instance_valid(ai_bridge): ai_bridge.speak_text(t, l, vh)
 		)
@@ -306,10 +330,7 @@ func _ready() -> void:
 	elif validation_mode and not test_harness:
 		_run_validation.call_deferred()
 	elif not test_harness and online_config.is_empty():
-		if not State.journey_snapshot().legacy_compatible:
-			journey.continue_journey()
-		else:
-			ui.notify("欢迎回来，今天也在小岛上慢慢逛吧。")
+		ui.notify("欢迎回家！走近家具学大小关联词，找爸妈或去阳光学校和老师同学练英语对话吧！")
 
 func _dialogue_speaker(panel_id: String) -> String:
 	if panel_id.begins_with("resident_"): return panel_id
@@ -358,6 +379,8 @@ func change_room(next_room: String, return_id: String = "") -> void:
 		return
 	if is_instance_valid(journey) and not journey.close_memory(): return
 	if is_instance_valid(household): household.cancel_task()
+	if is_instance_valid(ai_bridge): ai_bridge.cancel_conversation()
+	if is_instance_valid(spatial_bench) and spatial_bench.bench_open: spatial_bench.close_workbench()
 	_stop_orchard_activity()
 	_rollback_decoration()
 	_stop_football()
@@ -416,7 +439,7 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	world.separate_interaction_points(metadata,camera_offset)
 	await get_tree().physics_frame
 	if is_instance_valid(living):
-		living.configure(world,room,{"world_info":metadata,"player":player,"reduced_motion":ui.reduced_motion,"fixed_day":bool(State.data.preferences.get("fixed_day",false)),"guided_prologue":str(State.journey_snapshot().phase) in ["home","prologue"]})
+		living.configure(world,room,{"world_info":metadata,"player":player,"reduced_motion":ui.reduced_motion,"fixed_day":bool(State.data.preferences.get("fixed_day",false)),"guided_prologue":str(State.journey_snapshot().phase) in ["home","prologue"],"validation_mode":validation_mode})
 		interactions.append_array(living.get_interactions())
 		feedback.bind_interactions(interactions)
 	await _build_navigation()
@@ -433,6 +456,8 @@ func change_room(next_room: String, return_id: String = "") -> void:
 		tactile_quests.attach_to_room(self, room)
 	if is_instance_valid(palace_loci):
 		palace_loci.attach_to_room(self, room)
+	if is_instance_valid(spatial_bench):
+		spatial_bench.attach_to_room(self, room)
 	if is_instance_valid(free_decor_studio):
 		free_decor_studio.attach_to_room(room)
 	if is_instance_valid(audio_director):
@@ -561,8 +586,9 @@ func _process(delta: float) -> void:
 		return
 	var studio_open: bool = is_instance_valid(free_decor_studio) and bool(free_decor_studio.active)
 	var household_open: bool = is_instance_valid(household) and household.is_active()
+	var bench_open_now: bool = is_instance_valid(spatial_bench) and bool(spatial_bench.bench_open)
 	var diegetic_open_now: bool = is_instance_valid(ui.diegetic) and bool(ui.diegetic.visible)
-	player.locked = ui.modal.visible or is_instance_valid(football) or is_instance_valid(orchard_activity) or studio_open or household_open
+	player.locked = ui.modal.visible or is_instance_valid(football) or is_instance_valid(orchard_activity) or studio_open or household_open or bench_open_now
 	if not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) or player.locked or diegetic_open_now:
 		_lmb_held = false
 		player.pointer_steer = Vector2.ZERO
@@ -585,7 +611,7 @@ func _process(delta: float) -> void:
 		_rmb_dragging = false
 	if is_instance_valid(living):
 		living.set_context({"dialogue_open":ui.modal.visible,"learning_open":ui.current_panel=="question","memory_open":ui.current_panel=="word_story","paused":ui.current_panel=="settings" or (is_instance_valid(orchard_activity) and orchard_activity.paused),"backgrounded":application_backgrounded,"reduced_motion":ui.reduced_motion,"fixed_day":bool(State.data.preferences.get("fixed_day",false)),"guided_prologue":journey_phase in ["home","prologue"],"story_day_phase":"dawn" if ui.current_panel=="journey_u1" and journey.u1_visible_step=="U1-01" else "","active_actor_ids":journey.active_actor_ids if ui.modal.visible else []})
-		if household_open: living.set_context({"paused":true})
+		if household_open or bench_open_now: living.set_context({"paused":true})
 		living.refresh_interactions(interactions)
 		feedback.update_dynamic_targets()
 		var weather: Dictionary = living.get_status()
@@ -636,6 +662,9 @@ func _process(delta: float) -> void:
 	if household_open:
 		focus = household.activity.camera_focus
 		desired_size = household.activity.camera_size
+	if bench_open_now:
+		focus = spatial_bench.camera_focus
+		desired_size = spatial_bench.camera_size
 	if is_instance_valid(journey) and journey.handoff_busy:
 		var giver: Node3D = living.get_actor("textbook_peter")
 		if giver:
@@ -651,7 +680,7 @@ func _process(delta: float) -> void:
 	camera.size = lerpf(camera.size,desired_size,smoothing)
 	if not player.path.is_empty():
 		feedback.trim_passed_path(player.position)
-	if is_instance_valid(orchard_activity) or household_open:
+	if is_instance_valid(orchard_activity) or household_open or bench_open_now:
 		ui.hide_interaction_prompts()
 		ui.bubble_panel.hide()
 		return
@@ -662,33 +691,45 @@ func _process(delta: float) -> void:
 		if is_instance_valid(audio_director):
 			audio_director.play_footstep_for_room(room)
 		step_clock = 0.34
-	if ui.bubble_panel.visible:
+	var diegetic_open: bool = is_instance_valid(ui.diegetic) and bool(ui.diegetic.visible)
+	if diegetic_open or ui.modal.visible:
+		ui.bubble_panel.hide()
+	elif ui.bubble_panel.visible:
 		ui.bubble_panel.position = camera.unproject_position(bubble_world_position)+Vector2(-100,-106)
 	_update_nearby_target()
 	for entry: Dictionary in interactions:
 		var distance := Vector2(player.position.x,player.position.z).distance_to(Vector2(entry.position.x,entry.position.z))
-		if distance<3.5 and not ui.modal.visible and greeting_clock<=0 and not voice.playing and not str(entry.get("greeting","")).is_empty():
+		if distance<3.5 and not ui.modal.visible and not diegetic_open and greeting_clock<=0 and not voice.playing and not str(entry.get("greeting","")).is_empty():
 			var greeting_id := room+"/"+str(entry.id)
 			if Time.get_ticks_msec()-int(greetings.get(greeting_id,-60000))>45000:
-				var phrase_key := str(entry.greeting)
-				if not curriculum.phrases.has(phrase_key):
-					phrase_key = "good_morning"
-				var phrase: Dictionary = curriculum.phrases[phrase_key]
-				play_phrase(phrase_key)
 				if entry.has("resident_id"): world.greet_resident(str(entry.id),player.global_position)
 				bubble_world_position = entry.position+Vector3(0,2.4,0)
-				ui.say(phrase.en,phrase.zh,camera.unproject_position(bubble_world_position))
+				if not validation_mode:
+					var turn_idx := int(greeting_turns.get(greeting_id, 0))
+					greeting_turns[greeting_id] = turn_idx + 1
+					var g_line := CastDirector.pick_proximity_greeting(room, entry, turn_idx)
+					if is_instance_valid(ai_bridge):
+						ai_bridge.speak_text(str(g_line.get("en", "")), "en", str(g_line.get("speaker_id", "warm")))
+					ui.say(str(g_line.get("en", "")), str(g_line.get("zh", "")), camera.unproject_position(bubble_world_position))
+				else:
+					var phrase_key := str(entry.greeting)
+					if not curriculum.phrases.has(phrase_key):
+						phrase_key = "good_morning"
+					var phrase: Dictionary = curriculum.phrases[phrase_key]
+					play_phrase(phrase_key, CastDirector.resolve_entry_speaker(room, entry))
+					ui.say(phrase.en,phrase.zh,camera.unproject_position(bubble_world_position))
 				greetings[greeting_id] = Time.get_ticks_msec()
 				greeting_clock = 8
 	player.look_target = nearest.position if not nearest.is_empty() else Vector3.INF
-	var diegetic_open: bool = is_instance_valid(ui.diegetic) and bool(ui.diegetic.visible)
 	if not ui.modal.visible and not diegetic_open and not studio_open and not is_instance_valid(football):
 		_refresh_hover_target()
 		var selected: Dictionary = hover_interaction if not hover_interaction.is_empty() else nearest
 		feedback.highlight(selected)
 		if not nearest.is_empty() and not camera.is_position_behind(nearest.position):
 			var text := str(nearest.label)
-			if str(nearest.id)=="orchard":
+			if not validation_mode and str(nearest.id).begins_with("memory_"):
+				text = SpatialBenchScript.interaction_prompt_for(room, str(nearest.id), text, false)
+			elif str(nearest.id)=="orchard":
 				text = "采苹果  %d/3" % int(State.data.harvested) if int(State.data.harvested)<3 else "苹果已采完"
 			ui.show_prompt(text,camera.unproject_position(nearest.position+Vector3(0,2.4,0)),nearby_interactions.size(),maxi(0,nearby_interactions.find(nearest)))
 		else:
@@ -739,7 +780,10 @@ func _refresh_hover_target() -> void:
 		ui.hover_prompt.hide()
 		return
 	var entries := InteractionTargets.colocated(hover_interaction,interactions)
-	var text := "这里有 %d 件事 · 点击选择" % entries.size() if entries.size()>1 else str(hover_interaction.label)+"\n点击互动 / 自动走近"
+	var hover_lbl := str(hover_interaction.label)
+	if not validation_mode and str(hover_interaction.get("id", "")).begins_with("memory_"):
+		hover_lbl = SpatialBenchScript.interaction_prompt_for(room, str(hover_interaction.get("id", "")), hover_lbl, true)
+	var text := "这里有 %d 件事 · 点击选择" % entries.size() if entries.size()>1 else (hover_lbl if "\n" in hover_lbl else hover_lbl+"\n点击互动 / 自动走近")
 	var height := 2.7 if str(hover_interaction.get("type","")) in InteractionTargets.NPC_TYPES else 0.65
 	ui.show_hover_prompt(text,camera.unproject_position(hover_interaction.position+Vector3.UP*height))
 
@@ -757,6 +801,9 @@ func _choose_pointer_target(entry: Dictionary) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if is_instance_valid(household) and household.handle_input(event):
+		get_viewport().set_input_as_handled()
+		return
+	if is_instance_valid(spatial_bench) and spatial_bench.handle_input(event):
 		get_viewport().set_input_as_handled()
 		return
 	if is_instance_valid(creation) and creation.handle_input(event):
@@ -912,6 +959,8 @@ func _refresh() -> void:
 	var d: Dictionary = State.data
 	ui.status.text = "第 %d 天 · 晴" % int(d.day)
 	ui.currency.text = str(d.coins)
+	if ui.has_method("update_progression_hud") and State.has_method("progression_summary"):
+		ui.update_progression_hud(State.progression_summary())
 	ui.location_label.text = _room_label()
 	if not d.quests.greet_done:
 		ui.objective.text = "和熊叔打个招呼"
@@ -925,8 +974,15 @@ func _refresh() -> void:
 		ui.objective.text = "装扮小屋，继续小镇生活"
 	if is_instance_valid(journey):
 		journey_phase = str(State.journey_snapshot().phase)
-		var wish: String = journey.objective()
-		ui.objective.text = wish.split(" · ",true,1)[-1]
+		if validation_mode:
+			var wish: String = journey.objective()
+			ui.objective.text = wish.split(" · ",true,1)[-1]
+		elif room.begins_with("home"):
+			ui.objective.text = "在家认大小词与爸妈对话"
+		elif CastDirector.domain_for_room(room) == "school":
+			ui.objective.text = "在校认物品与师生练语法"
+		else:
+			ui.objective.text = "课余漫步 · 回家或去学校"
 	if is_instance_valid(player):
 		player.apply_wardrobe(d)
 		ui.update_wardrobe(d)
@@ -937,14 +993,31 @@ func _refresh() -> void:
 			else:
 				world.set_decoration(id,bool(d.decorations_placed.get(id,false)))
 
+func _on_leveled_up(payload: Dictionary) -> void:
+	if is_instance_valid(ui) and ui.has_method("show_level_up_banner"):
+		ui.show_level_up_banner(payload)
+	if is_instance_valid(sounds):
+		sounds.play("success")
+	if is_instance_valid(audio_director):
+		audio_director.play_foley("wardrobe_sparkle")
+	if is_instance_valid(player):
+		player.gesture("wave")
+	if is_instance_valid(feedback) and is_instance_valid(player) and not (is_instance_valid(spatial_bench) and spatial_bench.bench_open):
+		var nlv := int(payload.get("new_level", 1))
+		var gift := int(payload.get("gift_coins", 0))
+		feedback.pickup(player.position, player.position, "leaf", "★ Lv.%d 升级礼袋 +%d 叶币" % [nlv, gift])
+
 func _close() -> void:
 	if is_instance_valid(creation) and not creation.before_close(): return
 	if is_instance_valid(journey) and not journey.close_memory(): return
 	if is_instance_valid(household): household.cancel_task()
+	if is_instance_valid(ai_bridge): ai_bridge.cancel_conversation()
 	if is_instance_valid(ui) and is_instance_valid(ui.diegetic):
 		ui.diegetic.dismiss()
 	if is_instance_valid(free_decor_studio) and free_decor_studio.active:
 		free_decor_studio.close_studio()
+	if is_instance_valid(spatial_bench) and spatial_bench.bench_open:
+		spatial_bench.close_workbench()
 	_stop_orchard_activity()
 	_rollback_decoration()
 	_stop_football()
@@ -1012,6 +1085,9 @@ func show_place() -> void:
 	ui.show_panel("place",title,str(plan.get("english_word",""))+" / 小岛生活",body,actions)
 
 func show_memory(sequence: int) -> void:
+	if not validation_mode and is_instance_valid(spatial_bench) and SpatialBenchScript.has_cluster(room):
+		spatial_bench.open_workbench(self, room, "", sequence)
+		return
 	if is_instance_valid(household) and household.handles_room():
 		household.show_memory(sequence)
 		return
@@ -1037,6 +1113,8 @@ func show_memory(sequence: int) -> void:
 		actions.append({"label":"睡到明天","id":"next_day","primary":true})
 	elif room == "home" and sequence == 2:
 		actions.append({"label":"装扮我的小屋","id":"decorate","primary":true})
+	if SpatialBenchScript.has_cluster(room):
+		actions.append({"label":"近景实物台", "id":"v6_bench_open:" + room, "icon":"sparkle", "primary":actions.is_empty()})
 	var p_eid := str(content.get("palace_entry_id", "")).strip_edges()
 	var p_word := str(content.get("palace_word", "")).strip_edges()
 	if not p_eid.is_empty() and not p_word.is_empty():
@@ -1119,20 +1197,21 @@ func interact_id(id: String) -> void:
 		"teacher":
 			if not validation_mode and is_instance_valid(ui.diegetic):
 				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
-				var chap := StoryDirector.active_chapter(State)
+				var rec_sc := RoleplayDirector.recommended_v6_scenario(self, room, "textbook_miss_li")
 				ui.diegetic.open_conversation({
 					"npc_id": "textbook_miss_li",
-					"speaker": "李老师 · 阳光故事圈",
-					"en": "Good morning! No exams here — let's share today's cozy story \"%s\" or try a storybook sticker together!" % str(chap.get("source_title", "Hello")),
-					"zh": "早上好呀！阳光教室没有考试题板，只有温馨故事会！今天想开启「%s · U%d %s」三幕共创，还是贴一张单元手账贴纸？" % [str(chap.get("book_title", "三年级上册")), int(chap.get("unit_number", 1)), str(chap.get("event_title", "小岛故事"))],
+					"speaker": "李老师 Miss Li · 阳光英语课堂",
+					"en": "Good morning, class! Look at our blackboard, desks, and English books — ready to practise speaking together?",
+					"zh": "同学们早上好！在阳光教室里没有枯燥考卷：你可以和李老师演练 1～4 阶课本语法对话，或者走近课桌特写台把书本、铅笔、直尺全部串起来！",
 					"world_pos": conversation_position,
+					"show_zh_immediately": true,
 					"auto_speak": true,
 					"actions": [
-						{"label": "★ 开启本章三幕共创", "id": "v4_chap_open_here", "primary": true},
-						{"label": "◈ 情境三轮英语对话", "id": "v5_roleplay_start:classroom"},
-						{"label": "· 贴一张单元手账贴纸", "id": "v4_commission:textbook_miss_li"},
+						{"label": "★ 第%d阶对话 · %s" % [int(rec_sc.get("stage", 1)), str(rec_sc.get("title_zh", "课堂对话"))], "id": "v6_roleplay_stage:" + str(rec_sc.get("id", "school_s1_classroom_miss_li")), "primary": true},
+						{"label": "◈ 走近课桌台 · 认文具与方位摆一摆", "id": "v6_bench_open:classroom"},
+						{"label": "◈ 切换 1～4 阶师生与同学语法对话", "id": "v6_ladder_open:school"},
+						{"label": "· 开启本章三幕共创", "id": "v4_chap_open_here"},
 						{"label": "· 八册 81 章故事画册", "id": "v4_chapter_atlas"},
-						{"label": "· Good morning!", "id": "audio:good_morning"},
 						{"label": "先在教室逛逛", "id": "close"}
 					]
 				})
@@ -1143,17 +1222,18 @@ func interact_id(id: String) -> void:
 				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 				ui.diegetic.open_conversation({
 					"npc_id": "resident_canteen",
-					"speaker": "食堂主厨 · 暖香餐台",
-					"en": "Welcome to our sunny canteen! Would you like warm milk, soft bread, or a sweet cake? You can also carry tray items on the floor!",
-					"zh": "欢迎来到校园阳光餐厅！点选食物听听英文发音，或者走过去双手捧起地面上的牛奶盒和面包送到餐盘分享台吧！",
+					"speaker": "食堂主厨 · 暖香营养餐台",
+					"en": "Welcome to our sunny canteen! Pick up a clean lunch tray to learn roast chicken, sandwiches, juice, and milk!",
+					"zh": "欢迎来到校园阳光餐厅！可以打开点餐托盘特写台把美味食物摆上托盘，也可以和东东、玲玲练习礼貌点餐对话（I'd like..., please）！",
 					"world_pos": conversation_position,
+					"show_zh_immediately": true,
 					"auto_speak": true,
 					"actions": [
-						{"label": "★ 情境点餐三轮对话", "id": "v5_roleplay_start:canteen", "primary": true},
+						{"label": "★ 校园点餐与计划对话（五年级第3阶）", "id": "v6_roleplay_stage:school_s3_plan_and_canteen", "primary": true},
+						{"label": "◈ 端起营养餐盘 · 选餐食摆一摆", "id": "v6_bench_open:canteen"},
+						{"label": "◈ 食堂主厨三轮对话", "id": "v5_roleplay_start:canteen"},
 						{"label": "· 牛奶 milk", "id": "audio:milk"},
 						{"label": "· 面包 bread", "id": "audio:bread"},
-						{"label": "· 蛋糕 cake", "id": "audio:cake"},
-						{"label": "· 谢谢 Thank you!", "id": "audio:thank_you"},
 						{"label": "去端餐盘好物", "id": "close"}
 					]
 				})
@@ -1165,16 +1245,17 @@ func interact_id(id: String) -> void:
 				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 				ui.diegetic.open_conversation({
 					"npc_id": "textbook_peter",
-					"speaker": "操场伙伴 · 青草运动角",
-					"en": "Hi friend! How old are you? Come pick up a colorful ball on the grass and play with us!",
-					"zh": "嗨！小伙伴想认识你！你可以听听示范、点气泡上的「♪ 跟读试试」大胆开口，也可以去草地上双手捧起彩球放进收纳台！",
+					"speaker": "彼得 Peter · 青草操场运动角",
+					"en": "Hey friend! Look at Anne jumping rope and Dongdong running fast! Come check our sports box or play together!",
+					"zh": "嗨好搭档！快看同学们正在操场上跳绳和奔跑！一起来练「现在进行时与运动能力」课本对话，或者打开运动器材台认识球类和风筝吧！",
 					"world_pos": conversation_position,
+					"show_zh_immediately": true,
 					"auto_speak": true,
 					"actions": [
-						{"label": "★ 操场运动三轮对话", "id": "v5_roleplay_start:playground", "primary": true},
+						{"label": "★ 操场进行时与运动对话（四年级第2阶）", "id": "v6_roleplay_stage:school_s2_playground_peter", "primary": true},
+						{"label": "◈ 打开运动器材台 · 球类跳绳摆一摆", "id": "v6_bench_open:playground"},
+						{"label": "◈ 切换 1～4 阶校园语法对话", "id": "v6_ladder_open:school"},
 						{"label": "· 听听 I'm nine.", "id": "audio:im_nine"},
-						{"label": "· 本章生活故事", "id": "v4_chap_open_here"},
-						{"label": "· 今日手账小委托", "id": "v4_commission:textbook_peter"},
 						{"label": "去草地捡球玩", "id": "close"}
 					]
 				})
@@ -1185,16 +1266,17 @@ func interact_id(id: String) -> void:
 			if not validation_mode and is_instance_valid(ui.diegetic):
 				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 				ui.diegetic.open_conversation({
-					"npc_id": "npc_bear_uncle",
-					"speaker": "松软小床 · 晚安时光",
-					"en": "Good night, little explorer! Sleep tight — tomorrow fresh apples and sunny adventures await!",
-					"zh": "今天也是充实又温暖的一天！睡一觉，明天的果园苹果又会熟透啦，所有装饰、叶币和成长手账都会稳稳保留。",
+					"npc_id": "textbook_role_lingling_mother",
+					"speaker": "妈妈 Mom · 卧室晚安时光",
+					"en": "Good night, sweetie! Sleep tight in your cozy bed — Mom and Dad wish you sweet dreams!",
+					"zh": "晚安呀宝贝！在温暖的小床上安心睡一觉吧，所有家庭装扮、叶币和成长足迹都会稳稳保存。",
 					"world_pos": conversation_position,
 					"show_zh_immediately": true,
 					"auto_speak": true,
 					"actions": [
 						{"label": "☆ 晚安，睡到明天", "id": "next_day", "primary": true},
-						{"label": " 再玩一会儿", "id": "close"}
+						{"label": "◈ 打开卧室衣柜实物台", "id": "v6_bench_open:home_bedroom"},
+						{"label": "再玩一会儿", "id": "close"}
 					]
 				})
 			else:
@@ -1256,14 +1338,18 @@ func show_building_resident(resident_id: String) -> void:
 			actions.append({"label":"材料采集与生活工坊", "id":"creation:materials"})
 		var letter := room.trim_prefix("landmark_")
 		actions.append({"label":"收集 %s 字母发现卡" % letter,"id":"journey:inspect:"+letter})
+	if SpatialBenchScript.has_cluster(room):
+		actions.append({"label":"★ 近景实物台 · 大小物品摆一摆","id":"v6_bench_open:" + room,"primary":actions.is_empty()})
+		actions.append({"label":"◈ 1～4 阶师生与同学语法对话","id":"v6_ladder_open:school"})
 	actions.append({"label":"◈ 情境三轮英语对话","id":"v5_roleplay_start:" + RoleplayDirector.scenario_id_for_context(room, resident_id)})
 	if not PalaceLociScript.stories_for_room(room).is_empty():
 		actions.append({"label":"★ 本屋记忆宫殿角落","id":"v5_palace_tour:0"})
 	actions.append({"label":"今日单元小委托","id":"v4_commission:"+resident_id})
 	actions.append({"label":"本章生活故事","id":"v4_chap_open_here"})
 	actions.append({"label":"继续逛逛","id":"close"})
-	var en := "Hello! I'm %s. Welcome! Let's explore together." % str(resident.name_en)
-	var zh := "你好，我是%s，这里的%s。欢迎来到%s！" % [str(resident.name),str(resident.role),str(resident.building_name)]
+	var opening := CastDirector.resident_opening(room, resident_id, resident)
+	var en := str(opening.get("en", "Hello! I'm %s. Welcome!" % str(resident.name_en))) if not validation_mode else ("Hello! I'm %s. Welcome! Let's explore together." % str(resident.name_en))
+	var zh := str(opening.get("zh", "你好，我是%s！" % str(resident.name))) if not validation_mode else ("你好，我是%s，这里的%s。欢迎来到%s！" % [str(resident.name),str(resident.role),str(resident.building_name)])
 	var title := "%s · %s" % [str(resident.name),str(resident.role)]
 	if not validation_mode and is_instance_valid(ui.diegetic):
 		ui.diegetic.open_conversation({"npc_id":resident_id,"speaker":title,"en":en,"zh":zh,"world_pos":conversation_position,"auto_speak":true,"actions":actions})
@@ -1792,6 +1878,33 @@ func _on_action(id: String) -> void:
 			if is_instance_valid(palace_loci):
 				palace_loci.open_room_palace_tour(0)
 		return
+	if id == "v6_bench_open" or id.begins_with("v6_bench_open:"):
+		var target_r := room
+		var target_order := 0
+		if id.begins_with("v6_bench_open:"):
+			var r_arg := id.trim_prefix("v6_bench_open:").strip_edges()
+			if ":" in r_arg:
+				var bparts := r_arg.split(":", false, 1)
+				if not bparts[0].is_empty():
+					target_r = bparts[0]
+				target_order = int(bparts[1])
+			elif not r_arg.is_empty():
+				target_r = r_arg
+		if room != target_r:
+			await change_room(target_r)
+		if is_instance_valid(spatial_bench):
+			spatial_bench.open_workbench(self, target_r, "", target_order)
+		return
+	if id == "v6_ladder_open" or id.begins_with("v6_ladder_open:"):
+		var dom := ""
+		if id.begins_with("v6_ladder_open:"):
+			dom = id.trim_prefix("v6_ladder_open:").strip_edges()
+		RoleplayDirector.open_stage_ladder(self, dom)
+		return
+	if id.begins_with("v6_roleplay_stage:"):
+		var v6_sid := id.trim_prefix("v6_roleplay_stage:").strip_edges()
+		RoleplayDirector.open_turn(self, v6_sid, 0)
+		return
 	if id.begins_with("v5_roleplay_start:"):
 		var scen_id := id.trim_prefix("v5_roleplay_start:").strip_edges()
 		RoleplayDirector.open_turn(self, scen_id, 0)
@@ -1808,6 +1921,28 @@ func _on_action(id: String) -> void:
 		await _navigate_to_id(id.trim_prefix("navigate:"))
 	elif id.begins_with("district:"):
 		show_district(id.trim_prefix("district:"))
+	elif id == "level_guide":
+		if _prepare_screen():
+			ui.show_level_guide(State.data)
+	elif id.begins_with("wardrobe_unlock:"):
+		var wparts := id.trim_prefix("wardrobe_unlock:").split(":", true, 1)
+		if wparts.size() == 2:
+			var wcat := wparts[0]
+			var wiid := wparts[1]
+			if State.unlock_wardrobe_item(wcat, wiid, true):
+				player.apply_wardrobe(State.data)
+				ui.update_wardrobe(State.data)
+				sounds.play("success")
+				if is_instance_valid(audio_director):
+					audio_director.play_foley("wardrobe_sparkle")
+				if ui.current_panel == "bag":
+					ui.show_inventory(State.data, wcat)
+			elif is_instance_valid(ui.wardrobe_preview) and ui.wardrobe_preview.has_method("set_wardrobe"):
+				var cur_o := wiid if wcat == "outfit" else str(State.data.get("outfit", "yellow"))
+				var w_cur: Dictionary = State.data.get("wardrobe", {}) if State.data.get("wardrobe") is Dictionary else {}
+				var cur_h := wiid if wcat == "hat" else str(w_cur.get("hat", "none"))
+				var cur_b := wiid if wcat == "bag" else str(w_cur.get("bag", "none"))
+				ui.wardrobe_preview.set_wardrobe(cur_o, cur_h, cur_b)
 	elif id.begins_with("outfit:"):
 		var outfit := id.trim_prefix("outfit:")
 		if State.set_outfit(outfit):
@@ -1895,6 +2030,8 @@ func _on_action(id: String) -> void:
 		var pparts := id.trim_prefix("v4_chap_popup:").split(":", true, 1)
 		if pparts.size() == 2 and not pparts[1].is_empty():
 			State.advance_v4_chapter(pparts[0], 1, 0)
+			if State.has_method("grant_exp"):
+				State.grant_exp({"key": "palace:" + pparts[1], "mode": "daily_repeat", "base_exp": 16, "coin_bonus": 3, "repeat_exp": 8, "repeat_coins": 2})
 			_pending_chapter_popup_key = pparts[0]
 			if is_instance_valid(ui.diegetic):
 				ui.diegetic.dismiss()
@@ -1902,6 +2039,8 @@ func _on_action(id: String) -> void:
 				journey.open_story(pparts[1], false)
 	elif id.begins_with("open_popup_story:"):
 		var entry_id := id.trim_prefix("open_popup_story:")
+		if not entry_id.is_empty() and State.has_method("grant_exp"):
+			State.grant_exp({"key": "palace:" + entry_id, "mode": "daily_repeat", "base_exp": 16, "coin_bonus": 3, "repeat_exp": 8, "repeat_coins": 2})
 		if is_instance_valid(ui.diegetic):
 			ui.diegetic.dismiss()
 		if is_instance_valid(journey) and not entry_id.is_empty():
@@ -1928,6 +2067,8 @@ func _on_action(id: String) -> void:
 	elif id.begins_with("activity_complete:"):
 		var activity := id.trim_prefix("activity_complete:")
 		if State.complete_activity(activity):
+			if State.has_method("grant_exp"):
+				State.grant_exp({"key": "campus_act:" + activity, "mode": "daily_repeat", "base_exp": 20, "coin_bonus": 0, "repeat_exp": 6, "repeat_coins": 2})
 			sounds.play("success")
 	elif id.begins_with("note:"):
 		sounds.note(int(id.trim_prefix("note:")))
@@ -2159,6 +2300,8 @@ func _prepare_screen() -> bool:
 	if is_instance_valid(journey) and not journey.close_memory(): return false
 	if is_instance_valid(free_decor_studio) and free_decor_studio.active:
 		free_decor_studio.close_studio()
+	if is_instance_valid(spatial_bench) and spatial_bench.bench_open:
+		spatial_bench.close_workbench()
 	_stop_orchard_activity()
 	_cancel_navigation()
 	_rollback_decoration()

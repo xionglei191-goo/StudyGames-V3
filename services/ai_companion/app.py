@@ -6,13 +6,17 @@ Run standalone:
 from __future__ import annotations
 
 from starlette.applications import Starlette
+from starlette.concurrency import run_in_threadpool
 from starlette.middleware import Middleware
 from starlette.middleware.cors import CORSMiddleware
 from starlette.requests import Request
 from starlette.responses import JSONResponse
 from starlette.routing import Route
 
+import os
+
 from . import __version__
+from .env_loader import load_dotenv_if_changed
 from .npc_companion import generate_npc_reply
 from .speech_service import evaluate_follow_along, synthesize_speech
 from .stealth_mastery import build_parent_weekly_report, update_irt_mastery
@@ -20,6 +24,10 @@ from .voice_profiles import CHARACTER_VOICE_MAP, VOICE_ARCHETYPES
 
 
 async def health(_request: Request) -> JSONResponse:
+    load_dotenv_if_changed()
+    has_openai = bool(os.environ.get("OPENAI_API_KEY", "").strip())
+    has_dashscope = bool(os.environ.get("DASHSCOPE_API_KEY", "").strip())
+    default_model = "qwen-plus" if has_dashscope else "gpt-4o-mini"
     return JSONResponse(
         {
             "ok": True,
@@ -27,6 +35,9 @@ async def health(_request: Request) -> JSONResponse:
             "version": __version__,
             "voice_archetypes": len(VOICE_ARCHETYPES),
             "character_voices": len(CHARACTER_VOICE_MAP),
+            "llm_configured": has_openai or has_dashscope,
+            "llm_provider": "dashscope" if has_dashscope else ("openai" if has_openai else "offline_cozy"),
+            "llm_model": os.environ.get("AI_COMPANION_MODEL", default_model) if (has_openai or has_dashscope) else "offline_cozy",
         }
     )
 
@@ -79,7 +90,8 @@ async def speech_encourage(request: Request) -> JSONResponse:
         body = await request.json()
     except Exception:
         return JSONResponse({"ok": False, "error": "invalid_json"}, status_code=400)
-    return JSONResponse(evaluate_follow_along(body if isinstance(body, dict) else {}))
+    result = await run_in_threadpool(evaluate_follow_along, body if isinstance(body, dict) else {})
+    return JSONResponse(result, status_code=200 if result.get("ok") else 400)
 
 
 app = Starlette(

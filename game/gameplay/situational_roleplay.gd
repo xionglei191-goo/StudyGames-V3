@@ -5,6 +5,12 @@ extends RefCounted
 ## Zero raw OS emojis; warm recasts on playful distractors; stealth communicative logging.
 
 const PalaceLoci = preload("res://gameplay/memory_palace_loci_3d.gd")
+const Style = preload("res://ui/island_theme.gd")
+const Progression = preload("res://core/progression_ledger.gd")
+const V6_DIALOGUES_PATH := "res://data/learning/home_school_dialogues_v6.json"
+
+static var _v6_loaded := false
+static var _v6_scenarios: Dictionary = {}
 
 const SCENARIOS := {
 	"bakery": {
@@ -224,8 +230,8 @@ const SCENARIOS := {
 		"finale_zh": "活力满满！你用流畅的运动英语和伙伴完成了操场配合！"
 	},
 	"home": {
-		"npc_id": "npc_bear_uncle",
-		"speaker": "温馨家园 · 小主人待客剧场",
+		"npc_id": "textbook_role_lingling_mother",
+		"speaker": "妈妈 Mom · 温馨家园待客剧场",
 		"key_word": "home",
 		"turns": [
 			{
@@ -370,11 +376,276 @@ static func _build_dynamic_landmark_scenario(room_id: String, game: Node3D) -> D
 		"finale_zh": "对话真流畅！「%s」（%s）已经在%s点亮啦！" % [target_word, target_zh, room_zh]
 	}
 
+static func _ensure_v6_loaded() -> void:
+	if _v6_loaded:
+		return
+	_v6_loaded = true
+	_v6_scenarios.clear()
+	if not FileAccess.file_exists(V6_DIALOGUES_PATH):
+		return
+	var parsed: Variant = JSON.parse_string(FileAccess.get_file_as_string(V6_DIALOGUES_PATH))
+	if not (parsed is Dictionary) or not ((parsed as Dictionary).get("scenarios") is Dictionary):
+		return
+	var raw_map: Dictionary = (parsed as Dictionary).get("scenarios") as Dictionary
+	for sid: String in raw_map:
+		if not (raw_map[sid] is Dictionary):
+			continue
+		var raw: Dictionary = raw_map[sid] as Dictionary
+		var norm_turns: Array = []
+		var raw_turns: Array = raw.get("turns", [])
+		for t_idx: int in range(raw_turns.size()):
+			if not (raw_turns[t_idx] is Dictionary):
+				continue
+			var rt: Dictionary = raw_turns[t_idx] as Dictionary
+			var raw_opts: Array = rt.get("options", [])
+			var choices: Array = []
+			var n_opts := raw_opts.size()
+			var shift := posmod(absi(sid.hash()) + t_idx, maxi(1, n_opts))
+			for k: int in range(n_opts):
+				var opt_v: Variant = raw_opts[(k + shift) % n_opts]
+				if opt_v is Dictionary:
+					var opt: Dictionary = opt_v as Dictionary
+					choices.append({
+						"en": str(opt.get("en", "")),
+						"zh": str(opt.get("zh", "")),
+						"ok": bool(opt.get("correct", false)),
+						"recast_zh": str(opt.get("scaffold_zh", "再看看句型与时态提示，换一句试试吧！")),
+					})
+			norm_turns.append({
+				"en": str(rt.get("npc_en", "")),
+				"zh": str(rt.get("npc_zh", "")),
+				"choices": choices,
+			})
+		var stage_num := int(raw.get("stage", 1))
+		_v6_scenarios[sid] = {
+			"id": sid,
+			"is_v6": true,
+			"domain": str(raw.get("domain", "home")),
+			"stage": stage_num,
+			"grade_label": str(raw.get("grade_label", "三年级基础")),
+			"grammar_tag": str(raw.get("grammar_tag", "")),
+			"grammar_tip": str(raw.get("grammar_tip", "")),
+			"book_ref": str(raw.get("book_ref", "")),
+			"room_ids": raw.get("room_ids", []),
+			"npc_id": str(raw.get("npc_id", "textbook_role_lingling_mother")),
+			"speaker": str(raw.get("speaker", "家人与同学")),
+			"title_zh": str(raw.get("title_zh", "课本情境对话")),
+			"key_word": str(raw.get("key_word", "hello")),
+			"turns": norm_turns,
+			"finale_en": "Awesome job! You just used Stage %d English naturally in real life!" % stage_num,
+			"finale_zh": "太棒啦！你在真实场景对话里自然运用了【%s · %s】！" % [
+				str(raw.get("grade_label", "")),
+				str(raw.get("grammar_tag", "")),
+			],
+		}
+
+static func all_v6_scenarios() -> Dictionary:
+	_ensure_v6_loaded()
+	return _v6_scenarios
+
+static func v6_scenarios_for_domain(domain: String) -> Array[Dictionary]:
+	_ensure_v6_loaded()
+	var list: Array[Dictionary] = []
+	for sid: String in _v6_scenarios:
+		var sc: Dictionary = _v6_scenarios[sid]
+		if domain.is_empty() or str(sc.get("domain", "")) == domain:
+			list.append(sc)
+	list.sort_custom(func(a: Dictionary, b: Dictionary) -> bool:
+		var sa := int(a.get("stage", 1))
+		var sb := int(b.get("stage", 1))
+		if sa != sb:
+			return sa < sb
+		return str(a.get("id", "")) < str(b.get("id", ""))
+	)
+	return list
+
+static func completed_v6_ids(state_node: Node) -> Array[String]:
+	var out: Array[String] = []
+	if state_node == null or not (state_node.get("data") is Dictionary):
+		return out
+	var v4: Dictionary = state_node.data.get("v4", {}) if state_node.data.get("v4") is Dictionary else {}
+	var comms: Variant = v4.get("completed_commissions", [])
+	if comms is Array:
+		for entry: Variant in (comms as Array):
+			var cs := str(entry).strip_edges()
+			if cs.begins_with("v6_dlg:"):
+				var sid := cs.trim_prefix("v6_dlg:").strip_edges()
+				if not sid.is_empty() and not out.has(sid):
+					out.append(sid)
+	var raw: Variant = v4.get("v6_dialogues_done", [])
+	if raw is Array:
+		for x: Variant in (raw as Array):
+			var s := str(x).strip_edges()
+			if not s.is_empty() and not out.has(s):
+				out.append(s)
+	return out
+
+static func recommended_v6_scenario(game: Node, room_id: String, actor_id: String = "") -> Dictionary:
+	_ensure_v6_loaded()
+	var domain := "home" if room_id.begins_with("home") else "school"
+	var candidates := v6_scenarios_for_domain(domain)
+	if candidates.is_empty():
+		return SCENARIOS["home"] as Dictionary
+	var state_node := game.get_node_or_null("/root/State") if is_instance_valid(game) else null
+	var done := completed_v6_ids(state_node)
+
+	# 1. Uncompleted scenario matching BOTH room_id and actor_id (lowest stage first)
+	if not actor_id.is_empty():
+		for sc: Dictionary in candidates:
+			if not done.has(str(sc.get("id", ""))) and str(sc.get("npc_id", "")) == actor_id and (sc.get("room_ids", []) as Array).has(room_id):
+				return sc
+	# 2. Uncompleted scenario matching room_id (lowest stage first -> progressive Stage 1 -> 4!)
+	for sc: Dictionary in candidates:
+		if not done.has(str(sc.get("id", ""))) and (sc.get("room_ids", []) as Array).has(room_id):
+			return sc
+	# 3. Uncompleted scenario anywhere in this domain (Home or School)
+	for sc: Dictionary in candidates:
+		if not done.has(str(sc.get("id", ""))):
+			return sc
+	# 4. All stages completed! Pick best room match for free replay
+	for sc: Dictionary in candidates:
+		if (sc.get("room_ids", []) as Array).has(room_id):
+			return sc
+	return candidates[0]
+
+static func open_stage_ladder(game: Node3D, domain_hint: String = "") -> void:
+	if not is_instance_valid(game):
+		return
+	_ensure_v6_loaded()
+	if is_instance_valid(game.ui.diegetic) and game.ui.diegetic.visible:
+		game.ui.diegetic.dismiss()
+	if not game._prepare_screen():
+		return
+
+	var domain := domain_hint.strip_edges().to_lower()
+	if domain not in ["home", "school"]:
+		domain = "home" if str(game.room).begins_with("home") else "school"
+
+	var state_node := game.get_node_or_null("/root/State")
+	var done := completed_v6_ids(state_node)
+	var list := v6_scenarios_for_domain(domain)
+	var ui: CanvasLayer = game.ui
+
+	var cur_lv: int = state_node.level() if (state_node != null and state_node.has_method("level")) else 1
+	var cur_coins: int = int(state_node.data.get("coins", 0)) if state_node != null else 0
+	ui._begin("v6_grammar_ladder", "map")
+	var domain_title := "在家与爸爸妈妈对话" if domain == "home" else "在学校与老师同学对话"
+	ui._heading(
+		"课本语法与时态 · 四阶情境对话（%s）" % domain_title,
+		"当前 Lv.%d · %d 叶币  ｜  全阶自由开放不锁关，达到推荐等级完成可点亮「晋级挑战徽章（+20 EXP / +8 叶币）」" % [cur_lv, cur_coins]
+	)
+
+	var tab_row := HBoxContainer.new()
+	tab_row.add_theme_constant_override("separation", 10)
+	ui.panel_box.add_child(tab_row)
+	var home_tab: Button = ui.button("★ 我的家 · 父母生活对话", "v6_ladder_open:home", domain == "home", Vector2(230, 44))
+	var school_tab: Button = ui.button("★ 阳光学校 · 师生同学对话", "v6_ladder_open:school", domain == "school", Vector2(240, 44))
+	tab_row.add_child(home_tab)
+	tab_row.add_child(school_tab)
+	var done_count := 0
+	for sc: Dictionary in list:
+		if done.has(str(sc.get("id", ""))):
+			done_count += 1
+	var prog_lbl: Label = ui.label("本区已点亮：%d / %d 幕" % [done_count, list.size()], 16, Style.SAGE)
+	prog_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	prog_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+	tab_row.add_child(prog_lbl)
+
+	var scroll := ScrollContainer.new()
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	ui.panel_box.add_child(scroll)
+
+	var cards_col := VBoxContainer.new()
+	cards_col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	cards_col.add_theme_constant_override("separation", 10)
+	scroll.add_child(cards_col)
+
+	for sc: Dictionary in list:
+		var sid := str(sc.get("id", ""))
+		var is_done := done.has(sid)
+		var card := PanelContainer.new()
+		var bg := Color("f2f8ee") if is_done else Color("fbf7ec")
+		var border := Color("b6d4a8") if is_done else Color("dfd0b4")
+		var csb := Style.keycap(bg, border, 2, 14, 14, 10)
+		csb.shadow_size = 0
+		card.add_theme_stylebox_override("panel", csb)
+		cards_col.add_child(card)
+
+		var row := HBoxContainer.new()
+		row.add_theme_constant_override("separation", 12)
+		card.add_child(row)
+
+		var info_col := VBoxContainer.new()
+		info_col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		info_col.add_theme_constant_override("separation", 4)
+		row.add_child(info_col)
+
+		var stage_n := int(sc.get("stage", 1))
+		var rec_lv := Progression.stage_recommended_level(stage_n)
+		var stage_cfg: Dictionary = Progression.STAGE_CLEAR_REWARDS.get(stage_n, {"exp": 25, "coins": 8})
+		var has_badge := Progression.has_stage_badge(state_node.data, sid) if state_node != null else false
+		var badge := ""
+		if has_badge:
+			badge = "★ 晋级徽章已得"
+		elif cur_lv >= rec_lv:
+			badge = "◈ 可夺晋级徽章" if not is_done else "✓ 已体验 · 重温夺章"
+		else:
+			badge = ("✓ 已体验 · Lv.%d夺章" % rec_lv) if is_done else ("○ 自由开放 · 推荐Lv.%d+" % rec_lv)
+
+		var top_line := "【第 %d 阶 · %s】%s  （%s · %s）" % [
+			stage_n,
+			str(sc.get("grade_label", "")),
+			str(sc.get("title_zh", "")),
+			str(sc.get("speaker", "")),
+			badge,
+		]
+		var t_lbl: Label = ui.label(top_line, 18, Style.INK)
+		t_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		info_col.add_child(t_lbl)
+
+		var g_lbl: Label = ui.label("语法焦点：%s  ｜  教材：%s  ｜  首通 +%d EXP / +%d 叶币" % [
+			str(sc.get("grammar_tag", "")),
+			str(sc.get("book_ref", "")),
+			int(stage_cfg["exp"]),
+			int(stage_cfg["coins"]),
+		], 14, Style.SAGE)
+		g_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		info_col.add_child(g_lbl)
+
+		var tip_lbl: Label = ui.label(str(sc.get("grammar_tip", "")), 14, Style.MUTED)
+		tip_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		info_col.add_child(tip_lbl)
+
+		var start_btn: Button = ui.button("▶ 开始对话" if not is_done else "· 重温对话", "v6_roleplay_stage:" + sid, not is_done, Vector2(138, 46))
+		start_btn.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+		row.add_child(start_btn)
+
+	var foot := HBoxContainer.new()
+	foot.add_theme_constant_override("separation", 10)
+	ui.panel_box.add_child(foot)
+	var bench_btn: Button = ui.button("★ 打开本房间实物词丛台", "v6_bench_open:" + str(game.room), false, Vector2(230, 44))
+	foot.add_child(bench_btn)
+	var spacer := Control.new()
+	spacer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	foot.add_child(spacer)
+	foot.add_child(ui.button("返回房间", "close", false, Vector2(140, 44)))
+
+	ui._layout.call_deferred()
+
 static func get_scenario(scenario_id: String, game: Node3D) -> Dictionary:
+	_ensure_v6_loaded()
+	if _v6_scenarios.has(scenario_id):
+		return _v6_scenarios[scenario_id] as Dictionary
 	if SCENARIOS.has(scenario_id):
 		return SCENARIOS[scenario_id] as Dictionary
 	if scenario_id.begins_with("dynamic_"):
 		return _build_dynamic_landmark_scenario(scenario_id.trim_prefix("dynamic_"), game)
+	if is_instance_valid(game):
+		var r := str(game.room)
+		if r.begins_with("home") or r in ["school", "classroom", "music_room", "art_room", "science_room", "canteen", "playground", "football_field"]:
+			return recommended_v6_scenario(game, r)
 	return SCENARIOS["bakery"] as Dictionary
 
 static func open_turn(game: Node3D, scenario_id: String, turn_idx: int = 0, recast_note: String = "") -> void:
@@ -388,11 +659,24 @@ static func open_turn(game: Node3D, scenario_id: String, turn_idx: int = 0, reca
 		_finish_roleplay(game, scenario_id, scen)
 		return
 
+	var is_v6 := bool(scen.get("is_v6", false))
 	var turn_data: Dictionary = turns[clampi(turn_idx, 0, turns.size() - 1)]
 	var step_tag := "情境对话第 %d / %d 轮" % [turn_idx + 1, turns.size()]
-	var zh_text := "【%s】%s" % [step_tag, str(turn_data.get("zh", ""))]
+	if is_v6:
+		step_tag = "第%d阶·%s (%d/%d)｜%s" % [
+			int(scen.get("stage", 1)),
+			str(scen.get("grade_label", "")),
+			turn_idx + 1,
+			turns.size(),
+			str(scen.get("grammar_tag", "")),
+		]
+	var zh_text := "【%s】\n%s" % [step_tag, str(turn_data.get("zh", ""))]
+	if is_v6 and turn_idx == 0 and recast_note.is_empty():
+		var gtip := str(scen.get("grammar_tip", "")).strip_edges()
+		if not gtip.is_empty():
+			zh_text += "\n· 语法小锦囊：" + gtip
 	if not recast_note.is_empty():
-		zh_text = "◈ 温柔提示：%s\n\n%s" % [recast_note, zh_text]
+		zh_text = "◈ 语法与语境引导：%s\n\n%s" % [recast_note, zh_text]
 
 	var actions: Array = []
 	var choices: Array = turn_data.get("choices", [])
@@ -401,12 +685,14 @@ static func open_turn(game: Node3D, scenario_id: String, turn_idx: int = 0, reca
 		actions.append({
 			"label": "%s（%s）" % [str(ch.get("en", "")), str(ch.get("zh", ""))],
 			"id": "v5_roleplay_pick:%s:%d:%d" % [scenario_id, turn_idx, c_idx],
-			"primary": c_idx == 0
+			"primary": (not is_v6) and (c_idx == 0),
 		})
+	if is_v6:
+		actions.append({"label": "◈ 切换 1～4 阶语法话题", "id": "v6_ladder_open:" + str(scen.get("domain", "home"))})
 	actions.append({"label": "先聊到这里", "id": "close"})
 
 	var speaker := str(scen.get("speaker", "小岛伙伴 · 情境剧场"))
-	var npc_id := str(scen.get("npc_id", "npc_bear_uncle"))
+	var npc_id := str(scen.get("npc_id", "textbook_role_lingling_mother"))
 	var en_text := str(turn_data.get("en", ""))
 
 	if is_instance_valid(game.audio_director):
@@ -422,7 +708,7 @@ static func open_turn(game: Node3D, scenario_id: String, turn_idx: int = 0, reca
 			"en": en_text,
 			"zh": zh_text,
 			"world_pos": game.conversation_position,
-			"show_zh_immediately": not recast_note.is_empty(),
+			"show_zh_immediately": is_v6 or (not recast_note.is_empty()),
 			"auto_speak": recast_note.is_empty(),
 			"actions": actions
 		})
@@ -457,7 +743,9 @@ static func handle_pick(game: Node3D, payload: String) -> void:
 static func _finish_roleplay(game: Node3D, scenario_id: String, scen: Dictionary) -> void:
 	var state_node := game.get_node_or_null("/root/State")
 	var key_word := str(scen.get("key_word", "hello")).to_lower()
-	var reward_given := false
+	var exp_gained := 0
+	var coins_gained := 0
+	var badge_earned := false
 	if state_node != null:
 		state_node.record_stealth_evidence({
 			"word": key_word,
@@ -465,31 +753,58 @@ static func _finish_roleplay(game: Node3D, scenario_id: String, scen: Dictionary
 			"correct": true,
 			"context": "situational_roleplay:" + scenario_id
 		})
-		var day_num := int(state_node.data.get("day", 1))
-		var receipt := "roleplay_d%d_%s" % [day_num, scenario_id]
-		var v4: Dictionary = state_node.data.get("v4", {}) if state_node.data.get("v4") is Dictionary else {}
-		var done_arr: Array = v4.get("completed_commissions", []) if v4.get("completed_commissions") is Array else []
-		if not done_arr.has(receipt):
-			reward_given = state_node.complete_v4_commission(receipt, 4)
+		var is_v6 := bool(scen.get("is_v6", false))
+		var stage_n := int(scen.get("stage", 1)) if is_v6 else 1
+		if is_v6:
+			state_node.complete_v4_commission("v6_dlg:" + scenario_id, 0)
+		if state_node.has_method("grant_exp"):
+			var r_res: Dictionary = state_node.grant_exp({
+				"key": "dlg:" + scenario_id,
+				"scenario_id": scenario_id,
+				"mode": "dialogue_clear",
+				"stage": stage_n,
+			})
+			exp_gained = int(r_res.get("exp_gained", 0))
+			coins_gained = int(r_res.get("total_coins_gained", 0))
+			badge_earned = bool(r_res.get("badge_earned", false))
 
 	if is_instance_valid(game.audio_director):
 		game.audio_director.play_foley("wardrobe_sparkle")
 	game.player.gesture("wave")
-	if reward_given and is_instance_valid(game.feedback):
-		game.feedback.pickup(game.player.position, game.player.position, "leaf", "+4 叶币 · 情境对话")
+	if (exp_gained > 0 or coins_gained > 0) and is_instance_valid(game.feedback):
+		var pop_txt := "+%d EXP" % exp_gained
+		if coins_gained > 0:
+			pop_txt += " · +%d 叶币" % coins_gained
+		game.feedback.pickup(game.player.position, game.player.position, "leaf", pop_txt)
 
 	var speaker := str(scen.get("speaker", "小岛伙伴"))
 	var npc_id := str(scen.get("npc_id", "npc_bear_uncle"))
 	var fin_en := str(scen.get("finale_en", "Wonderful conversation! See you soon!"))
 	var fin_zh := str(scen.get("finale_zh", "三轮情境英语对话顺利完成！"))
-	if reward_given:
-		fin_zh += "（今日首次完成，获得 +4 叶币奖励！）"
+	if badge_earned:
+		fin_zh += "\n★ 恭喜点亮本幕「晋级挑战徽章」！本次共收获 +%d EXP、+%d 叶币！" % [exp_gained, coins_gained]
+	elif exp_gained > 0 or coins_gained > 0:
+		fin_zh += "\n★ 本次对话收获 +%d EXP%s！" % [exp_gained, ("、+%d 叶币" % coins_gained) if coins_gained > 0 else ""]
 
-	var actions := [
-		{"label": "◈ 再演一遍这段对话", "id": "v5_roleplay_start:" + scenario_id, "primary": true},
-		{"label": "★ 巡游本屋记忆宫殿角落", "id": "v5_palace_tour:0"},
-		{"label": "开心告别", "id": "close"}
-	]
+	var actions: Array = []
+	if bool(scen.get("is_v6", false)):
+		var next_rec := recommended_v6_scenario(game, str(game.room), "")
+		var next_id := str(next_rec.get("id", scenario_id))
+		if next_id != scenario_id:
+			actions.append({
+				"label": "★ 下一阶对话 · 第%d阶《%s》" % [int(next_rec.get("stage", 1)), str(next_rec.get("title_zh", ""))],
+				"id": "v6_roleplay_stage:" + next_id,
+				"primary": true,
+			})
+		actions.append({"label": "◈ 查看 1～4 阶全部语法对话", "id": "v6_ladder_open:" + str(scen.get("domain", "home")), "primary": actions.is_empty()})
+		actions.append({"label": "★ 打开本房间实物词丛台", "id": "v6_bench_open:" + str(game.room)})
+		actions.append({"label": "开心告别", "id": "close"})
+	else:
+		actions = [
+			{"label": "◈ 再演一遍这段对话", "id": "v5_roleplay_start:" + scenario_id, "primary": true},
+			{"label": "★ 巡游本屋记忆宫殿角落", "id": "v5_palace_tour:0"},
+			{"label": "开心告别", "id": "close"}
+		]
 	if is_instance_valid(game.ui.diegetic) and not game.validation_mode:
 		game.ui.current_panel = "v5_roleplay_done"
 		game.ui.diegetic.open_conversation({

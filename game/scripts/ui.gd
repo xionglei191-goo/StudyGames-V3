@@ -65,6 +65,9 @@ var controls_hint: Label
 var speaker_provider: Callable
 var diegetic: Control
 var active_wardrobe_tab := "outfit"
+var exp_bar: ProgressBar
+var exp_caption: Label
+var level_chip_btn: Button
 
 func _ready() -> void:
 	layer = 10
@@ -375,6 +378,109 @@ func update_wardrobe(data: Dictionary) -> void:
 		wardrobe_preview.set_wardrobe(outfit_id, hat_id, bag_id)
 	elif is_instance_valid(wardrobe_preview):
 		wardrobe_preview.set_outfit(outfit_id)
+
+func update_progression_hud(summary: Dictionary) -> void:
+	var lv := int(summary.get("level", 1))
+	var tzh := str(summary.get("title_zh", "启蒙小芽"))
+	var into := int(summary.get("into_level", 0))
+	var span := maxi(1, int(summary.get("level_span", 60)))
+	var ratio := clampf(float(summary.get("ratio", 0.0)), 0.0, 1.0)
+	if is_instance_valid(exp_bar):
+		exp_bar.max_value = 100.0
+		exp_bar.value = ratio * 100.0
+	if is_instance_valid(exp_caption):
+		exp_caption.text = "%d/%d EXP" % [into, span]
+	if is_instance_valid(level_chip_btn):
+		level_chip_btn.text = "★ Lv.%d · %s" % [lv, tzh]
+	if is_instance_valid(hud) and hud.has_method("arrange"):
+		hud.arrange(root.size if is_instance_valid(root) and root.size.x > 10.0 else Vector2(1440, 900))
+
+func show_level_up_banner(payload: Dictionary) -> void:
+	if is_instance_valid(toast_label):
+		toast_timer = 0.0
+		toast_label.hide()
+	if is_instance_valid(hud) and hud.has_method("show_celebration"):
+		hud.show_celebration(payload, reduced_motion)
+
+func show_level_guide(data: Dictionary) -> void:
+	const Progression = preload("res://core/progression_ledger.gd")
+	var prog: Dictionary = data.get("progression", {}) if data.get("progression") is Dictionary else Progression.fresh()
+	var sum := Progression.progress_summary(prog)
+	var cur_lv := int(sum.get("level", 1))
+	var coins := int(data.get("coins", 0))
+	_begin("level_guide", "wide")
+	_heading(
+		"Lv.%d · %s（%s）" % [cur_lv, str(sum.get("title_zh", "")), str(sum.get("title_en", ""))],
+		"总经验 %d EXP（当前阶段 %d / %d EXP）  ｜  随身钱包 %d 叶币  ｜  探索学习涨等级 · 叶币自由换装扮与家具" % [
+			int(sum.get("exp", 0)),
+			int(sum.get("into_level", 0)),
+			int(sum.get("level_span", 60)),
+			coins,
+		]
+	)
+
+	var scroll := ScrollContainer.new()
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	panel_box.add_child(scroll)
+
+	var list_col := VBoxContainer.new()
+	list_col.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	list_col.add_theme_constant_override("separation", 8)
+	scroll.add_child(list_col)
+
+	var rule_card := card(Color("edf5e8"), 16)
+	var rule_lbl := label(
+		"双轨成长说明：认读房间第 2 层新词（+10 EXP）、原场景方位归位（+18 EXP + 叶币）、通关 1~4 阶课本对话（+25~50 EXP + 叶币）均可积累只增不减的经验值；每次升级自动发放「升级叶币礼袋」并开放新的服饰、头饰、小书包与 3D 庭院家具购买资格！",
+		14,
+		Style.SAGE_DEEP
+	)
+	rule_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	rule_card.add_child(rule_lbl)
+	list_col.add_child(rule_card)
+
+	for row_d: Dictionary in Progression.LEVEL_TABLE:
+		var r_lv := int(row_d["level"])
+		var reached := cur_lv >= r_lv
+		var is_cur := cur_lv == r_lv
+		var row_panel := PanelContainer.new()
+		var bg := Color("fdf4da") if is_cur else (Color("f2f8ee") if reached else Color("fbf8f0"))
+		var bd := Color("dfb24f") if is_cur else (Color("b5d2a7") if reached else Color("dfd2b8"))
+		var rsb := Style.keycap(bg, bd, 2, 14, 14, 8)
+		rsb.shadow_size = 0
+		row_panel.add_theme_stylebox_override("panel", rsb)
+		list_col.add_child(row_panel)
+
+		var h := HBoxContainer.new()
+		h.add_theme_constant_override("separation", 12)
+		row_panel.add_child(h)
+
+		var status_tag := "★ 当前等级" if is_cur else ("✓ 已达成" if reached else ("需 %d EXP" % int(row_d["min_exp"])))
+		var left_lbl := label("Lv.%d · %s（%s）" % [r_lv, str(row_d["zh"]), str(row_d["en"])], 16, Style.INK)
+		left_lbl.custom_minimum_size.x = 276
+		h.add_child(left_lbl)
+
+		var mid_lbl := label(str(row_d["unlock_zh"]), 14, muted_ink)
+		mid_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+		mid_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+		h.add_child(mid_lbl)
+
+		var gift_n := int(row_d["gift_coins"])
+		var right_txt := ("%s · 礼袋 +%d 叶币" % [status_tag, gift_n]) if gift_n > 0 else status_tag
+		var right_lbl := label(right_txt, 14, Color("7b5817") if is_cur else Style.SAGE_DEEP)
+		h.add_child(right_lbl)
+
+	var foot := HBoxContainer.new()
+	foot.add_theme_constant_override("separation", 12)
+	panel_box.add_child(foot)
+	foot.add_child(button("去衣柜看看解锁穿搭", "bag", false, Vector2(210, 46)))
+	foot.add_child(button("去练 1~4 阶课本对话", "v6_ladder_open", false, Vector2(210, 46)))
+	var sp := Control.new()
+	sp.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	foot.add_child(sp)
+	foot.add_child(button("继续探索", "close", true, Vector2(148, 46)))
+	_layout.call_deferred()
 
 func show_shop(data: Dictionary) -> void:
 	_begin("shop")
@@ -771,7 +877,8 @@ func _layout() -> void:
 	if layout_kind in ["dialogue", "lesson", "decorate", "memory", "choices"]:
 		panel.position.y = available.y - panel.size.y - 24
 	var toast_width := clampf(toast_label.get_theme_font("font").get_string_size(toast_label.text, HORIZONTAL_ALIGNMENT_LEFT, -1, 16).x + 48, 260, 560)
-	toast_label.position = Vector2((available.x - toast_width) * 0.5, 18)
+	var toast_y := 98.0 if (is_instance_valid(hud) and is_instance_valid(hud.level_banner) and hud.level_banner.visible) else 18.0
+	toast_label.position = Vector2((available.x - toast_width) * 0.5, toast_y)
 	toast_label.size = Vector2(toast_width, 0)
 
 func _process(delta: float) -> void:

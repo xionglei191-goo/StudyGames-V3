@@ -473,6 +473,15 @@ func _save_result() -> void:
 		hud.retry_button.show()
 		_update_hud()
 		return
+	if State.has_method("grant_exp"):
+		State.grant_exp({
+			"key": "home_task:" + task_id,
+			"mode": "daily_repeat",
+			"base_exp": 20,
+			"coin_bonus": 8,
+			"repeat_exp": 6,
+			"repeat_coins": 2,
+		})
 	completed = true
 	hud.retry_button.hide()
 	hud.exit_button.text = "继续逛逛"

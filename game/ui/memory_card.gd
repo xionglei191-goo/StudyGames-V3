@@ -108,6 +108,39 @@ func setup(host: Node, content: Dictionary, actions: Array) -> void:
 	_status.hide()
 	add_child(_status)
 
+	# Layer 3 (V6): Linked Spatial Word Chain for Home & School rooms (tap any linked item to hear it!)
+	var cur_room := str(game.get("room")) if game != null and game.get("room") != null else ""
+	var is_val := bool(game.get("validation_mode")) if game != null and game.get("validation_mode") != null else false
+	var BenchScript = preload("res://gameplay/spatial_cluster_bench_3d.gd")
+	if not is_val and BenchScript.has_cluster(cur_room):
+		var cluster_data: Dictionary = BenchScript.cluster_for_room(cur_room)
+		var chain_col := VBoxContainer.new()
+		chain_col.name = "SpatialClusterRow"
+		chain_col.add_theme_constant_override("separation", 4)
+		var ch_title: Label = game.ui.label("本屋关联实物链（点词即读 · 点下方「近景实物台」动手摆一摆）：", 13, Style.SAGE)
+		chain_col.add_child(ch_title)
+		var chip_flow := HFlowContainer.new()
+		chip_flow.add_theme_constant_override("h_separation", 6)
+		chip_flow.add_theme_constant_override("v_separation", 6)
+		var comp_npc := str(cluster_data.get("companion_npc_id", "warm"))
+		var combined: Array = []
+		combined.append_array(cluster_data.get("macro_items", []).slice(0, 3))
+		combined.append_array(cluster_data.get("micro_items", []).slice(0, 4))
+		for cw_v: Variant in combined:
+			if cw_v is Dictionary:
+				var cw: Dictionary = cw_v as Dictionary
+				var w_en := str(cw.get("word", ""))
+				var w_zh := str(cw.get("zh", ""))
+				var chip_btn: Button = game.ui.button("%s %s" % [w_en, w_zh], "", false, Vector2(88, 32))
+				_compact_style(chip_btn, 13, 7)
+				chip_btn.pressed.connect(func():
+					if game != null and is_instance_valid(game.get("ai_bridge")):
+						game.ai_bridge.speak_text(w_en, "en", comp_npc)
+				)
+				chip_flow.add_child(chip_btn)
+		chain_col.add_child(chip_flow)
+		add_child(chain_col)
+
 	var divider := HSeparator.new()
 	var line := StyleBoxLine.new()
 	line.color = Style.LINE

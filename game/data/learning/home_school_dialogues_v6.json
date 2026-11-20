@@ -1,0 +1,1160 @@
+{
+  "schema_version": 6,
+  "scenario_count": 13,
+  "scenarios": {
+    "home_s1_study_dad": {
+      "id": "home_s1_study_dad",
+      "domain": "home",
+      "stage": 1,
+      "grade_label": "三年级基础",
+      "grammar_tag": "What's this? · It's a... · 一般疑问句 Is this...?",
+      "grammar_tip": "指认身边的单个物品用 What's this? 回答用 It's a + 物品名；确认归属用 Is this your...? 回答 Yes, it is!",
+      "book_ref": "湘少版三年级上册 · Unit 4–6 书房文具指认",
+      "room_ids": [
+        "home_study"
+      ],
+      "npc_id": "textbook_role_lingling_father",
+      "speaker": "爸爸 Dad · 窗边书房",
+      "title_zh": "和爸爸在书房认识桌椅与文具",
+      "key_word": "pen",
+      "turns": [
+        {
+          "npc_en": "Hi sweetie! Come to your study desk and sit on the chair. Look on the desk — what's this?",
+          "npc_zh": "宝贝过来坐到书桌前的椅子上吧！看看书桌上——这是什么呀？",
+          "options": [
+            {
+              "en": "It's a blue pen!",
+              "zh": "这是一支蓝钢笔！",
+              "correct": true
+            },
+            {
+              "en": "I am nine years old.",
+              "zh": "我九岁了。",
+              "correct": false,
+              "scaffold_zh": "爸爸在指着书桌上的物品问 What's this?（这是什么），试试用 It's a... 来回答吧！"
+            },
+            {
+              "en": "Good night, Dad!",
+              "zh": "晚安，爸爸！",
+              "correct": false,
+              "scaffold_zh": "现在正在书房认文具呢，试试回答桌上的蓝钢笔（It's a blue pen）吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Right, it's a pen! And look beside the English book — is this your green ruler?",
+          "npc_zh": "对啦，是一支钢笔！再看看英语书旁边——这把绿尺子是你的吗？",
+          "options": [
+            {
+              "en": "Yes, it is! Thank you, Dad.",
+              "zh": "是的，它是我的！谢谢爸爸。",
+              "correct": true
+            },
+            {
+              "en": "It is red.",
+              "zh": "它是红色的。",
+              "correct": false,
+              "scaffold_zh": "爸爸用 Is this your...?（这是你的……吗？）提问时，先用 Yes, it is! 或 No, it isn't. 回应最自然哦！"
+            },
+            {
+              "en": "Goodbye!",
+              "zh": "再见！",
+              "correct": false,
+              "scaffold_zh": "还没收拾好尺子呢，试试回答 Yes, it is! 吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Great! Please put your pen and ruler in your pencil-box so your desk stays tidy.",
+          "npc_zh": "太棒了！请把钢笔和尺子收进文具盒里，让书桌保持整洁吧。",
+          "options": [
+            {
+              "en": "OK, Dad! Now my desk is neat!",
+              "zh": "好的爸爸！现在我的书桌整整齐齐啦！",
+              "correct": true
+            },
+            {
+              "en": "What's your name?",
+              "zh": "你叫什么名字？",
+              "correct": false,
+              "scaffold_zh": "回应爸爸的温馨提醒（Please put...），用 OK, Dad! 最合适哦！"
+            },
+            {
+              "en": "It's a dog.",
+              "zh": "它是一只小狗。",
+              "correct": false,
+              "scaffold_zh": "试试答应爸爸把文具收整齐（OK, Dad!）吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "home_s1_living_mom": {
+      "id": "home_s1_living_mom",
+      "domain": "home",
+      "stage": 1,
+      "grade_label": "三年级基础",
+      "grammar_tag": "日常礼貌问候 · I like... · Have some..., please!",
+      "grammar_tip": "家里招待或分享食物用 Have some..., please! 表达喜欢某类水果用复数 I like apples / bananas。",
+      "book_ref": "湘少版三年级上册 & 下册 · 家庭问候与水果分享",
+      "room_ids": [
+        "home",
+        "home_estate"
+      ],
+      "npc_id": "textbook_role_lingling_mother",
+      "speaker": "妈妈 Mom · 温馨客厅",
+      "title_zh": "和妈妈在客厅问好、分享水果",
+      "key_word": "apple",
+      "turns": [
+        {
+          "npc_en": "Good morning, sweetie! Come and sit on the sofa. Look at the fruit plate on the table!",
+          "npc_zh": "早上好呀宝贝！过来坐到沙发上，看看茶几上的果盘吧！",
+          "options": [
+            {
+              "en": "Good morning, Mom! Wow, red apples and yellow bananas!",
+              "zh": "早上好妈妈！哇，有红苹果和黄香蕉！",
+              "correct": true
+            },
+            {
+              "en": "I'm Miss Li.",
+              "zh": "我是李老师。",
+              "correct": false,
+              "scaffold_zh": "妈妈在向你道早安（Good morning），先回应 Good morning, Mom! 吧！"
+            },
+            {
+              "en": "Open the blackboard.",
+              "zh": "打开黑板。",
+              "correct": false,
+              "scaffold_zh": "这是在自家客厅果盘旁哦，试试夸夸红苹果和黄香蕉吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Have an apple, please! Do you like sweet apples?",
+          "npc_zh": "请吃颗苹果吧！你喜欢甜甜的苹果吗？",
+          "options": [
+            {
+              "en": "Yes, I do! I like sweet apples. Thank you, Mom!",
+              "zh": "喜欢！我喜欢甜苹果，谢谢妈妈！",
+              "correct": true
+            },
+            {
+              "en": "Yes, I am.",
+              "zh": "是的，我是。",
+              "correct": false,
+              "scaffold_zh": "注意语法细节：妈妈问 Do you like...? 回答要用 Yes, I do!（而不是 I am）哦！"
+            },
+            {
+              "en": "Where is the school?",
+              "zh": "学校在哪里？",
+              "correct": false,
+              "scaffold_zh": "先礼貌回答妈妈 Do you like apples? 的提问吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "You're welcome, dear! Put your cap in the basket before you go out to play.",
+          "npc_zh": "不客气宝贝！出门玩耍前记得把小帽子放进门厅藤篮里。",
+          "options": [
+            {
+              "en": "All right, Mom! See you later!",
+              "zh": "好哒妈妈！待会儿见！",
+              "correct": true
+            },
+            {
+              "en": "How old are you?",
+              "zh": "你几岁了？",
+              "correct": false,
+              "scaffold_zh": "答应妈妈的叮嘱并道别，选 All right, Mom! See you later! 最自然！"
+            },
+            {
+              "en": "It is a ruler.",
+              "zh": "它是一把尺子。",
+              "correct": false,
+              "scaffold_zh": "试试用 All right, Mom! 回应妈妈吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "home_s2_continuous_mom": {
+      "id": "home_s2_continuous_mom",
+      "domain": "home",
+      "stage": 2,
+      "grade_label": "四年级进阶",
+      "grammar_tag": "方位介词 in/on/under · 现在进行时 (be + doing)",
+      "grammar_tip": "询问物品位置用 Where is...? (It's on/in/under...)；描述家人此时此刻正在做的事用【现在进行时：am/is/are + 动词ing】！",
+      "book_ref": "湘少版四年级上册 & 下册 · Where's my...? & What are you doing?",
+      "room_ids": [
+        "home",
+        "home_bedroom",
+        "home_balcony"
+      ],
+      "npc_id": "textbook_role_lingling_mother",
+      "speaker": "妈妈 Mom · 方位与正在进行时",
+      "title_zh": "在家找书包、说一说爸爸和小猫正在做什么",
+      "key_word": "reading",
+      "turns": [
+        {
+          "npc_en": "Sweetie, you look busy! What are you looking for in the living room?",
+          "npc_zh": "宝贝，你在客厅里忙着找什么呢？（注意看进行时 are looking for）",
+          "options": [
+            {
+              "en": "Mom, where is my schoolbag? I can't find it!",
+              "zh": "妈妈，我的书包在哪里？我找不到它啦！",
+              "correct": true
+            },
+            {
+              "en": "My schoolbag is red.",
+              "zh": "我的书包是红色的。",
+              "correct": false,
+              "scaffold_zh": "你想问妈妈书包“在哪里”，试试用疑问词 Where is my schoolbag? 提问吧！"
+            },
+            {
+              "en": "I went to school yesterday.",
+              "zh": "我昨天去上学了。",
+              "correct": false,
+              "scaffold_zh": "妈妈问你现在正在找什么，用 Where is my schoolbag? 最贴切！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Haha, look beside the wooden chair! Is it under the table or on the chair?",
+          "npc_zh": "哈哈，往木椅子那边看！它在桌子下面，还是在椅子上面呀？",
+          "options": [
+            {
+              "en": "Aha! It's on the chair, and my cap is under the table!",
+              "zh": "啊哈！它在椅子上面，我的帽子在桌子下面！",
+              "correct": true
+            },
+            {
+              "en": "It's in the soup pot.",
+              "zh": "它在汤锅里面。",
+              "correct": false,
+              "scaffold_zh": "看清楚方位介词哦：on the chair（在椅子上），under the table（在桌子下）！"
+            },
+            {
+              "en": "Yes, I can swim.",
+              "zh": "是的，我会游泳。",
+              "correct": false,
+              "scaffold_zh": "用 It's on the chair 说出书包的位置吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Shh, listen! Where is Dad right now, and what is he doing?",
+          "npc_zh": "嘘，听！爸爸现在在哪里？他【正在做什么】（What is he doing）？",
+          "options": [
+            {
+              "en": "He is in the study. He is reading a book!",
+              "zh": "他在书房里，他正在看书呢！（is reading）",
+              "correct": true
+            },
+            {
+              "en": "He read a book.",
+              "zh": "他看书。（缺少进行时 is reading）",
+              "correct": false,
+              "scaffold_zh": "语法关键点：问 What is he doing?（正在做什么），回答要用【He is + V-ing】→ He is reading a book!"
+            },
+            {
+              "en": "He is a teacher.",
+              "zh": "他是一名老师。",
+              "correct": false,
+              "scaffold_zh": "妈妈问的是他此刻正在做的动作（doing），选 He is reading a book! 吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "home_s3_routine_future": {
+      "id": "home_s3_routine_future",
+      "domain": "home",
+      "stage": 3,
+      "grade_label": "五年级提升",
+      "grammar_tag": "一般现在时 (often/usually) · 一般将来时 (will / be going to)",
+      "grammar_tip": "平时常做的家务与习惯用【一般现在时：I often water...】；接下来打算做的事用【一般将来时：I will... / I'm going to...】！",
+      "book_ref": "湘少版五年级上册 U7 家务习惯 & 五年级下册 U6 制作贺卡计划",
+      "room_ids": [
+        "home_kitchen",
+        "home_study",
+        "home_estate",
+        "home_balcony"
+      ],
+      "npc_id": "textbook_role_lingling_father",
+      "speaker": "爸爸 Dad · 习惯与将来计划",
+      "title_zh": "和爸爸聊日常家务习惯与给妈妈的惊喜计划",
+      "key_word": "often",
+      "turns": [
+        {
+          "npc_en": "Our home looks so clean today! What chores do you usually do at home?",
+          "npc_zh": "今天咱们家真干净！你平时在家里通常做哪些家务呀？（一般现在时）",
+          "options": [
+            {
+              "en": "I often make my bed and water the plants!",
+              "zh": "我经常整理床铺，还给绿植浇水！（often + 动词原形）",
+              "correct": true
+            },
+            {
+              "en": "I am watering the plant yesterday.",
+              "zh": "时态混啦（am watering 与 yesterday 冲突）",
+              "correct": false,
+              "scaffold_zh": "问平时经常做的习惯（usually / often），要用【一般现在时】：I often make my bed and water the plants!"
+            },
+            {
+              "en": "It's a kitchen sink.",
+              "zh": "它是一个厨房水槽。",
+              "correct": false,
+              "scaffold_zh": "爸爸在问你平时做什么家务（What chores do you do），试试用 I often... 回答！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Mom works hard cooking meals in the kitchen. Tomorrow is Sunday — what are we going to do for her?",
+          "npc_zh": "妈妈在厨房做饭很辛苦。明天就是周日了——我们【打算】为她做点什么呢？（be going to 将来时）",
+          "options": [
+            {
+              "en": "We're going to cook breakfast and wash the vegetables!",
+              "zh": "我们打算一起做早餐、把蔬菜洗干净！（are going to + 动词原形）",
+              "correct": true
+            },
+            {
+              "en": "We cooked breakfast last week.",
+              "zh": "我们上周做了早餐。（这是过去时哦）",
+              "correct": false,
+              "scaffold_zh": "注意时间词 Tomorrow（明天）和问句 what are we going to do，要用【一般将来时 We're going to...】哦！"
+            },
+            {
+              "en": "Mom is in the living room.",
+              "zh": "妈妈在客厅里。",
+              "correct": false,
+              "scaffold_zh": "试试用 We're going to cook breakfast... 说出明天的计划吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Wonderful idea! And what gift will you make on your study desk for Mom?",
+          "npc_zh": "好主意！那你还【将要】在书房书桌上给妈妈做一份什么礼物呢？（will + 动词原形）",
+          "options": [
+            {
+              "en": "I'll make a beautiful card and draw flowers on it!",
+              "zh": "我将要做一张漂亮的贺卡，在上面画满鲜花！（I'll = I will）",
+              "correct": true
+            },
+            {
+              "en": "I making a card.",
+              "zh": "缺少助动词（应为 I'll make）",
+              "correct": false,
+              "scaffold_zh": "用 will 表达将来的心愿时，后面直接跟动词原形：I'll make a beautiful card!"
+            },
+            {
+              "en": "Pass me the chopsticks.",
+              "zh": "把筷子递给我。",
+              "correct": false,
+              "scaffold_zh": "在书桌上做礼物送给妈妈，选 I'll make a beautiful card! 最贴心！"
+            }
+          ]
+        }
+      ]
+    },
+    "home_s4_past_dinner": {
+      "id": "home_s4_past_dinner",
+      "domain": "home",
+      "stage": 4,
+      "grade_label": "六年级高阶",
+      "grammar_tag": "一般过去时 (was / had / played / learned) · 建议 should",
+      "grammar_tip": "放学回家跟爸妈聊“今天在学校发生了什么”，动词要变成【过去式：have→had, play→played, see→saw】；提健康环保建议用 should / shouldn't！",
+      "book_ref": "湘少版六年级上册 & 下册 · 过去经历叙事与环保生活习惯",
+      "room_ids": [
+        "home_dining",
+        "home_bathroom",
+        "home"
+      ],
+      "npc_id": "textbook_role_lingling_mother",
+      "speaker": "妈妈 Mom · 晚餐桌聊今日见闻",
+      "title_zh": "在餐桌上跟爸妈用过去时分享今天学校发生的事",
+      "key_word": "had",
+      "turns": [
+        {
+          "npc_en": "Dinner is ready! Come to the dining table. How was your day at school today?",
+          "npc_zh": "晚饭做好啦！快到餐桌边坐下。今天在学校过得怎么样呀？（注意过去式 was）",
+          "options": [
+            {
+              "en": "It was great! We had a really fun science class this morning.",
+              "zh": "棒极了！今天上午我们上了一节超有趣的科学课。（was / had 过去式）",
+              "correct": true
+            },
+            {
+              "en": "It is tomorrow.",
+              "zh": "它是明天。",
+              "correct": false,
+              "scaffold_zh": "妈妈用 How was your day? 问已经度过的今天，要用过去式 It was great! We had... 来回答哦！"
+            },
+            {
+              "en": "Open the window.",
+              "zh": "打开窗户。",
+              "correct": false,
+              "scaffold_zh": "和妈妈聊聊今天学校过得怎么样（It was great!）吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Oh, how exciting! What did you do with your classmates after class?",
+          "npc_zh": "哇，真有意思！那下课后你和同学们【做了】什么呢？（What did you do 过去时）",
+          "options": [
+            {
+              "en": "I played football with Peter and read stories with Lingling!",
+              "zh": "我和彼得踢了足球，还和玲玲一起读了故事！（played / read 过去式）",
+              "correct": true
+            },
+            {
+              "en": "I will play football next Monday.",
+              "zh": "我下周一将去踢球。（这是将来时哦）",
+              "correct": false,
+              "scaffold_zh": "注意助动词 did 问的是已经做过的事，动词要用过去式：played football！"
+            },
+            {
+              "en": "Peter is my desk.",
+              "zh": "彼得是我的课桌。",
+              "correct": false,
+              "scaffold_zh": "试试用过去式 I played football with Peter... 分享课间活动吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "You had a wonderful day! Now let's wash our hands in the bathroom before eating. What should we remember?",
+          "npc_zh": "真是充实的一天！饭前先去浴室洗洗手吧，我们【应该】记住什么节水好习惯？（should / shouldn't）",
+          "options": [
+            {
+              "en": "We should turn off the tap. We shouldn't waste water!",
+              "zh": "我们应该关紧水龙头，不应该浪费水！（should / shouldn't + 动词原形）",
+              "correct": true
+            },
+            {
+              "en": "We wasting water.",
+              "zh": "语法不完整哦",
+              "correct": false,
+              "scaffold_zh": "情态动词 should / shouldn't 后面直接接动词原形：We shouldn't waste water!"
+            },
+            {
+              "en": "Good morning, class!",
+              "zh": "同学们早上好！",
+              "correct": false,
+              "scaffold_zh": "选节水环保句 We should turn off the tap. We shouldn't waste water! 吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "home_s1_bedroom_clothes_mom": {
+      "id": "home_s1_bedroom_clothes_mom",
+      "domain": "home",
+      "stage": 1,
+      "grade_label": "三年级基础",
+      "grammar_tag": "颜色与衣物指认 · Look at my... · Put on...",
+      "grammar_tip": "介绍自己的衣物用 Look at my blue shirt / pink dress! 妈妈提醒穿衣出门用祈使句 Put on your coat / shoes!",
+      "book_ref": "湘少版三年级下册 · Unit 5–8 颜色、衣物与日常穿戴",
+      "room_ids": [
+        "home_bedroom"
+      ],
+      "npc_id": "textbook_role_lingling_mother",
+      "speaker": "妈妈 Mom · 温暖卧室",
+      "title_zh": "在卧室打开衣柜和妈妈挑选上学穿搭",
+      "key_word": "shirt",
+      "turns": [
+        {
+          "npc_en": "Time to get dressed for school! Open your wardrobe — what colour is your clean shirt?",
+          "npc_zh": "该穿衣服准备上学啦！打开你的衣柜看看——干净衬衫是什么颜色的？",
+          "options": [
+            {
+              "en": "Look, Mom! My shirt is sky blue!",
+              "zh": "看呀妈妈！我的衬衫是天蓝色的！",
+              "correct": true
+            },
+            {
+              "en": "It is seven o'clock.",
+              "zh": "现在七点钟了。",
+              "correct": false,
+              "scaffold_zh": "妈妈问的是衬衫的颜色（what colour），试试回答 My shirt is sky blue! 吧！"
+            },
+            {
+              "en": "This is a blackboard.",
+              "zh": "这是一块黑板。",
+              "correct": false,
+              "scaffold_zh": "在卧室衣柜前选衣服，回答衬衫的颜色吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "It looks very neat! It's a little cool this morning — please put on your warm coat too.",
+          "npc_zh": "真精神！今天早上有点凉——请把暖和的外套也穿上吧。",
+          "options": [
+            {
+              "en": "OK, Mom! Look at my coat — it's so warm!",
+              "zh": "好的妈妈！看我的外套——真暖和呀！",
+              "correct": true
+            },
+            {
+              "en": "No, I am a cat.",
+              "zh": "不，我是一只小猫。",
+              "correct": false,
+              "scaffold_zh": "听妈妈的话穿上暖外套，回应 OK, Mom! Look at my coat! 最棒！"
+            },
+            {
+              "en": "Give me some soup.",
+              "zh": "给我一点汤。",
+              "correct": false,
+              "scaffold_zh": "先把外套穿上（OK, Mom!）再去吃早饭吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Don't forget your socks and shoes under the chair! Ready for school?",
+          "npc_zh": "别忘了椅子下面的袜子和鞋子哦！准备好去学校了吗？",
+          "options": [
+            {
+              "en": "Yes! My shoes are on. Let's go!",
+              "zh": "准备好啦！鞋子穿好啦，我们出发吧！",
+              "correct": true
+            },
+            {
+              "en": "Good night!",
+              "zh": "晚安！",
+              "correct": false,
+              "scaffold_zh": "早上精神饱满去上学，选 Yes! My shoes are on. Let's go! 吧！"
+            },
+            {
+              "en": "Whose ruler is this?",
+              "zh": "这是谁的尺子？",
+              "correct": false,
+              "scaffold_zh": "穿好鞋子回应妈妈 Ready for school? 吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "home_s2_kitchen_cooking_mom": {
+      "id": "home_s2_kitchen_cooking_mom",
+      "domain": "home",
+      "stage": 2,
+      "grade_label": "四年级进阶",
+      "grammar_tag": "厨房现在进行时 (am/is cooking) · Can I help you?",
+      "grammar_tip": "走进厨房问妈妈正在煮什么用 What are you cooking? 妈妈回答 I'm cooking...；主动帮忙说 Can I help you?",
+      "book_ref": "湘少版四年级下册 · Unit 4–5 家庭厨房正在进行时",
+      "room_ids": [
+        "home_kitchen",
+        "home_dining"
+      ],
+      "npc_id": "textbook_role_lingling_mother",
+      "speaker": "妈妈 Mom · 明亮厨房",
+      "title_zh": "在厨房看妈妈正在做什么菜并主动帮忙",
+      "key_word": "cooking",
+      "turns": [
+        {
+          "npc_en": "Mmm, welcome to the kitchen! Look at the pot — can you guess what I am cooking?",
+          "npc_zh": "嗯～欢迎来到厨房！看看汤锅——你能猜出我【正在煮】什么吗？（am cooking 进行时）",
+          "options": [
+            {
+              "en": "Wow, it smells great! Are you cooking tomato and egg soup?",
+              "zh": "哇，好香呀！您正在煮西红柿鸡蛋汤吗？（Are you cooking...）",
+              "correct": true
+            },
+            {
+              "en": "You cook soup tomorrow.",
+              "zh": "时态不对哦（正在煮要用进行时）",
+              "correct": false,
+              "scaffold_zh": "妈妈问此刻正在煮什么（am cooking），疑问句要用【Are you cooking...?】哦！"
+            },
+            {
+              "en": "It's a bedroom lamp.",
+              "zh": "它是一盏卧室台灯。",
+              "correct": false,
+              "scaffold_zh": "闻闻厨房锅里的香味，猜猜妈妈正在煮西红柿鸡蛋汤吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Yes, I am! And Dad is setting the bowls on the dining table. Would you like to help?",
+          "npc_zh": "猜对啦！爸爸正在餐厅摆碗筷呢。你也想来帮个忙吗？",
+          "options": [
+            {
+              "en": "Yes! I am washing the red tomatoes in the sink now!",
+              "zh": "好呀！我现在正在水槽里洗红西红柿呢！（am washing）",
+              "correct": true
+            },
+            {
+              "en": "I wash tomatoes last Sunday.",
+              "zh": "时间与动词不匹配哦",
+              "correct": false,
+              "scaffold_zh": "说自己“现在正在洗西红柿”（now），要用【I am washing...】现在进行时！"
+            },
+            {
+              "en": "Where is the playground?",
+              "zh": "操场在哪里？",
+              "correct": false,
+              "scaffold_zh": "帮妈妈在水槽里洗西红柿，选 I am washing the red tomatoes... 吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "What a helpful kid! Look in the fridge — can you pass me the fresh milk?",
+          "npc_zh": "真是懂事的小帮手！看看冰箱里——能把鲜牛奶递给我吗？",
+          "options": [
+            {
+              "en": "Sure, Mom! Here is the cold milk from the fridge.",
+              "zh": "没问题妈妈！这是从冰箱拿出来的冰牛奶。",
+              "correct": true
+            },
+            {
+              "en": "No, it's a pencil-box.",
+              "zh": "不，它是个文具盒。",
+              "correct": false,
+              "scaffold_zh": "把牛奶递给妈妈时热情回应 Sure, Mom! Here is the cold milk!"
+            },
+            {
+              "en": "Goodbye, Mr Wang!",
+              "zh": "再见，王老师！",
+              "correct": false,
+              "scaffold_zh": "在家里帮妈妈拿牛奶，选 Sure, Mom! 吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "school_s1_classroom_miss_li": {
+      "id": "school_s1_classroom_miss_li",
+      "domain": "school",
+      "stage": 1,
+      "grade_label": "三年级基础",
+      "grammar_tag": "校园问候 · What's your name? · 课堂祈使句 & 借文具",
+      "grammar_tip": "在学校认识同学用 Hello, I'm... What's your name? 课堂听老师指令用祈使句 Open your book / Look at the blackboard！",
+      "book_ref": "湘少版三年级上册 · Unit 1–3 校园问候与课堂初体验",
+      "room_ids": [
+        "classroom",
+        "school"
+      ],
+      "npc_id": "textbook_miss_li",
+      "speaker": "李老师 Miss Li · 阳光教室",
+      "title_zh": "在学校和李老师、同桌问好并准备上课",
+      "key_word": "book",
+      "turns": [
+        {
+          "npc_en": "Good morning, boys and girls! Welcome to our sunny classroom!",
+          "npc_zh": "同学们早上好！欢迎来到我们的阳光教室！",
+          "options": [
+            {
+              "en": "Good morning, Miss Li! Nice to meet you!",
+              "zh": "早上好，李老师！很高兴见到您！",
+              "correct": true
+            },
+            {
+              "en": "Good night, Mom!",
+              "zh": "晚安，妈妈！",
+              "correct": false,
+              "scaffold_zh": "现在在阳光教室里和李老师上课呢，回应 Good morning, Miss Li! 吧！"
+            },
+            {
+              "en": "I like noodles.",
+              "zh": "我喜欢面条。",
+              "correct": false,
+              "scaffold_zh": "先礼貌回应李老师的早安问候（Good morning, Miss Li!）哦！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Class begins! Please sit on your chair and take out your English book.",
+          "npc_zh": "上课啦！请在椅子上坐好，把你的英语书拿出来放在课桌上。",
+          "options": [
+            {
+              "en": "OK, Miss Li! Look, my English book is on my desk.",
+              "zh": "好的李老师！看，我的英语书已经在课桌上啦。",
+              "correct": true
+            },
+            {
+              "en": "It is a football.",
+              "zh": "它是一个足球。",
+              "correct": false,
+              "scaffold_zh": "课堂上要拿的是英语书（English book），选 my English book is on my desk 吧！"
+            },
+            {
+              "en": "Goodbye!",
+              "zh": "再见！",
+              "correct": false,
+              "scaffold_zh": "刚刚开始上课呢，快把英语书放到课桌上回应老师吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Mingming whispers beside you: 'Excuse me, may I borrow your pencil?' How do you reply?",
+          "npc_zh": "同桌明明小声问你：“打扰一下，我可以借用你的铅笔吗？”你怎么回答他？",
+          "options": [
+            {
+              "en": "Sure! Here you are, Mingming.",
+              "zh": "当然可以！给你，明明。",
+              "correct": true
+            },
+            {
+              "en": "How old are you?",
+              "zh": "你几岁了？",
+              "correct": false,
+              "scaffold_zh": "把东西递给同学时，地道英语说 Here you are!（给你！）"
+            },
+            {
+              "en": "No, I am a desk.",
+              "zh": "不，我是一张课桌。",
+              "correct": false,
+              "scaffold_zh": "友善地把铅笔借给同桌，说 Sure! Here you are! 吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "school_s2_playground_peter": {
+      "id": "school_s2_playground_peter",
+      "domain": "school",
+      "stage": 2,
+      "grade_label": "四年级进阶",
+      "grammar_tag": "Whose 归属询问 · 情态动词 Can you...? · 现在进行时 (be + doing)",
+      "grammar_tip": "问物品是谁的用 Whose... is this? 问运动特长用 Can you...? 看操场上同学正在运动用【现在进行时：He/She is running / jumping】！",
+      "book_ref": "湘少版四年级上册 & 下册 · 操场运动能力与课间正在发生的事",
+      "room_ids": [
+        "playground",
+        "football_field",
+        "art_room",
+        "music_room"
+      ],
+      "npc_id": "textbook_peter",
+      "speaker": "彼得 Peter · 课间操场对话",
+      "title_zh": "在操场和同学认领物品、聊运动正在进行时",
+      "key_word": "playing",
+      "turns": [
+        {
+          "npc_en": "Hey friend! I found a blue basketball by the bench. Whose basketball is this?",
+          "npc_zh": "嘿好朋友！我在休息椅旁发现了一颗篮球。这颗篮球【是谁的】？（Whose）",
+          "options": [
+            {
+              "en": "Let me see — it has Tim's name! It's Tim's basketball.",
+              "zh": "我看看——上面有蒂姆的名字！它是蒂姆的篮球。（Tim's 名词所有格）",
+              "correct": true
+            },
+            {
+              "en": "It is on the desk.",
+              "zh": "它在课桌上。",
+              "correct": false,
+              "scaffold_zh": "注意疑问词 Whose（谁的），回答要用人名 + 's（Tim's basketball）表示归属哦！"
+            },
+            {
+              "en": "Yes, please.",
+              "zh": "好的，请。",
+              "correct": false,
+              "scaffold_zh": "试试用 It's Tim's basketball 回答篮球是谁的吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Look at the green playground! What are Anne and Dongdong doing over there?",
+          "npc_zh": "快看绿茵操场上！安妮和东东在那边【正在做什么】呢？（What are they doing）",
+          "options": [
+            {
+              "en": "Anne is jumping rope, and Dongdong is running fast!",
+              "zh": "安妮正在跳绳，东东正在飞快地跑步！（is jumping / is running）",
+              "correct": true
+            },
+            {
+              "en": "Anne jump rope every yesterday.",
+              "zh": "时态与搭配不对哦",
+              "correct": false,
+              "scaffold_zh": "描述眼前正在进行的动作，一定要用【be + 动词ing】：Anne is jumping rope!"
+            },
+            {
+              "en": "They are ten.",
+              "zh": "他们十岁了。",
+              "correct": false,
+              "scaffold_zh": "Peter 问的是正在做的动作（doing），选 Anne is jumping rope... 吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "So cool! Can you play football with me right now?",
+          "npc_zh": "太酷啦！你现在【会/能】和我一起踢足球吗？（Can you...?）",
+          "options": [
+            {
+              "en": "Yes, I can! Let's kick the football into the goal!",
+              "zh": "当然会！（Yes, I can!）我们一起把球踢进球门吧！",
+              "correct": true
+            },
+            {
+              "en": "Yes, I am.",
+              "zh": "答词不匹配（Can you 要用 I can 回答）",
+              "correct": false,
+              "scaffold_zh": "语法小窍门：Can you...? 提问时，肯定回答是 Yes, I can! 哦！"
+            },
+            {
+              "en": "I'd like some soup.",
+              "zh": "我想要点热汤。",
+              "correct": false,
+              "scaffold_zh": "在球场上回应 Peter 的邀球，选 Yes, I can! Let's kick the football... 吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "school_s3_plan_and_canteen": {
+      "id": "school_s3_plan_and_canteen",
+      "domain": "school",
+      "stage": 3,
+      "grade_label": "五年级提升",
+      "grammar_tag": "一般将来时 (be going to) · 时刻日常习惯 · 礼貌意愿 I'd like...",
+      "grammar_tip": "和同学讨论今天课程或活动计划用【be going to + 动词原形】；在学校食堂点餐用礼貌表达 I'd like some..., please！（而不是生硬的 I want）",
+      "book_ref": "湘少版五年级上册 U2 校园点餐 & 五年级下册 U1–2 课堂阅读研究计划",
+      "room_ids": [
+        "canteen",
+        "classroom",
+        "school",
+        "science_room"
+      ],
+      "npc_id": "textbook_lingling",
+      "speaker": "玲玲 Lingling · 课堂计划与午餐",
+      "title_zh": "在学校和玲玲讨论今日课程计划与食堂点餐",
+      "key_word": "going",
+      "turns": [
+        {
+          "npc_en": "Hi! Look at our class timetable! What are we going to do in English class today?",
+          "npc_zh": "嗨！快看我们的课程表！今天英语课我们【打算】做什么呀？（are we going to do）",
+          "options": [
+            {
+              "en": "We're going to read stories and put on a short play!",
+              "zh": "我们打算读故事，还要演一出趣味短剧！（are going to + 动词原形）",
+              "correct": true
+            },
+            {
+              "en": "We went to the park last year.",
+              "zh": "我们去年去了公园。（过去时）",
+              "correct": false,
+              "scaffold_zh": "问句用了 What are we going to do today，回答也要用【We're going to...】将来计划句型哦！"
+            },
+            {
+              "en": "It's under the bed.",
+              "zh": "它在床底下。",
+              "correct": false,
+              "scaffold_zh": "和玲玲讨论英语课打算做什么，选 We're going to read stories... 吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "I love reading stories! By the way, what time do you usually have lunch at school?",
+          "npc_zh": "我最爱读故事啦！对了，你平时在学校通常几点吃午饭呀？（usually 一般现在时）",
+          "options": [
+            {
+              "en": "I usually have lunch at twelve o'clock in the canteen.",
+              "zh": "我通常十二点整在学校餐厅吃午饭。",
+              "correct": true
+            },
+            {
+              "en": "I having lunch tomorrow.",
+              "zh": "语法搭配不对哦",
+              "correct": false,
+              "scaffold_zh": "回答日常习惯时间（what time do you usually...），用一般现在时 I usually have lunch at...！"
+            },
+            {
+              "en": "Thank you very much.",
+              "zh": "非常感谢。",
+              "correct": false,
+              "scaffold_zh": "回答几点吃午饭，用 at twelve o'clock 最准确！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Look, we're at the canteen window now! What would you like for lunch today?",
+          "npc_zh": "看，我们到取餐窗口啦！今天午饭你【想要】吃点什么？（What would you like）",
+          "options": [
+            {
+              "en": "I'd like some roast chicken, rice, and orange juice, please!",
+              "zh": "我想要一份烤鸡肉、米饭和鲜橙汁，谢谢！（I'd like = I would like）",
+              "correct": true
+            },
+            {
+              "en": "Give me chalk and ruler.",
+              "zh": "给我粉笔和尺子。",
+              "correct": false,
+              "scaffold_zh": "在食堂点餐，用礼貌句型 I'd like some..., please! 选择美味食物吧！"
+            },
+            {
+              "en": "Yes, he is.",
+              "zh": "是的，他是。",
+              "correct": false,
+              "scaffold_zh": "回应 What would you like?，选 I'd like some roast chicken... 吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "school_s4_past_and_compare": {
+      "id": "school_s4_past_and_compare",
+      "domain": "school",
+      "stage": 4,
+      "grade_label": "六年级高阶",
+      "grammar_tag": "一般过去时 (Where did you go / went / saw) · 形容词比较级 (-er than)",
+      "grammar_tip": "周一返校和同学聊周末去哪儿玩了，疑问用 Where did you go? 回答用过去式 went / saw / took；对比两个事物用【比较级：taller / bigger / faster than】！",
+      "book_ref": "湘少版六年级上册 & 下册 · 周末旅行过去时与科学观察比较级",
+      "room_ids": [
+        "science_room",
+        "school",
+        "classroom",
+        "music_room",
+        "art_room",
+        "playground"
+      ],
+      "npc_id": "textbook_anne",
+      "speaker": "安妮 Anne · 周末见闻与科学对比",
+      "title_zh": "在学校和安妮聊上周末去了哪里、对比植物生长",
+      "key_word": "taller",
+      "turns": [
+        {
+          "npc_en": "Good to see you back at school! Where did you go with your parents last Sunday?",
+          "npc_zh": "返校见到你真开心！上个星期天你和爸爸妈妈【去了哪里】呀？（Where did you go 过去时）",
+          "options": [
+            {
+              "en": "We went to the forest park and saw many tall green trees!",
+              "zh": "我们去了森林公园，还看到了许多高大的绿树！（went / saw 过去式）",
+              "correct": true
+            },
+            {
+              "en": "We go to the park tomorrow.",
+              "zh": "时间词冲突（last Sunday 要用过去式 went）",
+              "correct": false,
+              "scaffold_zh": "看到 last Sunday（上周日）和 did you go，回答一定要把 go 变成过去式 went、see 变成 saw 哦！"
+            },
+            {
+              "en": "My pencil is in the box.",
+              "zh": "我的铅笔在盒子里。",
+              "correct": false,
+              "scaffold_zh": "安妮在问你上周日去了哪里，选 We went to the forest park... 吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Sounds amazing! Come look at our two bean plants on the science table. Which one is taller?",
+          "npc_zh": "听起来棒极了！快来看科学桌上我们种的两盆小豆苗，哪一棵【更高】呢？（taller 比较级）",
+          "options": [
+            {
+              "en": "Look! Your plant is taller than mine, and its leaves are bigger!",
+              "zh": "看！你的豆苗比我的更高，而且叶片也更大！（taller than / bigger）",
+              "correct": true
+            },
+            {
+              "en": "Your plant is tall than mine.",
+              "zh": "少了比较级尾巴 -er（应为 taller than）",
+              "correct": false,
+              "scaffold_zh": "语法关键点：有 than（比……）出现时，形容词要变比较级：tall → taller than，big → bigger！"
+            },
+            {
+              "en": "Wash your hands.",
+              "zh": "洗洗手。",
+              "correct": false,
+              "scaffold_zh": "观察两盆豆苗的高低对比，选 Your plant is taller than mine... 吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Because we watered it every day! Look outside — Peter and Tim are racing. Who runs faster?",
+          "npc_zh": "因为我们每天都给它浇水呀！再看窗外操场——彼得和蒂姆在赛跑，谁跑得【更快】？（faster）",
+          "options": [
+            {
+              "en": "Peter runs faster than Tim today — let's cheer for both of them!",
+              "zh": "今天彼得跑得比蒂姆更快——我们去为他们俩加油吧！（faster than）",
+              "correct": true
+            },
+            {
+              "en": "Peter run fast yesterday.",
+              "zh": "时态与比较级都不对哦",
+              "correct": false,
+              "scaffold_zh": "回答 Who runs faster?（谁跑得更快），用比较级 runs faster than Tim 最地道！"
+            },
+            {
+              "en": "Have some dumplings.",
+              "zh": "吃点饺子吧。",
+              "correct": false,
+              "scaffold_zh": "选 Peter runs faster than Tim today... 一起为同学喝彩吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "school_s2_music_art_lin": {
+      "id": "school_s2_music_art_lin",
+      "domain": "school",
+      "stage": 2,
+      "grade_label": "四年级进阶",
+      "grammar_tag": "情态动词 Can you play...? · 艺术课现在进行时 (is playing / drawing)",
+      "grammar_tip": "西方乐器前要加 the（play the piano / violin）；看同学正在演奏或画画用【现在进行时：She is playing / drawing...】！",
+      "book_ref": "湘少版四年级下册 · 音乐美术社团与正在进行的才艺展示",
+      "room_ids": [
+        "music_room",
+        "art_room"
+      ],
+      "npc_id": "textbook_miss_lin",
+      "speaker": "林老师 Miss Lin · 音乐与艺术社团",
+      "title_zh": "在音乐与美术室聊乐器特长与正在创作的作品",
+      "key_word": "violin",
+      "turns": [
+        {
+          "npc_en": "Welcome to our sunny art and music club! Listen — Anne is on the stage. What is she doing?",
+          "npc_zh": "欢迎来到阳光艺术音乐社团！听——安妮在舞台上呢，她【正在做什么】？",
+          "options": [
+            {
+              "en": "She is playing the violin! The music sounds so sweet!",
+              "zh": "她正在拉小提琴！（is playing the violin）琴声真好听！",
+              "correct": true
+            },
+            {
+              "en": "She play violin.",
+              "zh": "缺少进行时 is playing 和冠词 the",
+              "correct": false,
+              "scaffold_zh": "注意两个课本细节：①正在做用 is playing；②乐器前加 the → She is playing the violin!"
+            },
+            {
+              "en": "It is a dining table.",
+              "zh": "它是一张餐桌。",
+              "correct": false,
+              "scaffold_zh": "听舞台上的琴声，选 She is playing the violin! 吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Can you play the piano or tap the red drum with us?",
+          "npc_zh": "你会弹钢琴，或者和我们一起敲节奏大鼓吗？（Can you...?）",
+          "options": [
+            {
+              "en": "Yes, I can! I can tap a happy rhythm on the drum!",
+              "zh": "我会！（Yes, I can!）我能在大鼓上敲出欢快的节奏！",
+              "correct": true
+            },
+            {
+              "en": "No, I don't a drum.",
+              "zh": "回答方式不匹配哦",
+              "correct": false,
+              "scaffold_zh": "Can you...? 提问时，用 Yes, I can! I can... 回答最地道！"
+            },
+            {
+              "en": "Where is my toothbrush?",
+              "zh": "我的牙刷在哪里？",
+              "correct": false,
+              "scaffold_zh": "在音乐教室里一起合奏，选 Yes, I can! I can tap... 吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Bravo! And look at Lingling by the easel — what is she painting with her brush?",
+          "npc_zh": "太棒了！再看画架旁的玲玲——她【正在画】什么呢？",
+          "options": [
+            {
+              "en": "She is painting blue sky, green trees, and our sunny school!",
+              "zh": "她正在画蓝天、绿树和我们的阳光学校！（is painting）",
+              "correct": true
+            },
+            {
+              "en": "She painted it next week.",
+              "zh": "过去式与下周冲突啦",
+              "correct": false,
+              "scaffold_zh": "问 what is she painting，回答要用现在进行时 She is painting...!"
+            },
+            {
+              "en": "Goodbye, Mom!",
+              "zh": "再见，妈妈！",
+              "correct": false,
+              "scaffold_zh": "和林老师一起欣赏玲玲正在画的校园风景吧！"
+            }
+          ]
+        }
+      ]
+    },
+    "school_s3_football_mr_wang": {
+      "id": "school_s3_football_mr_wang",
+      "domain": "school",
+      "stage": 3,
+      "grade_label": "五年级提升",
+      "grammar_tag": "体育比赛将来计划 (be going to) · 团队规则 must / mustn't",
+      "grammar_tip": "赛前布置战术计划用【We are going to...】；球场安全与文明守则用情态动词 must（必须）/ mustn't（禁止）+ 动词原形！",
+      "book_ref": "湘少版五年级下册 · 校园体育活动计划与规则意识",
+      "room_ids": [
+        "football_field",
+        "playground"
+      ],
+      "npc_id": "textbook_mr_wang",
+      "speaker": "王老师 Mr Wang · 绿茵足球场",
+      "title_zh": "在足球场听王老师布置比赛计划与运动守则",
+      "key_word": "football",
+      "turns": [
+        {
+          "npc_en": "Team, gather by the bench! We are going to have a friendly football match this afternoon!",
+          "npc_zh": "队员们到替补席集合！今天下午我们【即将举行】一场足球友谊赛！（are going to have）",
+          "options": [
+            {
+              "en": "Hooray! What are we going to do first, Mr Wang?",
+              "zh": "太棒啦！王老师，那我们第一步打算做什么呢？（are we going to do）",
+              "correct": true
+            },
+            {
+              "en": "We had a match tomorrow.",
+              "zh": "过去式 had 不能搭配 tomorrow 哦",
+              "correct": false,
+              "scaffold_zh": "询问接下来的训练安排，用将来时 What are we going to do first?"
+            },
+            {
+              "en": "It is a kitchen pot.",
+              "zh": "它是一口汤锅。",
+              "correct": false,
+              "scaffold_zh": "在球场上回应王老师，问问第一步准备做什么训练吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "First, we're going to warm up and pass the ball around the orange cones!",
+          "npc_zh": "首先，我们要热身，并绕着橙色标志桶练习传球！",
+          "options": [
+            {
+              "en": "Got it! Tim and I will pass the football carefully!",
+              "zh": "明白！我和蒂姆会认真配合传球的！（will pass 将来时）",
+              "correct": true
+            },
+            {
+              "en": "Tim pass ball yesterday.",
+              "zh": "时态不对哦",
+              "correct": false,
+              "scaffold_zh": "表达接下来会努力做好，用将来时 Tim and I will pass the football!"
+            },
+            {
+              "en": "Open your wardrobe.",
+              "zh": "打开你的衣柜。",
+              "correct": false,
+              "scaffold_zh": "选 Got it! Tim and I will pass the football carefully! 吧！"
+            }
+          ]
+        },
+        {
+          "npc_en": "Remember our playground rule: what must we do during the game?",
+          "npc_zh": "记住我们的球场文明守则：比赛时我们【必须】做到什么？（must + 动词原形）",
+          "options": [
+            {
+              "en": "We must play safely and help our teammates! We mustn't push!",
+              "zh": "我们必须安全运动、互助队友，绝不能推搡！（must / mustn't）",
+              "correct": true
+            },
+            {
+              "en": "We must pushing.",
+              "zh": "情态动词 must 后面要用动词原形 play / push 哦",
+              "correct": false,
+              "scaffold_zh": "记住口诀：must / mustn't 后面跟动词原形 → We must play safely!"
+            },
+            {
+              "en": "Have some hot noodles.",
+              "zh": "吃点热面条吧。",
+              "correct": false,
+              "scaffold_zh": "说出球场文明守则 We must play safely and help our teammates! 吧！"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

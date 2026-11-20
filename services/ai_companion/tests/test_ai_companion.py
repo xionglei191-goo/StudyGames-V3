@@ -300,3 +300,24 @@ def test_asgi_endpoints_end_to_end() -> None:
             assert gentle_body["match_tier"] == "gentle_model"
 
     asyncio.run(_exercise())
+
+
+def test_dotenv_loader_parses_quotes_and_comments(tmp_path) -> None:
+    import os
+    from services.ai_companion.env_loader import load_dotenv_if_changed
+
+    env_file = tmp_path / ".env"
+    env_file.write_text(
+        "# sample comment\nOPENAI_API_KEY='sk-test-demo-123'\nAI_COMPANION_MODEL=\"gpt-4o-mini\"\nEMPTY_VAL=\n",
+        encoding="utf-8",
+    )
+    prev_key = os.environ.get("OPENAI_API_KEY")
+    try:
+        parsed = load_dotenv_if_changed(env_file)
+        assert parsed["OPENAI_API_KEY"] == "sk-test-demo-123"
+        assert os.environ.get("OPENAI_API_KEY") == "sk-test-demo-123"
+    finally:
+        if prev_key is None:
+            os.environ.pop("OPENAI_API_KEY", None)
+        else:
+            os.environ["OPENAI_API_KEY"] = prev_key

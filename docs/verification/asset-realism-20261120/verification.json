@@ -1,0 +1,641 @@
+{
+  "date": "2026-11-20",
+  "renderer": "Godot 4.7.2 / Vulkan Forward+ / GeForce RTX 4070",
+  "daylight": "fixed",
+  "room_count": 16,
+  "indoor_shadow_distance_m": 60,
+  "outdoor_shadow_distance_m": 72,
+  "props": {
+    "source": "layer2_storybook_v1.blend",
+    "mesh_objects": 92,
+    "packed_textures": [
+      "cloth_detail.png",
+      "cloth_normal.png",
+      "foliage_detail.png",
+      "foliage_normal.png",
+      "paper_detail.png",
+      "paper_normal.png",
+      "plaster_detail.png",
+      "plaster_normal.png",
+      "wood_detail.png",
+      "wood_normal.png"
+    ],
+    "materials_with_normal_map": 48,
+    "glbs": 92,
+    "triangles": 481468,
+    "glb_bytes": 12809444,
+    "verified_uv_primitives": 178,
+    "source_sha256": "f37698167b489a613229cdf307202b1b3ea1950f41bf249b328b40a456533ebe"
+  },
+  "craft": {
+    "source": "handcrafted_furniture.blend",
+    "mesh_objects": 15,
+    "packed_textures": [
+      "cloth_detail.png",
+      "cloth_normal.png",
+      "paper_detail.png",
+      "paper_normal.png",
+      "plaster_detail.png",
+      "plaster_normal.png",
+      "wood_detail.png",
+      "wood_normal.png"
+    ],
+    "materials_with_normal_map": 11,
+    "glbs": 15,
+    "triangles": 144148,
+    "glb_bytes": 4057296,
+    "verified_uv_primitives": 31,
+    "source_sha256": "018d14d57337c8e71a3a52e49e0329bc2d3ec2ba8c9a9e51aae4bcb955febe03"
+  },
+  "cast": [
+    {
+      "geometry_hashes": [
+        "9d89690de8479bb0d15c6af0624f20a0da24c2c90face6a2c82c44ebd7ebe351",
+        "b85ca13076579bf1ad6f7af8d0b20ae84fcce347c723aab647e89309e6ec806d"
+      ],
+      "id": "textbook_role_lingling_mother",
+      "original_sha": "faaffa24b51a27207e72104b57f271a142f29d2982e2ebc13a39655326b3c90a",
+      "source": "res://assets/characters/textbook_expansion_v1/textbook_role_lingling_mother/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "d68e34aeb8fa526552602472485427a160fa78be83df983ae3cec962f828f3ca",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "7bfc996926f0e61fa598d34ae1e02d05c6c4dccdb49bf9e6f7894f2d52283900",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "75a505781037a03030c538f473aa8fe94a6f4b66547c5e44293b8da120d9b4eb",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "75a505781037a03030c538f473aa8fe94a6f4b66547c5e44293b8da120d9b4eb",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "eae37bfb2bbd48ec1fe95cfe5a8f0f3c54ed56ec6e34e2d163a7440ecb610289",
+      "source_model_sha256": "a313a8cfb68c722d9711d0d62d8302670aaca641f0aa201231714f80d9cd36cb",
+      "old_bytes": 13066740,
+      "current_bytes": 18342604
+    },
+    {
+      "geometry_hashes": [
+        "4b8cf0cd87ed5ca054ecc95c0e72c0b7e5ebc5868dff01cb4452d2c1e3a2bebc",
+        "b85ca13076579bf1ad6f7af8d0b20ae84fcce347c723aab647e89309e6ec806d"
+      ],
+      "id": "textbook_role_lingling_father",
+      "original_sha": "34c7c7376ed603658948673d8bda2643af5b8c7652c07e8389d881c2b7e32b1f",
+      "source": "res://assets/characters/textbook_expansion_v1/textbook_role_lingling_father/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "294b8ec428fac76246f3ffaa00679d714808fb906fd3df65e69e2cb35d53532c",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "9398fbce090168dbe5993092afb0b669f4091d5b6b5e5d314df60e7bb5a1ccf4",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "bce1c0e2772fae13aa4b846db4fc02002a447700fac6a7559122b4067a8f054f",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "bce1c0e2772fae13aa4b846db4fc02002a447700fac6a7559122b4067a8f054f",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "f7c0f3005c1e3efd9986031124a5b62314fb4b15b7fc51a3fa41081b58e28de5",
+      "source_model_sha256": "2ab335d9c7ef9453edccbd90fde5de3cea2f0ab3fdc2f95b0173fdcd77a93417",
+      "old_bytes": 12571205,
+      "current_bytes": 17703676
+    },
+    {
+      "geometry_hashes": [
+        "e8f54ffcbb1e0709b02fe769b62c181f687532fddc9fffa3b4b8f38264ce8185",
+        "b85ca13076579bf1ad6f7af8d0b20ae84fcce347c723aab647e89309e6ec806d"
+      ],
+      "id": "textbook_kitty",
+      "original_sha": "a63976e385d30941b5a5886d867479a07fcf2bb5117dc5078fe3b3ad40f23d79",
+      "source": "res://assets/characters/textbook_expansion_v1/textbook_kitty/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "9da8cf0abf4347cb57c9eecfc36cfa3815fd5ac77ea1d2a40a4e5947aa297658",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "368d2a52632c22df4b5d32eb30ac415be3e430ace13089358e9694677bf330ab",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "b353f2e641d259173091e813767217cc1279fa3d48c76937805ce0927073eb17",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "b353f2e641d259173091e813767217cc1279fa3d48c76937805ce0927073eb17",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "6bd892d1f643e80aa4a09d37380f56624ad86ff3434f498f761fffb9c0d524bc",
+      "source_model_sha256": "e74299b02890137d7a40dd2fe2e42fe05e8a5f1c0fc520408e890dcc7e03dab6",
+      "old_bytes": 9255398,
+      "current_bytes": 13039189
+    },
+    {
+      "geometry_hashes": [
+        "d6919f2b3111ffea2ae76b1d2854d18f2f34952968404cc041f8e03ced8f01dc",
+        "b85ca13076579bf1ad6f7af8d0b20ae84fcce347c723aab647e89309e6ec806d"
+      ],
+      "id": "textbook_doggie",
+      "original_sha": "ff9dbc0e1f675455703633627e70cbc7d55cf3241161a69ba9060b45caa29abc",
+      "source": "res://assets/characters/textbook_expansion_v1/textbook_doggie/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "4688eca657f4beb838c94b518aa73058a02dbc40120f74b7c3a613931c328574",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "dbe226fdf1140e6e1888125fdb72896c9bc667342dfcbcbad830eb0a1e289aed",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "cc4cec1550725a30428aa274903ee15c7ba29a3e6b0472579f6146542b756451",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "cc4cec1550725a30428aa274903ee15c7ba29a3e6b0472579f6146542b756451",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "9592b016569ffc490380639557c65ee69d455fffbf75b80cc528d8e24d0f2880",
+      "source_model_sha256": "7c09482a789ae3186b7883b7e824372dd89721aced22d0fdbff7acb02c4e37cc",
+      "old_bytes": 10353391,
+      "current_bytes": 14651532
+    },
+    {
+      "geometry_hashes": [
+        "bd4e2641ae34094831b1f7d7d9038c32a7347695aa023c515bc0d7a74c160ddd",
+        "c65cf35f8515b180af1390c144402bf43cb3f1202f817b3773ea6122500da119"
+      ],
+      "id": "textbook_lingling",
+      "original_sha": "8e7e6026663f018dfa0ebfabb7b0f0b36581f8aa62f75ccff576431b333ddcd8",
+      "source": "res://assets/characters/tripo_v1/textbook_lingling/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "20acf7d7db860909e298a8e4e08f64db366bfa851e1b0e8fcaba1f42a320f00b",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "9b3b27fbe9ae1e33360f396f55d97d97302b33744fe15a7149985993e383af03",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "b17a93755ff5cc97144ce2b8ac394b1e78528858a7d6625b0ca084a08d0f1aa0",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "b17a93755ff5cc97144ce2b8ac394b1e78528858a7d6625b0ca084a08d0f1aa0",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "3576be9b9eb573db3662634729a2b4c5cf2cbdc95600914d991619483e3ddea4",
+      "source_model_sha256": "c4f6d9d87ee026dda81cb4434084a0aff552959415e8bd8000927a6310aa3c29",
+      "old_bytes": 15109479,
+      "current_bytes": 20738747
+    },
+    {
+      "geometry_hashes": [
+        "4b1b4493d7c6b473eca886082707bbc42c9ca1dc8fbd03641fd9cb48788ff979",
+        "763ea1d6a72e3bc503279642d386aa829aac6b9ddf2993f47cef4b62870832fb"
+      ],
+      "id": "textbook_anne",
+      "original_sha": "e5c87131ab52405c74f4c0e93d651439d554e3620a779a091c5e63c7178e985f",
+      "source": "res://assets/characters/tripo_v1/textbook_anne/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "ae96a5ec9998d1668eb2e195c555ba4849d739001529dbf87589a84a8988aa01",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "d8aebfc5b32221b7c2397e7e2f6db67841fbd57fece25dd42d35d3824bcd8698",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "4d5219a43a715a5eaea2fe0431189867d5d0aaf148c4238d1b0ded8bdec166d0",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "4d5219a43a715a5eaea2fe0431189867d5d0aaf148c4238d1b0ded8bdec166d0",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "b0687e6eaa10336261cdccf921734f6830bb09882350ece21d3c6793a542d621",
+      "source_model_sha256": "ab913d7bc11c4709cc95a59a5702f6506e2c2408dd7c04a95243ba96e7dc0d73",
+      "old_bytes": 16555769,
+      "current_bytes": 22633789
+    },
+    {
+      "geometry_hashes": [
+        "ebd9a8a80dc70d3b7c744710562c347f4d0a40c953552423aeb5566266526ac1",
+        "97e3ef7fb343d8511378496fa5290cc7573aadc7460aab324079cfaca483334e"
+      ],
+      "id": "textbook_peter",
+      "original_sha": "c76583c1953766a4d394cd876f434e7ab60929b64f712c042ef0fcf32af9cc8e",
+      "source": "res://assets/characters/tripo_v1/textbook_peter/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "ffbaa62f9d96591e262062596f00b7b84c606b9d7054552d79545c7dc9021d14",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "bd0ee89a50a231fb1b99578eab19cbdc028bb227a419853553a6d8dd34a9f8ce",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "8fc592b7d3bde3544ce711be4936922e1cbfc87204b316ffeea37a50106a5bc5",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "8fc592b7d3bde3544ce711be4936922e1cbfc87204b316ffeea37a50106a5bc5",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "88b93a0bbd135fedaced6b3a9717d2747bf57dd2329f6198ca9bec4d54c4d313",
+      "source_model_sha256": "f4ee4c93e7d69454baa5bb3c483e6be50d713b344677e044b2694f7d89d8b776",
+      "old_bytes": 17443353,
+      "current_bytes": 23762650
+    },
+    {
+      "geometry_hashes": [
+        "aa946c54a97e3785945525c5122b786ec3eb35cd9496f05ca5023b36f78cf71d",
+        "2f4b248375cf63305a22438689e44b2763e0ba0a06ab3a161417049b8f7394e4"
+      ],
+      "id": "textbook_miss_li",
+      "original_sha": "8cec12e9f405a3868dbb58e9831d14a1d8775e6c4b142584d57ca72f17c7f9c6",
+      "source": "res://assets/characters/tripo_v1/textbook_miss_li/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "0b5b9658222a5a9236b3260266f45892d365621be615b562a813e7e4a14ed9fe",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "d98cb768244e0c69ef5d25b3bfd3e78a1dbe5de7cb2818f48b1158acb119f0d0",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "96cb1ea617f614e5664838abc06a8e0b35134e9747af8f35cd911bf63136f7af",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "96cb1ea617f614e5664838abc06a8e0b35134e9747af8f35cd911bf63136f7af",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "35cea411169bfa299e7d9e2b17656e74bce2754a6e9c1e0c4df613ff53973d8e",
+      "source_model_sha256": "a49acfb3aef2cfdd770526cc3b6670099ee30f2039107184c341e8f3bfc2858d",
+      "old_bytes": 15109162,
+      "current_bytes": 20750947
+    },
+    {
+      "geometry_hashes": [
+        "64c2cf665f7ad2e363dace6a3e570148a5c9f7622ac9ddaf2c4fb04b3f287c40",
+        "5c7075b9e2ed25bf20b92ea73b1ef3e4a50d7e45d4dee5f88053495c46686512"
+      ],
+      "id": "textbook_mingming",
+      "original_sha": "e613a663efd87bb5dfbabb233123fcd1d00c57a42b2c1e6e6448a1496c444a37",
+      "source": "res://assets/characters/tripo_v1/textbook_mingming/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "045739058e80c44d6d15a602e26d80c02fbd7b240452b562d00d55a2cc64f10d",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "28e0bcaa803eb455fec08f1345f9bef2db9347e66b23ee453caf364bf52956d4",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "45d9d938c2ce199765330505e86e5f17b6a8a10c957a5c10a130d6ab56f67c06",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "45d9d938c2ce199765330505e86e5f17b6a8a10c957a5c10a130d6ab56f67c06",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "2876bb9f3cb6254982910c7cd5b7a99a4afdc0a1ebc4f53cf3f3555a99316229",
+      "source_model_sha256": "cdf252f92e49337eaa3c6774ffe620d6e1c110232f25682f21f375af4ae8d95f",
+      "old_bytes": 16406866,
+      "current_bytes": 22394613
+    },
+    {
+      "geometry_hashes": [
+        "60c4ef41bb2d8e3df75c5e6595be48df183d04ea53395244dabd2d88fd2c3aed",
+        "b75f62a542fb9c8dd45b1c19ff55e03e7be02f0a0b37f2806a93342ca7470a63"
+      ],
+      "id": "textbook_tim",
+      "original_sha": "a34691af240e7d953118fadc192607fd244b41e22291adf982e99890312d49db",
+      "source": "res://assets/characters/tripo_v1/textbook_tim/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "2dc4e6ca50e008af0cba890ebc526da786e6e249c55a004bd069b848c43f33b1",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "7f47bcdee7112ecb223901e73eae7d9d8e4389c375adec9cef77baff9abb1706",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "3b23ca7794b65e1b1aa0a7b9aaa97e6b9865d648a8c1fbb54034ca24ee57401f",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "3b23ca7794b65e1b1aa0a7b9aaa97e6b9865d648a8c1fbb54034ca24ee57401f",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "76e60358357b742acd43f416785c2eb787fd09ae8365388bc308276518d8e061",
+      "source_model_sha256": "7cf7b1ae53a801786ae8afc2e55673aac03076cc2f0065304f2e063c6dc17a8b",
+      "old_bytes": 14785174,
+      "current_bytes": 20352729
+    },
+    {
+      "geometry_hashes": [
+        "ffda7d8c8f39844bc4935b2f79e1e9976d797453c8708d1d3dd6ec01d9192d85",
+        "b85ca13076579bf1ad6f7af8d0b20ae84fcce347c723aab647e89309e6ec806d"
+      ],
+      "id": "textbook_amy",
+      "original_sha": "666b976f5dfe7e5089a228eecb307078c2334976bdf2cc7bbb9e00b1a33cb8dd",
+      "source": "res://assets/characters/textbook_expansion_v1/textbook_amy/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "f3e6fd063b15ded8e625ef84a796a23b7faa9f295c06ae40e566571b1c6e2d2c",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "7f4c90ba35ee704c8997fbadbc90c7ae78d8122e3591e508869c5980eb0e4a96",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "80f1d0860b353958525c1353fb162c5ac4e6ae28a7e34e97e4405f243071cecc",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "80f1d0860b353958525c1353fb162c5ac4e6ae28a7e34e97e4405f243071cecc",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "5d3ede49a542ec5ff274a2f49b46427f8655f9dcc4138747535b7e218123786d",
+      "source_model_sha256": "6d303091ed3360babf6c188562602bd39866fd64c687e067d6ec173bd4f91b0c",
+      "old_bytes": 15105516,
+      "current_bytes": 21079021
+    },
+    {
+      "geometry_hashes": [
+        "3cb94fb998c8189a2dbb9fb085512e3672d5d88417f534084fbeb62132feb312",
+        "b85ca13076579bf1ad6f7af8d0b20ae84fcce347c723aab647e89309e6ec806d"
+      ],
+      "id": "textbook_miss_lin",
+      "original_sha": "9bac2489e8600914bf39eb965ef4055a44ae3647068cc524039feae966399b4a",
+      "source": "res://assets/characters/textbook_expansion_v1/textbook_miss_lin/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "34451a8879476fecd42b3057b5c72d0c3b15b8a23d09557830576d6e5d1d09a4",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "8f5cc900cdec6dcca5c912e897e899c51dba45aca91e09bf603fcdd55b010a88",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "2218ad88c064bf8744e4e4f96fc765a2d78e6bfb2fcea575e18675e5ebed2e6b",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "2218ad88c064bf8744e4e4f96fc765a2d78e6bfb2fcea575e18675e5ebed2e6b",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "80e9b88ff8529fd3a6daf3ee349bc260939f90fb6f127d6e27331bd933be4af8",
+      "source_model_sha256": "c11feadacd6c110039a8cef90a4d0a60ccab474b26467930f45377cab0bcf9b7",
+      "old_bytes": 12306755,
+      "current_bytes": 17354182
+    },
+    {
+      "geometry_hashes": [
+        "c516ed61fa4f5a856a8d00ef71ab62bb5d11a83b7bc599a6ded60c8b26795e96",
+        "b85ca13076579bf1ad6f7af8d0b20ae84fcce347c723aab647e89309e6ec806d"
+      ],
+      "id": "textbook_mr_chen",
+      "original_sha": "e0c8c3c35d7c04d2411a46fd4829b4f424e775d8544606781abdb6cf080e4c98",
+      "source": "res://assets/characters/textbook_expansion_v1/textbook_mr_chen/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "c3d19103331e94f06abc3cf982c70dd8e6185d1b4cfbd3a61ddbc7042ab99fac",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "fe59f0fb90e81db4f391482d578246568c18c2e5d20608558315b24bfdaf1655",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "d7d0fdae36bad8e30c3f3a85d65bff272a4438e8801f9274e0902773c8118556",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "d7d0fdae36bad8e30c3f3a85d65bff272a4438e8801f9274e0902773c8118556",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "f04b1012136007813ca0f6e9cf70fe8ef6e50a67dc86f80e206de56ea29e6094",
+      "source_model_sha256": "a3de6e16e8c40d3c7ef4f8e81cc9f72f5956b2e5aa7cc4aeb47fe8dd9c68d7b8",
+      "old_bytes": 12545428,
+      "current_bytes": 17579932
+    },
+    {
+      "geometry_hashes": [
+        "60f71c90e1ca31ec5e3f2bd0147741e03fbc80848a4a5a2d2643d576d2b28e72",
+        "e6d127eec1750d5b49aff64b0ee4fe4025fa4449f1d0e9e5c43bcb2192f6ff1e"
+      ],
+      "id": "textbook_dongdong",
+      "original_sha": "c2f4d4a1618bb4b68efb49697066673cd5ff8c87d4704fa8451074d00ccf3ef9",
+      "source": "res://assets/characters/tripo_v1/textbook_dongdong/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "6eb5e7aacae9319270ccbbb2df59678d6ba4ffd5278766af5b329259286b2bbf",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "254985c795aa2f31f8c655b73bfc12c2934f5f1f6827273d894a51bd240748fb",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "b15a61f3fef7cd068d906b41855feed63d1d5345e344f4b1e4a3f5e1cd11576c",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "b15a61f3fef7cd068d906b41855feed63d1d5345e344f4b1e4a3f5e1cd11576c",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "15ee96d3ced51a4dde5c45ccc1c23a5bb4901c90a9840de69974a5747e5fb943",
+      "source_model_sha256": "13e1c52e98c2fba3b06bcf0d4e11d638a0ece5f03866d8d618a42b9a24b2173a",
+      "old_bytes": 15158021,
+      "current_bytes": 20821275
+    },
+    {
+      "geometry_hashes": [
+        "8f761ac35d2053d1657b50078eb60195a9a93f1c5ddbfa0a73720e754c0624b4",
+        "b85ca13076579bf1ad6f7af8d0b20ae84fcce347c723aab647e89309e6ec806d"
+      ],
+      "id": "textbook_mr_wang",
+      "original_sha": "8b10a4d27ef9df2ed1399262040caea3e82facaa3e5f61a6297c3bdd02039d95",
+      "source": "res://assets/characters/textbook_expansion_v1/textbook_mr_wang/Body.res",
+      "texture_levels": [
+        {
+          "base_sha": "25dd369fc53437a96a1b1b6461219fd8cafa146351b38eb91401b4dcc168fc4d",
+          "mip_count": 11,
+          "slot": 0
+        },
+        {
+          "base_sha": "cdce8a64aa516b3066313e9be446c51bf37e8cb1a38cea5a396bc6fd4b833571",
+          "mip_count": 11,
+          "slot": 4
+        },
+        {
+          "base_sha": "00932ca219dd646dbf30f7f82b4799f3bc0d9b0f57eea59da0bd1b6b2954fcac",
+          "mip_count": 11,
+          "slot": 2
+        },
+        {
+          "base_sha": "00932ca219dd646dbf30f7f82b4799f3bc0d9b0f57eea59da0bd1b6b2954fcac",
+          "mip_count": 11,
+          "slot": 1
+        }
+      ],
+      "current_sha": "669060ba141811d6081723bf9fba447de2c35ff64d993a7e62b5f0b34107725d",
+      "source_model_sha256": "09e0dacddffebb40762be9f1ed033a1a4de46c87510387e0524960307a85855b",
+      "old_bytes": 14247416,
+      "current_bytes": 19874078
+    }
+  ],
+  "props_before": {
+    "triangles": 493204,
+    "glb_bytes": 13718900
+  },
+  "character_resource_bytes_before": 210019673,
+  "character_resource_bytes_after": 291078964,
+  "suites": {
+    "家校美术与注视": 80,
+    "家校互动": 368,
+    "角色步态": 391,
+    "角色动作": 623,
+    "制作与摆放": 62,
+    "工坊存档和经济": 110,
+    "工坊界面": 77
+  },
+  "checks": 1711,
+  "failures": 0,
+  "screenshots_sha256": {
+    "wardrobe": {
+      "before": "cafc76445f220335410a5124f8470458da52b16fb1f08062bfb8efde63705a3e",
+      "after": "59a028e6004f0251d9835f49195805a8f8ba26850020fe7ad30c661332575589"
+    },
+    "music": {
+      "before": "589bd576e98f0d389e7d350169dce518c19a32b73b8302ba0c9fc09cb43b5b8c",
+      "after": "5e8f7f36358b661396ec4b3dc57bfdb55eb2e1b32a4d6a491dca4adc807ac6c1"
+    },
+    "canteen": {
+      "before": "019dc71b53878134e61ebbb5306c74848857dd4b70a0e7bf7127a5a6f2549b9b",
+      "after": "042f87ce67007cc0c282ac8adad4850c0b3b95eadeb3c7efb503b16ba8eb2bac"
+    },
+    "home": {
+      "before": "4ed7ae7f52997a3feea12288a4cb2c0626ed3d66cad12c6e62b5eee78d9ac3d2",
+      "after": "007e7572a18070ccc2ef2eb5782490170853cbb51e74b10d37188f6caab396aa"
+    },
+    "classroom": {
+      "before": "7a06c9fc0d1556c45ed90929e697a5a46249d1a435b778d9f74b9aa63a9230f5",
+      "after": "2b037b5e52e68fb9a20ad4d5f3165f0cc091f57653b202968dfeb43f0876a4e0"
+    },
+    "mom": {
+      "before": "3e16a4da56b1f13c08da6838010366291f445701e5b15401dfc85439dab5ab74",
+      "after": "b7dc87e7139f4d8012647c3c5f44c1e3189403dbd8e4d2dd65e80bee0c8ec7dc"
+    },
+    "teacher": {
+      "before": "a6f25f728220e3e4b0c14c8a816f735e9eca59bb74c4f4c69ef2005bf29be365",
+      "after": "01091026d8d512e0d7fa49ae8d330ce720f662c0ec1e548f677e37ffcb32492f"
+    },
+    "stool": {
+      "before": "c404646abbad11b47e1204018d83547a55d5b4567b331e886b5625eb49e1edd8",
+      "after": "983cfe9119a23a04e127cf9ffc04213f9e77561773b43984c7d1dfa835a7586b"
+    }
+  },
+  "gaze_capture": {
+    "file": "attention.webp",
+    "frames_captured": 66,
+    "webp_frames": 66,
+    "duration_ms": 3300,
+    "yaw_extrema_degrees": [
+      -27.95,
+      28.07
+    ],
+    "in_game_room": "home",
+    "actor": "textbook_role_lingling_mother",
+    "observer": "player"
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "authoring": "Original parametric Blender models in metres.",
+  "source": "scripts/build_craft_models.py",
+  "assets": [
+    {
+      "id": "stool_round",
+      "filename": "l2_stool_round.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_stool_round.glb",
+      "sha256": "0845afbacaad66d20d3cac022ee2fdef1c83f191c90b97d35c61d1fda2e8bbd6",
+      "bytes": 140188,
+      "vertices": 2402,
+      "triangles": 4752,
+      "materials": [
+        "L2_WoodDark_Woodgrain",
+        "L2_TintPrimary_Woodgrain",
+        "L2_Wood_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.4,
+        0.0046,
+        -0.4
+      ],
+      "bounds_godot_size": [
+        0.8,
+        0.6214,
+        0.8
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "stool_square",
+      "filename": "l2_stool_square.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_stool_square.glb",
+      "sha256": "baab7e30860105188246d87e630628c1be541b37b5f831938959431b12a359aa",
+      "bytes": 106560,
+      "vertices": 1752,
+      "triangles": 3448,
+      "materials": [
+        "L2_WoodDark_Woodgrain",
+        "L2_TintPrimary_Woodgrain",
+        "L2_Wood_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.4,
+        0.0061,
+        -0.4
+      ],
+      "bounds_godot_size": [
+        0.8,
+        0.6099,
+        0.8
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "table_round",
+      "filename": "l2_table_round.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_table_round.glb",
+      "sha256": "c3dc9bd899f96ec3fbb289d5e2d36c156589e899a5b7612dc9e6a74c8b2bd45e",
+      "bytes": 106188,
+      "vertices": 1826,
+      "triangles": 3616,
+      "materials": [
+        "L2_Wood_Woodgrain",
+        "L2_TintPrimary_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.775,
+        0.0022,
+        -0.775
+      ],
+      "bounds_godot_size": [
+        1.55,
+        0.9748,
+        1.55
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "table_square",
+      "filename": "l2_table_square.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_table_square.glb",
+      "sha256": "3ee0f02e068cffdfcc8235f2d176112edd830a3871a1bcf1334e19f11feaa896",
+      "bytes": 72860,
+      "vertices": 1176,
+      "triangles": 2312,
+      "materials": [
+        "L2_Wood_Woodgrain",
+        "L2_TintPrimary_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.775,
+        0.0048,
+        -0.775
+      ],
+      "bounds_godot_size": [
+        1.55,
+        0.9722,
+        1.55
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "stand",
+      "filename": "l2_stand.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_stand.glb",
+      "sha256": "c77154ceb05e173355c03a962e735868f10e6259a5b7a46da88115274dbc72e7",
+      "bytes": 116776,
+      "vertices": 1848,
+      "triangles": 3628,
+      "materials": [
+        "L2_Wood_Woodgrain",
+        "L2_TintPrimary_Woodgrain",
+        "L2_TintDark_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.775,
+        0.0048,
+        -0.775
+      ],
+      "bounds_godot_size": [
+        1.55,
+        0.9722,
+        1.55
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "sign",
+      "filename": "l2_sign.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_sign.glb",
+      "sha256": "7af6107a47a5066d813cbf32d75081f2f5ff9bedba7d38022cd5ac6a6c6e851b",
+      "bytes": 93536,
+      "vertices": 1488,
+      "triangles": 2916,
+      "materials": [
+        "L2_Gold",
+        "L2_WoodDark_Woodgrain",
+        "L2_Wood_Woodgrain",
+        "L2_TintPrimary_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.726,
+        0.0,
+        -0.265
+      ],
+      "bounds_godot_size": [
+        1.452,
+        1.79,
+        0.53
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "frame",
+      "filename": "l2_frame.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_frame.glb",
+      "sha256": "5d354a6a95c8e440ddf6777ea64d006e869a781b431a5bff0937d87186f52125",
+      "bytes": 82828,
+      "vertices": 1296,
+      "triangles": 2540,
+      "materials": [
+        "L2_Gold",
+        "L2_WoodDark_Woodgrain",
+        "L2_Wood_Woodgrain",
+        "L2_TintPrimary_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.726,
+        0.0,
+        -0.265
+      ],
+      "bounds_godot_size": [
+        1.452,
+        1.79,
+        0.53
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "rug",
+      "filename": "l2_rug.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_rug.glb",
+      "sha256": "de64eb91ca388bec9ed5aa4896ce9591fbc0c4afb8f40fe02159400fd33a8438",
+      "bytes": 339692,
+      "vertices": 4896,
+      "triangles": 9588,
+      "materials": [
+        "L2_TintDark_Linen",
+        "L2_TintPrimary_Linen",
+        "L2_Cream_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -1.0394,
+        0.0015,
+        -0.75
+      ],
+      "bounds_godot_size": [
+        2.0788,
+        0.0345,
+        1.5
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "basket",
+      "filename": "l2_basket.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_basket.glb",
+      "sha256": "2eace34ad474fa3220638dd78bd75980858606850290f90983730bffeaa0cdbd",
+      "bytes": 816356,
+      "vertices": 14674,
+      "triangles": 29212,
+      "materials": [
+        "L2_Wood_Woodgrain",
+        "L2_TintDark",
+        "L2_TintPrimary",
+        "L2_WoodDark_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.372,
+        0.012,
+        -0.372
+      ],
+      "bounds_godot_size": [
+        0.744,
+        0.665,
+        0.744
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "lantern",
+      "filename": "l2_lantern.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_lantern.glb",
+      "sha256": "4aa78121b814a2dff96f2569fb2b6487802f40c601efa8e42c21d1baaf0ad7bc",
+      "bytes": 424756,
+      "vertices": 7180,
+      "triangles": 14312,
+      "materials": [
+        "L2_Wood_Woodgrain",
+        "L2_WoodDark",
+        "L2_TintSecondary_Linen",
+        "L2_Gold"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.333,
+        0.0,
+        -0.333
+      ],
+      "bounds_godot_size": [
+        0.666,
+        1.687,
+        0.666
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "shelf",
+      "filename": "l2_shelf.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_shelf.glb",
+      "sha256": "e5e50a342222559b2c60c0955778d254f1c036dd69252869276ea997ac16a497",
+      "bytes": 283852,
+      "vertices": 5184,
+      "triangles": 10152,
+      "materials": [
+        "L2_Paper_Papergrain",
+        "L2_TintPrimary_Woodgrain",
+        "L2_TintSecondary_Woodgrain",
+        "L2_Wood_Woodgrain",
+        "L2_Leaf",
+        "L2_Gold",
+        "L2_Berry",
+        "L2_Cream",
+        "L2_Sky",
+        "L2_Orange",
+        "L2_TintDark"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.55,
+        0.0,
+        -0.27
+      ],
+      "bounds_godot_size": [
+        1.1,
+        1.3,
+        0.555
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "vase_round",
+      "filename": "l2_vase_round.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_vase_round.glb",
+      "sha256": "e564ab2c64209f48e91ea8d4413a9acc2c788f7f409c16c7ea0028f27299a42c",
+      "bytes": 503796,
+      "vertices": 9932,
+      "triangles": 19640,
+      "materials": [
+        "L2_Leaf",
+        "L2_TintPrimary_Glaze",
+        "L2_Cream_Glaze",
+        "L2_LeafLight",
+        "L2_Pink",
+        "L2_Yellow",
+        "L2_Cream"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.3126,
+        0.0,
+        -0.2482
+      ],
+      "bounds_godot_size": [
+        0.5608,
+        0.9833,
+        0.5139
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "vase_tall",
+      "filename": "l2_vase_tall.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_vase_tall.glb",
+      "sha256": "53f8b8ee25029ae0e39d05061ed9905d9847fa42735e1d730271593f5bd75d62",
+      "bytes": 503792,
+      "vertices": 9932,
+      "triangles": 19640,
+      "materials": [
+        "L2_Leaf",
+        "L2_TintPrimary_Glaze",
+        "L2_Cream_Glaze",
+        "L2_LeafLight",
+        "L2_Pink",
+        "L2_Yellow",
+        "L2_Cream"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.3126,
+        0.0,
+        -0.2193
+      ],
+      "bounds_godot_size": [
+        0.5477,
+        1.0833,
+        0.4851
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "cake",
+      "filename": "l2_cake.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_cake.glb",
+      "sha256": "5db0520357d5946a989903037cf235b5d62a68bd061212c86940b97f91ec0fda",
+      "bytes": 293532,
+      "vertices": 5836,
+      "triangles": 11616,
+      "materials": [
+        "L2_AppleFlesh",
+        "L2_Berry",
+        "L2_Cream_Glaze",
+        "L2_TintPrimary_Glaze",
+        "L2_Bread_Porous",
+        "L2_Cream",
+        "L2_TintPrimary",
+        "L2_Leaf",
+        "L2_LeafLight"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.4722,
+        0.0,
+        -0.4722
+      ],
+      "bounds_godot_size": [
+        0.9444,
+        0.382,
+        0.9444
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "plate",
+      "filename": "l2_plate.glb",
+      "runtime_path": "res://assets/props/handcrafted_furniture/l2_plate.glb",
+      "sha256": "171bcda9f561d257c3a0af3e6db33befd788b1eebdd112a5b843f4e716749d39",
+      "bytes": 172584,
+      "vertices": 3408,
+      "triangles": 6776,
+      "materials": [
+        "L2_AppleFlesh_Glaze",
+        "L2_Berry",
+        "L2_Cream_Glaze",
+        "L2_TintPrimary_Glaze",
+        "L2_TintPrimary",
+        "L2_Leaf_Glaze",
+        "L2_LeafLight_Glaze"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.4722,
+        0.0,
+        -0.4722
+      ],
+      "bounds_godot_size": [
+        0.9444,
+        0.115,
+        0.9444
+      ],
+      "pivot": "bottom_center_grounded"
+    }
+  ]
+}

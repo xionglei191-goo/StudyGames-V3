@@ -1,6 +1,7 @@
 extends RefCounted
 ## Shared content for the workshop, inventory, world objects and economy.
 
+const TABLETOP_HEIGHT := 0.98
 const MATERIALS := {
 	"wood": {"name":"木料", "en":"wood", "room":"home_estate", "daily":4, "buy":4, "sell":1},
 	"fiber": {"name":"纤维", "en":"fiber", "room":"home_estate", "daily":3, "buy":3, "sell":1},

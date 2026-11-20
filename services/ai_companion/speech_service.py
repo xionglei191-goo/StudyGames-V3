@@ -6,7 +6,7 @@ Synthesis priority (`synthesize_speech`):
    - Microsoft Edge Multi-Character Neural TTS (`edge-tts`) covering warm baritone Uncle Bear,
      gentle female teachers, genuine EN/ZH child voices (Lingling, Peter), cute mascot (Dino),
      and 34 distinct island residents with per-character pitch/rate prosody, decoded to 16-bit PCM WAV.
-   - Automatic 20s offline circuit-breaker so offline play never lags waiting for network timeouts.
+   - A shared 3.5s cloud-attempt budget and a 20s backoff after repeated failures.
 2. Local Offline Multi-Model Piper VITS Neural ONNX (Seamless Offline Fallback):
    - Uses 7 distinct local neural models (`en_US-amy`, `en_US-ryan`, `en_US-kristin`,
      `en_US-arctic` 18-speaker, `zh_CN-huayan`, `zh_CN-chaowen` male, `zh_CN-xiao_ya` girl)
@@ -31,6 +31,8 @@ import os
 import re
 import struct
 import subprocess
+import tempfile
+import threading
 import time
 import wave
 from pathlib import Path
@@ -38,6 +40,7 @@ from typing import Any
 
 import httpx
 
+from .env_loader import load_dotenv_if_changed
 from .voice_profiles import (
     format_edge_pitch,
     format_edge_rate,
@@ -58,6 +61,11 @@ _VOSK_MODEL: Any = None
 _VOSK_LOAD_ATTEMPTED: bool = False
 _CLOUD_BACKOFF_UNTIL: float = 0.0
 _CLOUD_CONSEC_FAILS: int = 0
+CLOUD_ATTEMPT_BUDGET_SECONDS = 3.5
+_LOCAL_SYNTHESIS_LOCK = threading.Lock()
+_RECOGNITION_LOCK = threading.RLock()
+_INFLIGHT: dict[tuple[asyncio.AbstractEventLoop, Path, bool], asyncio.Task] = {}
+MAX_RECORDING_BYTES = 2_000_000
 
 
 def reset_cloud_backoff() -> None:
@@ -289,14 +297,22 @@ async def _try_commercial_cloud_tts(
     target: Path,
     profile: dict[str, Any],
 ) -> tuple[bool, str]:
-    api_key = os.environ.get("OPENAI_TTS_API_KEY") or os.environ.get("STUDYGAMES_CLOUD_TTS_KEY")
+    load_dotenv_if_changed()
+    enable_oai_tts = os.environ.get("OPENAI_ENABLE_TTS", "").strip().lower() in ("1", "true", "yes", "on")
+    api_key = (
+        os.environ.get("OPENAI_TTS_API_KEY")
+        or os.environ.get("STUDYGAMES_CLOUD_TTS_KEY")
+        or (os.environ.get("OPENAI_API_KEY") if enable_oai_tts else "")
+        or ""
+    ).strip()
     if not api_key:
         return False, ""
-    base_url = os.environ.get("OPENAI_TTS_BASE_URL", "https://api.openai.com/v1")
+    base_url = os.environ.get("OPENAI_TTS_BASE_URL") or os.environ.get("AI_COMPANION_BASE_URL") or "https://api.openai.com/v1"
     voice_name = str(profile.get("openai_voice") or ("nova" if _norm_lang(lang) == "en" else "shimmer"))
     model_name = os.environ.get("OPENAI_TTS_MODEL", "tts-1")
+    proxy_url = os.environ.get("OPENAI_PROXY", "").strip() or None
     try:
-        async with httpx.AsyncClient(timeout=4.2) as client:
+        async with httpx.AsyncClient(timeout=6.5, proxy=proxy_url) as client:
             resp = await client.post(
                 f"{base_url.rstrip('/')}/audio/speech",
                 headers={"Authorization": f"Bearer {api_key}"},
@@ -337,6 +353,35 @@ def _build_response(
     }
 
 
+def _valid_wav(path: Path) -> bool:
+    """Only complete PCM audio can be served as a cache hit."""
+    try:
+        with wave.open(str(path), "rb") as reader:
+            frames = reader.getnframes()
+            return (
+                reader.getsampwidth() == 2
+                and reader.getnchannels() in (1, 2)
+                and reader.getframerate() > 0
+                and frames > 0
+                and len(reader.readframes(frames)) == frames * reader.getnchannels() * 2
+            )
+    except (OSError, EOFError, wave.Error):
+        return False
+
+
+def _staging_path(target: Path) -> Path:
+    handle, name = tempfile.mkstemp(prefix=".tts-", suffix=".wav", dir=target.parent)
+    os.close(handle)
+    return Path(name)
+
+
+def _publish_audio(staging: Path, target: Path) -> bool:
+    if not _valid_wav(staging):
+        return False
+    staging.replace(target)
+    return True
+
+
 async def synthesize_speech(
     text: str,
     lang: str = "en",
@@ -355,9 +400,32 @@ async def synthesize_speech(
 
     cloud_target = _cache_path(cleaned, lang, voice_key, "cloud")
     local_target = _cache_path(cleaned, lang, voice_key, "local")
+    # Multiple playback requests for one phrase share work. Cancelling a client
+    # cannot cancel audio still needed by another client or expose a partial WAV.
+    key = (asyncio.get_running_loop(), cloud_target, offline_only)
+    task = _INFLIGHT.get(key)
+    if task is None:
+        task = asyncio.create_task(_synthesize_speech_once(cleaned, lang, profile, cloud_target, local_target, offline_only))
+        _INFLIGHT[key] = task
+
+        def finished(done: asyncio.Task) -> None:
+            if _INFLIGHT.get(key) is done:
+                _INFLIGHT.pop(key, None)
+            if not done.cancelled():
+                done.exception()  # Also retrieve errors when every caller disconnected.
+
+        task.add_done_callback(finished)
+    return await asyncio.shield(task)
+
+
+async def _synthesize_speech_once(
+    cleaned: str, lang: str, profile: dict[str, Any], cloud_target: Path,
+    local_target: Path, offline_only: bool,
+) -> dict[str, Any]:
+    global _CLOUD_BACKOFF_UNTIL, _CLOUD_CONSEC_FAILS
 
     # 0. Instant hit on previously cached hyper-realistic cloud voice (works even offline!)
-    if not offline_only and cloud_target.is_file() and cloud_target.stat().st_size > 256:
+    if not offline_only and _valid_wav(cloud_target):
         nlang = _norm_lang(lang)
         v_id = str(profile["edge_en"] if nlang == "en" else profile["edge_zh"])
         return _build_response(
@@ -369,29 +437,47 @@ async def synthesize_speech(
         )
 
     # 1. Cloud Hyper-Realistic Multi-Character Neural TTS (Primary when online)
-    if not offline_only:
-        comm_ok, comm_voice = await _try_commercial_cloud_tts(cleaned, lang, cloud_target, profile)
-        if comm_ok and cloud_target.is_file():
-            return _build_response(
-                cloud_target,
-                cached=False,
-                engine="cloud_neural_tts",
-                profile=profile,
-                voice_id=comm_voice,
-            )
+    if not offline_only and time.monotonic() >= _CLOUD_BACKOFF_UNTIL:
+        try:
+            result = await asyncio.wait_for(_synthesize_cloud_speech(cleaned, lang, profile, cloud_target), timeout=CLOUD_ATTEMPT_BUDGET_SECONDS)
+            if result is not None:
+                _CLOUD_CONSEC_FAILS = 0
+                _CLOUD_BACKOFF_UNTIL = 0.0
+                return result
+        except asyncio.TimeoutError:
+            _CLOUD_CONSEC_FAILS += 1
+            if _CLOUD_CONSEC_FAILS >= 2:
+                _CLOUD_BACKOFF_UNTIL = time.monotonic() + 20.0
 
-        edge_ok, edge_voice = await _try_edge_neural_tts(cleaned, lang, cloud_target, profile)
-        if edge_ok and cloud_target.is_file():
-            return _build_response(
-                cloud_target,
-                cached=False,
-                engine="edge_neural_tts",
-                profile=profile,
-                voice_id=edge_voice,
-            )
+    # Model loading, phonemization, inference and SAPI subprocesses all block.
+    # Keep them off the ASGI loop, and serialize access to the shared Piper bank.
+    return await asyncio.to_thread(_synthesize_local_speech, cleaned, lang, local_target, profile)
+
+
+async def _synthesize_cloud_speech(cleaned: str, lang: str, profile: dict[str, Any], cloud_target: Path) -> dict[str, Any] | None:
+    staging = _staging_path(cloud_target)
+    try:
+        comm_ok, comm_voice = await _try_commercial_cloud_tts(cleaned, lang, staging, profile)
+        if comm_ok and _publish_audio(staging, cloud_target):
+            return _build_response(cloud_target, cached=False, engine="cloud_neural_tts", profile=profile, voice_id=comm_voice)
+
+        edge_ok, edge_voice = await _try_edge_neural_tts(cleaned, lang, staging, profile)
+        if edge_ok and _publish_audio(staging, cloud_target):
+            return _build_response(cloud_target, cached=False, engine="edge_neural_tts", profile=profile, voice_id=edge_voice)
+    finally:
+        staging.unlink(missing_ok=True)
+    return None
+
+
+def _synthesize_local_speech(cleaned: str, lang: str, local_target: Path, profile: dict[str, Any]) -> dict[str, Any]:
+    with _LOCAL_SYNTHESIS_LOCK:
+        return _synthesize_local_locked(cleaned, lang, local_target, profile)
+
+
+def _synthesize_local_locked(cleaned: str, lang: str, local_target: Path, profile: dict[str, Any]) -> dict[str, Any]:
 
     # 2. Local Offline Multi-Model Disk Cache
-    if local_target.is_file() and local_target.stat().st_size > 256:
+    if _valid_wav(local_target):
         nlang = _norm_lang(lang)
         v_id = str(profile["piper_en_model"] if nlang == "en" else profile["piper_zh_model"]).removesuffix(".onnx")
         return _build_response(
@@ -402,36 +488,28 @@ async def synthesize_speech(
             voice_id=v_id,
         )
 
-    # 3. Local Offline Multi-Model Piper VITS Neural ONNX (sub-50ms multi-character fallback)
-    piper_ok, piper_voice = synthesize_piper_sync(cleaned, lang, local_target, profile)
-    if piper_ok and local_target.is_file():
-        return _build_response(
-            local_target,
-            cached=False,
-            engine="piper_neural_onnx",
-            profile=profile,
-            voice_id=piper_voice,
-        )
+    staging = _staging_path(local_target)
+    try:
+        # 3. Local Offline Multi-Model Piper VITS Neural ONNX
+        piper_ok, piper_voice = synthesize_piper_sync(cleaned, lang, staging, profile)
+        if piper_ok and _publish_audio(staging, local_target):
+            return _build_response(local_target, cached=False, engine="piper_neural_onnx", profile=profile, voice_id=piper_voice)
 
-    # 4. Local Windows SAPI Voice Synthesis (gender-aware)
-    if _try_windows_sapi_wav(cleaned, lang, local_target, str(profile.get("sapi_gender", "Female"))) and local_target.is_file():
-        return _build_response(
-            local_target,
-            cached=False,
-            engine="windows_sapi_voice",
-            profile=profile,
-            voice_id=f"sapi:{profile.get('sapi_gender', 'Female')}",
-        )
+        # Fallbacks use distinct cache tiers: a chime must never become a
+        # "neural speech" cache hit or prevent retrying an installed voice pack.
+        sapi_target = _cache_path(cleaned, lang, str(profile["voice_key"]), "sapi")
+        if _valid_wav(sapi_target):
+            return _build_response(sapi_target, cached=True, engine="windows_sapi_voice", profile=profile, voice_id=f"sapi:{profile.get('sapi_gender', 'Female')}")
+        if _try_windows_sapi_wav(cleaned, lang, staging, str(profile.get("sapi_gender", "Female"))) and _publish_audio(staging, sapi_target):
+            return _build_response(sapi_target, cached=False, engine="windows_sapi_voice", profile=profile, voice_id=f"sapi:{profile.get('sapi_gender', 'Female')}")
 
-    # 5. Pure-Python soft marimba chime fallback (guarantees valid WAV on any OS)
-    _write_chime_wav(cleaned, local_target)
-    return _build_response(
-        local_target,
-        cached=False,
-        engine="melodic_chime_fallback",
-        profile=profile,
-        voice_id="marimba_chime",
-    )
+        chime_target = _cache_path(cleaned, lang, str(profile["voice_key"]), "chime")
+        _write_chime_wav(cleaned, staging)
+        if _publish_audio(staging, chime_target):
+            return _build_response(chime_target, cached=False, engine="melodic_chime_fallback", profile=profile, voice_id="marimba_chime")
+        return {"ok": False, "error": "audio_unavailable"}
+    finally:
+        staging.unlink(missing_ok=True)
 
 
 def _try_windows_sapi_wav(text: str, lang: str, target: Path, preferred_gender: str = "Female") -> bool:
@@ -541,13 +619,36 @@ def _transcribe_wav_offline(raw_wav: bytes, target_norm: str) -> str:
     return ""
 
 
+def _recording_measurements(raw: bytes) -> tuple[float, int]:
+    with wave.open(io.BytesIO(raw), "rb") as reader:
+        channels, rate, frames = reader.getnchannels(), reader.getframerate(), reader.getnframes()
+        if reader.getsampwidth() != 2 or channels not in (1, 2) or not 8000 <= rate <= 96000 or frames > rate * 30:
+            raise ValueError("unsupported_audio")
+        pcm = reader.readframes(frames)
+    if not frames or len(pcm) != frames * channels * 2:
+        raise ValueError("incomplete_audio")
+    energy = sum((sample[0] / 32768.0) ** 2 for sample in struct.iter_unpack("<h", pcm))
+    return math.sqrt(energy / (frames * channels)), round(frames * 1000 / rate)
+
+
 def evaluate_follow_along(payload: dict[str, Any]) -> dict[str, Any]:
+    # The endpoint runs in a worker; the shared model must still be loaded once.
+    with _RECOGNITION_LOCK:
+        return _evaluate_follow_along(payload)
+
+
+def _evaluate_follow_along(payload: dict[str, Any]) -> dict[str, Any]:
     """Tolerant, zero-stress speaking recognition & encouragement for 7-12yo learners."""
     target_text = " ".join(str(payload.get("target_text") or "Hello!").strip().split())[:120]
     target_norm = _normalize_words(target_text)
     mode = str(payload.get("mode") or "voice").strip().lower()
-    rms_energy = float(payload.get("rms_energy") or 0.0)
-    duration_ms = int(payload.get("duration_ms") or 0)
+    try:
+        rms_energy = float(payload.get("rms_energy", 0.0))
+        duration_ms = int(payload.get("duration_ms", 0))
+    except (TypeError, ValueError, OverflowError):
+        return {"ok": False, "error": "invalid_audio_measurements"}
+    if not math.isfinite(rms_energy) or not 0.0 <= rms_energy <= 1.0 or not 0 <= duration_ms <= 30000:
+        return {"ok": False, "error": "invalid_audio_measurements"}
     wav_b64 = str(payload.get("wav_base64") or "").strip()
 
     if mode == "shy":
@@ -559,7 +660,7 @@ def evaluate_follow_along(payload: dict[str, Any]) -> dict[str, Any]:
             "asr_engine": "shy_silent",
             "transcript": "",
             "match_tier": "shy_silent",
-            "similarity": 1.0,
+            "similarity": None,
             "cheer_badge": "🌿 安心默读星",
             "reply_en": f'Listening in your heart is great too! "{target_text}" stays with you!',
             "reply_zh": f"在心里轻轻默读「{target_text}」也很棒！不着急，想开口时随时都可以 ✨",
@@ -569,20 +670,20 @@ def evaluate_follow_along(payload: dict[str, Any]) -> dict[str, Any]:
     asr_used = False
     if wav_b64:
         try:
-            raw = base64.b64decode(wav_b64)
-            if len(raw) > 48:
-                pcm = raw[44:]
-                count = len(pcm) // 2
-                if count > 0:
-                    samples = struct.unpack(f"<{count}h", pcm[: count * 2])
-                    sq = sum((s / 32768.0) ** 2 for s in samples)
-                    rms_energy = max(rms_energy, math.sqrt(sq / count))
-                    duration_ms = max(duration_ms, int(count / 16.0))
+            if len(wav_b64) > (MAX_RECORDING_BYTES + 2) // 3 * 4:
+                return {"ok": False, "error": "audio_too_large"}
+            raw = base64.b64decode(wav_b64, validate=True)
+            if len(raw) > MAX_RECORDING_BYTES:
+                return {"ok": False, "error": "audio_too_large"}
+            # Header chunks, sample rate and channel count vary between devices.
+            # Measured audio replaces advisory metadata, including for silence.
+            rms_energy, duration_ms = _recording_measurements(raw)
+            if rms_energy >= 0.008 and target_norm:
                 transcript = _transcribe_wav_offline(raw, target_norm)
                 if _get_vosk_model() is not None:
                     asr_used = True
-        except Exception:
-            pass
+        except (ValueError, TypeError, EOFError, wave.Error, struct.error):
+            return {"ok": False, "error": "invalid_audio"}
 
     if asr_used and transcript:
         trans_norm = _normalize_words(transcript)
@@ -601,9 +702,10 @@ def evaluate_follow_along(payload: dict[str, Any]) -> dict[str, Any]:
                 "transcript": transcript,
                 "match_tier": "exact",
                 "similarity": round(sim, 3),
-                "cheer_badge": "🏆 清晰发音星",
-                "reply_en": f'I heard "{transcript}" clearly! Your "{target_text}" sounds wonderful!',
-                "reply_zh": f"听得超清楚！你刚刚读出的「{transcript}」又准又自然，太棒啦 🌟",
+                "similarity_kind": "transcript_text",
+                "cheer_badge": "🏆 词语小星星",
+                "reply_en": f'I heard "{transcript}"! Let\'s say "{target_text}" together again!',
+                "reply_zh": f"听到了「{transcript}」！我们再一起读一遍「{target_text}」吧 🌟",
             }
         if sim >= 0.36 or token_hit:
             return {
@@ -615,6 +717,7 @@ def evaluate_follow_along(payload: dict[str, Any]) -> dict[str, Any]:
                 "transcript": transcript,
                 "match_tier": "close",
                 "similarity": round(sim, 3),
+                "similarity_kind": "transcript_text",
                 "cheer_badge": "🌟 自信开口星",
                 "reply_en": f'Nice try! I heard "{transcript}" — so close to "{target_text}"!',
                 "reply_zh": f"勇敢开口超赞！我听到了「{transcript}」，离「{target_text}」已经非常接近啦 ✨",
@@ -628,12 +731,13 @@ def evaluate_follow_along(payload: dict[str, Any]) -> dict[str, Any]:
             "transcript": transcript,
             "match_tier": "gentle_model",
             "similarity": round(sim, 3),
+            "similarity_kind": "transcript_text",
             "cheer_badge": "💛 温暖领读星",
             "reply_en": f'Brave voice! Let\'s say "{target_text}" slowly together once more!',
             "reply_zh": f"听到你响亮的声音啦！不扣分，来跟着伙伴慢一点再读一遍：「{target_text}」💛",
         }
 
-    if rms_energy >= 0.012 or duration_ms >= 550:
+    if rms_energy >= 0.008 and duration_ms > 0:
         return {
             "ok": True,
             "mode": "voice",
@@ -642,22 +746,22 @@ def evaluate_follow_along(payload: dict[str, Any]) -> dict[str, Any]:
             "asr_engine": "envelope_fallback",
             "transcript": "",
             "match_tier": "confident_voice",
-            "similarity": 0.85,
+            "similarity": None,
             "cheer_badge": "🌟 自信开口星",
-            "reply_en": f'Sunny voice! You spoke "{target_text}" so warmly and bravely!',
-            "reply_zh": f"声音真洪亮温暖！刚才跟读「{target_text}」超级自信，为你鼓掌 🌟",
+            "reply_en": f'I heard your voice! Let\'s listen to "{target_text}" and try it together!',
+            "reply_zh": f"听到你的声音啦！一起听听「{target_text}」，再轻松试一试吧 🌟",
         }
 
     return {
         "ok": True,
         "mode": "voice",
         "target_text": target_text,
-        "voice_detected": True,
+        "voice_detected": False,
         "asr_engine": "envelope_fallback",
         "transcript": "",
-        "match_tier": "gentle_voice",
-        "similarity": 0.70,
-        "cheer_badge": "✨ 勇敢轻声星",
-        "reply_en": f'I heard your gentle voice trying "{target_text}"! Wonderful try!',
-        "reply_zh": f"听到了你轻轻跟读「{target_text}」的声音！勇敢开口就是最棒的进步 ✨",
+        "match_tier": "no_voice",
+        "similarity": None,
+        "cheer_badge": "🌿 慢慢来就好",
+        "reply_en": f'No hurry! Listen to "{target_text}" or read quietly with me.',
+        "reply_zh": f"不着急，先听听「{target_text}」，也可以在心里一起读 🌿",
     }

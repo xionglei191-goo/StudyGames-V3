@@ -14,6 +14,27 @@ static var _scenes: Dictionary = {}
 static var _textures: Dictionary = {}
 static var _bounds: Dictionary = {}
 static var _vertex_materials: Dictionary = {}
+static var _contact_texture: ImageTexture
+
+static func add_contact_shadow(parent: Node3D, width: float, depth: float) -> void:
+	if RenderingServer.get_current_rendering_method() == "gl_compatibility" or DisplayServer.get_name() == "headless":
+		return
+	if _contact_texture == null:
+		var mask := Image.create_empty(64,64,false,Image.FORMAT_RGBA8)
+		for y in 64:
+			for x in 64:
+				var radius := (Vector2(x+0.5,y+0.5)/32.0 - Vector2.ONE).length()
+				var alpha := (1.0 - smoothstep(0.05,1.0,radius)) * 0.24
+				mask.set_pixel(x,y,Color(0.24,0.17,0.12,alpha))
+		mask.generate_mipmaps()
+		_contact_texture = ImageTexture.create_from_image(mask)
+	var contact := Decal.new()
+	contact.name = "ContactShadow"
+	contact.texture_albedo = _contact_texture
+	contact.size = Vector3(width,0.17,depth)
+	contact.position.y = 0.016
+	contact.normal_fade = 0.58
+	parent.add_child(contact)
 
 static func create_prop(kind: String) -> Node3D:
 	if not PROP_PATHS.has(kind):
@@ -143,6 +164,14 @@ static func _texture(family: String, kind: String) -> Texture2D:
 		_textures[key] = load(ROOT + key + ".png") as Texture2D
 	return _textures[key] as Texture2D
 
+static func set_surface_detail(mat: BaseMaterial3D, family: String, depth: float) -> void:
+	mat.albedo_texture = _texture(family,"detail")
+	mat.normal_enabled = true
+	mat.normal_texture = _texture(family,"normal")
+	mat.normal_scale = depth
+	mat.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS_ANISOTROPIC
+	mat.texture_repeat = true
+
 static func apply_to_scene(root: Node3D) -> Dictionary:
 	if root.has_meta("world_art_stats"):
 		return root.get_meta("world_art_stats")
@@ -182,15 +211,10 @@ static func apply_to_scene(root: Node3D) -> Dictionary:
 			var key := str(original.get_instance_id()) + ":" + family
 			if not materials.has(key):
 				var detailed := original.duplicate() as BaseMaterial3D
-				detailed.albedo_texture = _texture(family,"detail")
-				detailed.normal_enabled = true
-				detailed.normal_texture = _texture(family,"normal")
-				detailed.normal_scale = {"wood":0.085,"bark":0.16,"foliage":0.08,"cloth":0.045,"paper":0.035,"plaster":0.04}.get(family,0.06)
+				set_surface_detail(detailed,family,{"wood":0.085,"bark":0.16,"foliage":0.08,"cloth":0.045,"paper":0.035,"plaster":0.04}.get(family,0.06))
 				detailed.uv1_triplanar = true
 				detailed.uv1_world_triplanar = true
 				detailed.uv1_scale = Vector3.ONE * (1.6 if family in ["wood","bark"] else 2.5)
-				detailed.texture_filter = BaseMaterial3D.TEXTURE_FILTER_LINEAR_WITH_MIPMAPS
-				detailed.texture_repeat = true
 				detailed.set_meta("world_art_family",family)
 				materials[key] = detailed
 			mesh.set_surface_override_material(surface,materials[key])

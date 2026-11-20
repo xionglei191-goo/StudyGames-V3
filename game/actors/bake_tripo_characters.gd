@@ -119,6 +119,8 @@ func _run() -> void:
 				var skin_flags := Mesh.ARRAY_FLAG_USE_8_BONE_WEIGHTS if influences == 8 else 0
 				mesh.add_surface_from_arrays(Mesh.PRIMITIVE_TRIANGLES,arrays,morphs,{},skin_flags)
 				var material := source_mesh.mesh.surface_get_material(surface)
+				if material is StandardMaterial3D:
+					preload("res://actors/character_surface.gd").bake_mipmaps(material)
 				if id == "player": material = _player_material(material as StandardMaterial3D)
 				mesh.surface_set_material(surface,material)
 				total_vertices += vertices.size()

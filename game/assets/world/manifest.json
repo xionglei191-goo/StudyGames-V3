@@ -1,14 +1,99 @@
 {
   "version": 13,
-  "working_blend": "assets/blender/alphabet_island/alphabet_island_layout_v13_own.blend",
-  "working_blend_sha256": "f04daef1b1cb5b7790182540f69a25e9b6d5f2e93ac07c0aafe7ecdf63987896",
+  "working_blend": "assets\\blender\\alphabet_island\\alphabet_island_layout_v13_own.blend",
+  "working_blend_sha256": "4177e24b132cfe2fd37d4458e8592024f816cfa382c7ab306bf0e0422c976527",
   "source_v05_sha256": "736c2ce93532e79c6569a0d8236d482539b8d836d24b916ff5aac025e0a10366",
   "source_v05_glb_sha256": "38bf86a5c984a66b04cc6706b5dc8ffcba4167105a42272a8a49df037276b92b",
   "source_preserved": true,
-  "glb_sha256": "8062e0e10b7d19d8a0f465cd7507a2e4e2756ae34acfa8f5d75ba140b6a08e82",
-  "glb_bytes": 183973496,
+  "glb_sha256": "5ee1e2decfc15c7fa927247b5a0f13f0aced9c19eb1c58fe7d8bbcf7840dddd7",
+  "glb_bytes": 183973520,
   "marker_count": 33,
   "markers": [
+    {
+      "name": "SG_DOOR_HOME",
+      "parent": "ALPHA_Home_Cream_Walls",
+      "world_blender": [
+        -3.0,
+        -18.5,
+        5.7765069007873535
+      ],
+      "world_godot": [
+        -3.0,
+        5.7765069007873535,
+        18.5
+      ],
+      "properties": {
+        "sg_kind": "door",
+        "sg_generated_initial_position": true,
+        "sg_id": "home_gate",
+        "sg_destination": "home",
+        "sg_label": "回到我的小屋",
+        "sg_radius": 2.6
+      }
+    },
+    {
+      "name": "SG_NPC_BEAR",
+      "parent": "ALPHA_Home_Cream_Walls",
+      "world_blender": [
+        0.09999990463256836,
+        -20.0,
+        5.64002799987793
+      ],
+      "world_godot": [
+        0.09999990463256836,
+        5.64002799987793,
+        20.0
+      ],
+      "properties": {
+        "sg_kind": "npc",
+        "sg_generated_initial_position": true,
+        "sg_npc": "bear",
+        "sg_name": "熊叔",
+        "sg_id": "baker",
+        "sg_label": "和熊叔打招呼",
+        "sg_radius": 2.5,
+        "sg_greeting": "good_morning"
+      }
+    },
+    {
+      "name": "SG_SPAWN",
+      "parent": "ALPHA_Home_Cream_Walls",
+      "world_blender": [
+        -6.199999809265137,
+        -21.5,
+        5.679997444152832
+      ],
+      "world_godot": [
+        -6.199999809265137,
+        5.679997444152832,
+        21.5
+      ],
+      "properties": {
+        "sg_kind": "spawn",
+        "sg_generated_initial_position": true
+      }
+    },
+    {
+      "name": "SG_APPLE_TREE",
+      "parent": "ALPHA_LANDMARK_A_SOCKET",
+      "world_blender": [
+        -45.8007698059082,
+        -28.348072052001953,
+        5.279364585876465
+      ],
+      "world_godot": [
+        -45.8007698059082,
+        5.279364585876465,
+        28.348072052001953
+      ],
+      "properties": {
+        "sg_kind": "collect",
+        "sg_generated_initial_position": true,
+        "sg_id": "orchard",
+        "sg_label": "采摘果园里的苹果",
+        "sg_radius": 2.6
+      }
+    },
     {
       "name": "SG_DOOR_A",
       "parent": "ALPHA_LANDMARK_A_SOCKET",
@@ -54,6 +139,27 @@
       }
     },
     {
+      "name": "SG_BAKERY_SHOP",
+      "parent": "ALPHA_LANDMARK_C_SOCKET",
+      "world_blender": [
+        -29.79924774169922,
+        -40.09728240966797,
+        4.105002403259277
+      ],
+      "world_godot": [
+        -29.79924774169922,
+        4.105002403259277,
+        40.09728240966797
+      ],
+      "properties": {
+        "sg_kind": "shop",
+        "sg_generated_initial_position": true,
+        "sg_id": "bakery",
+        "sg_label": "逛逛蛋糕商店",
+        "sg_radius": 2.5
+      }
+    },
+    {
       "name": "SG_DOOR_C",
       "parent": "ALPHA_LANDMARK_C_SOCKET",
       "world_blender": [
@@ -73,6 +179,30 @@
         "sg_destination": "landmark_C",
         "sg_label": "C · 蛋糕烘焙坊",
         "sg_radius": 2.6
+      }
+    },
+    {
+      "name": "SG_NPC_RABBIT",
+      "parent": "ALPHA_LANDMARK_C_SOCKET",
+      "world_blender": [
+        -36.099246978759766,
+        -40.397281646728516,
+        3.98136043548584
+      ],
+      "world_godot": [
+        -36.099246978759766,
+        3.98136043548584,
+        40.397281646728516
+      ],
+      "properties": {
+        "sg_kind": "npc",
+        "sg_generated_initial_position": true,
+        "sg_npc": "rabbit",
+        "sg_name": "兔兔",
+        "sg_id": "gardener",
+        "sg_label": "和兔兔聊聊",
+        "sg_radius": 2.5,
+        "sg_greeting": "hello"
       }
     },
     {
@@ -582,28 +712,6 @@
       }
     },
     {
-      "name": "SG_DOOR_HOME",
-      "parent": "ALPHA_Home_Cream_Walls",
-      "world_blender": [
-        -3.0,
-        -18.5,
-        5.7765069007873535
-      ],
-      "world_godot": [
-        -3.0,
-        5.7765069007873535,
-        18.5
-      ],
-      "properties": {
-        "sg_kind": "door",
-        "sg_generated_initial_position": true,
-        "sg_id": "home_gate",
-        "sg_destination": "home",
-        "sg_label": "回到我的小屋",
-        "sg_radius": 2.6
-      }
-    },
-    {
       "name": "SG_DOOR_SCHOOL",
       "parent": "ALPHA_SCHOOL_ROOT",
       "world_blender": [
@@ -623,114 +731,6 @@
         "sg_destination": "school",
         "sg_label": "进入字母学校",
         "sg_radius": 2.7
-      }
-    },
-    {
-      "name": "SG_SPAWN",
-      "parent": "ALPHA_Home_Cream_Walls",
-      "world_blender": [
-        -6.199999809265137,
-        -21.5,
-        5.679997444152832
-      ],
-      "world_godot": [
-        -6.199999809265137,
-        5.679997444152832,
-        21.5
-      ],
-      "properties": {
-        "sg_kind": "spawn",
-        "sg_generated_initial_position": true
-      }
-    },
-    {
-      "name": "SG_NPC_BEAR",
-      "parent": "ALPHA_Home_Cream_Walls",
-      "world_blender": [
-        0.09999990463256836,
-        -20.0,
-        5.64002799987793
-      ],
-      "world_godot": [
-        0.09999990463256836,
-        5.64002799987793,
-        20.0
-      ],
-      "properties": {
-        "sg_kind": "npc",
-        "sg_generated_initial_position": true,
-        "sg_npc": "bear",
-        "sg_name": "熊叔",
-        "sg_id": "baker",
-        "sg_label": "和熊叔打招呼",
-        "sg_radius": 2.5,
-        "sg_greeting": "good_morning"
-      }
-    },
-    {
-      "name": "SG_NPC_RABBIT",
-      "parent": "ALPHA_LANDMARK_C_SOCKET",
-      "world_blender": [
-        -36.099246978759766,
-        -40.397281646728516,
-        3.98136043548584
-      ],
-      "world_godot": [
-        -36.099246978759766,
-        3.98136043548584,
-        40.397281646728516
-      ],
-      "properties": {
-        "sg_kind": "npc",
-        "sg_generated_initial_position": true,
-        "sg_npc": "rabbit",
-        "sg_name": "兔兔",
-        "sg_id": "gardener",
-        "sg_label": "和兔兔聊聊",
-        "sg_radius": 2.5,
-        "sg_greeting": "hello"
-      }
-    },
-    {
-      "name": "SG_APPLE_TREE",
-      "parent": "ALPHA_LANDMARK_A_SOCKET",
-      "world_blender": [
-        -45.8007698059082,
-        -28.348072052001953,
-        5.279364585876465
-      ],
-      "world_godot": [
-        -45.8007698059082,
-        5.279364585876465,
-        28.348072052001953
-      ],
-      "properties": {
-        "sg_kind": "collect",
-        "sg_generated_initial_position": true,
-        "sg_id": "orchard",
-        "sg_label": "采摘果园里的苹果",
-        "sg_radius": 2.6
-      }
-    },
-    {
-      "name": "SG_BAKERY_SHOP",
-      "parent": "ALPHA_LANDMARK_C_SOCKET",
-      "world_blender": [
-        -29.79924774169922,
-        -40.09728240966797,
-        4.105002403259277
-      ],
-      "world_godot": [
-        -29.79924774169922,
-        4.105002403259277,
-        40.09728240966797
-      ],
-      "properties": {
-        "sg_kind": "shop",
-        "sg_generated_initial_position": true,
-        "sg_id": "bakery",
-        "sg_label": "逛逛蛋糕商店",
-        "sg_radius": 2.5
       }
     }
   ],
@@ -4768,48 +4768,5 @@
   "coordinate_contract": "Marker world_godot is audit only. Runtime reads imported node global transforms, never these stored coordinates.",
   "refinement_revision": "own-16",
   "source_v06_sha256": "2afe9626754cd93817e1c02bfd2a479d63bcf6c24e3563fe2c927cdfcba2cebc",
-  "source_v06_glb_sha256": "e734f01afb2474aaab15ec9cf98c1c61fc09bfec7e268134c2357d743de4d89d",
-  "source_v07_sha256": "388dbe208320902a2d4ff2ca98865f3f9439bfe0ac675fc133a5fee42900cf3f",
-  "source_v07_glb_sha256": "3f572413e425127ae452c8cc62596205da802f9bfb47243f6e735f2a2896fee4",
-  "source_import_limitation": "Blender 5.2 authoring source cannot be opened in installed 4.3.2. The actual current GLBs were imported; source files retained. Original modifier/curve authoring history is not reconstructed.",
-  "working_glb": "assets/blender/alphabet_island/alphabet_island_layout_v13_own.glb",
-  "triangles": 2658440,
-  "preview": "assets/blender/alphabet_island/preview_v13_own.png",
-  "model_version": "v13_own",
-  "first_round_blend": "assets/blender/alphabet_island/alphabet_island_layout_v08_cloud.blend",
-  "first_round_glb": "assets/blender/alphabet_island/alphabet_island_layout_v08_cloud.glb",
-  "verification": {
-    "technical_checks_passed": true,
-    "rendered_preview": true,
-    "preview": "assets/blender/alphabet_island/preview_v13_own.png",
-    "preview_kind": "Actual exact saved Blender source render",
-    "in_engine_reviewed": true,
-    "reviewed_sha256": "8062e0e10b7d19d8a0f465cd7507a2e4e2756ae34acfa8f5d75ba140b6a08e82",
-    "review_revision": "own-16",
-    "approval_status": "exact_candidate_native_and_canonical_imported_payload_accepted_gameplay_regression_pending",
-    "review_evidence": "docs/verification/own16-independent-audit/island-v13-full-review.json",
-    "canonical_equivalence": "docs/verification/own16/canonical-import-equivalence.json",
-    "commercial_quality_equivalence_claimed": false,
-    "known_baseline_state_failure": "Legacy save preserves field: reviews",
-    "scope": "473 targeted noncolliding plant mesh payloads refined. Original142 leafy crowns and all protected geometry/ground/routes retained exactly. Final gameplay QA and selected canonical screenshots are separate receipts.",
-    "foliage_import_policy": {
-      "config_sha256": "a87c5c2e1bfb9ab77b6ced47124afd93046846d08629e3de330c20c87eb4fab7",
-      "scope": "Global LOD enabled; exactly142 existing general crown overrides remain unchanged. New264 thinleaf meshes retain ordinary importer policy after actual37-view coverage review;216 have generatedLOD.",
-      "decision_receipt": "docs/verification/own16/final-foliage-import-decision.json"
-    },
-    "performance_limit": "Matched software llvmpipe1440x900 samples: school -8.12%, estate -8.96%, palm -2.31%, island-wide -6.41%; orchard +3.82% single-sample noise, not speedup claim. Target Windows/GPU untested. Prior own13 software cost remains historical cumulative context."
-  },
-  "previous_round_blend": "assets/blender/alphabet_island/alphabet_island_layout_v09_cloud.blend",
-  "previous_round_glb": "assets/blender/alphabet_island/alphabet_island_layout_v09_cloud.glb",
-  "render_hidden_nodes": [
-    "ALPHA_V4_Connected_Paths",
-    "ALPHA_V4_Path_Shoulders"
-  ],
-  "retired_ground_nodes": [
-    "ALPHA_V4_Connected_Paths",
-    "ALPHA_V4_Path_Shoulders"
-  ],
-  "new_ground_nodes": [
-    "OWN11_Home_West_Porch_Timber_Ramp"
-  ]
+  "source_v06_glb_sha256": "e734f01afb2474aaab15ec9cf98c1c61fc09bfec7e268134c2357d743de4d89d"
 }

@@ -28,12 +28,21 @@ const BUNDLED_PHRASE_MAP := {
 
 var base_url := DEFAULT_BASE_URL
 var voice_player: AudioStreamPlayer
-var muted := false
+var muted := false:
+	set(value):
+		muted = value
+		if value:
+			stop_speaking()
 var last_voice_profile := "teacher_gentle"
 var last_voice_engine := ""
 var _speak_seq := 0
 var _spawned_sidecar_pid := -1
 var _sidecar_boot_msec := 0
+var _tts_request: HTTPRequest
+var _chat_request: HTTPRequest
+var _chat_seq := 0
+var _encouragement_request: HTTPRequest
+var _encouragement_seq := 0
 
 func _ready() -> void:
 	name = "AICompanionBridge"
@@ -95,6 +104,10 @@ func _try_autospawn_local_sidecar() -> void:
 			return
 
 func request_npc_chat(npc_id: String, message: String, context: Dictionary) -> void:
+	_chat_seq += 1
+	var seq := _chat_seq
+	_cancel_request(_chat_request)
+	_chat_request = null
 	if DisplayServer.get_name() == "headless":
 		var local := _local_fallback_chat(npc_id, message, context)
 		chat_reply_ready.emit(npc_id, local)
@@ -102,8 +115,13 @@ func request_npc_chat(npc_id: String, message: String, context: Dictionary) -> v
 	var req := HTTPRequest.new()
 	req.timeout = 4.5
 	add_child(req)
+	_chat_request = req
 	req.request_completed.connect(func(result: int, code: int, _headers: PackedStringArray, body: PackedByteArray):
+		if _chat_request == req:
+			_chat_request = null
 		req.queue_free()
+		if seq != _chat_seq:
+			return
 		if result == HTTPRequest.RESULT_SUCCESS and code == 200:
 			var parsed: Variant = JSON.parse_string(body.get_string_from_utf8())
 			if parsed is Dictionary and bool(parsed.get("ok", false)):
@@ -114,6 +132,7 @@ func request_npc_chat(npc_id: String, message: String, context: Dictionary) -> v
 	var payload := JSON.stringify({"npc_id": npc_id, "message": message, "context": context})
 	var err := req.request(base_url + "/api/v4/npc/chat", ["Content-Type: application/json"], HTTPClient.METHOD_POST, payload)
 	if err != OK:
+		_chat_request = null
 		req.queue_free()
 		chat_reply_ready.emit(npc_id, _local_fallback_chat(npc_id, message, context))
 
@@ -121,16 +140,46 @@ func speak_text(text: String, lang: String = "en", voice_hint: String = "warm") 
 	var cleaned := text.strip_edges()
 	if muted or DisplayServer.get_name() == "headless" or cleaned.is_empty():
 		return
-	_speak_seq += 1
+	stop_speaking()
 	var seq := _speak_seq
 	var norm_hint := CharacterVoices.normalize_hint(voice_hint)
 	_dispatch_tts_request(cleaned, lang, norm_hint, seq, false)
 
+func stop_speaking() -> void:
+	_speak_seq += 1
+	if is_instance_valid(_tts_request):
+		_tts_request.cancel_request()
+		_tts_request.queue_free()
+	_tts_request = null
+	if is_instance_valid(voice_player):
+		voice_player.stop()
+
+func _cancel_request(req: HTTPRequest) -> void:
+	if is_instance_valid(req):
+		req.cancel_request()
+		req.queue_free()
+
+func cancel_conversation() -> void:
+	stop_speaking()
+	_chat_seq += 1
+	_encouragement_seq += 1
+	_cancel_request(_chat_request)
+	_cancel_request(_encouragement_request)
+	_chat_request = null
+	_encouragement_request = null
+
 func _dispatch_tts_request(cleaned: String, lang: String, norm_hint: String, seq: int, retried: bool) -> void:
+	if seq != _speak_seq or muted:
+		return
 	var req := HTTPRequest.new()
-	req.timeout = 5.0
+	# The service bounds cloud attempts, but a cold local voice bank can take
+	# several seconds to load. Playback remains cancellable during that wait.
+	req.timeout = 20.0
 	add_child(req)
+	_tts_request = req
 	req.request_completed.connect(func(result: int, code: int, _headers: PackedStringArray, body: PackedByteArray):
+		if _tts_request == req:
+			_tts_request = null
 		req.queue_free()
 		if seq != _speak_seq or muted:
 			return
@@ -163,8 +212,10 @@ func _dispatch_tts_request(cleaned: String, lang: String, norm_hint: String, seq
 	var payload := JSON.stringify({"text": cleaned, "lang": lang, "voice_hint": norm_hint})
 	var err := req.request(base_url + "/api/v4/tts/speak", ["Content-Type: application/json"], HTTPClient.METHOD_POST, payload)
 	if err != OK:
+		_tts_request = null
 		req.queue_free()
-		_play_local_fallback(cleaned, lang, norm_hint)
+		if seq == _speak_seq and not muted:
+			_play_local_fallback(cleaned, lang, norm_hint)
 
 func _play_local_fallback(cleaned: String, lang: String, norm_hint: String) -> void:
 	if muted:
@@ -209,15 +260,24 @@ func observe_stealth_mastery(word: String, support_level: int, correct: bool, re
 	if err != OK:
 		req.queue_free()
 
-func request_speech_encouragement(target_text: String, mode: String = "voice", rms_energy: float = 0.035, duration_ms: int = 900, wav_base64: String = "") -> void:
+func request_speech_encouragement(target_text: String, mode: String = "voice", rms_energy: float = 0.0, duration_ms: int = 0, wav_base64: String = "") -> void:
+	_encouragement_seq += 1
+	var seq := _encouragement_seq
+	_cancel_request(_encouragement_request)
+	_encouragement_request = null
 	if DisplayServer.get_name() == "headless":
 		speech_encouragement_ready.emit(_local_fallback_encourage(target_text, mode, rms_energy, duration_ms))
 		return
 	var req := HTTPRequest.new()
 	req.timeout = 4.5
 	add_child(req)
+	_encouragement_request = req
 	req.request_completed.connect(func(result: int, code: int, _headers: PackedStringArray, body: PackedByteArray):
+		if _encouragement_request == req:
+			_encouragement_request = null
 		req.queue_free()
+		if seq != _encouragement_seq:
+			return
 		if result == HTTPRequest.RESULT_SUCCESS and code == 200:
 			var parsed: Variant = JSON.parse_string(body.get_string_from_utf8())
 			if parsed is Dictionary and bool(parsed.get("ok", false)):
@@ -234,6 +294,7 @@ func request_speech_encouragement(target_text: String, mode: String = "voice", r
 	})
 	var err := req.request(base_url + "/api/v4/speech/encourage", ["Content-Type: application/json"], HTTPClient.METHOD_POST, payload)
 	if err != OK:
+		_encouragement_request = null
 		req.queue_free()
 		speech_encouragement_ready.emit(_local_fallback_encourage(target_text, mode, rms_energy, duration_ms))
 
@@ -243,24 +304,39 @@ func _local_fallback_encourage(target_text: String, mode: String, rms_energy: fl
 		return {
 			"ok": true,
 			"mode": "shy",
+			"target_text": clean,
+			"voice_detected": false,
+			"asr_engine": "shy_silent",
+			"match_tier": "shy_silent",
+			"similarity": null,
 			"cheer_badge": "安心默读星",
 			"reply_en": "Listening in your heart is great too! \"%s\" stays with you!" % clean,
 			"reply_zh": "在心里轻轻默读「%s」也很棒！不着急，想开口时随时都可以！" % clean
 		}
-	if rms_energy >= 0.015 or duration_ms >= 600:
+	if rms_energy >= 0.008 and duration_ms > 0:
 		return {
 			"ok": true,
 			"mode": "voice",
+			"target_text": clean,
+			"voice_detected": true,
+			"asr_engine": "envelope_fallback",
+			"match_tier": "confident_voice",
+			"similarity": null,
 			"cheer_badge": "自信开口星",
-			"reply_en": "Sunny voice! You spoke \"%s\" so warmly and bravely!" % clean,
-			"reply_zh": "声音真洪亮温暖！刚才跟读「%s」超级自信，为你鼓掌！" % clean
+			"reply_en": "I heard your voice! Let's listen to \"%s\" together." % clean,
+			"reply_zh": "听到你的声音啦！我们一起听听「%s」，再轻松试一试吧。" % clean
 		}
 	return {
 		"ok": true,
 		"mode": "voice",
-		"cheer_badge": "勇敢轻声星",
-		"reply_en": "I heard your gentle voice trying \"%s\"! Wonderful try!" % clean,
-		"reply_zh": "听到了你轻轻跟读「%s」的声音！勇敢开口就是最棒的进步！" % clean
+		"target_text": clean,
+		"voice_detected": false,
+		"asr_engine": "envelope_fallback",
+		"match_tier": "no_voice",
+		"similarity": null,
+		"cheer_badge": "慢慢来就好",
+		"reply_en": "No hurry! Listen to \"%s\" or read quietly with me." % clean,
+		"reply_zh": "不着急，先听听「%s」，也可以在心里一起读。" % clean
 	}
 
 func request_parent_report(payload: Dictionary) -> void:
@@ -341,15 +417,33 @@ func _local_fallback_chat(npc_id: String, message: String, context: Dictionary) 
 			"npc_id": npc_id,
 			"reply_en": "Wow! Your %s%s looks so sunny today!" % [str(outfit_meta.en), extra],
 			"reply_zh": "哇！你今天这一身%s真阳光、真好看！" % str(outfit_meta.zh),
-			"suggestions": ["Thank you!", "Let's pick apples!", "Open pop-up book!"],
+			"suggestions": ["Thank you!", "Look at my schoolbag!", "Let's practise English!"],
+			"engine": "local_i_plus_1_fallback"
+		}
+	if npc_id == "textbook_role_lingling_mother":
+		return {
+			"ok": true,
+			"npc_id": npc_id,
+			"reply_en": "Sweetie, I'm so glad we're chatting at home! Let's look at \"%s\" together!" % target_word,
+			"reply_zh": "宝贝，在家和妈妈用英语聊天真温馨！我们一起来看看身边的「%s」（%s）吧！" % [target_word, target_zh],
+			"suggestions": ["Good morning, Mom!", "Where is my schoolbag?", "Thank you, Mom!"],
+			"engine": "local_i_plus_1_fallback"
+		}
+	if npc_id == "textbook_role_lingling_father":
+		return {
+			"ok": true,
+			"npc_id": npc_id,
+			"reply_en": "Great speaking, champ! On our desk today we can practise \"%s\" together!" % target_word,
+			"reply_zh": "说得真棒宝贝！今天在书房和餐桌旁，我们一起把「%s」（%s）用进句子里吧！" % [target_word, target_zh],
+			"suggestions": ["Hi Dad!", "What's on the desk?", "Let's read a book!"],
 			"engine": "local_i_plus_1_fallback"
 		}
 	return {
 		"ok": true,
 		"npc_id": npc_id,
-		"reply_en": "Hello, little friend! Today we love sharing \"%s\" on Alphabet Island!" % target_word,
-		"reply_zh": "你好呀好朋友！今天小岛大家都在开心分享「%s」（%s）呢！" % [target_word, target_zh],
-		"suggestions": ["Good morning!", "Look at my outfit!", "Thank you!"],
+		"reply_en": "Hello, my friend! Let's use \"%s\" in our daily conversation today!" % target_word,
+		"reply_zh": "你好呀好伙伴！今天我们在日常对话里一起活学活用「%s」（%s）吧！" % [target_word, target_zh],
+		"suggestions": ["Good morning!", "Let's learn together!", "Thank you!"],
 		"engine": "local_i_plus_1_fallback"
 	}
 

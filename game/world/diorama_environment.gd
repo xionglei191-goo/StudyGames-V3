@@ -2,6 +2,7 @@ extends RefCounted
 ## Forward+ Toy Diorama lighting, ProceduralSky, AgX tonemapping, SSAO/SSIL, and soft shadows.
 ## Designed for the warm tactile miniature aesthetic (Link's Awakening / Animal Crossing).
 
+const HomeSchool = preload("res://gameplay/home_school_cast_director.gd")
 const OUTDOOR_SCENES := [
 	"village", "home_estate", "home_terrace", "home_greenhouse",
 	"school", "playground", "football_field",
@@ -14,6 +15,13 @@ const OUTDOOR_SCENES := [
 
 static func is_outdoor(room_id: String) -> bool:
 	return room_id in OUTDOOR_SCENES
+
+# X is indirect light and Y is direct daylight. The clock and the initial room
+# setup use the same values so opening a room at a fixed time is reproducible.
+static func _daylight(room_id: String, outdoor: bool) -> Vector2:
+	if HomeSchool.is_home_or_school(room_id):
+		return Vector2(0.58,1.08) if outdoor else Vector2(0.40,0.96)
+	return Vector2(0.88,0.82) if outdoor else Vector2(0.95,0.58)
 
 static func build_lighting(parent: Node3D, room_id: String) -> Dictionary:
 	var outdoor := is_outdoor(room_id)
@@ -143,6 +151,26 @@ static func build_lighting(parent: Node3D, room_id: String) -> Dictionary:
 	fill.light_color = Color("dff0f5") if outdoor else Color("f7ead9")
 	fill.light_energy = 0.24 if outdoor else 0.28
 
+	if HomeSchool.is_home_or_school(room_id):
+		var daylight := _daylight(room_id,outdoor)
+		env.ambient_light_source = Environment.AMBIENT_SOURCE_COLOR
+		env.ambient_light_color = Color("dceaf0") if outdoor else Color("e3e7e6")
+		env.ambient_light_sky_contribution = 0.32 if outdoor else 0.20
+		env.ambient_light_energy = daylight.x
+		env.tonemap_exposure = 1.0
+		env.adjustment_brightness = 1.0
+		env.glow_bloom = 0.0
+		sun.light_energy = daylight.y
+		# The orthographic camera is ~39–40 m from its focus, even in close-up.
+		# Include both the subject and the far wall in the sun's shadow range.
+		sun.directional_shadow_max_distance = 72.0 if outdoor else 60.0
+		sun.shadow_opacity = 0.79 if outdoor else 0.72
+		sun.shadow_blur = 1.15
+		sun.shadow_bias = 0.045
+		sun.shadow_normal_bias = 0.55
+		fill.light_color = Color("dfeaf2")
+		fill.light_energy = 0.18 if outdoor else 0.14
+
 	return {
 		"world_environment": env_node,
 		"environment": env,
@@ -216,7 +244,8 @@ static func apply_dynamic_mood(
 	var bg_target: Color = bg_colors.get(phase, bg_colors.day)
 	env.background_color = env.background_color.lerp(bg_target, blend)
 
-	env.ambient_light_energy = lerpf(env.ambient_light_energy, (0.88 if outdoor else 0.95) * ambient_scale, blend)
+	var daylight := _daylight(room_id,outdoor)
+	env.ambient_light_energy = lerpf(env.ambient_light_energy, daylight.x * ambient_scale, blend)
 
 	var target_fog := 0.0055 if weather == "mist" and outdoor else 0.0020 if weather == "light_rain" and outdoor else (0.0010 if room_id == "village" else 0.0004 if outdoor else 0.0)
 	var cur_fog := env.fog_density if env.fog_enabled else 0.0
@@ -226,13 +255,12 @@ static func apply_dynamic_mood(
 
 	if is_instance_valid(sun):
 		sun.light_color = sun.light_color.lerp(sun_col, blend)
-		var base_e := 0.82 if outdoor else 0.58
-		sun.light_energy = lerpf(sun.light_energy, base_e * direct_scale, blend)
+		sun.light_energy = lerpf(sun.light_energy, daylight.y * direct_scale, blend)
 		var pitch := -32.0 if phase == "dawn" else -50.0 if phase == "day" else -28.0 if phase == "dusk" else -44.0
 		sun.rotation_degrees.x = lerpf(sun.rotation_degrees.x, pitch, blend)
 
 	if is_instance_valid(fill):
 		var fill_target := Color("dff0f5") if phase != "night" else Color("9db4d4")
 		if not outdoor:
-			fill_target = Color("f7ead9")
+			fill_target = Color("dfeaf2") if HomeSchool.is_home_or_school(room_id) else Color("f7ead9")
 		fill.light_color = fill.light_color.lerp(fill_target, blend)

@@ -12,6 +12,7 @@ const P1Actions = preload("res://actors/p1_action_source.gd")
 const CharacterArt = preload("res://actors/character_art_v3.gd")
 const Residents = preload("res://actors/building_resident_catalog.gd")
 const WorldArt = preload("res://scripts/world_art.gd")
+const NearbyGaze = preload("res://actors/nearby_gaze.gd")
 
 const PROFILES := {
 	"npc_bear_uncle": {"name":"熊叔", "kind":"bear", "outfit":"78a8b6", "trim":"eee0bc", "source":"existing_island/world_builder.make_character(bear)"},
@@ -76,6 +77,21 @@ var _seated := false
 var _standing_visual_y := 0.0
 var _contact_marker_pending := false
 var _attachments: Array[BoneAttachment3D] = []
+var _gaze: NearbyGaze
+
+func attend_to(visitor: Node3D) -> void:
+	if not is_instance_valid(visitor) or skeleton.find_bone("Head") < 0:
+		return
+	if _gaze == null:
+		_gaze = NearbyGaze.new()
+		_gaze.name = "NearbyGaze"
+		_gaze.head = skeleton.find_bone("Head")
+		_gaze.neck = skeleton.find_bone("Neck")
+		skeleton.add_child(_gaze)
+		var height := float(CharacterArt.character_entry(character_id).get("height",2.0))
+		var animal := str(profile.get("kind","")) == "animal"
+		WorldArt.add_contact_shadow(visual,height*(0.74 if animal else 0.50),height*(1.05 if animal else 0.35))
+	_gaze.observer = visitor
 
 static func canonical_id(value: String) -> String:
 	var result := value.strip_edges().to_lower()
@@ -102,7 +118,8 @@ func configure(value: String, options: Dictionary = {}) -> bool:
 	if CharacterArt.expansion_characters().has(character_id):
 		profile = CharacterArt.character_entry(character_id).get("profile",{}).duplicate(true)
 	_rig_family = P1Actions.family_for(str(profile.get("kind","human")))
-	display_name = str(profile.name)
+	var custom_display := str(options.get("display_name", "")).strip_edges()
+	display_name = custom_display if not custom_display.is_empty() else str(profile.name)
 	name = "Actor_" + character_id
 	set_meta("character_id", character_id)
 	set_meta("asset_character_id", character_id if character_id.begins_with("npc_") else "npc_" + character_id)
@@ -225,6 +242,9 @@ func set_clock_state(world_enabled: bool, performance_enabled: bool, active_acto
 	performance_running = performance_enabled
 	is_performance_actor = active_actor
 	reduced_motion = reduce_motion
+	if _gaze != null and (reduced_motion or not world_running):
+		_gaze.active = false
+		_gaze.angles = Vector2.ZERO
 	if _configured and animation_player and is_inside_tree() and _active_reduced != reduced_motion:
 		_start_clip(_active_clip if not _active_clip.is_empty() else "idle",false)
 
@@ -237,6 +257,10 @@ func _process(delta: float) -> void:
 func advance_visual(delta: float) -> void:
 	if not _configured:
 		return
+	if _gaze != null:
+		_gaze.active = world_running and not reduced_motion and not _seated and motion_path.is_empty() and _active_clip == "idle" and current_action == "idle"
+		if not _gaze.active:
+			_gaze.angles = Vector2.ZERO
 	if _seated:
 		animation_player.advance(clampf(delta,0.0,0.1))
 		skeleton.force_update_all_bone_transforms()

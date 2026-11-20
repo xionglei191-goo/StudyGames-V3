@@ -351,7 +351,7 @@ static func _apply(data: Dictionary, action: String, a: Dictionary) -> Dictionar
 				item["support"] = ""
 				for child: Dictionary in s.items.values():
 					if str(child.get("support",""))==id:
-						child.position=[pos[0],float(pos[1])+0.98,pos[2]]
+						child.position=[pos[0],float(pos[1])+C.TABLETOP_HEIGHT,pos[2]]
 						child.rotation=item.rotation
 						child.room=room
 			elif action == "place_on":
@@ -363,7 +363,7 @@ static func _apply(data: Dictionary, action: String, a: Dictionary) -> Dictionar
 					if str(child.get("support",""))==support: return fail("这个桌面已有作品，请先收好它。")
 				item.where="placed"
 				item.room=base.room
-				item.position=[base.position[0],float(base.position[1])+0.98,base.position[2]]
+				item.position=[base.position[0],float(base.position[1])+C.TABLETOP_HEIGHT,base.position[2]]
 				item.rotation=base.rotation
 				item["support"]=support
 			elif action == "apply_design":

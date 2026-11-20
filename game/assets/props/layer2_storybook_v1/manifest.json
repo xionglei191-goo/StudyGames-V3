@@ -1,0 +1,926 @@
+{
+  "revision": "layer2-storybook-v1.1",
+  "count": 92,
+  "assets": {
+    "coat": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_coat.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.3286,
+        0.42,
+        0.1118
+      ],
+      "triangles": 6472
+    },
+    "shirt": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_shirt.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.35,
+        0.38,
+        0.0932
+      ],
+      "triangles": 7116
+    },
+    "dress": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_dress.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.3325,
+        0.42,
+        0.1944
+      ],
+      "triangles": 10828
+    },
+    "sweater": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_sweater.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.3,
+        0.1526,
+        0.2482
+      ],
+      "triangles": 4704
+    },
+    "trousers": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_trousers.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2542,
+        0.1425,
+        0.36
+      ],
+      "triangles": 1764
+    },
+    "scarf": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_scarf.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2264,
+        0.1047,
+        0.26
+      ],
+      "triangles": 4396
+    },
+    "socks": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_socks.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.25,
+        0.2287,
+        0.2047
+      ],
+      "triangles": 8816
+    },
+    "shoes": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_shoes.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.26,
+        0.0922,
+        0.2135
+      ],
+      "triangles": 6376
+    },
+    "gloves": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_gloves.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.25,
+        0.0611,
+        0.178
+      ],
+      "triangles": 4728
+    },
+    "book": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_book.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2439,
+        0.0762,
+        0.32
+      ],
+      "triangles": 1248
+    },
+    "notebook": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_notebook.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2687,
+        0.0659,
+        0.31
+      ],
+      "triangles": 7852
+    },
+    "newspaper": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_newspaper.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.3,
+        0.0663,
+        0.2232
+      ],
+      "triangles": 2672
+    },
+    "letter": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_letter.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.28,
+        0.273,
+        0.1165
+      ],
+      "triangles": 1256
+    },
+    "card": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_card.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.27,
+        0.2487,
+        0.0852
+      ],
+      "triangles": 684
+    },
+    "photo": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_photo.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.28,
+        0.2429,
+        0.1535
+      ],
+      "triangles": 2928
+    },
+    "paper": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_paper.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2527,
+        0.0386,
+        0.29
+      ],
+      "triangles": 2280
+    },
+    "pen": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pen.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.31,
+        0.142,
+        0.0983
+      ],
+      "triangles": 2088
+    },
+    "pencil": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pencil.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.31,
+        0.1357,
+        0.0885
+      ],
+      "triangles": 2700
+    },
+    "crayon": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_crayon.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.28,
+        0.0699,
+        0.1078
+      ],
+      "triangles": 2716
+    },
+    "chalk": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_chalk.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.27,
+        0.0559,
+        0.1254
+      ],
+      "triangles": 1472
+    },
+    "brush": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_brush.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.31,
+        0.1363,
+        0.0977
+      ],
+      "triangles": 3364
+    },
+    "paint_jar": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_paint_jar.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2147,
+        0.1846,
+        0.22
+      ],
+      "triangles": 5400
+    },
+    "ruler": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_ruler.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.33,
+        0.0736,
+        0.0856
+      ],
+      "triangles": 2820
+    },
+    "eraser": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_eraser.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.21,
+        0.0824,
+        0.1216
+      ],
+      "triangles": 1144
+    },
+    "pencil_box": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pencil_box.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.31,
+        0.0803,
+        0.1458
+      ],
+      "triangles": 2032
+    },
+    "scissors": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_scissors.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.28,
+        0.0237,
+        0.1899
+      ],
+      "triangles": 3628
+    },
+    "globe": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_globe.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2263,
+        0.33,
+        0.2193
+      ],
+      "triangles": 6852
+    },
+    "pillow": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pillow.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.3,
+        0.1084,
+        0.2652
+      ],
+      "triangles": 6872
+    },
+    "quilt": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_quilt.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.31,
+        0.1088,
+        0.2499
+      ],
+      "triangles": 5568
+    },
+    "towel": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_towel.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.28,
+        0.109,
+        0.2081
+      ],
+      "triangles": 2100
+    },
+    "toothbrush": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_toothbrush.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.1261,
+        0.27,
+        0.1261
+      ],
+      "triangles": 4388
+    },
+    "comb": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_comb.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.27,
+        0.1128,
+        0.0586
+      ],
+      "triangles": 3056
+    },
+    "soap": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_soap.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.25,
+        0.1074,
+        0.1778
+      ],
+      "triangles": 6992
+    },
+    "water": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_water.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.29,
+        0.2098,
+        0.2713
+      ],
+      "triangles": 6820
+    },
+    "bucket": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_bucket.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2404,
+        0.29,
+        0.2404
+      ],
+      "triangles": 4120
+    },
+    "umbrella": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_umbrella.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.305,
+        0.32,
+        0.305
+      ],
+      "triangles": 1700
+    },
+    "glasses": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_glasses.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.25,
+        0.1075,
+        0.1576
+      ],
+      "triangles": 4396
+    },
+    "clock": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_clock.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2154,
+        0.26,
+        0.0719
+      ],
+      "triangles": 6864
+    },
+    "watch": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_watch.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.1824,
+        0.1987,
+        0.22
+      ],
+      "triangles": 3572
+    },
+    "lamp": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_lamp.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2915,
+        0.31,
+        0.2915
+      ],
+      "triangles": 5260
+    },
+    "key": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_key.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.26,
+        0.0334,
+        0.1149
+      ],
+      "triangles": 6128
+    },
+    "stool": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_stool.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.28,
+        0.2584,
+        0.28
+      ],
+      "triangles": 4008
+    },
+    "apple": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_apple.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.234,
+        0.24,
+        0.2368
+      ],
+      "triangles": 2408
+    },
+    "tomato": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_tomato.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.23,
+        0.1916,
+        0.2122
+      ],
+      "triangles": 3616
+    },
+    "orange": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_orange.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.213,
+        0.23,
+        0.213
+      ],
+      "triangles": 2352
+    },
+    "pear": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pear.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.1745,
+        0.26,
+        0.1745
+      ],
+      "triangles": 2704
+    },
+    "banana": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_banana.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.27,
+        0.0997,
+        0.1141
+      ],
+      "triangles": 1616
+    },
+    "egg": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_egg.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.21,
+        0.2047,
+        0.21
+      ],
+      "triangles": 2592
+    },
+    "potato": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_potato.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.23,
+        0.1246,
+        0.1576
+      ],
+      "triangles": 4352
+    },
+    "vegetable": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_vegetable.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.257,
+        0.26,
+        0.2238
+      ],
+      "triangles": 5456
+    },
+    "fish": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_fish.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.31,
+        0.0856,
+        0.2037
+      ],
+      "triangles": 5864
+    },
+    "chicken": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_chicken.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.29,
+        0.1169,
+        0.29
+      ],
+      "triangles": 7516
+    },
+    "dumplings": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_dumplings.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.29,
+        0.082,
+        0.29
+      ],
+      "triangles": 7544
+    },
+    "sandwich": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_sandwich.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.28,
+        0.0978,
+        0.28
+      ],
+      "triangles": 7044
+    },
+    "hamburger": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_hamburger.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.27,
+        0.1509,
+        0.27
+      ],
+      "triangles": 12812
+    },
+    "cake": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_cake.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.29,
+        0.1997,
+        0.29
+      ],
+      "triangles": 12860
+    },
+    "candy": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_candy.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.25,
+        0.1117,
+        0.1117
+      ],
+      "triangles": 3096
+    },
+    "milk": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_milk.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.1241,
+        0.26,
+        0.1241
+      ],
+      "triangles": 1324
+    },
+    "cup": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_cup.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.22,
+        0.1579,
+        0.166
+      ],
+      "triangles": 2968
+    },
+    "juice_glass": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_juice_glass.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.198,
+        0.25,
+        0.1662
+      ],
+      "triangles": 3836
+    },
+    "teapot": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_teapot.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.29,
+        0.198,
+        0.2021
+      ],
+      "triangles": 4112
+    },
+    "plate": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_plate.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.29,
+        0.0319,
+        0.29
+      ],
+      "triangles": 3440
+    },
+    "bowl": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_bowl.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.25,
+        0.1164,
+        0.25
+      ],
+      "triangles": 3672
+    },
+    "rice_bowl": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_rice_bowl.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.25,
+        0.1516,
+        0.25
+      ],
+      "triangles": 15384
+    },
+    "noodle_bowl": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_noodle_bowl.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.26,
+        0.1333,
+        0.26
+      ],
+      "triangles": 10052
+    },
+    "soup_bowl": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_soup_bowl.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.25,
+        0.1164,
+        0.25
+      ],
+      "triangles": 6532
+    },
+    "pot": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pot.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.29,
+        0.1762,
+        0.2206
+      ],
+      "triangles": 6016
+    },
+    "chopsticks": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_chopsticks.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.31,
+        0.0469,
+        0.0878
+      ],
+      "triangles": 1624
+    },
+    "spoon": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_spoon.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.26,
+        0.0476,
+        0.0799
+      ],
+      "triangles": 2680
+    },
+    "teddy": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_teddy.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2303,
+        0.28,
+        0.1771
+      ],
+      "triangles": 19648
+    },
+    "ball": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_ball.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.23,
+        0.2281,
+        0.23
+      ],
+      "triangles": 5848
+    },
+    "football": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_football.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.23,
+        0.2298,
+        0.2297
+      ],
+      "triangles": 4428
+    },
+    "basketball": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_basketball.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.23,
+        0.23,
+        0.23
+      ],
+      "triangles": 7356
+    },
+    "kite": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_kite.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.2656,
+        0.31,
+        0.1301
+      ],
+      "triangles": 1632
+    },
+    "rope": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_rope.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.28,
+        0.0606,
+        0.2566
+      ],
+      "triangles": 4304
+    },
+    "bell": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_bell.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.2196,
+        0.26,
+        0.2196
+      ],
+      "triangles": 4480
+    },
+    "violin": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_violin.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.1624,
+        0.34,
+        0.0711
+      ],
+      "triangles": 5424
+    },
+    "guitar": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_guitar.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.1636,
+        0.35,
+        0.0754
+      ],
+      "triangles": 5700
+    },
+    "star": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_star.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.1746,
+        0.26,
+        0.0824
+      ],
+      "triangles": 308
+    },
+    "sun": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_sun.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.2611,
+        0.28,
+        0.0789
+      ],
+      "triangles": 8632
+    },
+    "cloud": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_cloud.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.25,
+        0.2,
+        0.14
+      ],
+      "triangles": 6584
+    },
+    "rain_jar": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_rain_jar.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.1905,
+        0.25,
+        0.1905
+      ],
+      "triangles": 6536
+    },
+    "pinwheel": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pinwheel.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.1779,
+        0.29,
+        0.1221
+      ],
+      "triangles": 6584
+    },
+    "flower": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_flower.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.1655,
+        0.29,
+        0.1655
+      ],
+      "triangles": 11716
+    },
+    "plant": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_plant.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.2496,
+        0.28,
+        0.2198
+      ],
+      "triangles": 5648
+    },
+    "leaf": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_leaf.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.25,
+        0.066,
+        0.0928
+      ],
+      "triangles": 448
+    },
+    "bee": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_bee.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.23,
+        0.1988,
+        0.1998
+      ],
+      "triangles": 8228
+    },
+    "bird": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_bird.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.1799,
+        0.1968,
+        0.24
+      ],
+      "triangles": 8516
+    },
+    "duck": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_duck.glb",
+      "tintable": false,
+      "bounds_godot_size": [
+        0.1555,
+        0.1676,
+        0.23
+      ],
+      "triangles": 8044
+    },
+    "cat": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_cat.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.1682,
+        0.26,
+        0.1864
+      ],
+      "triangles": 11540
+    },
+    "dog": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_dog.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.1783,
+        0.2496,
+        0.26
+      ],
+      "triangles": 13156
+    },
+    "gift_box": {
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_gift_box.glb",
+      "tintable": true,
+      "bounds_godot_size": [
+        0.24,
+        0.225,
+        0.24
+      ],
+      "triangles": 3056
+    }
+  }
+}

@@ -245,9 +245,11 @@ func _finish() -> void:
 	_report["actual_door_key_input"] = true
 	_report["observed_rooms"] = observed_rooms
 	_report["captures"] = images
+	DirAccess.make_dir_recursive_absolute(OUTPUT)
 	var file := FileAccess.open(OUTPUT.path_join("native-report.json" if captures else "runtime-report.json"),FileAccess.WRITE)
-	file.store_string(JSON.stringify(_report,"  "))
-	file.close()
+	if file != null:
+		file.store_string(JSON.stringify(_report,"  "))
+		file.close()
 	if is_instance_valid(_main): _main.queue_free()
 	await process_frame
 	for suffix: String in ["", ".bak", ".tmp"]:

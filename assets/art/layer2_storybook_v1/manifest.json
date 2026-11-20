@@ -1,0 +1,2511 @@
+{
+  "schema_version": 1,
+  "revision": "layer2-storybook-v1.1",
+  "tool": "Blender 5.2.2 LTS",
+  "source_script": "scripts/build_layer2_props_v1.py",
+  "editable_source": {
+    "path": "layer2_storybook_v1.blend",
+    "sha256": "f37698167b489a613229cdf307202b1b3ea1950f41bf249b328b40a456533ebe"
+  },
+  "authorship": "Original Blender 5.2 authored 3D meshes with rounded bevels, lathe revolutions, 3D NURBS tubes, and storybook PBR materials.",
+  "surface_details": "Physically scaled local UVs. The editable blend packs the project's original world_refresh_v3 detail and normal tiles. Godot binds these shared maps to the named GLB material finishes.",
+  "count": 92,
+  "total_bytes": 12809444,
+  "total_triangles": 481468,
+  "assets": [
+    {
+      "id": "coat",
+      "filename": "l2_coat.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_coat.glb",
+      "sha256": "f4e4ab8d16cd3e018cc91b4c55b05f40ce6f07d518d5eb34882cc0bab0c12f98",
+      "bytes": 194444,
+      "vertices": 3268,
+      "triangles": 6472,
+      "materials": [
+        "L2_TintPrimary_Linen",
+        "L2_Gold",
+        "L2_Wood_Woodgrain",
+        "L2_TintDark_Linen",
+        "L2_TintSecondary_Linen",
+        "L2_Cream_Linen",
+        "L2_WoodDark_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1643,
+        0.0,
+        -0.0559
+      ],
+      "bounds_godot_size": [
+        0.3286,
+        0.42,
+        0.1118
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "shirt",
+      "filename": "l2_shirt.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_shirt.glb",
+      "sha256": "6817cabdf2fe60df4e3ab5eb8bff90f586d12490daa31c20d89725bb0c205017",
+      "bytes": 202712,
+      "vertices": 3588,
+      "triangles": 7116,
+      "materials": [
+        "L2_Wood_Woodgrain",
+        "L2_Gold",
+        "L2_TintPrimary_Linen",
+        "L2_Cream_Linen",
+        "L2_TintSecondary_Linen",
+        "L2_White"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.175,
+        0.0,
+        -0.0466
+      ],
+      "bounds_godot_size": [
+        0.35,
+        0.38,
+        0.0932
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "dress",
+      "filename": "l2_dress.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_dress.glb",
+      "sha256": "a60d4ef65411d2e095e77cf30b7ef66c000a550111a4112f6a5dbf7410ab65dd",
+      "bytes": 293568,
+      "vertices": 5438,
+      "triangles": 10828,
+      "materials": [
+        "L2_TintSecondary_Linen",
+        "L2_Gold",
+        "L2_Wood_Woodgrain",
+        "L2_TintPrimary_Linen",
+        "L2_Cream_Linen",
+        "L2_White_Linen",
+        "L2_Berry_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1663,
+        0.0,
+        -0.0972
+      ],
+      "bounds_godot_size": [
+        0.3325,
+        0.42,
+        0.1944
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "sweater",
+      "filename": "l2_sweater.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_sweater.glb",
+      "sha256": "d9dc6df3168a0ce2888de9db04a2c1216309f870a47d31cd06473e739816c531",
+      "bytes": 138512,
+      "vertices": 2372,
+      "triangles": 4704,
+      "materials": [
+        "L2_TintDark_Linen",
+        "L2_TintPrimary_Linen",
+        "L2_TintSecondary_Linen",
+        "L2_Cream_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.15,
+        0.0,
+        -0.1241
+      ],
+      "bounds_godot_size": [
+        0.3,
+        0.1526,
+        0.2482
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "trousers",
+      "filename": "l2_trousers.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_trousers.glb",
+      "sha256": "4a55816a6c28be440f767a1cef5eda2d997bd7a334f4e1f8b567b8abd8ba7cac",
+      "bytes": 60340,
+      "vertices": 896,
+      "triangles": 1764,
+      "materials": [
+        "L2_Crumb_Linen",
+        "L2_TintPrimary_Linen",
+        "L2_TintDark_Linen",
+        "L2_Bread_Linen",
+        "L2_TintSecondary_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1271,
+        0.0,
+        -0.18
+      ],
+      "bounds_godot_size": [
+        0.2542,
+        0.1425,
+        0.36
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "scarf",
+      "filename": "l2_scarf.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_scarf.glb",
+      "sha256": "38fa39c092f9a70d575de6e96294b6f58619a5bf03c49cfddb3253adb54f29fe",
+      "bytes": 124380,
+      "vertices": 2208,
+      "triangles": 4396,
+      "materials": [
+        "L2_TintPrimary_Linen",
+        "L2_TintSecondary_Linen",
+        "L2_Cream_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1132,
+        0.0,
+        -0.13
+      ],
+      "bounds_godot_size": [
+        0.2264,
+        0.1047,
+        0.26
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "socks",
+      "filename": "l2_socks.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_socks.glb",
+      "sha256": "2fe99f81b8cde5277b9ea63c003e540c280bdaf6a49125b4bf26adb142a03865",
+      "bytes": 229584,
+      "vertices": 4428,
+      "triangles": 8816,
+      "materials": [
+        "L2_TintPrimary_Linen",
+        "L2_Cream_Linen",
+        "L2_TintSecondary_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.125,
+        0.0,
+        -0.1023
+      ],
+      "bounds_godot_size": [
+        0.25,
+        0.2287,
+        0.2047
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "shoes",
+      "filename": "l2_shoes.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_shoes.glb",
+      "sha256": "829795421f45f3024d74d2d2e4b91bbbf648f8276394aaac2cbbf2eb8936b608",
+      "bytes": 172872,
+      "vertices": 3212,
+      "triangles": 6376,
+      "materials": [
+        "L2_White_Linen",
+        "L2_TintPrimary_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.13,
+        0.0,
+        -0.1068
+      ],
+      "bounds_godot_size": [
+        0.26,
+        0.0922,
+        0.2135
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "gloves",
+      "filename": "l2_gloves.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_gloves.glb",
+      "sha256": "67f8376cfb7e9197a21d0e787642b651fb009bc256f57bb3e79fb034ab039d69",
+      "bytes": 124236,
+      "vertices": 2376,
+      "triangles": 4728,
+      "materials": [
+        "L2_Cream_Linen",
+        "L2_TintPrimary_Linen",
+        "L2_TintSecondary_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.125,
+        0.0,
+        -0.089
+      ],
+      "bounds_godot_size": [
+        0.25,
+        0.0611,
+        0.178
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "book",
+      "filename": "l2_book.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_book.glb",
+      "sha256": "153aa82a86e847c83fa0fd2fb1595bc2465ff16a3437af3b17e0a508c091ea68",
+      "bytes": 43436,
+      "vertices": 638,
+      "triangles": 1248,
+      "materials": [
+        "L2_TintDark_Papergrain",
+        "L2_Paper_Papergrain",
+        "L2_TintPrimary_Papergrain",
+        "L2_Cream_Papergrain",
+        "L2_Gold",
+        "L2_Berry"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.122,
+        0.0,
+        -0.16
+      ],
+      "bounds_godot_size": [
+        0.2439,
+        0.0762,
+        0.32
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "notebook",
+      "filename": "l2_notebook.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_notebook.glb",
+      "sha256": "663b956ca5061248fa9f86a63b659d78d9768bd6e6a640a01ac8211803b32a5c",
+      "bytes": 194988,
+      "vertices": 3936,
+      "triangles": 7852,
+      "materials": [
+        "L2_TintDark_Papergrain",
+        "L2_Paper_Papergrain",
+        "L2_TintPrimary_Papergrain",
+        "L2_Cream_Papergrain",
+        "L2_Silver"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1343,
+        0.0,
+        -0.155
+      ],
+      "bounds_godot_size": [
+        0.2687,
+        0.0659,
+        0.31
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "newspaper",
+      "filename": "l2_newspaper.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_newspaper.glb",
+      "sha256": "06e12a8c8a42e66811f11c9cfeb23ffb15f9333a297fb69985119e5b80b6e7be",
+      "bytes": 75572,
+      "vertices": 1348,
+      "triangles": 2672,
+      "materials": [
+        "L2_TintPrimary_Papergrain",
+        "L2_Paper_Papergrain",
+        "L2_Cream_Papergrain",
+        "L2_Charcoal"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.15,
+        0.0,
+        -0.1116
+      ],
+      "bounds_godot_size": [
+        0.3,
+        0.0663,
+        0.2232
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "letter",
+      "filename": "l2_letter.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_letter.glb",
+      "sha256": "c7a766a40eec93ed0b057f2175b5cd9d3a4dfa73d93c5aabf2b16552efd962b9",
+      "bytes": 40892,
+      "vertices": 638,
+      "triangles": 1256,
+      "materials": [
+        "L2_Cream_Papergrain",
+        "L2_Wood_Woodgrain",
+        "L2_Paper_Papergrain",
+        "L2_Berry",
+        "L2_Gold"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.14,
+        0.0,
+        -0.0582
+      ],
+      "bounds_godot_size": [
+        0.28,
+        0.273,
+        0.1165
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "card",
+      "filename": "l2_card.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_card.glb",
+      "sha256": "8458097c9129f540226ea44c0cd6ff4a3bc6ad904a90988b95825ff5227f5907",
+      "bytes": 25036,
+      "vertices": 350,
+      "triangles": 684,
+      "materials": [
+        "L2_TintPrimary_Papergrain",
+        "L2_Wood_Woodgrain",
+        "L2_Cream_Papergrain",
+        "L2_Gold"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.135,
+        0.0,
+        -0.0426
+      ],
+      "bounds_godot_size": [
+        0.27,
+        0.2487,
+        0.0852
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "photo",
+      "filename": "l2_photo.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_photo.glb",
+      "sha256": "787f82e7b14984f3e1dc8dd118eaddec91ae145e4dafc13c432a9d11ad960495",
+      "bytes": 82232,
+      "vertices": 1476,
+      "triangles": 2928,
+      "materials": [
+        "L2_WoodDark_Woodgrain",
+        "L2_TintPrimary_Papergrain",
+        "L2_Cream_Papergrain",
+        "L2_Sky",
+        "L2_Leaf",
+        "L2_Yellow"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.14,
+        0.0,
+        -0.0768
+      ],
+      "bounds_godot_size": [
+        0.28,
+        0.2429,
+        0.1535
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "paper",
+      "filename": "l2_paper.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_paper.glb",
+      "sha256": "d5b5d6a433a010dcdb1a77b8063bf50b73f42c0b7aaaa7bab727258fdf9f4060",
+      "bytes": 64376,
+      "vertices": 1152,
+      "triangles": 2280,
+      "materials": [
+        "L2_TintPrimary_Papergrain",
+        "L2_Paper_Papergrain",
+        "L2_White_Papergrain",
+        "L2_Cream_Papergrain",
+        "L2_Yellow",
+        "L2_Berry"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1263,
+        0.0,
+        -0.145
+      ],
+      "bounds_godot_size": [
+        0.2527,
+        0.0386,
+        0.29
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "pen",
+      "filename": "l2_pen.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pen.glb",
+      "sha256": "0890663cf9ddad4026dc10213025ae8f7c39d38e7b6892f015b5b0e94e4038f7",
+      "bytes": 63748,
+      "vertices": 1056,
+      "triangles": 2088,
+      "materials": [
+        "L2_TintPrimary",
+        "L2_Wood_Woodgrain",
+        "L2_Gold",
+        "L2_Charcoal",
+        "L2_Silver"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.155,
+        0.0,
+        -0.0491
+      ],
+      "bounds_godot_size": [
+        0.31,
+        0.142,
+        0.0983
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "pencil",
+      "filename": "l2_pencil.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pencil.glb",
+      "sha256": "11499a1f329a9cb47bde80fbc933fe97b91c64900a09f19320822edb35303bad",
+      "bytes": 79772,
+      "vertices": 1362,
+      "triangles": 2700,
+      "materials": [
+        "L2_Wood_Woodgrain",
+        "L2_TintPrimary",
+        "L2_Gold",
+        "L2_Pink",
+        "L2_Crumb_Porous",
+        "L2_Charcoal"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.155,
+        0.0,
+        -0.0442
+      ],
+      "bounds_godot_size": [
+        0.31,
+        0.1357,
+        0.0885
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "crayon",
+      "filename": "l2_crayon.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_crayon.glb",
+      "sha256": "3dba16ef1db3f58c45b7e0fb9e00323710e12983c09e224a4a948cc6bb109770",
+      "bytes": 76568,
+      "vertices": 1368,
+      "triangles": 2716,
+      "materials": [
+        "L2_Charcoal_Papergrain",
+        "L2_TintPrimary_Wax",
+        "L2_TintSecondary_Papergrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.14,
+        0.0,
+        -0.0539
+      ],
+      "bounds_godot_size": [
+        0.28,
+        0.0699,
+        0.1078
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "chalk",
+      "filename": "l2_chalk.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_chalk.glb",
+      "sha256": "27500834795eb94b377c4a481f3b499284436d9273a0ecdaee211c5b3cb474c4",
+      "bytes": 41760,
+      "vertices": 744,
+      "triangles": 1472,
+      "materials": [
+        "L2_White_Porous",
+        "L2_Wood_Porous",
+        "L2_Yellow_Porous",
+        "L2_TintSecondary_Porous"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.135,
+        0.0,
+        -0.0627
+      ],
+      "bounds_godot_size": [
+        0.27,
+        0.0559,
+        0.1254
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "brush",
+      "filename": "l2_brush.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_brush.glb",
+      "sha256": "70ae534566b576878b4d290a437acab4179359b3b00c2d0b572937a1b0e806ac",
+      "bytes": 91780,
+      "vertices": 1692,
+      "triangles": 3364,
+      "materials": [
+        "L2_WoodDark_Woodgrain",
+        "L2_Wood_Woodgrain",
+        "L2_Silver",
+        "L2_TintPrimary"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.155,
+        0.0,
+        -0.0488
+      ],
+      "bounds_godot_size": [
+        0.31,
+        0.1363,
+        0.0977
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "paint_jar",
+      "filename": "l2_paint_jar.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_paint_jar.glb",
+      "sha256": "e662322147d327e553c13c800a7338a330e15921c453aade8e49e4ac169843a8",
+      "bytes": 130480,
+      "vertices": 2708,
+      "triangles": 5400,
+      "materials": [
+        "L2_Cream_Enamel",
+        "L2_TintPrimary_Enamel",
+        "L2_TintSecondary_Enamel",
+        "L2_Silver"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1073,
+        0.0,
+        -0.11
+      ],
+      "bounds_godot_size": [
+        0.2147,
+        0.1846,
+        0.22
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "ruler",
+      "filename": "l2_ruler.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_ruler.glb",
+      "sha256": "d8ba38c48f8e7e8ebb3a61a0265f8bcc0efac0bb4a176e4841ce834e3cc90445",
+      "bytes": 76884,
+      "vertices": 1440,
+      "triangles": 2820,
+      "materials": [
+        "L2_TintPrimary",
+        "L2_Wood_Woodgrain",
+        "L2_Cream"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.165,
+        0.0,
+        -0.0428
+      ],
+      "bounds_godot_size": [
+        0.33,
+        0.0736,
+        0.0856
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "eraser",
+      "filename": "l2_eraser.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_eraser.glb",
+      "sha256": "4a4e13972f8da4d6dc9dabe31cf7a0dbefaec795c6c9d82914fe423c7df779f3",
+      "bytes": 35036,
+      "vertices": 578,
+      "triangles": 1144,
+      "materials": [
+        "L2_White_Rubber",
+        "L2_TintPrimary_Papergrain",
+        "L2_Cream_Rubber"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.105,
+        0.0,
+        -0.0608
+      ],
+      "bounds_godot_size": [
+        0.21,
+        0.0824,
+        0.1216
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "pencil_box",
+      "filename": "l2_pencil_box.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pencil_box.glb",
+      "sha256": "9dcb3c79d80ef8cde8430782654c49d33296a601e6611041bb2a1008851fcc15",
+      "bytes": 49112,
+      "vertices": 1026,
+      "triangles": 2032,
+      "materials": [
+        "L2_Yellow_Enamel",
+        "L2_TintPrimary_Enamel",
+        "L2_TintSecondary_Enamel",
+        "L2_Cream_Enamel",
+        "L2_Gold"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.155,
+        0.0,
+        -0.0729
+      ],
+      "bounds_godot_size": [
+        0.31,
+        0.0803,
+        0.1458
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "scissors",
+      "filename": "l2_scissors.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_scissors.glb",
+      "sha256": "a9a89b09be9dfb2bcabeffddca2eca3aa104defae751a570d6c7797c4ad8f7e8",
+      "bytes": 91680,
+      "vertices": 1824,
+      "triangles": 3628,
+      "materials": [
+        "L2_Silver",
+        "L2_TintPrimary_Enamel",
+        "L2_Gold"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.14,
+        0.0,
+        -0.0949
+      ],
+      "bounds_godot_size": [
+        0.28,
+        0.0237,
+        0.1899
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "globe",
+      "filename": "l2_globe.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_globe.glb",
+      "sha256": "78760c7d1b2107a9c4c34dde70688155ef7cd656a70f2cb0ebcf8f9c9edd1aae",
+      "bytes": 178116,
+      "vertices": 3438,
+      "triangles": 6852,
+      "materials": [
+        "L2_Wood_Woodgrain",
+        "L2_Gold",
+        "L2_TintPrimary",
+        "L2_Leaf"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1131,
+        0.0,
+        -0.1096
+      ],
+      "bounds_godot_size": [
+        0.2263,
+        0.33,
+        0.2193
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "pillow",
+      "filename": "l2_pillow.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pillow.glb",
+      "sha256": "44ad2443ad94937eee18a512d49670b91205250ff52540e5001766fcf4a24df2",
+      "bytes": 176548,
+      "vertices": 3446,
+      "triangles": 6872,
+      "materials": [
+        "L2_TintSecondary_Linen",
+        "L2_TintPrimary_Linen",
+        "L2_Cream_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.15,
+        0.0,
+        -0.1326
+      ],
+      "bounds_godot_size": [
+        0.3,
+        0.1084,
+        0.2652
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "quilt",
+      "filename": "l2_quilt.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_quilt.glb",
+      "sha256": "3325fa90d00f514aa03525d1ff861e2e6a49121cffbe58eff341f75ba48c9b20",
+      "bytes": 143688,
+      "vertices": 2796,
+      "triangles": 5568,
+      "materials": [
+        "L2_Cream_Linen",
+        "L2_TintPrimary_Linen",
+        "L2_TintSecondary_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.155,
+        0.0,
+        -0.125
+      ],
+      "bounds_godot_size": [
+        0.31,
+        0.1088,
+        0.2499
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "towel",
+      "filename": "l2_towel.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_towel.glb",
+      "sha256": "2f29c89298e3f223f7b9fcde9e9142fe683fb92c3cbf8eb7e4175999b5979b01",
+      "bytes": 60196,
+      "vertices": 1058,
+      "triangles": 2100,
+      "materials": [
+        "L2_TintPrimary_Linen",
+        "L2_Cream_Linen",
+        "L2_TintSecondary_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.14,
+        0.0,
+        -0.1041
+      ],
+      "bounds_godot_size": [
+        0.28,
+        0.109,
+        0.2081
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "toothbrush",
+      "filename": "l2_toothbrush.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_toothbrush.glb",
+      "sha256": "765835f7b49f0273ba0d74e524667b71d87bcddb6975868b40ad4a2a02ad139f",
+      "bytes": 108796,
+      "vertices": 2204,
+      "triangles": 4388,
+      "materials": [
+        "L2_TintSecondary_Enamel",
+        "L2_Cream_Enamel",
+        "L2_TintPrimary_Enamel",
+        "L2_White_Enamel",
+        "L2_Sky_Enamel"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.063,
+        0.0,
+        -0.063
+      ],
+      "bounds_godot_size": [
+        0.1261,
+        0.27,
+        0.1261
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "comb",
+      "filename": "l2_comb.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_comb.glb",
+      "sha256": "e872c282863090ed4ef291a52f8189801259d9141e3f96ec6f581e9dfdfe2d3d",
+      "bytes": 108948,
+      "vertices": 1562,
+      "triangles": 3056,
+      "materials": [
+        "L2_TintPrimary_Enamel",
+        "L2_Cream_Enamel",
+        "L2_TintSecondary_Enamel"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.135,
+        0.0,
+        -0.0293
+      ],
+      "bounds_godot_size": [
+        0.27,
+        0.1128,
+        0.0586
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "soap",
+      "filename": "l2_soap.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_soap.glb",
+      "sha256": "3253838154e2a692dcb23fface25de1e5d68e385faa73837c25be1584904504e",
+      "bytes": 174344,
+      "vertices": 3510,
+      "triangles": 6992,
+      "materials": [
+        "L2_TintPrimary_Wax",
+        "L2_Cream_Glaze",
+        "L2_White_Glaze"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.125,
+        0.0,
+        -0.0889
+      ],
+      "bounds_godot_size": [
+        0.25,
+        0.1074,
+        0.1778
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "water",
+      "filename": "l2_water.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_water.glb",
+      "sha256": "53f86bc15427746e648f103ca50f29ce86a4bb856fb415e6669c8547d3ccee18",
+      "bytes": 167528,
+      "vertices": 3420,
+      "triangles": 6820,
+      "materials": [
+        "L2_Sky_Glaze",
+        "L2_GlassWater"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.145,
+        0.0,
+        -0.1356
+      ],
+      "bounds_godot_size": [
+        0.29,
+        0.2098,
+        0.2713
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "bucket",
+      "filename": "l2_bucket.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_bucket.glb",
+      "sha256": "64a3f1aa4f7f6ee97c32f8aefb802f8e74c12f9b8169061931b82bb7dff59ef3",
+      "bytes": 101212,
+      "vertices": 2066,
+      "triangles": 4120,
+      "materials": [
+        "L2_Silver",
+        "L2_TintPrimary",
+        "L2_TintSecondary",
+        "L2_Wood_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1202,
+        0.0,
+        -0.1202
+      ],
+      "bounds_godot_size": [
+        0.2404,
+        0.29,
+        0.2404
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "umbrella",
+      "filename": "l2_umbrella.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_umbrella.glb",
+      "sha256": "08be209d1fb188cce99b4e901566c9cd09fcb143537cb35264ab8a0df7aaf6d2",
+      "bytes": 54476,
+      "vertices": 858,
+      "triangles": 1700,
+      "materials": [
+        "L2_TintPrimary_Linen",
+        "L2_Gold",
+        "L2_Wood_Woodgrain",
+        "L2_WoodDark_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1525,
+        0.0,
+        -0.1525
+      ],
+      "bounds_godot_size": [
+        0.305,
+        0.32,
+        0.305
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "glasses",
+      "filename": "l2_glasses.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_glasses.glb",
+      "sha256": "038f9e561f5a3e8aa4fe5060658ca23e9d26e6ebc2860e00fc62125a707bbf47",
+      "bytes": 111824,
+      "vertices": 2208,
+      "triangles": 4396,
+      "materials": [
+        "L2_TintDark_Enamel",
+        "L2_TintPrimary_Enamel",
+        "L2_GlassWater"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.125,
+        0.0,
+        -0.0788
+      ],
+      "bounds_godot_size": [
+        0.25,
+        0.1075,
+        0.1576
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "clock",
+      "filename": "l2_clock.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_clock.glb",
+      "sha256": "644a967637185cd279a83e49ff9340f91856c468a35d46500a876781c6c8707f",
+      "bytes": 169904,
+      "vertices": 3448,
+      "triangles": 6864,
+      "materials": [
+        "L2_Gold",
+        "L2_TintPrimary_Woodgrain",
+        "L2_Cream_Enamel",
+        "L2_Charcoal_Enamel",
+        "L2_Berry_Enamel"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1077,
+        0.0,
+        -0.0359
+      ],
+      "bounds_godot_size": [
+        0.2154,
+        0.26,
+        0.0719
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "watch",
+      "filename": "l2_watch.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_watch.glb",
+      "sha256": "932429e5f1c08808d1dced9ea71b099f942de140925edfd6beacc9d209fef5d6",
+      "bytes": 90080,
+      "vertices": 1794,
+      "triangles": 3572,
+      "materials": [
+        "L2_Gold",
+        "L2_Cream_Enamel",
+        "L2_TintDark_Enamel",
+        "L2_White_Enamel",
+        "L2_Charcoal_Enamel"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.0912,
+        0.0,
+        -0.11
+      ],
+      "bounds_godot_size": [
+        0.1824,
+        0.1987,
+        0.22
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "lamp",
+      "filename": "l2_lamp.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_lamp.glb",
+      "sha256": "af77a4c842e895e04dc5f0dca82ce5748a3beef3475a8f3921fbc5674f8978da",
+      "bytes": 142968,
+      "vertices": 2708,
+      "triangles": 5260,
+      "materials": [
+        "L2_Wood_Woodgrain",
+        "L2_Yellow",
+        "L2_TintPrimary",
+        "L2_Cream",
+        "L2_Gold"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1458,
+        0.0,
+        -0.1458
+      ],
+      "bounds_godot_size": [
+        0.2915,
+        0.31,
+        0.2915
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "key",
+      "filename": "l2_key.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_key.glb",
+      "sha256": "373b1639fdf65a58f65a376590dc4aff1ceaa51b762dfc0b9e66500d69527423",
+      "bytes": 149256,
+      "vertices": 3072,
+      "triangles": 6128,
+      "materials": [
+        "L2_Gold"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.13,
+        0.0,
+        -0.0575
+      ],
+      "bounds_godot_size": [
+        0.26,
+        0.0334,
+        0.1149
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "stool",
+      "filename": "l2_stool.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_stool.glb",
+      "sha256": "f180faee08a8285750fd874f9694af613499b7ca6be278efe242738170b1fa1f",
+      "bytes": 110152,
+      "vertices": 2016,
+      "triangles": 4008,
+      "materials": [
+        "L2_TintSecondary",
+        "L2_TintPrimary",
+        "L2_Wood_Woodgrain"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.14,
+        0.0,
+        -0.14
+      ],
+      "bounds_godot_size": [
+        0.28,
+        0.2584,
+        0.28
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "apple",
+      "filename": "l2_apple.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_apple.glb",
+      "sha256": "d1da36ff6a523bef5a8e571434e4d17075b477058d7982f4c46f8e98378d7b29",
+      "bytes": 64292,
+      "vertices": 1212,
+      "triangles": 2408,
+      "materials": [
+        "L2_TintPrimary",
+        "L2_WoodDark",
+        "L2_Leaf_Leafskin",
+        "L2_LeafLight_Leafskin"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.117,
+        0.0,
+        -0.1184
+      ],
+      "bounds_godot_size": [
+        0.234,
+        0.24,
+        0.2368
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "tomato",
+      "filename": "l2_tomato.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_tomato.glb",
+      "sha256": "f13cc7497f61fda7327d77c8138c65949a49fdd59ffc0733c368902fb0528ac3",
+      "bytes": 100900,
+      "vertices": 1832,
+      "triangles": 3616,
+      "materials": [
+        "L2_Berry",
+        "L2_Leaf_Leafskin",
+        "L2_LeafLight_Leafskin"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.115,
+        0.0,
+        -0.1061
+      ],
+      "bounds_godot_size": [
+        0.23,
+        0.1916,
+        0.2122
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "orange",
+      "filename": "l2_orange.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_orange.glb",
+      "sha256": "5038a1de3065b1be9aa8c88659448687682383c4127b6c99482a8a5610249874",
+      "bytes": 63488,
+      "vertices": 1184,
+      "triangles": 2352,
+      "materials": [
+        "L2_Orange",
+        "L2_Leaf_Leafskin",
+        "L2_LeafLight_Leafskin"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.1065,
+        0.0,
+        -0.1065
+      ],
+      "bounds_godot_size": [
+        0.213,
+        0.23,
+        0.213
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "pear",
+      "filename": "l2_pear.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pear.glb",
+      "sha256": "f8a8ca6c86391882f739930a3843e61d06172108ce78c5c9d8a4ae4c5e01db25",
+      "bytes": 67644,
+      "vertices": 1360,
+      "triangles": 2704,
+      "materials": [
+        "L2_TintPrimary",
+        "L2_WoodDark",
+        "L2_Leaf_Leafskin",
+        "L2_LeafLight_Leafskin"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.0873,
+        0.0,
+        -0.0873
+      ],
+      "bounds_godot_size": [
+        0.1745,
+        0.26,
+        0.1745
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "banana",
+      "filename": "l2_banana.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_banana.glb",
+      "sha256": "5d81794989ad99b95316c551e5ed1660ef1c4f04543cc5739dd35cdefd833dbb",
+      "bytes": 43860,
+      "vertices": 816,
+      "triangles": 1616,
+      "materials": [
+        "L2_Yellow",
+        "L2_WoodDark_Woodgrain"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.135,
+        0.0,
+        -0.057
+      ],
+      "bounds_godot_size": [
+        0.27,
+        0.0997,
+        0.1141
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "egg",
+      "filename": "l2_egg.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_egg.glb",
+      "sha256": "453058d8d61ca2a058446bf40b656e5dacaff381c2bdb00f10633113fb733267",
+      "bytes": 69836,
+      "vertices": 1300,
+      "triangles": 2592,
+      "materials": [
+        "L2_Cream_Porous",
+        "L2_TintPrimary_Porous"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.105,
+        0.0,
+        -0.105
+      ],
+      "bounds_godot_size": [
+        0.21,
+        0.2047,
+        0.21
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "potato",
+      "filename": "l2_potato.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_potato.glb",
+      "sha256": "26cfbe91dfd07e16428dfeffa4cf9e017fac15e7417355f0c145869839726bf0",
+      "bytes": 111668,
+      "vertices": 2184,
+      "triangles": 4352,
+      "materials": [
+        "L2_Bread_Porous",
+        "L2_WoodDark_Porous"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.115,
+        0.0,
+        -0.0788
+      ],
+      "bounds_godot_size": [
+        0.23,
+        0.1246,
+        0.1576
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "vegetable",
+      "filename": "l2_vegetable.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_vegetable.glb",
+      "sha256": "11f32c4ca43d9215707f0dd9d130bc68380d2693607ec6f107c0fc1f5df64867",
+      "bytes": 153332,
+      "vertices": 2766,
+      "triangles": 5456,
+      "materials": [
+        "L2_LeafLight_Leafskin",
+        "L2_Cream",
+        "L2_Leaf_Leafskin"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.1285,
+        0.0,
+        -0.1119
+      ],
+      "bounds_godot_size": [
+        0.257,
+        0.26,
+        0.2238
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "fish",
+      "filename": "l2_fish.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_fish.glb",
+      "sha256": "ba54fd242591458dbb4f43401508132fb3b0c947eebcac76d748c2da19bd8841",
+      "bytes": 154920,
+      "vertices": 2946,
+      "triangles": 5864,
+      "materials": [
+        "L2_TintPrimary_Glaze",
+        "L2_Cream_Glaze",
+        "L2_White_Glaze",
+        "L2_TintDark_Glaze",
+        "L2_TintSecondary_Glaze",
+        "L2_Charcoal_Glaze",
+        "L2_Yellow_Glaze"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.155,
+        0.0,
+        -0.1019
+      ],
+      "bounds_godot_size": [
+        0.31,
+        0.0856,
+        0.2037
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "chicken",
+      "filename": "l2_chicken.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_chicken.glb",
+      "sha256": "57f8ba669d1f07a91eb820074b6265d88a8cd10a4fb0b924781c0cda02534644",
+      "bytes": 185840,
+      "vertices": 3770,
+      "triangles": 7516,
+      "materials": [
+        "L2_Cream",
+        "L2_Cream_Glaze",
+        "L2_Bread_Porous",
+        "L2_White",
+        "L2_Leaf"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.145,
+        0.0,
+        -0.145
+      ],
+      "bounds_godot_size": [
+        0.29,
+        0.1169,
+        0.29
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "dumplings",
+      "filename": "l2_dumplings.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_dumplings.glb",
+      "sha256": "4dd86756707838ff433c1b4e5e3f50c382a2aedd765c7da470860fa483657575",
+      "bytes": 209260,
+      "vertices": 3788,
+      "triangles": 7544,
+      "materials": [
+        "L2_WoodDark_Woodgrain",
+        "L2_Wood_Woodgrain",
+        "L2_Leaf",
+        "L2_Cream_Steamed"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.145,
+        0.0,
+        -0.145
+      ],
+      "bounds_godot_size": [
+        0.29,
+        0.082,
+        0.29
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "sandwich",
+      "filename": "l2_sandwich.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_sandwich.glb",
+      "sha256": "7d585e9650108c114058fc875ffb40d455468875ffc18417502559c9b8b2dff8",
+      "bytes": 179580,
+      "vertices": 3542,
+      "triangles": 7044,
+      "materials": [
+        "L2_Bread_Porous",
+        "L2_White_Glaze",
+        "L2_Crumb_Porous",
+        "L2_LeafLight",
+        "L2_Berry",
+        "L2_Yellow"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.14,
+        0.0,
+        -0.14
+      ],
+      "bounds_godot_size": [
+        0.28,
+        0.0978,
+        0.28
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "hamburger",
+      "filename": "l2_hamburger.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_hamburger.glb",
+      "sha256": "2c479b1553ff9e8f04f63d4c39caf5d4087c2b7a8a2572f238c8e94620dbce64",
+      "bytes": 336520,
+      "vertices": 6492,
+      "triangles": 12812,
+      "materials": [
+        "L2_Bread_Porous",
+        "L2_White_Glaze",
+        "L2_Leaf",
+        "L2_LeafLight",
+        "L2_WoodDark_Porous",
+        "L2_Orange",
+        "L2_Berry",
+        "L2_Crumb",
+        "L2_Cream"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.135,
+        0.0,
+        -0.135
+      ],
+      "bounds_godot_size": [
+        0.27,
+        0.1509,
+        0.27
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "cake",
+      "filename": "l2_cake.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_cake.glb",
+      "sha256": "01fe19f3acb558a6ee08771baaa94d96479fb81ce34c31c5fb78b26779bfef9e",
+      "bytes": 322168,
+      "vertices": 6458,
+      "triangles": 12860,
+      "materials": [
+        "L2_Cream",
+        "L2_White_Glaze",
+        "L2_TintPrimary_Porous",
+        "L2_White",
+        "L2_Berry"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.145,
+        0.0,
+        -0.145
+      ],
+      "bounds_godot_size": [
+        0.29,
+        0.1997,
+        0.29
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "candy",
+      "filename": "l2_candy.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_candy.glb",
+      "sha256": "0184d1474f5e2137599d24bf3f9846fc915147c55ef7935d041a4c1874f0751b",
+      "bytes": 80504,
+      "vertices": 1554,
+      "triangles": 3096,
+      "materials": [
+        "L2_TintPrimary_Wax",
+        "L2_Cream_Wax",
+        "L2_TintSecondary_Wax"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.125,
+        0.0,
+        -0.0559
+      ],
+      "bounds_godot_size": [
+        0.25,
+        0.1117,
+        0.1117
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "milk",
+      "filename": "l2_milk.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_milk.glb",
+      "sha256": "528dee7e1cbb06432a342deb7cf17b6a9e1c6bd23819d86e57927337a5ec61a7",
+      "bytes": 41116,
+      "vertices": 672,
+      "triangles": 1324,
+      "materials": [
+        "L2_Sky",
+        "L2_White_Papergrain",
+        "L2_Cream_Papergrain"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.062,
+        0.0,
+        -0.062
+      ],
+      "bounds_godot_size": [
+        0.1241,
+        0.26,
+        0.1241
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "cup",
+      "filename": "l2_cup.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_cup.glb",
+      "sha256": "22c5bbd6df2818f851e009df644820292dd546e3beedb0f4da52f9217af2f2e6",
+      "bytes": 73084,
+      "vertices": 1490,
+      "triangles": 2968,
+      "materials": [
+        "L2_TintSecondary_Glaze",
+        "L2_TintPrimary_Glaze",
+        "L2_Cream_Glaze"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.11,
+        0.0,
+        -0.083
+      ],
+      "bounds_godot_size": [
+        0.22,
+        0.1579,
+        0.166
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "juice_glass",
+      "filename": "l2_juice_glass.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_juice_glass.glb",
+      "sha256": "0292cb6e67eb465f4af05e680bdaf38a60128f40ab64eaafbff2dce8cc9807f6",
+      "bytes": 98028,
+      "vertices": 1926,
+      "triangles": 3836,
+      "materials": [
+        "L2_Orange_Glaze",
+        "L2_ClearGlass",
+        "L2_Yellow_Glaze",
+        "L2_Berry_Glaze"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.099,
+        0.0,
+        -0.0831
+      ],
+      "bounds_godot_size": [
+        0.198,
+        0.25,
+        0.1662
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "teapot",
+      "filename": "l2_teapot.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_teapot.glb",
+      "sha256": "5790e07d1cb86eb829db1e6d4e85018a9eae4be081ab4f16e103bcb82d3d3a0b",
+      "bytes": 99348,
+      "vertices": 2065,
+      "triangles": 4112,
+      "materials": [
+        "L2_TintPrimary_Glaze",
+        "L2_TintSecondary_Glaze",
+        "L2_Cream_Glaze"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.145,
+        0.0,
+        -0.1011
+      ],
+      "bounds_godot_size": [
+        0.29,
+        0.198,
+        0.2021
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "plate",
+      "filename": "l2_plate.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_plate.glb",
+      "sha256": "debcc0feb4bb1e671ce12493cfeb7c713e52cb5c9b07b9a0425ba6d455354575",
+      "bytes": 79808,
+      "vertices": 1722,
+      "triangles": 3440,
+      "materials": [
+        "L2_TintPrimary_Glaze",
+        "L2_Gold"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.145,
+        0.0,
+        -0.145
+      ],
+      "bounds_godot_size": [
+        0.29,
+        0.0319,
+        0.29
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "bowl",
+      "filename": "l2_bowl.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_bowl.glb",
+      "sha256": "b4813aac839f19b59b6c24cd090534c71fae49d011b4d10296000ef8be766ba9",
+      "bytes": 84952,
+      "vertices": 1838,
+      "triangles": 3672,
+      "materials": [
+        "L2_Cream_Glaze",
+        "L2_TintPrimary_Glaze"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.125,
+        0.0,
+        -0.125
+      ],
+      "bounds_godot_size": [
+        0.25,
+        0.1164,
+        0.25
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "rice_bowl",
+      "filename": "l2_rice_bowl.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_rice_bowl.glb",
+      "sha256": "24f307608b78ab1fd250b028fe25eecf737a8bfdd4620e515ad4327edbcdbd7a",
+      "bytes": 484240,
+      "vertices": 8144,
+      "triangles": 15384,
+      "materials": [
+        "L2_Cream_Glaze",
+        "L2_Sky_Glaze",
+        "L2_Cream_Steamed",
+        "L2_White_Steamed",
+        "L2_Charcoal_Steamed"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.125,
+        0.0,
+        -0.125
+      ],
+      "bounds_godot_size": [
+        0.25,
+        0.1516,
+        0.25
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "noodle_bowl",
+      "filename": "l2_noodle_bowl.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_noodle_bowl.glb",
+      "sha256": "03008414f2b2b6544fb9f35e42637412481109d4127977cea4d88b9c0bd1f39b",
+      "bytes": 252140,
+      "vertices": 5048,
+      "triangles": 10052,
+      "materials": [
+        "L2_Cream_Glaze",
+        "L2_Berry_Glaze",
+        "L2_Bread_Porous",
+        "L2_Crumb_Steamed",
+        "L2_White_Steamed",
+        "L2_Orange_Steamed",
+        "L2_Leaf_Glaze",
+        "L2_LeafLight_Glaze"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.13,
+        0.0,
+        -0.13
+      ],
+      "bounds_godot_size": [
+        0.26,
+        0.1333,
+        0.26
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "soup_bowl",
+      "filename": "l2_soup_bowl.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_soup_bowl.glb",
+      "sha256": "c64d4b477c8936d91f4eb4367d734f93b1068cba49d7903d50137ccdfcbeffac",
+      "bytes": 158932,
+      "vertices": 3278,
+      "triangles": 6532,
+      "materials": [
+        "L2_Cream_Glaze",
+        "L2_Orange_Glaze",
+        "L2_Leaf_Glaze",
+        "L2_Yellow_Glaze"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.125,
+        0.0,
+        -0.125
+      ],
+      "bounds_godot_size": [
+        0.25,
+        0.1164,
+        0.25
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "pot",
+      "filename": "l2_pot.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pot.glb",
+      "sha256": "2325379307ad5ddaa5a4e4ff7f2bdebfd276462fbb3d745194ab05bca379db14",
+      "bytes": 140752,
+      "vertices": 3012,
+      "triangles": 6016,
+      "materials": [
+        "L2_TintPrimary_Enamel",
+        "L2_TintDark_Enamel",
+        "L2_Charcoal_Enamel"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.145,
+        0.0,
+        -0.1103
+      ],
+      "bounds_godot_size": [
+        0.29,
+        0.1762,
+        0.2206
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "chopsticks",
+      "filename": "l2_chopsticks.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_chopsticks.glb",
+      "sha256": "e4022caf82644cb2d3be09162c8714856955ccd2f9ee294dc107aa93cff0e22a",
+      "bytes": 45176,
+      "vertices": 818,
+      "triangles": 1624,
+      "materials": [
+        "L2_Cream",
+        "L2_Wood_Woodgrain"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.155,
+        0.0,
+        -0.0439
+      ],
+      "bounds_godot_size": [
+        0.31,
+        0.0469,
+        0.0878
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "spoon",
+      "filename": "l2_spoon.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_spoon.glb",
+      "sha256": "34b01386408ea89e349de5b28b5e9a470e1a38ee3ebedc1242720d2db2893ef1",
+      "bytes": 70140,
+      "vertices": 1348,
+      "triangles": 2680,
+      "materials": [
+        "L2_Silver",
+        "L2_Cream_Enamel",
+        "L2_White_Enamel",
+        "L2_TintPrimary_Enamel"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.13,
+        0.0,
+        -0.0399
+      ],
+      "bounds_godot_size": [
+        0.26,
+        0.0476,
+        0.0799
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "teddy",
+      "filename": "l2_teddy.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_teddy.glb",
+      "sha256": "dd703abd192fcbb9b6be117fd94474fa83ea310d920964970c196b5646b86e5d",
+      "bytes": 506772,
+      "vertices": 9858,
+      "triangles": 19648,
+      "materials": [
+        "L2_TintPrimary_Linen",
+        "L2_Cream_Linen",
+        "L2_TintSecondary_Linen",
+        "L2_Charcoal",
+        "L2_Pink_Linen",
+        "L2_Berry_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1151,
+        0.0,
+        -0.0886
+      ],
+      "bounds_godot_size": [
+        0.2303,
+        0.28,
+        0.1771
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "ball",
+      "filename": "l2_ball.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_ball.glb",
+      "sha256": "17b39626906f816bceb5ee33098ac72b529246109e6de32265102808a77d8876",
+      "bytes": 154216,
+      "vertices": 2928,
+      "triangles": 5848,
+      "materials": [
+        "L2_Cream_Rubber",
+        "L2_TintPrimary_Rubber",
+        "L2_Yellow_Rubber",
+        "L2_White_Rubber"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.115,
+        0.0,
+        -0.115
+      ],
+      "bounds_godot_size": [
+        0.23,
+        0.2281,
+        0.23
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "football",
+      "filename": "l2_football.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_football.glb",
+      "sha256": "611cd1cdf4b5b663bd7692fb4c698edddbb965025440a4c38cfa530a0111ca3a",
+      "bytes": 128636,
+      "vertices": 2240,
+      "triangles": 4428,
+      "materials": [
+        "L2_Charcoal_Rubber",
+        "L2_White_Rubber"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.115,
+        0.0,
+        -0.1148
+      ],
+      "bounds_godot_size": [
+        0.23,
+        0.2298,
+        0.2297
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "basketball",
+      "filename": "l2_basketball.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_basketball.glb",
+      "sha256": "fdbe3a7b6d413df78173c4e3323829e30995bc2b34b1d0956f799b03f058bfb4",
+      "bytes": 198236,
+      "vertices": 3668,
+      "triangles": 7356,
+      "materials": [
+        "L2_Orange_Rubber",
+        "L2_Charcoal_Rubber"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.115,
+        0.0,
+        -0.115
+      ],
+      "bounds_godot_size": [
+        0.23,
+        0.23,
+        0.23
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "kite",
+      "filename": "l2_kite.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_kite.glb",
+      "sha256": "fc711145e1258ea1a6f733f10092bd4d6e0e020faf5d794585be9dc9f5be9c45",
+      "bytes": 56864,
+      "vertices": 832,
+      "triangles": 1632,
+      "materials": [
+        "L2_Berry_Linen",
+        "L2_Wood_Woodgrain",
+        "L2_TintPrimary_Linen",
+        "L2_TintSecondary_Linen",
+        "L2_Cream_Linen",
+        "L2_Yellow_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.1328,
+        0.0,
+        -0.0651
+      ],
+      "bounds_godot_size": [
+        0.2656,
+        0.31,
+        0.1301
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "rope",
+      "filename": "l2_rope.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_rope.glb",
+      "sha256": "e0c19773769ae66563758af30f6e288a6706da5f3f54c77fcbbb8c80e48b491d",
+      "bytes": 121384,
+      "vertices": 2160,
+      "triangles": 4304,
+      "materials": [
+        "L2_TintPrimary_Linen",
+        "L2_Berry_Linen",
+        "L2_Cream_Linen"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.14,
+        0.0,
+        -0.1283
+      ],
+      "bounds_godot_size": [
+        0.28,
+        0.0606,
+        0.2566
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "bell",
+      "filename": "l2_bell.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_bell.glb",
+      "sha256": "438bfdf5ec2f10f42843ee8028954156ed588649c274f5f1e2ca92b41cd0453b",
+      "bytes": 112644,
+      "vertices": 2324,
+      "triangles": 4480,
+      "materials": [
+        "L2_Gold",
+        "L2_WoodDark_Woodgrain"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.1098,
+        0.0,
+        -0.1098
+      ],
+      "bounds_godot_size": [
+        0.2196,
+        0.26,
+        0.2196
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "violin",
+      "filename": "l2_violin.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_violin.glb",
+      "sha256": "62be1a29042a107c99bc44f9f2fd76e139c890b3727b875c13583803e6109864",
+      "bytes": 156740,
+      "vertices": 2750,
+      "triangles": 5424,
+      "materials": [
+        "L2_WoodDark_Woodgrain",
+        "L2_Wood_Woodgrain",
+        "L2_WoodDark",
+        "L2_Cream",
+        "L2_Charcoal",
+        "L2_Silver"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.0812,
+        0.0,
+        -0.0355
+      ],
+      "bounds_godot_size": [
+        0.1624,
+        0.34,
+        0.0711
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "guitar",
+      "filename": "l2_guitar.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_guitar.glb",
+      "sha256": "80fb447e66ac8aac86d6b6ff0d49bec1a31f833644c6bf81be5db5fb4d013bb1",
+      "bytes": 168552,
+      "vertices": 2916,
+      "triangles": 5700,
+      "materials": [
+        "L2_WoodDark_Woodgrain",
+        "L2_Wood_Woodgrain",
+        "L2_WoodDark",
+        "L2_Cream",
+        "L2_Charcoal",
+        "L2_Silver"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.0818,
+        0.0,
+        -0.0377
+      ],
+      "bounds_godot_size": [
+        0.1636,
+        0.35,
+        0.0754
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "star",
+      "filename": "l2_star.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_star.glb",
+      "sha256": "b1b0462efe55235566aeaafb901a1e8054b3141cdaf3d5daa937ed27e812df86",
+      "bytes": 12380,
+      "vertices": 158,
+      "triangles": 308,
+      "materials": [
+        "L2_Cream_Woodgrain",
+        "L2_Yellow_Woodgrain"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.0873,
+        0.0,
+        -0.0412
+      ],
+      "bounds_godot_size": [
+        0.1746,
+        0.26,
+        0.0824
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "sun",
+      "filename": "l2_sun.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_sun.glb",
+      "sha256": "ca17ecba03c066804029d101bc1e875c52090847fc26ef6298dff54a49041bba",
+      "bytes": 236984,
+      "vertices": 4344,
+      "triangles": 8632,
+      "materials": [
+        "L2_White_Woodgrain",
+        "L2_Yellow_Woodgrain",
+        "L2_Orange_Woodgrain"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.1306,
+        0.0,
+        -0.0394
+      ],
+      "bounds_godot_size": [
+        0.2611,
+        0.28,
+        0.0789
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "cloud",
+      "filename": "l2_cloud.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_cloud.glb",
+      "sha256": "e023d532f09e4392a6fcd0dff603a6dc40e6e85aab4017b3990744439720be6e",
+      "bytes": 167048,
+      "vertices": 3306,
+      "triangles": 6584,
+      "materials": [
+        "L2_White_Felt",
+        "L2_Cream",
+        "L2_GlassWater"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.125,
+        0.0,
+        -0.07
+      ],
+      "bounds_godot_size": [
+        0.25,
+        0.2,
+        0.14
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "rain_jar",
+      "filename": "l2_rain_jar.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_rain_jar.glb",
+      "sha256": "8f328bf9d96d12df20ad2d6291da073cb5e4eb77159b9d17908f45b573489aaf",
+      "bytes": 165964,
+      "vertices": 3284,
+      "triangles": 6536,
+      "materials": [
+        "L2_White",
+        "L2_GlassWater",
+        "L2_Wood_Woodgrain",
+        "L2_Sky"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.0953,
+        0.0,
+        -0.0953
+      ],
+      "bounds_godot_size": [
+        0.1905,
+        0.25,
+        0.1905
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "pinwheel",
+      "filename": "l2_pinwheel.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_pinwheel.glb",
+      "sha256": "5000c723f481a6761c92b66177a977099641c952a6ae4a6cb97ff43814cef149",
+      "bytes": 169568,
+      "vertices": 3306,
+      "triangles": 6584,
+      "materials": [
+        "L2_Wood_Woodgrain",
+        "L2_TintPrimary",
+        "L2_Yellow",
+        "L2_Berry",
+        "L2_LeafLight",
+        "L2_White"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.0889,
+        0.0,
+        -0.061
+      ],
+      "bounds_godot_size": [
+        0.1779,
+        0.29,
+        0.1221
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "flower",
+      "filename": "l2_flower.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_flower.glb",
+      "sha256": "9c450978fcdba1c42786a2fdc666705e5f79038bd4a9680a04ba0cc1ac632d34",
+      "bytes": 305196,
+      "vertices": 5886,
+      "triangles": 11716,
+      "materials": [
+        "L2_Yellow",
+        "L2_Terracotta_Porous",
+        "L2_Soil_Porous",
+        "L2_Leaf_Leafskin",
+        "L2_LeafLight_Leafskin",
+        "L2_TintPrimary"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.0827,
+        0.0,
+        -0.0827
+      ],
+      "bounds_godot_size": [
+        0.1655,
+        0.29,
+        0.1655
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "plant",
+      "filename": "l2_plant.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_plant.glb",
+      "sha256": "17eb20a80e8320e79d054b7a06b4f7147d642c090cf2c63b53272b47d7350092",
+      "bytes": 172304,
+      "vertices": 2858,
+      "triangles": 5648,
+      "materials": [
+        "L2_Leaf_Leafskin",
+        "L2_Terracotta_Porous",
+        "L2_Soil_Porous",
+        "L2_LeafLight_Leafskin"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.1248,
+        0.0,
+        -0.1099
+      ],
+      "bounds_godot_size": [
+        0.2496,
+        0.28,
+        0.2198
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "leaf",
+      "filename": "l2_leaf.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_leaf.glb",
+      "sha256": "997d773fc51444e753f314a38cbda31072f4557811f923a496d58233bda471b8",
+      "bytes": 16736,
+      "vertices": 230,
+      "triangles": 448,
+      "materials": [
+        "L2_WoodDark_Woodgrain",
+        "L2_Leaf_Leafskin",
+        "L2_LeafLight_Leafskin"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.125,
+        0.0,
+        -0.0464
+      ],
+      "bounds_godot_size": [
+        0.25,
+        0.066,
+        0.0928
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "bee",
+      "filename": "l2_bee.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_bee.glb",
+      "sha256": "b34bd38c4bd56fb3bac4dfcbaac8e3cf281d86d8d68013ff657f357b4f199e08",
+      "bytes": 207080,
+      "vertices": 4132,
+      "triangles": 8228,
+      "materials": [
+        "L2_Charcoal_Glaze",
+        "L2_Leaf_Leafskin",
+        "L2_LeafLight_Leafskin",
+        "L2_Yellow_Glaze",
+        "L2_GlassWater"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.115,
+        0.0,
+        -0.0999
+      ],
+      "bounds_godot_size": [
+        0.23,
+        0.1988,
+        0.1998
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "bird",
+      "filename": "l2_bird.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_bird.glb",
+      "sha256": "7a2a11ce51ddcd82cd448c435acc622f826787cc15d6ce1f10e3971bb5216e62",
+      "bytes": 218612,
+      "vertices": 4278,
+      "triangles": 8516,
+      "materials": [
+        "L2_Orange",
+        "L2_Wood_Woodgrain",
+        "L2_TintPrimary",
+        "L2_Cream",
+        "L2_TintSecondary",
+        "L2_TintDark",
+        "L2_Charcoal"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.0899,
+        0.0,
+        -0.12
+      ],
+      "bounds_godot_size": [
+        0.1799,
+        0.1968,
+        0.24
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "duck",
+      "filename": "l2_duck.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_duck.glb",
+      "sha256": "0b9e1eaedb54fa5e33951584168618589b10ffeaf57868e6e6bd26a98bbdfa91",
+      "bytes": 201180,
+      "vertices": 4038,
+      "triangles": 8044,
+      "materials": [
+        "L2_Orange_Glaze",
+        "L2_Yellow_Glaze",
+        "L2_Charcoal_Glaze"
+      ],
+      "tintable": false,
+      "bounds_godot_min": [
+        -0.0778,
+        0.0,
+        -0.115
+      ],
+      "bounds_godot_size": [
+        0.1555,
+        0.1676,
+        0.23
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "cat",
+      "filename": "l2_cat.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_cat.glb",
+      "sha256": "0fa9f8d3129a1f18486e74ba5a845f2d7aef51e5d69bfbfa351ef7b52d02bd8d",
+      "bytes": 293476,
+      "vertices": 5794,
+      "triangles": 11540,
+      "materials": [
+        "L2_Gold",
+        "L2_TintPrimary_Felt",
+        "L2_Cream_Felt",
+        "L2_TintSecondary_Felt",
+        "L2_Berry",
+        "L2_Charcoal",
+        "L2_Pink",
+        "L2_TintDark_Felt"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.0841,
+        0.0,
+        -0.0932
+      ],
+      "bounds_godot_size": [
+        0.1682,
+        0.26,
+        0.1864
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "dog",
+      "filename": "l2_dog.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_dog.glb",
+      "sha256": "2313d4bca6b81a40df9ed81d1858d2e9d9db8c91b98c499007389cd3c7726e9e",
+      "bytes": 334576,
+      "vertices": 6602,
+      "triangles": 13156,
+      "materials": [
+        "L2_TintPrimary_Felt",
+        "L2_Cream_Felt",
+        "L2_TintSecondary_Felt",
+        "L2_Charcoal",
+        "L2_Sky",
+        "L2_TintDark_Felt"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.0892,
+        0.0,
+        -0.13
+      ],
+      "bounds_godot_size": [
+        0.1783,
+        0.2496,
+        0.26
+      ],
+      "pivot": "bottom_center_grounded"
+    },
+    {
+      "id": "gift_box",
+      "filename": "l2_gift_box.glb",
+      "runtime_path": "res://assets/props/layer2_storybook_v1/l2_gift_box.glb",
+      "sha256": "5d769bbd55fc601afccc06b06c8d54ca330034892630fc4a286656ff6110fb8d",
+      "bytes": 80732,
+      "vertices": 1536,
+      "triangles": 3056,
+      "materials": [
+        "L2_TintPrimary_Papergrain",
+        "L2_TintSecondary",
+        "L2_Cream_Papergrain",
+        "L2_Berry"
+      ],
+      "tintable": true,
+      "bounds_godot_min": [
+        -0.12,
+        0.0,
+        -0.12
+      ],
+      "bounds_godot_size": [
+        0.24,
+        0.225,
+        0.24
+      ],
+      "pivot": "bottom_center_grounded"
+    }
+  ]
+}

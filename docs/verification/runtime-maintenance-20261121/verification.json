@@ -1,0 +1,211 @@
+{
+  "timestamp_utc": "2026-11-20T16:36:09.909915+00:00",
+  "passed": true,
+  "suite_count": 17,
+  "suites": [
+    {
+      "name": "test_state",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 2.38,
+      "summary": [
+        "PASS: state persistence, recovery, rewards, inventory, learning, legacy migration, life activities and atomic purchase guards"
+      ]
+    },
+    {
+      "name": "test_home_state",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 1.254,
+      "summary": [
+        "{\"checks\":23,\"failures\":[],\"status\":\"PASS\"}"
+      ]
+    },
+    {
+      "name": "test_creation_state",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 3.285,
+      "summary": [
+        "CREATION_STATE: 110 checks, 0 failures"
+      ]
+    },
+    {
+      "name": "test_shared_profile",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 4.497,
+      "summary": [
+        "SHARED_PROFILE_TESTS checks=17 failures=0"
+      ]
+    },
+    {
+      "name": "test_shared_outfit_flow",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 13.234,
+      "summary": [
+        "SHARED_OUTFIT_FLOW checks=9 failures=0"
+      ]
+    },
+    {
+      "name": "test_character_voices",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 1.794,
+      "summary": [
+        "CHARACTER_VOICES_SUMMARY: passed=88 failed=0"
+      ]
+    },
+    {
+      "name": "test_progression_integrity",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 1.623,
+      "summary": [
+        "PROGRESSION_READ_BENCHMARK_US=1904",
+        "PROGRESSION_INTEGRITY: 24 checks, 0 failures"
+      ]
+    },
+    {
+      "name": "test_ai_voice_lifecycle",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 14.888,
+      "summary": [
+        "VOICE_LIFECYCLE: 27 checks, 0 failures"
+      ]
+    },
+    {
+      "name": "test_v4_overhaul",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 34.018,
+      "summary": [
+        "PASS: StudyGames V4 full completion (Forward+, 44-Scene Diorama Plinths, 6x5x4 3D Wardrobe, 30-Room Tactile Life Stations + EchoCraft, 8-Book/81-Unit 3-Stage Cozy Storylines + Chapter Atlas + 3D Plaques, 100% Diegetic Bubbles, Tolerant Voice Encouragement, 3D Pop-up Book Theater, Stealth IRT)"
+      ]
+    },
+    {
+      "name": "test_v5_world_and_palace",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 2.736,
+      "summary": [
+        "V5_WORLD_AND_PALACE checks=264 failures=0"
+      ]
+    },
+    {
+      "name": "test_v6_home_school_immersion",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 27.914,
+      "summary": [
+        "V6 Home & School Immersion Suite: 368 passed, 0 failed"
+      ]
+    },
+    {
+      "name": "test_v7_level_exp_economy",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 14.126,
+      "summary": [
+        "V7 Level+EXP & Economy Suite: 45 passed, 0 failed"
+      ]
+    },
+    {
+      "name": "shared_web_native",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 21.203,
+      "summary": [
+        "Ran 27 tests in 19.899s",
+        "OK"
+      ]
+    },
+    {
+      "name": "real_offline_speech",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 46.777,
+      "summary": [
+        "8 passed, 1 warning in 45.13s"
+      ]
+    },
+    {
+      "name": "native_voice_lifecycle",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 26.8,
+      "summary": [
+        "VOICE_LIFECYCLE: 28 checks, 0 failures"
+      ]
+    },
+    {
+      "name": "test_ai_voice_slow_response",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 7.17,
+      "summary": [
+        "VOICE_SLOW_RESPONSE: 5 checks, 0 failures"
+      ]
+    },
+    {
+      "name": "speech_runtime",
+      "passed": true,
+      "exit_code": 0,
+      "timed_out": false,
+      "engine_error_count": 0,
+      "seconds": 13.061,
+      "summary": [
+        "25 passed in 12.09s"
+      ]
+    }
+  ],
+  "protected_save_files": 4,
+  "protected_saves_unchanged": true,
+  "supplemental_note": "Cold-start latency follow-up: slow HTTP playback and updated speech deadline were checked after the main regression run.",
+  "delivery_checked_at_utc": "2026-11-20T16:41:02.619770+00:00",
+  "source_sha256": {
+    "game/core/progression_ledger.gd": "8e57175123f128c7771edc1984714b53c6ea1db7278f821bc84b1065153694ab",
+    "game/scripts/game_state.gd": "c316b5a8fc69b8ea159773942e26736d96ab7e8f88fd7ce543db619ceab72988",
+    "game/core/ai_companion_bridge.gd": "ce69f911f2e507bbb8cfe9194620ddcaec402a15894d93aa00b06b0ab44c35dd",
+    "game/scripts/main.gd": "fc36191dfbbdf9a2dfd69a45e28fb0d701974e88d3b6e412734cae2f3f1e839a",
+    "game/ui_v4/diegetic_dialogue.gd": "a87a9e751f836804b42f922e0842b25b5d4475988425499a7a87d3571f14603e",
+    "services/ai_companion/speech_service.py": "35f416e3ccb8175452be55545aadeb7dcb0022136ffb9219a91780aa8659c11a",
+    "services/ai_companion/app.py": "719cae259371040e33807c29cbf5f9471134bde24022332d670f88edcdc6feb8",
+    "start-ai-companion.ps1": "1542dd3d318a84930e241d9dd09c8a0537ef8136ba9c2056525832856e411057",
+    "scripts/verify_runtime.py": "96f181af991e246a0c1bcd2a30f399b341a26acb25af63889b7fb9fc3dfee5ca"
+  }
+}

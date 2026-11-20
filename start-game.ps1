@@ -51,8 +51,12 @@ if ($Built) {
     if (-not (Test-Path -LiteralPath $builtGame -PathType Leaf) -or -not (Test-Path -LiteralPath $builtPack -PathType Leaf)) {
         throw 'The requested Windows build is missing. Run without -Built to use the current local project.'
     }
+    $aiCompanionBuilt = Join-Path $PSScriptRoot 'start-ai-companion.ps1'
+    if (Test-Path -LiteralPath $aiCompanionBuilt -PathType Leaf) {
+        try { & $aiCompanionBuilt | Out-Host } catch { Write-Warning "AI Companion startup warning: $_" }
+    }
     Start-Process -FilePath $builtGame -WorkingDirectory (Split-Path -Parent $builtGame) -WindowStyle Normal | Out-Null
-    Write-Host 'Alphabet Island started from the explicitly selected older Windows build. This entry does not use shared profiles; run without -Built for shared desktop/web progress.'
+    Write-Host 'Alphabet Island started from the Windows build with AI Safe Companion.'
     return
 }
 

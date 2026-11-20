@@ -98,6 +98,8 @@ func configure(world: Node3D, next_room: String, settings: Dictionary = {}) -> D
 		var requested: Array = []
 		if settings.has("actor_ids"):
 			requested = settings.actor_ids as Array
+		elif not bool(context.get("validation_mode", true)):
+			requested = preload("res://gameplay/home_school_cast_director.gd").actors_for_room(room_id)
 		elif room_id == "home":
 			requested = ["npc_bear_uncle"]
 		elif room_id == "school":
@@ -385,24 +387,42 @@ func _spawn_from_markers(requested: Array) -> void:
 	var base := _marker_position("SG_NPC_HOST")
 	if not _has_marker("SG_NPC_HOST"):
 		base = _marker_position("SG_SPAWN")
-	for requested_id: Variant in requested:
-		var id := ActorScript.canonical_id(str(requested_id))
+	for requested_item: Variant in requested:
+		var raw_id := ""
+		var spawn_opts := {"validate_position": false}
+		if requested_item is Dictionary:
+			var spec: Dictionary = requested_item
+			raw_id = str(spec.get("id", ""))
+			var dname := str(spec.get("display_name", "")).strip_edges()
+			if not dname.is_empty():
+				spawn_opts["display_name"] = dname
+		else:
+			raw_id = str(requested_item)
+		var id := ActorScript.canonical_id(raw_id)
 		var found := false
-		for radius: float in [2.6, 3.8, 5.2, 6.6]:
-			for index: int in range(16):
-				var angle := float(index) * TAU / 16.0 + 0.20
-				var point := base + Vector3(cos(angle) * radius, 0, sin(angle) * radius)
-				var floor_hit := _find_spawn_floor(point)
-				if floor_hit.is_empty():
-					continue
-				point = floor_hit.position as Vector3
-				if not _spawn_clear(point):
-					continue
-				var actor := spawn_actor(id, point + Vector3.UP * 0.02, {"validate_position":false})
-				if actor:
-					actor.face(base + Vector3(0, 0, 5))
-					found = true
-				break
+		for pass_idx: int in range(2):
+			var radii: Array = [2.6, 3.8, 5.2, 6.6] if pass_idx == 0 else [1.35, 1.95, 2.6, 3.4, 4.4]
+			var min_clear := 2.4 if pass_idx == 0 else 1.25
+			for radius: float in radii:
+				for index: int in range(16):
+					var angle := float(index) * TAU / 16.0 + 0.20
+					var point := base + Vector3(cos(angle) * radius, 0, sin(angle) * radius)
+					if _world_info.has("bounds") and _world_info.bounds is Rect2:
+						if not (_world_info.bounds as Rect2).grow(-0.55).has_point(Vector2(point.x, point.z)):
+							continue
+					var floor_hit := _find_spawn_floor(point)
+					if floor_hit.is_empty():
+						continue
+					point = floor_hit.position as Vector3
+					if not _spawn_clear(point, min_clear):
+						continue
+					var actor := spawn_actor(id, point + Vector3.UP * 0.02, spawn_opts)
+					if actor:
+						actor.face(base + Vector3(0, 0, 5))
+						found = true
+					break
+				if found:
+					break
 			if found:
 				break
 		if not found:
@@ -434,7 +454,7 @@ func _find_spawn_floor(point: Vector3) -> Dictionary:
 		return {}
 	return ground
 
-func _spawn_clear(point: Vector3) -> bool:
+func _spawn_clear(point: Vector3, clearance: float = 2.4) -> bool:
 	var shape := CapsuleShape3D.new()
 	shape.radius = 0.48
 	shape.height = 1.9
@@ -445,12 +465,14 @@ func _spawn_clear(point: Vector3) -> bool:
 	if not get_world_3d().direct_space_state.intersect_shape(query, 1).is_empty():
 		return false
 	var camera_offset := Vector3(8,28,28) if room_id=="home" else Vector3(18,25,24)
-	if not preload("res://scripts/interaction_layout.gd").can_place_actor(point,"",_world_info.get("interactions",[]),camera_offset,2.4):
+	if not preload("res://scripts/interaction_layout.gd").can_place_actor(point,"",_world_info.get("interactions",[]),camera_offset,clearance):
 		return false
+	var min_actor_dist := 2.2 if clearance >= 2.0 else 1.45
+	var min_player_dist := 1.5 if clearance >= 2.0 else 1.15
 	for actor: Variant in _actors.values():
-		if is_instance_valid(actor) and not actor.is_queued_for_deletion() and actor.global_position.distance_to(point) < 2.2:
+		if is_instance_valid(actor) and not actor.is_queued_for_deletion() and actor.global_position.distance_to(point) < min_actor_dist:
 			return false
-	if is_instance_valid(_player) and _player.global_position.distance_to(point) < 1.5:
+	if is_instance_valid(_player) and _player.global_position.distance_to(point) < min_player_dist:
 		return false
 	return true
 
@@ -471,6 +493,8 @@ func spawn_actor(id: String, world_position: Vector3, options: Dictionary = {}) 
 		return null
 	add_child(actor)
 	actor.global_position = world_position
+	if preload("res://gameplay/home_school_cast_director.gd").is_home_or_school(room_id):
+		actor.attend_to(_player)
 	actor.semantic_event.connect(_on_actor_semantic_event)
 	_actors[canonical] = actor
 	_update_clock_flags()

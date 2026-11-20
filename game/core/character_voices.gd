@@ -179,18 +179,26 @@ static func npc_for_room(room_id: String) -> String:
 		var letter := room_id.trim_prefix("landmark_").to_lower()
 		return "resident_" + letter
 	var campus_map := {
-		"school": "resident_school",
+		"school": "textbook_lingling",
 		"classroom": "textbook_miss_li",
-		"music_room": "resident_music_room",
-		"art_room": "resident_art_room",
-		"science_room": "resident_science_room",
-		"canteen": "resident_canteen",
+		"music_room": "textbook_miss_lin",
+		"art_room": "textbook_lingling",
+		"science_room": "textbook_mr_chen",
+		"canteen": "textbook_dongdong",
 		"playground": "textbook_peter",
-		"football_field": "resident_football_field",
+		"football_field": "textbook_mr_wang",
 		"village": "npc_bear_uncle",
+		"home": "textbook_role_lingling_mother",
+		"home_kitchen": "textbook_role_lingling_mother",
+		"home_bedroom": "textbook_role_lingling_mother",
+		"home_bathroom": "textbook_role_lingling_mother",
+		"home_balcony": "textbook_role_lingling_mother",
+		"home_study": "textbook_role_lingling_father",
+		"home_dining": "textbook_role_lingling_father",
+		"home_estate": "textbook_role_lingling_father",
 	}
 	if campus_map.has(room_id):
 		return str(campus_map[room_id])
 	if room_id.begins_with("home"):
-		return "teacher_gentle"
+		return "textbook_role_lingling_mother"
 	return "warm"

@@ -29,6 +29,11 @@ func _ready() -> void:
 	light.rotation_degrees = Vector3(-45,-32,0)
 	light.light_energy = 0.85
 	light.shadow_enabled = true
+	light.directional_shadow_mode = DirectionalLight3D.SHADOW_ORTHOGONAL
+	light.directional_shadow_max_distance = 12
+	light.shadow_bias = 0.025
+	light.shadow_normal_bias = 0.36
+	light.shadow_opacity = 0.72
 	stage.add_child(light)
 	var environment := WorldEnvironment.new()
 	environment.environment = Environment.new()
@@ -38,7 +43,7 @@ func _ready() -> void:
 	environment.environment.ambient_light_color = Style.PAPER
 	environment.environment.ambient_light_energy = 0.45
 	stage.add_child(environment)
-	Visual.box(stage,Vector3(16,0.04,16),Vector3(0,-0.04,0),Style.SOFT)
+	Visual.box(stage,Vector3(16,0.04,16),Vector3(0,-0.021,0),Style.SOFT)
 	resized.connect(redraw)
 
 func redraw() -> void:
@@ -50,6 +55,7 @@ func show_design(design: Dictionary) -> Node3D:
 	model.rotation.y = angle
 	stage.add_child(model)
 	var bounds := Visual.footprint(str(design.recipe))
+	preload("res://scripts/world_art.gd").add_contact_shadow(model,bounds.x*1.14,bounds.z*1.14)
 	var height := bounds.y
 	if design.recipe == "lantern": height = 1.7
 	if design.recipe in ["cake","plate"]: height = 0.5
@@ -67,7 +73,7 @@ func show_wish(wish: String) -> void:
 	stage.add_child(model)
 	if wish == "stall":
 		_prop("stand",Vector3(0,0,0),0.85,2)
-		_prop("cake",Vector3(0,0.85,0),0.9,5)
+		_prop("cake",Vector3(0,Catalog.TABLETOP_HEIGHT*0.85,0),0.9,5)
 		_prop("sign",Vector3(-1.0,0,0.25),0.65,9)
 	elif wish == "collection":
 		_prop("frame",Vector3(-0.6,0,-0.2),0.8,9)
@@ -78,7 +84,7 @@ func show_wish(wish: String) -> void:
 		_prop("shelf",Vector3(0.5,0,-0.7),0.85,9)
 		_prop("table",Vector3(-0.55,0,0),0.65,2)
 		_prop("stool",Vector3(0.45,0,0.6),0.85,9)
-		_prop("vase",Vector3(-0.55,0.66,0),0.5,10)
+		_prop("vase",Vector3(-0.55,Catalog.TABLETOP_HEIGHT*0.65,0),0.5,10)
 	_frame(Vector3(0,0.5,0),3.5)
 
 func _prop(recipe: String, position_value: Vector3, scale_value: float, color: int) -> void:

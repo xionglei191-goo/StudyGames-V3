@@ -10,6 +10,8 @@ signal follow_along_submitted(target_text: String, mode: String, rms_energy: flo
 signal hint_toggled(npc_id: String, shown: bool)
 signal overlay_visibility_changed(is_open: bool)
 signal closed
+signal conversation_started(npc_id: String)
+signal listening_started
 
 const Style = preload("res://ui/island_theme.gd")
 const CharacterVoices = preload("res://core/character_voices.gd")
@@ -40,6 +42,7 @@ var zh_visible := false
 var last_captured_wav_b64 := ""
 var _mic_player: AudioStreamPlayer
 var _mic_capture: AudioEffectCapture
+var _recording_generation := 0
 
 var _bubble_card: PanelContainer
 var _tail: SpeechTail
@@ -65,6 +68,7 @@ func _ready() -> void:
 	visibility_changed.connect(func():
 		overlay_visibility_changed.emit(visible)
 		if not visible:
+			_cancel_recording()
 			_smoothed_bubble_pos = Vector2(-1.0, -1.0)
 	)
 	hide()
@@ -270,7 +274,9 @@ func _submit_chat(raw_text: String) -> void:
 	ai_chat_submitted.emit(current_npc_id, cleaned)
 
 func open_conversation(config: Dictionary) -> void:
+	_cancel_recording()
 	current_npc_id = str(config.get("npc_id", "neighbor"))
+	conversation_started.emit(current_npc_id)
 	var speaker_name := _clean_emoji_prefix(str(config.get("speaker", "小岛伙伴")))
 	current_en = str(config.get("en", "Hello! Welcome to Alphabet Island!"))
 	current_zh = _clean_emoji_prefix(str(config.get("zh", "")))
@@ -306,31 +312,39 @@ func open_conversation(config: Dictionary) -> void:
 		speak_requested.emit(current_en, "en", current_npc_id)
 
 func _start_follow_along(mode: String) -> void:
+	_cancel_recording()
+	var generation := _recording_generation
 	var phrase := current_en if not current_en.is_empty() else "Hello!"
-	last_captured_wav_b64 = ""
+	listening_started.emit()
 	if mode == "shy":
 		follow_along_submitted.emit(phrase, "shy", 0.0, 0)
 		return
-	if DisplayServer.get_name() == "headless":
-		follow_along_submitted.emit(phrase, "voice", 0.042, 850)
-		return
-	_zh_label.text = "正在温暖倾听你跟读：「%s」……（离线语音识别中）" % phrase.left(44)
+	_zh_label.text = "正在听你读：「%s」……也可以轻轻默读。" % phrase.left(44)
 	_zh_panel.visible = true
 	_update_positions(true)
 
 	var rec_info := await _record_mic_wav_16k(1.35)
+	if generation != _recording_generation or not is_inside_tree() or not visible:
+		return
 	last_captured_wav_b64 = str(rec_info.get("wav_b64", ""))
-	var est_rms := float(rec_info.get("rms", 0.035))
-	var dur_ms := int(rec_info.get("duration_ms", 1100))
-	if is_inside_tree() and visible:
-		follow_along_submitted.emit(phrase, "voice", est_rms, dur_ms)
+	var est_rms := float(rec_info.get("rms", 0.0))
+	var dur_ms := int(rec_info.get("duration_ms", 0))
+	follow_along_submitted.emit(phrase, "voice", est_rms, dur_ms)
+
+func _cancel_recording() -> void:
+	_recording_generation += 1
+	last_captured_wav_b64 = ""
+	if is_instance_valid(_mic_player):
+		_mic_player.stop()
+	if _mic_capture != null:
+		_mic_capture.clear_buffer()
 
 func _record_mic_wav_16k(duration_sec: float) -> Dictionary:
+	var generation := _recording_generation
 	var mix_rate := float(AudioServer.get_mix_rate())
-	var can_capture := bool(ProjectSettings.get_setting("audio/driver/enable_input", false)) and mix_rate >= 8000.0
+	var can_capture := DisplayServer.get_name() != "headless" and bool(ProjectSettings.get_setting("audio/driver/enable_input", false)) and mix_rate >= 8000.0
 	if not can_capture:
-		await get_tree().create_timer(0.85).timeout
-		return {"wav_b64": "", "rms": 0.035, "duration_ms": 880}
+		return {"wav_b64": "", "rms": 0.0, "duration_ms": 0}
 
 	var bus_idx := AudioServer.get_bus_index("V4MicBus")
 	if bus_idx < 0:
@@ -354,21 +368,23 @@ func _record_mic_wav_16k(duration_sec: float) -> Dictionary:
 		_mic_capture.clear_buffer()
 	_mic_player.play()
 	await get_tree().create_timer(duration_sec).timeout
+	if generation != _recording_generation:
+		return {"wav_b64": "", "rms": 0.0, "duration_ms": 0}
 	_mic_player.stop()
 
 	if _mic_capture == null:
-		return {"wav_b64": "", "rms": 0.035, "duration_ms": int(duration_sec * 1000.0)}
+		return {"wav_b64": "", "rms": 0.0, "duration_ms": 0}
 
 	var avail := _mic_capture.get_frames_available()
 	if avail < 400:
-		return {"wav_b64": "", "rms": 0.032, "duration_ms": int(duration_sec * 1000.0)}
+		return {"wav_b64": "", "rms": 0.0, "duration_ms": 0}
 
 	var raw_frames: PackedVector2Array = _mic_capture.get_buffer(avail)
 	var target_sr := 16000
 	var step := maxf(1.0, mix_rate / float(target_sr))
 	var out_count := int(float(raw_frames.size()) / step)
 	if out_count < 160:
-		return {"wav_b64": "", "rms": 0.032, "duration_ms": int(duration_sec * 1000.0)}
+		return {"wav_b64": "", "rms": 0.0, "duration_ms": 0}
 
 	var pcm := PackedByteArray()
 	pcm.resize(out_count * 2)
@@ -380,8 +396,6 @@ func _record_mic_wav_16k(duration_sec: float) -> Dictionary:
 		pcm.encode_s16(i * 2, clampi(int(round(mono * 32767.0)), -32768, 32767))
 
 	var rms := sqrt(sum_sq / float(out_count))
-	if rms < 0.0015:
-		return {"wav_b64": "", "rms": 0.032, "duration_ms": int(duration_sec * 1000.0)}
 
 	var data_len := pcm.size()
 	var header := PackedByteArray()
@@ -419,6 +433,7 @@ func show_speech_encouragement(reply: Dictionary) -> void:
 		speak_requested.emit(rep_en, "en", current_npc_id)
 
 func show_ai_reply(reply: Dictionary) -> void:
+	_cancel_recording()
 	current_en = str(reply.get("reply_en", current_en))
 	current_zh = _clean_emoji_prefix(str(reply.get("reply_zh", current_zh)))
 	_en_label.text = current_en
@@ -541,6 +556,7 @@ func _unhandled_input(event: InputEvent) -> void:
 				get_viewport().set_input_as_handled()
 
 func dismiss() -> void:
+	_cancel_recording()
 	if not visible:
 		return
 	hide()

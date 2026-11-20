@@ -7,6 +7,7 @@ extends Node3D
 const Style = preload("res://ui/island_theme.gd")
 const Wardrobe = preload("res://actors/modular_wardrobe.gd")
 const StoryDirector = preload("res://gameplay/unit_storyline_director.gd")
+const Progression = preload("res://core/progression_ledger.gd")
 
 const GRID_STEP := 0.5
 const SUPPORTED_ROOMS := ["home", "home_estate", "home_bedroom", "home_study"]
@@ -125,8 +126,12 @@ func open_studio() -> void:
 	game._close()
 	active = true
 	game.player.locked = true
-	if is_instance_valid(game.ui) and is_instance_valid(game.ui.hud):
-		game.ui.hud.hide()
+	if is_instance_valid(game.ui):
+		if is_instance_valid(game.ui.toast_label):
+			game.ui.toast_timer = 0.0
+			game.ui.toast_label.hide()
+		if is_instance_valid(game.ui.hud):
+			game.ui.hud.hide()
 	_rebuild_grid_overlay()
 	_reset_cursor_near_player()
 	_rebuild_ghost()
@@ -600,13 +605,15 @@ func _refresh_hud() -> void:
 		return
 	var entry := catalog_entry(selected_id)
 	var rtitle := str(ROOM_TITLES.get(game.room, "温馨家园"))
+	var cur_lv: int = state.level() if state.has_method("level") else 1
+	var lv_zh := str(Progression.level_info(cur_lv).get("zh", ""))
 	_status_lbl.text = "%s · %s (%s) · %d°" % [
 		rtitle,
 		str(entry.get("name", "")),
 		str(entry.get("en", "")),
 		current_rot_deg
 	]
-	_coins_lbl.text = "%d 叶币" % int(state.data.get("coins", 0))
+	_coins_lbl.text = "Lv.%d %s  ｜  %d 叶币" % [cur_lv, lv_zh, int(state.data.get("coins", 0))]
 
 	for c: Node in _cat_row.get_children():
 		_cat_row.remove_child(c)
@@ -645,13 +652,20 @@ func _refresh_hud() -> void:
 		var owned: int = state.free_decor_owned_count(iid) + b_stock
 		var placed: int = state.free_decor_placed_total(iid)
 		var avail := maxi(0, owned - placed)
-		var stock_txt := "库存 %d" % avail if avail > 0 else "%d 叶币添置" % int(item.price)
+		var req_lv := Progression.furniture_required_level(iid)
+		var stock_txt := ""
+		if avail > 0:
+			stock_txt = "库存 %d" % avail
+		elif cur_lv >= req_lv:
+			stock_txt = "★ %d 叶币添置" % int(item.price)
+		else:
+			stock_txt = "◇ Lv.%d 解锁 · %d 币" % [req_lv, int(item.price)]
 		var is_sel := (iid == selected_id)
 		var btn := Button.new()
 		btn.text = "%s\n%s · %s" % [str(item.name), str(item.en), stock_txt]
 		btn.icon = _catalog_swatch(str(item.get("swatch", "#e6b946")), is_sel)
 		btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
-		btn.custom_minimum_size = Vector2(188, 72)
+		btn.custom_minimum_size = Vector2(204, 72)
 		btn.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		btn.add_theme_font_size_override("font_size", 14)
 		btn.add_theme_constant_override("icon_max_width", 34)

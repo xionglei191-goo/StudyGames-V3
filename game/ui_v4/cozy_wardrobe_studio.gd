@@ -5,11 +5,24 @@ extends RefCounted
 
 const Style = preload("res://ui/island_theme.gd")
 const Wardrobe = preload("res://actors/modular_wardrobe.gd")
+const Progression = preload("res://core/progression_ledger.gd")
 const PreviewScene = preload("res://ui/character_preview.tscn")
 
 static func build(ui: Node, data: Dictionary, active_tab: String = "outfit") -> void:
+	var prog_dict: Dictionary = data.get("progression", {}) if data.get("progression") is Dictionary else Progression.fresh()
+	var prog_sum := Progression.progress_summary(prog_dict)
+	var cur_lv := int(prog_sum.get("level", 1))
 	ui._begin("bag", "wardrobe")
-	ui._heading("今天，穿哪一种好心情出门？", "阳光换装镜台 · 自由混搭套装、头饰与随身背饰")
+	ui._heading(
+		"今天，穿哪一种好心情出门？",
+		"Lv.%d · %s（%d/%d EXP）  ｜  当前 %d 叶币  ｜  探索学习升等级，叶币自由兑新装" % [
+			cur_lv,
+			str(prog_sum.get("title_zh", "启蒙小芽")),
+			int(prog_sum.get("into_level", 0)),
+			int(prog_sum.get("level_span", 60)),
+			int(data.get("coins", 0)),
+		]
+	)
 
 	var w_state: Dictionary = data.get("wardrobe", {}) if data.get("wardrobe") is Dictionary else {}
 	var cur_outfit := str(data.get("outfit", "yellow"))
@@ -157,15 +170,32 @@ static func build(ui: Node, data: Dictionary, active_tab: String = "outfit") -> 
 	for entry: Dictionary in catalog_items:
 		var id := str(entry.id)
 		var selected := (id == current_id)
-		var caption := "%s\n%s" % [str(entry.zh), str(entry.en)]
-		var item_btn: Button = ui.button(caption, prefix + id, selected, Vector2(0, 76))
+		var is_owned := Progression.is_wardrobe_owned(data, active_tab, id)
+		var rule := Progression.wardrobe_rule(active_tab, id)
+		var req_lv := int(rule.get("level", 1))
+		var price := int(rule.get("price", 0))
+		var status_line := ""
+		var act_id := prefix + id
+		if is_owned:
+			status_line = "✓ 当前穿戴" if selected else "· 已拥有（点击换上）"
+		elif cur_lv >= req_lv:
+			status_line = "★ 可兑换 · %d 叶币" % price
+			act_id = "wardrobe_unlock:%s:%s" % [active_tab, id]
+		else:
+			status_line = "◇ Lv.%d 解锁 · %d 叶币" % [req_lv, price]
+			act_id = "wardrobe_unlock:%s:%s" % [active_tab, id]
+
+		var caption := "%s · %s\n%s" % [str(entry.zh), str(entry.en), status_line]
+		var item_btn: Button = ui.button(caption, act_id, selected, Vector2(0, 80))
 		item_btn.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		item_btn.alignment = HORIZONTAL_ALIGNMENT_LEFT
 		item_btn.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 		item_btn.icon = _swatch_icon(Color(str(entry.get("swatch", "#e6b946"))), selected)
-		item_btn.add_theme_constant_override("icon_max_width", 42)
-		item_btn.add_theme_constant_override("h_separation", 12)
-		item_btn.add_theme_font_size_override("font_size", 17)
+		item_btn.add_theme_constant_override("icon_max_width", 40)
+		item_btn.add_theme_constant_override("h_separation", 10)
+		item_btn.add_theme_font_size_override("font_size", 15)
+		if not is_owned and cur_lv < req_lv:
+			item_btn.modulate = Color(0.92, 0.90, 0.86, 0.94)
 		grid.add_child(item_btn)
 
 	var footer := HBoxContainer.new()

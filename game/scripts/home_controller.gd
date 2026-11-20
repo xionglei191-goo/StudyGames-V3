@@ -75,6 +75,7 @@ func show_memory(sequence: int) -> void:
 		content.hint += "\n" + str(plan.task.result) + "  可以再做一次。"
 	var p_eid := str(content.get("palace_entry_id", "")).strip_edges()
 	var p_word := str(content.get("palace_word", "")).strip_edges()
+	actions.append({"label":"近景实物台", "id":"v6_bench_open:" + game.room, "icon":"sparkle", "primary":actions.is_empty()})
 	if not p_eid.is_empty() and not p_word.is_empty():
 		actions.append({"label":"立体书记词 · " + p_word, "id":"open_palace:" + p_eid, "icon":"book", "primary":actions.is_empty()})
 	actions.append({"label":"本屋宫殿角落展台", "id":"v5_palace_tour:0", "icon":"compass"})
@@ -92,9 +93,10 @@ func show_overview() -> void:
 		actions.append({"label":"走到通往小院的门", "id":"navigate:courtyard_exit"})
 	else:
 		actions.append({"label":"走回客厅", "id":"navigate:home_exit", "primary":true})
+	actions.append({"label":"近景实物台 · 大家具连小物品", "id":"v6_bench_open:" + game.room})
+	actions.append({"label":"父母四阶语法与时态对话", "id":"v6_ladder_open:home"})
 	actions.append({"label":"看看今天能做什么", "id":"home:day"})
 	actions.append({"label":"猫头鹰晨间温故信", "id":"v5_wake_mailbox"})
-	actions.append({"label":"温馨家园待客三轮对话", "id":"v5_roleplay_start:home"})
 	if game.room in ["home", "home_estate", "home_bedroom", "home_study"]:
 		actions.append({"label":"动森自由网格布置", "id":"v4_free_decor"})
 		actions.append({"label":"生活工坊 · 我的作品与小摊", "id":"creation"})

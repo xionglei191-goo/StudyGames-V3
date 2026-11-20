@@ -1,5 +1,7 @@
 # StudyGames V4.5 · 字母岛（精致微缩童话岛 · 真人语音识别与自由装修全量版）
 
+2026-11-21 运行优化：修复长期存档的奖励记录截断、满额家具重复扣款、首句语音提前超时，以及静音录音被误当成成功跟读的问题。关闭或切换对话会取消旧录音和旧请求；语音合成期间伴学服务保持响应。当前源码入口和伴学服务已验证，17 组相关回归通过。见 [修改与验证记录](docs/verification/runtime-maintenance-20261121/README.md)。以后可用 `python scripts/verify_runtime.py --native --real-speech` 复查同一组流程。
+
 2026-11-13 家务更新：**8 个家务已改为房间内的直接操作**，可以拖放餐具、理床、收书、晾袜子，在水流下洗蔬菜与双手，移动水壶浇花。过程显示物件移动、污渍与泡沫消失、湿土变化，完成后的房间状态会保存。见 [操作与验证记录](docs/delivery/household-interaction-20261113.md) 和 [原生画面对照](docs/verification/household-interaction-20261113/index.html)。
 
 2026-11-13 新增：**经营与创作系统第一版**已接入本地源码入口。完成家园介绍后，打开「旅行册 → 生活工坊」，可以设计、制作、布置作品，邀请朋友使用，接居民订单或经营小院手作摊。包含 6 类材料、12 个配方、64×64 图案画布、设计版本和独立实物记录。操作说明、验证范围及当前限制见 [本次交付](docs/delivery/life-creation-20261113.md)，画面见 [验证图集](docs/verification/life-creation-v01/index.html)。下方为原有 V4.5 功能记录；旧 Windows/Web 导出包未随本次源码更新重建。
@@ -8,7 +10,7 @@
 
 - **离线神经网络真人感语音预烘 + 本地离线语音识别 + 4 首治愈原声 BGM（`speech_service.py` + `audio_director.gd`）**：
   - **2,526 条离线神经网络 TTS 语音库预烘**：基于本地 `piper-tts` VITS ONNX（美式柔和女声 `en_US-amy-medium` + 中文温柔伴读 `zh_CN-huayan-medium`），已将全八册 1,314 条词表记录、常用问候语与 247 条核心词生活例句预烘至 `.local/tts_cache/`（索引清单 `game/data/learning/voice_manifest_v4.json`），零联网延迟毫秒级发声。
-  - **真离线语音识别跟读互动（`vosk-model-small-en-us-0.15`）**：客户端通过 `AudioEffectCapture` 采集 16kHz PCM WAV 音频流发送至本地伴学服务，由离线 Vosk Kaldi 引擎完成真实词句识别与发音相似度匹配（`exact` / `close` / `gentle_model` 三档零红叉、零扣分温暖反馈，同时保留 `🤫 害羞默读`）。
+  - **离线语音识别跟读互动（`vosk-model-small-en-us-0.15`）**：客户端通过 `AudioEffectCapture` 采集 16kHz PCM WAV 音频流发送至本地伴学服务，由本地 Vosk 英语模型识别词句，再比较识别文本与目标句（`exact` / `close` / `gentle_model` 三档反馈，同时保留 `🤫 害羞默读`）。这个文本匹配值不代表发音评分；没有可用识别文本时只给参与鼓励，静音与默读不会生成答对记录。
   - **4 首立体声多乐器原声 BGM 循环**：内置主岛晴风吉他（`bgm_island`）、家园温暖钢片琴（`bgm_home`）、学园轻快马林巴（`bgm_campus`）、3D 立体书八音盒（`bgm_theater`）四套 16 秒立体声哈斯空间混响配乐，随场景与剧场平滑切换。
 - **动森式 0.5m 自由网格 3D 家园与庭院装修工坊（`FreeGridDecorStudio`）**：在温馨客厅（`home`）、阳光小院（`home_estate`）、卧室（`home_bedroom`）与书房（`home_study`）支持 **0.5m 地面网格吸附**、**半透明 3D 家具虚影预览**、**90° 朝向旋转（`R` 键/右键）**、撤销与一键收纳，内置 **13 款 Toy-PBR 3D 家具/庭院景观/手作与章节纪念展台**（向日葵圆毯、云朵双人沙发、下午茶圆桌、童话绘本架、摘星落地灯、黄铜留声机、森系木秋千、晴空小喷泉、兔兔绿雕等），跨存档房间级持久化。
 - **八册 81 章 5 类差异化主题微玩法（`ChapterThematicPlay`）**：在全八册 81 单元三幕主线基础上，按单元主题自动匹配 5 种零扣分情境微玩法——**🍰 暖香点餐配盘**、**🌦️ 天气穿搭造型台**、**🧭 小岛问路寻宝图**、**🕰️ 阳光作息时钟盘**、**🎁 奇趣主题百宝箱**，支持语音提示、首字母贴士与章节纪念牌联动。

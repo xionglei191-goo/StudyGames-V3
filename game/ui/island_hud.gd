@@ -11,6 +11,10 @@ var identity: PanelContainer
 var wish: Button
 var utilities: PanelContainer
 var dock: PanelContainer
+var level_banner: PanelContainer
+var _banner_title: Label
+var _banner_sub: Label
+var _banner_tween: Tween
 var _dialogue_open := false
 
 func setup(owner_ui: CanvasLayer) -> void:
@@ -42,13 +46,41 @@ func setup(owner_ui: CanvasLayer) -> void:
 	titles.add_theme_constant_override("separation", 3)
 	header.add_child(titles)
 
-	ui.location_label = _text("我的小岛", 21, true)
+	ui.location_label = _text("我的小岛", 20, true)
 	ui.location_label.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
-	ui.location_label.custom_minimum_size.x = 204
-	ui.status = _text("第 1 天 · 晴", 14)
+	ui.location_label.custom_minimum_size.x = 220
+	ui.status = _text("第 1 天 · 晴", 13)
 	ui.status.add_theme_color_override("font_color", Style.MUTED)
 	titles.add_child(ui.location_label)
 	titles.add_child(ui.status)
+
+	var exp_row := HBoxContainer.new()
+	exp_row.add_theme_constant_override("separation", 6)
+	titles.add_child(exp_row)
+
+	ui.exp_bar = ProgressBar.new()
+	ui.exp_bar.name = "HUDExpBar"
+	ui.exp_bar.show_percentage = false
+	ui.exp_bar.min_value = 0.0
+	ui.exp_bar.max_value = 100.0
+	ui.exp_bar.value = 0.0
+	ui.exp_bar.custom_minimum_size = Vector2(96, 8)
+	ui.exp_bar.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	ui.exp_bar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
+	var bar_bg := StyleBoxFlat.new()
+	bar_bg.bg_color = Color("efe5cd")
+	bar_bg.set_corner_radius_all(4)
+	var bar_fg := StyleBoxFlat.new()
+	bar_fg.bg_color = Color("e3ad44")
+	bar_fg.set_corner_radius_all(4)
+	ui.exp_bar.add_theme_stylebox_override("background", bar_bg)
+	ui.exp_bar.add_theme_stylebox_override("fill", bar_fg)
+	exp_row.add_child(ui.exp_bar)
+
+	ui.exp_caption = _text("0/60 EXP", 12, true)
+	ui.exp_caption.name = "HUDExpCaption"
+	ui.exp_caption.add_theme_color_override("font_color", Color("856428"))
+	exp_row.add_child(ui.exp_caption)
 
 	# 2. Honey Bookmark Wish Pill (Click to auto-guide)
 	wish = ui.button("", "quest", false, Vector2(308, 80))
@@ -103,12 +135,19 @@ func setup(owner_ui: CanvasLayer) -> void:
 	content.add_child(go_wrap)
 	go_wrap.add_child(ui.icon_view("arrow", 18))
 
-	# 3. Top-Right Leaf Wallet & Settings Pill
+	# 3. Top-Right Joint Level Badge + Leaf Wallet & Settings Pill
 	utilities = _floating_pill("WalletAndSettings", Color(0.996, 0.984, 0.948, 0.95), Color("dfd1b5"), 24, 14, 8)
 	var tools := HBoxContainer.new()
 	tools.alignment = BoxContainer.ALIGNMENT_CENTER
 	tools.add_theme_constant_override("separation", 10)
 	utilities.add_child(tools)
+
+	ui.level_chip_btn = ui.button("★ Lv.1 · 启蒙小芽", "level_guide", false, Vector2(0, 38))
+	ui.level_chip_btn.name = "HUDLevelBadge"
+	ui.level_chip_btn.tooltip_text = "查看成长等级、经验进度与升级叶币礼袋"
+	ui.level_chip_btn.add_theme_font_size_override("font_size", 15)
+	_style_level_chip(ui.level_chip_btn)
+	tools.add_child(ui.level_chip_btn)
 
 	var coin_chip := PanelContainer.new()
 	coin_chip.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -215,6 +254,61 @@ func setup(owner_ui: CanvasLayer) -> void:
 	ui.bubble_panel.hide()
 	add_child(ui.bubble_panel)
 
+	# 10. Top-Center Sunlit Level-Up Celebration Banner
+	level_banner = PanelContainer.new()
+	level_banner.name = "LevelUpCelebration"
+	level_banner.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var lb_sb := Style.pill(Color(0.998, 0.982, 0.918, 0.98), Color("dfb24f"), Color("c69635"), 22, 22, 12)
+	lb_sb.shadow_size = 10
+	level_banner.add_theme_stylebox_override("panel", lb_sb)
+	var lb_col := VBoxContainer.new()
+	lb_col.alignment = BoxContainer.ALIGNMENT_CENTER
+	lb_col.add_theme_constant_override("separation", 4)
+	lb_col.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	level_banner.add_child(lb_col)
+	_banner_title = _text("★ 升级啦！Lv.2 · 好奇认物生", 20, true)
+	_banner_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_banner_title.add_theme_color_override("font_color", Color("6e4a12"))
+	lb_col.add_child(_banner_title)
+	_banner_sub = _text("获赠升级奖学金礼袋 +15 叶币", 14)
+	_banner_sub.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	_banner_sub.add_theme_color_override("font_color", Color("466847"))
+	lb_col.add_child(_banner_sub)
+	level_banner.hide()
+	add_child(level_banner)
+
+func show_celebration(payload: Dictionary, reduced: bool = false) -> void:
+	if not is_instance_valid(level_banner):
+		return
+	var nlv := int(payload.get("new_level", 1))
+	var tzh := str(payload.get("title_zh", ""))
+	var ten := str(payload.get("title_en", ""))
+	var gift := int(payload.get("gift_coins", 0))
+	var unlock_zh := str(payload.get("unlock_zh", ""))
+	_banner_title.text = "★ 升级啦！Lv.%d · %s（%s）" % [nlv, tzh, ten]
+	_banner_sub.text = "升级礼袋 +%d 叶币  ｜  %s" % [gift, unlock_zh]
+	level_banner.show()
+	arrange(size if size.x > 10.0 else Vector2(1440, 900))
+	if _banner_tween != null and _banner_tween.is_valid():
+		_banner_tween.kill()
+	level_banner.modulate = Color(1, 1, 1, 1)
+	if not reduced:
+		var target_y := level_banner.position.y
+		level_banner.position.y = target_y - 24.0
+		level_banner.modulate.a = 0.0
+		_banner_tween = create_tween()
+		_banner_tween.set_parallel(true)
+		_banner_tween.tween_property(level_banner, "position:y", target_y, 0.28).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+		_banner_tween.tween_property(level_banner, "modulate:a", 1.0, 0.20)
+		_banner_tween.set_parallel(false)
+		_banner_tween.tween_interval(3.8)
+		_banner_tween.tween_property(level_banner, "modulate:a", 0.0, 0.35)
+		_banner_tween.tween_callback(level_banner.hide)
+	else:
+		_banner_tween = create_tween()
+		_banner_tween.tween_interval(3.8)
+		_banner_tween.tween_callback(level_banner.hide)
+
 func set_dialogue_mode(open: bool) -> void:
 	_dialogue_open = open
 	if is_instance_valid(dock):
@@ -228,18 +322,22 @@ func arrange(available: Vector2) -> void:
 	if not is_instance_valid(identity):
 		return
 	identity.position = Vector2(20, 20)
-	identity.size = Vector2(308, 74)
+	identity.size = Vector2(328, 92)
 	wish.position = Vector2(20, identity.position.y + identity.size.y + 10)
-	wish.size = Vector2(308, 82)
+	wish.size = Vector2(328, 82)
 	utilities.size = utilities.get_combined_minimum_size()
 	utilities.position = Vector2(available.x - utilities.size.x - 20, 20)
+	if is_instance_valid(level_banner) and level_banner.visible:
+		var b_min := level_banner.get_combined_minimum_size()
+		level_banner.size = Vector2(maxf(440.0, b_min.x), maxf(68.0, b_min.y))
+		level_banner.position = Vector2((available.x - level_banner.size.x) * 0.5, 20.0)
 	dock.size = dock.get_combined_minimum_size()
 	dock.position = Vector2((available.x - dock.size.x) * 0.5, available.y - dock.size.y - 20)
 	var hint_min: Vector2 = (ui.controls_hint as Control).get_combined_minimum_size()
 	ui.controls_hint.size = Vector2(maxf(250.0, hint_min.x), maxf(34.0, hint_min.y))
 	ui.controls_hint.position = Vector2(20, available.y - ui.controls_hint.size.y - 22)
 	ui.navigation_label.position = Vector2(20, wish.position.y + wish.size.y + 8)
-	ui.navigation_label.size = Vector2(308, 34)
+	ui.navigation_label.size = Vector2(328, 34)
 	dock.visible = not _dialogue_open
 	ui.controls_hint.visible = not _dialogue_open
 
@@ -291,6 +389,21 @@ func _style_wish_button(item: Button) -> void:
 	item.add_theme_stylebox_override("normal", normal)
 	item.add_theme_stylebox_override("hover", hover)
 	item.add_theme_stylebox_override("pressed", pressed)
+
+func _style_level_chip(item: Button) -> void:
+	var normal := Style.keycap(Color("fdf3d7"), Color("dfb65d"), 2, 16, 12, 5)
+	normal.shadow_size = 0
+	var hover := Style.keycap(Color("fff8e4"), Style.GOLD, 2, 16, 12, 5)
+	hover.shadow_size = 0
+	var pressed := Style.keycap(Color("f5e5bd"), Color("c8983d"), 1, 16, 12, 6)
+	pressed.shadow_size = 0
+	item.add_theme_stylebox_override("normal", normal)
+	item.add_theme_stylebox_override("hover", hover)
+	item.add_theme_stylebox_override("pressed", pressed)
+	item.add_theme_color_override("font_color", Color("6b4c16"))
+	item.add_theme_color_override("font_hover_color", Color("573b0c"))
+	item.add_theme_color_override("font_pressed_color", Color("573b0c"))
+	item.add_theme_font_override("font", Style.heading_font())
 
 func _round_icon_button(item: Button) -> void:
 	for state: String in ["normal", "hover", "pressed"]:

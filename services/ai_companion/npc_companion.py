@@ -14,6 +14,7 @@ from typing import Any
 
 import httpx
 
+from .env_loader import load_dotenv_if_changed
 from .guardrails import check_child_input, sanitize_npc_output
 
 NPC_PERSONAS: dict[str, dict[str, str]] = {
@@ -50,8 +51,62 @@ NPC_PERSONAS: dict[str, dict[str, str]] = {
     "textbook_miss_li": {
         "name_zh": "李老师",
         "name_en": "Miss Li",
-        "role": "encouraging storybook teacher who turns every English word into a playful adventure",
+        "role": "encouraging primary school English teacher who turns classroom objects and dialogues into sunny adventures",
         "catchphrase": "You are doing wonderful!",
+    },
+    "textbook_role_lingling_mother": {
+        "name_zh": "妈妈",
+        "name_en": "Mom",
+        "role": "loving, gentle mother at home who chats warmly about family meals, tidy rooms, clothes, and how school went today",
+        "catchphrase": "Welcome home, sweetie!",
+    },
+    "textbook_role_lingling_father": {
+        "name_zh": "爸爸",
+        "name_en": "Dad",
+        "role": "supportive, cheerful father in the study and dining room who enjoys reading English books, stationery, and weekend plans",
+        "catchphrase": "Let's read and explore together!",
+    },
+    "textbook_miss_lin": {
+        "name_zh": "林老师",
+        "name_en": "Miss Lin",
+        "role": "warm music and art teacher who loves playing the piano, violin, drums, and singing English songs",
+        "catchphrase": "Listen to the sunny melody!",
+    },
+    "textbook_mr_chen": {
+        "name_zh": "陈老师",
+        "name_en": "Mr Chen",
+        "role": "curious science teacher who guides children to observe green plants, seeds, magnets, weather, and globes",
+        "catchphrase": "Look closely like a young scientist!",
+    },
+    "textbook_mr_wang": {
+        "name_zh": "王老师",
+        "name_en": "Mr Wang",
+        "role": "energetic PE teacher and football coach who teaches teamwork, sports skills, and safe play",
+        "catchphrase": "Great teamwork on the field!",
+    },
+    "textbook_mingming": {
+        "name_zh": "明明",
+        "name_en": "Mingming",
+        "role": "friendly deskmate in the classroom who shares pencils, rulers, notebooks, and science experiments",
+        "catchphrase": "Here is my ruler, deskmate!",
+    },
+    "textbook_dongdong": {
+        "name_zh": "东东",
+        "name_en": "Dongdong",
+        "role": "sporty classmate who loves running fast on the playground and enjoying healthy school canteen lunches",
+        "catchphrase": "Let's run and play together!",
+    },
+    "textbook_tim": {
+        "name_zh": "蒂姆",
+        "name_en": "Tim",
+        "role": "cheerful classmate and football teammate who enjoys passing the ball and checking the class timetable",
+        "catchphrase": "Pass the ball to me, teammate!",
+    },
+    "textbook_amy": {
+        "name_zh": "艾米",
+        "name_en": "Amy",
+        "role": "book-loving classmate who enjoys reading English picture books in the classroom book corner",
+        "catchphrase": "Let's read a storybook together!",
     },
 }
 
@@ -111,7 +166,8 @@ async def generate_npc_reply(payload: dict[str, Any]) -> dict[str, Any]:
 
 
 async def _try_cloud_llm(npc_id: str, player_text: str, context: dict[str, Any]) -> dict[str, Any] | None:
-    api_key = os.environ.get("DASHSCOPE_API_KEY") or os.environ.get("OPENAI_API_KEY")
+    load_dotenv_if_changed()
+    api_key = (os.environ.get("DASHSCOPE_API_KEY") or os.environ.get("OPENAI_API_KEY") or "").strip()
     if not api_key:
         return None
     base_url = os.environ.get(
@@ -128,8 +184,9 @@ async def _try_cloud_llm(npc_id: str, player_text: str, context: dict[str, Any])
         "their idea in natural English. Return strict JSON: "
         '{"reply_en":"...","reply_zh":"...","suggestions":["...","...","..."]}.'
     )
+    proxy_url = os.environ.get("OPENAI_PROXY", "").strip() or None
     try:
-        async with httpx.AsyncClient(timeout=4.5) as client:
+        async with httpx.AsyncClient(timeout=8.5, proxy=proxy_url) as client:
             resp = await client.post(
                 f"{base_url.rstrip('/')}/chat/completions",
                 headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},

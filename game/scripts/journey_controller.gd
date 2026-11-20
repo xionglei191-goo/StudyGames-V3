@@ -127,48 +127,20 @@ func intercept_interaction(id: String) -> bool:
 			if actor:
 				actor.face(game.player.position)
 			game.living.play_actor_action(actor_id,"wave")
-		if str(snapshot().phase)=="home" and game.room=="home":
+		if game.validation_mode and str(snapshot().phase)=="home" and game.room=="home":
 			State.journey_complete_home_step("H01")
 			show_home()
-		elif str(snapshot().phase) in ["u2","u3"]:
+		elif game.validation_mode and str(snapshot().phase) in ["u2","u3"]:
 			p2.show_chapter()
-		elif str(snapshot().phase)=="u1":
+		elif game.validation_mode and str(snapshot().phase)=="u1":
 			show_u1()
 		elif not game.validation_mode and is_instance_valid(ui.diegetic):
-			var actor_names := {
-				"textbook_lingling": "Lingling · 同伴好友",
-				"textbook_peter": "Peter · 同伴好友",
-				"textbook_anne": "Anne · 同伴好友",
-				"textbook_tim": "Tim · 同伴好友",
-				"textbook_mingming": "Mingming · 同伴好友",
-				"textbook_dongdong": "Dongdong · 同伴好友",
-				"textbook_dino": "Dino · 快乐小恐龙",
-				"npc_bear_uncle": "熊叔 · 暖心向导",
-				"npc_rabbit_gardener": "兔兔园丁 · 花园伙伴"
-			}
-			var chap := StoryDirector.active_chapter(State)
-			var wpos: Vector3 = game.conversation_position
 			if is_instance_valid(game.audio_director):
 				game.audio_director.play_foley("bubble_pop")
-			ui.diegetic.open_conversation({
-				"npc_id": actor_id,
-				"speaker": str(actor_names.get(actor_id, "小岛伙伴")),
-				"en": "Hello, my friend! Today we are exploring \"%s\" together! Want to join our chapter wish?" % str(chap.get("source_title", "Alphabet Island")),
-				"zh": "你好呀好朋友！今天小岛正在共创【%s · U%d %s】，要不要一起去看看，或者用英文自由聊聊？" % [
-					str(chap.get("book_title", "三年级上册")),
-					int(chap.get("unit_number", 1)),
-					str(chap.get("event_title", "欢迎故事"))
-				],
-				"world_pos": wpos,
-				"show_zh_immediately": true,
-				"auto_speak": true,
-				"actions": [
-					{"label": "▶ 开启当前章节共创", "id": "v4_chap_open_here", "primary": true},
-					{"label": "★ 今日手账小委托", "id": "v4_commission:" + actor_id},
-					{"label": "◈ 八册 81 章画册", "id": "v4_chapter_atlas"},
-					{"label": "继续散步", "id": "close"}
-				]
-			})
+			var conv := preload("res://gameplay/home_school_cast_director.gd").build_actor_conversation(
+				game, actor_id, str(game.room), game.conversation_position
+			)
+			ui.diegetic.open_conversation(conv)
 		else:
 			ui.show_panel("journey_talk","Hello! 很高兴见到你。","小岛朋友","一起在小岛上走走吧。也可以打开旅行册，接着看今天的发现。",[{"label":"打开旅行册","id":"journey:hub","primary":true},{"label":"继续散步","id":"close"}])
 		return true

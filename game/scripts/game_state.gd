@@ -3,6 +3,7 @@ extends Node
 
 signal changed
 signal notice(message: String)
+signal leveled_up(payload: Dictionary)
 
 const SAVE_VERSION: int = 1
 const JOURNEY = preload("res://scripts/journey_progress.gd")
@@ -11,6 +12,7 @@ const Reviews = preload("res://scripts/review_progress.gd")
 const HOME = preload("res://scripts/home_catalog.gd")
 const WARDROBE = preload("res://actors/modular_wardrobe.gd")
 const Creation = preload("res://gameplay/creation_state.gd")
+const Progression = preload("res://core/progression_ledger.gd")
 const DECORATION_PRICES: Dictionary = {"flower_box": 25, "picnic": 35, "lamp": 45}
 const OUTFITS: Array[String] = ["yellow", "pink", "blue", "mint", "lavender", "caramel"]
 const UNIT_QUESTIONS: Dictionary = {
@@ -58,6 +60,7 @@ func _default_state() -> Dictionary:
 		},
 		"journey": JOURNEY.fresh(),
 		"reviews": Reviews.fresh(),
+		"progression": Progression.fresh(),
 	}
 
 
@@ -385,6 +388,8 @@ func set_outfit(id: String) -> bool:
 		return true
 	var before: Dictionary = snapshot()
 	data["outfit"] = id
+	var prog := _ensure_progression()
+	(prog["wardrobe_owned"] as Dictionary)["outfit:" + id] = true
 	return _commit(before, "新衣服已换好。")
 
 
@@ -397,6 +402,8 @@ func set_hat(id: String) -> bool:
 		return true
 	var before: Dictionary = snapshot()
 	data["wardrobe"]["hat"] = id
+	var prog := _ensure_progression()
+	(prog["wardrobe_owned"] as Dictionary)["hat:" + id] = true
 	return _commit(before, "头饰已搭配好。")
 
 
@@ -409,7 +416,106 @@ func set_bag(id: String) -> bool:
 		return true
 	var before: Dictionary = snapshot()
 	data["wardrobe"]["bag"] = id
+	var prog := _ensure_progression()
+	(prog["wardrobe_owned"] as Dictionary)["bag:" + id] = true
 	return _commit(before, "小背包已搭配好。")
+
+
+func _ensure_progression() -> Dictionary:
+	if not data.has("progression") or not data["progression"] is Dictionary:
+		data["progression"] = Progression.fresh()
+	# Loaded/committed state is already normalized. HUD reads must not rebuild
+	# thousands of reward receipts on every level/wardrobe query.
+	return data["progression"] as Dictionary
+
+
+func level() -> int:
+	var prog := _ensure_progression()
+	return Progression.level_for_exp(int(prog.get("exp", 0)))
+
+
+func exp_total() -> int:
+	var prog := _ensure_progression()
+	return maxi(0, int(prog.get("exp", 0)))
+
+
+func progression_summary() -> Dictionary:
+	return Progression.progress_summary(_ensure_progression())
+
+
+func is_wardrobe_unlocked(category: String, item_id: String) -> bool:
+	_ensure_progression()
+	return Progression.is_wardrobe_owned(data, category, item_id)
+
+
+func wardrobe_unlock_rule(category: String, item_id: String) -> Dictionary:
+	return Progression.wardrobe_rule(category, item_id)
+
+
+func unlock_wardrobe_item(category: String, item_id: String, equip_now: bool = true) -> bool:
+	var cat := category.strip_edges()
+	var iid := item_id.strip_edges()
+	if cat == "outfit" and not OUTFITS.has(iid):
+		return _reject("暂时没有这套衣服。")
+	if cat == "hat" and not WARDROBE.valid_hat(iid):
+		return _reject("暂时没有这顶头饰。")
+	if cat == "bag" and not WARDROBE.valid_bag(iid):
+		return _reject("暂时没有这件随身配饰。")
+	if not cat in ["outfit", "hat", "bag"]:
+		return _reject("装扮分类不存在。")
+	if is_wardrobe_unlocked(cat, iid):
+		if not equip_now:
+			return true
+		if cat == "outfit":
+			return set_outfit(iid)
+		if cat == "hat":
+			return set_hat(iid)
+		return set_bag(iid)
+
+	var rule := Progression.wardrobe_rule(cat, iid)
+	var req_lv := int(rule.get("level", 1))
+	var price := maxi(0, int(rule.get("price", 0)))
+	var cur_lv := level()
+	if cur_lv < req_lv:
+		var req_title := str(Progression.level_info(req_lv).get("zh", ""))
+		return _reject("达到 Lv.%d（%s）即可解锁兑换这件装扮哦！" % [req_lv, req_title])
+	if int(data["coins"]) < price:
+		return _reject("叶币不足（需要 %d 叶币），去认读实物或对话升级即可领取叶币礼袋！" % price)
+
+	var before: Dictionary = snapshot()
+	data["coins"] -= price
+	var prog := _ensure_progression()
+	(prog["wardrobe_owned"] as Dictionary)["%s:%s" % [cat, iid]] = true
+	if equip_now:
+		if cat == "outfit":
+			data["outfit"] = iid
+		elif cat == "hat":
+			if not data.has("wardrobe") or not data["wardrobe"] is Dictionary:
+				data["wardrobe"] = {"hat": "none", "bag": "none"}
+			data["wardrobe"]["hat"] = iid
+		elif cat == "bag":
+			if not data.has("wardrobe") or not data["wardrobe"] is Dictionary:
+				data["wardrobe"] = {"hat": "none", "bag": "none"}
+			data["wardrobe"]["bag"] = iid
+	return _commit(before, "新装扮已解锁并换好！消耗 %d 叶币。" % price if equip_now else "新装扮已解锁收入衣柜！")
+
+
+func furniture_required_level(item_id: String) -> int:
+	return Progression.furniture_required_level(item_id)
+
+
+func grant_exp(event: Dictionary, custom_notice: String = "") -> Dictionary:
+	_ensure_progression()
+	var before: Dictionary = snapshot()
+	var now_sec := int(event.get("now_sec", int(Time.get_unix_time_from_system())))
+	var res := Progression.apply_exp_event(data, event, now_sec)
+	if not bool(res.get("changed", false)):
+		return res
+	if not _commit(before, custom_notice):
+		return {"changed": false, "exp_gained": 0, "coins_gained": 0, "leveled_up": false}
+	if bool(res.get("leveled_up", false)):
+		leveled_up.emit(res)
+	return res
 
 
 func _ensure_v4() -> Dictionary:
@@ -458,8 +564,14 @@ func buy_free_decor(item_id: String, price: int) -> bool:
 	var iid := item_id.strip_edges()
 	if iid.is_empty() or price < 0:
 		return false
+	if free_decor_owned_count(iid) >= 99:
+		return _reject("这件家具已有 99 件，收纳箱暂时放不下更多啦。")
+	var req_lv := Progression.furniture_required_level(iid)
+	if level() < req_lv:
+		var req_title := str(Progression.level_info(req_lv).get("zh", ""))
+		return _reject("达到 Lv.%d（%s）即可解锁添置这件家具哦！" % [req_lv, req_title])
 	if int(data["coins"]) < price:
-		return _reject("叶币不足，去地标手作台或完成章节心愿就能获得叶币哦 ")
+		return _reject("叶币不足（需要 %d 叶币），去探索认词或升级就能领叶币礼袋哦！" % price)
 	var before: Dictionary = snapshot()
 	data["coins"] -= price
 	var owned: Dictionary = _ensure_v4()["free_decor_owned"]
@@ -566,8 +678,6 @@ func complete_v4_commission(commission_id: String, coin_bonus: int = 6) -> bool:
 	var done: Array = v4_ref.get("completed_commissions", [])
 	if not done.has(cid):
 		done.append(cid)
-		while done.size() > 240:
-			done.pop_front()
 		v4_ref["completed_commissions"] = done
 		data["coins"] = mini(1_000_000, int(data["coins"]) + maxi(0, coin_bonus))
 	return _commit(before)
@@ -644,8 +754,6 @@ func record_stealth_evidence(payload: Dictionary) -> bool:
 		var done: Array = v4_ref.get("completed_commissions", [])
 		if not done.has(commission_id):
 			done.append(commission_id)
-			while done.size() > 240:
-				done.pop_front()
 			v4_ref["completed_commissions"] = done
 			data["coins"] = mini(1_000_000, int(data["coins"]) + int(payload.get("coin_bonus", 6)))
 	return _commit(before)
@@ -864,8 +972,8 @@ func _normalize_state(value: Variant) -> Dictionary:
 	var normalized: Dictionary = _default_state()
 	# Required fields and exact scalar types prevent silent coercion of damaged data.
 	for key: String in normalized.keys():
-		if key in ["life","preferences","journey","reviews","wardrobe","v4","creation"]:
-			continue # Optional additions migrate v0.1-v0.3 saves without changing their identity.
+		if key in ["life","preferences","journey","reviews","wardrobe","v4","creation","progression"]:
+			continue # Optional additions migrate v0.1-v0.6 saves without changing their identity.
 		if not incoming.has(key):
 			return {"ok": false}
 	if not _integer_between(incoming["version"], 1, 1):
@@ -1012,10 +1120,15 @@ func _normalize_state(value: Variant) -> Dictionary:
 						"timestamp": int(ev.get("timestamp", 0))
 					})
 		var clean_commissions: Array = []
-		if v4_in.get("completed_commissions", []) is Array:
-			for cid: Variant in (v4_in.get("completed_commissions", []) as Array).slice(-240):
-				if cid is String and not str(cid).is_empty():
-					clean_commissions.append(str(cid))
+		var raw_commissions: Variant = v4_in.get("completed_commissions", [])
+		if not raw_commissions is Array or raw_commissions.size() > Progression.MAX_HISTORY_ENTRIES:
+			return {"ok": false}
+		var commission_ids: Dictionary = {}
+		for cid: Variant in raw_commissions:
+			if not cid is String or cid.is_empty() or cid.length() > Progression.MAX_EVENT_KEY_LENGTH:
+				return {"ok": false}
+			commission_ids[cid] = true
+		clean_commissions = commission_ids.keys()
 		var clean_chapters: Dictionary = {}
 		if v4_in.get("chapter_progress", {}) is Dictionary:
 			var raw_chap: Dictionary = v4_in.get("chapter_progress", {})
@@ -1067,6 +1180,13 @@ func _normalize_state(value: Variant) -> Dictionary:
 		if not Creation.validate(incoming.creation, int(normalized.cakes)):
 			return {"ok":false}
 		normalized.creation = Creation.canonical(incoming.creation)
+	if incoming.has("progression"):
+		var prog_res := Progression.normalize(incoming.progression)
+		if not prog_res.ok:
+			return {"ok": false}
+		normalized.progression = prog_res.value
+	else:
+		normalized.progression = Progression.migrate_from_legacy(normalized)
 	return {"ok": true, "state": normalized}
 
 
