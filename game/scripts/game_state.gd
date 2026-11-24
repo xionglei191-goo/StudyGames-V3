@@ -13,6 +13,7 @@ const HOME = preload("res://scripts/home_catalog.gd")
 const WARDROBE = preload("res://actors/modular_wardrobe.gd")
 const Creation = preload("res://gameplay/creation_state.gd")
 const Progression = preload("res://core/progression_ledger.gd")
+const V8Memory = preload("res://core/v8_memory_ledger.gd")
 const DECORATION_PRICES: Dictionary = {"flower_box": 25, "picnic": 35, "lamp": 45}
 const OUTFITS: Array[String] = ["yellow", "pink", "blue", "mint", "lavender", "caramel"]
 const UNIT_QUESTIONS: Dictionary = {
@@ -61,6 +62,7 @@ func _default_state() -> Dictionary:
 		"journey": JOURNEY.fresh(),
 		"reviews": Reviews.fresh(),
 		"progression": Progression.fresh(),
+		"v8_memory": V8Memory.fresh(),
 	}
 
 
@@ -972,7 +974,7 @@ func _normalize_state(value: Variant) -> Dictionary:
 	var normalized: Dictionary = _default_state()
 	# Required fields and exact scalar types prevent silent coercion of damaged data.
 	for key: String in normalized.keys():
-		if key in ["life","preferences","journey","reviews","wardrobe","v4","creation","progression"]:
+		if key in ["life","preferences","journey","reviews","wardrobe","v4","creation","progression","v8_memory"]:
 			continue # Optional additions migrate v0.1-v0.6 saves without changing their identity.
 		if not incoming.has(key):
 			return {"ok": false}
@@ -1187,7 +1189,128 @@ func _normalize_state(value: Variant) -> Dictionary:
 		normalized.progression = prog_res.value
 	else:
 		normalized.progression = Progression.migrate_from_legacy(normalized)
+	if incoming.has("v8_memory"):
+		var v8_res := V8Memory.normalize(incoming.v8_memory)
+		if not v8_res.ok:
+			return {"ok": false}
+		normalized.v8_memory = v8_res.value
+	else:
+		normalized.v8_memory = V8Memory.fresh()
 	return {"ok": true, "state": normalized}
+
+
+func v8_summary(now_sec: int = -1) -> Dictionary:
+	return V8Memory.summary(data, now_sec)
+
+
+func v8_due_words(domain_filter: String = "", now_sec: int = -1) -> Array[Dictionary]:
+	return V8Memory.due_words(data, domain_filter, now_sec)
+
+
+func v8_record_room_visit(room_id: String) -> bool:
+	var before := snapshot()
+	if not V8Memory.record_room_visit(data, room_id):
+		return false
+	return _commit(before)
+
+
+func v8_record_word_exposure(word: String, zh: String, room_id: String, anchor_order: int, now_sec: int = -1) -> Dictionary:
+	var ts := now_sec if now_sec >= 0 else int(Time.get_unix_time_from_system())
+	var before := snapshot()
+	var res := V8Memory.record_word_exposure(data, word, zh, room_id, anchor_order, ts)
+	if bool(res.get("changed", false)):
+		if not _commit(before):
+			return {"changed": false}
+	return res
+
+
+func v8_record_spoken(
+	word: String,
+	tier: int,
+	is_sentence: bool,
+	zh: String = "",
+	room_id: String = "home",
+	anchor_order: int = 1,
+	now_sec: int = -1
+) -> Dictionary:
+	var ts := now_sec if now_sec >= 0 else int(Time.get_unix_time_from_system())
+	var before := snapshot()
+	_ensure_progression()
+	var res := V8Memory.record_spoken(data, word, tier, is_sentence, zh, room_id, anchor_order, ts)
+	if not bool(res.get("changed", false)):
+		return res
+
+	var base_exp := 20 if (is_sentence and tier >= 3) else (14 if is_sentence else (12 if tier >= 3 else (8 if tier >= 2 else 4)))
+	var repeat_exp := 4 if is_sentence else 2
+	var exp_key := "v8_speak:%s:%s" % [word.to_lower(), "sent" if is_sentence else "word"]
+	var exp_res := Progression.apply_exp_event(data, {
+		"key": exp_key,
+		"mode": "daily_repeat",
+		"base_exp": base_exp,
+		"repeat_exp": repeat_exp,
+		"coin_bonus": 0,
+	}, ts)
+	_ensure_v4()["voice_cheers"] = int(_ensure_v4().get("voice_cheers", 0)) + 1
+
+	if not _commit(before):
+		return {"changed": false, "exp_gained": 0}
+	if bool(exp_res.get("leveled_up", false)):
+		leveled_up.emit(exp_res)
+	res["exp_gained"] = int(exp_res.get("exp_gained", 0))
+	res["leveled_up"] = bool(exp_res.get("leveled_up", false))
+	return res
+
+
+func v8_start_errand(errand_dict: Dictionary) -> bool:
+	if errand_dict.is_empty() or not (errand_dict.get("targets", []) is Array) or (errand_dict["targets"] as Array).is_empty():
+		return false
+	var before := snapshot()
+	var mem := V8Memory.ensure(data)
+	mem["errand_seq"] = int(mem.get("errand_seq", 0)) + 1
+	var copy := errand_dict.duplicate(true)
+	if not copy.has("id") or str(copy["id"]).is_empty():
+		copy["id"] = "errand-%d" % int(mem["errand_seq"])
+	mem["active_errand"] = copy
+	return _commit(before)
+
+
+func v8_advance_errand_hint(word: String) -> int:
+	var before := snapshot()
+	var nxt := V8Memory.advance_errand_hint(data, word)
+	if nxt > 0:
+		_commit(before)
+	return nxt
+
+
+func v8_complete_errand_target(word: String, now_sec: int = -1) -> Dictionary:
+	var ts := now_sec if now_sec >= 0 else int(Time.get_unix_time_from_system())
+	var before := snapshot()
+	_ensure_progression()
+	var res := V8Memory.complete_errand_target(data, word, ts)
+	if not bool(res.get("ok", false)):
+		return res
+
+	var coin_gain := int(res.get("coin_reward", 2))
+	data["coins"] = int(data.get("coins", 0)) + coin_gain
+	var exp_gain_base := int(res.get("exp_reward", 16))
+	var exp_res := Progression.apply_exp_event(data, {
+		"key": "v8_errand:%s:%d" % [word.to_lower(), ts],
+		"mode": "repeatable",
+		"base_exp": exp_gain_base,
+		"coin_bonus": 0,
+	}, ts)
+	var total_coins := coin_gain + int(exp_res.get("gift_coins", 0))
+	var notice_msg := ""
+	if bool(res.get("errand_completed", false)):
+		notice_msg = "◈ 寻物委托圆满完成！%s +%d EXP · +%d 叶币！" % [str(res.get("badge_zh", "")), int(exp_res.get("exp_gained", exp_gain_base)), total_coins]
+	if not _commit(before, notice_msg):
+		return {"ok": false}
+	if bool(exp_res.get("leveled_up", false)):
+		leveled_up.emit(exp_res)
+	res["exp_gained"] = int(exp_res.get("exp_gained", exp_gain_base))
+	res["coins_gained"] = total_coins
+	res["leveled_up"] = bool(exp_res.get("leveled_up", false))
+	return res
 
 
 func _integer_between(value: Variant, minimum: int, maximum: int) -> bool:

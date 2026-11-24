@@ -290,10 +290,10 @@ def test_cloud_deadline_falls_back_and_opens_backoff(monkeypatch):
 
     async def run():
         results = []
-        for phrase in ("First timeout", "Second timeout", "Circuit is open"):
+        for phrase in ("First timeout", "Second timeout", "Third timeout", "Circuit is open"):
             results.append(await asyncio.wait_for(speech.synthesize_speech(phrase), timeout=0.5))
         return results
 
     assert all(r["engine"] == "piper_neural_onnx" for r in asyncio.run(run()))
-    assert attempts == ["First timeout", "Second timeout"]
+    assert attempts == ["First timeout", "Second timeout", "Third timeout"]
     assert not list(speech.CACHE_DIR.glob(".tts-*.wav"))

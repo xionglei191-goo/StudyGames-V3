@@ -13,21 +13,71 @@ static func prepare_room(world: Node3D, room: String) -> void:
 	# These baked decorations occupied the same slots as the interactive objects.
 	# Keep a single visible set of props in both the activity and the saved room.
 	var hidden: Array[String] = []
-	if room == "home": hidden = ["Home_Cup_Refined*", "Home_Plate*"]
+	if room == "home": hidden = ["Home_Cup_Refined*", "Home_Plate*", "Letter", "Letter_Ribbon*", "Pencil_Cup*"]
 	elif room == "home_study": hidden = ["Reading_Bookcase_Book_004", "Reading_Bookcase_Book_Label_004"]
 	for pattern: String in hidden:
 		for node: Node3D in world.find_children(pattern,"Node3D",true,false): node.hide()
-	if room == "home_estate":
-		# The refined planter is wider than the old three small soil decals.
-		for i in range(3):
-			var name := "Damp_Soil" + ("" if i == 0 else "_%03d" % i)
-			var patch := world.find_child(name,true,false) as MeshInstance3D
-			if not patch: continue
-			var shape := BoxMesh.new()
-			shape.size = Vector3(0.94,0.015,0.90)
-			patch.mesh = shape
-			patch.material_override = material(Color("68503c"))
-			patch.global_transform = Transform3D(Basis.IDENTITY,Vector3(7.69+i*0.96,0.51,11.85))
+	match room:
+		"home_estate":
+			# Move Welcome_Parcel_Basket (+WorldArt_basket child) onto the grass right of Welcome_Letter_Table,
+			# move Porch_Ready_Basket (+WorldArt_basket child) onto the open lawn left of the porch post & corner post,
+			# and clear Porch_Geranium from Main_Front_Opening_1_Flower_Box.
+			_shift_nodes(world, ["Welcome_Parcel_Basket*"], Vector3(0.98, 0.0, 0.0))
+			_shift_nodes(world, ["Porch_Ready_Basket*"], Vector3(-1.22, 0.0, 0.38))
+			_shift_nodes(world, ["Porch_Geranium*"], Vector3(2.25, 0.0, 0.38))
+			# The refined planter is wider than the old three small soil decals.
+			for i in range(3):
+				var name := "Damp_Soil" + ("" if i == 0 else "_%03d" % i)
+				var patch := world.find_child(name,true,false) as MeshInstance3D
+				if not patch or patch.has_meta("prop_depenetrated"): continue
+				var shape := BoxMesh.new()
+				shape.size = Vector3(0.94,0.015,0.90)
+				patch.mesh = shape
+				patch.material_override = material(Color("68503c"))
+				var soil_xf := Transform3D(Basis.IDENTITY,Vector3(7.69+i*0.96,0.51,11.85))
+				if patch.is_inside_tree():
+					patch.global_transform = soil_xf
+				else:
+					patch.transform = soil_xf
+				patch.set_meta("prop_depenetrated", true)
+		"home":
+			_shift_nodes(world, ["Locus_01_Everyday_Basket*"], Vector3(0.24, 0.0, 0.0))
+		"home_bedroom":
+			_shift_nodes(world, ["Schoolbag*"], Vector3(0.0, 0.07, 0.09))
+		"home_balcony":
+			_shift_nodes(world, ["OWN07_Watering_can_*"], Vector3(-1.08, -0.575, 0.25))
+		"canteen":
+			_shift_nodes(world, ["Back_Greenery*", "WR_Pottery_Lip_Back_Greenery_Pot*"], Vector3(0.55, 0.0, 0.0))
+			_shift_mesh_region(world, ["CF08_InteriorHerbs_leaf*"], AABB(Vector3(6.0, 0.3, -6.4), Vector3(1.6, 1.0, 1.4)), Vector3(0.55, 0.0, 0.0))
+		"classroom":
+			_scale_and_shift_nodes(world, ["Class_Prop_Hat*"], Vector3(4.40, 0.30, -1.25), 0.66, Vector3(0.0, -0.058, 0.075))
+		"science_room":
+			_scale_and_shift_nodes(world, ["Science_ModelSolar*"], Vector3(-1.20, 1.28, -6.65), 0.62, Vector3(0.0, 0.012, 0.165))
+		"school":
+			_shift_nodes(world, ["Music_Outdoor_Xylophone_Key*", "Music_Xylophone_Leg*"], Vector3(-0.85, 0.0, 0.0))
+			_shift_nodes(world, ["Art_Outdoor_Easel*", "Art_Outdoor_Canvas*", "Art_Painting_Color*"], Vector3(-0.66, 0.0, 0.0))
+			_shift_nodes(world, ["Canteen_Menu_Board_Face*", "Canteen_Menu_Board_Frame*", "Canteen_Menu_Board_Post*", "Canteen_Menu_Board_Subtitle*", "Canteen_Menu_Board_Title*"], Vector3(0.45, 0.0, 0.0))
+		"landmark_A":
+			_shift_nodes(world, ["A_Entrance_Basket*", "A_Basket_Apple*"], Vector3(0.0, 0.0, 0.46))
+			_shift_nodes(world, ["A_Spare_Crate_*"], Vector3(-0.34, 0.0, -0.18))
+		"landmark_F":
+			_shift_nodes(world, ["Back_Greenery*", "WR_Pottery_Lip_Back_Greenery_Pot*"], Vector3(0.55, 0.0, 1.05))
+		"landmark_H":
+			_scale_and_shift_nodes(world, ["Trying_Hat*", "OWN16_RibbonFold_001", "OWN16_RibbonKnot_001"], Vector3(1.08, 0.89, -1.598), 0.72, Vector3(0.12, 0.0, 0.218))
+		"landmark_J":
+			_shift_nodes(world, ["Jar_Labels_Card*", "Jar_Labels_Picture*"], Vector3(0.0, 0.56, -0.06))
+			_shift_nodes(world, ["Back_Greenery*", "WR_Pottery_Lip_Back_Greenery_Pot*"], Vector3(0.35, 0.0, 0.95))
+		"landmark_K":
+			_shift_nodes(world, ["Bamboo_Spar*"], Vector3(2.65, -0.18, 0.0))
+		"landmark_L":
+			_scale_and_shift_nodes(world, ["Gift_Lantern*", "Detail_L_Bent_Lantern_Rib_08*", "Detail_L_Paper_Binding_024", "Detail_L_Paper_Binding_025", "Detail_L_Paper_Binding_026", "Detail_L_Upright_Bail_008", "Detail_L_Display_Base"], Vector3(5.20, 1.09, 5.15), 0.68, Vector3(0.0, 0.0, -0.12))
+		"landmark_M":
+			_shift_nodes(world, ["Cottage_Back_Kitchen*", "WR_Cabinet_*Cottage_Back_Kitchen*"], Vector3(-0.78, 0.0, 0.0))
+		"landmark_U":
+			_scale_and_shift_nodes(world, ["Folded_Umbrella", "Umbrella_Handle"], Vector3(-5.80, 0.20, -1.10), 0.36, Vector3(0.0, 0.042, 0.0))
+			_scale_and_shift_nodes(world, ["Folded_Umbrella_001", "Umbrella_Handle_001"], Vector3(-5.10, 0.20, -1.10), 0.36, Vector3(0.0, 0.042, 0.0))
+			_scale_and_shift_nodes(world, ["Folded_Umbrella_002", "Umbrella_Handle_002"], Vector3(-4.40, 0.20, -1.10), 0.36, Vector3(0.0, 0.042, 0.0))
+			_shift_nodes(world, ["Back_Greenery*", "WR_Pottery_Lip_Back_Greenery_Pot*"], Vector3(0.42, 0.0, 1.25))
 	if room != "home_study": return
 	var after := world.find_child("HOME_TASK_AFTER",true,false) as Node3D
 	if not after or after.has_meta("book_details"): return
@@ -42,6 +92,86 @@ static func prepare_room(world: Node3D, room: String) -> void:
 			var label := box(after,Vector3(0.10,0.026,0.012),Vector3.ZERO,Color("f6efda"))
 			label.name = "Returned_Book_Detail_%d_Label_%d" % [i,stripe]
 			label.global_position = pos + Vector3(0,-0.1+stripe*0.18,0.194)
+
+static func _collect_top_matched_nodes(world: Node3D, patterns: Array[String]) -> Array[Node3D]:
+	var matched: Array[Node3D] = []
+	var matched_ids: Dictionary = {}
+	for pattern: String in patterns:
+		for node: Node in world.find_children(pattern, "Node3D", true, false):
+			var n3 := node as Node3D
+			if n3 == null: continue
+			var nm := str(n3.name)
+			if nm.begins_with("SG_") or nm.begins_with("COL_"): continue
+			var id := n3.get_instance_id()
+			if not matched_ids.has(id):
+				matched_ids[id] = true
+				matched.append(n3)
+	var top_nodes: Array[Node3D] = []
+	for n3: Node3D in matched:
+		var has_matched_ancestor := false
+		var p: Node = n3.get_parent()
+		while p != null and p != world:
+			if matched_ids.has(p.get_instance_id()):
+				has_matched_ancestor = true
+				break
+			p = p.get_parent()
+		if not has_matched_ancestor:
+			top_nodes.append(n3)
+	return top_nodes
+
+static func _shift_nodes(world: Node3D, patterns: Array[String], delta: Vector3) -> void:
+	for node: Node3D in _collect_top_matched_nodes(world, patterns):
+		if node.has_meta("prop_depenetrated"):
+			continue
+		if node.is_inside_tree():
+			node.global_position += delta
+		else:
+			node.position += delta
+		node.set_meta("prop_depenetrated", true)
+
+static func _scale_and_shift_nodes(world: Node3D, patterns: Array[String], world_pivot: Vector3, scale_factor: float, delta: Vector3) -> void:
+	for node: Node3D in _collect_top_matched_nodes(world, patterns):
+		if node.has_meta("prop_depenetrated"):
+			continue
+		var xf := node.global_transform if node.is_inside_tree() else node.transform
+		var new_origin := world_pivot + (xf.origin - world_pivot) * scale_factor + delta
+		var new_xf := Transform3D(xf.basis * scale_factor, new_origin)
+		if node.is_inside_tree():
+			node.global_transform = new_xf
+		else:
+			node.transform = new_xf
+		node.set_meta("prop_depenetrated", true)
+
+static func _shift_mesh_region(world: Node3D, patterns: Array[String], region: AABB, delta: Vector3) -> void:
+	for pattern: String in patterns:
+		for node: Node in world.find_children(pattern, "MeshInstance3D", true, false):
+			var mi := node as MeshInstance3D
+			if mi == null or mi.has_meta("prop_depenetrated"):
+				continue
+			var src_mesh := mi.mesh as ArrayMesh
+			if src_mesh == null:
+				continue
+			var xf := mi.global_transform if mi.is_inside_tree() else mi.transform
+			var local_delta := xf.basis.inverse() * delta
+			var new_mesh := ArrayMesh.new()
+			var changed := false
+			for s in range(src_mesh.get_surface_count()):
+				var arrays := src_mesh.surface_get_arrays(s)
+				var verts: PackedVector3Array = arrays[Mesh.ARRAY_VERTEX]
+				var new_verts := verts.duplicate()
+				for vi in range(new_verts.size()):
+					if region.has_point(xf * new_verts[vi]):
+						new_verts[vi] += local_delta
+						changed = true
+				arrays[Mesh.ARRAY_VERTEX] = new_verts
+				new_mesh.add_surface_from_arrays(src_mesh.surface_get_primitive_type(s), arrays)
+				new_mesh.surface_set_name(s, src_mesh.surface_get_name(s))
+				var surf_mat := src_mesh.surface_get_material(s)
+				if surf_mat != null:
+					new_mesh.surface_set_material(s, surf_mat)
+			if changed:
+				mi.mesh = new_mesh
+			mi.set_meta("prop_depenetrated", true)
 
 static func mesh(parent: Node3D, shape: Mesh, pos: Vector3, color: Color) -> MeshInstance3D:
 	var node := MeshInstance3D.new()

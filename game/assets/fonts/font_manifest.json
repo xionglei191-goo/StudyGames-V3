@@ -32,7 +32,7 @@
       "http://scripts.sil.org/OFL"
     ]
   },
-  "fonttools_version": "4.61.1",
+  "fonttools_version": "4.68.0",
   "source_license_sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb",
   "bundled_license_sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb",
   "input_files": [
@@ -66,7 +66,7 @@
     },
     {
       "path": "game/scripts/game_state.gd",
-      "sha256": "2d9fd5a45e4aac6a81cef4ba3a264405939dba7ccd8740d209039dcfd6a5214b"
+      "sha256": "d843dbfb33cab81eeb28491cdb309b93c5940f94075550003c7a2fe67818536f"
     },
     {
       "path": "game/scripts/home_catalog.gd",
@@ -106,11 +106,11 @@
     },
     {
       "path": "game/scripts/living_world.gd",
-      "sha256": "b8cc234e3bbbf070f4b1f012b918402e6bf958ae33c631d057139b7be5d0607d"
+      "sha256": "60c7f261f32943deb6ef203adc748cd0ef591959fa786ec6443d35a8f9d60cb2"
     },
     {
       "path": "game/scripts/main.gd",
-      "sha256": "e13e43ec834c15338a056b017f3e701e3d993c0e7f6b5906c1d320aa116f3740"
+      "sha256": "91c621ea517cf7cb6c096126f1e567b92513d793b70968cbf170ca0df9889bdf"
     },
     {
       "path": "game/scripts/memory_event_sink.gd",
@@ -166,11 +166,11 @@
     },
     {
       "path": "game/scripts/textbook_actor.gd",
-      "sha256": "40e2bd3de4dba84a747ec9b196e4afd50f31e788b8e83b392e3b9bd1b20a88d4"
+      "sha256": "70e5dad09e046f437244102801fed6678dbac607ac40782118949dc41913379c"
     },
     {
       "path": "game/scripts/ui.gd",
-      "sha256": "cc4bff8dc4e89cf02dbbeeb588a17f805a9ca4eb61b99774763371859677939d"
+      "sha256": "035718784c715cdff68f2d470df204f86977ecc779c9f8732eef5b75c95a588c"
     },
     {
       "path": "game/scripts/web_rooms.gd",
@@ -178,7 +178,7 @@
     },
     {
       "path": "game/scripts/world_art.gd",
-      "sha256": "b377d66dc743476bd8156105dcf7b7dec9c41fcf2ecb88d61c57e07a9761bbeb"
+      "sha256": "d66ebae82a27ede39b2ac850b38ff6739d1e2e86d69df8255e88ae2fe48fd6a8"
     },
     {
       "path": "game/scripts/world_builder.gd",
@@ -206,7 +206,7 @@
     },
     {
       "path": "game/ui/creation_preview.gd",
-      "sha256": "791038c5720ea2478f006c6fe891171deda45692ee34861834fd1f06a2d556da"
+      "sha256": "d9df2ef721d30fa0e2005e80988e056e92b49004bedef02fa62108bdba539545"
     },
     {
       "path": "game/ui/creation_workspace.gd",
@@ -266,7 +266,7 @@
     },
     {
       "path": "game/ui/travel_book_view.gd",
-      "sha256": "b7b0b280b3f53c46bd8d13030865d07fc846ef10e0977ad4e3cabce6e747042b"
+      "sha256": "fc48abd6d4c42ee5653286d3c18811feb19103f617e2642a071f2e7960ce7e23"
     },
     {
       "path": "game/ui/world_map.gd",
@@ -282,11 +282,15 @@
     },
     {
       "path": "game/ui_v4/diegetic_dialogue.gd",
-      "sha256": "334429bbd7006d51f1710a03838c861e3ee17815e3e327d752c2d5fa0494a3ee"
+      "sha256": "fdc2e7862380dee1f9f57e32eacba71154b643790d4f96ec9eafac33e3b6c6e5"
     },
     {
       "path": "game/ui_v4/parent_ai_portal.gd",
-      "sha256": "5261e0153fd9b347cf386aec511c60fb54f202374b2e63d704ef4d9367365537"
+      "sha256": "59c5541383d839b81e0a55f6d1a3f98d632143566981e8bbb48b4f337e5ca71e"
+    },
+    {
+      "path": "game/ui_v4/spatial_memory_almanac.gd",
+      "sha256": "70b5220b096c40b6db24807ccac596a67dabec1b7ce7c9d853dca1b5607f9d09"
     },
     {
       "path": "game/theater/popup_book_theater.gd",
@@ -298,7 +302,7 @@
     },
     {
       "path": "game/gameplay/creation_catalog.gd",
-      "sha256": "4ddbaf8d7016d1611219c876427ed8128f10b5eeb7ac392e3634c7e60fc6a48c"
+      "sha256": "368fdf8637e6f90e2f7fca979da030617e95a8c7d4b63d98c7fdf887b4abd7c0"
     },
     {
       "path": "game/gameplay/creation_controller.gd",
@@ -306,31 +310,35 @@
     },
     {
       "path": "game/gameplay/creation_state.gd",
-      "sha256": "516c34ad9620effc951cb865fc1ca33caa9ade3cb6818e6081e2439a32ce97f3"
+      "sha256": "aa428cc3b18d284ba2401aa7f1d3480be1f46175e438e7dc7c45e02d4f9019e1"
     },
     {
       "path": "game/gameplay/creation_visuals.gd",
-      "sha256": "656066574c2f00a7e3be5e4348afffcd21f8bea4e08299652e4f7d2f04df707b"
+      "sha256": "8d00211dba9779e0e2111e940fe15e23f093b0d34c45906cef7415405cd114d8"
     },
     {
       "path": "game/gameplay/curriculum_quest_director.gd",
       "sha256": "d4e26b26c8e07f2fbbc78099b89c01eea71e2cbcbd1402416e01f4781e92dc33"
     },
     {
+      "path": "game/gameplay/ebbinghaus_errand_director.gd",
+      "sha256": "cfa6571ed143448c0892be65950771c9ca368cf0ff7ec19d41469ac76fe57cb2"
+    },
+    {
       "path": "game/gameplay/free_grid_decor_studio.gd",
-      "sha256": "385563335ece5d527621e1b8e550728a05a6d131de11673705de552c99cb3e1d"
+      "sha256": "9688ef2e8debb35c86e995e76f5bb918fb0241efa30c4622740b3f394df1226b"
     },
     {
       "path": "game/gameplay/home_school_cast_director.gd",
-      "sha256": "e535b8360c1cb10721ded1e9f991e184c2913736efe64bc14c6abe66c7e56cc6"
+      "sha256": "ba4b0235b43474e2ab2a5cb8700a34eefa4e9f34543721b46b675ce2cb88eb6e"
     },
     {
       "path": "game/gameplay/memory_palace_loci_3d.gd",
-      "sha256": "a6be95a9edb7168a94d971ee68522b2135e556e810e2afc6e6e51b5bb2f87033"
+      "sha256": "a8acf37c7a2fc484075eb17e9a77822da53609fb52b6ec8bf524c0463f12a7e8"
     },
     {
       "path": "game/gameplay/morning_wake_mailbox.gd",
-      "sha256": "392d2c29601c7be0d93242596bbc8bface60647bb0bcf96cd03208b4bdd2f4db"
+      "sha256": "77a30e33a18c310f7b9ebaee1747d0936b45edf94e491b2fbb3e7f2748f0e54f"
     },
     {
       "path": "game/gameplay/situational_roleplay.gd",
@@ -338,7 +346,7 @@
     },
     {
       "path": "game/gameplay/spatial_cluster_bench_3d.gd",
-      "sha256": "340227931dfbe2335e71a039ddd2fccc7e5b3f11b7b96540c1eaf334ff46907d"
+      "sha256": "0e947a9b7c49229f780722e6c33452e9b30fff55d38a0dd04bf92ab244eee7b5"
     },
     {
       "path": "game/gameplay/tactile_life_quests.gd",
@@ -370,7 +378,7 @@
     },
     {
       "path": "game/actors/bake_tripo_characters.gd",
-      "sha256": "df0b038aa26224ca74d9b5131a6c2e82bd7f64300bba4d6eec8ab1f582b64a5c"
+      "sha256": "781de45af5893ebf69a317a56744a12eeba29e573052c3869508b0639839de54"
     },
     {
       "path": "game/actors/bake_tripo_grounding.gd",
@@ -393,6 +401,10 @@
       "sha256": "51606ea4ac07c3f93e748a10c62268cdb207ab491cde59594afd1dac4f246c81"
     },
     {
+      "path": "game/actors/character_surface.gd",
+      "sha256": "93541ee8e69027016ab5f846012dab0c166712d39ee1ec704f0b915fa9437750"
+    },
+    {
       "path": "game/actors/expansion_animation.gd",
       "sha256": "9bd5196599a907ecf2298390dede0251bbd022871406bd7d622763ffcbc44da5"
     },
@@ -405,8 +417,16 @@
       "sha256": "44ccd417b021d11bca4976451639ad92b0b77f8598937a2edc6ae72d282cca76"
     },
     {
+      "path": "game/actors/layer2_prop_library.gd",
+      "sha256": "942fc7da07120230a10b0056c3426ffc42ab06ae38d06054a2206cd81687daaf"
+    },
+    {
       "path": "game/actors/modular_wardrobe.gd",
       "sha256": "a3fa80437a245094512adf82d6a34c0ffdc560a60af4e99d9212e1bbb8181126"
+    },
+    {
+      "path": "game/actors/nearby_gaze.gd",
+      "sha256": "a29a260eb3a48cd46c959806c8b94825ef135ae110c9380548298fce2d8ee4f5"
     },
     {
       "path": "game/actors/p1_action_source.gd",
@@ -430,23 +450,35 @@
     },
     {
       "path": "game/core/ai_companion_bridge.gd",
-      "sha256": "0a045eea4ffdca582eec10fae4d28928bfb38482bf966b706290b2dfa38dbfe3"
+      "sha256": "33b42c2fd52fb0f8c0667874eb579f9daec6a980a96bb277e7801b715963ef97"
     },
     {
       "path": "game/core/audio_director.gd",
-      "sha256": "0a014395e50b0ed332e503fe6825c5e50ca9e1c3581fad6d2ef43c96ec5fc220"
+      "sha256": "a1cd47cf77ca9643299497d33e5442d7906b4d38122b779309c3e4b3d9dec432"
     },
     {
       "path": "game/core/character_voices.gd",
-      "sha256": "239bac5ba539643465e615284c7ba49e87f1a7237a89b6affdb1090b82e81af5"
+      "sha256": "6a7651cef7db705cb28ba861b44b8a22950c37d81b133fe834f41b4fd52e91cd"
     },
     {
       "path": "game/core/event_bus.gd",
       "sha256": "37b3a1fa551ed1085d0a913e89f928cb2459656b9ae002455c94f8022d1502d3"
     },
     {
+      "path": "game/core/mic_wav_recorder.gd",
+      "sha256": "4b0c89b88a49256caffa494a627748037d782086a592241e58125d4a5678379c"
+    },
+    {
       "path": "game/core/progression_ledger.gd",
-      "sha256": "02c10e1e60730ceb6817dffaee373e1f6b3ea0325cc7d67a45672c1ef72b236e"
+      "sha256": "8e57175123f128c7771edc1984714b53c6ea1db7278f821bc84b1065153694ab"
+    },
+    {
+      "path": "game/core/v8_memory_ledger.gd",
+      "sha256": "39b873e7f7b6285c4271e44120879214dfb80bdfed7d1f70be6c20b7f120fedf"
+    },
+    {
+      "path": "game/core/world_label_layout.gd",
+      "sha256": "01617e0ee1b31e8295c606fd1dddeff901fb56bc68c85ab8b4759c79a51841cc"
     },
     {
       "path": "game/data/content_manifest.json",
@@ -514,7 +546,7 @@
     },
     {
       "path": "game/data/learning/spatial_word_clusters_v6.json",
-      "sha256": "dfe0a516037ac079ff1522abd0695d017d1ec196bea038b6598ece974ed10667"
+      "sha256": "a4e5a9c4f3d9229b1750827e5e705695f3e9decbe4c1dead756466c7940cb8e3"
     },
     {
       "path": "game/data/learning/story_prop_art.json",
@@ -538,19 +570,19 @@
     },
     {
       "path": "game/assets/world/manifest.json",
-      "sha256": "85fce05a091880f910b4b3e622332dfdc024fdef70fc430142d0532c7f684247"
+      "sha256": "61fbf901ab61aeb69788302f72b218af27b0f8bc578c6eaa022b3777445e129f"
     }
   ],
-  "charset_sha256": "55080886d149e63b6e999c50d24bbedceea128f999ad9ffa23db37c72a67038d",
+  "charset_sha256": "ebb840afbfd643936b2e33ae6e1782a9fd74cf41fd22dbe5cd4a3340737f8751",
   "coverage": "Current game script/curriculum printable characters, ASCII and selected punctuation; not a full CJK font.",
   "result": {
     "status": "ok",
     "font": "game\\assets\\fonts\\IslandSans.otf",
-    "input_files": 126,
-    "required_codepoints": 3035,
-    "covered_codepoints": 3173,
-    "glyphs": 5979,
-    "bytes": 1416332,
-    "sha256": "c1b5689b88d8bad21f8b48d11f38ba0e6575ffa2e8f6c4159341371e0d55df5f"
+    "input_files": 134,
+    "required_codepoints": 3036,
+    "covered_codepoints": 3174,
+    "glyphs": 5981,
+    "bytes": 1416712,
+    "sha256": "05bae0e1c07645f60bcb56508970e4bf34c4d7ed25845f54318988f306ef04e8"
   }
 }

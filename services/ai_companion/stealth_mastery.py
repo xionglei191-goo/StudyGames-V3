@@ -146,9 +146,19 @@ def build_parent_weekly_report(payload: dict[str, Any]) -> dict[str, Any]:
         else "建议陪孩子去 A 苹果果园捧起红苹果，或者打开一本 3D 立体翻翻书演一演纸偶故事！"
     )
 
+    v8_sum = payload.get("v8_memory_summary") if isinstance(payload.get("v8_memory_summary"), dict) else {}
+    v8_line = ""
+    if v8_sum:
+        v8_line = (
+            f"【艾宾浩斯实物记忆】已探索 {int(v8_sum.get('visited_placements', 0))}/287 处家具实物 · "
+            f"金星永固 {int(v8_sum.get('gold_words', 0))} 词 · 稳固中 {int(v8_sum.get('solid_words', 0))} 词 · "
+            f"待温故 {int(v8_sum.get('due_words', 0))} 词 · 开口发音星 {int(v8_sum.get('spoken_words', 0))} 词\n"
+        )
+
     narrative = (
         f"【当前同步册次】{book_title}（{unit_id.upper()}）\n"
         f"【小岛生活足迹】已走访 {visited_landmarks} / 26 处字母记忆地标 · 今日偏爱穿搭：{outfit}\n"
+        f"{v8_line}"
         f"【隐性成长观察】{highlight}\n"
         f"【家庭温和互动建议】{revisit_tip}"
     )

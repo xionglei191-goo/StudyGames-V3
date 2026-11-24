@@ -1,5 +1,5 @@
 {
-  "schema_version": 8,
+  "schema_version": 9,
   "room_count": 16,
   "anchor_count": 80,
   "rooms": {
@@ -128,7 +128,39 @@
               "*Keyboard*",
               "*Mouse*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "pen",
+              "prompt_en": "Put the pen in the pencil-box.",
+              "prompt_zh": "把钢笔（pen）放进书桌上的文具盒里",
+              "target_pos": [
+                -3.3,
+                1.19,
+                -2.88
+              ]
+            },
+            {
+              "item": "book",
+              "prompt_en": "Arrange the book neatly on the desk.",
+              "prompt_zh": "把书本（book）整齐摆到书桌指定位置",
+              "target_pos": [
+                -4.437,
+                1.12,
+                -3.195
+              ]
+            },
+            {
+              "item": "ruler",
+              "prompt_en": "Place the ruler neatly on the desk.",
+              "prompt_zh": "把尺子（ruler）整齐摆到书桌指定位置",
+              "target_pos": [
+                -4.062,
+                1.12,
+                -3.053
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -226,7 +258,39 @@
               2.01,
               -4.16
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "storybook",
+              "prompt_en": "Put the storybook neatly in the bookcase.",
+              "prompt_zh": "把故事书（storybook）整齐摆上书架",
+              "target_pos": [
+                0.5,
+                2.01,
+                -4.16
+              ]
+            },
+            {
+              "item": "notebook",
+              "prompt_en": "Arrange the notebook neatly on the bookcase.",
+              "prompt_zh": "把笔记本（notebook）整齐摆到书架指定位置",
+              "target_pos": [
+                0.556,
+                2.89,
+                -4.57
+              ]
+            },
+            {
+              "item": "dictionary",
+              "prompt_en": "Place the dictionary neatly on the bookcase.",
+              "prompt_zh": "把词典（dictionary）整齐摆到书架指定位置",
+              "target_pos": [
+                0.885,
+                2.89,
+                -4.23
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -327,7 +391,39 @@
             "hide_meshes": [
               "OWN06_Chair_reading_book*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "pillow",
+              "prompt_en": "Put the soft pillow on the chair.",
+              "prompt_zh": "把靠枕（pillow）摆到阅读椅（chair）正中",
+              "target_pos": [
+                4.0,
+                0.75,
+                -3.12
+              ]
+            },
+            {
+              "item": "cup",
+              "prompt_en": "Arrange the cup neatly on the chair.",
+              "prompt_zh": "把水杯（cup）整齐摆到椅子指定位置",
+              "target_pos": [
+                4.02,
+                1.18,
+                -2.503
+              ]
+            },
+            {
+              "item": "glasses",
+              "prompt_en": "Place the glasses neatly on the chair.",
+              "prompt_zh": "把眼镜（glasses）整齐摆到椅子指定位置",
+              "target_pos": [
+                3.825,
+                1.18,
+                -2.741
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -429,7 +525,39 @@
               "OWN06_Sketchbook*",
               "OWN06_Ruler*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "schoolbag",
+              "prompt_en": "Put your schoolbag beside the desk and stool.",
+              "prompt_zh": "把书包（schoolbag）放到文具台旁",
+              "target_pos": [
+                -3.18,
+                0.04,
+                0.78
+              ]
+            },
+            {
+              "item": "eraser",
+              "prompt_en": "Arrange the eraser neatly on the stool.",
+              "prompt_zh": "把橡皮（eraser）整齐摆到凳子与文具台指定位置",
+              "target_pos": [
+                -4.696,
+                1.11,
+                0.366
+              ]
+            },
+            {
+              "item": "crayon",
+              "prompt_en": "Place the crayon neatly on the stool.",
+              "prompt_zh": "把蜡笔（crayon）整齐摆到凳子与文具台指定位置",
+              "target_pos": [
+                -4.444,
+                1.11,
+                0.201
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -531,7 +659,39 @@
               "Open_Card*",
               "OWN06_Card_*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "card",
+              "prompt_en": "Place the handmade card on the table.",
+              "prompt_zh": "把做好的贺卡（card）摆在手工小桌中央",
+              "target_pos": [
+                -4.35,
+                1.12,
+                2.8
+              ]
+            },
+            {
+              "item": "paper",
+              "prompt_en": "Arrange the paper neatly on the table.",
+              "prompt_zh": "把彩纸（paper）整齐摆到手工小桌指定位置",
+              "target_pos": [
+                -4.577,
+                1.11,
+                3.149
+              ]
+            },
+            {
+              "item": "scissors",
+              "prompt_en": "Place the scissors neatly on the table.",
+              "prompt_zh": "把剪刀（scissors）整齐摆到手工小桌指定位置",
+              "target_pos": [
+                -4.24,
+                1.11,
+                2.471
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -851,7 +1011,39 @@
               0.98,
               -3.72
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "pillow",
+              "prompt_en": "Put the soft pillow neatly on the bed.",
+              "prompt_zh": "把松软的枕头（pillow）摆回小床床头",
+              "target_pos": [
+                -4.2,
+                0.98,
+                -3.72
+              ]
+            },
+            {
+              "item": "quilt",
+              "prompt_en": "Arrange the quilt neatly on the bed.",
+              "prompt_zh": "把棉被（quilt）整齐摆到小床指定位置",
+              "target_pos": [
+                -4.223,
+                1.24,
+                -1.545
+              ]
+            },
+            {
+              "item": "bear",
+              "prompt_en": "Place the bear neatly on the bed.",
+              "prompt_zh": "把玩具熊（bear）整齐摆到小床指定位置",
+              "target_pos": [
+                -3.842,
+                0.96,
+                -3.5
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -952,7 +1144,39 @@
             "hide_meshes": [
               "OWN11_Bedside_Book_*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "watch",
+              "prompt_en": "Place your watch beside the bedside clock.",
+              "prompt_zh": "把手表（watch）放在床头闹钟旁",
+              "target_pos": [
+                -0.88,
+                1.01,
+                -3.55
+              ]
+            },
+            {
+              "item": "glasses",
+              "prompt_en": "Arrange the glasses neatly on the clock.",
+              "prompt_zh": "把眼镜（glasses）整齐摆到床头柜与闹钟指定位置",
+              "target_pos": [
+                -1.555,
+                1.01,
+                -3.585
+              ]
+            },
+            {
+              "item": "photo",
+              "prompt_en": "Place the photo neatly on the clock.",
+              "prompt_zh": "把家庭相框（photo）整齐摆到床头柜与闹钟指定位置",
+              "target_pos": [
+                -1.287,
+                1.01,
+                -3.932
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -1086,7 +1310,39 @@
               "trousers": 0.19,
               "sweater": 0.23
             }
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "coat",
+              "prompt_en": "Put the warm coat in the wardrobe.",
+              "prompt_zh": "把外套（coat）挂进大衣柜（wardrobe）中央",
+              "target_pos": [
+                4.34,
+                1.56,
+                -4.1
+              ]
+            },
+            {
+              "item": "shirt",
+              "prompt_en": "Hang the shirt neatly on the wardrobe rod.",
+              "prompt_zh": "把衬衫（shirt）挂上大衣柜挂衣杆",
+              "target_pos": [
+                3.763,
+                1.6,
+                -4.12
+              ]
+            },
+            {
+              "item": "dress",
+              "prompt_en": "Hang the dress neatly on the wardrobe rod.",
+              "prompt_zh": "把连衣裙（dress）挂上大衣柜挂衣杆",
+              "target_pos": [
+                4.603,
+                1.62,
+                -4.12
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -1187,7 +1443,39 @@
             "hide_meshes": [
               "Schoolbag*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "shoes",
+              "prompt_en": "Put your shoes neatly beside the stool.",
+              "prompt_zh": "把鞋子（shoes）整整齐齐摆到收纳凳前",
+              "target_pos": [
+                -4.22,
+                0.03,
+                2.52
+              ]
+            },
+            {
+              "item": "schoolbag",
+              "prompt_en": "Arrange the schoolbag neatly on the stool.",
+              "prompt_zh": "把书包（schoolbag）整齐摆到收纳凳指定位置",
+              "target_pos": [
+                -4.729,
+                0.69,
+                3.36
+              ]
+            },
+            {
+              "item": "socks",
+              "prompt_en": "Place the socks neatly on the stool.",
+              "prompt_zh": "把袜子（socks）整齐摆到收纳凳指定位置",
+              "target_pos": [
+                -4.249,
+                0.69,
+                3.1
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -1285,7 +1573,39 @@
               0.96,
               1.62
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "book",
+              "prompt_en": "Put the bedtime book beside the warm lamp.",
+              "prompt_zh": "把睡前故事书（book）放到阅读灯边几上",
+              "target_pos": [
+                5.32,
+                0.96,
+                1.62
+              ]
+            },
+            {
+              "item": "star",
+              "prompt_en": "Arrange the star neatly on the lamp.",
+              "prompt_zh": "把星光小夜灯（star）整齐摆到床头阅读灯指定位置",
+              "target_pos": [
+                5.546,
+                0.96,
+                1.962
+              ]
+            },
+            {
+              "item": "card",
+              "prompt_en": "Place the card neatly on the lamp.",
+              "prompt_zh": "把晚安卡（card）整齐摆到床头阅读灯指定位置",
+              "target_pos": [
+                4.844,
+                0.96,
+                1.864
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -1594,7 +1914,7 @@
                 4.82
               ],
               [
-                -3.12,
+                -2.88,
                 0.04,
                 4.75
               ],
@@ -1614,7 +1934,39 @@
               1.45,
               4.8
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "hat",
+              "prompt_en": "Put the straw hat onto the hall basket.",
+              "prompt_zh": "把遮阳草帽（hat）放到门厅藤篮上",
+              "target_pos": [
+                -4.3,
+                1.45,
+                4.8
+              ]
+            },
+            {
+              "item": "umbrella",
+              "prompt_en": "Arrange the umbrella neatly in the basket.",
+              "prompt_zh": "把雨伞（umbrella）整齐摆到门厅藤篮指定位置",
+              "target_pos": [
+                -2.6,
+                0.04,
+                4.63
+              ]
+            },
+            {
+              "item": "bag",
+              "prompt_en": "Place the bag neatly in the basket.",
+              "prompt_zh": "把随身小包（bag）整齐摆到门厅藤篮指定位置",
+              "target_pos": [
+                -4.58,
+                1.43,
+                4.68
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -1730,7 +2082,39 @@
             "item_heights": {
               "coat": 0.85
             }
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "coat",
+              "prompt_en": "Hang the guest's coat in the wardrobe.",
+              "prompt_zh": "把外套（coat）挂进客厅衣帽柜里",
+              "target_pos": [
+                -5.35,
+                1.56,
+                -1.02
+              ]
+            },
+            {
+              "item": "scarf",
+              "prompt_en": "Put the scarf neatly on the wardrobe shelf.",
+              "prompt_zh": "把围巾（scarf）整理到客厅衣帽柜隔板上",
+              "target_pos": [
+                -4.52,
+                0.88,
+                -0.93
+              ]
+            },
+            {
+              "item": "cap",
+              "prompt_en": "Put the cap neatly on the wardrobe shelf.",
+              "prompt_zh": "把贝雷帽（cap）整理到客厅衣帽柜隔板上",
+              "target_pos": [
+                -5.04,
+                0.88,
+                -0.93
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -1845,7 +2229,39 @@
             "hide_meshes": [
               "Welcome_Apple*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "apple",
+              "prompt_en": "Put the sweet red apple on the tea table.",
+              "prompt_zh": "把红苹果（apple）摆到茶几果盘中央",
+              "target_pos": [
+                0.0,
+                1.12,
+                -1.7
+              ]
+            },
+            {
+              "item": "banana",
+              "prompt_en": "Arrange the banana neatly on the table.",
+              "prompt_zh": "把香蕉（banana）整齐摆到中央茶几指定位置",
+              "target_pos": [
+                -0.478,
+                1.05,
+                -1.613
+              ]
+            },
+            {
+              "item": "orange",
+              "prompt_en": "Place the orange neatly on the table.",
+              "prompt_zh": "把甜橙（orange）整齐摆到中央茶几指定位置",
+              "target_pos": [
+                0.296,
+                1.11,
+                -1.804
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -1949,7 +2365,39 @@
               "Living03_Tea*",
               "Living03_Teapot*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "photo",
+              "prompt_en": "Set the family photo on the window table.",
+              "prompt_zh": "把全家福相框（photo）摆到窗边台面上",
+              "target_pos": [
+                4.98,
+                1.06,
+                -1.0
+              ]
+            },
+            {
+              "item": "pillow",
+              "prompt_en": "Arrange the pillow neatly on the sofa.",
+              "prompt_zh": "把靠垫抱枕（pillow）整齐摆到窗边休闲台指定位置",
+              "target_pos": [
+                4.6,
+                1.05,
+                -0.901
+              ]
+            },
+            {
+              "item": "book",
+              "prompt_en": "Place the book neatly on the sofa.",
+              "prompt_zh": "把画册绘本（book）整齐摆到窗边休闲台指定位置",
+              "target_pos": [
+                4.985,
+                1.05,
+                -0.659
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -2047,7 +2495,39 @@
               1.6,
               5.42
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "lantern",
+              "prompt_en": "Place the warm lantern on the display shelf.",
+              "prompt_zh": "把小提灯（lantern）摆上展示架中央",
+              "target_pos": [
+                5.2,
+                1.6,
+                5.42
+              ]
+            },
+            {
+              "item": "shell",
+              "prompt_en": "Arrange the shell neatly on the clock.",
+              "prompt_zh": "把海螺贝壳（shell）整齐摆到展示架与挂钟指定位置",
+              "target_pos": [
+                4.806,
+                1.59,
+                5.33
+              ]
+            },
+            {
+              "item": "star",
+              "prompt_en": "Place the star neatly on the clock.",
+              "prompt_zh": "把纪念木星（star）整齐摆到展示架与挂钟指定位置",
+              "target_pos": [
+                5.51,
+                1.59,
+                5.63
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -2399,7 +2879,39 @@
               3.0,
               -4.57
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "bread",
+              "prompt_en": "Put the fresh bread in the clean cupboard.",
+              "prompt_zh": "把松软面包（bread）收进储物柜隔层",
+              "target_pos": [
+                -5.85,
+                0.88,
+                -5.02
+              ]
+            },
+            {
+              "item": "milk",
+              "prompt_en": "Put the milk neatly on the cupboard shelf.",
+              "prompt_zh": "把牛奶（milk）整理到食材储物柜隔板上",
+              "target_pos": [
+                -5.11,
+                1.52,
+                -4.99
+              ]
+            },
+            {
+              "item": "egg",
+              "prompt_en": "Put the egg neatly on the cupboard shelf.",
+              "prompt_zh": "把鸡蛋（egg）整理到食材储物柜隔板上",
+              "target_pos": [
+                -5.37,
+                1.52,
+                -4.99
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -2501,7 +3013,39 @@
               "Washed_Basket*",
               "Vegetable_before*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "tomato",
+              "prompt_en": "Put the red tomato in the sink to wash it.",
+              "prompt_zh": "把红西红柿（tomato）放进水槽中央清洗",
+              "target_pos": [
+                -1.42,
+                1.16,
+                -5.05
+              ]
+            },
+            {
+              "item": "potato",
+              "prompt_en": "Arrange the potato neatly in the sink.",
+              "prompt_zh": "把土豆（potato）整齐摆到洗菜水槽指定位置",
+              "target_pos": [
+                -1.797,
+                1.16,
+                -4.823
+              ]
+            },
+            {
+              "item": "vegetable",
+              "prompt_en": "Place the vegetable neatly in the sink.",
+              "prompt_zh": "把青菜（vegetable）整齐摆到洗菜水槽指定位置",
+              "target_pos": [
+                -0.885,
+                1.28,
+                -4.753
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -2602,7 +3146,39 @@
             "hide_meshes": [
               "Soup_Pot_Lid*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "spoon",
+              "prompt_en": "Rest the soup spoon neatly beside the pot.",
+              "prompt_zh": "把汤勺（spoon）整齐放在汤锅边",
+              "target_pos": [
+                3.52,
+                1.16,
+                -5.05
+              ]
+            },
+            {
+              "item": "fish",
+              "prompt_en": "Arrange the fish neatly on the pot.",
+              "prompt_zh": "把鲜鱼（fish）整齐摆到灶台与汤锅指定位置",
+              "target_pos": [
+                4.493,
+                1.15,
+                -4.91
+              ]
+            },
+            {
+              "item": "chicken",
+              "prompt_en": "Place the chicken neatly on the pot.",
+              "prompt_zh": "把鸡肉（chicken）整齐摆到灶台与汤锅指定位置",
+              "target_pos": [
+                5.096,
+                1.15,
+                -4.705
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -2704,7 +3280,39 @@
               "Kitchen_Produce*",
               "Fresh_Fruit*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "pumpkin",
+              "prompt_en": "Place the golden pumpkin on the counter.",
+              "prompt_zh": "把小南瓜（pumpkin）摆上料理台砧板",
+              "target_pos": [
+                1.98,
+                1.22,
+                0.35
+              ]
+            },
+            {
+              "item": "apple",
+              "prompt_en": "Arrange the apple neatly on the table.",
+              "prompt_zh": "把苹果（apple）整齐摆到备餐料理台指定位置",
+              "target_pos": [
+                1.549,
+                1.22,
+                0.555
+              ]
+            },
+            {
+              "item": "noodles",
+              "prompt_en": "Place the noodles neatly on the table.",
+              "prompt_zh": "把手擀面条（noodles）整齐摆到备餐料理台指定位置",
+              "target_pos": [
+                2.382,
+                1.22,
+                0.539
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -2802,7 +3410,39 @@
               1.75,
               1.88
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "bowl",
+              "prompt_en": "Put the clean bowl onto the dish rack.",
+              "prompt_zh": "把洗净的瓷碗（bowl）摆上餐具收纳架",
+              "target_pos": [
+                -5.0,
+                1.75,
+                1.88
+              ]
+            },
+            {
+              "item": "plate",
+              "prompt_en": "Arrange the plate neatly on the rack.",
+              "prompt_zh": "把圆盘（plate）整齐摆到餐具收纳架指定位置",
+              "target_pos": [
+                -5.356,
+                1.74,
+                2.14
+              ]
+            },
+            {
+              "item": "cup",
+              "prompt_en": "Place the cup neatly on the rack.",
+              "prompt_zh": "把玻璃杯（cup）整齐摆到餐具收纳架指定位置",
+              "target_pos": [
+                -4.644,
+                1.74,
+                2.14
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -3125,7 +3765,39 @@
             "hide_meshes": [
               "Breakfast_Cup*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "milk",
+              "prompt_en": "Set the warm milk on the breakfast cabinet.",
+              "prompt_zh": "把温牛奶（milk）摆到早餐边柜中央",
+              "target_pos": [
+                -4.6,
+                1.2,
+                -3.58
+              ]
+            },
+            {
+              "item": "bread",
+              "prompt_en": "Arrange the bread neatly on the cabinet.",
+              "prompt_zh": "把早餐面包（bread）整齐摆到早餐边柜指定位置",
+              "target_pos": [
+                -4.956,
+                1.2,
+                -3.397
+              ]
+            },
+            {
+              "item": "juice",
+              "prompt_en": "Place the juice neatly on the cabinet.",
+              "prompt_zh": "把鲜榨橙汁（juice）整齐摆到早餐边柜指定位置",
+              "target_pos": [
+                -4.144,
+                1.2,
+                -3.666
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -3227,7 +3899,39 @@
               "Dining_Produce*",
               "Shared_Fruit*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "orange",
+              "prompt_en": "Place the sweet orange in the center of the fruit table.",
+              "prompt_zh": "把甜橙（orange）摆到水果台中央",
+              "target_pos": [
+                4.6,
+                1.07,
+                -0.08
+              ]
+            },
+            {
+              "item": "apple",
+              "prompt_en": "Arrange the apple neatly on the table.",
+              "prompt_zh": "把红苹果（apple）整齐摆到水果分享台指定位置",
+              "target_pos": [
+                4.388,
+                1.06,
+                0.277
+              ]
+            },
+            {
+              "item": "banana",
+              "prompt_en": "Place the banana neatly on the table.",
+              "prompt_zh": "把甜香蕉（banana）整齐摆到水果分享台指定位置",
+              "target_pos": [
+                4.753,
+                1.06,
+                -0.328
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -3342,7 +4046,39 @@
             "hide_meshes": [
               "OWN06_Mill*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "dumplings",
+              "prompt_en": "Serve the hot dumplings onto the dining table!",
+              "prompt_zh": "把热饺子（dumplings）端上家庭大餐桌中央",
+              "target_pos": [
+                0.0,
+                1.18,
+                -1.22
+              ]
+            },
+            {
+              "item": "rice",
+              "prompt_en": "Arrange the rice neatly on the table.",
+              "prompt_zh": "把白米饭（rice）整齐摆到家庭大餐桌指定位置",
+              "target_pos": [
+                -0.478,
+                1.17,
+                -0.687
+              ]
+            },
+            {
+              "item": "noodles",
+              "prompt_en": "Place the noodles neatly on the table.",
+              "prompt_zh": "把香汤面（noodles）整齐摆到家庭大餐桌指定位置",
+              "target_pos": [
+                -0.606,
+                1.17,
+                -1.292
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -3443,7 +4179,39 @@
             "hide_meshes": [
               "Birthday_Cake*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "cake",
+              "prompt_en": "Set the birthday cake in the middle of the table!",
+              "prompt_zh": "把生日蛋糕（cake）摆到点心桌正中央",
+              "target_pos": [
+                -4.6,
+                1.04,
+                -0.08
+              ]
+            },
+            {
+              "item": "ice-cream",
+              "prompt_en": "Arrange the ice-cream neatly on the stool.",
+              "prompt_zh": "把冰淇淋（ice-cream）整齐摆到生日点心桌指定位置",
+              "target_pos": [
+                -4.422,
+                1.03,
+                -0.345
+              ]
+            },
+            {
+              "item": "candy",
+              "prompt_en": "Place the candy neatly on the stool.",
+              "prompt_zh": "把水果糖（candy）整齐摆到生日点心桌指定位置",
+              "target_pos": [
+                -4.585,
+                1.03,
+                0.314
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -3541,7 +4309,39 @@
               1.9,
               -4.22
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "chopsticks",
+              "prompt_en": "Place the chopsticks neatly on the shelf.",
+              "prompt_zh": "把木筷（chopsticks）整齐摆在餐边架上",
+              "target_pos": [
+                4.6,
+                1.9,
+                -4.22
+              ]
+            },
+            {
+              "item": "lantern",
+              "prompt_en": "Arrange the lantern neatly on the shelf.",
+              "prompt_zh": "把节日灯笼（lantern）整齐摆到节日餐边架指定位置",
+              "target_pos": [
+                4.096,
+                1.89,
+                -4.18
+              ]
+            },
+            {
+              "item": "tea",
+              "prompt_en": "Place the tea neatly on the shelf.",
+              "prompt_zh": "把待客香茗（tea）整齐摆到节日餐边架指定位置",
+              "target_pos": [
+                4.717,
+                1.89,
+                -4.48
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -3883,7 +4683,39 @@
               "Toothbrush_Cup*",
               "CF09_FoldedTowels*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "toothbrush",
+              "prompt_en": "Put your toothbrush into the rinsing cup.",
+              "prompt_zh": "刷完牙把牙刷（toothbrush）放回洗漱台杯边",
+              "target_pos": [
+                -3.98,
+                1.18,
+                -4.52
+              ]
+            },
+            {
+              "item": "comb",
+              "prompt_en": "Arrange the comb neatly on the mirror.",
+              "prompt_zh": "把小木梳（comb）整齐摆到洗漱镜台指定位置",
+              "target_pos": [
+                -3.695,
+                1.09,
+                -4.174
+              ]
+            },
+            {
+              "item": "glasses",
+              "prompt_en": "Place the glasses neatly on the mirror.",
+              "prompt_zh": "把眼镜（glasses）整齐摆到洗漱镜台指定位置",
+              "target_pos": [
+                -3.185,
+                1.09,
+                -4.28
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -3981,7 +4813,39 @@
               1.28,
               -4.45
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "soap",
+              "prompt_en": "Put the pink soap neatly on the washbasin rim.",
+              "prompt_zh": "把粉香皂（soap）放回洗手台皂位上",
+              "target_pos": [
+                -1.54,
+                1.28,
+                -4.45
+              ]
+            },
+            {
+              "item": "water",
+              "prompt_en": "Arrange the water neatly in the washbasin.",
+              "prompt_zh": "把清水（water）整齐摆到洗手台指定位置",
+              "target_pos": [
+                -0.904,
+                1.15,
+                -4.306
+              ]
+            },
+            {
+              "item": "towel",
+              "prompt_en": "Place the towel neatly in the washbasin.",
+              "prompt_zh": "把擦手巾（towel）整齐摆到洗手台指定位置",
+              "target_pos": [
+                -1.298,
+                1.09,
+                -4.193
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -4069,7 +4933,29 @@
               "OWN06_Bath_washcloth*",
               "OWN06_Washcloth*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "duck",
+              "prompt_en": "Float the little yellow duck in the bath!",
+              "prompt_zh": "把小黄鸭（duck）放进浴缸里游水",
+              "target_pos": [
+                4.22,
+                0.46,
+                -2.85
+              ]
+            },
+            {
+              "item": "towel",
+              "prompt_en": "Arrange the towel neatly in the bath.",
+              "prompt_zh": "把大浴巾（towel）整齐摆到温暖浴缸指定位置",
+              "target_pos": [
+                4.004,
+                1.08,
+                -2.0
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -4153,7 +5039,29 @@
               1.61,
               1.1
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "towel",
+              "prompt_en": "Place the clean towel neatly on the rack.",
+              "prompt_zh": "把干净毛巾（towel）摆上毛巾架",
+              "target_pos": [
+                -5.38,
+                1.61,
+                1.1
+              ]
+            },
+            {
+              "item": "shirt",
+              "prompt_en": "Arrange the shirt neatly on the rack.",
+              "prompt_zh": "把换洗衣物（shirt）整齐摆到毛巾收纳架指定位置",
+              "target_pos": [
+                -5.1,
+                0.92,
+                0.96
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -4237,7 +5145,29 @@
               0.03,
               1.45
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "bucket",
+              "prompt_en": "Set the blue bucket neatly in the corner.",
+              "prompt_zh": "把蓝色储水小桶（bucket）摆好在角落",
+              "target_pos": [
+                5.35,
+                0.03,
+                1.45
+              ]
+            },
+            {
+              "item": "water",
+              "prompt_en": "Arrange the water neatly on the tap.",
+              "prompt_zh": "把小水滴（water）整齐摆到节水洗手角指定位置",
+              "target_pos": [
+                4.703,
+                1.78,
+                0.76
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -4474,7 +5404,29 @@
             "hide_meshes": [
               "Welcome_Letter_Envelope*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "letter",
+              "prompt_en": "Put the greeting letter neatly on the mailbox table.",
+              "prompt_zh": "把问候信（letter）摆到信箱台中央",
+              "target_pos": [
+                -10.0,
+                1.02,
+                11.65
+              ]
+            },
+            {
+              "item": "card",
+              "prompt_en": "Arrange the card neatly on the mailbox.",
+              "prompt_zh": "把明信片（card）整齐摆到门前红信箱指定位置",
+              "target_pos": [
+                -9.816,
+                1.01,
+                11.982
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -4572,7 +5524,39 @@
               0.56,
               11.82
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "flower",
+              "prompt_en": "Plant the blooming flower in the garden bed.",
+              "prompt_zh": "把花朵（flower）种进小院花圃里",
+              "target_pos": [
+                8.52,
+                0.56,
+                11.82
+              ]
+            },
+            {
+              "item": "grass",
+              "prompt_en": "Arrange the grass neatly on the garden.",
+              "prompt_zh": "把嫩绿青草（grass）整齐摆到小院花圃指定位置",
+              "target_pos": [
+                7.785,
+                0.56,
+                11.622
+              ]
+            },
+            {
+              "item": "bee",
+              "prompt_en": "Place the bee neatly on the garden.",
+              "prompt_zh": "把小蜜蜂（bee）整齐摆到小院花圃指定位置",
+              "target_pos": [
+                10.06,
+                0.88,
+                11.63
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -4622,41 +5606,63 @@
           "stage_spec": {
             "mode": "surface",
             "plaque_pos": [
-              -6.1,
+              -7.32,
               1.48,
-              8.2
+              8.58
             ],
             "focus": [
-              -6.1,
+              -7.32,
               -0.15,
-              8.2
+              8.58
             ],
             "camera_size": 4.1,
             "prop_scale": 0.96,
             "prop_yaw_deg": 18.0,
             "slots": [
               [
-                -6.1,
+                -7.32,
                 0.53,
-                8.2
+                8.58
               ],
               [
-                -5.25,
+                -6.47,
                 0.05,
-                8.2
+                8.58
               ],
               [
-                -6.95,
+                -8.17,
                 0.05,
-                8.32
+                8.7
               ]
             ],
             "target_pos": [
-              -6.1,
+              -7.32,
               0.48,
-              8.15
+              8.53
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "umbrella",
+              "prompt_en": "Keep the blue umbrella in the porch basket.",
+              "prompt_zh": "把雨伞（umbrella）收进门廊藤篮里",
+              "target_pos": [
+                -7.32,
+                0.48,
+                8.53
+              ]
+            },
+            {
+              "item": "hat",
+              "prompt_en": "Arrange the hat neatly in the basket.",
+              "prompt_zh": "把田园草帽（hat）整齐摆到门廊随身篮指定位置",
+              "target_pos": [
+                -7.14,
+                0.53,
+                8.8
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -4740,7 +5746,29 @@
               1.38,
               11.98
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "bell",
+              "prompt_en": "Hang the golden bell on the family board post.",
+              "prompt_zh": "把小门铃（bell）挂上日程牌木柱",
+              "target_pos": [
+                2.88,
+                1.38,
+                11.98
+              ]
+            },
+            {
+              "item": "dog",
+              "prompt_en": "Arrange the dog neatly on the door.",
+              "prompt_zh": "把可爱小狗（dog）整齐摆到家门日程板指定位置",
+              "target_pos": [
+                1.46,
+                0.05,
+                11.06
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -4828,7 +5856,29 @@
               "Porch_Book*",
               "Porch_Story_Book*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "nest",
+              "prompt_en": "Rest the cosy bird nest safely on the bench end.",
+              "prompt_zh": "把温暖鸟窝（nest）稳稳安放在树荫木椅端",
+              "target_pos": [
+                12.62,
+                0.7,
+                9.05
+              ]
+            },
+            {
+              "item": "leaf",
+              "prompt_en": "Arrange the leaf neatly on the tree.",
+              "prompt_zh": "把翠绿树叶（leaf）整齐摆到门廊绿树长椅指定位置",
+              "target_pos": [
+                11.278,
+                0.69,
+                9.19
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -5121,7 +6171,39 @@
               2.15,
               -3.1
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "socks",
+              "prompt_en": "Hang the clean socks up on the drying rack!",
+              "prompt_zh": "把洗干净的袜子（socks）挂上晾衣杆",
+              "target_pos": [
+                -4.12,
+                2.15,
+                -3.1
+              ]
+            },
+            {
+              "item": "shirt",
+              "prompt_en": "Arrange the shirt neatly in the basket.",
+              "prompt_zh": "把清爽衬衫（shirt）整齐摆到洗衣篮与晾衣架指定位置",
+              "target_pos": [
+                -3.894,
+                1.92,
+                -3.22
+              ]
+            },
+            {
+              "item": "towel",
+              "prompt_en": "Place the towel neatly in the basket.",
+              "prompt_zh": "把柔软毛巾（towel）整齐摆到洗衣篮与晾衣架指定位置",
+              "target_pos": [
+                -3.42,
+                2.18,
+                -3.22
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -5205,7 +6287,29 @@
               0.56,
               -3.75
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "plant",
+              "prompt_en": "Place the green plant in the sunny planter.",
+              "prompt_zh": "把绿植盆栽（plant）摆进阳光花槽",
+              "target_pos": [
+                3.82,
+                0.56,
+                -3.75
+              ]
+            },
+            {
+              "item": "flower",
+              "prompt_en": "Arrange the flower neatly on the table.",
+              "prompt_zh": "把向阳小花（flower）整齐摆到阳光花架指定位置",
+              "target_pos": [
+                4.68,
+                0.89,
+                -3.84
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -5294,7 +6398,29 @@
               "OWN07_Cleaning_cloth*",
               "OWN07_Brush*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "cloth",
+              "prompt_en": "Place the soft cloth ready on the window stand.",
+              "prompt_zh": "把软抹布（cloth）摆在擦窗台正中",
+              "target_pos": [
+                0.0,
+                0.86,
+                -4.08
+              ]
+            },
+            {
+              "item": "sun",
+              "prompt_en": "Arrange the sun neatly on the window.",
+              "prompt_zh": "把灿烂阳光（sun）整齐摆到明亮阳台窗指定位置",
+              "target_pos": [
+                0.006,
+                1.68,
+                -4.47
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -5378,7 +6504,29 @@
               0.03,
               2.88
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "yarn",
+              "prompt_en": "Put the soft yarn ball beside sleepy Kitty.",
+              "prompt_zh": "把毛线球（yarn）轻轻放在小猫旁边",
+              "target_pos": [
+                3.88,
+                0.03,
+                2.88
+              ]
+            },
+            {
+              "item": "cat",
+              "prompt_en": "Arrange the cat neatly on the broom.",
+              "prompt_zh": "把午睡小猫（cat）整齐摆到扫帚清洁角指定位置",
+              "target_pos": [
+                4.142,
+                0.03,
+                2.729
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -5462,7 +6610,29 @@
               1.28,
               0.6
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "soap",
+              "prompt_en": "Place the laundry soap neatly on the sink rim.",
+              "prompt_zh": "把洗衣皂（soap）整齐放回洗衣池边",
+              "target_pos": [
+                -1.56,
+                1.28,
+                0.6
+              ]
+            },
+            {
+              "item": "water",
+              "prompt_en": "Arrange the water neatly in the bucket.",
+              "prompt_zh": "把清凉池水（water）整齐摆到洗衣池收纳角指定位置",
+              "target_pos": [
+                -3.032,
+                1.15,
+                0.745
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -5732,7 +6902,29 @@
               0.91,
               4.55
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "card",
+              "prompt_en": "Put your name card on the welcome stand.",
+              "prompt_zh": "把你的姓名牌（card）摆上门口签到台",
+              "target_pos": [
+                -3.55,
+                0.91,
+                4.55
+              ]
+            },
+            {
+              "item": "clock",
+              "prompt_en": "Arrange the clock neatly on the door.",
+              "prompt_zh": "把教室小闹钟（clock）整齐摆到教室门牌台指定位置",
+              "target_pos": [
+                -4.554,
+                0.91,
+                4.69
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -5830,7 +7022,39 @@
               2.25,
               -0.95
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "book",
+              "prompt_en": "Return the picture book to the class bookcase.",
+              "prompt_zh": "读完把绘本（book）整齐放回班级图书架",
+              "target_pos": [
+                -5.0,
+                2.25,
+                -0.95
+              ]
+            },
+            {
+              "item": "storybook",
+              "prompt_en": "Arrange the storybook neatly on the bookcase.",
+              "prompt_zh": "把童话故事书（storybook）整齐摆到班级图书角指定位置",
+              "target_pos": [
+                -4.929,
+                2.24,
+                -1.2
+              ]
+            },
+            {
+              "item": "dictionary",
+              "prompt_en": "Place the dictionary neatly on the bookcase.",
+              "prompt_zh": "把小学生词典（dictionary）整齐摆到班级图书角指定位置",
+              "target_pos": [
+                -4.611,
+                2.24,
+                -0.86
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -5946,7 +7170,39 @@
               "Open_Notebook*",
               "CF09_Activity*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "english",
+              "prompt_en": "Put your English book flat on the desk!",
+              "prompt_zh": "拿出英语课本（English）平放在课桌正中",
+              "target_pos": [
+                0.0,
+                0.98,
+                -1.72
+              ]
+            },
+            {
+              "item": "notebook",
+              "prompt_en": "Arrange the notebook neatly on the desk.",
+              "prompt_zh": "把课堂练习本（notebook）整齐摆到中央学生课桌指定位置",
+              "target_pos": [
+                -0.494,
+                0.97,
+                -1.591
+              ]
+            },
+            {
+              "item": "pencil",
+              "prompt_en": "Place the pencil neatly on the desk.",
+              "prompt_zh": "把铅笔（pencil）整齐摆到中央学生课桌指定位置",
+              "target_pos": [
+                0.256,
+                0.97,
+                -1.368
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -6044,7 +7300,39 @@
               1.85,
               -1.08
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "chalk",
+              "prompt_en": "Place the chalk box neatly on the teaching shelf.",
+              "prompt_zh": "把粉笔（chalk）整齐放回教具架",
+              "target_pos": [
+                4.3,
+                1.85,
+                -1.08
+              ]
+            },
+            {
+              "item": "eraser",
+              "prompt_en": "Arrange the eraser neatly on the blackboard.",
+              "prompt_zh": "把黑板擦（eraser）整齐摆到黑板与教具柜指定位置",
+              "target_pos": [
+                5.048,
+                1.84,
+                -1.08
+              ]
+            },
+            {
+              "item": "globe",
+              "prompt_en": "Place the globe neatly on the blackboard.",
+              "prompt_zh": "把课堂地球仪（globe）整齐摆到黑板与教具柜指定位置",
+              "target_pos": [
+                4.912,
+                1.84,
+                -1.34
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -6142,7 +7430,39 @@
               0.04,
               4.95
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "schoolbag",
+              "prompt_en": "Place your schoolbag neatly by the display stand.",
+              "prompt_zh": "把书包（schoolbag）整齐放好",
+              "target_pos": [
+                4.18,
+                0.04,
+                4.95
+              ]
+            },
+            {
+              "item": "star",
+              "prompt_en": "Arrange the star neatly on the chair.",
+              "prompt_zh": "把表扬金星（star）整齐摆到课椅与作品墙指定位置",
+              "target_pos": [
+                5.395,
+                0.89,
+                5.22
+              ]
+            },
+            {
+              "item": "picture",
+              "prompt_en": "Place the picture neatly on the chair.",
+              "prompt_zh": "把手抄报画作（picture）整齐摆到课椅与作品墙指定位置",
+              "target_pos": [
+                4.97,
+                0.89,
+                4.96
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -6457,7 +7777,29 @@
               1.38,
               15.42
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "card",
+              "prompt_en": "Pin your student card onto the welcome board.",
+              "prompt_zh": "把名牌（card）签到在校门迎新牌上",
+              "target_pos": [
+                -6.5,
+                1.38,
+                15.42
+              ]
+            },
+            {
+              "item": "schoolbag",
+              "prompt_en": "Arrange the schoolbag neatly on the gate.",
+              "prompt_zh": "把双肩书包（schoolbag）整齐摆到校门迎新牌指定位置",
+              "target_pos": [
+                -6.97,
+                0.04,
+                15.56
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -6555,7 +7897,39 @@
               1.42,
               -7.5
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "english",
+              "prompt_en": "Put English class into the morning timetable!",
+              "prompt_zh": "把英语课（English）排进课程栏首位",
+              "target_pos": [
+                -5.8,
+                1.42,
+                -7.5
+              ]
+            },
+            {
+              "item": "music",
+              "prompt_en": "Arrange the music neatly on the classroom.",
+              "prompt_zh": "把音乐课（music）整齐摆到教学楼课程栏指定位置",
+              "target_pos": [
+                -6.154,
+                0.99,
+                -7.26
+              ]
+            },
+            {
+              "item": "art",
+              "prompt_en": "Place the art neatly on the classroom.",
+              "prompt_zh": "把美术课（art）整齐摆到教学楼课程栏指定位置",
+              "target_pos": [
+                -5.431,
+                0.99,
+                -7.26
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -6639,7 +8013,29 @@
               0.48,
               0.25
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "flower",
+              "prompt_en": "Keep the pink flower blooming in the garden.",
+              "prompt_zh": "照顾好花园里的粉色花朵（flower）",
+              "target_pos": [
+                2.72,
+                0.48,
+                0.25
+              ]
+            },
+            {
+              "item": "tree",
+              "prompt_en": "Arrange the tree neatly on the garden.",
+              "prompt_zh": "把香樟绿树（tree）整齐摆到校园中心花园指定位置",
+              "target_pos": [
+                2.266,
+                0.48,
+                0.434
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -6726,7 +8122,29 @@
             "hide_meshes": [
               "ASSET_School_Play_Ball*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "football",
+              "prompt_en": "Set the football ready on the sports rack.",
+              "prompt_zh": "把足球（football）稳稳放回球架上",
+              "target_pos": [
+                20.34,
+                0.7,
+                11.0
+              ]
+            },
+            {
+              "item": "basketball",
+              "prompt_en": "Arrange the basketball neatly on the playground.",
+              "prompt_zh": "把篮球（basketball）整齐摆到运动器材角指定位置",
+              "target_pos": [
+                20.98,
+                0.7,
+                10.88
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -6776,12 +8194,12 @@
           "stage_spec": {
             "mode": "surface",
             "plaque_pos": [
-              21.0,
+              21.45,
               2.45,
               5.35
             ],
             "focus": [
-              21.0,
+              21.45,
               0.65,
               5.42
             ],
@@ -6790,27 +8208,49 @@
             "prop_yaw_deg": 18.0,
             "slots": [
               [
-                20.22,
+                20.67,
                 0.99,
                 5.48
               ],
               [
-                21.0,
+                21.45,
                 0.99,
                 5.48
               ],
               [
-                21.78,
+                22.23,
                 0.99,
                 5.48
               ]
             ],
             "target_pos": [
-              21.38,
+              21.83,
               0.99,
               5.48
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "apple",
+              "prompt_en": "Add a fresh red apple to today's lunch menu!",
+              "prompt_zh": "把红苹果（apple）添上今日营养菜单栏",
+              "target_pos": [
+                21.83,
+                0.99,
+                5.48
+              ]
+            },
+            {
+              "item": "rice",
+              "prompt_en": "Arrange the rice neatly on the board.",
+              "prompt_zh": "把香米饭（rice）整齐摆到餐厅今日菜单指定位置",
+              "target_pos": [
+                21.261,
+                0.99,
+                5.62
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -7089,7 +8529,29 @@
               2.5,
               2.85
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "song",
+              "prompt_en": "Place the English songbook on the music cabinet.",
+              "prompt_zh": "把英文歌本（song）摆上乐谱柜顶层",
+              "target_pos": [
+                -6.75,
+                2.5,
+                2.85
+              ]
+            },
+            {
+              "item": "bell",
+              "prompt_en": "Arrange the bell neatly on the stand.",
+              "prompt_zh": "把清脆手铃（bell）整齐摆到入口乐谱柜指定位置",
+              "target_pos": [
+                -6.07,
+                2.49,
+                2.73
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -7173,7 +8635,29 @@
               1.32,
               -2.22
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "book",
+              "prompt_en": "Place the piano music book on the piano stand.",
+              "prompt_zh": "把曲谱（book）摆到钢琴谱架前",
+              "target_pos": [
+                -4.65,
+                1.32,
+                -2.22
+              ]
+            },
+            {
+              "item": "stool",
+              "prompt_en": "Arrange the stool neatly on the piano.",
+              "prompt_zh": "把钢琴凳（stool）整齐摆到三角钢琴指定位置",
+              "target_pos": [
+                -5.37,
+                0.67,
+                -1.37
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -7257,7 +8741,29 @@
               1.02,
               -1.45
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "stick",
+              "prompt_en": "Rest the wooden drumsticks on the center drum.",
+              "prompt_zh": "把鼓槌（stick）轻轻放在中央大鼓上",
+              "target_pos": [
+                2.0,
+                1.02,
+                -1.45
+              ]
+            },
+            {
+              "item": "bell",
+              "prompt_en": "Arrange the bell neatly on the drum.",
+              "prompt_zh": "把铃鼓（bell）整齐摆到节奏鼓区指定位置",
+              "target_pos": [
+                2.42,
+                0.79,
+                -1.16
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -7354,7 +8860,29 @@
               "guitar": 1.6,
               "gramophone": 0.68
             }
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "violin",
+              "prompt_en": "Place the violin safely back on the rack.",
+              "prompt_zh": "拉完琴把小提琴（violin）稳稳放回琴架台",
+              "target_pos": [
+                5.3,
+                0.27,
+                3.07
+              ]
+            },
+            {
+              "item": "guitar",
+              "prompt_en": "Arrange the guitar neatly on the rack.",
+              "prompt_zh": "把木吉他（guitar）整齐摆到弦乐器架指定位置",
+              "target_pos": [
+                5.782,
+                0.27,
+                2.998
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -7438,7 +8966,29 @@
               0.39,
               -5.55
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "star",
+              "prompt_en": "Light up the golden star on the stage!",
+              "prompt_zh": "把金色星灯（star）摆到舞台麦克风前",
+              "target_pos": [
+                0.0,
+                0.39,
+                -5.55
+              ]
+            },
+            {
+              "item": "dress",
+              "prompt_en": "Arrange the dress neatly on the stage.",
+              "prompt_zh": "把演出礼服（dress）整齐摆到合唱小舞台指定位置",
+              "target_pos": [
+                -0.885,
+                0.38,
+                -5.96
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -7690,7 +9240,29 @@
               0.2,
               2.75
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "hat",
+              "prompt_en": "Keep the artist beret neatly in the cabinet.",
+              "prompt_zh": "把小画家帽（hat）整齐收进画具柜下层",
+              "target_pos": [
+                -6.25,
+                0.2,
+                2.75
+              ]
+            },
+            {
+              "item": "shirt",
+              "prompt_en": "Arrange the shirt neatly on the cabinet.",
+              "prompt_zh": "把画画罩衣（shirt）整齐摆到围裙画具柜指定位置",
+              "target_pos": [
+                -6.026,
+                0.2,
+                2.63
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -7802,7 +9374,39 @@
               1.24,
               -2.15
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "brush",
+              "prompt_en": "Rest your clean paintbrush on the art palette.",
+              "prompt_zh": "洗净画笔（brush）平放在调色盘上",
+              "target_pos": [
+                -5.35,
+                1.24,
+                -2.15
+              ]
+            },
+            {
+              "item": "crayon",
+              "prompt_en": "Arrange the crayon neatly on the table.",
+              "prompt_zh": "把彩色蜡笔（crayon）整齐摆到颜料调色台指定位置",
+              "target_pos": [
+                -5.434,
+                1.15,
+                -1.754
+              ]
+            },
+            {
+              "item": "red",
+              "prompt_en": "Place the red neatly on the table.",
+              "prompt_zh": "把正红颜料（red）整齐摆到颜料调色台指定位置",
+              "target_pos": [
+                -4.624,
+                1.15,
+                -1.992
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -7886,7 +9490,29 @@
               1.48,
               -1.2
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "paper",
+              "prompt_en": "Clip the white drawing paper onto the easel!",
+              "prompt_zh": "把白画纸（paper）夹到木画架中央",
+              "target_pos": [
+                0.35,
+                1.48,
+                -1.2
+              ]
+            },
+            {
+              "item": "pencil",
+              "prompt_en": "Arrange the pencil neatly on the easel.",
+              "prompt_zh": "把素描铅笔（pencil）整齐摆到木画架指定位置",
+              "target_pos": [
+                0.013,
+                1.0,
+                -0.977
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -7970,7 +9596,29 @@
               1.21,
               2.95
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "pumpkin",
+              "prompt_en": "Set your handmade clay pumpkin on the working board!",
+              "prompt_zh": "把陶泥小南瓜（pumpkin）摆在泥塑垫板上",
+              "target_pos": [
+                4.62,
+                1.21,
+                2.95
+              ]
+            },
+            {
+              "item": "scissors",
+              "prompt_en": "Arrange the scissors neatly on the stool.",
+              "prompt_zh": "把安全剪刀（scissors）整齐摆到陶泥手工桌指定位置",
+              "target_pos": [
+                4.276,
+                1.2,
+                2.633
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -8054,7 +9702,29 @@
               0.96,
               -6.52
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "card",
+              "prompt_en": "Stick the title card neatly below the picture.",
+              "prompt_zh": "把作品名卡（card）放到画作展轨中央",
+              "target_pos": [
+                0.0,
+                0.96,
+                -6.52
+              ]
+            },
+            {
+              "item": "star",
+              "prompt_en": "Arrange the star neatly on the picture.",
+              "prompt_zh": "把创意小星章（star）整齐摆到出口作品墙指定位置",
+              "target_pos": [
+                -0.484,
+                0.71,
+                -6.3
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -8342,7 +10012,29 @@
               1.13,
               3.12
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "glasses",
+              "prompt_en": "Place the safety glasses neatly on the prep bench.",
+              "prompt_zh": "把实验护目镜（glasses）整齐放在实验准备台上",
+              "target_pos": [
+                -6.42,
+                1.13,
+                3.12
+              ]
+            },
+            {
+              "item": "notebook",
+              "prompt_en": "Arrange the notebook neatly on the goggles.",
+              "prompt_zh": "把实验记录本（notebook）整齐摆到安全准备区指定位置",
+              "target_pos": [
+                -5.76,
+                1.13,
+                3.23
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -8426,7 +10118,29 @@
               1.23,
               -3.38
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "leaf",
+              "prompt_en": "Place the green leaf specimen on the sample tray.",
+              "prompt_zh": "把绿叶标本（leaf）放到显微镜标本盘中央",
+              "target_pos": [
+                -5.4,
+                1.23,
+                -3.38
+              ]
+            },
+            {
+              "item": "water",
+              "prompt_en": "Arrange the water neatly on the table.",
+              "prompt_zh": "把滴管清水瓶（water）整齐摆到显微镜观察台指定位置",
+              "target_pos": [
+                -5.523,
+                1.14,
+                -2.993
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -8513,7 +10227,29 @@
             "hide_meshes": [
               "Science_Plant_ObservationBook*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "seed",
+              "prompt_en": "Place the brown seed gently on the plant table.",
+              "prompt_zh": "把小种子（seed）摆到植物观察台前",
+              "target_pos": [
+                0.58,
+                1.11,
+                -1.48
+              ]
+            },
+            {
+              "item": "flower",
+              "prompt_en": "Arrange the flower neatly on the plant.",
+              "prompt_zh": "把开花豆苗（flower）整齐摆到植物生长观察角指定位置",
+              "target_pos": [
+                1.335,
+                1.1,
+                -1.63
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -8611,7 +10347,39 @@
               1.22,
               3.48
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "key",
+              "prompt_en": "Test the iron key beside the horseshoe magnet!",
+              "prompt_zh": "把金属钥匙（key）移近马蹄形磁铁试试吸力",
+              "target_pos": [
+                4.7,
+                1.22,
+                3.48
+              ]
+            },
+            {
+              "item": "ruler",
+              "prompt_en": "Arrange the ruler neatly on the magnet.",
+              "prompt_zh": "把塑料尺（不吸）（ruler）整齐摆到磁铁实验台指定位置",
+              "target_pos": [
+                5.638,
+                1.14,
+                3.279
+              ]
+            },
+            {
+              "item": "eraser",
+              "prompt_en": "Place the eraser neatly on the magnet.",
+              "prompt_zh": "把橡皮（不吸）（eraser）整齐摆到磁铁实验台指定位置",
+              "target_pos": [
+                6.001,
+                1.14,
+                3.537
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -8695,7 +10463,29 @@
               1.3,
               -6.38
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "globe",
+              "prompt_en": "Set the blue globe proudly on the model shelf.",
+              "prompt_zh": "把地球仪（globe）稳稳摆上科学模型架",
+              "target_pos": [
+                0.58,
+                1.3,
+                -6.38
+              ]
+            },
+            {
+              "item": "rain",
+              "prompt_en": "Arrange the rain neatly on the shelf.",
+              "prompt_zh": "把降雨模型瓶（rain）整齐摆到地球与天气模型架指定位置",
+              "target_pos": [
+                1.33,
+                1.29,
+                -6.67
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -8974,7 +10764,29 @@
               1.25,
               4.92
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "chicken",
+              "prompt_en": "Set today's chicken dish at the menu board.",
+              "prompt_zh": "把烤鸡肉（chicken）放到今日推荐栏中央",
+              "target_pos": [
+                -4.3,
+                1.25,
+                4.92
+              ]
+            },
+            {
+              "item": "fish",
+              "prompt_en": "Arrange the fish neatly on the board.",
+              "prompt_zh": "把番茄烧鱼（fish）整齐摆到入口今日菜单板指定位置",
+              "target_pos": [
+                -4.58,
+                0.89,
+                4.54
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -9075,7 +10887,39 @@
             "hide_meshes": [
               "Clean_Plates*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "spoon",
+              "prompt_en": "Place a clean spoon onto the cutlery counter.",
+              "prompt_zh": "拿一把干净勺子（spoon）摆到餐盘旁",
+              "target_pos": [
+                -4.45,
+                1.12,
+                -1.15
+              ]
+            },
+            {
+              "item": "bowl",
+              "prompt_en": "Arrange the bowl neatly on the tray.",
+              "prompt_zh": "把汤碗（bowl）整齐摆到洁净餐具台指定位置",
+              "target_pos": [
+                -5.312,
+                1.11,
+                -0.918
+              ]
+            },
+            {
+              "item": "chopsticks",
+              "prompt_en": "Place the chopsticks neatly on the tray.",
+              "prompt_zh": "把竹筷（chopsticks）整齐摆到洁净餐具台指定位置",
+              "target_pos": [
+                -5.172,
+                1.11,
+                -1.14
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -9173,7 +11017,39 @@
               1.15,
               -1.15
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "sandwich",
+              "prompt_en": "Put the tasty sandwich onto the serving counter.",
+              "prompt_zh": "点一份三明治（sandwich）端到取餐窗口前",
+              "target_pos": [
+                0.0,
+                1.15,
+                -1.15
+              ]
+            },
+            {
+              "item": "rice",
+              "prompt_en": "Arrange the rice neatly on the window.",
+              "prompt_zh": "把热米饭（rice）整齐摆到中央取餐窗口指定位置",
+              "target_pos": [
+                -0.486,
+                1.14,
+                -1.04
+              ]
+            },
+            {
+              "item": "hamburger",
+              "prompt_en": "Place the hamburger neatly on the window.",
+              "prompt_zh": "把牛肉汉堡（hamburger）整齐摆到中央取餐窗口指定位置",
+              "target_pos": [
+                0.427,
+                1.14,
+                -0.96
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -9274,7 +11150,39 @@
             "hide_meshes": [
               "Lunch_Fruit*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "milk",
+              "prompt_en": "Set your warm milk neatly on the dining table.",
+              "prompt_zh": "把牛奶（milk）稳稳摆在餐桌中央",
+              "target_pos": [
+                5.0,
+                0.97,
+                -0.88
+              ]
+            },
+            {
+              "item": "juice",
+              "prompt_en": "Arrange the juice neatly on the table.",
+              "prompt_zh": "把鲜橙汁（juice）整齐摆到阳光用餐分享桌指定位置",
+              "target_pos": [
+                4.571,
+                0.96,
+                -0.902
+              ]
+            },
+            {
+              "item": "apple",
+              "prompt_en": "Place the apple neatly on the table.",
+              "prompt_zh": "把红苹果（apple）整齐摆到阳光用餐分享桌指定位置",
+              "target_pos": [
+                4.766,
+                1.02,
+                -1.365
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -9358,7 +11266,29 @@
               1.23,
               5.15
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "plate",
+              "prompt_en": "Return your clean empty plate to the tray!",
+              "prompt_zh": "把光盘后的空餐盘（plate）放进回收托盘中央",
+              "target_pos": [
+                4.88,
+                1.23,
+                5.15
+              ]
+            },
+            {
+              "item": "cup",
+              "prompt_en": "Arrange the cup neatly on the rack.",
+              "prompt_zh": "把空水杯（cup）整齐摆到餐盘回收台指定位置",
+              "target_pos": [
+                5.498,
+                1.22,
+                5.03
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -9646,7 +11576,29 @@
               0.9,
               4.68
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "water",
+              "prompt_en": "Set your water bottle neatly by the game board.",
+              "prompt_zh": "跑步前先把水壶（water）放好在约定牌下",
+              "target_pos": [
+                -4.65,
+                0.9,
+                4.68
+              ]
+            },
+            {
+              "item": "cap",
+              "prompt_en": "Arrange the cap neatly on the board.",
+              "prompt_zh": "把遮阳运动帽（cap）整齐摆到友善活动约定牌指定位置",
+              "target_pos": [
+                -4.416,
+                0.89,
+                4.54
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -9744,7 +11696,39 @@
               1.7,
               -1.25
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "basketball",
+              "prompt_en": "Return the orange basketball to the rack.",
+              "prompt_zh": "运动完把篮球（basketball）放回器材架",
+              "target_pos": [
+                -5.7,
+                1.7,
+                -1.25
+              ]
+            },
+            {
+              "item": "football",
+              "prompt_en": "Arrange the football neatly on the rack.",
+              "prompt_zh": "把足球（football）整齐摆到左侧体育器材架指定位置",
+              "target_pos": [
+                -5.577,
+                1.69,
+                -1.5
+              ]
+            },
+            {
+              "item": "rope",
+              "prompt_en": "Place the rope neatly on the rack.",
+              "prompt_zh": "把彩柄跳绳（rope）整齐摆到左侧体育器材架指定位置",
+              "target_pos": [
+                -5.829,
+                1.69,
+                -1.5
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -9828,7 +11812,29 @@
               0.75,
               -1.5
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "kite",
+              "prompt_en": "Launch the colourful kite over the game circle!",
+              "prompt_zh": "在中央游戏圈放飞彩虹风筝（kite）",
+              "target_pos": [
+                0.0,
+                0.75,
+                -1.5
+              ]
+            },
+            {
+              "item": "hat",
+              "prompt_en": "Arrange the hat neatly on the grass.",
+              "prompt_zh": "把草坪遮阳帽（hat）整齐摆到中央合作游戏圈指定位置",
+              "target_pos": [
+                -0.299,
+                0.13,
+                -1.085
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -9912,7 +11918,29 @@
               0.07,
               -3.0
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "star",
+              "prompt_en": "Toss the lucky star marker onto the top hopscotch square!",
+              "prompt_zh": "把星星沙包（star）投进跳格子终点格",
+              "target_pos": [
+                5.35,
+                0.07,
+                -3.0
+              ]
+            },
+            {
+              "item": "chalk",
+              "prompt_en": "Arrange the chalk neatly on the grid.",
+              "prompt_zh": "把彩色粉笔（chalk）整齐摆到彩虹跳格线指定位置",
+              "target_pos": [
+                5.28,
+                0.06,
+                -0.66
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -9996,7 +12024,29 @@
               0.9,
               5.04
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "towel",
+              "prompt_en": "Fold your clean sweat towel on the ledge.",
+              "prompt_zh": "把运动汗巾（towel）叠放在休息栏边",
+              "target_pos": [
+                4.85,
+                0.9,
+                5.04
+              ]
+            },
+            {
+              "item": "water",
+              "prompt_en": "Arrange the water neatly on the bench.",
+              "prompt_zh": "把补充水分（water）整齐摆到活动抓拍墙指定位置",
+              "target_pos": [
+                5.48,
+                0.89,
+                4.9
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [
@@ -10280,7 +12330,39 @@
               0.04,
               11.65
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "shoes",
+              "prompt_en": "Line up the spare football shoes in front of the rack.",
+              "prompt_zh": "把球鞋（shoes）整整齐齐摆在装备架前",
+              "target_pos": [
+                -11.15,
+                0.04,
+                11.65
+              ]
+            },
+            {
+              "item": "shirt",
+              "prompt_en": "Arrange the shirt neatly on the bench.",
+              "prompt_zh": "把红队球衣（shirt）整齐摆到球队装备架指定位置",
+              "target_pos": [
+                -11.13,
+                0.87,
+                10.96
+              ]
+            },
+            {
+              "item": "schoolbag",
+              "prompt_en": "Place the schoolbag neatly on the bench.",
+              "prompt_zh": "把运动背包（schoolbag）整齐摆到球队装备架指定位置",
+              "target_pos": [
+                -10.54,
+                0.87,
+                10.7
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 2,
@@ -10368,7 +12450,29 @@
               "Football_KickoffBall*",
               "CD25_BallPanelStitch_240*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "football",
+              "prompt_en": "Set the football right in the centre circle!",
+              "prompt_zh": "把比赛足球（football）摆到中圈开球点正中",
+              "target_pos": [
+                0.0,
+                0.04,
+                0.0
+              ]
+            },
+            {
+              "item": "bell",
+              "prompt_en": "Arrange the bell neatly on the circle.",
+              "prompt_zh": "把裁判哨铃（bell）整齐摆到开球中圈指定位置",
+              "target_pos": [
+                0.281,
+                0.04,
+                -0.194
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 3,
@@ -10452,7 +12556,29 @@
               0.18,
               0.0
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "football",
+              "prompt_en": "Kick the football cleanly into the goal!",
+              "prompt_zh": "点选足球（football），射入白色球门！",
+              "target_pos": [
+                13.85,
+                0.18,
+                0.0
+              ]
+            },
+            {
+              "item": "gloves",
+              "prompt_en": "Arrange the gloves neatly on the goal.",
+              "prompt_zh": "把守门员手套（gloves）整齐摆到射门球门指定位置",
+              "target_pos": [
+                12.28,
+                0.04,
+                0.86
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 4,
@@ -10540,7 +12666,29 @@
               "Football_PracticeBall*",
               "CD25_BallPanelStitch_300*"
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "football",
+              "prompt_en": "Tap the football smoothly beside the training cone!",
+              "prompt_zh": "把训练足球（football）精准停在橙色标志桶旁",
+              "target_pos": [
+                -3.38,
+                0.04,
+                -2.72
+              ]
+            },
+            {
+              "item": "socks",
+              "prompt_en": "Arrange the socks neatly on the cone.",
+              "prompt_zh": "把长筒球袜（socks）整齐摆到带球传球练习区指定位置",
+              "target_pos": [
+                -4.12,
+                0.04,
+                -3.815
+              ]
+            }
+          ]
         },
         {
           "anchor_order": 5,
@@ -10624,7 +12772,29 @@
               2.25,
               -12.38
             ]
-          }
+          },
+          "placement_steps": [
+            {
+              "item": "card",
+              "prompt_en": "Update the score card on the scoreboard!",
+              "prompt_zh": "把比分牌（card）挂上比赛计分板",
+              "target_pos": [
+                12.3,
+                2.25,
+                -12.38
+              ]
+            },
+            {
+              "item": "flower",
+              "prompt_en": "Arrange the flower neatly on the scoreboard.",
+              "prompt_zh": "把友谊花环（flower）整齐摆到看台与计分牌指定位置",
+              "target_pos": [
+                8.83,
+                0.69,
+                -11.62
+              ]
+            }
+          ]
         }
       ],
       "micro_items": [

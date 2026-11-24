@@ -7,6 +7,7 @@ var _markers: Dictionary = {}
 var _interactions: Array[Dictionary] = []
 const HomeCatalog = preload("res://scripts/home_catalog.gd")
 const Residents = preload("res://actors/building_resident_catalog.gd")
+const HouseholdProps = preload("res://activities/household_props.gd")
 
 static func available(room_id: String) -> bool:
 	return ResourceLoader.exists("res://assets/interiors/%s.glb" % room_id)
@@ -138,6 +139,8 @@ func build(room_id: String, plan: Dictionary) -> Dictionary:
 		_bind(host_id, "和%s聊一聊" % host_name, "SG_NPC_HOST", "npc", 2.3, "good_morning")
 		if not resident.is_empty(): _interactions.back()["resident_id"] = str(resident.character_id)
 		npcs.append({"kind":host_kind,"position":_position("SG_NPC_HOST"),"name":host_name,"angle":0.0,"interaction_id":host_id})
+	if not is_household:
+		HouseholdProps.prepare_room(_scene, room_id)
 	var camera_size := 34.0 if room_id == "football_field" else (31.0 if room_id == "school" else (21.5 if room_id == "playground" else 18.5))
 	camera_size = float(plan.get("camera_size", camera_size))
 	return {"spawn":spawn,"bounds":bounds,"interactions":_interactions,"camera_size":camera_size,"landmarks":[],"terrain":true,"room_label":str(plan.get("name", room_id)),"npcs":npcs,"source":"blender","marker_count":_markers.size(),"marker_nodes":_markers,"parent_room":parent_room,"scene_level":int(plan.get("scene_level",2))}

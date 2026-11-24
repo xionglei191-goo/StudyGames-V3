@@ -8,6 +8,7 @@ signal chat_reply_ready(npc_id: String, reply: Dictionary)
 signal parent_report_ready(report: Dictionary)
 signal speech_encouragement_ready(reply: Dictionary)
 signal voice_playback_started(voice_profile: String, voice_label_zh: String, engine: String)
+signal speech_speed_changed(mode: String)
 
 const DEFAULT_BASE_URL := "http://127.0.0.1:4195"
 const Wardrobe = preload("res://actors/modular_wardrobe.gd")
@@ -28,8 +29,15 @@ const BUNDLED_PHRASE_MAP := {
 
 var base_url := DEFAULT_BASE_URL
 var voice_player: AudioStreamPlayer
+var speech_speed_mode: String = "natural"
+var _boot_validation_muted := false
 var muted := false:
 	set(value):
+		var p := get_parent()
+		if value and p != null and ("scene_ready" in p) and not bool(p.get("scene_ready")) and bool(p.get("validation_mode")) and not bool(p.get("muted")):
+			_boot_validation_muted = true
+		else:
+			_boot_validation_muted = false
 		muted = value
 		if value:
 			stop_speaking()
@@ -43,6 +51,50 @@ var _chat_request: HTTPRequest
 var _chat_seq := 0
 var _encouragement_request: HTTPRequest
 var _encouragement_seq := 0
+var voice_bank_dir_override := ""
+var _voice_bank_dir_resolved := ""
+var _voice_bank_manifest_path := ""
+var _voice_bank_mtime := -1
+var _voice_bank_entries: Dictionary = {}
+
+func set_speech_speed_mode(mode: String) -> void:
+	var normalized := "slow" if mode.strip_edges().to_lower() == "slow" else "natural"
+	if speech_speed_mode == normalized:
+		return
+	speech_speed_mode = normalized
+	speech_speed_changed.emit(speech_speed_mode)
+
+func toggle_speech_speed_mode() -> String:
+	set_speech_speed_mode("slow" if speech_speed_mode != "slow" else "natural")
+	return speech_speed_mode
+
+func _is_muted() -> bool:
+	if muted and _boot_validation_muted:
+		var p := get_parent()
+		if p != null and not bool(p.get("validation_mode")) and not bool(p.get("muted")):
+			_boot_validation_muted = false
+			muted = false
+	return muted
+
+func _find_audio_director() -> Node:
+	var p := get_parent()
+	if p != null:
+		var pad: Variant = p.get("audio_director")
+		if pad is Node and is_instance_valid(pad):
+			return pad as Node
+	if is_inside_tree() and get_tree() != null:
+		var cs := get_tree().current_scene
+		if cs != null:
+			var cad: Variant = cs.get("audio_director")
+			if cad is Node and is_instance_valid(cad):
+				return cad as Node
+		for child: Node in get_tree().root.get_children():
+			if child.has_method("play_animal_voice"):
+				return child
+			var sub: Variant = child.get("audio_director")
+			if sub is Node and is_instance_valid(sub):
+				return sub as Node
+	return null
 
 func _ready() -> void:
 	name = "AICompanionBridge"
@@ -56,6 +108,9 @@ func _ready() -> void:
 		_ensure_sidecar_running()
 
 func _exit_tree() -> void:
+	if is_instance_valid(voice_player):
+		voice_player.stop()
+		voice_player.stream = null
 	if _spawned_sidecar_pid > 0 and OS.is_process_running(_spawned_sidecar_pid):
 		OS.kill(_spawned_sidecar_pid)
 		_spawned_sidecar_pid = -1
@@ -138,11 +193,37 @@ func request_npc_chat(npc_id: String, message: String, context: Dictionary) -> v
 
 func speak_text(text: String, lang: String = "en", voice_hint: String = "warm") -> void:
 	var cleaned := text.strip_edges()
-	if muted or DisplayServer.get_name() == "headless" or cleaned.is_empty():
+	if _is_muted() or cleaned.is_empty():
 		return
 	stop_speaking()
 	var seq := _speak_seq
 	var norm_hint := CharacterVoices.normalize_hint(voice_hint)
+	var sfx_key := CharacterVoices.animal_sound_key(norm_hint)
+	if DisplayServer.get_name() == "headless":
+		if not sfx_key.is_empty():
+			var ad_headless := _find_audio_director()
+			if ad_headless != null and ad_headless.has_method("play_animal_voice"):
+				ad_headless.play_animal_voice(sfx_key)
+		return
+	if not sfx_key.is_empty():
+		var ad := _find_audio_director()
+		if ad != null and ad.has_method("play_animal_voice"):
+			ad.play_animal_voice(sfx_key)
+		if CharacterVoices.is_pure_animal(norm_hint):
+			var narrated_text := CharacterVoices.strip_animal_interjection(cleaned, lang)
+			if not narrated_text.is_empty() and is_inside_tree():
+				get_tree().create_timer(0.48).timeout.connect(func():
+					if is_inside_tree() and seq == _speak_seq and not _is_muted():
+						_dispatch_tts_request(narrated_text, lang, "storyteller", seq, false)
+				)
+			return
+		if CharacterVoices.is_talking_mascot(norm_hint):
+			if is_inside_tree():
+				get_tree().create_timer(0.36).timeout.connect(func():
+					if is_inside_tree() and seq == _speak_seq and not _is_muted():
+						_dispatch_tts_request(cleaned, lang, norm_hint, seq, false)
+				)
+			return
 	_dispatch_tts_request(cleaned, lang, norm_hint, seq, false)
 
 func stop_speaking() -> void:
@@ -153,6 +234,8 @@ func stop_speaking() -> void:
 	_tts_request = null
 	if is_instance_valid(voice_player):
 		voice_player.stop()
+	if DisplayServer.get_name() != "headless":
+		DisplayServer.tts_stop()
 
 func _cancel_request(req: HTTPRequest) -> void:
 	if is_instance_valid(req):
@@ -168,9 +251,193 @@ func cancel_conversation() -> void:
 	_chat_request = null
 	_encouragement_request = null
 
-func _dispatch_tts_request(cleaned: String, lang: String, norm_hint: String, seq: int, retried: bool) -> void:
-	if seq != _speak_seq or muted:
+static func norm_text_for_bank(raw: String) -> String:
+	var s := raw.replace("\r", " ").replace("\n", " ").replace("\t", " ").replace("\u3000", " ").replace("\u00a0", " ")
+	var parts := s.split(" ", false)
+	return " ".join(parts).strip_edges().to_lower()
+
+static func bank_entry_key(archetype: String, lang: String, raw_text: String) -> String:
+	var nlang := "en" if lang.to_lower().begins_with("en") else "zh"
+	var norm := norm_text_for_bank(raw_text)
+	return "%s|%s|%s" % [archetype, nlang, norm.sha1_text().left(20)]
+
+static func _candidate_bank_texts(raw_text: String, lang: String, is_animal: bool) -> Array[String]:
+	var out: Array[String] = []
+	var push_unique := func(val: String) -> void:
+		var n := norm_text_for_bank(val)
+		if not n.is_empty() and not out.has(n):
+			out.append(n)
+
+	if is_animal:
+		var stripped := CharacterVoices.strip_animal_interjection(raw_text, lang)
+		if not stripped.is_empty():
+			push_unique.call(stripped)
+	push_unique.call(raw_text)
+
+	var sym_snapshot := out.duplicate()
+	for base_sym: String in sym_snapshot:
+		var sym_clean := base_sym
+		for sym: String in ["★", "☆", "◈", "◇", "♪", "·", "▷", "【", "】"]:
+			sym_clean = sym_clean.replace(sym, " ")
+		push_unique.call(sym_clean)
+
+	var punct_snapshot := out.duplicate()
+	for base_s: String in punct_snapshot:
+		if base_s.contains("... "):
+			push_unique.call(base_s.replace("... ", ". "))
+		if base_s.contains(". "):
+			push_unique.call(base_s.replace(". ", "... "))
+		if base_s.contains("……"):
+			push_unique.call(base_s.replace("…… ", "。").replace("……", "。"))
+			push_unique.call(base_s.replace("…… ", "。 ").replace("……", "。 "))
+		if base_s.contains("。"):
+			push_unique.call(base_s.replace("。 ", "…… ").replace("。", "…… "))
+	return out
+
+func _resolve_voice_bank_dir() -> String:
+	if not voice_bank_dir_override.strip_edges().is_empty():
+		return voice_bank_dir_override.strip_edges().simplify_path()
+	var env_dir := OS.get_environment("STUDYGAMES_VOICE_BANK_DIR").strip_edges()
+	if not env_dir.is_empty():
+		return env_dir.simplify_path()
+	var exe_dir := OS.get_executable_path().get_base_dir()
+	var candidates: Array[String] = [
+		ProjectSettings.globalize_path("res://../assets/voice_bank_v10").simplify_path(),
+		exe_dir.path_join("../../assets/voice_bank_v10").simplify_path(),
+		exe_dir.path_join("../assets/voice_bank_v10").simplify_path(),
+		exe_dir.path_join("assets/voice_bank_v10").simplify_path(),
+		exe_dir.path_join("voice_bank_v10").simplify_path(),
+	]
+	for cand: String in candidates:
+		if not cand.is_empty() and FileAccess.file_exists(cand.path_join("manifest.json")):
+			return cand
+	return candidates[0] if not candidates.is_empty() else ""
+
+func reload_voice_bank_manifest(force: bool = false) -> void:
+	var bank_dir := _resolve_voice_bank_dir()
+	if bank_dir.is_empty():
 		return
+	var mpath := bank_dir.path_join("manifest.json")
+	if not FileAccess.file_exists(mpath):
+		if force or mpath != _voice_bank_manifest_path:
+			_voice_bank_dir_resolved = bank_dir
+			_voice_bank_manifest_path = mpath
+			_voice_bank_mtime = -1
+			_voice_bank_entries.clear()
+		return
+	var mtime := int(FileAccess.get_modified_time(mpath))
+	if not force and mpath == _voice_bank_manifest_path and mtime == _voice_bank_mtime and not _voice_bank_entries.is_empty():
+		return
+	var raw_json := FileAccess.get_file_as_string(mpath)
+	var parsed: Variant = JSON.parse_string(raw_json)
+	if not (parsed is Dictionary):
+		return
+	var pdict := parsed as Dictionary
+	var entries_dict: Dictionary = {}
+	if pdict.get("entries") is Dictionary:
+		entries_dict = pdict["entries"] as Dictionary
+	elif pdict.get("items") is Dictionary:
+		entries_dict = pdict["items"] as Dictionary
+	else:
+		for k: Variant in pdict.keys():
+			if "|" in str(k):
+				entries_dict[k] = pdict[k]
+	_voice_bank_dir_resolved = bank_dir
+	_voice_bank_manifest_path = mpath
+	_voice_bank_mtime = mtime
+	_voice_bank_entries = entries_dict
+
+func find_prebaked_voice_clip(text: String, lang: String = "en", voice_hint: String = "warm", speed_mode_override: String = "") -> Dictionary:
+	var smode := speech_speed_mode
+	if not speed_mode_override.strip_edges().is_empty():
+		smode = "slow" if speed_mode_override.strip_edges().to_lower() == "slow" else "natural"
+	else:
+		smode = "slow" if speech_speed_mode == "slow" else "natural"
+
+	var norm_hint := CharacterVoices.normalize_hint(voice_hint)
+	var arch := CharacterVoices.archetype_for(norm_hint)
+	var nlang := "en" if lang.to_lower().begins_with("en") else "zh"
+	var cleaned := text.strip_edges()
+	if cleaned.is_empty():
+		return {"hit": false, "path": "", "archetype": arch, "speed_mode": smode, "duration_sec": 0.0}
+
+	reload_voice_bank_manifest(false)
+	if _voice_bank_entries.is_empty():
+		return {"hit": false, "path": "", "archetype": arch, "speed_mode": smode, "duration_sec": 0.0}
+
+	var is_animal := CharacterVoices.is_pure_animal(norm_hint)
+	var candidates := _candidate_bank_texts(cleaned, nlang, is_animal)
+	for cand_norm: String in candidates:
+		var key := bank_entry_key(arch, nlang, cand_norm)
+		if not _voice_bank_entries.has(key):
+			continue
+		var rec_v: Variant = _voice_bank_entries[key]
+		var rel_path := ""
+		var dur_sec := 0.0
+		if rec_v is String:
+			rel_path = str(rec_v)
+		elif rec_v is Dictionary:
+			var rec := rec_v as Dictionary
+			if smode == "slow":
+				rel_path = str(rec.get("slow", rec.get("clip_slow", rec.get("slow_path", rec.get("natural", rec.get("path", ""))))))
+				if rec.has("slow_duration_sec"):
+					dur_sec = float(rec.get("slow_duration_sec", 0.0))
+				elif rec.has("duration_slow_sec"):
+					dur_sec = float(rec.get("duration_slow_sec", 0.0))
+				else:
+					dur_sec = float(rec.get("duration_sec", 0.0)) * 1.25
+			else:
+				rel_path = str(rec.get("natural", rec.get("clip", rec.get("natural_path", rec.get("path", "")))))
+				dur_sec = float(rec.get("duration_sec", rec.get("natural_duration_sec", 0.0)))
+		if rel_path.is_empty():
+			continue
+		var abs_path := rel_path if rel_path.is_absolute_path() else _voice_bank_dir_resolved.path_join(rel_path).simplify_path()
+		if FileAccess.file_exists(abs_path):
+			return {
+				"hit": true,
+				"key": key,
+				"path": abs_path,
+				"archetype": arch,
+				"speed_mode": smode,
+				"duration_sec": dur_sec,
+			}
+
+	return {"hit": false, "path": "", "archetype": arch, "speed_mode": smode, "duration_sec": 0.0}
+
+func _load_prebaked_stream(abs_path: String) -> AudioStream:
+	var lower := abs_path.to_lower()
+	if lower.ends_with(".ogg"):
+		return AudioStreamOggVorbis.load_from_file(abs_path)
+	if lower.ends_with(".wav"):
+		return _parse_pcm_wav(FileAccess.get_file_as_bytes(abs_path))
+	return null
+
+func _should_use_prebaked_bank_in_dispatch() -> bool:
+	if not voice_bank_dir_override.strip_edges().is_empty():
+		return true
+	if not OS.get_environment("STUDYGAMES_VOICE_BANK_DIR").strip_edges().is_empty():
+		return true
+	return base_url == DEFAULT_BASE_URL
+
+func _dispatch_tts_request(cleaned: String, lang: String, norm_hint: String, seq: int, retried: bool) -> void:
+	if seq != _speak_seq or _is_muted():
+		return
+	if _should_use_prebaked_bank_in_dispatch():
+		var prebaked := find_prebaked_voice_clip(cleaned, lang, norm_hint, speech_speed_mode)
+		if bool(prebaked.get("hit", false)):
+			var clip_path := str(prebaked.get("path", ""))
+			var pre_stream := _load_prebaked_stream(clip_path)
+			if pre_stream != null:
+				voice_player.stop()
+				voice_player.pitch_scale = 1.0
+				voice_player.stream = pre_stream
+				voice_player.play()
+				var arch := str(prebaked.get("archetype", CharacterVoices.archetype_for(norm_hint)))
+				last_voice_profile = arch
+				last_voice_engine = "local_llm_voice_bank"
+				var lbl := CharacterVoices.label_zh_for(norm_hint)
+				voice_playback_started.emit(arch, lbl, "local_llm_voice_bank")
+				return
 	var req := HTTPRequest.new()
 	# The service bounds cloud attempts, but a cold local voice bank can take
 	# several seconds to load. Playback remains cancellable during that wait.
@@ -181,7 +448,7 @@ func _dispatch_tts_request(cleaned: String, lang: String, norm_hint: String, seq
 		if _tts_request == req:
 			_tts_request = null
 		req.queue_free()
-		if seq != _speak_seq or muted:
+		if seq != _speak_seq or _is_muted():
 			return
 		if result == HTTPRequest.RESULT_SUCCESS and code == 200:
 			var parsed: Variant = JSON.parse_string(body.get_string_from_utf8())
@@ -203,22 +470,27 @@ func _dispatch_tts_request(cleaned: String, lang: String, norm_hint: String, seq
 		# If the sidecar just spawned (< 3.5s ago), retry once before falling back to local WAV
 		if not retried and _sidecar_boot_msec > 0 and (Time.get_ticks_msec() - _sidecar_boot_msec) < 3500:
 			get_tree().create_timer(0.85).timeout.connect(func():
-				if is_inside_tree() and seq == _speak_seq and not muted:
+				if is_inside_tree() and seq == _speak_seq and not _is_muted():
 					_dispatch_tts_request(cleaned, lang, norm_hint, seq, true)
 			)
 			return
 		_play_local_fallback(cleaned, lang, norm_hint)
 	)
-	var payload := JSON.stringify({"text": cleaned, "lang": lang, "voice_hint": norm_hint})
+	var payload := JSON.stringify({
+		"text": cleaned,
+		"lang": lang,
+		"voice_hint": norm_hint,
+		"speed_mode": speech_speed_mode,
+	})
 	var err := req.request(base_url + "/api/v4/tts/speak", ["Content-Type: application/json"], HTTPClient.METHOD_POST, payload)
 	if err != OK:
 		_tts_request = null
 		req.queue_free()
-		if seq == _speak_seq and not muted:
+		if seq == _speak_seq and not _is_muted():
 			_play_local_fallback(cleaned, lang, norm_hint)
 
 func _play_local_fallback(cleaned: String, lang: String, norm_hint: String) -> void:
-	if muted:
+	if _is_muted():
 		return
 	var arch := CharacterVoices.archetype_for(norm_hint)
 	var lbl := CharacterVoices.label_zh_for(norm_hint)
@@ -235,8 +507,9 @@ func _play_local_fallback(cleaned: String, lang: String, norm_hint: String) -> v
 		return
 	var os_voices := DisplayServer.tts_get_voices_for_language("en" if lang.to_lower().begins_with("en") else "zh")
 	if not os_voices.is_empty():
+		var tts_rate := 0.68 if speech_speed_mode == "slow" else 0.84
 		DisplayServer.tts_stop()
-		DisplayServer.tts_speak(cleaned, str(os_voices[0]), 90, clampf(pitch, 0.75, 1.30), 1.0)
+		DisplayServer.tts_speak(cleaned, str(os_voices[0]), 90, clampf(pitch, 0.75, 1.30), tts_rate)
 		last_voice_profile = arch
 		last_voice_engine = "os_system_tts"
 		voice_playback_started.emit(arch, lbl, last_voice_engine)
@@ -438,6 +711,24 @@ func _local_fallback_chat(npc_id: String, message: String, context: Dictionary) 
 			"suggestions": ["Hi Dad!", "What's on the desk?", "Let's read a book!"],
 			"engine": "local_i_plus_1_fallback"
 		}
+	if npc_id == "textbook_kitty":
+		return {
+			"ok": true,
+			"npc_id": npc_id,
+			"reply_en": "Meow! Little Kitty paws gently beside \"%s\" — let's read it slowly together!" % target_word,
+			"reply_zh": "喵～小猫轻轻走近身边的「%s」（%s），我们一起慢慢读一读吧！" % [target_word, target_zh],
+			"suggestions": ["Hello, Kitty!", "Soft warm sofa!", "Nice clothes!"],
+			"engine": "local_i_plus_1_fallback"
+		}
+	if npc_id == "textbook_doggie":
+		return {
+			"ok": true,
+			"npc_id": npc_id,
+			"reply_en": "Woof woof! Doggie wags its tail happily near \"%s\" in the sunny yard!" % target_word,
+			"reply_zh": "汪汪！小狗在阳光院子里的「%s」（%s）旁开心地摇尾巴呢！" % [target_word, target_zh],
+			"suggestions": ["Good boy, Doggie!", "Green grass!", "Sunny garden!"],
+			"engine": "local_i_plus_1_fallback"
+		}
 	return {
 		"ok": true,
 		"npc_id": npc_id,
@@ -466,6 +757,15 @@ func _local_fallback_report(payload: Dictionary) -> Dictionary:
 	var unit_id := str(payload.get("unit_id", "unit-1")).to_upper()
 	var visited := int(payload.get("visited_landmarks", 0))
 	var highlight := ("无提示自主提取词汇：" + ", ".join(ind.slice(0, 6))) if not ind.is_empty() else ("情境探索萌芽词汇：" + (", ".join(spr.slice(0, 6)) if not spr.is_empty() else "正在开启第一天小岛旅程"))
+	var v8_s: Dictionary = payload.get("v8_memory_summary", {}) if payload.get("v8_memory_summary") is Dictionary else {}
+	var v8_txt := ""
+	if not v8_s.is_empty():
+		v8_txt = "\n【艾宾浩斯实物记忆】已点亮 %d / 287 处家具实物 · 金星永固 %d 词 · 待温故 %d 词 · 发音星 %d 词" % [
+			int(v8_s.get("visited_placements", 0)),
+			int(v8_s.get("gold_words", 0)),
+			int(v8_s.get("due_words", 0)),
+			int(v8_s.get("spoken_words", 0)),
+		]
 	return {
 		"ok": true,
 		"summary": {
@@ -476,6 +776,6 @@ func _local_fallback_report(payload: Dictionary) -> Dictionary:
 			"sprouting_words": spr,
 			"recommended_revisits": []
 		},
-		"narrative_zh": "【当前同步册次】%s（%s）\n【小岛生活足迹】已探索 %d / 26 处字母记忆宫殿地标\n【隐性成长观察】%s\n【家庭温和互动建议】散步或吃点心时，用轻松口吻和孩子聊聊果园里的红苹果或今天换上的小草帽即可，无需纸笔抽查。" % [book_title, unit_id, visited, highlight],
+		"narrative_zh": "【当前同步册次】%s（%s）\n【小岛生活足迹】已探索 %d / 26 处字母记忆宫殿地标%s\n【隐性成长观察】%s\n【家庭温和互动建议】散步或吃点心时，用轻松口吻和孩子聊聊房间里的英文物品或今天换上的小草帽即可，无需纸笔抽查。" % [book_title, unit_id, visited, v8_txt, highlight],
 		"note": "本地 IRT 隐性成长估算（启动 AI 伴学服务后自动启用完整 3PL 模型与多角色神经语音合成）。"
 	}

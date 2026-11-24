@@ -27,12 +27,17 @@ const RoleplayDirector = preload("res://gameplay/situational_roleplay.gd")
 const WakeMailbox = preload("res://gameplay/morning_wake_mailbox.gd")
 const CastDirector = preload("res://gameplay/home_school_cast_director.gd")
 const SpatialBenchScript = preload("res://gameplay/spatial_cluster_bench_3d.gd")
+const ErrandDirectorScript = preload("res://gameplay/ebbinghaus_errand_director.gd")
+const WorldLabelLayoutScript = preload("res://core/world_label_layout.gd")
+const SpatialAlmanac = preload("res://ui_v4/spatial_memory_almanac.gd")
 var online: Node
 var audio_director: Node
 var ai_bridge: Node
 var tactile_quests: Node3D
 var palace_loci: Node3D
 var spatial_bench: Node3D
+var errand_director: Node3D
+var world_label_layout: Node
 var free_decor_studio: Node3D
 var creation: Node3D
 var _commission_hint_used := false
@@ -55,7 +60,7 @@ var loading_room := false
 var greetings: Dictionary = {}
 var greeting_turns: Dictionary = {}
 var greeting_clock := 0.0
-var bubble_world_position := Vector3.ZERO
+var bubble_world_position := Vector3.INF
 var muted := false
 var quiz_unit := 1
 var quiz_index := 0
@@ -246,6 +251,13 @@ func _ready() -> void:
 	spatial_bench = SpatialBenchScript.new()
 	spatial_bench.name = "SpatialClusterBench3D"
 	add_child(spatial_bench)
+	errand_director = ErrandDirectorScript.new()
+	errand_director.name = "EbbinghausErrandDirector"
+	add_child(errand_director)
+	world_label_layout = WorldLabelLayoutScript.new()
+	world_label_layout.name = "WorldLabelLayout"
+	add_child(world_label_layout)
+	world_label_layout.setup(self)
 	tactile_quests.apple_picked.connect(func(_kind: String, word_en: String):
 		if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 		if is_instance_valid(ai_bridge): ai_bridge.speak_text(word_en, "en", "npc_rabbit_gardener")
@@ -400,6 +412,9 @@ func change_room(next_room: String, return_id: String = "") -> void:
 	voice.stop()
 	ui.close_panel()
 	ui.bubble_panel.hide()
+	bubble_world_position = Vector3.INF
+	if is_instance_valid(world_label_layout):
+		world_label_layout.restore_overlay_suppression()
 	if is_instance_valid(ui.diegetic): ui.diegetic.dismiss()
 	if next_room != room:
 		visit_return[room] = player.position
@@ -458,8 +473,12 @@ func change_room(next_room: String, return_id: String = "") -> void:
 		palace_loci.attach_to_room(self, room)
 	if is_instance_valid(spatial_bench):
 		spatial_bench.attach_to_room(self, room)
+	if is_instance_valid(errand_director):
+		errand_director.attach_to_room(self, room)
 	if is_instance_valid(free_decor_studio):
 		free_decor_studio.attach_to_room(room)
+	if is_instance_valid(world_label_layout):
+		world_label_layout.on_room_changed(room)
 	if is_instance_valid(audio_director):
 		audio_director.apply_room_soundscape(room, str(living.weather_id) if is_instance_valid(living) else "clear")
 	if is_instance_valid(journey):
@@ -694,8 +713,14 @@ func _process(delta: float) -> void:
 	var diegetic_open: bool = is_instance_valid(ui.diegetic) and bool(ui.diegetic.visible)
 	if diegetic_open or ui.modal.visible:
 		ui.bubble_panel.hide()
-	elif ui.bubble_panel.visible:
-		ui.bubble_panel.position = camera.unproject_position(bubble_world_position)+Vector2(-100,-106)
+		bubble_world_position = Vector3.INF
+	elif not ui.bubble_panel.visible:
+		bubble_world_position = Vector3.INF
+	elif bubble_world_position != Vector3.INF:
+		if not validation_mode:
+			ui.position_bubble_at(camera.unproject_position(bubble_world_position))
+		else:
+			ui.bubble_panel.position = camera.unproject_position(bubble_world_position)+Vector2(-100,-106)
 	_update_nearby_target()
 	for entry: Dictionary in interactions:
 		var distance := Vector2(player.position.x,player.position.z).distance_to(Vector2(entry.position.x,entry.position.z))
@@ -736,6 +761,8 @@ func _process(delta: float) -> void:
 			ui.prompt.hide()
 			ui.prompt_cycle.hide()
 		_update_navigation(delta)
+		if not validation_mode:
+			ui.resolve_floating_2d_overlaps()
 	else:
 		ui.hide_interaction_prompts()
 		feedback.highlight({})
@@ -992,6 +1019,8 @@ func _refresh() -> void:
 				world.set_decoration(id,decor_enabled)
 			else:
 				world.set_decoration(id,bool(d.decorations_placed.get(id,false)))
+	if is_instance_valid(errand_director) and errand_director.has_method("refresh_visuals"):
+		errand_director.refresh_visuals()
 
 func _on_leveled_up(payload: Dictionary) -> void:
 	if is_instance_valid(ui) and ui.has_method("show_level_up_banner"):
@@ -1198,22 +1227,32 @@ func interact_id(id: String) -> void:
 			if not validation_mode and is_instance_valid(ui.diegetic):
 				if is_instance_valid(audio_director): audio_director.play_foley("bubble_pop")
 				var rec_sc := RoleplayDirector.recommended_v6_scenario(self, room, "textbook_miss_li")
+				var t_actions: Array = [
+					{"label": "★ 第%d阶对话 · %s" % [int(rec_sc.get("stage", 1)), str(rec_sc.get("title_zh", "课堂对话"))], "id": "v6_roleplay_stage:" + str(rec_sc.get("id", "school_s1_classroom_miss_li")), "primary": true},
+					{"label": "◈ 走近课桌台 · 认文具与方位摆一摆", "id": "v6_bench_open:classroom"},
+					{"label": "◈ 切换 1～4 阶师生与同学语法对话", "id": "v6_ladder_open:school"},
+					{"label": "· 开启本章三幕共创", "id": "v4_chap_open_here"},
+					{"label": "· 八册 81 章故事画册", "id": "v4_chapter_atlas"},
+					{"label": "先在教室逛逛", "id": "close"}
+				]
+				var t_en := "Good morning, class! Look at our blackboard, desks, and English books — ready to practise speaking together?"
+				var t_zh := "同学们早上好！在阳光教室里没有枯燥考卷：你可以和李老师演练 1～4 阶课本语法对话，或者走近课桌特写台把书本、铅笔、直尺全部串起来！"
+				if ErrandDirectorScript.can_offer_errand(State, room):
+					var t_prop := ErrandDirectorScript.build_errand_proposal(State, room, "textbook_miss_li", "李老师 · Miss Li")
+					if not t_prop.is_empty():
+						t_en = str(t_prop.get("prompt_en", t_en))
+						t_zh = str(t_prop.get("prompt_zh", t_zh))
+						(t_actions[0] as Dictionary)["primary"] = false
+						t_actions.insert(0, {"label": "◈ 接下李老师温故寻物委托（双倍 EXP）", "id": "v8_accept_errand:classroom:textbook_miss_li", "primary": true})
 				ui.diegetic.open_conversation({
 					"npc_id": "textbook_miss_li",
 					"speaker": "李老师 Miss Li · 阳光英语课堂",
-					"en": "Good morning, class! Look at our blackboard, desks, and English books — ready to practise speaking together?",
-					"zh": "同学们早上好！在阳光教室里没有枯燥考卷：你可以和李老师演练 1～4 阶课本语法对话，或者走近课桌特写台把书本、铅笔、直尺全部串起来！",
+					"en": t_en,
+					"zh": t_zh,
 					"world_pos": conversation_position,
 					"show_zh_immediately": true,
 					"auto_speak": true,
-					"actions": [
-						{"label": "★ 第%d阶对话 · %s" % [int(rec_sc.get("stage", 1)), str(rec_sc.get("title_zh", "课堂对话"))], "id": "v6_roleplay_stage:" + str(rec_sc.get("id", "school_s1_classroom_miss_li")), "primary": true},
-						{"label": "◈ 走近课桌台 · 认文具与方位摆一摆", "id": "v6_bench_open:classroom"},
-						{"label": "◈ 切换 1～4 阶师生与同学语法对话", "id": "v6_ladder_open:school"},
-						{"label": "· 开启本章三幕共创", "id": "v4_chap_open_here"},
-						{"label": "· 八册 81 章故事画册", "id": "v4_chapter_atlas"},
-						{"label": "先在教室逛逛", "id": "close"}
-					]
+					"actions": t_actions
 				})
 			else:
 				show_lessons()
@@ -1997,6 +2036,31 @@ func _on_action(id: String) -> void:
 		_handle_v4_thematic_pick(id.trim_prefix("v4_thematic_pick:"))
 	elif id.begins_with("v4_thematic_done:"):
 		await _handle_v4_thematic_done(id.trim_prefix("v4_thematic_done:"))
+	elif id == "v8_almanac":
+		var start_r := room if SpatialBenchScript.has_cluster(room) else "home_study"
+		if _prepare_screen():
+			SpatialAlmanac.build(ui, State, ai_bridge, start_r, "")
+	elif id.begins_with("v8_almanac_room:"):
+		var ar := id.trim_prefix("v8_almanac_room:").strip_edges()
+		if _prepare_screen():
+			SpatialAlmanac.build(ui, State, ai_bridge, ar, "")
+	elif id.begins_with("v8_almanac_pick:"):
+		var ap := id.trim_prefix("v8_almanac_pick:").split(":", true, 1)
+		if ap.size() == 2 and _prepare_screen():
+			SpatialAlmanac.build(ui, State, ai_bridge, ap[0], ap[1])
+	elif id.begins_with("v8_accept_errand:"):
+		var ep := id.trim_prefix("v8_accept_errand:").split(":", true, 1)
+		var er_room := ep[0] if ep.size() >= 1 and not ep[0].is_empty() else room
+		var er_npc := ep[1] if ep.size() >= 2 else ""
+		_close()
+		if is_instance_valid(errand_director):
+			var eres: Dictionary = errand_director.accept_errand_for_room(er_room, er_npc, "")
+			if bool(eres.get("ok", false)):
+				ui.notify("◈ 已接下温故寻物委托！看右上角便签去找回 3D 实物吧（盲找享双倍 EXP）")
+	elif id == "v8_errand_go":
+		_close()
+		if is_instance_valid(errand_director):
+			errand_director._jump_to_next_errand_target()
 	elif id == "v4_parent_ai":
 		if _prepare_screen():
 			ParentAIPortal.build(ui, State, ai_bridge)

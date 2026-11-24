@@ -150,8 +150,8 @@ def house():
     m.box('Welcome_Plaque',(-3.5,-8.50,2.93),(2.3,.09,.35),'doorwood',.05)
     m.text('Welcome_Type','HOME',(-3.5,-8.57,2.93),.24,'ivory')
     m.lantern('Front_Door_Lantern',-5.04,-7.98,2.25,'yellow',.24)
-    m.basket('Porch_Ready_Basket',-6.1,-8.2,0,False)
-    m.plant('Porch_Geranium',-.60,-8.0,0,True,.85)
+    m.basket('Porch_Ready_Basket',-7.32,-8.58,0,False)
+    m.plant('Porch_Geranium',1.65,-8.38,0,True,.85)
     m.box('Doormat',(-3.5,-8.22,.06),(1.8,.68,.08),'teal',.09)
     # Brick chimney with visible cap/opening, rather than a plain cuboid.
     m.box('Chimney_Body',(10.2,4.4,5.55),(1.05,1.10,2.20),'clay',.06)

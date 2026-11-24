@@ -15,6 +15,9 @@ const TripoProps = preload("res://actors/tripo_prop_library.gd")
 const Layer2Props = preload("res://actors/layer2_prop_library.gd")
 const HomeCatalog = preload("res://scripts/home_catalog.gd")
 const WorldArt = preload("res://scripts/world_art.gd")
+const MicRecorderScript = preload("res://core/mic_wav_recorder.gd")
+const V8Memory = preload("res://core/v8_memory_ledger.gd")
+const ErrandDirector = preload("res://gameplay/ebbinghaus_errand_director.gd")
 const CLOSET_ROD_Y := 2.03
 
 const HOME_TASK_LABELS := {
@@ -52,6 +55,7 @@ var tasks_completed := false
 
 var _stage_root: Node3D
 var _selected_halo: MeshInstance3D
+var _target_drop_halo: MeshInstance3D
 var _anchor_world_pos := Vector3.ZERO
 var _stage_origin := Vector3.ZERO
 var _base_prop_yaw := 0.0
@@ -59,6 +63,7 @@ var _prop_nodes: Dictionary = {}
 var _prop_home_pos: Dictionary = {}
 var _ordered_layer2_keys: Array[String] = []
 var _placed_keys: Dictionary = {}
+var _placement_steps: Array[Dictionary] = []
 var _word_lookup: Dictionary = {}
 var _callout_buttons: Dictionary = {}
 var _hidden_ui_nodes: Array[Dictionary] = []
@@ -66,6 +71,19 @@ var _hidden_anchor_meshes: Array[Dictionary] = []
 var _saved_cam_yaw := 0.0
 var _saved_cam_yaw_target := 0.0
 var _has_saved_cam_yaw := false
+
+# V8 Tactile 3D Drag, Mic Follow-Along & Ebbinghaus Blind-Recall State
+var _drag_key := ""
+var _drag_pressed := false
+var _drag_active := false
+var _drag_start_screen := Vector2.ZERO
+var _drag_plane_y := 0.85
+var _drag_origin_pos := Vector3.ZERO
+var _mic_recorder: Node
+var _follow_sentence_mode := false
+var _follow_busy := false
+var _active_errand_word := ""
+var _errand_hint_tier := 0
 
 var _overlay_root: Control
 var _callout_layer: Control
@@ -76,9 +94,17 @@ var _special_action_id := ""
 var _selected_title_lbl: Label
 var _selected_en_lbl: Label
 var _selected_zh_lbl: Label
+var _speak_zh_btn: Button
+var _speed_mode_btn: Button
+var _mic_follow_btn: Button
+var _mic_mode_btn: Button
+var _mic_shy_btn: Button
 var _palace_btn: Button
+var _bound_speed_bridge: Node
 var _task_prompt_lbl: Label
 var _task_feedback_lbl: Label
+var _assist_place_btn: Button
+var _errand_hint_btn: Button
 
 static func _ensure_loaded() -> void:
 	if _loaded:
@@ -205,13 +231,14 @@ func attach_to_room(owner_game: Node3D, room_id: String) -> void:
 		lbl.name = "WordTag"
 		lbl.text = "%s · %s" % [str(item.get("word", "")), str(item.get("zh", ""))]
 		lbl.font = font
-		lbl.font_size = 34
-		lbl.pixel_size = 0.0088
+		lbl.font_size = 56
+		lbl.pixel_size = 0.0041
 		lbl.position = plaque_world - world_pos
+		lbl.set_meta("base_local", lbl.position)
 		lbl.set_meta("base_y", lbl.position.y)
 		lbl.modulate = Color("fffdf6")
 		lbl.outline_modulate = Color("2b2118")
-		lbl.outline_size = 12
+		lbl.outline_size = 6
 		lbl.billboard = BaseMaterial3D.BILLBOARD_ENABLED
 		lbl.no_depth_test = true
 		lbl.render_priority = 8
@@ -287,8 +314,12 @@ func _process(delta: float) -> void:
 	for i: int in range(macro_plaques.size()):
 		var lbl := macro_plaques[i]
 		if is_instance_valid(lbl):
-			var base_y := float(lbl.get_meta("base_y", 1.58))
-			lbl.position.y = base_y + sin(_anim_time * 1.9 + float(i) * 0.9) * 0.04
+			var base_local: Vector3 = lbl.get_meta("base_local", Vector3(lbl.position.x, float(lbl.get_meta("base_y", 1.58)), lbl.position.z))
+			var bob_y := base_local.y + sin(_anim_time * 1.9 + float(i) * 0.9) * 0.04
+			var anim_local := Vector3(base_local.x, bob_y, base_local.z)
+			lbl.set_meta("wll_base_local_pos", anim_local)
+			var wll_off: Vector3 = lbl.get_meta("wll_applied_offset", Vector3.ZERO)
+			lbl.position = anim_local + wll_off
 
 	if not is_instance_valid(game) or game.validation_mode:
 		return
@@ -323,6 +354,10 @@ func _update_closeup_visuals(_delta: float) -> void:
 	var vp_size := _overlay_root.size
 	if vp_size.x <= 10.0:
 		vp_size = Vector2(game.get_viewport().get_visible_rect().size)
+
+	if is_instance_valid(_target_drop_halo) and _target_drop_halo.visible and not game.ui.reduced_motion:
+		var dpulse := 1.0 + sin(_anim_time * 4.2) * 0.09
+		_target_drop_halo.scale = Vector3(dpulse, 0.14, dpulse)
 
 	var layout_items: Array[Dictionary] = []
 	var prop_keepout: Dictionary = {}
@@ -433,11 +468,20 @@ func close_workbench() -> void:
 	var was_open := bench_open
 	bench_open = false
 	_special_action_id = ""
+	_drag_pressed = false
+	_drag_active = false
+	_drag_key = ""
+	_follow_busy = false
+	_active_errand_word = ""
+	_errand_hint_tier = 0
+	if is_instance_valid(_mic_recorder) and _mic_recorder.has_method("cancel_recording"):
+		_mic_recorder.cancel_recording()
 	_restore_anchor_meshes()
 	if is_instance_valid(_stage_root):
 		_stage_root.queue_free()
 	_stage_root = null
 	_selected_halo = null
+	_target_drop_halo = null
 	if is_instance_valid(_overlay_root):
 		_overlay_root.hide()
 		_overlay_root.queue_free()
@@ -447,6 +491,7 @@ func close_workbench() -> void:
 	_prop_home_pos.clear()
 	_ordered_layer2_keys.clear()
 	_placed_keys.clear()
+	_placement_steps.clear()
 	_word_lookup.clear()
 	_callout_buttons.clear()
 
@@ -506,6 +551,8 @@ func open_workbench(owner_game: Node3D, room_override: String = "", initial_word
 		game.set("_camera_yaw_target", 0.0)
 		if is_instance_valid(game.get("ui")) and bool(game.ui.get("reduced_motion")):
 			game.set("_camera_yaw", 0.0)
+		if is_instance_valid(game.get("world_label_layout")) and game.world_label_layout.has_method("restore_overlay_suppression"):
+			game.world_label_layout.restore_overlay_suppression()
 		_capture_and_hide_room_chrome()
 
 	bench_open = true
@@ -578,13 +625,23 @@ func _activate_anchor_stage(cluster: Dictionary, order: int, initial_word: Strin
 	bench_anchor_order = order
 	task_index = 0
 	tasks_completed = false
+	_drag_pressed = false
+	_drag_active = false
+	_drag_key = ""
+	_follow_busy = false
 	_placed_keys.clear()
+	_placement_steps.clear()
 	_word_lookup.clear()
 	_prop_nodes.clear()
 	_prop_home_pos.clear()
 	_ordered_layer2_keys.clear()
 	_callout_buttons.clear()
 	_selected_halo = null
+	_target_drop_halo = null
+	_active_errand_word = ""
+	_errand_hint_tier = 0
+	if is_instance_valid(_mic_recorder) and _mic_recorder.has_method("cancel_recording"):
+		_mic_recorder.cancel_recording()
 
 	if is_instance_valid(_stage_root):
 		_stage_root.queue_free()
@@ -602,6 +659,11 @@ func _activate_anchor_stage(cluster: Dictionary, order: int, initial_word: Strin
 			"mode": "once",
 			"base_exp": 8,
 		})
+	if state_node != null:
+		var errand_t := V8Memory.active_errand_target_for_anchor(state_node.data, bench_room_id, bench_anchor_order)
+		if not errand_t.is_empty():
+			_active_errand_word = str(errand_t.get("word", "")).to_lower()
+			_errand_hint_tier = clampi(int(errand_t.get("hint_tier", 0)), 0, 2)
 	if is_instance_valid(game.household):
 		game.household._sequence = bench_anchor_order
 
@@ -615,6 +677,21 @@ func _activate_anchor_stage(cluster: Dictionary, order: int, initial_word: Strin
 		var macros: Array = cluster.get("macro_items", [])
 		if not macros.is_empty() and macros[0] is Dictionary:
 			anchor_dict = (macros[0] as Dictionary).duplicate(true)
+
+	var raw_steps: Variant = anchor_dict.get("placement_steps", [])
+	if raw_steps is Array and not (raw_steps as Array).is_empty():
+		for sv: Variant in raw_steps:
+			if sv is Dictionary and not str((sv as Dictionary).get("item", "")).is_empty():
+				_placement_steps.append((sv as Dictionary).duplicate(true))
+	elif anchor_dict.get("placement_task") is Dictionary and not (anchor_dict["placement_task"] as Dictionary).is_empty():
+		var pt: Dictionary = anchor_dict["placement_task"]
+		var sspec: Dictionary = anchor_dict.get("stage_spec", {}) if anchor_dict.get("stage_spec") is Dictionary else {}
+		_placement_steps.append({
+			"item": str(pt.get("item", "")),
+			"prompt_en": str(pt.get("prompt_en", "")),
+			"prompt_zh": str(pt.get("prompt_zh", "")),
+			"target_pos": sspec.get("target_pos", []),
+		})
 
 	var macro_copy := anchor_dict.duplicate(true)
 	macro_copy["tier"] = "macro"
@@ -634,23 +711,30 @@ func _activate_anchor_stage(cluster: Dictionary, order: int, initial_word: Strin
 
 	_build_in_room_3d_showcase(cluster, anchor_dict)
 	_build_floating_overlay(cluster, anchor_dict)
+	_sync_drop_halo()
 
 	var default_pick := initial_word.strip_edges().to_lower()
-	if default_pick.is_empty() or not _word_lookup.has(default_pick):
+	if not _active_errand_word.is_empty() and _errand_hint_tier < 2:
+		# Anti-spoiler during blind recall: focus on the Layer-1 furniture piece first instead of spoiling item 0!
+		default_pick = macro_key
+	elif default_pick.is_empty() or not _word_lookup.has(default_pick):
 		if not _ordered_layer2_keys.is_empty():
 			default_pick = _ordered_layer2_keys[0]
 		else:
 			default_pick = macro_key
 	_refresh_task_prompt(anchor_dict)
 	if not default_pick.is_empty():
-		select_bench_item(default_pick, false)
+		select_bench_item(default_pick, false, false)
 
 	if announce_voice and is_instance_valid(game) and is_instance_valid(game.ai_bridge):
 		var comp_id := str(cluster.get("companion_npc_id", "warm"))
-		var mw := str(anchor_dict.get("word", ""))
-		var m_sent := str(anchor_dict.get("sentence_en", ""))
-		if not mw.is_empty():
-			game.ai_bridge.speak_text("%s. %s" % [mw, m_sent], "en", comp_id)
+		if not _active_errand_word.is_empty():
+			game.ai_bridge.speak_text("Can you find the %s here?" % _active_errand_word, "en", comp_id)
+		else:
+			var mw := str(anchor_dict.get("word", ""))
+			var m_sent := str(anchor_dict.get("sentence_en", ""))
+			if not mw.is_empty():
+				game.ai_bridge.speak_text("%s... %s" % [mw, m_sent], "en", comp_id)
 	if is_instance_valid(game) and is_instance_valid(game.audio_director):
 		game.audio_director.play_foley("bubble_pop")
 
@@ -707,6 +791,22 @@ func _build_in_room_3d_showcase(_cluster: Dictionary, anchor_dict: Dictionary) -
 	_selected_halo.scale = Vector3(1.0, 0.16, 1.0)
 	_selected_halo.hide()
 	_stage_root.add_child(_selected_halo)
+
+	# Glowing tactile drop-zone ring showing where to drag & snap the active tidy-up prop
+	_target_drop_halo = MeshInstance3D.new()
+	_target_drop_halo.name = "TargetDropHalo"
+	var drop_mesh := TorusMesh.new()
+	drop_mesh.inner_radius = 0.165
+	drop_mesh.outer_radius = 0.215
+	_target_drop_halo.mesh = drop_mesh
+	var drop_mat := StandardMaterial3D.new()
+	drop_mat.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
+	drop_mat.albedo_color = Color(0.42, 0.78, 0.52, 0.86)
+	drop_mat.transparency = BaseMaterial3D.TRANSPARENCY_ALPHA
+	_target_drop_halo.material_override = drop_mat
+	_target_drop_halo.scale = Vector3(1.0, 0.14, 1.0)
+	_target_drop_halo.hide()
+	_stage_root.add_child(_target_drop_halo)
 
 	var layer2_items: Array = anchor_dict.get("layer2_items", [])
 	var slots: Array = spec.get("slots", []) if spec.get("slots") is Array else []
@@ -913,11 +1013,11 @@ func _build_floating_overlay(cluster: Dictionary, anchor_dict: Dictionary) -> vo
 		var key := w.to_lower()
 		var chip := Button.new()
 		chip.name = "Callout_" + key
-		chip.text = "★ %s · %s" % [w, zh]
-		chip.custom_minimum_size = Vector2(124, 36)
+		chip.text = _callout_text_for(key, w, zh, false)
+		chip.custom_minimum_size = Vector2(96, 36)
 		chip.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 		_style_callout_chip(chip, false, false)
-		chip.pressed.connect(func(): select_bench_item(w, true))
+		chip.pressed.connect(func(): _on_callout_or_prop_clicked(key))
 		_callout_layer.add_child(chip)
 		var leader := Line2D.new()
 		leader.name = "Leader"
@@ -992,14 +1092,14 @@ func _build_floating_overlay(cluster: Dictionary, anchor_dict: Dictionary) -> vo
 	exit_btn.pressed.connect(close_workbench)
 	top_bar.add_child(exit_btn)
 
-	# 3. Bottom Floating Layer-2 Inspection & Placement Dock
+	# 3. Bottom Floating Layer-2 Inspection, Follow-Along Speech & Tactile Tidy-Up Dock
 	var bottom_dock := PanelContainer.new()
 	bottom_dock.name = "BottomFloatingDock"
 	bottom_dock.set_anchors_and_offsets_preset(Control.PRESET_CENTER_BOTTOM)
-	bottom_dock.offset_left = -465
-	bottom_dock.offset_right = 465
-	bottom_dock.offset_top = -168
-	bottom_dock.offset_bottom = -14
+	bottom_dock.offset_left = -668
+	bottom_dock.offset_right = 668
+	bottom_dock.offset_top = -190
+	bottom_dock.offset_bottom = -12
 	var dock_sb := Style.pill(Color(0.996, 0.984, 0.948, 0.96), Color("dfd0b2"), Color("cbb68e"), 22, 18, 12)
 	dock_sb.shadow_size = 12
 	bottom_dock.add_theme_stylebox_override("panel", dock_sb)
@@ -1010,35 +1110,68 @@ func _build_floating_overlay(cluster: Dictionary, anchor_dict: Dictionary) -> vo
 	bottom_dock.add_child(dock_col)
 
 	var word_row := HBoxContainer.new()
-	word_row.add_theme_constant_override("separation", 8)
+	word_row.add_theme_constant_override("separation", 5)
 	dock_col.add_child(word_row)
 
-	_selected_title_lbl = ui.label("", 20, Style.INK)
+	_selected_title_lbl = ui.label("", 18, Style.INK)
 	_selected_title_lbl.name = "SelectedWordTitle"
 	_selected_title_lbl.add_theme_font_override("font", Style.heading_font())
 	_selected_title_lbl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	_selected_title_lbl.custom_minimum_size.x = 180
+	_selected_title_lbl.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
 	word_row.add_child(_selected_title_lbl)
 
-	var speak_en_btn: Button = ui.button("♪ 听英文", "", true, Vector2(104, 34))
+	var speak_en_btn: Button = ui.button("♪ 听英文", "", true, Vector2(80, 34))
+	speak_en_btn.add_theme_font_size_override("font_size", 15)
 	speak_en_btn.pressed.connect(_speak_selected_en)
 	word_row.add_child(speak_en_btn)
 
-	var speak_zh_btn: Button = ui.button("· 听中文", "", false, Vector2(98, 34))
-	speak_zh_btn.pressed.connect(_speak_selected_zh)
-	word_row.add_child(speak_zh_btn)
+	_speak_zh_btn = ui.button("· 听中文", "", false, Vector2(74, 34))
+	_speak_zh_btn.add_theme_font_size_override("font_size", 15)
+	_speak_zh_btn.pressed.connect(_speak_selected_zh)
+	word_row.add_child(_speak_zh_btn)
 
-	_palace_btn = ui.button("◈ 记忆宫殿", "", false, Vector2(148, 34))
+	_speed_mode_btn = ui.button("♪ 慢速", "", false, Vector2(82, 34))
+	_speed_mode_btn.name = "BenchSpeedToggleBtn"
+	_speed_mode_btn.tooltip_text = "切换慢速清晰跟读与亲切绘本语速"
+	_speed_mode_btn.add_theme_font_size_override("font_size", 15)
+	_speed_mode_btn.pressed.connect(_toggle_bench_speech_speed)
+	word_row.add_child(_speed_mode_btn)
+
+	_mic_follow_btn = ui.button("★ 跟读单词", "", true, Vector2(96, 34))
+	_mic_follow_btn.name = "MicFollowBtn"
+	_mic_follow_btn.add_theme_font_size_override("font_size", 15)
+	_mic_follow_btn.pressed.connect(func(): _start_bench_follow_along("voice"))
+	word_row.add_child(_mic_follow_btn)
+
+	_mic_mode_btn = ui.button("◈ 切整句", "", false, Vector2(76, 34))
+	_mic_mode_btn.name = "MicModeToggleBtn"
+	_mic_mode_btn.add_theme_font_size_override("font_size", 15)
+	_mic_mode_btn.pressed.connect(_toggle_follow_sentence_mode)
+	word_row.add_child(_mic_mode_btn)
+
+	_mic_shy_btn = ui.button("☆ 默读", "", false, Vector2(64, 34))
+	_mic_shy_btn.name = "MicShyBtn"
+	_mic_shy_btn.add_theme_font_size_override("font_size", 15)
+	_mic_shy_btn.pressed.connect(func(): _start_bench_follow_along("shy"))
+	word_row.add_child(_mic_shy_btn)
+
+	_palace_btn = ui.button("◈ 记忆宫殿", "", false, Vector2(104, 34))
+	_palace_btn.add_theme_font_size_override("font_size", 15)
 	_palace_btn.pressed.connect(_open_selected_palace)
 	word_row.add_child(_palace_btn)
 
 	var domain := "home" if bench_room_id.begins_with("home") else "school"
-	var chat_btn: Button = ui.button("◈ 练课本对话", "", false, Vector2(132, 34))
+	var chat_btn: Button = ui.button("◈ 练对话", "", false, Vector2(80, 34))
+	chat_btn.add_theme_font_size_override("font_size", 15)
 	chat_btn.pressed.connect(func():
 		close_workbench()
 		if is_instance_valid(game):
 			game._on_action("v6_ladder_open:" + domain)
 	)
 	word_row.add_child(chat_btn)
+	_refresh_speed_mode_button()
+	_refresh_follow_buttons()
 
 	var sent_row := HBoxContainer.new()
 	sent_row.add_theme_constant_override("separation", 14)
@@ -1064,7 +1197,7 @@ func _build_floating_overlay(cluster: Dictionary, anchor_dict: Dictionary) -> vo
 	dock_col.add_child(task_strip)
 
 	var task_row := HBoxContainer.new()
-	task_row.add_theme_constant_override("separation", 10)
+	task_row.add_theme_constant_override("separation", 8)
 	task_strip.add_child(task_row)
 
 	_task_prompt_lbl = ui.label("", 15, Style.INK)
@@ -1073,13 +1206,25 @@ func _build_floating_overlay(cluster: Dictionary, anchor_dict: Dictionary) -> vo
 	_task_prompt_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	task_row.add_child(_task_prompt_lbl)
 
-	_task_feedback_lbl = ui.label("点选场景中的第 2 层物品（或词卡）即可互动归位！", 13, Style.SAGE)
+	var default_fb := "凭英语读音与 3D 造型点选目标实物（忘了可点提示）" if not _active_errand_word.is_empty() else "按住 3D 实物拖进发光落点环（轻点认读，双击可归位）"
+	_task_feedback_lbl = ui.label(default_fb, 13, Style.SAGE)
 	_task_feedback_lbl.name = "PlacementFeedback"
 	task_row.add_child(_task_feedback_lbl)
 
-	var task_audio_btn: Button = ui.button("♪ 听指令", "", false, Vector2(96, 30))
+	_errand_hint_btn = ui.button("◈ 提示", "", false, Vector2(92, 30))
+	_errand_hint_btn.name = "ErrandHintBtn"
+	_errand_hint_btn.pressed.connect(func(): request_errand_hint())
+	task_row.add_child(_errand_hint_btn)
+
+	_assist_place_btn = ui.button("◈ 辅助归位", "", false, Vector2(96, 30))
+	_assist_place_btn.name = "AssistPlaceBtn"
+	_assist_place_btn.pressed.connect(func(): assist_place_current_step())
+	task_row.add_child(_assist_place_btn)
+
+	var task_audio_btn: Button = ui.button("♪ 听指令", "", false, Vector2(86, 30))
 	task_audio_btn.pressed.connect(_speak_current_task)
 	task_row.add_child(task_audio_btn)
+	_sync_task_action_buttons()
 
 	_update_closeup_visuals(0.0)
 
@@ -1167,26 +1312,162 @@ func handle_input(event: InputEvent) -> bool:
 			KEY_5, KEY_KP_5:
 				_select_slot(4)
 				return true
+
 	if event is InputEventMouseMotion:
 		var mm := event as InputEventMouseMotion
+		if _drag_pressed and not _drag_key.is_empty():
+			if not _drag_active and mm.position.distance_to(_drag_start_screen) >= 7.0:
+				_drag_active = true
+				select_bench_item(_drag_key, false, false)
+			if _drag_active:
+				Input.set_default_cursor_shape(Input.CURSOR_DRAG)
+				_update_drag_prop_position(mm.position)
+				return true
 		var hit_k := _pick_3d_prop_at_screen(mm.position)
 		Input.set_default_cursor_shape(Input.CURSOR_POINTING_HAND if not hit_k.is_empty() else Input.CURSOR_ARROW)
 		return false
-	if event is InputEventMouseButton and (event as InputEventMouseButton).pressed:
+
+	if event is InputEventMouseButton:
 		var mb := event as InputEventMouseButton
-		if mb.button_index == MOUSE_BUTTON_LEFT:
-			var picked := _pick_3d_prop_at_screen(mb.position)
-			if not picked.is_empty():
-				select_bench_item(picked, true)
-			return true
-		if mb.button_index == MOUSE_BUTTON_RIGHT:
+		if mb.button_index == MOUSE_BUTTON_RIGHT and mb.pressed:
 			close_workbench()
 			return true
+		if mb.button_index == MOUSE_BUTTON_LEFT:
+			if mb.pressed:
+				var picked := _pick_3d_prop_at_screen(mb.position)
+				if not picked.is_empty():
+					if mb.double_click:
+						_drag_pressed = false
+						_drag_active = false
+						_drag_key = ""
+						if not _active_errand_word.is_empty():
+							_handle_errand_guess(picked)
+						else:
+							select_bench_item(picked, true, false)
+							drag_item_to_target(picked)
+						return true
+					_drag_pressed = true
+					_drag_active = false
+					_drag_key = picked
+					_drag_start_screen = mb.position
+					if _prop_nodes.has(picked) and is_instance_valid(_prop_nodes[picked]):
+						_drag_origin_pos = (_prop_nodes[picked] as Node3D).position
+						_drag_plane_y = _drag_origin_pos.y
+				return true
+			elif _drag_pressed:
+				var rel_key := _drag_key
+				var was_dragging := _drag_active
+				_drag_pressed = false
+				_drag_active = false
+				_drag_key = ""
+				Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+				if not rel_key.is_empty():
+					if was_dragging:
+						_finish_drag_release(rel_key)
+					else:
+						_on_callout_or_prop_clicked(rel_key)
+				return true
 	return true
 
 func _select_slot(slot_idx: int) -> void:
 	if slot_idx >= 0 and slot_idx < _ordered_layer2_keys.size():
-		select_bench_item(_ordered_layer2_keys[slot_idx], true)
+		_on_callout_or_prop_clicked(_ordered_layer2_keys[slot_idx])
+
+func _on_callout_or_prop_clicked(key: String) -> void:
+	if not _active_errand_word.is_empty():
+		_handle_errand_guess(key)
+	else:
+		select_bench_item(key, true, false)
+
+func _update_drag_prop_position(screen_pos: Vector2) -> void:
+	if not _prop_nodes.has(_drag_key) or not is_instance_valid(_prop_nodes[_drag_key]):
+		return
+	if not is_instance_valid(game) or not is_instance_valid(game.camera):
+		return
+	var cam: Camera3D = game.camera as Camera3D
+	if cam == null:
+		return
+	var node: Node3D = _prop_nodes[_drag_key]
+	var ray_orig := cam.project_ray_origin(screen_pos)
+	var ray_dir := cam.project_ray_normal(screen_pos)
+	var hit: Variant = Plane(Vector3.UP, _drag_plane_y).intersects_ray(ray_orig, ray_dir)
+	if not (hit is Vector3):
+		return
+	var wp: Vector3 = hit as Vector3
+	if bool(node.get_meta("hanging", false)):
+		node.position = Vector3(clampf(wp.x, _stage_origin.x - 1.15, _stage_origin.x + 1.15), _drag_origin_pos.y, _drag_origin_pos.z)
+	else:
+		var delta_xz := Vector2(wp.x - _stage_origin.x, wp.z - _stage_origin.z)
+		if delta_xz.length() > 1.45:
+			delta_xz = delta_xz.normalized() * 1.45
+		node.position = Vector3(_stage_origin.x + delta_xz.x, _drag_plane_y + 0.075, _stage_origin.z + delta_xz.y)
+	if is_instance_valid(_selected_halo) and not bool(node.get_meta("hanging", false)):
+		_selected_halo.position = Vector3(node.position.x, _drag_plane_y + 0.012, node.position.z)
+		_selected_halo.show()
+
+func _finish_drag_release(rel_key: String) -> void:
+	if not _prop_nodes.has(rel_key) or not is_instance_valid(_prop_nodes[rel_key]):
+		return
+	var node: Node3D = _prop_nodes[rel_key]
+	if not _active_errand_word.is_empty():
+		node.position.y = _drag_plane_y
+		_handle_errand_guess(rel_key)
+		return
+
+	var cur_step := _current_step_dict()
+	var expected := str(cur_step.get("item", "")).strip_edges().to_lower()
+	var tpos := _current_step_target_pos()
+	var d_xz := Vector2(node.position.x - tpos.x, node.position.z - tpos.z).length()
+	if bool(node.get_meta("hanging", false)):
+		d_xz = absf(node.position.x - tpos.x)
+
+	if not tasks_completed and rel_key == expected and d_xz <= 0.44:
+		select_bench_item(rel_key, true, false)
+		_advance_one_tidy_step(rel_key, 0)
+		return
+
+	# Settle gently on furniture surface for free-play arranging, or spring back if dragged too far/wrong drop
+	var home_p: Vector3 = _prop_home_pos.get(rel_key, _drag_origin_pos)
+	var stay_pos := Vector3(node.position.x, _drag_plane_y, node.position.z)
+	if not tasks_completed and d_xz <= 0.36 and rel_key != expected:
+		var tw_back := create_tween()
+		tw_back.tween_property(node, "position", home_p, 0.20).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		select_bench_item(rel_key, true, false)
+		if is_instance_valid(_task_feedback_lbl):
+			_task_feedback_lbl.text = "这是「%s」· 当前第 %d/%d 步请把「%s」拖进绿色光环哦！" % [
+				rel_key,
+				mini(task_index + 1, maxi(1, _placement_steps.size())),
+				maxi(1, _placement_steps.size()),
+				expected,
+			]
+		return
+
+	var tw_settle := create_tween()
+	tw_settle.tween_property(node, "position", stay_pos, 0.14).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+	select_bench_item(rel_key, true, false)
+
+func drag_item_to_target(word_raw: String) -> Dictionary:
+	var key := word_raw.strip_edges().to_lower()
+	if not _active_errand_word.is_empty():
+		return _handle_errand_guess(key)
+	var cur_step := _current_step_dict()
+	var expected := str(cur_step.get("item", "")).strip_edges().to_lower()
+	if tasks_completed or expected.is_empty() or key != expected:
+		return {"ok": false, "placed": false, "task_index": task_index, "tasks_completed": tasks_completed}
+	var placed_ok := _advance_one_tidy_step(key, 0)
+	return {"ok": placed_ok, "placed": placed_ok, "task_index": task_index, "tasks_completed": tasks_completed}
+
+func assist_place_current_step() -> Dictionary:
+	if not _active_errand_word.is_empty():
+		request_errand_hint()
+		return {"ok": false, "placed": false}
+	var cur_step := _current_step_dict()
+	var expected := str(cur_step.get("item", "")).strip_edges().to_lower()
+	if tasks_completed or expected.is_empty():
+		return {"ok": false, "placed": false}
+	select_bench_item(expected, true, false)
+	var ok := _advance_one_tidy_step(expected, 0)
+	return {"ok": ok, "placed": ok, "task_index": task_index, "tasks_completed": tasks_completed}
 
 func _pick_3d_prop_at_screen(screen_pos: Vector2) -> String:
 	if not is_instance_valid(game) or not is_instance_valid(game.camera):
@@ -1213,7 +1494,25 @@ func _pick_3d_prop_at_screen(screen_pos: Vector2) -> String:
 			best_key = key
 	return best_key
 
-func select_bench_item(word_raw: String, user_initiated: bool = true) -> Dictionary:
+func _callout_text_for(key: String, word_disp: String, zh_disp: String, is_placed: bool) -> String:
+	if not _active_errand_word.is_empty() and _errand_hint_tier < 2:
+		if _errand_hint_tier == 1 and key == _active_errand_word:
+			return ErrandDirector.format_masked_callout(word_disp, zh_disp, 1, false)
+		return ErrandDirector.format_masked_callout(word_disp, zh_disp, 0, false)
+	return "%s %s · %s" % ["✓" if is_placed else "★", word_disp, zh_disp]
+
+func _refresh_all_callout_chips() -> void:
+	for chip_k: String in _callout_buttons:
+		var btn: Button = _callout_buttons[chip_k]
+		if is_instance_valid(btn):
+			var u_info: Dictionary = _word_lookup.get(chip_k, {})
+			var uw := str(u_info.get("word", chip_k))
+			var uzh := str(u_info.get("zh", ""))
+			var p_done := _placed_keys.has(chip_k)
+			btn.text = _callout_text_for(chip_k, uw, uzh, p_done)
+			_style_callout_chip(btn, chip_k == selected_word, p_done)
+
+func select_bench_item(word_raw: String, user_initiated: bool = true, auto_place_on_select: bool = true) -> Dictionary:
 	var key := word_raw.strip_edges().to_lower()
 	if not _word_lookup.has(key):
 		return {"ok": false}
@@ -1223,56 +1522,73 @@ func select_bench_item(word_raw: String, user_initiated: bool = true) -> Diction
 	var zh_disp := str(info.get("zh", ""))
 	var is_macro := str(info.get("tier", "")) == "macro"
 	var tier_tag := "第一层原场景" if is_macro else "第二层场景实物"
+	var hide_spoiler := (not _active_errand_word.is_empty() and _errand_hint_tier < 2 and not is_macro)
+
 	if is_instance_valid(_selected_title_lbl):
-		_selected_title_lbl.text = "%s %s  ·  %s（%s）" % ["◆" if is_macro else "★", word_disp, zh_disp, tier_tag]
+		if hide_spoiler:
+			var clue := ErrandDirector.skeleton_word(word_disp) if (_errand_hint_tier == 1 and key == _active_errand_word) else "？？？"
+			_selected_title_lbl.text = "◈ %s  ·  盲找温故中（先凭 3D 实物造型认一认）" % clue
+		else:
+			var star_suffix := _spoken_star_badge_for(key)
+			_selected_title_lbl.text = "%s %s  ·  %s（%s）%s" % ["◆" if is_macro else "★", word_disp, zh_disp, tier_tag, star_suffix]
 	if is_instance_valid(_selected_en_lbl):
-		_selected_en_lbl.text = str(info.get("sentence_en", ""))
+		_selected_en_lbl.text = "Can you spot the \"%s\" among these 3D items?" % _active_errand_word if hide_spoiler else str(info.get("sentence_en", ""))
 	if is_instance_valid(_selected_zh_lbl):
-		_selected_zh_lbl.text = str(info.get("sentence_zh", ""))
+		_selected_zh_lbl.text = "点选或拖动目标 3D 实物即可交差（忘了可点右侧「◈ 提示」）" if hide_spoiler else str(info.get("sentence_zh", ""))
+	if is_instance_valid(_speak_zh_btn):
+		_speak_zh_btn.disabled = (not _active_errand_word.is_empty() and _errand_hint_tier < 2)
 	if is_instance_valid(_palace_btn):
 		var peid := str(info.get("palace_entry_id", "")).strip_edges()
-		_palace_btn.disabled = peid.is_empty()
-		_palace_btn.text = ("◈ 记忆宫殿 · " + word_disp) if not peid.is_empty() else "· 生活常备词"
+		_palace_btn.disabled = peid.is_empty() or hide_spoiler
+		_palace_btn.text = ("◈ 记忆宫殿 · " + word_disp) if (not peid.is_empty() and not hide_spoiler) else "· 生活常备词"
+	_refresh_follow_buttons()
 
 	var word_exp_gained := 0
 	if user_initiated and is_instance_valid(game):
 		var st_w := game.get_node_or_null("/root/State")
-		if st_w != null and st_w.has_method("grant_exp"):
-			var is_due := false
-			var rev_dict: Dictionary = st_w.data.get("reviews", {}) if st_w.data.get("reviews") is Dictionary else {}
-			var targets: Dictionary = rev_dict.get("targets", {}) if rev_dict.get("targets") is Dictionary else {}
-			for tid: Variant in targets.keys():
-				if str(tid).ends_with(":" + key) or str(tid) == key:
-					var trec: Dictionary = targets[tid] if targets[tid] is Dictionary else {}
-					if str(trec.get("state", "")) == "due":
-						is_due = true
-						break
-			var w_res: Dictionary = st_w.grant_exp({
-				"key": "word_study:" + key,
-				"mode": "word_study",
-				"base_exp": 10,
-				"review_exp": 6,
-				"repeat_exp": 1,
-				"is_due_review": is_due,
-			})
-			word_exp_gained = int(w_res.get("exp_gained", 0))
+		if st_w != null:
+			if not is_macro and st_w.has_method("v8_record_word_exposure"):
+				st_w.v8_record_word_exposure(key, zh_disp, bench_room_id, bench_anchor_order)
+			if st_w.has_method("grant_exp"):
+				var is_due := V8Memory.is_word_due(st_w.data, key, int(Time.get_unix_time_from_system()))
+				var rev_dict: Dictionary = st_w.data.get("reviews", {}) if st_w.data.get("reviews") is Dictionary else {}
+				var targets: Dictionary = rev_dict.get("targets", {}) if rev_dict.get("targets") is Dictionary else {}
+				for tid: Variant in targets.keys():
+					if str(tid).ends_with(":" + key) or str(tid) == key:
+						var trec: Dictionary = targets[tid] if targets[tid] is Dictionary else {}
+						if str(trec.get("state", "")) == "due":
+							is_due = true
+							break
+				var w_res: Dictionary = st_w.grant_exp({
+					"key": "word_study:" + key,
+					"mode": "word_study",
+					"base_exp": 10,
+					"review_exp": 6,
+					"repeat_exp": 1,
+					"is_due_review": is_due,
+				})
+				word_exp_gained = int(w_res.get("exp_gained", 0))
 
 	var placed := false
-	if user_initiated and not tasks_completed:
-		placed = _try_advance_placement(key, word_exp_gained)
-	elif user_initiated and word_exp_gained > 0 and is_instance_valid(_task_feedback_lbl):
-		_task_feedback_lbl.text = "★ 认读「%s（%s）」+%d EXP！" % [word_disp, zh_disp, word_exp_gained]
+	if user_initiated and auto_place_on_select and not tasks_completed and _active_errand_word.is_empty():
+		placed = _try_advance_placement(key, word_exp_gained, true)
+	elif user_initiated and _active_errand_word.is_empty() and is_instance_valid(_task_feedback_lbl):
+		var cur_step := _current_step_dict()
+		var exp_item := str(cur_step.get("item", "")).to_lower()
+		var exp_tag := (" +%d EXP" % word_exp_gained) if word_exp_gained > 0 else ""
+		if not tasks_completed and not exp_item.is_empty():
+			if key == exp_item:
+				_task_feedback_lbl.text = "★ 已选中「%s」%s · 按住它拖进绿色光环（或点「◈ 辅助归位」）完成第 %d/%d 步！" % [
+					word_disp, exp_tag, mini(task_index + 1, _placement_steps.size()), maxi(1, _placement_steps.size())
+				]
+			else:
+				_task_feedback_lbl.text = "★ 认读「%s（%s）」%s · 第 %d/%d 步请把「%s」拖进绿色光环！" % [
+					word_disp, zh_disp, exp_tag, mini(task_index + 1, _placement_steps.size()), maxi(1, _placement_steps.size()), exp_item
+				]
+		elif word_exp_gained > 0:
+			_task_feedback_lbl.text = "★ 认读「%s（%s）」+%d EXP！可按「★ 跟读单词」点亮发音星" % [word_disp, zh_disp, word_exp_gained]
 	_refresh_top_econ_label()
-
-	for chip_k: String in _callout_buttons:
-		var btn: Button = _callout_buttons[chip_k]
-		if is_instance_valid(btn):
-			var u_info: Dictionary = _word_lookup.get(chip_k, {})
-			var uw := str(u_info.get("word", chip_k))
-			var uzh := str(u_info.get("zh", ""))
-			var p_done := _placed_keys.has(chip_k)
-			btn.text = ("%s %s · %s" % ["✓" if p_done else "★", uw, uzh])
-			_style_callout_chip(btn, chip_k == selected_word, p_done)
+	_refresh_all_callout_chips()
 
 	if is_instance_valid(_selected_halo):
 		if _prop_nodes.has(key) and is_instance_valid(_prop_nodes[key]) and not is_macro:
@@ -1293,11 +1609,11 @@ func select_bench_item(word_raw: String, user_initiated: bool = true) -> Diction
 
 	var cluster := cluster_for_room(bench_room_id)
 	var comp_id := str(cluster.get("companion_npc_id", "warm"))
-	if user_initiated and is_instance_valid(game):
+	if user_initiated and is_instance_valid(game) and not hide_spoiler:
 		if is_instance_valid(game.audio_director) and not placed:
 			game.audio_director.play_foley("bubble_pop")
 		if is_instance_valid(game.ai_bridge):
-			game.ai_bridge.speak_text("%s. %s" % [word_disp, str(info.get("sentence_en", ""))], "en", comp_id)
+			game.ai_bridge.speak_text("%s... %s" % [word_disp, str(info.get("sentence_en", ""))], "en", comp_id)
 
 	_update_closeup_visuals(0.0)
 
@@ -1309,6 +1625,62 @@ func select_bench_item(word_raw: String, user_initiated: bool = true) -> Diction
 		"task_index": task_index,
 		"tasks_completed": tasks_completed,
 	}
+
+func _spoken_star_badge_for(key: String) -> String:
+	if not is_instance_valid(game):
+		return ""
+	var st := game.get_node_or_null("/root/State")
+	if st == null:
+		return ""
+	var items: Dictionary = V8Memory.ensure(st.data).get("items", {})
+	if not items.has(key):
+		return ""
+	var rec: Dictionary = items[key]
+	var sp := int(rec.get("spoken_tier", 0))
+	if sp >= 3:
+		return " · ★发音星"
+	if sp == 2:
+		return " · ☆开口星"
+	if sp == 1:
+		return " · ◇默读星"
+	return ""
+
+func _current_step_dict() -> Dictionary:
+	if _placement_steps.is_empty():
+		return {}
+	var idx := clampi(task_index, 0, _placement_steps.size() - 1)
+	return _placement_steps[idx]
+
+func _current_step_target_pos() -> Vector3:
+	var cur := _current_step_dict()
+	var anchor_dict := macro_item_for_anchor(bench_room_id, bench_anchor_order)
+	var spec: Dictionary = anchor_dict.get("stage_spec", {}) if anchor_dict.get("stage_spec") is Dictionary else {}
+	var fallback := _vec3(spec.get("target_pos", []), _stage_origin + Vector3(0.0, 0.42, 0.0))
+	return _vec3(cur.get("target_pos", []), fallback)
+
+func _sync_drop_halo() -> void:
+	if not is_instance_valid(_target_drop_halo):
+		return
+	if tasks_completed or _placement_steps.is_empty() or not _active_errand_word.is_empty():
+		_target_drop_halo.hide()
+		return
+	var cur := _current_step_dict()
+	var exp_key := str(cur.get("item", "")).strip_edges().to_lower()
+	var tpos := _current_step_target_pos()
+	if _prop_nodes.has(exp_key) and is_instance_valid(_prop_nodes[exp_key]) and bool((_prop_nodes[exp_key] as Node3D).get_meta("hanging", false)):
+		_target_drop_halo.position = Vector3(tpos.x, CLOSET_ROD_Y, (_prop_nodes[exp_key] as Node3D).position.z)
+	else:
+		_target_drop_halo.position = tpos + Vector3(0.0, 0.015, 0.0)
+	_target_drop_halo.show()
+
+func _sync_task_action_buttons() -> void:
+	var in_errand := not _active_errand_word.is_empty()
+	if is_instance_valid(_errand_hint_btn):
+		_errand_hint_btn.visible = in_errand
+		_errand_hint_btn.disabled = (_errand_hint_tier >= 2)
+		_errand_hint_btn.text = "◈ 提示(%d/2)" % _errand_hint_tier
+	if is_instance_valid(_assist_place_btn):
+		_assist_place_btn.visible = (not in_errand) and (not tasks_completed) and (not _placement_steps.is_empty())
 
 func _format_top_sub_text(cluster: Dictionary) -> String:
 	var st := game.get_node_or_null("/root/State") if is_instance_valid(game) else null
@@ -1327,113 +1699,469 @@ func _refresh_top_econ_label() -> void:
 	if is_instance_valid(_top_sub_lbl):
 		_top_sub_lbl.text = _format_top_sub_text(cluster_for_room(bench_room_id))
 
-func _try_advance_placement(picked_key: String, word_exp_gained: int = 0) -> bool:
-	var anchor_dict := macro_item_for_anchor(bench_room_id, bench_anchor_order)
-	var task: Dictionary = anchor_dict.get("placement_task", {}) if anchor_dict.get("placement_task") is Dictionary else {}
-	if task.is_empty():
+func _try_advance_placement(picked_key: String, word_exp_gained: int = 0, complete_all_for_legacy: bool = false) -> bool:
+	var cur := _current_step_dict()
+	if cur.is_empty():
 		return false
-	var expected_item := str(task.get("item", "")).strip_edges().to_lower()
+	var expected_item := str(cur.get("item", "")).strip_edges().to_lower()
 	if expected_item.is_empty() or picked_key != expected_item:
 		if is_instance_valid(_task_feedback_lbl) and _word_lookup.has(picked_key):
 			var picked_zh := str((_word_lookup[picked_key] as Dictionary).get("zh", picked_key))
 			var exp_suffix := (" +%d EXP" % word_exp_gained) if word_exp_gained > 0 else ""
-			_task_feedback_lbl.text = "刚认识了「%s（%s）」%s · 试试点选「%s」归位吧！" % [picked_key, picked_zh, exp_suffix, expected_item]
+			_task_feedback_lbl.text = "刚认识了「%s（%s）」%s · 请把「%s」拖到绿色落点环归位吧！" % [picked_key, picked_zh, exp_suffix, expected_item]
 		return false
 
+	var ok := _advance_one_tidy_step(picked_key, word_exp_gained)
+	if complete_all_for_legacy and ok:
+		while not tasks_completed and task_index < _placement_steps.size():
+			var nxt_item := str(_current_step_dict().get("item", "")).strip_edges().to_lower()
+			if nxt_item.is_empty():
+				break
+			_advance_one_tidy_step(nxt_item, 0)
+	return ok
+
+func _advance_one_tidy_step(picked_key: String, word_exp_gained: int = 0) -> bool:
+	var cur := _current_step_dict()
+	if cur.is_empty():
+		return false
+	var expected_item := str(cur.get("item", "")).strip_edges().to_lower()
+	if picked_key != expected_item:
+		return false
+
+	var completed_step_idx := task_index
 	_placed_keys[picked_key] = true
-	var spec: Dictionary = anchor_dict.get("stage_spec", {}) if anchor_dict.get("stage_spec") is Dictionary else {}
+	var dest := _current_step_target_pos()
 	if _prop_nodes.has(picked_key) and is_instance_valid(_prop_nodes[picked_key]):
 		var item_node: Node3D = _prop_nodes[picked_key]
-		var dest := _vec3(spec.get("target_pos", []), _stage_origin + Vector3(0.0, 0.42, 0.0))
-		if bool(item_node.get_meta("hanging",false)):
+		if bool(item_node.get_meta("hanging", false)):
 			dest.y = item_node.position.y
 			dest.z = item_node.position.z
-		var arc_mid := (item_node.position + dest) * 0.5 + Vector3(0.0, 0.36, 0.0)
+		_prop_home_pos[picked_key] = dest
+		var arc_mid := (item_node.position + dest) * 0.5 + Vector3(0.0, 0.24, 0.0)
 		var tw := create_tween()
-		tw.tween_property(item_node, "position", arc_mid, 0.18).set_trans(Tween.TRANS_SINE)
-		tw.tween_property(item_node, "position", dest, 0.20).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+		tw.tween_property(item_node, "position", arc_mid, 0.14).set_trans(Tween.TRANS_SINE)
+		tw.tween_property(item_node, "position", dest, 0.18).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
 		if is_instance_valid(_selected_halo) and _selected_halo.visible:
 			_selected_halo.position = dest + Vector3(0.0, 0.012, 0.0)
 
 	var state_node := game.get_node_or_null("/root/State") if is_instance_valid(game) else null
 	var gained := 0
-	var place_exp := 0
+	var place_exp := word_exp_gained
 	if state_node != null:
+		var u_zh := str((_word_lookup.get(expected_item, {}) as Dictionary).get("zh", ""))
+		if state_node.has_method("v8_record_word_exposure"):
+			state_node.v8_record_word_exposure(expected_item, u_zh, bench_room_id, bench_anchor_order)
 		state_node.record_stealth_evidence({
 			"word": expected_item,
 			"support_level": 0,
 			"correct": true,
-			"context": "spatial_bench:%s:%d" % [bench_room_id, bench_anchor_order],
+			"context": "spatial_bench:%s:%d:s%d" % [bench_room_id, bench_anchor_order, completed_step_idx + 1],
 		})
-		var v4: Dictionary = state_node.data.get("v4", {}) if state_node.data.get("v4") is Dictionary else {}
-		var done_arr: Array = v4.get("completed_commissions", []) if v4.get("completed_commissions") is Array else []
-		var room_receipt := "v6_bench_%s" % bench_room_id
-		var anchor_receipt := "v6_anchor_%s_%d" % [bench_room_id, bench_anchor_order]
-		if not done_arr.has(room_receipt):
-			if state_node.complete_v4_commission(room_receipt, 4):
-				gained += 4
-			state_node.complete_v4_commission(anchor_receipt, 0)
-		elif not done_arr.has(anchor_receipt):
-			if state_node.complete_v4_commission(anchor_receipt, 2):
-				gained += 2
-		if state_node.has_method("grant_exp"):
-			var p_res: Dictionary = state_node.grant_exp({
-				"key": "place:%s:%d" % [bench_room_id, bench_anchor_order],
-				"mode": "daily_repeat",
-				"base_exp": 18,
-				"repeat_exp": 5,
-				"coin_bonus": 0,
-			})
-			place_exp = int(p_res.get("exp_gained", 0)) + word_exp_gained
-			gained += int(p_res.get("gift_coins", 0))
+		if completed_step_idx == 0:
+			var v4: Dictionary = state_node.data.get("v4", {}) if state_node.data.get("v4") is Dictionary else {}
+			var done_arr: Array = v4.get("completed_commissions", []) if v4.get("completed_commissions") is Array else []
+			var room_receipt := "v6_bench_%s" % bench_room_id
+			var anchor_receipt := "v6_anchor_%s_%d" % [bench_room_id, bench_anchor_order]
+			if not done_arr.has(room_receipt):
+				if state_node.complete_v4_commission(room_receipt, 4):
+					gained += 4
+				state_node.complete_v4_commission(anchor_receipt, 0)
+			elif not done_arr.has(anchor_receipt):
+				if state_node.complete_v4_commission(anchor_receipt, 2):
+					gained += 2
+			if state_node.has_method("grant_exp"):
+				var p_res: Dictionary = state_node.grant_exp({
+					"key": "place:%s:%d" % [bench_room_id, bench_anchor_order],
+					"mode": "daily_repeat",
+					"base_exp": 18,
+					"repeat_exp": 5,
+					"coin_bonus": 0,
+				})
+				place_exp += int(p_res.get("exp_gained", 0))
+				gained += int(p_res.get("gift_coins", 0))
+		else:
+			if state_node.has_method("grant_exp"):
+				var s_res: Dictionary = state_node.grant_exp({
+					"key": "place_step:%s:%d:%d" % [bench_room_id, bench_anchor_order, completed_step_idx + 1],
+					"mode": "daily_repeat",
+					"base_exp": 8,
+					"repeat_exp": 2,
+					"coin_bonus": 0,
+				})
+				place_exp += int(s_res.get("exp_gained", 0))
+				gained += int(s_res.get("gift_coins", 0))
 
-	task_index = 1
-	tasks_completed = true
+	task_index = completed_step_idx + 1
+	tasks_completed = (task_index >= maxi(1, _placement_steps.size()))
+	_sync_drop_halo()
+	_sync_task_action_buttons()
+	_refresh_all_callout_chips()
+	_refresh_top_econ_label()
+
 	if is_instance_valid(game) and is_instance_valid(game.audio_director):
 		game.audio_director.play_foley("wardrobe_sparkle")
-	if is_instance_valid(_task_prompt_lbl):
-		_task_prompt_lbl.text = "✓ 已在原场景归位：%s  ·  %s" % [str(task.get("prompt_en", "")), str(task.get("prompt_zh", ""))]
+
+	var anchor_dict := macro_item_for_anchor(bench_room_id, bench_anchor_order)
+	_refresh_task_prompt(anchor_dict)
 	if is_instance_valid(_task_feedback_lbl):
-		if gained > 0 or place_exp > 0:
-			_task_feedback_lbl.text = "★ 归位奖励 +%d EXP · +%d 叶币！点「下一处 ▶」继续探索" % [place_exp, gained]
+		if tasks_completed:
+			if gained > 0 or place_exp > 0:
+				_task_feedback_lbl.text = "★ 全部整理完成 +%d EXP%s！可点「★ 跟读单词」或「下一处 ▶」" % [
+					place_exp,
+					(" · +%d 叶币" % gained) if gained > 0 else "",
+				]
+			else:
+				_task_feedback_lbl.text = "★ 全部整理到位！可自由拖动把玩其他物品或看下一处场景"
 		else:
-			_task_feedback_lbl.text = "★ 归位完成！可继续点选其他物品或看下一处场景"
+			var next_item := str(_current_step_dict().get("item", ""))
+			_task_feedback_lbl.text = "✓ 第 %d/%d 步归位成功（+%d EXP）！接着拖动「%s」到绿色光环吧" % [
+				completed_step_idx + 1,
+				_placement_steps.size(),
+				place_exp,
+				next_item,
+			]
 	return true
 
-func _refresh_task_prompt(anchor_dict: Dictionary) -> void:
+func _handle_errand_guess(picked_key: String) -> Dictionary:
+	var key := picked_key.strip_edges().to_lower()
+	if _active_errand_word.is_empty() or not is_instance_valid(game):
+		return {"ok": false}
+	var st := game.get_node_or_null("/root/State")
+	if st == null:
+		return {"ok": false}
+	if not _word_lookup.has(key) or str((_word_lookup[key] as Dictionary).get("tier", "")) == "macro":
+		return {"ok": false}
+
+	if key == _active_errand_word:
+		var target_w := _active_errand_word
+		var res: Dictionary = st.v8_complete_errand_target(target_w)
+		_active_errand_word = ""
+		_errand_hint_tier = 2
+		_placed_keys[target_w] = true
+		_sync_drop_halo()
+		_sync_task_action_buttons()
+		select_bench_item(target_w, false, false)
+		_refresh_all_callout_chips()
+		_refresh_top_econ_label()
+		var anchor_dict := macro_item_for_anchor(bench_room_id, bench_anchor_order)
+		_refresh_task_prompt(anchor_dict)
+		if is_instance_valid(game.get("errand_director")):
+			game.errand_director.refresh_visuals()
+		if is_instance_valid(game.audio_director):
+			game.audio_director.play_foley("wardrobe_sparkle")
+		if is_instance_valid(game.ai_bridge):
+			var info: Dictionary = _word_lookup.get(target_w, {})
+			var comp_id := str(cluster_for_room(bench_room_id).get("companion_npc_id", "warm"))
+			game.ai_bridge.speak_text("Wonderful! You found the %s! %s" % [str(info.get("word", target_w)), str(info.get("sentence_en", ""))], "en", comp_id)
+		if is_instance_valid(_task_feedback_lbl):
+			_task_feedback_lbl.text = "◈ 寻物成功 · %s！+%d EXP · +%d 叶币（记忆升至：%s）" % [
+				str(res.get("badge_zh", "过目不忘金星")),
+				int(res.get("exp_gained", 32)),
+				int(res.get("coins_gained", 4)),
+				str(res.get("stage_label", "首轮巩固")),
+			]
+		return res
+
+	# Gentle scaffold on miss: advance hint tier (0 -> 1 -> 2) without harsh error
+	var new_tier := request_errand_hint()
+	if is_instance_valid(_task_feedback_lbl):
+		if new_tier == 1:
+			_task_feedback_lbl.text = "刚才那件不是「%s」哦 · 已为你点亮首尾字母线索并慢读示范，再找找看！" % _active_errand_word
+		else:
+			_task_feedback_lbl.text = "已为你展开全部双语词牌，找到「%s」点一下就能稳稳拿回啦！" % _active_errand_word
+	return {"ok": false, "missed": true, "hint_tier": new_tier}
+
+func request_errand_hint() -> int:
+	if _active_errand_word.is_empty() or not is_instance_valid(game):
+		return _errand_hint_tier
+	var st := game.get_node_or_null("/root/State")
+	if st != null and st.has_method("v8_advance_errand_hint"):
+		_errand_hint_tier = st.v8_advance_errand_hint(_active_errand_word)
+	else:
+		_errand_hint_tier = mini(2, _errand_hint_tier + 1)
+	_sync_task_action_buttons()
+	_refresh_all_callout_chips()
+	var anchor_dict := macro_item_for_anchor(bench_room_id, bench_anchor_order)
+	_refresh_task_prompt(anchor_dict)
+	if is_instance_valid(game.get("errand_director")):
+		game.errand_director.refresh_visuals()
+	if is_instance_valid(game.ai_bridge):
+		var comp_id := str(cluster_for_room(bench_room_id).get("companion_npc_id", "warm"))
+		game.ai_bridge.speak_text(_active_errand_word, "en", comp_id)
+	return _errand_hint_tier
+
+func _toggle_bench_speech_speed() -> void:
+	if not is_instance_valid(game) or not is_instance_valid(game.ai_bridge):
+		return
+	var mode: String = game.ai_bridge.toggle_speech_speed_mode()
+	_refresh_speed_mode_button()
+	if is_instance_valid(_task_feedback_lbl):
+		if mode == "slow":
+			_task_feedback_lbl.text = "♪ 已开启「慢速清晰跟读」，每个单词发音更柔和清楚！"
+		else:
+			_task_feedback_lbl.text = "♪ 已切回「亲切绘本语速」"
+	_speak_selected_en()
+
+func _refresh_speed_mode_button() -> void:
+	if not is_instance_valid(_speed_mode_btn):
+		return
+	var bridge: Node = game.ai_bridge if (is_instance_valid(game) and is_instance_valid(game.get("ai_bridge"))) else null
+	if bridge != null and bridge != _bound_speed_bridge and bridge.has_signal("speech_speed_changed"):
+		_bound_speed_bridge = bridge
+		bridge.speech_speed_changed.connect(func(_mode: String): _refresh_speed_mode_button())
+	var is_slow := bridge != null and str(bridge.get("speech_speed_mode")) == "slow"
+	_speed_mode_btn.text = "★ 慢读中" if is_slow else "♪ 慢速"
+	var sb := Style.keycap(
+		Color("fdf0ce") if is_slow else Color("fffdf7"),
+		Style.GOLD if is_slow else Color("d8c8ab"),
+		3, 15, 11, 5
+	)
+	_speed_mode_btn.add_theme_stylebox_override("normal", sb)
+
+func _toggle_follow_sentence_mode() -> void:
+	_follow_sentence_mode = not _follow_sentence_mode
+	_refresh_follow_buttons()
+	if is_instance_valid(_task_feedback_lbl) and _word_lookup.has(selected_word):
+		var info: Dictionary = _word_lookup[selected_word]
+		var target_txt := str(info.get("sentence_en", "")) if _follow_sentence_mode else str(info.get("word", selected_word))
+		_task_feedback_lbl.text = "★ 已切换跟读模式：「%s」" % target_txt.left(48)
+
+func _refresh_follow_buttons() -> void:
+	var hide_spoiler := (not _active_errand_word.is_empty() and _errand_hint_tier < 2)
+	if is_instance_valid(_mic_follow_btn):
+		_mic_follow_btn.disabled = _follow_busy or hide_spoiler
+		if _follow_busy:
+			_mic_follow_btn.text = "● 聆听中..."
+		else:
+			_mic_follow_btn.text = "★ 跟读整句" if _follow_sentence_mode else "★ 跟读单词"
+	if is_instance_valid(_mic_mode_btn):
+		_mic_mode_btn.disabled = _follow_busy or hide_spoiler
+		_mic_mode_btn.text = "◈ 切单词" if _follow_sentence_mode else "◈ 切整句"
+	if is_instance_valid(_mic_shy_btn):
+		_mic_shy_btn.disabled = _follow_busy or hide_spoiler
+
+func _ensure_mic_recorder() -> Node:
+	if not is_instance_valid(_mic_recorder):
+		_mic_recorder = MicRecorderScript.new()
+		_mic_recorder.name = "BenchMicRecorder"
+		add_child(_mic_recorder)
+	return _mic_recorder
+
+func _start_bench_follow_along(mode: String) -> void:
+	if _follow_busy or not _word_lookup.has(selected_word) or not is_instance_valid(game):
+		return
+	if not _active_errand_word.is_empty() and _errand_hint_tier < 2:
+		return
+	var word_key := selected_word
+	var info: Dictionary = _word_lookup[word_key]
+	var is_sent := _follow_sentence_mode and not str(info.get("sentence_en", "")).strip_edges().is_empty()
+	var target_txt := str(info.get("sentence_en", "")).strip_edges() if is_sent else str(info.get("word", word_key)).strip_edges()
+	if target_txt.is_empty():
+		return
+
+	if mode == "shy":
+		_apply_follow_along_result(word_key, is_sent, {
+			"ok": true,
+			"match_tier": "shy_silent",
+			"cheer_badge": "安心默读星",
+			"reply_zh": "在心里轻轻默读也很棒，单词已经记在脑海里啦！",
+		})
+		return
+
+	_follow_busy = true
+	_refresh_follow_buttons()
+	if is_instance_valid(_task_feedback_lbl):
+		_task_feedback_lbl.text = "● 请开口读出：「%s」……" % target_txt.left(46)
+
+	var rec_node := _ensure_mic_recorder()
+	var dur_sec := 3.1 if is_sent else 1.8
+	var rec_info: Dictionary = await rec_node.record_wav_16k(dur_sec)
+	if not bench_open or bool(rec_info.get("cancelled", false)):
+		_follow_busy = false
+		_refresh_follow_buttons()
+		return
+
+	await trigger_follow_along(
+		"voice",
+		str(rec_info.get("wav_b64", "")),
+		float(rec_info.get("rms", 0.0)),
+		int(rec_info.get("duration_ms", 0)),
+		word_key,
+		is_sent
+	)
+
+func trigger_follow_along(
+	mode: String = "voice",
+	wav_b64: String = "",
+	rms: float = 0.035,
+	dur_ms: int = 900,
+	explicit_word: String = "",
+	explicit_sentence: bool = false
+) -> Dictionary:
+	var wkey := explicit_word if not explicit_word.is_empty() else selected_word
+	if not _word_lookup.has(wkey) or not is_instance_valid(game):
+		_follow_busy = false
+		_refresh_follow_buttons()
+		return {"ok": false}
+	var info: Dictionary = _word_lookup[wkey]
+	var is_sent := explicit_sentence or (_follow_sentence_mode and explicit_word.is_empty())
+	var target_txt := str(info.get("sentence_en", "")).strip_edges() if is_sent else str(info.get("word", wkey)).strip_edges()
+
+	if mode == "shy":
+		_follow_busy = false
+		_refresh_follow_buttons()
+		return _apply_follow_along_result(wkey, is_sent, {
+			"ok": true,
+			"match_tier": "shy_silent",
+			"cheer_badge": "安心默读星",
+			"reply_zh": "在心里默读「%s」也很棒！" % target_txt.left(28),
+		})
+
+	var reply: Dictionary = {}
+	if is_instance_valid(game.ai_bridge):
+		var sync_box: Array = [false, {}]
+		var on_ready := func(payload: Dictionary) -> void:
+			sync_box[0] = true
+			sync_box[1] = payload
+		game.ai_bridge.speech_encouragement_ready.connect(on_ready, CONNECT_ONE_SHOT)
+		game.ai_bridge.request_speech_encouragement(target_txt, mode, rms, dur_ms, wav_b64)
+		if not bool(sync_box[0]):
+			reply = await game.ai_bridge.speech_encouragement_ready
+		elif sync_box[1] is Dictionary:
+			reply = sync_box[1]
+	else:
+		reply = {"ok": true, "match_tier": "confident_voice", "cheer_badge": "自信开口星"}
+
+	_follow_busy = false
+	_refresh_follow_buttons()
+	return _apply_follow_along_result(wkey, is_sent, reply)
+
+func _apply_follow_along_result(word_key: String, is_sent: bool, reply: Dictionary) -> Dictionary:
+	if not is_instance_valid(game) or not _word_lookup.has(word_key):
+		return {"ok": false}
+	var info: Dictionary = _word_lookup[word_key]
+	var word_disp := str(info.get("word", word_key))
+	var zh_disp := str(info.get("zh", ""))
+	var mtier := str(reply.get("match_tier", "confident_voice"))
+
+	var star_tier := 2
+	var badge_label := "勇敢开口星"
+	if mtier in ["exact", "close"]:
+		star_tier = 3
+		badge_label = "闪耀发音星"
+	elif mtier in ["shy_silent", "no_voice"]:
+		star_tier = 1
+		badge_label = "安心默读星" if mtier == "shy_silent" else "温暖聆听星"
+
+	var st := game.get_node_or_null("/root/State")
+	var exp_gained := 0
+	if st != null and st.has_method("v8_record_spoken"):
+		var sres: Dictionary = st.v8_record_spoken(word_key, star_tier, is_sent, zh_disp, bench_room_id, bench_anchor_order)
+		exp_gained = int(sres.get("exp_gained", 0))
+		st.record_stealth_evidence({
+			"word": word_key,
+			"support_level": 0 if star_tier == 3 else (1 if star_tier == 2 else 3),
+			"correct": true,
+			"context": "bench_speech:%s" % ("sent" if is_sent else "word"),
+		})
+
+	if _prop_nodes.has(word_key) and is_instance_valid(_prop_nodes[word_key]) and not game.ui.reduced_motion:
+		var pnode: Node3D = _prop_nodes[word_key]
+		pnode.scale = Vector3.ONE * 1.28
+		var tw := create_tween()
+		tw.tween_property(pnode, "scale", Vector3.ONE, 0.28).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
+
+	if is_instance_valid(game.audio_director):
+		game.audio_director.play_foley("wardrobe_sparkle" if star_tier >= 2 else "bubble_pop")
+	if star_tier == 2 and is_instance_valid(game.ai_bridge):
+		var comp_id := str(cluster_for_room(bench_room_id).get("companion_npc_id", "warm"))
+		game.ai_bridge.speak_text(word_disp, "en", comp_id)
+
+	if selected_word == word_key and is_instance_valid(_selected_title_lbl):
+		var is_macro := str(info.get("tier", "")) == "macro"
+		var tier_tag := "第一层原场景" if is_macro else "第二层场景实物"
+		_selected_title_lbl.text = "%s %s  ·  %s（%s）%s" % ["◆" if is_macro else "★", word_disp, zh_disp, tier_tag, _spoken_star_badge_for(word_key)]
+
+	_refresh_top_econ_label()
+	if is_instance_valid(_task_feedback_lbl):
+		var clean_msg := MicRecorderScript.strip_emojis(str(reply.get("reply_zh", "")))
+		if clean_msg.is_empty():
+			clean_msg = "读得真清楚！" if star_tier == 3 else "勇敢开口超棒！"
+		_task_feedback_lbl.text = "★ %s +%d EXP · %s" % [badge_label, exp_gained, clean_msg.left(42)]
+
+	return {
+		"ok": true,
+		"word": word_key,
+		"star_tier": star_tier,
+		"badge": badge_label,
+		"exp_gained": exp_gained,
+	}
+
+func _refresh_task_prompt(_anchor_dict: Dictionary) -> void:
 	if not is_instance_valid(_task_prompt_lbl):
 		return
-	var task: Dictionary = anchor_dict.get("placement_task", {}) if anchor_dict.get("placement_task") is Dictionary else {}
-	if task.is_empty():
-		tasks_completed = true
-		_task_prompt_lbl.text = "点选场景中的第 2 层实物或词卡，听地道发音与课本例句！"
+	if not _active_errand_word.is_empty():
+		if _errand_hint_tier == 0:
+			_task_prompt_lbl.text = "【◈ 温故寻物盲找】Find the \"%s\"!  ·  凭 3D 实物造型直接选/拖出它（一次找准享 2 倍 EXP）" % _active_errand_word
+		elif _errand_hint_tier == 1:
+			_task_prompt_lbl.text = "【◈ 温故寻物线索 1/2】Find the \"%s\" (%s)  ·  观察首尾字母与 3D 实物找出它" % [_active_errand_word, ErrandDirector.skeleton_word(_active_errand_word)]
+		else:
+			var uzh := str((_word_lookup.get(_active_errand_word, {}) as Dictionary).get("zh", ""))
+			_task_prompt_lbl.text = "【◈ 温故寻物保底】Find the \"%s\"（%s）  ·  词牌已展开，点选该实物即可完成温故" % [_active_errand_word, uzh]
 		return
-	_task_prompt_lbl.text = "【动手摆一摆】%s  ·  %s" % [
-		str(task.get("prompt_en", "")),
-		str(task.get("prompt_zh", "")),
+
+	if _placement_steps.is_empty():
+		tasks_completed = true
+		_task_prompt_lbl.text = "点选场景中的第 2 层实物听发音、练跟读！"
+		return
+	if tasks_completed:
+		var last_s: Dictionary = _placement_steps[_placement_steps.size() - 1]
+		_task_prompt_lbl.text = "✓ 已完成 %d/%d 步整理：%s  ·  %s" % [
+			_placement_steps.size(),
+			_placement_steps.size(),
+			str(last_s.get("prompt_en", "")),
+			str(last_s.get("prompt_zh", "")),
+		]
+		return
+	var cur := _current_step_dict()
+	_task_prompt_lbl.text = "【动手整理 %d/%d】%s  ·  %s" % [
+		task_index + 1,
+		_placement_steps.size(),
+		str(cur.get("prompt_en", "")),
+		str(cur.get("prompt_zh", "")),
 	]
 
 func _speak_selected_en() -> void:
 	if not _word_lookup.has(selected_word) or not is_instance_valid(game) or not is_instance_valid(game.ai_bridge):
 		return
+	if not _active_errand_word.is_empty() and _errand_hint_tier < 2:
+		game.ai_bridge.speak_text(_active_errand_word, "en", str(cluster_for_room(bench_room_id).get("companion_npc_id", "warm")))
+		return
 	var info: Dictionary = _word_lookup[selected_word]
 	var cluster := cluster_for_room(bench_room_id)
-	game.ai_bridge.speak_text("%s. %s" % [str(info.get("word", "")), str(info.get("sentence_en", ""))], "en", str(cluster.get("companion_npc_id", "warm")))
+	game.ai_bridge.speak_text("%s... %s" % [str(info.get("word", "")), str(info.get("sentence_en", ""))], "en", str(cluster.get("companion_npc_id", "warm")))
 
 func _speak_selected_zh() -> void:
 	if not _word_lookup.has(selected_word) or not is_instance_valid(game) or not is_instance_valid(game.ai_bridge):
+		return
+	if not _active_errand_word.is_empty() and _errand_hint_tier < 2:
 		return
 	var info: Dictionary = _word_lookup[selected_word]
 	var cluster := cluster_for_room(bench_room_id)
 	game.ai_bridge.speak_text("%s，意思是%s。%s" % [str(info.get("word", "")), str(info.get("zh", "")), str(info.get("sentence_zh", ""))], "zh", str(cluster.get("companion_npc_id", "warm")))
 
 func _speak_current_task() -> void:
-	var anchor_dict := macro_item_for_anchor(bench_room_id, bench_anchor_order)
-	var task: Dictionary = anchor_dict.get("placement_task", {}) if anchor_dict.get("placement_task") is Dictionary else {}
-	if task.is_empty() or not is_instance_valid(game) or not is_instance_valid(game.ai_bridge):
+	if not is_instance_valid(game) or not is_instance_valid(game.ai_bridge):
 		return
 	var cluster := cluster_for_room(bench_room_id)
-	game.ai_bridge.speak_text(str(task.get("prompt_en", "")), "en", str(cluster.get("companion_npc_id", "warm")))
+	var comp_id := str(cluster.get("companion_npc_id", "warm"))
+	if not _active_errand_word.is_empty():
+		game.ai_bridge.speak_text("Can you find the %s for me?" % _active_errand_word, "en", comp_id)
+		return
+	var cur := _current_step_dict()
+	if cur.is_empty():
+		return
+	game.ai_bridge.speak_text(str(cur.get("prompt_en", "")), "en", comp_id)
 
 func _open_selected_palace() -> void:
 	if not _word_lookup.has(selected_word) or not is_instance_valid(game):

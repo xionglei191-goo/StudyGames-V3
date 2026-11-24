@@ -34,6 +34,7 @@ const ROOM_CAST := {
 	# ---- Core Stage A: My Home (Parents & Pets; ZERO Uncle Bear) ----
 	"home": [
 		{"id": "textbook_role_lingling_mother", "display_name": "妈妈 · Mom"},
+		{"id": "textbook_kitty", "display_name": "小猫 · Kitty"},
 	],
 	"home_study": [
 		{"id": "textbook_role_lingling_father", "display_name": "爸爸 · Dad"},
@@ -116,12 +117,16 @@ const PROXIMITY_GREETINGS := {
 		{"en": "What did you learn with your classmates at school today?", "zh": "今天在学校和同学们学到了什么有趣的新知识？"},
 	],
 	"textbook_doggie": [
-		{"en": "Woof, woof! Doggie is wagging its tail happily in the garden!", "zh": "汪汪！小狗 Doggie 正在阳光小院里开心地摇尾巴呢！"},
-		{"en": "Woof! Let's run on the green grass beside the flowers!", "zh": "汪！快和 Doggie 一起在花朵旁的绿草地上跑一跑！"},
+		{"en": "Woof woof! Look, Doggie loves running in the sunny garden!", "zh": "汪汪！快看，小狗最喜欢在阳光花园里奔跑啦！"},
+		{"en": "Woof! Doggie is wagging its tail beside the colourful flowers!", "zh": "汪汪！小狗正在花朵旁的绿草地上开心地摇尾巴呢！"},
+	],
+	"textbook_kitty@home": [
+		{"en": "Meow! Kitty is resting on the soft warm sofa!", "zh": "喵～小猫正窝在柔软温暖的沙发上休息呢！"},
+		{"en": "Meow~ Look, little Kitty is stretching beside the sunny tea table!", "zh": "喵呜～快看，小猫正在阳光茶几旁轻轻伸懒腰呢！"},
 	],
 	"textbook_kitty": [
-		{"en": "Meow! Little Kitty is curling up in a patch of warm sunshine!", "zh": "喵呜～小猫 Kitty 正蜷在暖融融的阳光里打盹呢！"},
-		{"en": "Purr, meow! Keep your clothes and socks neat, little friend!", "zh": "呼噜喵～小主人记得把衣柜里的衣服和短袜收整齐哦！"},
+		{"en": "Meow! Little Kitty is curling up in a patch of warm sunshine!", "zh": "喵～小猫正蜷在暖融融的阳光里安静休息呢！"},
+		{"en": "Meow~ Kitty is watching your neat wardrobe and cozy room!", "zh": "喵呜～小猫正陪着你一起打理整洁温暖的小房间呢！"},
 	],
 	"textbook_miss_li": [
 		{"en": "Good morning, class! Please sit down and open your English books!", "zh": "同学们早上好！请坐好，翻开课桌上的英语书吧！"},
@@ -269,14 +274,14 @@ const ACTOR_PERSONAS := {
 		"open_zh": "嗨宝贝！看看房间四周——从桌椅书架到台面小文具，都能串成生动的英语表达。想先看实物台，还是和爸爸对话？",
 	},
 	"textbook_doggie": {
-		"title": "小狗 Doggie · 小院萌宠",
-		"open_en": "Woof, woof! Doggie brings you to the garden bench! Let's check the flowers, grass, and umbrella, or chat with Mom and Dad!",
-		"open_zh": "汪汪！小狗 Doggie 摇着尾巴带你逛小院啦！去看看花圃里的花草雨伞，或者开启家庭英语对话吧！",
+		"title": "小狗 · Doggie",
+		"open_en": "Woof woof! Look, Doggie loves running in the sunny garden! Let's check the flowers, grass, and umbrella nearby!",
+		"open_zh": "汪汪！快看，小狗最喜欢在阳光花园里奔跑啦！快来看看花圃旁的花朵、青草和雨伞单词吧！",
 	},
 	"textbook_kitty": {
-		"title": "小猫 Kitty · 暖阳萌宠",
-		"open_en": "Meow! Kitty loves cozy beds, wardrobes, and sunny balconies! Come learn the clothes and room items nearby!",
-		"open_zh": "喵呜～小猫 Kitty 最喜欢温暖的床铺、衣柜和阳光阳台啦！快来看看身边的衣物和家居单词吧！",
+		"title": "小猫 · Kitty",
+		"open_en": "Meow! Little Kitty loves cozy rooms and warm sunshine! Come learn the clothes and furniture nearby!",
+		"open_zh": "喵～小猫最喜欢温暖整洁的小房间啦！快来看看身边的衣物和家居单词吧！",
 	},
 	"textbook_miss_li": {
 		"title": "李老师 Miss Li · 英语课堂",
@@ -388,13 +393,8 @@ static func pick_proximity_greeting(room_id: String, entry: Dictionary, turn_ind
 		pool = PROXIMITY_GREETINGS[speaker_id]
 	if not pool.is_empty():
 		var chosen: Dictionary = pool[posmod(turn_index, pool.size())]
-		var voice_target := speaker_id
-		if speaker_id == "textbook_doggie":
-			voice_target = "textbook_role_lingling_father"
-		elif speaker_id == "textbook_kitty":
-			voice_target = "textbook_role_lingling_mother"
 		return {
-			"speaker_id": voice_target,
+			"speaker_id": speaker_id,
 			"en": str(chosen.get("en", "")),
 			"zh": str(chosen.get("zh", "")),
 		}
@@ -461,13 +461,32 @@ static func build_actor_conversation(game: Node, actor_id: String, room_id: Stri
 		"open_zh": "你好呀好朋友！我们一起看看身边的物品，用英语自然聊聊天吧！",
 	})
 	var voice_npc_id := actor_id
-	if actor_id == "textbook_doggie":
-		voice_npc_id = "textbook_role_lingling_father"
-	elif actor_id == "textbook_kitty":
-		voice_npc_id = "textbook_role_lingling_mother"
 
 	var domain := domain_for_room(room_id)
 	var actions: Array = []
+	var ErrandDir = load("res://gameplay/ebbinghaus_errand_director.gd")
+	var V8Mem = load("res://core/v8_memory_ledger.gd")
+	var st_node := game.get_node_or_null("/root/State") if is_instance_valid(game) else null
+	var errand_override_en := ""
+	var errand_override_zh := ""
+	if st_node != null and domain in ["home", "school"]:
+		var active_er: Dictionary = V8Mem.ensure(st_node.data).get("active_errand", {})
+		if not active_er.is_empty():
+			actions.append({
+				"label": "◈ 前往完成温故寻物委托",
+				"id": "v8_errand_go",
+				"primary": true,
+			})
+		elif actor_id not in ["textbook_kitty", "textbook_doggie"] and ErrandDir.can_offer_errand(st_node, room_id):
+			var prop: Dictionary = ErrandDir.build_errand_proposal(st_node, room_id, voice_npc_id, str(persona.get("title", "伙伴")))
+			if not prop.is_empty():
+				errand_override_en = str(prop.get("prompt_en", ""))
+				errand_override_zh = str(prop.get("prompt_zh", ""))
+				actions.append({
+					"label": "◈ 接下温故寻物（盲找双倍 EXP）",
+					"id": "v8_accept_errand:%s:%s" % [room_id, voice_npc_id],
+					"primary": true,
+				})
 	if domain in ["home", "school"]:
 		var rec_scen: Dictionary = Roleplay.recommended_v6_scenario(game, room_id, actor_id)
 		var rec_id := str(rec_scen.get("id", "home_s1_living_mom"))
@@ -476,7 +495,7 @@ static func build_actor_conversation(game: Node, actor_id: String, room_id: Stri
 		actions.append({
 			"label": "★ 第%d阶对话 · %s" % [stage_num, title_zh],
 			"id": "v6_roleplay_stage:" + rec_id,
-			"primary": true,
+			"primary": actions.is_empty(),
 		})
 		actions.append({
 			"label": "◈ 走近实物台 · 大家具与小物品连学摆一摆",
@@ -511,6 +530,11 @@ static func build_actor_conversation(game: Node, actor_id: String, room_id: Stri
 	if PROXIMITY_GREETINGS.has(scoped_key):
 		var first_line: Dictionary = (PROXIMITY_GREETINGS[scoped_key] as Array)[0]
 		en_text = str(first_line.get("en", en_text))
+		if actor_id in ["textbook_kitty", "textbook_doggie"]:
+			zh_text = str(first_line.get("zh", zh_text))
+	if not errand_override_en.is_empty():
+		en_text = errand_override_en
+		zh_text = errand_override_zh
 	return {
 		"npc_id": voice_npc_id,
 		"speaker": str(persona.get("title", "伙伴")),

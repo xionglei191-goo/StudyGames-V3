@@ -141,6 +141,15 @@ static func open_mailbox(game: Node3D) -> void:
 				"id": "v5_palace_goto:" + r_id
 			})
 
+	var ErrandDir = load("res://gameplay/ebbinghaus_errand_director.gd")
+	var V8Mem = load("res://core/v8_memory_ledger.gd")
+	if state_node != null:
+		var ae: Dictionary = V8Mem.ensure(state_node.data).get("active_errand", {})
+		if not ae.is_empty():
+			actions.insert(0, {"label": "◈ 前往完成房间 3D 实物寻物委托", "id": "v8_errand_go", "primary": true})
+		elif ErrandDir.can_offer_errand(state_node, "home"):
+			actions.insert(0, {"label": "◈ 接取今日房间 3D 实物温故寻物委托（双倍 EXP）", "id": "v8_accept_errand:home:textbook_role_lingling_mother", "primary": true})
+	actions.append({"label": "16 房间 3D 实物记忆图鉴", "id": "v8_almanac"})
 	actions.append({"label": "收好温故信，继续生活", "id": "close"})
 	if is_instance_valid(game.audio_director):
 		game.audio_director.play_foley("bubble_pop")

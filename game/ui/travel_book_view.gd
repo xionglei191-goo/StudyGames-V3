@@ -43,8 +43,8 @@ static func build(ui: Node, book_title: String, next_wish: String, visited: int,
 	v4_bar.name = "V4CozyQuickBar"
 	v4_bar.add_theme_constant_override("separation", 10)
 	right_page.add_child(v4_bar)
-	for quick: Array in [["换装镜台", "bag", "outfit"], ["八册 81 章", "v4_chapter_atlas", "compass"], ["立体翻翻书", "journey:library", "book"], ["AI 观察室", "v4_parent_ai", "leaf"]]:
-		var qbtn := ui.button(str(quick[0]), str(quick[1]), str(quick[1]) == "v4_chapter_atlas", Vector2(0, 44)) as Button
+	for quick: Array in [["换装镜台", "bag", "outfit"], ["3D 实物图鉴", "v8_almanac", "home"], ["八册 81 章", "v4_chapter_atlas", "compass"], ["立体翻翻书", "journey:library", "book"], ["AI 观察室", "v4_parent_ai", "leaf"]]:
+		var qbtn := ui.button(str(quick[0]), str(quick[1]), str(quick[1]) == "v8_almanac", Vector2(0, 44)) as Button
 		qbtn.icon = Style.icon(str(quick[2]))
 		qbtn.add_theme_constant_override("icon_max_width", 22)
 		qbtn.add_theme_constant_override("h_separation", 6)

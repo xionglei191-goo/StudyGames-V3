@@ -771,49 +771,110 @@ func notify(message: String) -> void:
 	else:
 		toast_label.modulate.a = 1.0
 
+func position_bubble_at(screen_position: Vector2) -> void:
+	var avail := root.size if (is_instance_valid(root) and root.size.x > 10.0) else Vector2(1440, 900)
+	var bsz := bubble_panel.get_combined_minimum_size()
+	bubble_panel.size = bsz
+	bubble_panel.position = Vector2(
+		clampf(screen_position.x - bsz.x * 0.5, 24.0, maxf(24.0, avail.x - bsz.x - 24.0)),
+		clampf(screen_position.y - bsz.y - 18.0, 24.0, maxf(24.0, avail.y - bsz.y - 120.0))
+	)
+	resolve_floating_2d_overlaps()
+
 func say(en: String, zh: String, screen_position: Vector2) -> void:
 	bubble_label.text = en + "\n" + zh
 	bubble_panel.reset_size()
-	var bsz := bubble_panel.get_combined_minimum_size()
-	bubble_panel.position = Vector2(
-		clampf(screen_position.x - bsz.x * 0.5, 24.0, maxf(24.0, root.size.x - bsz.x - 24.0)),
-		clampf(screen_position.y - bsz.y - 18.0, 24.0, maxf(24.0, root.size.y - bsz.y - 120.0))
-	)
 	bubble_panel.show()
 	bubble_timer = 4.2
+	position_bubble_at(screen_position)
 
 func show_prompt(value: String, screen_position: Vector2, count: int = 1, index: int = 0) -> void:
 	prompt.text = value + "  [E]"
 	prompt.size = Vector2.ZERO
 	prompt_cycle.text = "换一个 %d/%d [Q]" % [index + 1, count]
 	prompt_cycle.size = Vector2.ZERO
-	var width := prompt.get_combined_minimum_size().x
-	var height := prompt.get_combined_minimum_size().y
-	var cycle_width := prompt_cycle.get_combined_minimum_size().x + 8.0 if count > 1 else 0.0
+	var p_min := prompt.get_combined_minimum_size()
+	var c_min := prompt_cycle.get_combined_minimum_size()
+	var width := p_min.x
+	var height := p_min.y
+	var cycle_width := c_min.x + 8.0 if count > 1 else 0.0
 	var total_w := width + cycle_width
 
 	# Anchor smoothly above the world target while guaranteeing zero overlap with corner/dock HUD!
-	var min_x := 348.0 if root.size.x >= 1100.0 else 24.0
-	var max_x := maxf(min_x, root.size.x - total_w - 240.0)
+	var avail := root.size if (is_instance_valid(root) and root.size.x > 10.0) else Vector2(1440, 900)
+	var min_x := 352.0 if avail.x >= 1100.0 else 24.0
+	var max_x := maxf(min_x, avail.x - total_w - 240.0)
 	var min_y := 104.0
-	var max_y := maxf(min_y, root.size.y - height - 110.0)
+	var max_y := maxf(min_y, avail.y - height - 110.0)
 	var px := clampf(screen_position.x - total_w * 0.5, min_x, max_x)
 	var py := clampf(screen_position.y - height - 16.0, min_y, max_y)
 
+	prompt.size = p_min
 	prompt.position = Vector2(px, py)
+	prompt_cycle.size = c_min
 	prompt_cycle.position = prompt.position + Vector2(width + 8.0, 0.0)
 	prompt.visible = not modal.visible and (not is_instance_valid(diegetic) or not diegetic.visible)
 	prompt_cycle.visible = count > 1 and prompt.visible
+	resolve_floating_2d_overlaps()
 
 func show_hover_prompt(value: String, screen_position: Vector2) -> void:
 	hover_prompt.text = value
 	hover_prompt.size = Vector2.ZERO
 	var sz := hover_prompt.get_combined_minimum_size()
+	var avail := root.size if (is_instance_valid(root) and root.size.x > 10.0) else Vector2(1440, 900)
+	hover_prompt.size = sz
 	hover_prompt.position = Vector2(
-		clampf(screen_position.x - sz.x * 0.5, 16.0, root.size.x - sz.x - 16.0),
-		clampf(screen_position.y - sz.y - 16.0, 16.0, root.size.y - sz.y - 112.0)
+		clampf(screen_position.x - sz.x * 0.5, 16.0, avail.x - sz.x - 16.0),
+		clampf(screen_position.y - sz.y - 16.0, 16.0, avail.y - sz.y - 112.0)
 	)
-	hover_prompt.visible = not modal.visible
+	hover_prompt.visible = not modal.visible and (not is_instance_valid(diegetic) or not diegetic.visible)
+	resolve_floating_2d_overlaps()
+
+func resolve_floating_2d_overlaps() -> void:
+	var avail := root.size if (is_instance_valid(root) and root.size.x > 10.0) else Vector2(1440, 900)
+	var has_prompt := is_instance_valid(prompt) and prompt.visible
+	var prompt_rect := Rect2()
+	if has_prompt:
+		var p_sz := prompt.size if prompt.size.x > 1.0 else prompt.get_combined_minimum_size()
+		prompt.size = p_sz
+		prompt_rect = Rect2(prompt.position, p_sz)
+		if is_instance_valid(prompt_cycle) and prompt_cycle.visible:
+			var c_sz := prompt_cycle.size if prompt_cycle.size.x > 1.0 else prompt_cycle.get_combined_minimum_size()
+			prompt_cycle.size = c_sz
+			prompt_rect = prompt_rect.merge(Rect2(prompt_cycle.position, c_sz))
+
+	if is_instance_valid(bubble_panel) and bubble_panel.visible:
+		var bsz := bubble_panel.size if bubble_panel.size.x > 1.0 else bubble_panel.get_combined_minimum_size()
+		bubble_panel.size = bsz
+		bubble_panel.position.x = clampf(bubble_panel.position.x, 24.0, maxf(24.0, avail.x - bsz.x - 24.0))
+		bubble_panel.position.y = clampf(bubble_panel.position.y, 24.0, maxf(24.0, avail.y - bsz.y - 116.0))
+		if is_instance_valid(hud) and hud.visible:
+			var hud_tl := Rect2(16.0, 16.0, 336.0, 198.0)
+			var hud_tr := Rect2(avail.x - 364.0, 16.0, 348.0, 72.0)
+			if Rect2(bubble_panel.position, bsz).intersects(hud_tl):
+				bubble_panel.position.x = minf(maxf(358.0, bubble_panel.position.x), maxf(24.0, avail.x - bsz.x - 24.0))
+			if Rect2(bubble_panel.position, bsz).intersects(hud_tr):
+				bubble_panel.position.y = maxf(94.0, bubble_panel.position.y)
+		if has_prompt and Rect2(bubble_panel.position, bsz).intersects(prompt_rect.grow(6.0)):
+			var lifted_y := maxf(24.0, prompt_rect.position.y - bsz.y - 10.0)
+			var lifted_rect := Rect2(Vector2(bubble_panel.position.x, lifted_y), bsz)
+			if not lifted_rect.intersects(prompt_rect.grow(2.0)):
+				bubble_panel.position.y = lifted_y
+			elif prompt_rect.end.y + 10.0 + bsz.y <= avail.y - 104.0:
+				bubble_panel.position.y = prompt_rect.end.y + 10.0
+			elif prompt_rect.end.x + 12.0 + bsz.x <= avail.x - 24.0:
+				bubble_panel.position = Vector2(prompt_rect.end.x + 12.0, maxf(24.0, prompt_rect.position.y))
+			elif prompt_rect.position.x - 12.0 - bsz.x >= 24.0:
+				bubble_panel.position = Vector2(prompt_rect.position.x - 12.0 - bsz.x, maxf(24.0, prompt_rect.position.y))
+
+	if is_instance_valid(hover_prompt) and hover_prompt.visible:
+		var hsz := hover_prompt.size if hover_prompt.size.x > 1.0 else hover_prompt.get_combined_minimum_size()
+		hover_prompt.size = hsz
+		var hr := Rect2(hover_prompt.position, hsz)
+		if has_prompt and hr.intersects(prompt_rect.grow(12.0)):
+			hover_prompt.hide()
+		elif is_instance_valid(bubble_panel) and bubble_panel.visible and hr.intersects(Rect2(bubble_panel.position, bubble_panel.size).grow(12.0)):
+			hover_prompt.hide()
 
 func hide_interaction_prompts() -> void:
 	prompt.hide()
@@ -894,3 +955,4 @@ func _process(delta: float) -> void:
 		toast_label.hide()
 	if bubble_timer <= 0 or modal.visible:
 		bubble_panel.hide()
+	resolve_floating_2d_overlaps()

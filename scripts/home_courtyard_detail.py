@@ -173,7 +173,7 @@ def _mail_corner(m):
     m.beam('Welcome_Envelope_Fold',(-9.71,-11.85,1.065),(-10,-11.66,1.065),.009,'oak')
     m.cyl('Welcome_Envelope_Seal',(-10,-11.66,1.079),.055,.015,'rose',12)
     m.plant('Welcome_Table_Herb',-10.62,-11.75,1.02,False,.30)
-    m.basket('Welcome_Parcel_Basket',-9.10,-12.12,0,False)
+    m.basket('Welcome_Parcel_Basket',-8.12,-12.12,0,False)
 
 
 def _day_board(m):

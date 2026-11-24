@@ -5,6 +5,10 @@ Run standalone:
 """
 from __future__ import annotations
 
+import os
+from typing import Any
+
+from pydantic import BaseModel, field_validator
 from starlette.applications import Starlette
 from starlette.concurrency import run_in_threadpool
 from starlette.middleware import Middleware
@@ -13,14 +17,47 @@ from starlette.requests import Request
 from starlette.responses import JSONResponse
 from starlette.routing import Route
 
-import os
-
 from . import __version__
 from .env_loader import load_dotenv_if_changed
 from .npc_companion import generate_npc_reply
-from .speech_service import evaluate_follow_along, synthesize_speech
+from .speech_service import evaluate_follow_along, normalize_speed_mode, synthesize_speech
 from .stealth_mastery import build_parent_weekly_report, update_irt_mastery
 from .voice_profiles import CHARACTER_VOICE_MAP, VOICE_ARCHETYPES
+
+
+class TTSRequest(BaseModel):
+    text: str = ""
+    lang: str = "en"
+    voice_hint: str = "warm"
+    prefer_offline: bool = False
+    speed_mode: str = "natural"
+
+    @field_validator("text", mode="before")
+    @classmethod
+    def _coerce_text(cls, v: Any) -> str:
+        return "" if v is None else str(v)
+
+    @field_validator("lang", mode="before")
+    @classmethod
+    def _coerce_lang(cls, v: Any) -> str:
+        s = "" if v is None else str(v).strip()
+        return s or "en"
+
+    @field_validator("voice_hint", mode="before")
+    @classmethod
+    def _coerce_voice_hint(cls, v: Any) -> str:
+        s = "" if v is None else str(v).strip()
+        return s or "warm"
+
+    @field_validator("prefer_offline", mode="before")
+    @classmethod
+    def _coerce_prefer_offline(cls, v: Any) -> bool:
+        return bool(v)
+
+    @field_validator("speed_mode", mode="before")
+    @classmethod
+    def _coerce_speed_mode(cls, v: Any) -> str:
+        return normalize_speed_mode(None if v is None else str(v))
 
 
 async def health(_request: Request) -> JSONResponse:
@@ -58,11 +95,16 @@ async def tts_speak(request: Request) -> JSONResponse:
         return JSONResponse({"ok": False, "error": "invalid_json"}, status_code=400)
     if not isinstance(body, dict):
         return JSONResponse({"ok": False, "error": "invalid_payload"}, status_code=400)
+    try:
+        req = TTSRequest.model_validate(body)
+    except Exception:
+        return JSONResponse({"ok": False, "error": "invalid_payload"}, status_code=400)
     result = await synthesize_speech(
-        text=str(body.get("text") or ""),
-        lang=str(body.get("lang") or "en"),
-        voice_hint=str(body.get("voice_hint") or "warm"),
-        prefer_offline=bool(body.get("prefer_offline", False)),
+        text=req.text,
+        lang=req.lang,
+        voice_hint=req.voice_hint,
+        prefer_offline=req.prefer_offline,
+        speed_mode=req.speed_mode,
     )
     return JSONResponse(result, status_code=200 if result.get("ok") else 400)
 

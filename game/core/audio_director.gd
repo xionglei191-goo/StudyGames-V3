@@ -10,7 +10,10 @@ const SAMPLE_RATE := 22050
 var _bgm_player: AudioStreamPlayer
 var _ambience_player: AudioStreamPlayer
 var _foley_player: AudioStreamPlayer
+var _animal_player: AudioStreamPlayer
 var _clips: Dictionary = {}
+var _animal_clips: Dictionary = {}
+var last_animal_sound_key: String = ""
 var enabled := true
 var current_room := "village"
 var current_weather := "clear"
@@ -36,6 +39,11 @@ func _ready() -> void:
 	_foley_player.volume_db = -9.5
 	add_child(_foley_player)
 
+	_animal_player = AudioStreamPlayer.new()
+	_animal_player.name = "CozyAnimalPlayer"
+	_animal_player.volume_db = -5.0
+	add_child(_animal_player)
+
 	_build_soundbank()
 
 static func select_bgm_key(room_id: String, is_theater: bool = false) -> String:
@@ -58,6 +66,8 @@ func set_enabled(on: bool) -> void:
 			_bgm_player.stop()
 		if is_instance_valid(_ambience_player):
 			_ambience_player.stop()
+		if is_instance_valid(_animal_player):
+			_animal_player.stop()
 	else:
 		if _clips.is_empty():
 			_build_soundbank()
@@ -106,6 +116,84 @@ func play_foley(kind: String) -> void:
 		_foley_player.stream = stream
 		_foley_player.pitch_scale = randf_range(0.95, 1.06)
 		_foley_player.play()
+
+func play_animal_voice(sound_key: String) -> float:
+	var clean_key := sound_key.strip_edges()
+	if clean_key.is_empty():
+		return 0.0
+	last_animal_sound_key = clean_key
+	if not enabled or DisplayServer.get_name() == "headless" or not is_instance_valid(_animal_player):
+		return 0.0
+	var stream := _animal_clips.get(clean_key) as AudioStreamWAV
+	if stream == null:
+		stream = load_animal_wav(clean_key)
+		if stream != null:
+			_animal_clips[clean_key] = stream
+	if stream == null:
+		return 0.0
+	var pitch := randf_range(0.96, 1.05)
+	_animal_player.stop()
+	_animal_player.stream = stream
+	_animal_player.pitch_scale = pitch
+	_animal_player.play()
+	var dur := stream.get_length()
+	if dur <= 0.0:
+		var bytes_per_sample := 2 if stream.format == AudioStreamWAV.FORMAT_16_BITS else 1
+		var channels := 2 if stream.stereo else 1
+		var denom := float(maxi(1, stream.mix_rate * bytes_per_sample * channels))
+		dur = float(stream.data.size()) / denom
+	return clampf(dur / pitch, 0.35, 0.85)
+
+static func load_animal_wav(sound_key: String) -> AudioStreamWAV:
+	var clean_key := sound_key.strip_edges()
+	if clean_key.is_empty():
+		return null
+	var wav_path := "res://assets/audio/animals/%s.wav" % clean_key
+	if FileAccess.file_exists(wav_path):
+		var raw := FileAccess.get_file_as_bytes(wav_path)
+		var parsed := parse_pcm_wav(raw)
+		if parsed != null:
+			return parsed
+	if ResourceLoader.exists(wav_path):
+		var loaded := load(wav_path)
+		if loaded is AudioStreamWAV:
+			return loaded as AudioStreamWAV
+	return null
+
+static func parse_pcm_wav(raw: PackedByteArray) -> AudioStreamWAV:
+	if raw.size() < 44:
+		return null
+	if raw.slice(0, 4).get_string_from_ascii() != "RIFF":
+		return null
+	if raw.slice(8, 12).get_string_from_ascii() != "WAVE":
+		return null
+	var pos := 12
+	var channels := 1
+	var sample_rate := SAMPLE_RATE
+	var bits_per_sample := 16
+	var data_bytes := PackedByteArray()
+	while pos + 8 <= raw.size():
+		var chunk_id := raw.slice(pos, pos + 4).get_string_from_ascii()
+		var chunk_size := raw.decode_u32(pos + 4)
+		pos += 8
+		if pos + chunk_size > raw.size():
+			chunk_size = raw.size() - pos
+		if chunk_id == "fmt " and chunk_size >= 16:
+			channels = maxi(1, raw.decode_u16(pos + 2))
+			sample_rate = maxi(8000, raw.decode_u32(pos + 4))
+			bits_per_sample = raw.decode_u16(pos + 14)
+		elif chunk_id == "data":
+			data_bytes = raw.slice(pos, pos + chunk_size)
+			break
+		pos += chunk_size + (chunk_size % 2)
+	if data_bytes.is_empty():
+		return null
+	var wav := AudioStreamWAV.new()
+	wav.format = AudioStreamWAV.FORMAT_16_BITS if bits_per_sample == 16 else AudioStreamWAV.FORMAT_8_BITS
+	wav.mix_rate = sample_rate
+	wav.stereo = (channels >= 2)
+	wav.data = data_bytes
+	return wav
 
 func _build_soundbank() -> void:
 	# 1. bgm_island — Morning Breeze Village (16s Stereo: Acoustic Guitar + Kalimba + Warm Bass)

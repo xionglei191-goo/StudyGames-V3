@@ -52,14 +52,16 @@ var _zh_panel: PanelContainer
 var _zh_label: Label
 var _listen_en_btn: Button
 var _listen_zh_btn: Button
+var _speed_btn: Button
 var _hint_btn: Button
 var _chat_toggle_btn: Button
 var _chat_box: HBoxContainer
 var _chat_input: LineEdit
 var _ribbon_panel: PanelContainer
-var _choices_flow: HBoxContainer
+var _choices_flow: HFlowContainer
 var _choice_buttons: Array[Button] = []
 var _smoothed_bubble_pos := Vector2(-1.0, -1.0)
+var _bound_speed_bridge: Node
 
 func _ready() -> void:
 	name = "DiegeticDialogueOverlay"
@@ -161,9 +163,12 @@ func _build_ui() -> void:
 	_zh_label.custom_minimum_size.x = 390
 	_zh_panel.add_child(_zh_label)
 
-	# Clean Vector Footer Tool Row
-	var tool_row := HBoxContainer.new()
-	tool_row.add_theme_constant_override("separation", 6)
+	# Clean Vector Footer Tool Row (HFlowContainer prevents clipping with 7 chips)
+	var tool_row := HFlowContainer.new()
+	tool_row.name = "ToolChipFlow"
+	tool_row.add_theme_constant_override("h_separation", 6)
+	tool_row.add_theme_constant_override("v_separation", 6)
+	tool_row.custom_minimum_size.x = 460
 	col.add_child(tool_row)
 
 	_listen_en_btn = _tool_chip("听读音", "speaker", "用当前角色的专属音色朗读英文")
@@ -183,6 +188,11 @@ func _build_ui() -> void:
 			speak_requested.emit(_clean_zh_for_tts(current_zh), "zh", current_npc_id)
 	)
 	tool_row.add_child(_listen_zh_btn)
+
+	_speed_btn = _tool_chip("语速:亲切", "speaker", "切换慢速逐词跟读与亲切绘本语速")
+	_speed_btn.name = "SpeedToggleChip"
+	_speed_btn.pressed.connect(_on_speed_chip_pressed)
+	tool_row.add_child(_speed_btn)
 
 	var follow_btn := _tool_chip("跟读试试", "mic", "对着麦克风读英文，离线识别鼓励")
 	follow_btn.pressed.connect(func(): _start_follow_along("voice"))
@@ -237,9 +247,10 @@ func _build_ui() -> void:
 	_ribbon_panel.add_theme_stylebox_override("panel", r_style)
 	add_child(_ribbon_panel)
 
-	_choices_flow = HBoxContainer.new()
-	_choices_flow.alignment = BoxContainer.ALIGNMENT_CENTER
-	_choices_flow.add_theme_constant_override("separation", 10)
+	_choices_flow = HFlowContainer.new()
+	_choices_flow.alignment = FlowContainer.ALIGNMENT_CENTER
+	_choices_flow.add_theme_constant_override("h_separation", 10)
+	_choices_flow.add_theme_constant_override("v_separation", 8)
 	_ribbon_panel.add_child(_choices_flow)
 
 func _tool_chip(caption: String, icon_name: String, tip: String = "") -> Button:
@@ -266,6 +277,45 @@ func _tool_chip(caption: String, icon_name: String, tip: String = "") -> Button:
 		btn.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	return btn
 
+func _find_ai_bridge() -> Node:
+	if not is_inside_tree() or get_tree() == null:
+		return null
+	var cs := get_tree().current_scene
+	if cs != null:
+		var b: Variant = cs.get("ai_bridge")
+		if b is Node and is_instance_valid(b):
+			return b as Node
+	var root_bridge := get_tree().root.find_child("AICompanionBridge", true, false)
+	if root_bridge != null and is_instance_valid(root_bridge):
+		return root_bridge
+	return null
+
+func _sync_speed_chip() -> void:
+	if not is_instance_valid(_speed_btn):
+		return
+	var bridge := _find_ai_bridge()
+	if bridge != null and bridge != _bound_speed_bridge and bridge.has_signal("speech_speed_changed"):
+		_bound_speed_bridge = bridge
+		bridge.speech_speed_changed.connect(func(_mode: String): _sync_speed_chip())
+	var is_slow := bridge != null and str(bridge.get("speech_speed_mode")) == "slow"
+	_speed_btn.text = "语速:慢读" if is_slow else "语速:亲切"
+	var sb := Style.keycap(
+		Color("fdf0ce") if is_slow else Color("f4efe1"),
+		Style.GOLD if is_slow else Color("dfd2b8"),
+		2, 15, 10, 5
+	)
+	sb.shadow_size = 0
+	_speed_btn.add_theme_stylebox_override("normal", sb)
+
+func _on_speed_chip_pressed() -> void:
+	var bridge := _find_ai_bridge()
+	if bridge != null and bridge.has_method("toggle_speech_speed_mode"):
+		bridge.toggle_speech_speed_mode()
+	_sync_speed_chip()
+	_update_positions(true)
+	if not current_en.is_empty():
+		speak_requested.emit(current_en, "en", current_npc_id)
+
 func _submit_chat(raw_text: String) -> void:
 	var cleaned := raw_text.strip_edges()
 	if cleaned.is_empty():
@@ -284,7 +334,7 @@ func open_conversation(config: Dictionary) -> void:
 	anchor_world_pos = config.get("world_pos", Vector3.ZERO)
 	has_world_anchor = config.has("world_pos")
 
-	var voice_tag := CharacterVoices.label_zh_for(current_npc_id)
+	var voice_tag := CharacterVoices.speaker_badge_label_zh(current_npc_id)
 	_speaker_badge.text = "◈  %s  ·  %s" % [speaker_name, voice_tag]
 	_en_label.text = current_en
 	_zh_label.text = current_zh
@@ -295,6 +345,7 @@ func open_conversation(config: Dictionary) -> void:
 		_listen_zh_btn.tooltip_text = "用「%s」朗读中文" % voice_tag
 	if is_instance_valid(_listen_en_btn):
 		_listen_en_btn.tooltip_text = "用「%s」朗读英文" % voice_tag
+	_sync_speed_chip()
 	_chat_box.hide()
 	_smoothed_bubble_pos = Vector2(-1.0, -1.0)
 
@@ -570,18 +621,36 @@ func _update_positions(snap_immediate: bool = false, delta: float = 0.016) -> vo
 	var vp := size
 	if vp.x < 10.0:
 		vp = Vector2(1440, 900)
+
+	var max_ribbon_w := vp.x - 64.0
+	_choices_flow.custom_minimum_size.x = 0.0
+	_ribbon_panel.reset_size()
+	var r_size := _ribbon_panel.get_combined_minimum_size()
+	if r_size.x > max_ribbon_w:
+		_choices_flow.custom_minimum_size.x = maxf(320.0, max_ribbon_w - 52.0)
+		_ribbon_panel.reset_size()
+		r_size = _ribbon_panel.get_combined_minimum_size()
+		r_size.x = minf(r_size.x, max_ribbon_w)
+	_ribbon_panel.size = r_size
+	_ribbon_panel.position = Vector2((vp.x - r_size.x) * 0.5, vp.y - r_size.y - 18.0)
+
 	_bubble_card.reset_size()
 	var b_size := _bubble_card.get_combined_minimum_size()
 	b_size.x = clampf(b_size.x, 420.0, minf(680.0, vp.x - 96.0))
 	_bubble_card.size = b_size
+	var min_after_wrap := _bubble_card.get_combined_minimum_size()
+	if min_after_wrap.y > b_size.y:
+		b_size.y = min_after_wrap.y
+		_bubble_card.size = b_size
 
 	var screen_anchor := Vector2(vp.x * 0.5, vp.y * 0.42)
 	if has_world_anchor and is_instance_valid(camera) and not camera.is_position_behind(anchor_world_pos):
 		screen_anchor = camera.unproject_position(anchor_world_pos + Vector3(0, 2.35, 0))
 
+	var bottom_reserve := maxf(148.0, r_size.y + 34.0)
 	var target_pos := Vector2(
 		clampf(screen_anchor.x - b_size.x * 0.5, 340.0 if vp.x >= 1200.0 else 36.0, vp.x - b_size.x - 36.0),
-		clampf(screen_anchor.y - b_size.y - 22.0, 24.0, vp.y - b_size.y - 148.0)
+		clampf(screen_anchor.y - b_size.y - 22.0, 24.0, vp.y - b_size.y - bottom_reserve)
 	)
 	if snap_immediate or _smoothed_bubble_pos.x < 0.0:
 		_smoothed_bubble_pos = target_pos
@@ -594,9 +663,3 @@ func _update_positions(snap_immediate: bool = false, delta: float = 0.016) -> vo
 		var desired_tip := screen_anchor.x - (_tail.position.x + _tail.size.x * 0.5)
 		_tail.tip_offset_x = clampf(desired_tip, -36.0, 36.0)
 		_tail.queue_redraw()
-
-	_ribbon_panel.reset_size()
-	var r_size := _ribbon_panel.get_combined_minimum_size()
-	r_size.x = minf(r_size.x, vp.x - 64.0)
-	_ribbon_panel.size = r_size
-	_ribbon_panel.position = Vector2((vp.x - r_size.x) * 0.5, vp.y - r_size.y - 20.0)

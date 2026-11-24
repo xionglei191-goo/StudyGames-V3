@@ -155,26 +155,170 @@ func _pick_shrine_spot() -> Vector3:
 		spawn + Vector3(2.05, 0.0, -2.95),
 		spawn + Vector3(0.0, 0.0, -2.75),
 	]
-	var best_pt := _snap_walkable(candidates[0])
-	var best_score := -999.0
-	var basket_pt := Vector3(9999.0, 0.0, 9999.0)
-	if is_instance_valid(game.get("tactile_quests")) and bool(game.tactile_quests.get("_has_basket")):
-		basket_pt = game.tactile_quests._basket_pos
+	var runtime_pts: Array[Vector3] = []
+	var tq: Node = game.get("tactile_quests")
+	if is_instance_valid(tq):
+		if bool(tq.get("_has_basket")):
+			runtime_pts.append(tq.get("_basket_pos") as Vector3)
+		var pk_arr: Variant = tq.get("_pickups")
+		if pk_arr is Array:
+			for pk_v: Variant in (pk_arr as Array):
+				if pk_v is Dictionary and (pk_v as Dictionary).has("pos"):
+					runtime_pts.append((pk_v as Dictionary).pos as Vector3)
+		var ck := (tq as Node3D).get_node_or_null("ChapterWorldKeepsake") as Node3D
+		if ck != null:
+			runtime_pts.append(ck.position)
 
+	var obstacle_boxes := _collect_shrine_obstacle_boxes(spawn)
+	var paving_boxes := _collect_paving_boxes(spawn)
+
+	var best_pt := _lift_onto_paving(_snap_walkable(candidates[0]), paving_boxes)
+	var best_score := -999.0
 	for cand: Vector3 in candidates:
-		var snapped := _snap_walkable(cand)
-		var min_clear := Vector2(snapped.x - spawn.x, snapped.z - spawn.z).length()
-		var d_basket := Vector2(snapped.x - basket_pt.x, snapped.z - basket_pt.z).length()
-		min_clear = minf(min_clear, d_basket)
-		for inter_v: Variant in game.interactions:
-			if inter_v is Dictionary and (inter_v as Dictionary).has("position"):
-				var ipos: Vector3 = (inter_v as Dictionary).position
-				var di := Vector2(snapped.x - ipos.x, snapped.z - ipos.z).length()
-				min_clear = minf(min_clear, di)
-		if min_clear > best_score:
-			best_score = min_clear
+		var snapped := _lift_onto_paving(_snap_walkable(cand), paving_boxes)
+		var sc := _score_shrine_candidate(snapped, spawn, runtime_pts, obstacle_boxes)
+		if sc > best_score:
+			best_score = sc
 			best_pt = snapped
+	if best_score >= 0.16 or not game.nav_ready:
+		return best_pt
+
+	# Fallback spiral search over walkable cells around spawn if all 6 default offsets touch an obstacle
+	var cell_sz := 0.75
+	var base_cell: Vector2i = game._nearest_walkable_cell(Vector2i(roundi(spawn.x / cell_sz), roundi(spawn.z / cell_sz)), spawn)
+	for r in range(2, 17):
+		var ring_best_pt := best_pt
+		var ring_best_sc := -999.0
+		for dx in range(-r, r + 1):
+			for dz in range(-r, r + 1):
+				if maxi(absi(dx), absi(dz)) != r:
+					continue
+				var c: Vector2i = base_cell + Vector2i(dx, dz)
+				if not game.navigation.is_in_boundsv(c) or game.navigation.is_point_solid(c):
+					continue
+				var pt := _lift_onto_paving(Vector3(float(c.x) * cell_sz, float(game.nav_heights.get(c, spawn.y)), float(c.y) * cell_sz), paving_boxes)
+				var sc := _score_shrine_candidate(pt, spawn, runtime_pts, obstacle_boxes)
+				if sc > ring_best_sc:
+					ring_best_sc = sc
+					ring_best_pt = pt
+				if sc > best_score:
+					best_score = sc
+					best_pt = pt
+		if ring_best_sc >= 0.20:
+			return ring_best_pt
 	return best_pt
+
+func _collect_paving_boxes(spawn: Vector3) -> Array[AABB]:
+	var boxes: Array[AABB] = []
+	if not is_instance_valid(game) or not is_instance_valid(game.get("world")):
+		return boxes
+	var search_region := AABB(spawn - Vector3(16.0, 5.0, 16.0), Vector3(32.0, 12.0, 32.0))
+	for n: Node in game.world.find_children("*", "MeshInstance3D", true, false):
+		var mi := n as MeshInstance3D
+		if mi == null or mi.mesh == null or not mi.is_visible_in_tree() or mi.layers == 0:
+			continue
+		var nl := str(mi.name).to_lower()
+		if not ("plaza" in nl or "cobblestone" in nl or "paving" in nl or "connected_paths" in nl):
+			continue
+		var lb := mi.get_aabb()
+		if lb.size == Vector3.ZERO:
+			continue
+		var xf := mi.global_transform
+		var wb := AABB(xf * lb.get_endpoint(0), Vector3.ZERO)
+		for i in range(1, 8):
+			wb = wb.expand(xf * lb.get_endpoint(i))
+		if wb.size.y <= 0.26 and wb.intersects(search_region):
+			boxes.append(wb)
+	return boxes
+
+static func _lift_onto_paving(pt: Vector3, paving_boxes: Array[AABB]) -> Vector3:
+	var top_y := pt.y
+	for wb: AABB in paving_boxes:
+		if wb.end.y > top_y and wb.end.y <= pt.y + 0.28:
+			if pt.x >= wb.position.x - 0.35 and pt.x <= wb.end.x + 0.35 and pt.z >= wb.position.z - 0.35 and pt.z <= wb.end.z + 0.35:
+				top_y = wb.end.y
+	return Vector3(pt.x, top_y, pt.z)
+
+func _score_shrine_candidate(snapped: Vector3, spawn: Vector3, runtime_pts: Array[Vector3], obstacle_boxes: Array[AABB]) -> float:
+	var min_clear := Vector2(snapped.x - spawn.x, snapped.z - spawn.z).length() - 0.85
+	for rp: Vector3 in runtime_pts:
+		var dr := Vector2(snapped.x - rp.x, snapped.z - rp.z).length() - 1.10
+		min_clear = minf(min_clear, dr)
+	for inter_v: Variant in game.interactions:
+		if inter_v is Dictionary and (inter_v as Dictionary).has("position"):
+			var ipos: Vector3 = (inter_v as Dictionary).position
+			var di := Vector2(snapped.x - ipos.x, snapped.z - ipos.z).length() - 0.85
+			min_clear = minf(min_clear, di)
+	for wb: AABB in obstacle_boxes:
+		if wb.end.y <= snapped.y + 0.11 or wb.position.y >= snapped.y + 1.50:
+			continue
+		var cx := clampf(snapped.x, wb.position.x, wb.end.x)
+		var cz := clampf(snapped.z, wb.position.z, wb.end.z)
+		var dd := Vector2(snapped.x - cx, snapped.z - cz).length() - 0.45
+		min_clear = minf(min_clear, dd)
+	return min_clear
+
+func _collect_shrine_obstacle_boxes(spawn: Vector3) -> Array[AABB]:
+	var boxes: Array[AABB] = []
+	if not is_instance_valid(game) or not is_instance_valid(game.get("world")):
+		return boxes
+	var search_region := AABB(spawn - Vector3(16.0, 5.0, 16.0), Vector3(32.0, 12.0, 32.0))
+	for n: Node in game.world.find_children("*", "MeshInstance3D", true, false):
+		var mi := n as MeshInstance3D
+		if mi == null or mi.mesh == null or not mi.is_visible_in_tree() or mi.layers == 0:
+			continue
+		if is_ancestor_of(mi):
+			continue
+		var nm := str(mi.name)
+		var owner_name := nm
+		var anc: Node = mi.get_parent()
+		var skip_task := false
+		while anc != null and anc != game.world:
+			var anm := str(anc.name)
+			if anm == "HOME_TASK_MIDDLE":
+				skip_task = true
+				break
+			if anm.begins_with("WorldArt_") and anc.get_parent() != null:
+				owner_name = str(anc.get_parent().name)
+			anc = anc.get_parent()
+		if skip_task:
+			continue
+		if owner_name.begins_with("SG_") or owner_name.begins_with("COL_") or owner_name.begins_with("PREVIEW_") or owner_name.begins_with("MacroPlaque"):
+			continue
+		var lb := mi.get_aabb()
+		if lb.size == Vector3.ZERO:
+			continue
+		var xf := mi.global_transform
+		var wb := AABB(xf * lb.get_endpoint(0), Vector3.ZERO)
+		for i in range(1, 8):
+			wb = wb.expand(xf * lb.get_endpoint(i))
+		if not wb.intersects(search_region):
+			continue
+		var nl := owner_name.to_lower()
+		var is_flat := false
+		for tok in ["sg_floor", "_floor", "floor_", "ground", "terrain", "grass", "lawn", "paving", "paver", "cut_stone", "path", "road", "scattered_grains", "rug", "carpet", "mat", "apron", "sun_patch", "damp_soil", "mulch", "water", "river", "pond", "sea", "plaza", "cobblestone"]:
+			if tok in nl and wb.size.y < 0.22:
+				is_flat = true
+				break
+		if is_flat:
+			continue
+		if (wb.size.x <= 3.6 and wb.size.z <= 3.6) or minf(wb.size.x, wb.size.z) <= 0.95:
+			boxes.append(wb)
+		else:
+			var faces := mi.mesh.get_faces()
+			for ti in range(0, faces.size(), 3):
+				var v0 := xf * faces[ti]
+				var v1 := xf * faces[ti + 1]
+				var v2 := xf * faces[ti + 2]
+				var tb := AABB(v0, Vector3.ZERO).expand(v1).expand(v2)
+				if not tb.intersects(search_region):
+					continue
+				if tb.size.y < 0.45:
+					var nrm := (v1 - v0).cross(v2 - v0)
+					if nrm.length_squared() > 1e-8 and absf(nrm.normalized().y) > 0.82:
+						continue
+				boxes.append(tb)
+	return boxes
 
 func _snap_walkable(target: Vector3) -> Vector3:
 	if not is_instance_valid(game) or not game.nav_ready:
@@ -304,15 +448,16 @@ func _build_lectern_visuals(total_words: int) -> void:
 		_lectern_root.add_child(glow)
 
 	_badge_label = Label3D.new()
+	_badge_label.name = "MemoryPalaceBadge"
 	_badge_label.font = load(FONT_PATH)
-	_badge_label.font_size = 24
-	_badge_label.pixel_size = 0.0058
+	_badge_label.font_size = 52
+	_badge_label.pixel_size = 0.0038
 	_badge_label.modulate = Color("fffaf0")
 	_badge_label.outline_modulate = Color("4b3b28")
 	_badge_label.outline_size = 6
-	_badge_label.position = Vector3(0.0, 1.52, 0.0)
+	_badge_label.position = Vector3(0.0, 1.48, 0.0)
 	_badge_label.billboard = BaseMaterial3D.BILLBOARD_ENABLED
-	_badge_label.text = "◈ 记忆宫殿展台 · 本屋 %d 词\n走近或按 G 巡游角落奇象" % total_words
+	_badge_label.text = "◈ 记忆宫殿 (%d词)" % total_words
 	_lectern_root.add_child(_badge_label)
 
 func refresh_badge() -> void:
@@ -330,10 +475,10 @@ func refresh_badge() -> void:
 			if lit_words.has(w):
 				lit_count += 1
 	if lit_count > 0:
-		_badge_label.text = "★ 记忆宫殿展台 · 已点亮 %d / %d 词\n按 G 巡游本屋角落奇象" % [lit_count, list.size()]
+		_badge_label.text = "★ 记忆宫殿 (%d/%d)" % [lit_count, list.size()]
 		_badge_label.modulate = Color("ffe99c")
 	else:
-		_badge_label.text = "◈ 记忆宫殿展台 · 本屋 %d 词\n走近或按 G 巡游角落奇象" % list.size()
+		_badge_label.text = "◈ 记忆宫殿 (%d词)" % list.size()
 		_badge_label.modulate = Color("fffaf0")
 
 func _process(delta: float) -> void:

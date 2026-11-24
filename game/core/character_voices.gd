@@ -1,8 +1,8 @@
 extends RefCounted
-## Multi-Character Voice Registry for StudyGames V5 (`CharacterVoices`).
-## Maps every island NPC, textbook classmate/teacher, 34 landmark & campus residents,
-## and storybook narrator to its dedicated voice archetype for Cloud + Offline Neural TTS
-## as well as standalone local WAV fallback pitch shaping.
+## Multi-Character Voice Registry for StudyGames V9 (`CharacterVoices`).
+## Maps every island NPC, parent, teacher, classmate, 34 landmark & campus residents,
+## talking mascots, pure animals, and storybook narrator to dedicated voice archetypes
+## and organic animal vocalization sound keys.
 
 const ARCHETYPES := {
 	"uncle_warm": {
@@ -17,13 +17,21 @@ const ARCHETYPES := {
 		"label_zh": "阳光男匠人音",
 		"pitch_scale": 0.92,
 	},
+	"mother_affectionate": {
+		"label_zh": "温柔妈妈音",
+		"pitch_scale": 0.99,
+	},
+	"father_warm": {
+		"label_zh": "暖心爸爸音",
+		"pitch_scale": 0.90,
+	},
 	"teacher_gentle": {
-		"label_zh": "温柔女老师音",
+		"label_zh": "亲切女老师音",
 		"pitch_scale": 1.00,
 	},
 	"storyteller": {
-		"label_zh": "绘本讲故事音",
-		"pitch_scale": 1.01,
+		"label_zh": "绘本姐姐音",
+		"pitch_scale": 1.02,
 	},
 	"grandma_warm": {
 		"label_zh": "慈爱长辈女音",
@@ -42,9 +50,40 @@ const ARCHETYPES := {
 		"pitch_scale": 1.07,
 	},
 	"mascot_dino": {
-		"label_zh": "俏皮萌宠音",
-		"pitch_scale": 1.17,
+		"label_zh": "奇幻小恐龙音",
+		"pitch_scale": 1.14,
 	},
+	"mascot_parrot": {
+		"label_zh": "俏皮小鹦鹉音",
+		"pitch_scale": 1.16,
+	},
+}
+
+const PURE_ANIMAL_KEYS := [
+	"textbook_kitty",
+	"textbook_doggie",
+	"textbook_spot",
+	"textbook_bunny",
+	"textbook_baker_bird",
+	"textbook_elephant_ella",
+	"textbook_fendi",
+]
+
+const TALKING_MASCOT_KEYS := [
+	"textbook_dino",
+	"textbook_role_xiaoxiao_parrot",
+]
+
+const ANIMAL_SOUND_MAP := {
+	"textbook_kitty": "kitty_meow",
+	"textbook_doggie": "puppy_woof",
+	"textbook_spot": "puppy_woof",
+	"textbook_fendi": "puppy_woof",
+	"textbook_bunny": "bunny_chirp",
+	"textbook_baker_bird": "bird_tweet",
+	"textbook_elephant_ella": "elephant_toot",
+	"textbook_dino": "dino_chirp",
+	"textbook_role_xiaoxiao_parrot": "parrot_squawk",
 }
 
 const CHARACTER_ARCHETYPE := {
@@ -113,8 +152,8 @@ const CHARACTER_ARCHETYPE := {
 	"textbook_robbie": "boy_sunny",
 	"textbook_miss_lin": "teacher_gentle",
 	"textbook_aunt_carol": "grandma_warm",
-	"textbook_role_lingling_mother": "teacher_gentle",
-	"textbook_role_lingling_father": "uncle_warm",
+	"textbook_role_lingling_mother": "mother_affectionate",
+	"textbook_role_lingling_father": "father_warm",
 	"textbook_uncle_ben": "uncle_warm",
 	"textbook_mr_wang": "artisan_male",
 	"textbook_mr_chen": "elder_wise",
@@ -132,20 +171,22 @@ const CHARACTER_ARCHETYPE := {
 	"textbook_chang_e": "storyteller",
 	"textbook_andy_armstrong": "artisan_male",
 	"textbook_bob_weather_photo": "artisan_male",
-	"textbook_bunny": "girl_bright",
-	"textbook_kitty": "girl_bright",
-	"textbook_baker_bird": "mascot_dino",
-	"textbook_doggie": "mascot_dino",
-	"textbook_spot": "mascot_dino",
-	"textbook_elephant_ella": "grandma_warm",
-	"textbook_fendi": "mascot_dino",
+	"textbook_bunny": "storyteller",
+	"textbook_kitty": "storyteller",
+	"textbook_baker_bird": "storyteller",
+	"textbook_doggie": "storyteller",
+	"textbook_spot": "storyteller",
+	"textbook_elephant_ella": "storyteller",
+	"textbook_fendi": "storyteller",
 	"textbook_nian": "uncle_warm",
 	"textbook_qinmou": "artisan_male",
-	"textbook_role_xiaoxiao_parrot": "mascot_dino",
+	"textbook_role_xiaoxiao_parrot": "mascot_parrot",
 }
 
 static func normalize_hint(npc_or_hint: String) -> String:
 	var key := npc_or_hint.strip_edges().to_lower()
+	if key.begins_with("actor:"):
+		key = key.trim_prefix("actor:").strip_edges()
 	return key if not key.is_empty() else "warm"
 
 static func archetype_for(npc_or_hint: String) -> String:
@@ -154,12 +195,18 @@ static func archetype_for(npc_or_hint: String) -> String:
 		return key
 	if CHARACTER_ARCHETYPE.has(key):
 		return str(CHARACTER_ARCHETYPE[key])
-	if key.find("bear") >= 0 or key.find("uncle") >= 0 or key.find("father") >= 0:
+	if key.find("mother") >= 0 or key.find("mom") >= 0:
+		return "mother_affectionate"
+	if key.find("father") >= 0 or key.find("dad") >= 0:
+		return "father_warm"
+	if key.find("bear") >= 0 or key.find("uncle") >= 0:
 		return "uncle_warm"
 	if key.find("peter") >= 0 or key.find("boy") >= 0:
 		return "boy_sunny"
 	if key.find("rabbit") >= 0 or key.find("girl") >= 0:
 		return "girl_bright"
+	if key.find("parrot") >= 0:
+		return "mascot_parrot"
 	if key.find("dino") >= 0 or key.find("bird") >= 0:
 		return "mascot_dino"
 	return "teacher_gentle"
@@ -167,12 +214,46 @@ static func archetype_for(npc_or_hint: String) -> String:
 static func label_zh_for(npc_or_hint: String) -> String:
 	var arch := archetype_for(npc_or_hint)
 	var info: Dictionary = ARCHETYPES.get(arch, ARCHETYPES["teacher_gentle"])
-	return str(info.get("label_zh", "温柔女老师音"))
+	return str(info.get("label_zh", "亲切女老师音"))
 
 static func fallback_pitch_scale(npc_or_hint: String) -> float:
 	var arch := archetype_for(npc_or_hint)
 	var info: Dictionary = ARCHETYPES.get(arch, ARCHETYPES["teacher_gentle"])
 	return float(info.get("pitch_scale", 1.0))
+
+static func is_pure_animal(npc_or_hint: String) -> bool:
+	var key := normalize_hint(npc_or_hint)
+	return key in PURE_ANIMAL_KEYS
+
+static func is_talking_mascot(npc_or_hint: String) -> bool:
+	var key := normalize_hint(npc_or_hint)
+	return key in TALKING_MASCOT_KEYS
+
+static func animal_sound_key(npc_or_hint: String) -> String:
+	var key := normalize_hint(npc_or_hint)
+	return str(ANIMAL_SOUND_MAP.get(key, ""))
+
+static func speaker_badge_label_zh(npc_or_hint: String) -> String:
+	if is_pure_animal(npc_or_hint):
+		return "萌宠原声 · 绘本姐姐慢读"
+	return label_zh_for(npc_or_hint)
+
+static func strip_animal_interjection(text: String, _lang: String = "en") -> String:
+	var out := text.strip_edges()
+	if out.is_empty():
+		return ""
+	var re_en := RegEx.new()
+	re_en.compile("^(?i)\\s*(?:(?:meow|mew|purr|woof|arf|tweet|chirp|squeak|toot|squawk)\\b[\\s,]*)+(?:[~!?.…—–-]+[\\s,~!?.…—–-]*|$)")
+	var re_zh := RegEx.new()
+	re_zh.compile("^\\s*(?:(?:呼噜喵|喵呜|喵喵|喵|汪汪|汪|啾啾|啾)[\\s,，、]*)+(?:[~～!！?？.。…—–-]+[\\s,，、~～!！?？.。…—–-]*|$)")
+	for _pass in range(2):
+		var m_en := re_en.search(out)
+		if m_en != null and m_en.get_start() == 0 and m_en.get_end() > 0:
+			out = out.substr(m_en.get_end()).strip_edges()
+		var m_zh := re_zh.search(out)
+		if m_zh != null and m_zh.get_start() == 0 and m_zh.get_end() > 0:
+			out = out.substr(m_zh.get_end()).strip_edges()
+	return out
 
 static func npc_for_room(room_id: String) -> String:
 	if room_id.begins_with("landmark_"):

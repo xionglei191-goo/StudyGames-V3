@@ -7,6 +7,7 @@ const Style = preload("res://ui/island_theme.gd")
 const Content = preload("res://ui/memory_story_content.gd")
 const CurriculumDirector = preload("res://gameplay/curriculum_quest_director.gd")
 const Wardrobe = preload("res://actors/modular_wardrobe.gd")
+const V8Memory = preload("res://core/v8_memory_ledger.gd")
 
 static func build(ui: Node, state: Node, bridge: Node) -> void:
 	ui._begin("v4_parent_ai", "map")
@@ -78,6 +79,29 @@ static func build(ui: Node, state: Node, bridge: Node) -> void:
 	metrics_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	metrics_pill.add_child(metrics_label)
 
+	var v8_sum := V8Memory.summary(state.data)
+	var v8_pill := PanelContainer.new()
+	v8_pill.name = "V8RetentionMetricsPill"
+	var v8_sb := Style.keycap(Color("eef5e8"), Color("bdd4b2"), 2, 14, 12, 8)
+	v8_sb.shadow_size = 0
+	v8_pill.add_theme_stylebox_override("panel", v8_sb)
+	left_col.add_child(v8_pill)
+
+	var v8_lbl: Label = ui.label(
+		"★ 空间实物与艾宾浩斯留存：已点亮 %d / 287 处（%d 词） · 金星永固 %d · 稳固中 %d · 待温故 %d · 发音星 %d" % [
+			int(v8_sum.get("visited_placements", 0)),
+			int(v8_sum.get("discovered_words", 0)),
+			int(v8_sum.get("gold_words", 0)),
+			int(v8_sum.get("solid_words", 0)),
+			int(v8_sum.get("due_words", 0)),
+			int(v8_sum.get("spoken_words", 0)),
+		],
+		14,
+		Color("2f5d3c")
+	)
+	v8_lbl.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
+	v8_pill.add_child(v8_lbl)
+
 	# Right Column: Current Unit Words -> Jump straight into 3D Pop-up Book Theater!
 	var right_card: PanelContainer = ui.card(Color("eef3e7"), 20)
 	right_card.custom_minimum_size.x = 432
@@ -121,7 +145,12 @@ static func build(ui: Node, state: Node, bridge: Node) -> void:
 	bottom.add_theme_constant_override("separation", 12)
 	ui.panel_box.add_child(bottom)
 
-	var b_atlas: Button = ui.button("八册 81 章故事画册", "v4_chapter_atlas", true, Vector2(226, 46))
+	var b_almanac: Button = ui.button("16 房间 3D 实物图鉴", "v8_almanac", true, Vector2(208, 46))
+	b_almanac.icon = Style.icon("home")
+	b_almanac.add_theme_constant_override("icon_max_width", 20)
+	bottom.add_child(b_almanac)
+
+	var b_atlas: Button = ui.button("八册 81 章故事画册", "v4_chapter_atlas", false, Vector2(210, 46))
 	b_atlas.icon = Style.icon("compass")
 	b_atlas.add_theme_constant_override("icon_max_width", 20)
 	bottom.add_child(b_atlas)
@@ -162,7 +191,8 @@ static func build(ui: Node, state: Node, bridge: Node) -> void:
 			"unit_id": str(info.unit_id),
 			"visited_landmarks": visited,
 			"outfit_zh": outfit_zh,
-			"stealth_events": v4_dict.get("stealth_events", [])
+			"stealth_events": v4_dict.get("stealth_events", []),
+			"v8_memory_summary": v8_sum,
 		}
 		var apply_rep := func(rep: Dictionary):
 			if not is_instance_valid(report_label):
